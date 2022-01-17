@@ -1,52 +1,51 @@
-# Severity levels
+# 심각도 수준
 
-A severity level is applied to a vulnerability, to indicate the risk for that vulnerability in an application. Severity levels are key factors in [vulnerability assessment](https://snyk.io/learn/vulnerability-assessment/), and can be:
+응용프로그램은 해당 취약점에 대한 위험을 나타내기 위해 취약점에 심각도 수이 적용됩니다. Severity levels는 [취약점 평가](https://snyk.io/learn/vulnerability-assessment/)의 핵심 요소이며 각 수준은 다음과 같습니다.
 
-* **Low:** the application may expose some data allowing vulnerability mapping, which can be used with other vulnerabilities to attack the application. 
-* **Medium:** may allow attackers under some conditions to access sensitive data on your application.
-* **High:** may allow attackers to access sensitive data on your application.
-* **Critical:** may allow attackers to access sensitive data and run code on your application.
+* **Low:** 응용 프로그램이 공격하기위해 다음 취약점과 함께 사용할 수 있는 취약점 매핑을 허용하는 일부 데이터를 노출할 수 있습니다.
+* **Medium:** 일부 조건에서 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.
+* **High:** 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.
+* **Critical:** 공격자가 민감한 데이터에 액세스하고 애플리케이션에서 코드를 실행할 수 있습니다.
 
 {% hint style="info" %}
-Severity levels also apply to license issues. See [Licenses overview](https://docs.snyk.io/snyk-open-source/licenses).
+심각도 수준은 라이선스 문제에도 적용됩니다. [Licenses overview](https://docs.snyk.io/snyk-open-source/licenses)를 참조하세요.
 {% endhint %}
 
-### Determining severity levels
+### 심각도 수준 결
 
-The **Common Vulnerability Scoring System** \(**CVSS**\) determines the severity level of a vulnerability.
+**Common Vulnerability Scoring System** (**CVSS**)은 취약점의 심각도 수준을 나타냅니다.
 
-At Snyk, we use [CVSS framework version 3.1](https://www.first.org/cvss/v3-1/) to communicate the characteristics and severity of vulnerabilities.
+Snyk에서는 [CVSS framework version 3.1](https://www.first.org/cvss/v3-1/)을 사용하여 취약점의 특성과 심각도를 제공합니다.
 
-| **Severity level** | **CVSS score** |
-| :--- | :--- |
-| Low | 0.0 - 3.9 |
-| Medium | 4.0 - 6.9 |
-| High | 7.0 - 8.9 |
-| Critical | 9.0 - 10.10 |
+| **심각도 수** | **CVSS 점**  |
+| --------- | ----------- |
+| Low       | 0.0 - 3.9   |
+| Medium    | 4.0 - 6.9   |
+| High      | 7.0 - 8.9   |
+| Critical  | 9.0 - 10.10 |
 
-See [Scoring security vulnerabilities 101: Introducing CVSS for CVEs](https://snyk.io/blog/scoring-security-vulnerabilities-101-introducing-cvss-for-cve/).
+자세한 내용은 [Scoring security vulnerabilities 101: Introducing CVSS for CVEs](https://snyk.io/blog/scoring-security-vulnerabilities-101-introducing-cvss-for-cve/)를 참조하세요.
 
-### Severity and priority scoring
+### 심각도 및 우선 순위 채점
 
-Severity levels are one factor feeding into Snyk's Priority Score for each vulnerability, along with factors such as [Snyk’s Exploit Maturity](https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly/) and [Reachable Vulnerabilities](https://snyk.io/blog/optimizing-prioritization-with-deep-application-level-context/) information. Together, this scoring helps developers determine which vulnerabilities should be addressed first.
+심각도 수준 [Snyk Exploit Maturity](https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly/)  [Reachable Vulnerabilities](https://snyk.io/blog/optimizing-prioritization-with-deep-application-level-context/) 정보와 함께 각 취약점에 대한 Snyk의 우선 순위 점수에 영향을 미치는 요소에 포함됩니다. 이 점수는 개발자가 먼저 해결해야할 취약점을 결정하는데 도움이 됩니다.
 
-See [Snyk Priority Score](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md) for details of how severity levels are used in Snyk's priority scores.
+Snyk의 우선 순위 점수에서 심각도 수준이 사용되는 방식에 대한 자세한 내용은 [Snyk Priority Score](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하세요.
 
-## Viewing severity levels in Snyk
+## Snyk에서 심각도 수준 보기
 
-Severity levels are displayed throughout Snyk, to show this information at all times.
+심각도 수준을 항상 표시하기 위해 Snyk 전체에 심각도 수준이 표시됩니다.
 
-For example, in the initial dashboard:
+대시보드:
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](<../../.gitbook/assets/image (46).png>)
 
-For your projects:
+프로젝:
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](<../../.gitbook/assets/image (43).png>)
 
-And for each vulnerability in a project:
+프로젝트의 각 취약점 정보:
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](<../../.gitbook/assets/image (39).png>)
 
-See [Getting started](https://docs.snyk.io/getting-started) documentation for more details of using Snyk.
-
+Snyk 사용에 대한 자세한 내용은 [Getting started](https://docs.snyk.io/getting-started)를 참조하세요.
