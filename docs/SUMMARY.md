@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Snyk User Documentation](README.md)
+* [Snyk 사용자 가이드](README.md)
 * [Introducing Snyk](introducing-snyk/README.md)
   * [Snyk 소개](introducing-snyk/introduction-to-snyk/README.md)
     * [Integrations and languages](introducing-snyk/introduction-to-snyk/integrations-and-languages.md)
