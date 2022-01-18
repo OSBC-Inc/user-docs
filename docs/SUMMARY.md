@@ -2,7 +2,7 @@
 
 * [Snyk User Documentation](README.md)
 * [Introducing Snyk](introducing-snyk/README.md)
-  * [Introduction to Snyk](introducing-snyk/introduction-to-snyk/README.md)
+  * [Snyk 소개](introducing-snyk/introduction-to-snyk/README.md)
     * [Integrations and languages](introducing-snyk/introduction-to-snyk/integrations-and-languages.md)
     * [Glossary](introducing-snyk/introduction-to-snyk/glossary.md)
   * [Snyk's core concepts](introducing-snyk/snyks-core-concepts/README.md)
