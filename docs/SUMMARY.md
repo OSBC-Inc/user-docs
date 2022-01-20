@@ -4,7 +4,7 @@
 * [Snyk 소개](introducing-snyk/README.md)
   * [Snyk 소개](introducing-snyk/introduction-to-snyk/README.md)
     * [통합 및 언어 지원](introducing-snyk/introduction-to-snyk/integrations-and-languages.md)
-    * [Glossary](introducing-snyk/introduction-to-snyk/glossary.md)
+    * [용어 사전](introducing-snyk/introduction-to-snyk/glossary.md)
   * [Snyk의 핵심 개념](introducing-snyk/snyks-core-concepts/README.md)
     * [그룹, 조직 및 사용자](introducing-snyk/snyks-core-concepts/groups-organizations-and-users.md)
     * [알림](introducing-snyk/snyks-core-concepts/notifications.md)
