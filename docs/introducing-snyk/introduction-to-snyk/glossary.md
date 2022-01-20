@@ -4,39 +4,39 @@
 
 ### Advisor
 
-[Snyk Advisor](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykAdvisor)를 참조하십시오.
+See [Snyk Advisor](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykAdvisor).
 
 ## B
 
 ### Base image
 
-컨테이너 이미지를 구성하는 데 사용되는 상위 이미지이며, 일반적으로 도커 파일의 FROM 지시문에 정의됩니다. Base images는 다른 base images에서 구성할 수 있습니다.
+The parent image used to construct a container image, usually defined in the FROM directive in a Dockerfile. Base images themselves can be constructed from other base images.
 
 ### Broker
 
-[Snyk Broker](https://docs.snyk.io/integrations/snyk-broker)를 참조하십시오.
+See [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker).
 
 ### Build System
 
-소스 코드를 가져와 배포 가능한 애플리케이션(예: 컨테이너)을 구축하는 시스템입니다.
+A system that takes the source code and builds the deployable application (such as a container).
 
 ## C
 
 ### CI / CD
 
-지속적 통합(CI), 지속적 배포(CD)가 함께 SDLC 모델을 구성하며 개발자가 작고 빈번한 변경 사항의 개발 및 배포를 자동화하도록 안내합니다. 이렇게 하면 모든 팀 구성원이 최신 소스 코드에 액세스할 수 있으며 개발 중에 커밋된 코드의 호환성을 보장할 수 있습니다.
+Continuous integration (CI), continuous delivery (CD) and continuous deployment (CD) together comprise an SDLC model, guiding developers to automate development and delivery of small, frequent changes. This ensures all team members have access to the latest code base and can ensure the compatibility of committed code during development.
 
 ### CLI
 
-Command Line Interface. [Snyk CLI](glossary.md#snyk-cli)를 참조하십시오.
+Command Line Interface. See [Snyk CLI](glossary.md#snyk-cli).
 
-### Cloud Native Application Security ~~(\*수정 필요)~~&#x20;
+### Cloud Native Application Security
 
-CI/CD 파이프라인 전체에 보안을 구현하고, 마이크로 서비스에 내장된 보안을 자동화하고, 반복을 극대화하여 취약점 유입을 줄입니다. Snyk는 포괄적인 [CNAS platform](https://snyk.io/product/cloud-native-application-security/)을 제공합니다.
+Implementing security throughout the CI/CD pipeline, automating security embedding in microservices and maximizing repetition to reduce the introduction of vulnerabilities. Snyk provides a comprehensive [CNAS platform](https://snyk.io/product/cloud-native-application-security/).
 
 ### Container
 
-Containers allow you to package applications and their dependencies together, to be deployed as a single runnable unit. A container is an abstraction provided by the operating system kernel, that allows a process to be isolated from other processes running on the system. [Snyk Container](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykContainer)를 참조하십시오.
+Containers allow you to package applications and their dependencies together, to be deployed as a single runnable unit. A container is an abstraction provided by the operating system kernel, that allows a process to be isolated from other processes running on the system. Also see [Snyk Container.](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykContainer)
 
 ### Container engine
 
@@ -48,36 +48,36 @@ One or more files which, when instantiated by a container engine or runtime, pro
 
 ### Container registry
 
-컨테이너 이미지를 저장하고 검색할 수 있는 메커니즘을 제공하는 서버입니다.
+A server which provides a mechanism to store and retrieve container images.
 
 ### CVE
 
-Common Vulnerabilities and Exposures의 약자이며 잘 알려진 취약성에 대해 널리 사용되는 식별자입니다.
+Common Vulnerabilities and Exposures. A widely-used identifier for a well-known vulnerability.
 
 ### CVSS
 
-Common Vulnerability Scoring System의 약자이며 0점에서 10점 사이의 점수를 사용하여 취약성의 심각도를 평가하는 업계 표준입니다. Snyk는 CVSS를 사용합니다.
+Common Vulnerability Scoring System. An industry standard to assess the severity of vulnerabilities, using a score of 0 (lowest) to 10 (highest). Snyk uses CVSS.
 
 ### CWE
 
-Common Weakness Enumeration의 약자이며 an online glossary that categorizes software and hardware weaknesses into different types. 예: **CWE-20: Input Validation**.
+Common Weakness Enumeration, an online glossary that categorizes software and hardware weaknesses into different types. For example: **CWE-20: Input Validation**.
 
 ## D
 
 ### DAST
 
-동적 응용 프로그램 보안 테스트(Dynamic Application Security Testing)를 말합니다. An application that you can point at a site or service; it then typically profiles the site or service, then examines the output and behaviour to uncover security vulnerabilities. 또한 [SAST](glossary.md#sast)를 참조하십시오.
+Dynamic Application Security Testing. An application that you can point at a site or service; it then typically profiles the site or service, then examines the output and behaviour to uncover security vulnerabilities. Also see [SAST](glossary.md#sast).
 
 ### Dependency
 
-응용 프로그램에서 다른 패키지를 사용하면 이 다른 패키지가 사용자 소프트웨어에 종속됩니다.
+When your application uses another package, this other package becomes a dependency to your own software.
 
-* direct dependency는 사용자가 자신의 프로젝트에 포함하는 패키지입니다.
-* indirect dependency(deep, chained 또는transitive dependency라고도 함)는 직접 종속성 중 하나에 사용되는 패키지입니다.
+* A direct dependency is a package you include in your own project.
+* An indirect dependency (also known as a deep, chained, or transitive dependency), is a package that is used by one of your direct dependencies.
 
-### Dependency tree~~(수정 필요?=직접종속성, 간접종속성이란 말 원래쓰는건지?)~~
+### Dependency tree
 
-종속성 경로라고도 하며, 소프트웨어 응용 프로그램의 종속성을 보여주는 계층적 그래프이다. 여기에는 직접적, 간접적 의존성이 모두 포함되며, 많은 수준의 의존성이 포함될 수 있다.
+(Also known as Dependency path) A hierarchical graph showing the dependencies of a software application. This includes both direct and indirect dependencies, and so may be many levels deep.
 
 ### DevOps
 
@@ -89,23 +89,23 @@ The integration of security into emerging agile IT and DevOps development as sea
 
 ### Dockerfile
 
-도커를 사용하여 컨테이너 이미지를 작성하는 데 사용되는 텍스트 파일 형식입니다. 도커 파일에는 상위 기본 이미지 지정을 포함하여 최종 이미지를 생성하는 데 필요한 모든 명령이 포함되어 있습니다.
+A text file format used to build container images using Docker. The Dockerfile contains all the commands needed to construct the final image, including specifying the parent base image.
 
 ## E
 
 ### Exploit
 
-취약성이 어떻게 활용될 수 있는지 보여주는 것입니다. When an exploit is widely published, it is commonly referred to as an exploit in the wild.
+A demonstration of how a vulnerability can be taken advantage of. When an exploit is widely published, it is commonly referred to as an exploit in the wild.
 
 ### Exploit Maturity
 
-A measure of how practical an exploit for a vulnerability is, based on whether the exploit is in the wild, and how "helpful" the exploit is to attackers. [취약성 평가 및 우선 순위지정](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/evaluating-and-prioritizing-vulnerabilities)을 참조하십시오.
+A measure of how practical an exploit for a vulnerability is, based on whether the exploit is in the wild, and how "helpful" the exploit is to attackers. See [Evaluating and prioritizing vulnerabilities](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/evaluating-and-prioritizing-vulnerabilities).
 
 ## F
 
 ### Fixable / Partially fixable
 
-A measure of whether a vulnerability can be fixed by Snyk, by applying a patch, upgrade, or pin.  [Fixed in version vs. fixable attributes in vulnerabilities](https://support.snyk.io/hc/en-us/articles/4405034808209)을 참조하십시오.
+A measure of whether a vulnerability can be fixed by Snyk, by applying a patch, upgrade, or pin. See [Fixed in version vs. fixable attributes in vulnerabilities](https://support.snyk.io/hc/en-us/articles/4405034808209).
 
 ### Fix PR
 
@@ -115,21 +115,21 @@ A pull request with an automatic fix for vulnerabilities found that Snyk can off
 
 ### Git
 
-소프트웨어 개발 중에 소스 코드의 변경 사항을 추적하기 위한 분산 버전 관리 시스템입니다.
+A distributed version-control system for tracking changes in source code during software development.
 
 ## I
 
 ### IAC
 
-Infrastructure as Code. [Snyk Infrastructure as Code](glossary.md) 참조하십시오.
+Infrastructure as Code. See [Snyk Infrastructure as Code.](glossary.md)
 
 ### IAST
 
-Interactive Application Security Testing. 이 접근 방식은 응용 프로그램을 실행하는 동안 취약성을 테스트합니다. **DAST** and **SAST**를 참조하십시오.
+Interactive Application Security Testing. This approach tests for vulnerabilities while running the application. See **DAST** and **SAST**.
 
 ### IDE
 
-통합 개발 환경(Integrated Development Environment)을 말합니다. 일반적으로 소스 코드 편집기, 빌드 자동화 도구 및 디버거와 함께 소프트웨어 개발을 위한 기능을 제공하는 응용 프로그램입니다.
+Integrated Development Environment. An application giving facilities for software development, typically with a source code editor, build automation tools and a debugger.
 
 ### Image
 
@@ -137,7 +137,7 @@ The stored instance of a container that holds a set of software needed to run an
 
 ### Image layer
 
-컨테이너 이미지는 일반적으로 여러 개의 서로 다른 파일 시스템 계층으로 구성되며 런타임에 단일 파일 시스템으로 결합됩니다.
+Container images typically consist of several different filesystem layers, which are combined together at runtime into a single filesystem.
 
 ### Integrations
 
@@ -145,47 +145,47 @@ Third-party products, applications and platforms that Snyk works with, for examp
 
 ### Issue
 
-Snyk에서 식별 및 나열한 라이센스 문제 또는 취약성입니다.
+A license problem or vulnerability identified and lists by Snyk.
 
 ## L
 
-### Library~~(수정필요)?~~&#x20;
+### Library
 
-패키지의 특정 유형입니다.
+A specific type of a package.
 
 ## M
 
 ### Manifest
 
-패키지의 파일들에 대한 메타데이터가 들어 있는 파일입니다.
+A file containing metadata about other files in a package.
 
 ### Monitor
 
-**snyk monitor**는 프로젝트를 테스트하고 결과를 Snyk에 업로드하는 snyk의 명령어입니다.
+A run of the **snyk monitor** command that tests the project and uploads results to Snyk.
 
 ## O
 
 ### OCI
 
-Open Container Initiative의 약자이며 An independent body set up to facilitate collaboration around standards for containers, to ensure they are interoperable between vendor solutions.
+Open Container Initiative. An independent body set up to facilitate collaboration around standards for containers, to ensure they are interoperable between vendor solutions.
 
 ### Organization
 
-An organization in Snyk is a way to collect and organize your projects. 그런 다음 구성원이 이러한 프로젝트에 액세스할 수 있습니다.
+An organization in Snyk is a way to collect and organize your projects. Members of organizations can then access these projects.
 
 ## P
 
 ### Package
 
-패키지 매니저가 사용하는 파일 그룹 및 해당 파일에 대한 추가 메타데이터입니다.
+A group of files and additional metadata about those files, used by package managers.
 
 ### Package manager
 
-패키지를 자동화하고 관리하는 도구 집합으로, 일반적으로 언어에 따라 다릅니다. (예: npm)
+A set of tools that automates and manages packages of bundled files, and are usually specific to a language. For example, npm.
 
 ### Package registry
 
-고객이 패키지와 코드를 한 곳에서 호스팅할 수 있는 소프트웨어 패키지 호스팅 서비스입니다.
+A software package hosting service that allows customers to host packages and code in one place.
 
 ### Pinnable
 
@@ -193,39 +193,39 @@ A fix type: define and "pin" a specific version of an indirect dependency, to av
 
 ### PR
 
-Pull Request. 사용자가 소스 코드의 변경 사항을 반하고 동일한 branch 있는 다른 사용자와 협업할 수 있습니다.
+Pull Request. Allows a user to exchange changes made to source code and collaborate with others on the same branch.
 
 ### Priority Score
 
-Snyk scores issues (vulnerabilities and licenses), to help prioritze treatment of each one. Scores are based on multiple factors including as the CVSS score, and range from 0 (low) to 1000 (high). [Snyk Priority Score](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score) 참조하십시오.
+Snyk scores issues (vulnerabilities and licenses), to help prioritze treatment of each one. Scores are based on multiple factors including as the CVSS score, and range from 0 (low) to 1000 (high). See [Snyk Priority Score](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score).
 
 ### Project
 
-An external item that Snyk scans, with configuration to define how to run that scan. Snyk 대시보드의 프로젝트 메뉴에 나타납니다. [프로젝트 소개](https://docs.snyk.io/getting-started/introduction-to-snyk-projects) 참조하십시오.
+An external item that Snyk scans, with configuration to define how to run that scan. Projects appear on the **Projects** menu on the Snyk dashboard. See [Introduction to projects](https://docs.snyk.io/getting-started/introduction-to-snyk-projects).
 
 ## R
 
 ### Reachability
 
-실행 중 공격 가능한 취약한 경로의 코드가 응용 프로그램에 포함되어 있는지 여부입니다. [Reachable vulnerabilities](https://support.snyk.io/hc/en-us/articles/360010554837-Reachable-Vulnerabilities-) 참조하십시오.
+Whether an application contains code which will hit a vulnerable code path during execution. See [Reachable vulnerabilities](https://support.snyk.io/hc/en-us/articles/360010554837-Reachable-Vulnerabilities-).
 
 ### Registry
 
-[Container registry](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#ContainerRegistry) 또 [Package registry](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#PackageRegistry)를 참조하십시오.
+See [Container registry](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#ContainerRegistry) or [Package registry](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#PackageRegistry).
 
 ### Repository
 
-응용 프로그램 배포에 필요한 모든 요소를 포함하는 저장소 영역을 말합니다.
+A storage area that contains all elements necessary for the distribution of an application.
 
 ## S
 
 ### SARIF
 
-정적 분석 결과 상호 교환 형식입니다. 정적 분석 도구의 출력을 위한 표준 JSON 기반 형식입니다.
+Static Analysis Results Interchange Format. A standard, JSON-based format for the output of static analysis tools.
 
 ### SAST
 
-정적 응용 프로그램 보안 테스트(Static Application Security Testing). A method to secure software by reviewing the source code of your proprietary software, and identifying sources of vulnerabilities. 또한 [DAST](glossary.md#ast) 참조하십시오.
+Static Application Security Testing. A method to secure software by reviewing the source code of your proprietary software, and identifying sources of vulnerabilities. Also see [DAST](glossary.md#ast).
 
 ### SBOM
 

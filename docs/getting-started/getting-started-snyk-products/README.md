@@ -1,13 +1,12 @@
-# Getting started with Snyk products
+# Snyk 시작하기
 
-## To create a Snyk account
+## Snyk 계정생성&#x20;
 
-1. Go to [https://snyk.io/](https://snyk.io/) and click **SIGN UP** from the menu:  
-2. Select your preferred way to log in or sign up.
-3. Enter your login credentials \(or create a new account\) as prompted. 
-4. You now have a Snyk account. You can:
-   1. Enter brief information to help us guide your experience, then follow the prompts to integrate your project.
-   2. Access your Snyk dashboard at [https://app.snyk.io](https://app.snyk.io/):
+1. [https://snyk.io/](https://snyk.io)에서 **SIGN UP** 클
+2. 로그인하거나 가입방법을 선택
+3. 메시지가 표시되면 로그인 진행 또는 게정생성 진행
+4. Snyk 계정생성 시 다음 내용을 수행할 수 잇습니다.
+   1. 간단한 정보 입력 후 프로젝트 통합 진행
+   2. [https://app.snyk.io](https://app.snyk.io)에서 Snyk 대시보드 액세스
 
 ![](../../.gitbook/assets/login6.png)
-
