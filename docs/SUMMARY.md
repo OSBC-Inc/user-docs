@@ -3,7 +3,7 @@
 * [Snyk 사용자 가이드](README.md)
 * [Snyk 소개](introducing-snyk/README.md)
   * [Snyk 소개](introducing-snyk/introduction-to-snyk/README.md)
-    * [통합 및 프로그래밍 언어](introducing-snyk/introduction-to-snyk/integrations-and-languages.md)
+    * [통합 및 언어 지원](introducing-snyk/introduction-to-snyk/integrations-and-languages.md)
     * [Glossary](introducing-snyk/introduction-to-snyk/glossary.md)
   * [Snyk의 핵심 개념](introducing-snyk/snyks-core-concepts/README.md)
     * [Groups, organizations, and users](introducing-snyk/snyks-core-concepts/groups-organizations-and-users.md)
