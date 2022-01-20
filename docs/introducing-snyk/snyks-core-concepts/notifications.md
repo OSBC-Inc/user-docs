@@ -1,17 +1,16 @@
-# Notifications
+# 알림
 
-Snyk automatically notifies you when new issues are found in the projects you are monitoring, to help make you aware of new risks in these projects.
+Snyk은 모니터링 중인 프로젝트에서 새로운 문제가 발견되면 자동으로 알려 프로젝트의 새로운 취약점을 알 수 있도록 합니다.
 
-If our security team discloses a new vulnerability, we notify you:
+보안 팀이 새로운 취약점을 공개하면 다음과 같이 알려드립니다.
 
-* By email, if you have not disabled these in your [notification settings](https://app.snyk.io/account/notifications)\(\*\).
-* By Slack, if you have set up [Slack integration](https://docs.snyk.io/integrations/untitled-3/slack-integration). 
+* By email, if you have not disabled these in your [notification settings](https://app.snyk.io/account/notifications)(\*).
+* By Slack, if you have set up [Slack integration](https://docs.snyk.io/integrations/untitled-3/slack-integration).
 
-Snyk also sends you a weekly update summarizing your security status across all of your organizations.
+Snyk은 모든 조직의 보안 상태를 요약하여 주간 업데이트를 안내합니다.
 
-\(\*\) It is important to disable notifications for both, active and non-active projects. Setting the projects to inactive will not stop Snyk from sending emails about vulnerabilities / licences issues.
+(\*) 활성 및 비활성 프로젝트 모두에 대한 알림을 받는 것이 중요합니다. 프로젝트를 비활성으로 설정해도 Snyk은 취약점/라이선스 문제에 대한 이메일을 보내는 것을 중단하지 않습니다.
 
-## **Managing notifications**
+## **알림 관리** &#x20;
 
-Snyk includes a range of controls to manage your notifications. If you are an organization administrator, you can also manage the notification defaults for others in the organization. See [Notification management](https://docs.snyk.io/user-and-group-management/notifications/notification-management)
-
+Snyk에는 알림을 관리하기 위한 다양한 기능이 포함되어 있습니다. 조직 관리자인 경우 조직의 다른 사용자에 대한 알림 기본값을 관리할 수 있습니다. 자세한 내용은 [알림 관리](../../features/user-and-group-management/notifications/notification-management.md)를 참조하세요.
