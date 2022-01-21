@@ -52,15 +52,15 @@ One or more files which, when instantiated by a container engine or runtime, pro
 
 ### CVE
 
-Common Vulnerabilities and Exposures의 약자이며 잘 알려진 취약성에 대해 널리 사용되는 식별자입니다.
+Common Vulnerabilities and Exposures의 약자로, 잘 알려진 취약성에 대해 널리 사용되는 식별자입니다.
 
 ### CVSS
 
-Common Vulnerability Scoring System의 약자이며 0점에서 10점 사이의 점수를 사용하여 취약성의 심각도를 평가하는 업계 표준입니다. Snyk는 CVSS를 사용합니다.
+Common Vulnerability Scoring System의 약자로, 0점에서 10점 사이의 점수를 사용하여 취약성의 심각도를 평가하는 업계 표준입니다. Snyk는 CVSS를 사용합니다.
 
 ### CWE
 
-Common Weakness Enumeration의 약자이며 an online glossary that categorizes software and hardware weaknesses into different types. 예: **CWE-20: Input Validation**.
+Common Weakness Enumeration의 약자로, an online glossary that categorizes software and hardware weaknesses into different types. 예: **CWE-20: Input Validation**.
 
 ## D
 
@@ -167,7 +167,7 @@ Snyk에서 식별 및 나열한 라이센스 문제 또는 취약성입니다.
 
 ### OCI
 
-Open Container Initiative의 약자이며 An independent body set up to facilitate collaboration around standards for containers, to ensure they are interoperable between vendor solutions.
+Open Container Initiative의 약자로, An independent body set up to facilitate collaboration around standards for containers, to ensure they are interoperable between vendor solutions.
 
 ### Organization
 

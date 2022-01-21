@@ -21,7 +21,7 @@
     * [Getting started with Snyk Infrastructure as Code (IaC)](getting-started/getting-started-snyk-products/getting-started-snyk-iac.md)
     * [Getting Started with Snyk License Compliance Management](getting-started/getting-started-snyk-products/getting-started-snyk-licensing-compliance.md)
     * [Getting started with Snyk intel vulnerability DB access](getting-started/getting-started-snyk-products/getting-started-snyk-intel-vuln-db-access.md)
-  * [SCM (Git) and CI/CD integration deployment intro](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
+  * [SCM(Git) 및 CI/CD 통합 구축 소개](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
   * [Snyk SCM integration: good practices](getting-started/snyk-scm-integration-good-practices.md)
   * [Snyk CI/CD Integration: good practices](getting-started/snyk-cicd-integration-good-practices.md)
   * [Introduction to Snyk projects](getting-started/introduction-to-snyk-projects/README.md)
