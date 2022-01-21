@@ -1,135 +1,135 @@
-# Snyk SCM integration: good practices
+# Snyk SCM 통합: 모범 사례
 
-You can integrate Snyk with your Source Control Manager (SCM) to quickly and easily gain visibility across all your projects.
+Snyk을 SCM(Source Control Manager)과 통합하여 모든 프로젝트를 쉽고 빠르게 파악할 수 있습니다.
 
-[Snyk SCM integrations](snyk-scm-integration-good-practices.md) allow you to:
+Snyk SCM 통합을 통해 다음을 수행할 수 있습니다:
 
-* Continuously perform security scanning across all integrated repositories
-* Detect vulnerabilities in your open source components
-* Provide automated fixes.&#x20;
+* 통합된 모든 저장에 대한 지속적인 보안 스캐닝 수행
+* 오픈소스 컴포넌트의 취약성 탐지
+* 자동 수정 기능 제공
 
-## Recommended deployment order
+## 권장하는 배포 순서
 
-To ensure a smooth deployment by your team, follow the stages as outlined below for each integration.
+각 통합에 대한 원활한 배포를 위해 아래에 설명된 단계를 따르십시오.
 
 If you try to implement all the SCM integration features at the same time, you risk causing friction in the SDLC, which leads to a poor developer experience
 
 | **Deployment Stages**                                                                                                                                                      | **Configurations**                                                                                                                                                                                                        | **Outcome**                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| <p><a href="snyk-scm-integration-good-practices.md">Stage 1</a></p><p>Set up your SCM integration</p>                                                                      | See configuration documentation for each [SCM integration](../features/integrations/git-repository-scm-integrations/)                                                                                                     | A configured integration, ready to import projects                                                      |
-| <p><a href="snyk-scm-integration-good-practices.md">Stage 2</a></p><p>Import all of the projects from your SCM.</p>                                                        | <p>- Test both public and private repos</p><p>- Disable all user notifications</p><p>- Disable Snyk PR checks</p><p>- Disable Auto-fix PRs</p><p>- Disable Failing PR checks</p><p>- Disable Auto dependency upgrades</p> | A complete Software Bill of Materials that enables you to assess risk across your applications.         |
+| <p><a href="snyk-scm-integration-good-practices.md">Stage 1</a></p><p>SCM 통합 설정</p>                                                                                        | See configuration documentation for each [SCM integration](../features/integrations/git-repository-scm-integrations/)                                                                                                     | A configured integration, ready to import projects                                                      |
+| <p><a href="snyk-scm-integration-good-practices.md">Stage 2</a></p><p>SCM에서 모든 프로젝트 가져오기</p>                                                                               | <p>- Test both public and private repos</p><p>- Disable all user notifications</p><p>- Disable Snyk PR checks</p><p>- Disable Auto-fix PRs</p><p>- Disable Failing PR checks</p><p>- Disable Auto dependency upgrades</p> | A complete Software Bill of Materials that enables you to assess risk across your applications.         |
 | <p><a href="snyk-scm-integration-good-practices.md">Stage 3</a></p><p>Developer and Security teams use Snyk prioritization reporting capabilities to build a fix plan.</p> | Click [here](https://www.youtube.com/watch?v=\_kAY94JwQHY) to learn more about Snyk prioritization Reporting.                                                                                                             | Alignment between Developers and Security on what should be fixed and when streamlines the fix process. |
 | <p><a href="snyk-scm-integration-good-practices.md">Stage 4</a></p><p>Alert developers to issues in real-time, and educate them on available fixes.</p>                    | <p>- Enable Snyk PR checks and fail PRs</p><p>if they contain High severity issues</p><p>with available fixes</p><p>- Enable Auto-fix PRs</p>                                                                             | Improve your organization’s mean-time-to-fix (MTTF).                                                    |
 | <p><a href="snyk-scm-integration-good-practices.md">Stage 5</a></p><p>Prevent developers from introducing any new vulnerabilities</p>                                      | <p>- Enable Failing PR checks, for ANY</p><p>High severity issues (fix or no fix)</p>                                                                                                                                     | ‘Secure by Design’ methodology achieved.                                                                |
 | <p><a href="snyk-scm-integration-good-practices.md">Stage 6</a></p><p>Reduce technical security debt</p>                                                                   | - Enable Auto dependency upgrades                                                                                                                                                                                         | Reduce future design headaches, and hot fixes, which can be time-consuming to research & address.       |
 
-## Stage 1: Set up your SCM Integration
+## Stage 1: SCM 통합 설정
 
-Snyk has pre-built integrations for SCMs including GitHub, GitHub Enterprise, Bitbucket Cloud and others. See [GIT repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations) for a full list.
+Snyk은 GitHub, GitHub Enterprise, Bitbucket Cloud 등 SCM을 위한 사전 통합을 구축했습니다. 전체 목록은 [GIT 저장(SCM) 통합](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 참조하십시오.
 
-To check if an SCM is already configured for your Org, navigate to the **Integrations** tab. Configured SCMs are shown as **Configured**.
+SCM이 이미 구성되어 있는지 확인하려면 **Integrations** 탭으로 이동합니다. 통합된 SCM은 **Configured**로 표시됩니다.
 
 ![](../.gitbook/assets/int1.png)
 
 {% hint style="info" %}
-If your SCM is already configured, go to the next stage.
+SCM이 이미 통합되어 있다면 다음 단계로 이동합니다.
 {% endhint %}
 
-## Example: GitHub
+## 예: GitHub
 
-Below is an example of how you would set up your integration for **Github.com**
+다음은 **Github.com**에 통합을 설정하는 방법의 예입니다.
 
-1. Go to the **Integrations** tab, and click on **GitHub**.&#x20;
-2. Choose whether you'd like to give Snyk access to both public and private repositories or only to public repositories:&#x20;
-3. Click **Authorize snyk** to provide Snyk with access to your repositories:
+1. **Integrations** 탭으로 이동하여 **GitHub**를 클릭합니다.
+2. Snyk에게 public 및 private 저장소 모두에 대한 액세스 권한을 부여할지 또는 public 저장소에만 액세스 권한을 부여할지 선택합니다:
+3. Snyk에게 저장소에 대한 액세스 권한을 제공하려면 **Authorize snyk**을 클릭합니다:
 
 ![](<../.gitbook/assets/authorize (1) (2) (6) (1) (18).png>)
 
-**SCM permissions on repositories**
+**저장소에 대한 SCM 권한 **~~**수정필요**~~** \*(**
 
 Operations triggered using the Snyk UI (such as opening a Fix PR or retesting a project) are performed for the acting user. So to perform these operation, you must connect your own SCM user or service account. This gives Snyk the required permissions for the repositories for where you would like to perform these operations.
 
-For example, in GitHub, the accounts connected to Snyk need the following access on the target repositories:
+예를 들어 GitHub에서 Snyk으로 연결된 계정은 대상 저장에 대해 다음과 같은 액세스 권한이 필요합니다:
 
-| **Action**                                              | **Why?**                                                                                                                                              | **Required permissions on the repository** |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **Daily / weekly tests**                                | For reading manifest files in private repos                                                                                                           | _**Write**_ or above                       |
-| **Snyk tests on pull requests**                         | For sending pull request status checks whenever a new PR is created / an existing PR is updated                                                       |                                            |
-| **Opening fix and upgrade pull requests**               | For creating fix / upgrade PRs in the monitored repos                                                                                                 |                                            |
-| **Snyk tests on pull requests - initial configuration** | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans | _**Admin**_                                |
+| **Action**                         | **Why?**                                                                             | **Required permissions on the repository** |
+| ---------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------ |
+| 일별/주간별 테스트                         | private 저장에 파일 읽기용                                                                   | _**Write**_ 권한 이상                          |
+| pull requests에서 Snyk 테스트           | 새로운 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 전송하기 위함                           |                                            |
+| 수정 및 업그레이드 pull requests 열기        | 모니터링되는 저장소에 수정/업그레이드 PR 작성용                                                          |                                            |
+| pull requests에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 웹훅을 추가하면 pull requests가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _**Admin**_                                |
 
-### **Change notification settings**
+### 알림 설정 변경
 
-By default, Snyk emails every Org User when a new issue or fix in a project’s dependencies is found, and provides you with a weekly update of your security status across your organization. If you plan to import many projects to an Org, consider disabling all the notifications for that Org, to avoid too many email notifications sent to users.
+기본적으로 프로젝트 디펜던시의 새로운 문제 또는 수정 사항이 발견되면 Snyk은 조직 내 모든 사용자에게 메일을 통해 조직 전체의 보안 상태를 알립니다. 많은 프로젝트를 조직으로 가져오려는 경우 사용자에게 너무 많은 이메일 알림이 전송되지 않도록 해당 조직에 대한 모든 알림을 비활성화할 수 있습니다.
 
-To customize the emails your Org users receive, navigate to the Org’s settings ![](../.gitbook/assets/cog\_icon.png) > **Notifications**. Any changes you make here here affect all of your organization’s members, although Org users can override these default settings in their user-level account settings.
+조직 내 사용자가 수신하는 이메일을 설정하려면 조직의 settings ![](../.gitbook/assets/cog\_icon.png) > **Notifications**로 이동합니다. 여기서 변경한 내용은 조직의 모든 구성원에게 영향을 미치지만, 조직 내 사용자는 사용자 수준 계정 설정에서 이러한 기본 설정을 재정의할 수 있습니다.
 
-To disable notifications for all the users in an Org ahead of your import, uncheck the appropriate notification boxes:
+가져오기 전에 조직 내의 모든 사용자에 대한 알림을 비활성화하려면 해당 체크 박스들의 선택을 취소하십시오:
 
 ![](<../.gitbook/assets/image (58).png>)
 
-See [Notification management](https://support.snyk.io/hc/en-us/articles/360004037657-Notification-management) for more details.
+자세한 내용은 [Notification management](https://support.snyk.io/hc/en-us/articles/360004037657-Notification-management)를 참조하십시오.
 
-## Stage 2: Import Projects
+## Stage 2: 프로젝트 가져오기
 
-1. Navigate to the **Projects** page in the Snyk UI, select **Add projects**, select the repos to import to Snyk, then click **Add selected repositories**.
-2. Snyk starts scanning the selected repos for dependency files (for example, **package.json**) in the entire directory tree and imports these files as projects.
-3. Snyk evaluates root folders and any custom file locations defined. If no manifest or configuration files are found, Snyk alerts you that no files can be imported.
-4. Snyk detects the manifest files (projects), tests them, then displays the results. Imported projects appear underneath the repository name.
+1. Snyk UI의 **Projects** 페이지로 이동하여 **Add projects**를 선택하고, Snyk로 가져올 저장소를 선택한 다음 **Add selected repositories**를 클릭합니다.
+2. Snyk은 선택한 저장소에서 전체 디렉터리 트리의 디펜던시 파일(예: **package.json**)을 검사하기 시작하고 이러한 파일을 프로젝트로 가져옵니다.
+3. Snyk은 루트 폴더와 정의된 사용자 정의 파일 위치를 평가합니다. 매니페스트 또는 구성 파일이 없으면 파일을 가져올 수 없다는 경고가 표시됩니다.
+4. Snyk은 매니페스트 파일(프로젝트)을 탐지하여 테스트한 다음 결과를 표시합니다. 가져온 프로젝트는 저장소 이름 아래에 표시됩니다.
 
 ![](../.gitbook/assets/int3.png)
 
-(Projects are continuously checked for vulnerabilities after being imported) 5. To see if a project was imported, navigate to the projects import page. Imported projects have a ✔ icon by the repo name.
+5\. 프로젝트를 가져왔는지 확인하려면 Add projects 페이지로 이동하십시오. 가져온 프로젝트에는 저장소 이름 옆에 ✔ 아이콘이 있습니다. (프로젝트를 가져온 후 지속적인 취약성 검사)
 
 ![](../.gitbook/assets/aws-sdk.png)
 
-## Stage 3: Enable Snyk test on PRs
+## Stage 3: PR에서 Snyk 테스트 사용
 
-**PR Test Settings & Workflows**
+**PR 테스트 설정 & 워크플로우**
 
-By default, Snyk scans every pull request submitted on your monitored repositories, showing the results and recommendations grouped together in a single security check and a single license check:
+기본적으로 Snyk은 모니터링되는 저장소에 제출된 모든 pull request를 검색하여 결과와 권장 사항을 단일 보안 검사와 단일 라이선스 검사로 그룹화하여 보여줍니다:
 
 ![](../.gitbook/assets/checks-passed.png)
 
-**Status details**
+**상태 세부 정보**
 
-The following statuses can appear on your Snyk checks when you click the “Details” link:
+"Details" 링크를 클릭하면 Snyk 검사에서 다음과 같은 상태가 나타날 수 있습니다:
 
-* **Success**: no issues are identified and all checks pass
-* **Processing**: this status appears until the Snyk test ends
-* **Failure**: when issues are identified that must be fixed in order for the check to pass
-* **Error**: an error occurs when your manifest file is out of sync, Snyk couldn't read the manifest file, or Snyk couldn't find the manifest file.
+* **Success**: 식별된 문제가 없고 모든 점검이 통과됨
+* **Processing**: Snyk 테스트가 끝날 때까지 표시됨
+* **Failure**: 문제가 확인되었을 때, 검사를 통과하기 위한 수정 필요
+* **Error**: 매니페스트 파일이 동기화되지 않았거나, Snyk이 매니페스트 파일을 읽을 수 없거나, Snyk가 매니페스트 파일을 찾을 수 없을 때 오류가 발생합니다.
 
 ![](../.gitbook/assets/security-check.png)
 
-**Manage PR test settings**
+**PR 테스트 설정 관리**
 
-Administrators can manage settings for Snyk PR tests at the organization level to apply it to all projects, or can select specific projects to apply the PR tests on. You can configure whether the feature is on (enabled by default), set fail conditions to define when Snyk should fail your PR checks.
+관리자는 조직 수준에서 Snyk PR 테스트 설정을 관리하여 모든 프로젝트에 적용하거나 PR 테스트를 적용할 특정 프로젝트를 선택할 수 있습니다. 기능의 설정 여부(기본적으로 활성화됨)를 구성하고, 실패 조건을 설정하여 Snyk이 PR 검사를 통과하지 못할 시기를 정의할 수 있습니다.
 
-To configure the PR test settings for your organization:
+조직의 PR 테스트 설정을 구성하려면 다음과 같이 하십시오:
 
-1. Navigate to **Org** > settings ![](../.gitbook/assets/cog\_icon.png) **>** Integrations > Edit Settings.&#x20;
-2. Set the the toggle to **Enabled** and set the **Fail conditions** as needed:
-3. Click **Update settings**.
+1. **Org** > settings ![](../.gitbook/assets/cog\_icon.png) **>** Integrations > Edit Settings로 이동합니다.
+2. **Enabled**로 설정하고 필요에 따라 **Fail conditions** 설정합니다.
+3. **Update settings**를 클릭합니다.
 
 ![](../.gitbook/assets/image13.png)
 
-To configure the pull request test settings for a specific project, navigate to **Projects Page**> **Projects Settings > Edit Settings** and set conditions similarly:
+특정 프로젝트에 대한 pull request를 설정하려면 **Projects Page**> **Projects Settings > Edit Settings**로 이동하여 조건을 비슷하게 설정하십시오:
 
 ![](../.gitbook/assets/main.png)
 
 {% hint style="info" %}
-You can avoid Snyk failing PRs for licensing issues, using license policies. See [License policies](https://support.snyk.io/hc/en-us/sections/360002249578-License-Policies) for more details.
+라이선스 정책을 사용하여 라이선스 문제로 인해 Snyk이 PR에 실패하는 것을 방지할 수 있습니다. 자세한 내용은 [라이선스 정책](https://support.snyk.io/hc/en-us/sections/360002249578-License-Policies)을 참조하십시오.
 {% endhint %}
 
-**Initial step: get visibility and set fail conditions**
+**Initial step: visibility** 및 **fail conditions** 설정
 
 At the start of rollout, we recommend that you begin with Snyk testing your PRs, but without failing them, so your developers get used to seeing the Snyk commit check.
 
-1. Decide to apply this at the organization level, or for specific projects.
-2. Set the conditions (as described above):
+1. 이를 조직 또는 특정 프로젝트에 적용하기로 결정합니다.
+2. 조건을 설정합니다:
    * **Fail only** for **Only fail when the PR is adding a dependency with issues**.
-   * Check both **Only Fail for high severity issues** and Only **fail when the issues found have a fix available**&#x20;
+   * Check both **Only Fail for high severity issues** and Only **fail when the issues found have a fix available**
 
 ## Stage 4: Enable Blocking PRs
 
