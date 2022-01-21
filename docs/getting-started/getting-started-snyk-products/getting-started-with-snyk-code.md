@@ -1,84 +1,84 @@
-# Getting started with Snyk Code
+# Snyk Code 사용하기
 
-Get started with [Snyk Code](https://snyk.io/product/snyk-code/) to find, prioritize and fix potential vulnerabilities in your proprietary code.
-
-{% hint style="info" %}
-This documentation describes using Snyk Code with the Web UI. You can also use Snyk Code as a plugin to your JetBrains IDE; see [JetBrains IDE Plugins](https://docs.snyk.io/integrations/ide-tools/jetbrains-plugins) for more details.
-{% endhint %}
-
-## Prerequisites
-
-* A Snyk account.
-* [Snyk Open Source](https://docs.snyk.io/snyk-open-source) or [Snyk Container](https://docs.snyk.io/snyk-container) installed (as currently Snyk Code is distributed as an add-on).
-* Projects that include code in [a supported language](https://docs.snyk.io/snyk-code/snyk-code-language-and-framework-support).
-* One of the following supported source code management systems (SCMs): GitHub, GitHub Enterprise, Bitbucket Cloud, Bitbucket Server, GitLab Cloud, Azure Repos.
-
-## Stage 1: Enable Snyk Code
-
-Snyk Code is disabled by default, so you must enable it for each organization:
-
-1. Log in to [Snyk.io](http://snyk.io).
-2. Click on settings ![](../../.gitbook/assets/cog\_icon.png) > **Snyk Code**.&#x20;
-3. Under **Enable Snyk Code**, change **Disabled** to **Enabled:**
-4. Click **Save changes**.
-
-## Stage 2: Add source control integration
+[Snyk Code](https://snyk.io/product/snyk-code/)를 사용하여 코드에서 잠재적인 취약점을 찾아 우선순위를 지정하고 수정할 수 있습니다.
 
 {% hint style="info" %}
-If you already have an integration set up, you can skip this step
+이 문서에는 웹 UI와 함께 Snyk Code를 사용하는 방법에 대해 설명합니다. Snyk Code를 JetBrains IDE 플러그인으로도 사용할 수 있습니다. 자세한 내용은 [JetBrains IDE Plugins](https://docs.snyk.io/integrations/ide-tools/jetbrains-plugins)를 참조하세요.
 {% endhint %}
 
-Choose a source code integration, to allow Snyk to work on a project.
+## 전제 조건
 
-1. Log in to [Snyk.io](http://snyk.io).
-2. Select **Integrations > Source control**.
-3. Click the source control system (for example, GitHub) to integrate with Snyk:&#x20;
-4. Fill in the account credentials as prompted (or authenticate with your account in GitHub), to grant Snyk access permissions for integration.
+* Snyk 계정
+* [Snyk Open Source](https://docs.snyk.io/snyk-open-source) 또는 [Snyk Container](https://docs.snyk.io/snyk-container) 설치(현재 Snyk Code는 애드온으로 배포).
+* [지원되는 언어](../../products/snyk-code/snyk-code-language-and-framework-support.md)로 된 코드를 포함하는 프로젝트.
+* 지원되는 소스 코드 관리 시스템(SCMs) 중 하나 필요: GitHub, GitHub Enterprise, Bitbucket Cloud, Bitbucket Server, GitLab Cloud, Azure Repos.
 
-Snyk Code temporarily clones your repository for code analysis, this requires appropriate permissions and HTTPS access to your SCM.
+## 1단계: Snyk Code 활성화
 
-For more information about how data is stored, see [How Snyk handles your data](../../more-info/how-snyk-handles-your-data.md). For more details about integrations, see [DevOps integrations & languages](https://docs.snyk.io/introducing-snyk/introduction-to-snyk/integrations-and-languages).
+Snyk Code는 기본적으로 비활성화되어 있으므로 각 조직 설정에서 활성화해야 합니다.
 
-## Stage 3: Add projects
+1. [Snyk.io](http://snyk.io)에 로그인합니다.
+2. settings 클릭 ![](../../.gitbook/assets/cog\_icon.png) > **Snyk Code**.
+3. **Enable Snyk Code**에서 **Disabled**를 **Enabled**로 변경합니다.
+4. **Save changes**를 클릭 합니다.
+
+## 2단계: 소스 제어 통합 추가
 
 {% hint style="info" %}
-If you already have projects added, you can skip this step.
+이미 설정을 완료한 경우 해당 단계를 건너뛸 수 있습니다.
 {% endhint %}
 
-Add projects to test with Snyk, by choosing repositories for Snyk to test and monitor.
+Snyk에서 프로젝트를 작업할 수 있도록 소스 코드 통합을 진행합니다.
 
-1. Select **Projects** from [snyk.io](http://snyk.io).
-2. Select the tool to add the project from (for example GitHub):&#x20;
-3. In **Personal and Organization repositories**, select the repositories to use:&#x20;
-4. Click **Add selected repositories** to import the selected repositories into your projects. This sets Snyk to run a regular check (daily by default) for your proprietary code vulnerabilities.&#x20;
-5. A progress bar appears: click **View log** to see log results.&#x20;
-6. Project import completes.
+1. [Snyk.io](http://snyk.io)에 로그인 합니다.
+2. **Integrations > Source control**을 선택 합니다.
+3. Snyk과 통합할 소스 제어 시스템(예: Github)을 클릭합니다.
+4. Snyk 액세스 권한을 부여하려면 계정 자격 증명을 진행하거나 Github에서 인증을 진행합니다.
+
+Snyk Code는 코드 분석을 위해 임시로 저장소를 복제합니다. 이를 위해서는 SCM에 대한 적절한 권한과 HTTPS 액세스가 필요합니다.
+
+데이터 저장 방법에 대한 자세한 내용은 [How Snyk handles your data](../../more-info/how-snyk-handles-your-data.md)를 참조하세요. 통합에 대한 자세한 내용은 [DevOps integrations & languages](https://docs.snyk.io/introducing-snyk/introduction-to-snyk/integrations-and-languages)를 참조하세요.
+
+## 3단계: 프로젝트 추가
 
 {% hint style="info" %}
-Currently Snyk Code does not support the **Exclude folders** option during import. Please contact us if you need more information.
+이미 추가된 프로젝트가 있는 경우 이 단계를 건너뛸 수 있습니다.
 {% endhint %}
 
-See [Snyk projects](https://support.snyk.io/hc/en-us/sections/360004724958-Snyk-projects) for more details.
+Snyk이 테스트하고 모니터링할 저장소를 선택하여 프로젝트를 추가합니다.
 
-## Stage 4: View vulnerabilities
+1. &#x20;[snyk.io](http://snyk.io)에서 **Projects**를 선택합니다.
+2. 프로젝트를 추가할 도구를 선택하세요(예: Github).
+3. **Personal and Organization repositories**에서 사용할 저장소를 선택합니다.
+4. **Add selected repositories**를 클릭하여 선택한 저장소의 프로젝트를 추가합니다. 이 경우 Snyk이 코드 취약점에 대한 정기 검사를 실행하도록 설정합니다.
+5. 진행률이 표시됩니다. 로그 결과를 보려면 **View log**를 클릭하세요.
+6. 프로젝트 추가가 완료됩니다.
 
-You can now view vulnerability results for imported projects. The **Projects** tab appears by default after import, showing vulnerability information for projects you've imported.
+{% hint style="info" %}
+현재 Snyk Code는 **폴더 제외 옵션**을 지원하지 않습니다. 더 많은 정보가 필요하면 저희에게 연락 부탁 드립니다.
+{% endhint %}
 
-1. Click on an imported project to see vulnerability information for that project, including the number of issues found, grouped by severity :&#x20;
-2. Click on an entry to open the issues view for that entry. For each issue, this shows the exploitable code snippet and a description of the code flaw that may lead to this vulnerability if not fixed:
+자세한 내용은 [Snyk projects](https://support.snyk.io/hc/en-us/sections/360004724958-Snyk-projects)를 참조하세요.
+
+## 4단계: 취약점 확인
+
+추가된 프로젝트에 대한 취약점 결과를 확인할 수 있습니다. **Projects** 탭은 추가 후에 기본적으로 나타나며 해당 프로젝트에 대한 취약점 정보를 제공합니다.
+
+1. 추가된 프로젝트를 클릭하면 발견된 취약점 수를 포함하여 해당 프로젝트에 대한 취약점 정보를 심각도별로 그룹화 하여 볼 수 있습니다.
+2. 항목을 클릭하여 해당 항목에 대한 취약점을 확인할 수 있습니다. 각 취약점에 대해 악용 가능한 코드와 수정하지 않을 경우 취약점으로 이어질 수 있는 코드에 대한 설명을 제공합니다.
 
 ![](../../.gitbook/assets/view-vulns2.png)
 
-See [View project information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information) for more details.
+자세한 내용은 [View project information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information)을 참조하세요.
 
-## Stage 5: View issue details
+## 5단계: 취약점 세부 정보 확인
 
-Click **Full Details** on an issue to view more details about it, such as:
+취약점에 대한 자세한 내용을 확인하려면 **Full Details**를 클릭합니다.
 
-* **Data Flow**: The issue's taint flow from the source (the user input) to the sink (the operation that needs to receive clean input and can be exploited otherwise).
-* **Fix Strategy**: An area that focuses on how to fix the problem with more details, references and code samples related to it.
+* **Data Flow**: 소스(사용자 입력)에서 싱크(정확한 입력을 수신해야 하며 그렇지 않으면 악용될 수 있는 작업)로의 흐름을 나타냅니다.
+* **Fix Strategy**: 취약점에 대한 자세한 내용, 참조 및 코드 샘플을 제공하여 취약점을 수정하는 방법을 제공합니다.
 
-## For more information
+## 추가 내용
 
 * [Snyk Code](https://docs.snyk.io/snyk-code)
 * [Developer-first SAST with Snyk Code](https://snyk.io/blog/developer-first-sast-with-snyk-code/)
