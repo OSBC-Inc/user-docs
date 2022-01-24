@@ -1,56 +1,56 @@
-# View project issues, fixes, and dependencies
+# 프로젝트 issues, fixes, dependencies 확인
 
-For your project, you can view the following displays:
+프로젝트에서 다음 정보를 확인할 수 있습니다.
 
-* **Issues:** the number of vulnerabilities and license issues.
-* **Fixes**: fix advice.
-* **Dependencies**: the total number of direct and transitive (nested) dependencies.
+* **Issues:** 취약점 및 라이선스 문제의 수.
+* **Fixes**: 취약점에 대해서 수정을 진행합니다.
+* **Dependencies**: 직접 및 전이(충첩) 종속성의 총 수.
 
-### View issues
+### Issues 확인 &#x20;
 
-Below the project summary details, you can see vulnerabilities and licensing issues, in the **Issues** tab:
+프로젝트 요약 세부 정보 아래 **Issues** 탭에서 취약점 및 라이선스 문제를 확인할 수 있습니다.
 
 ![](<../../.gitbook/assets/Screenshot 2021-10-19 at 11.49.30.png>)
 
-Use the left-hand area to filter and search issues. Click the checkboxes to filter issues by **Issue type**, **Severity**, **Exploit Maturity**, and **Status**. You can also edit the **Priority Score** slider to change the range displayed (by default this is set from 0 - 1000).
+왼쪽 영역을 사용하여 문제를 필터링하고 검색합니다. 체크박스를 통해 **문제 유형, 심각도, 공격 영향도, 상태** 별로 필터링합니다. **우선 순위 점수** 표시 범위를 슬라이더를 이용하여 변경할 수 도 있습니다.(기본적으로 0 \~ 1000으로 설정).
 
-Issues details appear in the main area, sorted by priority score. See **View Issue Details.**
+ssue 세부 정보는 우선 순위 점수별로 정렬된 영역에 나타납니다. **View Issue Details**를 참조하세요.
 
-#### Fix issues (Fix PR)
+#### Fix issues (PR 수)
 
-Snyk provides powerful features to fix issues identified during scanning, as shown in the **Open a fix PR** section of the **Issues** and **Fixes** tabs:
+Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대로 스캔 중에 식별된 문제를 수정하는 기능을 제공합니다.
 
 ![](../../.gitbook/assets/image27.png)
 
-You can also select to fix a specific issue, clicking **Fix this vulnerability** on a specific issue:
+**Fix this vulnerability**를 클릭하여 특정 Issues를 수정하도록 선택할 수 있습니다.
 
 ![](../../.gitbook/assets/image26.png)
 
-See [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities) for an overview.\
-See [Fixing and prioritizing issues](https://docs.snyk.io/fixing-and-prioritizing-issues) for more details.
+개요는 [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities)를 참조하세요.\
+자세한 내용은 [Fixing and prioritizing issues](https://docs.snyk.io/fixing-and-prioritizing-issues)를 참조하세요.
 
-#### View issue details
+#### Issues 세부정보 확인
 
-For each issue, this display shows details about the vulnerability including its priority score (see [Prioritizing Snyk issues](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score)):
+각 Issuse에 대해 우선 순위 점수를 포함한 취약점의 세부 정보를 표시합니다([Prioritizing Snyk issues](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score) 참조).
 
 ![](../../.gitbook/assets/image12.png)
 
-Click **More about this issue** to view detailed information about the vulnerability using [Snyk's vulnerability database](https://snyk.io/product/vulnerability-database/), giving you a deeper insight into the issue, including its CVSS score:
+**More about this issue**를 클릭하면 [Snyk's vulnerability database](https://snyk.io/product/vulnerability-database/)를 사용하여 취약점에 대한 자세한 정보를 확인할 수 있으며 CVSS 점수를 포함하여 문제에 대한 더 자세한 사항을 확인할 수 있습니다.
 
 ![](../../.gitbook/assets/image15.png)
 
-### View fixes
+### Fixes 확인
 
-Snyk's knowledge of the transitive dependencies in your project make it possible for Snyk to offer fix advice, in the **Fixes** tab:
+**Fixes**탭에서 프로젝트의 전이 종속성에 대한 Snyk을 통해 수정 가이드를 제공합니다.
 
 ![](<../../.gitbook/assets/Screenshot 2021-10-19 at 11.57.07.png>)
 
-See [Fixing vulnerabilities](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md) for details.
+자세한 내용은 [Fixing vulnerabilities](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)를 참조하세요.
 
-### View dependencies
+### Dependencies 확인
 
-Snyk uses the package manager of your application to build the dependency tree and display it in the **dependency** tab of the project view. This shows which components introduce a vulnerability, to show how the dependency was introduced to the application:
+Snyk은 애플리케이션의 패키지 관리자를 사용하여 디펜던시 트리를 빌드하고 프로젝트의 **dependency** 탭에 표시합니다. 이는 어떤 구성 요소가 취약점을 가지고 있는지 확인할 수 있으며 디펜던시가 애플리케이션에 어떻게 도입되었는지 제공합니다.
 
 ![](../../.gitbook/assets/image23.png)
 
-For example, the above screenshot shows a vulnerability based on the transitive dependency **qs@2.2.4**, brought in from the direct dependency **body-parser@ 1.9.0**.
+예를 들어 위 내용에서 직접 종속성 **body-parser@ 1.9.0**에서 가져온 전이 종속성 **qs@2.2.4**에 기반한 취약점을 나타냅니다.

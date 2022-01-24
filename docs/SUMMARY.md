@@ -26,7 +26,7 @@
   * [Snyk CI/CD Integration: good practices](getting-started/snyk-cicd-integration-good-practices.md)
   * [Snyk 프로젝트 소개](getting-started/introduction-to-snyk-projects/README.md)
     * [프로젝트 정보 확인](getting-started/introduction-to-snyk-projects/view-project-information.md)
-    * [View project issues, fixes, and dependencies](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
+    * [프로젝트 issues, fixes, dependencies 확인](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
     * [View project settings](getting-started/introduction-to-snyk-projects/view-project-settings.md)
     * [View project history](getting-started/introduction-to-snyk-projects/view-project-history.md)
     * [Issue card information](getting-started/introduction-to-snyk-projects/issue-card-information.md)
