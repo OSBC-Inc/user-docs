@@ -17,7 +17,7 @@
     * [Snyk 제품 및 도구 선택](getting-started/getting-started-snyk-products/select-snyk-product-tool.md)
     * [Snyk Open Source 사용하기](getting-started/getting-started-snyk-products/getting-started-snyk-open-source.md)
     * [Snyk Code 사용하기](getting-started/getting-started-snyk-products/getting-started-with-snyk-code.md)
-    * [Getting started with Snyk Container](getting-started/getting-started-snyk-products/getting-started-snyk-container.md)
+    * [Snyk Container 시작하기](getting-started/getting-started-snyk-products/getting-started-snyk-container.md)
     * [Getting started with Snyk Infrastructure as Code (IaC)](getting-started/getting-started-snyk-products/getting-started-snyk-iac.md)
     * [Getting Started with Snyk License Compliance Management](getting-started/getting-started-snyk-products/getting-started-snyk-licensing-compliance.md)
     * [Getting started with Snyk intel vulnerability DB access](getting-started/getting-started-snyk-products/getting-started-snyk-intel-vuln-db-access.md)
