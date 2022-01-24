@@ -27,7 +27,7 @@
   * [Snyk 프로젝트 소개](getting-started/introduction-to-snyk-projects/README.md)
     * [프로젝트 정보 확인](getting-started/introduction-to-snyk-projects/view-project-information.md)
     * [프로젝트 issues, fixes, dependencies 확인](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
-    * [View project settings](getting-started/introduction-to-snyk-projects/view-project-settings.md)
+    * [프로젝트 설정 확인](getting-started/introduction-to-snyk-projects/view-project-settings.md)
     * [View project history](getting-started/introduction-to-snyk-projects/view-project-history.md)
     * [Issue card information](getting-started/introduction-to-snyk-projects/issue-card-information.md)
     * [Project tags](getting-started/introduction-to-snyk-projects/project-tags/README.md)
