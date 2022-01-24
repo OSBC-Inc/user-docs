@@ -1,31 +1,30 @@
-# Introduction to Snyk projects
+# Snyk 프로젝트 소개
 
-Projects define the items Snyk scans.
+프로젝트는 Snyk이 스캔하는 항목을 정의합니다.
 
-A project includes:
+프로젝트에는 다음 요소가 포함됩니다.
 
-* A scannable item external to Snyk.
-* Configuration to define how to run that scan.
+* Snyk 외부에서 스캔 가능한 항목입니다.
+* 해당 스캔을 실행하는방법을 정의하는 구성입니다.
 
-Projects appear on the **Projects** menu on the Snyk dashboard:
+프로젝트는 Snyk 대시보드의 **Projects** 메뉴에서 확인할 수 있습니다.
 
 ![](../../.gitbook/assets/code1.png)
 
 ## Target
 
-The address of the item to scan \(external to Snyk\), such as a Kubernetes cluster or a GitHub repo. One target may relate to many projects. The structure of the target depends on the origin.
+Kubernetes 클러스터 또는 Github 저장소와 같이 스캔할 항목의 주소(Snyk 외부). 하나의 Target은 많은 프로젝트와 관련될 수 있습니다. Target의 구조는 Origin에 따라 다릅니다.
 
 ## Origin
 
-The project ecosystem, such as CLI, API, or Kubernetes.
+LCI, API 또는 Kubernetes와 같은 프로젝트 에코 시스템.
 
 ## Targetfile
 
-The specific item to scan in a target, such as a pom file in a GitHub repo.
+Github 리포지토리의 pom 파일과 같이 대성에서 스캔할 특정 항목입니다.
 
-[Snyk Code](https://docs.snyk.io/snyk-code) scans do not use targetfiles.
+[Snyk Code](https://docs.snyk.io/snyk-code) 스캔은 Targetfile을 사용하지 않습니다.
 
 ## Type
 
-The scanning method to use for this project, such as static application security testing \(SAST, for scanning using Snyk Code\) or maven for a maven project using Snyk Open Source\). Part of the configuration for scanning.
-
+SAST (Static Application Security Testing) 또는 Snyk Open Source를 사용하는 Maven 프로젝트에 대해 이 프로젝트에 사용할 스캔 방법, 스캔을 위한 구성의 일부분입니다.
