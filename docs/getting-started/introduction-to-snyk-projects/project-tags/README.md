@@ -1,45 +1,45 @@
-# Project tags
+# 프로젝트 태그
 
-A tag is a key and value combination which allow you to add additional custom metadata to projects, through the project issues page.
+태그는 프로젝트의 issue 페이지를 통해 프로젝트에 추가 사용자 지정 메타데이터를 추가할 수 있는 key와 vlaue로 이루어져 있습니다.
 
-* Keys are limited to 30 characters
-* Values are limited to 50 characters
-* Both keys and values allow only alpha numerics and the following characters `-`, `_`
-* You can create 1000 unique key and value combinations per group, and apply 10 unique tags per project 
-* Reusing a key and value combination does not contribute towards the count
+* key는 30자로 제한됩니다.
+* value는 50자로 제한됩니다.
+* key와 value 모두 영문과 숫자와 다음 문자만 허용합니다. `-`, `_`
+* 그룹당 1000개의 고유 key 및 vlaue 조합을 생성하고 프로젝트당 10개의 고유한 태그를 적용할 수 있습니다.
+* key와 value조합을 재사용해도 개수에 포함되지 않습니다.
 
-Through the UI, you can perform the following actions:
+UI를 통해 다음 작업을 수행할 수 있습니다.
 
-1. Create tags for projects
-2. Assign and remove tags from projects
-3. Filter projects in the project listing page
+1. 프로젝트에 대한 태그 생성
+2. 프로젝트에서 태그 할당 및 제거
+3. 프로젝트 목록 페이지에서 프로젝트 필터링
 
-The Group and Organization admins can perform all actions, while a Collaborator can perform the actions if they are in an Org which is part of a Group.
+그룹 및 조직 관리자는 모든 작업을 수행할 수 있지만 공동 작업자는 그룹의 일부인 조직에 있는 경우 작업을 수행할 수 없습니다.
 
-**Creating tags**
+**태그 생성**
 
-To create a new tag for a project:
+프로젝트 새로운 태그를 생성하기 위해서 다음 작업을 수행합니다.
 
-1. On the project issues page, click "Add a key/value..."
-2. Enter your new key, and then click enter
-3. Enter your new value, and then click enter
+1. 프로젝트 문제 페이지에서 "Add a key/value..."를 클릭합니다.
+2. 새로운 key를 입력한다음 Enter를 클릭합니다.
+3. 새로운 value를 입력한 다음 Enter를 클릭합니다.
 
-You have created a new tag. Upon creating a new tag, it will be automatically assigned to the project it was created in. The tag is also usable on any other project within your group.
+새로운 태그를 생성하면 태그가 생성된 프로젝트에 자동으로 할당됩니다. 태그는 그릅 내 다른 프로젝트에서도 사용할 수 있습니다.
 
 ![](../../../.gitbook/assets/screenshot\_2020-09-29\_at\_17.58.47.png)
 
-You can also apply multiple values to the same key:
+동일한 key에 여러 value를 적용할 수 있습니다.
 
 ![](../../../.gitbook/assets/screenshot\_2020-09-29\_at\_18.04.30.png)
 
-**Assigning and removing tags from a project**
+**프로젝트에서 태그 할당 및 제거**
 
-If a tag exists in your group, you can apply it to any project.
+그룹에 태그가 존재하면 모든 프로젝트에 적용할 수 있습니다.
 
-1. Click the "+" icon in the tags section
-2. You can either select a key from the list of recently used keys, or type out the key which is part of the tag you would like to assign to your project 
-3. You can either select a value from the list of recently used values, or type out the value which is part of the tag you would like to assign to your project
-4. After you select the value, the tag will be assigned to your project
-5. To remove a tag from a project, click the "X" icon on the tag
+1. 태그 섹션에서 "+" 아이콘을 클릭합니다.
+2. 최근에 사용한 key목록에서 key를 선택하거나 프로젝트에 할당하려는 태그의 일부인 key를 입력할 수 있습니다.
+3. 최근에 사용한 value목록에서 value를 선택하거나 프로젝트에 할당하려는 태그의 일부인 value를 선택할 수 있습니다.
+4. value를 선택하면 태그가 프로젝트에 할당됩니다.
+5. 프로젝트에서 태그를 제거하려면 태그에서 "X" 아이콘을 클릭하세요.
 
 ![](../../../.gitbook/assets/screenshot\_2020-09-29\_at\_18.14.44.png)

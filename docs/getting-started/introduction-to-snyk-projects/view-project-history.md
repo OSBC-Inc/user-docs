@@ -1,9 +1,10 @@
-# 프로젝트 기록 확인
+# View project history
 
-이전 스캔 결과를 보여주는 프로젝트 기록을 확인하려면 **History**를 클릭하세요.
+Click **History** to view project history, showing results of previous scans:
 
 ![](../../.gitbook/assets/image5-2-.png)
 
-항목을 클릭하면 해당 기간에 대한 프로젝트 세부 정보의 스냅샷을 확인할 수 있습니다.
+Click on an entry to view a snapshot of project details for that period:
 
 ![](../../.gitbook/assets/image17.png)
+

@@ -30,7 +30,7 @@
     * [프로젝트 설정 확인](getting-started/introduction-to-snyk-projects/view-project-settings.md)
     * [프로젝트 기록 확인](getting-started/introduction-to-snyk-projects/view-project-history.md)
     * [Issue card](getting-started/introduction-to-snyk-projects/issue-card-information.md)
-    * [Project tags](getting-started/introduction-to-snyk-projects/project-tags/README.md)
+    * [프로젝트 태그](getting-started/introduction-to-snyk-projects/project-tags/README.md)
       * [Project attributes](getting-started/introduction-to-snyk-projects/project-tags/project-attributes.md)
     * [Maximum number of projects in an organization](getting-started/introduction-to-snyk-projects/maximum-number-of-projects-in-an-organsation.md)
   * [Getting started with Snyk dashboard](getting-started/getting-started-with-snyk-dashboard.md)
