@@ -164,7 +164,7 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 
 개발자가 패치 사용 및 실행 방법을 잘 모를 경우 자동 수정 PR에서 패치를 제외하는 것이 좋습니다.
 
-개발자에게 자동 수정 PR에 나타나는 merge advice를 고려하도록 요청해야 합니다:
+개발자는 자동 수정 PR에 나타나는 merge advice를 고려해야 합니다:
 
 ![](<../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (22).png>)
 
@@ -173,20 +173,20 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 ![](<../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (20).png>)
 
 {% hint style="info" %}
-Snyk auto fix PRs are only generated for new issues.
+Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 {% endhint %}
 
-If your SCM is Github and you are not using Snyk Broker, then by default Snyk rotates every Org user's credentials to open the auto fix PRs. You can change this if needed, and set the user credentials to open the auto fix PRs. See [Opening fix and upgrade pull requests from a fixed GitHub account](https://docs.snyk.io/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account) for details.
+~~**\*\*수정필요**~~ SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk는 모든 Org 사용자의 자격 증명을 순환하여 자동 수정 PR을 엽니다. 필요한 경우 이 설정을 변경하고 사용자 자격 증명을 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [pening fix and upgrade pull requests from a fixed GitHub account](https://docs.snyk.io/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account)를 참조하십시오.
 
-## 6단계: Dependency Upgrade PRs
+## 6단계: 디펜던시 업그레이드 PRs
 
-When your group is ready to start tackling security technical debt, you can configure Snyk to automatically create pull requests (PRs) on your behalf in order to upgrade your dependencies.
+그룹이 ~~**보안 기술 부채 문제**~~를 해결할 준비가 되면 종속성을 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk를 구성할 수 있습니다.
 
 ![](../.gitbook/assets/upgrade-node-uuid.png)
 
 **How it works**
 
-1. Integration is configured and users enable automatic upgrade PRs.
+1. SCM과 통합을 한 후 사용자가 자동 업그레이드 PR을 사용 가능으로 설정합니다.
 2. Snyk scans your projects as you import them and continues to monitor your projects, scanning on a regular basis.
 3. For each scan, when Snyk identifies new versions for your dependencies:
    * Snyk creates automatic upgrade PRs (frequency based on Snyk project settings)
