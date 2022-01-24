@@ -1,34 +1,32 @@
-# View project information
+# 프로젝트 정보 확인
 
-## View application vulnerabilities
+## 애플리케이션 취약점 확인
 
-Snyk displays your application vulnerabilities and licensing issues for files in your projects. To see these vulnerabilities, go to [your projects tab](https://app.snyk.io/projects), then select the file associated with your project. For example, the package.json file in our example application goof:
+Snyk은 프로젝트의 파일에 대한 애플리케이션 취약점과 라이선스문제를 표시합니다. 이러한 취약점을 확인하려면 [프로젝트 탭](https://app.snyk.io/projects)으로 이동한 다음 프로젝트와 연결된 파일을 선택하세요. 예를 들어 애플리케이션 goof의 package.json파일은 다음과 같습니다.
 
 ![](../../.gitbook/assets/application-vuln.png)
 
-Click on the entry to view detailed information:
+항목을 클릭하면 자세한 정보를 확인할 수 있습니다.
 
 ![](../../.gitbook/assets/project-page.png)
 
-Where:
-
-* **Header**: shows project summary information. See the [View project summary information](view-project-information.md) section.
-* **Issue cards**: show summaries of issues found. See [Issue card information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/issue-card-information).
+* **Header**: 프로젝트 요약 정보를 확인할 수 있습니다. [View project summary information](view-project-information.md)을 참조하세요.
+* **Issue cards**: 발견된 문제의 요약된 정보를 표시합니다. [Issue card information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/issue-card-information)을 참조하세요.
 * **Views**:
-  * **Overview**: shows [project issues, fixes, and dependencies](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies).
-  * **History**: shows historical snapshots of the 4 most recent tests. See [View project history](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-history).
-  * **Settings**: shows [project settings](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-settings).
+  * **Overview**: [project issues, fixes, and dependencies](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies) 표시합니다.
+  * **History**: 최근 4개의 테스트에 대한 기록 스냅샷을 제공합니다. [View project history](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-history)를 참조하세요.
+  * **Settings**: [project settings](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-settings) 표시합니다.
 
-### View project summary information
+### 프로젝트 요약 정보 확인
 
 ![](../../.gitbook/assets/proj-summ.png)
 
-The summary information shows:
+요약 정보는 다음 내용을 제공합니다.
 
-* File and history details:
-  * The name (plus link) of the monitored repository.
-  * The monitored branch name.
-  * A direct link to the project file in the SCM.
-  * The time when the project was first imported to Snyk.
-  * The time when an up-to-date snapshot of the file was fetched from the SCM and tested.
-* Predefined [project attributes](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/assign-a-policy-to-project-attributes), and any additional [project tag](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/project-tags) metadata.
+* 파일 및 기록 세부정보:
+  * 모니터링되는 저장소의 이름(링크).
+  * 모니터링되는 branch 이름.
+  * SCM의 프로젝트 파일에 대한 링크.
+  * 프로젝트를 Snyk으로 처음 추가한 시간.
+  * 파일의 최신 스냅샷을 SCM에서 가져와 테스트한 시간.
+* 사전 정의된 [프로젝트 속성](../../features/fixing-and-prioritizing-issues/policies/assign-a-policy-to-project-attributes.md) 및 추가 [프로젝트 태그](project-tags/) 메타데이터.

@@ -25,7 +25,7 @@
   * [Snyk SCM 통합: 모범 사례](getting-started/snyk-scm-integration-good-practices.md)
   * [Snyk CI/CD Integration: good practices](getting-started/snyk-cicd-integration-good-practices.md)
   * [Snyk 프로젝트 소개](getting-started/introduction-to-snyk-projects/README.md)
-    * [View project information](getting-started/introduction-to-snyk-projects/view-project-information.md)
+    * [프로젝트 정보 확인](getting-started/introduction-to-snyk-projects/view-project-information.md)
     * [View project issues, fixes, and dependencies](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
     * [View project settings](getting-started/introduction-to-snyk-projects/view-project-settings.md)
     * [View project history](getting-started/introduction-to-snyk-projects/view-project-history.md)
