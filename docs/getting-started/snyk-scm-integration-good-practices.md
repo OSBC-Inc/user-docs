@@ -187,21 +187,21 @@ Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 **How it works**
 
 1. SCM과 통합을 한 후 사용자가 자동 업그레이드 PR을 사용 가능으로 설정합니다.
-2. Snyk scans your projects as you import them and continues to monitor your projects, scanning on a regular basis.
-3. For each scan, when Snyk identifies new versions for your dependencies:
-   * Snyk creates automatic upgrade PRs (frequency based on Snyk project settings)
-   * Snyk will not open a new upgrade PR for a dependency that is already changed (upgraded or patched) in another open Snyk PR.
-   * Snyk opens separate PRs for each dependency.
-   * Snyk will not create upgrade PRs for a repo that has 5 or more Snyk PRs open - if the limit of open PRs is reached, no new ones are created. This number can set to between 1-10 from the Settings. This limit only applies when creating upgrade PRs, but does count fix PRs. Fix PRs are not limited in this way.
+2. Snyk은 프로젝트를 가져오면서 스캔을 하고 정기적으로 프로젝트를 계속 모니터링합니다.
+3. 각각을 스캔할 때, Snyk이 디펜던시에 대한 새 새전을 식별할 때 다음과 같이 수행합니다:
+   * Snyk은 자동 업그레이드 PR을 생성합니다.(Snyk 프로젝트 설정의 테스트 빈도 기반)
+   * ~~**(재확인 필요)**~~Snyk은 디펜던시가 이미 다른 open된 PR에 의해 변경(업그레이드 또는 패치 적용)된 경우 새 PR을 생성하지 않는다.
+   * Snyk은 각 디펜던시에 대해 별도의 PR을 생성합니다.
+   * Snyk은 5개 이상의 Snyk PR이 열려 있는 저장소에 대해 업그레이드 PR을 생성하지 않습니다. 이 숫자는 설정에서 1\~10 사이로 설정할 수 있습니다. 이 제한은 업그레이드 PR을 작성할 때만 적용되지만 수정 PR 수는 계산되지 않습니다. 따라서 수정 PR은 이러한 방식으로 제한되지 않습니다.
    * By default, Snyk recommends only patch and minor upgrades, but major version upgrade can be enabled in the settings where the feature is enabled.
-   * If the latest eligible version contains vulnerabilities not already found in your project, Snyk will not recommend an upgrade.
-   * Snyk does not recommend upgrades to versions that are less than 21 days old. This is to avoid versions that introduce functional bugs and subsequently get unpublished, or versions that are released from a compromised account (where the account owner has lost control to someone with malicious intent).
+   * 적용 가능한 최신 버전의 프로젝트에서 아직 발견되지 않은 취약점이 포함되어 있는 경우 Snyk은 업그레이드를 권장하지 않습니다.
+   * Snyk은 21일 미만의 버전에는 업그레이드를 권장하지 않습니다. 이는 기능적인 버그를 도입했다가 나중에 게시되지 않은 버전 또는 손상된 계정(계정 소유자가 악의적인 의도를 가진 사람에게 제어권을 빼앗긴 경우)에서 릴리즈되는 버전을 피하기 위함입니다.
 
-**Supported languages and repos**
+**지원되는 언어 및 저장소**
 
-Snyk currently supports this feature for npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud, including use of the Snyk Broker. For use with the Broker, your admin should first upgrade to v4.55.0 or later.
+npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud, including use of the Snyk Broker. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드를 해야 합니다.
 
-**Enable automatic dependency upgrade PRs for a specific project**
+**특정 프로젝트에 대해 자동 디펜던시 업그레이드 PR 사용**
 
 To set PR Settings on the project level, overriding the PR settings on the organization level
 
