@@ -23,7 +23,7 @@
     * [Snyk intel vulnerability DB 액세스 시작하기](getting-started/getting-started-snyk-products/getting-started-snyk-intel-vuln-db-access.md)
   * [SCM(Git) 및 CI/CD 통합 구축 소개](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
   * [Snyk SCM 통합: 모범 사례](getting-started/snyk-scm-integration-good-practices.md)
-  * [Snyk CI/CD Integration: good practices](getting-started/snyk-cicd-integration-good-practices.md)
+  * [Snyk CI/CD 통합: 모범 사례](getting-started/snyk-cicd-integration-good-practices.md)
   * [Snyk 프로젝트 소개](getting-started/introduction-to-snyk-projects/README.md)
     * [프로젝트 정보 확인](getting-started/introduction-to-snyk-projects/view-project-information.md)
     * [프로젝트 issues, fixes, dependencies 확인](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)

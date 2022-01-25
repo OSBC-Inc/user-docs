@@ -1,81 +1,86 @@
-# Snyk CI/CD Integration: good practices
+# Snyk CI/CD 통합: 모범 사례
 
-### Implementation Options
+### 구현 옵션
 
 {% hint style="info" %}
-All these methods provide the same results, as they all rely on the same Snyk engine behind the scenes. So the same arguments or options should be true whatever deployment method you select.
+All these methods provide the same results, as they all rely on the same Snyk engine behind the scenes. 따라서 어떤 배포 방법을 선택하든 동일한 인수나 옵션이 참이어야 합니다.
 {% endhint %}
 
-#### CI/CD Deployment methods
+#### CI/CD 배치 방법
 
-There are various ways to configure Snyk within your pipeline. The choice of which method will mainly depend on your environment and preference, and they should all lead to a successful run:
+파이프라인 내에서 Snyk을 구성하는 다양한 방법이 있습니다. 어떤 방법을 선택할지는 주로 환경 및 선호도에 따라 결정할 수 있으며, 이러한 방법을 모두 성공적으로 실행할 수 있습니다.
 
-**Using Snyk native plugins**
+**Snyk 기본 플러그인 사용**
 
-Available for most common CI/CD tools. Easiest way to setup and get started. The plugins include the most common parameters and options in the interface UI.
+대부분의 일반적인 CI/CD 도구에 사용할 수 있습니다. 설치 및 시작하기에 가장 쉬운 방법입니다. 플러그인에는 인터페이스 UI에서 가장 일반적인 매개 변수와 옵션이 포함되어 있습니다.
 
-**Deploy Snyk CLI using the npm method**
+**npm을 사용하여 Snyk CLI를 배치하는 방법**
 
-Similar steps as installing the CLI locally. Requires you to be able to run an npm command in the pipeline script. This method has the advantage of completely aligning with the CLI experience so you can easily troubleshoot and configure.
+CLI를 로컬로 설치하는 것과 유사한 방법입니다. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법을 사용하면 CLI 환경에 완벽하게 적응할 수 있으므로 쉽게 문제를 해결하고 구성할 수 있습니다.
 
-**Deploy Snyk CLI binary version**
+**Snyk CLI 바이너리 버전 배치**
 
-The advantage of the binary setup is that it has no dependency with the local environment. It is useful if you cannot run a npm command in your pipeline for instanceThe various versions of the CLI binaries are available here:[https://github.com/snyk/snyk/tags](https://github.com/snyk/snyk/tags)Snyk has a Linux, Windows and other versions.
+바이너리 설정의 장점은 로컬 환경과의 종속성이 없다는 것입니다. 예를 들어 파이프라인에서 npm 명령을 실행할 수 없는 경우에 유용합니다.
 
-**Deploy a Snyk Container**
+CLI 바이너리 파일은 [https://github.com/snyk/snyk/tags](https://github.com/snyk/snyk/tags)에서 확인할 수 있습니다.
 
-You may also deploy Snyk in your pipeline using one of our images in Dockerhub: [https://hub.docker.com/r/snyk/snyk](https://hub.docker.com/r/snyk/snyk)
+Snyk은 Linux, Windows 및 기타 버전을 가지고 있습니다.
 
-#### Examples
+**Snyk 컨테이너 배치**
 
-The following repo shares some examples of binary and NPM integrations for various CI/CD tools:
+Dockerhub의 이미지 중 하나를 사용하여 파이프라인에 Snyk을 배치할 수도 있습니다: [https://hub.docker.com/r/snyk/snyk](https://hub.docker.com/r/snyk/snyk)
+
+#### 예
+
+다음 저장소는 다양한 CI/CD 도구에 대한 바이너리 및 NPM 통합의 몇 가지 예를 공유합니다:
 
 [CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples)
 
-### Typical stages of adoption
+### 일반적인 선택 방식
 
-Developer teams typically adopt Snyk in the following stages:
+개발팀은 일반적으로 다음 단계를 따라 Snyk을 채택합니다:
 
-1. [Expose vulnerabilities](snyk-cicd-integration-good-practices.md) (snyk monitor)
-2. [Use Snyk as a gatekeeper](snyk-cicd-integration-good-practices.md) (snyk test)
-3. [Continuous monitoring](snyk-cicd-integration-good-practices.md) (snyk test + Snyk monitor)
+1. [취약점 노출](snyk-cicd-integration-good-practices.md) (snyk monitor)
+2. [Snyk을 gatekeeper로 사용](snyk-cicd-integration-good-practices.md) (snyk test)
+3. [지속적인 모니터링](snyk-cicd-integration-good-practices.md) (snyk test + Snyk monitor)
 
-### **Stage 1: Expose vulnerabilities (Snyk monitor)**
+### **1**단계**:** 취약점 노출 **(Snyk monitor)**
 
-This is a typical initial approach, using Snyk results to expose to your team vulnerabilities during the development process, which increases visibility of these vulnerabilities amongst your team.
+이는 일반적인 초기 접근 방식이며, 개발 프로세스 중 Snyk의 결과를 통해 팀의 취약점에 대한 가시성이 향상됩니다.
 
-When you first implement Snyk in your pipeline, we recommend you use only the **snyk monitor** command, or if you use one of Snyk's CI plugins, to configure the plugin to not fail the build.\
-This is because all projects are vulnerable, and after you set Snyk to fail the build, every build will fail because of Snyk, which may cause problems with your team being quickly overwhelmed with failure messages.
+파이프라인에서 Snyk을 처음 구현할 때는 **sSnyk monitor** 명령만 사용하거나 Snyk의 CI 플러그인 중 하나를 사용하여 플러그인이 빌드에 실패하지 않도록 구성하는 것이 좋습니다.
 
-Using **snyk monitor** to expose results will provide information, without disrupting processes.
+모든 프로젝트가 취약하기 때문이며, 빌드에 실패하는 Snyk 설정을 한 후 Snyk으로 인해 모든 빌드가 실패하게 되는 문제가 발생할 수 있습니다.
 
-### **Stage 2: Use Snyk as a gatekeeper (snyk test)**
+**snyk monitor**를 사용하여 결과를 도출하면 프로세스를 중단하지 않고 정보를 제공할 수 있습니다.
 
-This next approach prevents the introduction of new vulnerabilities (sometimes known as "stopping the bleeding").
+### **2**단계**:** Snyk을 gatekeeper로 사용 **(snyk test)**
 
-After your teams understand the vulnerabilities in their applications, and develops a process for fixing them early in the development cycle, you can configure Snyk to fail your builds, to prevent introducing vulnerabilities into your applications..
+이 접근 방식은 새로운 취약점(“stopping the bleeding”이라고도 함)의 유입을 방지합니다.
 
-Add **snyk test** to your build or enable the fail functionality to make Snyk fail your builds, providing the results output to the console. Your Devs or DevOps teams can use the results to decide whether to stop or continue the build.
+팀에서 애플리케이션의 취약점을 이해하고 개발 초기에 수정하는 프로세스를 개발한 후에는 취약점에 대해 빌드에 실패하도록 Snyk을 구성하여 애플리케이션 취약점이 유입되지 않도록 할 수 있습니다.
 
-### **Stage 3: Continuous monitoring (snyk test + Snyk monitor)**
+빌드에 **snyk test**를 추가하거나 fail 기능을 활성화하여 Snyk이 빌드에 실패하도록 하여 결과를 콘솔에 출력합니다. Devs 또는 DevOps 팀은 결과를 통해 빌드를 중지할지 계속할지를 결정할 수 있습니다.
 
-After you configure Snyk to fail the build when vulnerabilities are detected, you can now configure Snyk to send a snapshot of your project's successful builds to Snyk for ongoing monitoring.
+### **3**단계**:** 지속적인 모니터링 **(snyk test + Snyk monitor)**
 
-To do this, configure your pipeline to run **snyk monitor** if your **snyk test** returns a successful exit code.
+취약점이 감지될 때 빌드에 실패하도록 Snyk을 구성한 후 지속적인 모니터링을 위해 프로젝트의 성공적인 빌드에 대한 스냅샷을 Snyk으로 보내도록 Snyk을 구성할 수 있습니다.
 
-## **Technical Implementation**
+이렇게 하려면 snyk test가 성공적인 종료 코드를 반환할 경우 synk monitor를 실행하도록 파이프라인을 구성하십시오.
 
-### Prerequisites
+## 기술 구현
+
+### 전제조건
 
 To configure Snyk to run in a pipeline, retrieve key configuration inputs from your Snyk account.
 
-### Define target organization
+### 대상 조직 정의
 
-When you run Snyk in your CI/CD platform, you will typically want to post the test results to Snyk, for review and ongoing monitoring.
+CI/CD 플랫폼에서 Snyk을 실행할 때 일반적으로 테스트 결과를 검토 및 지속적인 모니터링을 위해 Snyk에 업로드합니다.
 
 You can define the target organization in the Snyk CLI, by either URL slug or organization ID, using the **--org** CLI argument:
 
-* You can define the target organization using its URL slug, as displayed in the browser's address bar when viewing it in the Snyk UI:&#x20;
+* You can define the target organization using its URL slug, as displayed in the browser's address bar when viewing it in the Snyk UI:
 * Or you can define the target organization using its **org id** in each organization's settings page:
 
 ![](../.gitbook/assets/image1.png)
@@ -95,7 +100,7 @@ To run the snyk test, you need an authentication token with access to the desire
 
 Snyk supports the following approaches to add tests to a build pipeline:
 
-* **Snyk integration plugins**: Snyk provides pre-built plugins for several CI servers, including [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) and [Azure Pipelines. ](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration) See the [Continuous Integration](https://docs.snyk.io/integrations/ci-cd-integrations) documentation for more details
+* **Snyk integration plugins**: Snyk provides pre-built plugins for several CI servers, including [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) and [Azure Pipelines. ](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)See the [Continuous Integration](https://docs.snyk.io/integrations/ci-cd-integrations) documentation for more details
 * **Snyk CLI:** For teams with more complex workflows, or using a build system without a Snyk pre-built plugin, you can use the Snyk CLI tool during CI/CD setups. See [Setting up using Snyk CLI](snyk-cicd-integration-good-practices.md) for more details.
 * **Snyk API**: For teams with complex requirements, Snyk provides a REST API, which you can use for functions including initiating scans, onboarding new projects, and testing arbitrary libraries. See the [Snyk API documentation](https://github.com/snyk/user-docs/tree/54e0dec0fe0e081d49f34119a9018499ad5c9e96/getting-started/snyk-billing-plan-onboarding/snyk-cicd-integration-good-practices/README.md) for more details.
 
@@ -113,7 +118,7 @@ Snyk CLI can be configured to:
 When using the Snyk CLI:
 
 * **snyk test** is a synchronous command, that ends with an exit code. Exit codes can then be used by your build system to either pass or fail the build based on the test results. See the [CLI reference guide](https://docs.snyk.io/snyk-cli/guides-for-our-cli/cli-reference) for details on exit statuses and their meanings.
-* **snyk monitor** (which posts test results to the Snyk web UI) is an asynchronous command, that does not end with exit code based on the vulnerability status.&#x20;
+* **snyk monitor** (which posts test results to the Snyk web UI) is an asynchronous command, that does not end with exit code based on the vulnerability status.
 
 Depending on your approach and goals, you may need to use both command sets in your pipeline.
 
@@ -138,8 +143,8 @@ To view the full list of flags in the CLI, run the **snyk --help** or **snyk con
 
 You can add flags to the **snyk test** command to fine-tune parameters that will result in a failed build:
 
-* **--severity-threshold=high**: Fail the build only for High Severity issues:&#x20;
-* **--fail-on=upgradable**: Fail the build only for issues that are upgradable (can be fixed with Snyk fix advice): &#x20;
+* **--severity-threshold=high**: Fail the build only for High Severity issues:
+* **--fail-on=upgradable**: Fail the build only for issues that are upgradable (can be fixed with Snyk fix advice):
 
 You can also fail the build for any other parameter in the Snyk JSON output (such as CVSS score), using a wrapper like [snyk-filter](https://github.com/snyk-tech-services/snyk-filter), or use additional tooling like [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978) to fail the build only for issues found since the last build.
 
@@ -168,7 +173,7 @@ These strategies are useful to teams using Snyk's SCA (Software Composition Anal
 
 ### Gradle & Scala
 
-* For "multi-project" configurations, test all sub-projects, use the next flag with your monitor or test command **--all-sub-projects**&#x20;
+* For "multi-project" configurations, test all sub-projects, use the next flag with your monitor or test command **--all-sub-projects**
 * To scan specific configurations, select certain values of configuration attributes to resolve the dependencies. Use the next flag with your test or monitor command **--configuration-attributes=**
 
 ### Python
@@ -227,7 +232,7 @@ Some customers have complex projects, with multiple languages, package managers,
 
 **Specific to Gradle:**
 
-* For most Gradle projects, using **--all-projects** works, as it invokes gradle-specific options behind the scenes in the form of: &#x20;
+* For most Gradle projects, using **--all-projects** works, as it invokes gradle-specific options behind the scenes in the form of:
 
 ```
   snyk test --file=build.gradle --all-sub-projects
