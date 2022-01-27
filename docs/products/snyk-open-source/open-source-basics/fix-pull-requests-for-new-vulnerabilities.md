@@ -1,44 +1,44 @@
-# Automated pull request creation for new fixes
+# 새로운 수정 사항에 대한 자동 pull request 생성
 
-The following rules are applied to automatic PR creation for vulnerabilities:
+취약점에 대한 자동 PR 생성에는 다음 규칙이 적용됩니다.
 
-* Pull requests are created based on the **Test & Automated Pull Request Frequency** (see screenshot below) setting
-* If a scan is manually run (you clicked **Retest now** for the project), the 24-hour window is marked as having been run and no automatic PR is created until the next automated scan runs
-* One pull request is created per project (priority score of 700 and above only)
-* If **either** the vulnerability itself is new and has a fix available **or** if the fix is new and is not ignored&#x20;
-* For known vulnerabilities see [fix-pull-requests-for-known-vulnerabilities-backlog.md](fix-pull-requests-for-known-vulnerabilities-backlog.md "mention")
+* Pull requests는 **Test & Automated Pull Request Frequency** (아래 스크린샷 참조) 설정을 기반으로 생성됩니다.
+* 스캔이 수동으로 실행되는 경우(프로젝트에 대해 **Retest now**를 클릭 함) 24시간동안 실행된 것으로 표시되고 다음 자동 스캔이 실행될 때까지 자동 PR이 생성되지 않습니다.
+* 프로젝트당 하나의 pull request가 생성됩니다(우선순위 점수 700 이상만 해당).
+* 취약점 자체가 새롭고 사용 가능한 수정 사항이 있거나 수정 사항이 새로 추가되어 무시되지 않는 경우
+* 알려진 취약점에 대해서는 [fix-pull-requests-for-known-vulnerabilities-backlog.md](fix-pull-requests-for-known-vulnerabilities-backlog.md "mention")를 참조하세요.
 
 ![](../../../.gitbook/assets/os1.png)
 
-To know when your last 24-hour window was kicked off, check the project page for **Snapshot taken by recurring test**--also check your email for **\[snyk] Vulnerability alert** for specific scan results:
+최근 24시간의 내용을 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**을 확인하세요. 특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일도 확인하십시오.
 
 ![](../../../.gitbook/assets/os2.png)
 
-Pull requests for new vulnerabilities are enabled by default for new integrations.
+새로운 취약점에 대한 pull request는 새로운 통합에 대해 기본적으로 활성화되어 있습니다.
 
-See [Git repository SCM integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations) for full details of supported integrations.
+통합에 대한 자세한 내용은 [Git repository SCM integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 참조하세요.
 
-## Enable or disable pull requests for an integration
+## 통합에 대한 pull requests 활성화 또는 비활성화
 
 Enable at the global integration level:
 
-1. Navigate to settings ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.&#x20;
-2. Select an SCM integration (for example, GitHub).&#x20;
-3. Enable **New vulnerabilities**
+1. 설정으로 이동하여 ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
+2. SCM 통합(예: Github)을 선택합니다.
+3. **New vulnerabilities** 활성화
 
-**Apply changes to all overridden projects** will update all of the individual project settings for "Automatic fix pull requests". If a project previously had its own settings for this, clicking on this button will override it with the global setting.
+**Apply changes to all overridden projects**를 진행하면 "Automatic fix pull requests"에 대한 모든 개별 프로젝트 설정이 업데이트됩니다. 이전에 프로젝트에 대한 개별 설정이 진행된 경우 이 버튼을 클릭하면 전역 설정으로 재정의됩니다.
 
 ![](../../../.gitbook/assets/global-pr-setting.png)
 
-## Enable or disable pull requests for a single project
+## 단일 프로젝트에 대한 pull requests 활성화 또는 비활성화
 
-Enabling/disabling at a project level will override this single project rather than inheriting it from the global integration setting.
+프로젝트 수준에서 활성화/비활성화를 설정하면 전역 통합 설정과 별개로 해당 프로젝트를 재정의합니다.
 
-1. Under **Projects** select a project and select **Settings** (top right-hand corner)
-2. Select **GitHub integration**
-3. Under the **Automatic fix pull requests** section:
-   * Select **Customize for only this project**
-   * Enable **New vulnerabilities**
-   * Select **Save changes**
+1. **Projects**에서 프로젝트를 선택하고 **Settings**(오른쪽상단)을 선택합니다.
+2. **GitHub integration** 선택
+3. **Automatic fix pull requests** 섹션에서 설정을 진행합니다.
+   * **Customize for only this project**를 선택합니다.
+   * **New vulnerabilities**를 활성화합니다.
+   * **Save changes**를 선택합니다.
 
 ![](../../../.gitbook/assets/os3.png)
