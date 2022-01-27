@@ -1,35 +1,35 @@
-# Licenses
+# 라이선스
 
-## Licenses overview
+## 라이선스 개요
 
 {% hint style="info" %}
 **Feature availability**\
-Licenses are available to all paid plans. See [pricing plans](https://snyk.io/plans/) for more details.
+라이선스는 모든 유료 요금제에 제공됩니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-Every time you test your projects either with the CLI or from our app, your projects are scanned for not only vulnerabilities but also for license compliance. This includes all of your direct and indirect dependencies. Snyk scans your manifest files, and then checks for license issues against Snyk’s known licenses.
+CLI 또는 애플리케이션으로 프로젝트를 테스트할 때마다 프로젝트에 취약점뿐만 아니라 라이선스 준수 여부도 검사됩니다. 여기에는 사용자의 모든 직접 및 간접 종속성이 포함됩니다. Snyk은 매니페스트 파일을 스캔한 다음 Snyk의 알려진 라이선스와 라이선스 문제를 확인합니다.
 
-In order to enable customers to get started with license compliance faster, we’ve created an out of the box default policy. The default policy is a baseline which tries to answer the requirements of multiple types of applications (SaaS, distributed, etc.), and may be used as a starting point to calibrate additional license policies. The default policy doesn’t endorse or criticize any license.\
-Different customers may have different needs and tolerance for different license types. We encourage you to make sure you made the needed changes or created new policies that fit your company’s specific requirements.
+고객이 라이선스 컴플라이언스를 보다 신속하게 시작할 수 있도록 기본 정책을 수립했습니다. 기본 정책은 여러 유형의 애플리케이션(SaaS, 분산 등)의 요구 사항에 대한 응답을 시도하는 기준선으로, 추가 라이선스 정책을 보정하는 출발점으로 사용할 수 있습니다. 기본 정책은 라이선스를 승인하거나 비판하지 않습니다.\
+고객마다 라이선스 유형에 따라 요구사항과 허용 범위가 다를 수 있습니다. 필요한 내용을 변경하거나 회사의 특정 요구사항에 맞는 새로운 정책을 만들었는지 확인하는 것이 좋습니다.
 
-By [default](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview) we determine the severity of licenses in the following way:
+[기본적으로](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview) 다음과 같은 방법으로 라이선스의 심각도를 결정합니다:
 
-* High severity - licenses that definitely present issues for commercial software.
-* Medium severity - licenses that have clauses that may be of concern and should be reviewed.
+* High severity - 상용 소프트웨어에 대한 문제를 분명히 제기하는 라이선스
+* Medium severity - 문제가 될 수 있고 검토해야 할 조항이 있는 라이선스
 
-New licenses added by Snyk will inherit the Unknown license type severity. In cases where this severity was not set to None, newly added licenses will appear in the licenses compliance results.
+Snyk에서 추가한 새 라이선스는 알 수 없는 라이선스 유형 심각도를 상속합니다. 이 심각도를 없음으로 설정하지 않은 경우 새로 추가된 라이선스가 라이선스 준수 결과에 나타납니다.
 
-In case you notice a license with the wrong license assigned to it, you can reach out to our support team. We will investigate the request and update the license if needed.
+잘못된 라이선스가 배정된 라이선스를 발견하시면 저희 지원팀에 문의하시면 됩니다. 요청 사항을 조사하여 필요 시 라이선스를 업데이트하겠습니다.
 
 To facilitate onboarding of your developers, we recommend that your teams check these defaults, update severities and add instructions per license type based on the policies outlined specifically by your Legal teams. Once updated, when Snyk detects a license violation it displays the violation for all users in the organization from our UI project area, or from the CLI Snyk test results, in the same way as a security vulnerability, and including the severity and instructions you configured.
 
 ![](<../../../.gitbook/assets/image (2).png>)
 
-### **An inventory of your licenses**
+### 라이선스 목록
 
-Within the **Reports** area you can view an inventory of all of your licenses across all your projects. Snyk also lists packages that have dual licenses and multiple licenses. See [Reports: Licenses tab](reports-licenses-tab.md) for more information.
+**Reports** 영역에서는 모든 프로젝트에 걸쳐 있는 모든 라이선스의 목록을 볼 수 있습니다. 또한 Snyk은 이중 라이선스와 다중 라이선스가 있는 패키지를 나열합니다. 자세한 내용은 [Reports: Licenses tab](reports-licenses-tab.md)을 참조하십시오.
 
-### **Supported package managers**
+### 지원되는 패키지 매니저
 
 * npm
 * RubyGems

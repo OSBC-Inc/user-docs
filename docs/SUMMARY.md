@@ -56,7 +56,7 @@
     * [Snyk for PHP](products/snyk-open-source/language-and-package-manager-support/snyk-for-php.md)
     * [Snyk for Elixir](products/snyk-open-source/language-and-package-manager-support/snyk-for-elixir.md)
     * [Snyk for Bazel](products/snyk-open-source/language-and-package-manager-support/snyk-for-bazel.md)
-  * [Licenses](products/snyk-open-source/licenses/README.md)
+  * [라이선스](products/snyk-open-source/licenses/README.md)
     * [Reports: Licenses tab](products/snyk-open-source/licenses/reports-licenses-tab.md)
   * [License policies](products/snyk-open-source/license-policies/README.md)
     * [Setting a license policy](products/snyk-open-source/license-policies/setting-a-license-policy.md)
