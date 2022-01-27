@@ -33,7 +33,7 @@
     * [프로젝트 태그](getting-started/introduction-to-snyk-projects/project-tags/README.md)
       * [프로젝트 속성](getting-started/introduction-to-snyk-projects/project-tags/project-attributes.md)
     * [조직의 최대 프로젝트 수](getting-started/introduction-to-snyk-projects/maximum-number-of-projects-in-an-organsation.md)
-  * [Getting started with Snyk dashboard](getting-started/getting-started-with-snyk-dashboard.md)
+  * [Snyk dashboard 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
 
 ## PRODUCTS
 
