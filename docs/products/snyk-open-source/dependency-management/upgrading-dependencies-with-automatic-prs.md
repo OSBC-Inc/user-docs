@@ -1,65 +1,65 @@
-# Upgrading dependencies with automatic PRs
+# 자동 PR을 사용하여 디펜던시 업그레이드
 
-Once you have imported your preferred Git repositories, Snyk monitors those repos, regularly scanning them for vulnerability, license and dependency health issues. In addition to fix advice, Snyk can then also automatically create pull requests (PRs) on your behalf in order to upgrade your dependencies based on the scan results.
+Git 저장소를 가져오면 Snyk은 이러한 저장소를 모니터링하여 취약점, 라이선스 및 디펜던시 상태의 문제를 정기적으로 검사합니다. 수정 조언 외에도 Snyk은 자동으로 사용자를 대신하여 PR(pull request)을 생성하여 스캔 결과에 따라 디펜던시를 업그레이드할 수 있습니다.
 
-Snyk currently supports this feature for npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud. For use with the Broker, your admin should first upgrade to v4.55.0 or later. See our docs for additional assistance when upgrading Broker.
+Snyk은 현재 GitHub, GitHub Enterprise Server and BitBucket Cloud를 통해 npm, Yarn and Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 도움이 필요한 경우 문서를 참조하십시오.
 
 ![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (13).png>)
 
-## How it works
+## 작동 방식
 
-1. Integration is configured and users enable automatic upgrade PRs (within the integration settings or [in the project settings](upgrading-dependencies-with-automatic-prs.md)).
-2. Snyk scans your projects as you import them and continues to monitor your projects, scanning on a regular basis thereafter.
-3. Per scan, when new versions for your dependencies are identified, Snyk does the following:
-   * Snyk creates automatic upgrade PRs (frequency based on Snyk project settings)
-   * Snyk will not open a new upgrade PR for a dependency that is already changed (upgraded or patched) in another open Snyk PR.
-   * Snyk opens separate PRs for each dependency.
-   * Snyk will not create upgrade PRs for a repo that has 5 or more Snyk PRs open - if the limit of open PRs is reached, no new ones are created. This number can set to between 1-10 from the Settings. This limit only applies when creating upgrade PRs, but does count fix PRs. Fix PRs are not limited in this way.
-   * By default, Snyk recommends only patch and minor upgrades, but major version upgrade can be enabled in the settings where the feature is enabled.
-   * If the latest eligible version contains vulnerabilities not already found in your project, Snyk will not recommend an upgrade.
-   * Snyk does not recommend upgrades to versions that are less than 21 days old. This is to avoid versions that introduce functional bugs and subsequently get unpublished, or versions that are released from a compromised account (where the account owner has lost control to someone will malicious intent).
+1. SCM과 통합한 후 사용자는 통합 설정 내에서 또는 [프로젝트 설정](upgrading-dependencies-with-automatic-prs.md) 자동 업그레이드 PR을 사용 가능으로 설정합니다.
+2. Snyk은 프로젝트를 가져오면서 스캔하고 프로젝트를 계속 모니터링하여 그 이후에 정기적으로 스캔합니다.
+3. 스캔 시 디펜던시에 대한 새 버전이 확인되면 Snyk은 다음을 수행합니다:
+   * Snyk은 자동 업그레이드 PR을 생성합니다.(Snyk 프로젝트 설정의 테스트 빈도 기반)
+   * 디펜던시가 이미 다른 open된 PR에 의해 변경(업그레이드 또는 패치 적용)된 경우 새 PR을 생성하지 않습니다.
+   * Snyk은 각 디펜던시에 대해 별도의 PR을 생성합니다.
+   * Snyk은 5개 이상의 Snyk PR이 열려 있는 저장소에 대해 업그레이드 PR을 생성하지 않습니다. 이 숫자는 설정에서 1\~10 사이로 설정할 수 있습니다. 이 제한은 업그레이드 PR을 생성할 때만 적용되지만 수정 PR 수는 계산되지 않습니다. 따라서 수정 PR은 이러한 방식으로 제한되지 않습니다.
+   * 기본적으로 Snyk은 패치 및 부분 업그레이드만 권장하지만 기능이 활성화된 설정에서 주 버전 업그레이드를 활성화할 수 있습니다.
+   * 적용 가능한 최신 버전의 프로젝트에서 아직 발견되지 않은 취약점이 포함되어 있는 경우 Snyk은 업그레이드를 권장하지 않습니다.
+   * Snyk은 21일 미만의 버전에는 업그레이드를 권장하지 않습니다. 이는 기능적인 버그를 도입했다가 나중에 게시되지 않은 버전이나 손상된 계정(계정 소유자가 악의적인 의도를 가진 사람에게 제어권을 빼앗긴 경우)에서 릴리즈되는 버전을 피하기 위함입니다.
 
-## Supported languages and repos
+## 지원되는 언어 및 저장소
 
-Snyk currently supports this feature for npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud, including use of the Snyk Broker. For use with the Broker, your admin should first upgrade to v4.55.0 or later. See our docs for additional assistance when upgrading Broker.
+Snyk currently supports this feature for npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud, including use of the Snyk Broker. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드를 해야 합니다. Broker 업그레이드 시 추가 도움이 필요한 경우 문서를 참조하십시오.
 
-## Upgrading dependencies with automatic PRs
+## 자동 PR을 사용하여 디펜던시 업그레이드
 
-Once you have imported your preferred Git repositories, Snyk monitors those repos, regularly scanning them for vulnerability, license and dependency health issues. In addition to fix advice, Snyk can then also automatically create pull requests (PRs) on your behalf in order to upgrade your dependencies based on the scan results.
+Git 저장소를 가져오면 Snyk은 이러한 저장소를 모니터링하여 취약점, 라이선스 및 디펜던시 상태의 문제를 정기적으로 검사합니다. 수정 조언 외에도 Snyk은 자동으로 사용자를 대신하여 PR(pull request)을 생성하여 스캔 결과에 따라 디펜던시를 업그레이드할 수 있습니다.
 
-Snyk currently supports this feature for npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud. For use with the Broker, your admin should first upgrade to v4.55.0 or later. See our docs for additional assistance when upgrading Broker.
+Snyk은 현재 GitHub, GitHub Enterprise Server and BitBucket Cloud를 통해 npm, Yarn and Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 도움이 필요한 경우 문서를 참조하십시오.
 
 ![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (14).png>)
 
-## Enable automatic dependency upgrade PRs for a specific project
+## 특정 프로젝트에 대해 자동 디펜던시 업그레이드 PR 사용
 
-Enable Snyk to regularly check your dependency health, recommend dependency upgrades and automatically submit PRs for upgrades on your behalf for a specific project.
+Snyk이 디펜던시 상태를 정기적으로 검사하고 디펜던시 업그레이드를 권장하며 특정 프로젝트의 업그레이드에 대한 PR을 자동으로 제출할 수 있습니다.
 
-Once configured, Snyk automatically creates PRs for all necessary dependencies as upgrades become available for the specific project.
+일단 구성되면, Snyk은 특정 프로젝트에 대한 업그레이드가 가능해짐에 따라 필요한 모든 디펜던시에 대한 PR을 자동으로 생성합니다.
 
 {% hint style="info" %}
 **Note**\
-Settings on the project level override the settings on the organization level. Currently, we support all languages supported by the Git repositories that we integrate with: GitHub, GitLab, Bitbucket and Azure repos.
+프로젝트 수준의 설정은 조직 수준의 설정을 재정의합니다. 현재 GitHub, GitLab, Bitbucket Azure 저장소와 통합하는 Git 저장소에서 지원되는 모든 언어를 지원합니다.
 {% endhint %}
 
-### **To configure automatic upgrade PRs for a specific project:**
+### 특정 프로젝트에 대한 자동 업그레이드 PR을 구성하려면**:**
 
-**Prerequisites:**
+**전제조건:**
 
-* For use with Broker, your admin should first upgrade to v4.55.0.
+* Broker와 함께 사용하려면 관리자가 먼저 v4.55.0으로 업그레이드해야 합니다.
 
 **Steps:**
 
-1. Navigate to the organization for which you would like to enable automatic upgrade PRs and then click Projects.
-2. Navigate to the relevant project and click the Settings cog ![](../../../.gitbook/assets/cog\_icon.png)&#x20;
-3. From the Settings area, click on the integration settings from the left panel menu.  **Note:** These settings only apply to integration for that one project.&#x20;
-4. From settings that load, scroll to the **Automatic dependency upgrade pull requests** and click Disabled.&#x20;
-5. From the options that appear:
-   1. Snyk creates PRs up to a maximum of 10 open simultaneously - per repo. To limit this number further, select the maximum number of PRs from the dropdown list. For further information about this, read more about how it works.
-   2. In the Dependencies to ignore field, enter the exact name of any dependencies that should not be handled as part of the automatic functionality. This field accepts only lower case letters.
-6. Click **Update dependency upgrade settings**
-7. Settings are saved
+1. 자동 업그레이드 PR을 사용할 조직으로 이동한 다음 프로젝트를 선택합니다.
+2. 관련 프로젝트로 이동하고 설정 아이콘![](../../../.gitbook/assets/cog\_icon.png)을 클릭합니다.
+3. 설정 영역의 왼쪽 패널 메뉴에서 통합 설정을 클릭합니다. **참고**: 이러한 설정은 해당 프로젝트에 대한 통합에만 적용됩니다.
+4. 설정에서 **Automatic dependency upgrade pull requests**로 이동하고 사용 안 함을 클릭합니다.
+5. 표시되는 옵션:
+   1. Snyk은 저장소당 최대 10개의 PR을 동시에 생성합니다. 이 수를 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 이에 대한 자세한 내용은 작동 방식에 대해 자세히 읽어 보십시오.
+   2. Dependencies to ignore 필드에 자동 기능의 일부로 처리되지 않는 디펜던시의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
+6. **Update dependency upgrade settings**를 클릭합니다.
+7. 설정이 저장되었습니다.
 
 ![](<../../../.gitbook/assets/image (7).png>)
 
-Every time Snyk scans this project now, it automatically submits upgrade PRs based on results. If a newer version is released for an existing Snyk upgrade PR or for an existing fix PR, the existing PR must be closed or merged before Snyk can raise a new PR.
+이제 Snyk이 해당 프로젝트를 스캔할 때마다 결과에 따라 업그레이드 PR을 자동으로 생성합니다. 기존 Snyk 업그레이드 PR 또는 기존 수정 PR에 대해 최신 버전이 릴리즈된 경우 기존 PR을 닫거나 병합해야 새 PR을 생성할 수 있습니다.
