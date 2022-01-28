@@ -1,31 +1,31 @@
-# Setting a license policy
+# 라이선스 정책 설정
 
-Administrators can configure the following per license:
+관리자는 라이선스별로 다음을 구성할 수 있습니다:
 
-* The level of severity— values include None, Low, Medium and High.
-  * When None is selected, instructions cannot be inserted since licenses marked with None will not appear in any Snyk test results.
-  * New licenses added by Snyk will inherit the Unknown license type severity. In cases where this severity was not set to None, newly added licenses will appear in Snyk test results.
-* Legal instructions for developers—enter free text to provide any necessary instructions for developers.&#x20;
-  * We recommend describing your company’s specific policy, explaining the need for collaboration from your developers as well as providing them step-by-step instructions if any are needed
-  * Legal instructions will appear in the CLI results and on issue cards within the project view
+* 심각도 수준 — 값은 None, Low, Medium 및 High입니다.
+  * None을 선택하면 None으로 표시된 라이선스가 Snyk 테스트 결과에 나타나지 않으므로 지침을 삽입할 수 없습니다.
+  * Snyk에서 추가한 새 라이선스는 알 수 없는 라이선스 유형 심각도를 상속합니다. 이 심각도를 None으로 설정하지 않은 경우 새로 추가된 라이선스가 Snyk 테스트 결과에 나타납니다.
+* 개발자를 위한 법적 지침 — 개발자에게 필요한 지침을 제공하기 위해 자유롭게 텍스트를 입력합니다.
+  * 회사의 특정 정책을 설명하고 개발자의 협업 필요성을 설명하며 필요한 경우 단계별 지침을 제공할 것을 권장합니다.
+  * CLI 결과 및 프로젝트 뷰 내의 issue cards에 법적 지침이 표시됩니다.
 
 {% hint style="info" %}
 **Feature availability**\
-For customers with a Business plan: if no group is available, org administrators can make license policy changes; if a group is available, group administrators can make license policy changes. For customers with an Enterprise plan, group administrators can create or modify a policy. See [pricing plans](https://snyk.io/plans/) for more details.
+Business customers의 경우: 그룹을 사용할 수 없는 경우 조직 관리자가 라이선스 정책을 변경할 수 있으며, 그룹 사용이 가능한 경우 그룹 관리자가 라이선스 정책을 변경할 수 있습니다. Enterprise customers의 경우: 그룹 관리자는 정책을 만들거나 수정할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-## Assign rules and severities
+## 규칙 및 심각도 할당
 
-1. From the Policy modal, click in the **Severity** box on the right hand side to set the severity for specific licenses
-2. To enter an explanation and recommendations for fixes, click the **Instructions** icon and enter your text&#x20;
-   1. Click **Add** to save your changes to the instructions
-   2. Once added, the **Add instructions** link becomes **Edit instructions**
-3. Select **Submit** to save your policy.
-4. The new severity and/or instructions are automatically updated on our servers. Once the next scheduled test runs, or once any user re-tests a project. Updated results are delivered according to these changes.
+1. Policy modal에서 오른쪽의 Severity를 클릭하여 특정 라이선스에 대한 심각도를 설정합니다.
+2. 수정 사항에 대한 설명 및 권장 사항을 입력하려면 오른쪽의 지침 아이콘을 클릭하고 텍스트를 입력합니다.
+   1. **Add**를 클릭하여 지침의 변경 내용을 저장합니다.
+   2. **Add instructions** 아이콘이 **Edit instructions** 아이콘으로 변경됩니다.
+3. **Submit**을 선택하여 정책을 저장합니다.
+4. 새로운 심각도 및 지침은 서버에서 자동으로 업데이트됩니다. 예약된 다음 테스트가 실행되거나 사용자가 프로젝트를 다시 테스트하면 이러한 변경사항에 따라 업데이트된 결과가 제공됩니다.
 
 ![](../../../.gitbook/assets/screenshot\_2020-08-21\_at\_11.58.10\_am.png)
 
-**Note:** _if your company's account has a group (or more), to access the License policy settings, please go to the Group's Overview (from the top left dropdown) and go to **Policies** to select the organization(s) to update the Licenses policy._
+**참고**: 회사 계정에 그룹(이상)이 있는 경우 라이선스 정책 설정에 액세스하려면 그룹의 Overview(왼쪽 상단 드롭다운)로 이동한 후 **Policies**로 이동하여 라이선스 정책을 업데이트할 조직을 선택하십시오.
 
 ![](../../../.gitbook/assets/mceclip0-1-.png)
 

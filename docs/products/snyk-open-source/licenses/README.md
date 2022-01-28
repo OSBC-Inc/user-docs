@@ -21,7 +21,7 @@ Snyk에서 추가한 새 라이선스는 알 수 없는 라이선스 유형 심�
 
 잘못된 라이선스가 배정된 라이선스를 발견하시면 저희 지원팀에 문의하시면 됩니다. 요청 사항을 조사하여 필요 시 라이선스를 업데이트하겠습니다.
 
-To facilitate onboarding of your developers, we recommend that your teams check these defaults, update severities and add instructions per license type based on the policies outlined specifically by your Legal teams. Once updated, when Snyk detects a license violation it displays the violation for all users in the organization from our UI project area, or from the CLI Snyk test results, in the same way as a security vulnerability, and including the severity and instructions you configured.
+개발자의 원활한 온보딩을 위해 법률 팀에서 특별히 설명한 정책에 따라 라이선스 유형별로 이러한 기본값을 확인하고 심각도를 업데이트하며 지침을 추가하는 것이 좋습니다. Snyk이 업데이트되면 UI 프로젝트 영역 또는 CLI Snyk test 결과에서 보안 취약점과 동일한 방식으로 조직의 모든 사용자에 대한 위반이 표시됩니다. 여기에는 사용자가 구성한 심각도 및 지침이 포함됩니다.
 
 ![](<../../../.gitbook/assets/image (2).png>)
 

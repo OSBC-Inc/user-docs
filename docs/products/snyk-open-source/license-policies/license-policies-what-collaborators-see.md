@@ -1,14 +1,13 @@
-# License policies: What collaborators see
+# 라이선스 정책: 공동작업자가 보는 내용
 
-A newly assigned policy, or modifications to a policy, will apply, once the next scheduled test runs. This is what happens for all of the licenses in the organization:
+예약된 다음 테스트가 실행되면 새로 할당된 정책 또는 정책 수정 사항이 적용됩니다. 조직의 모든 라이선스에 대해 다음과 같은 일이 발생합니다:
 
-If you changed severity, **Dashboard** statistics update based on severity changes:
+심각도를 변경한 경우, **Dashboard** 통계는 심각도 변경에 따라 다음과 같이 업데이트됩니다:
 
 ![](../../../.gitbook/assets/mceclip0-2-.png)
 
-The results update accordingly too, including any instructions or severity changes you made:![](https://lh5.googleusercontent.com/3gDD-OLLW2ynYFYQ5wRavHT1ejCt5SbxrpqvB6iL6qvrfRLCoPKjRV3xiS8shsL5bhbuCxUBHi_0WCJi3_RKNIVe2IzW-A62nf_7wpWKUXsnQQxTpPYjzmFueFVTji2rus2UghLO)
+이에 따라 결과도 업데이트되며, 사용자가 변경한 지침이나 심각도가 포함됩니다:![](https://lh5.googleusercontent.com/3gDD-OLLW2ynYFYQ5wRavHT1ejCt5SbxrpqvB6iL6qvrfRLCoPKjRV3xiS8shsL5bhbuCxUBHi\_0WCJi3\_RKNIVe2IzW-A62nf\_7wpWKUXsnQQxTpPYjzmFueFVTji2rus2UghLO)
 
-Results in the CLI update accordingly as well:
+그에 따라 CLI도 업데이트됩니다:
 
 ![](../../../.gitbook/assets/mceclip1.png)
-
