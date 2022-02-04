@@ -1,8 +1,8 @@
-# Fixing vulnerabilities
+# 취약점 수정
 
-Snyk provides actionable fix advice for vulnerabilities: see [remediate-your-vulnerabilities.md](../../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md "mention") for more details.
+Snyk은 취약점에 대한 실행 가능한 수정 가이드를 제공합니다. 자세한 내용은 [remediate-your-vulnerabilities.md](../../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md "mention")를 참조하세요.&#x20;
 
-Snyk supports workflows to fix vulnerabilities using:
+Snyk은 다음 요청을 사용하여 취약점을 수정하는 워크플로우를 지원합니다.
 
 * [Automatic pull / merge requests (PRs / MRs)](fixing-vulnerabilities.md#automatic-pull-merge-requests).
 * [Manual pull / merge requests](fixing-vulnerabilities.md#manual-pull-merge-requests-for-a-project-code).
@@ -11,22 +11,22 @@ Snyk supports workflows to fix vulnerabilities using:
 [what-languages-do-we-support-fix-pull-requests-or-merge-requests.md](../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md)
 {% endcontent-ref %}
 
-### **Automatic pull / merge requests**
+### 자동 **pull / merge requests**
 
-For projects imported via an SCM (Source Code Manager), Snyk offers the following types of automated pull / merge requests:
+SCM(소스 코드 관리자)을 통해 가져온 프로젝트의 경우 Snyk은 다음 유형의 자동화된 pull / merge requests를 제공합니다.
 
 * [Fix pull requests for new vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fix-pull-requests-for-new-vulnerabilities)
 * [Fix pull requests to clear the backlog of vulnerabilities in priority order](fix-pull-requests-for-known-vulnerabilities-backlog.md)
 * [Dependency upgrade pull requests](https://docs.snyk.io/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs)
 
-### Manual pull / merge requests for a project code
+### 프로젝트 코드에 대한 수동 pull / merge requests
 
-To generate a PR / MR directly from your project, using the Snyk UI:
+Snyk UI를 사용하여 프로젝트에서 직접 PR/MR을 생성하기 위해 다음과 같은 절차를 진행합니다.
 
-1. Navigate to your project from the project list
-2. Select the file
-3. Select **Open a Fix PR/MR** or **Fix this vulnerability**
-4. A preview screen appears, showing you what fixes will be applied
-5. Click **Open a Fix PR** on this screen to generate the pull request
+1. 프로젝트 목록에서 프로젝트로 이동합니다.
+2. 파일을 선택합니다.
+3. **Open a Fix PR/MR** 또는 **Fix this vulnerability**를 선택하세요.
+4. 적용할 수정 사항을 보여주는 미리 보기 화면이 나타납니다.
+5. 이 화면에서 **Open a Fix PR**을 클릭하여 pull request를 생성합니다.
 
 ![](../../../.gitbook/assets/image18.png)

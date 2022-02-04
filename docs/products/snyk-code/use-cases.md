@@ -1,59 +1,59 @@
 # Use Cases
 
-## Identify and fix issues as they emerge
+## issues 발생 시 issues 파악 및 해결
 
-### Review newly introduced issues in build and review time
+### 빌드 및 검토 시 새로 도입된 issues 검토
 
-You can use Code in the IDE or in a PR check (currently in beta) to identify issues as they are introduced. Snyk Code doesn't require compilation and analyzes the source code itself, so you can see results immediately as you write new code.
+IDE 또는 PR 확인(현재 베타 버전)에서 코드를 사용하여 도입되는 issues를 식별할 수 있습니다. Snyk Code는 컴파일이 필요 없고 소스코드 자체를 분석하기 때문에 새로운 코드를 작성하는 즉시 결과를 확인할 수 있습니다.
 
-### Understand how problems flow across your applications
+### 애플리케이션 전반에서 문제가 어떻게 진행되는지 파악
 
 Some issues are one-liners but they are not the majority. Most SAST issues are multi-step, multi-file--and sometimes--multi-language. To best represent that, Code presents a full data-flow visualization that allows you to navigate through your source code from source (user input) to sink (the operation that needs to receive clean input and could be otherwise exploited).
 
-### Fix more issues by using the experience of others
+### 다른 사용자의 경험을 바탕으로 더 많은 issues 해결
 
-When Snyk Code identifies an issue, it includes real-world fix examples based on issues identified in similar patterns and data-flows in other projects. These examples provide relevant inspiration on how to fix the issue and minimize expensive research time.
+Snyk Code가 issue를 식별하면 다른 프로젝트의 유사한 패턴과 데이터 흐름에서 확인된 issues를 기반으로 한 실제 수정 사례가 포함됩니다. 이러한 예는 issue를 해결하고 연구 시간을 최소화하는 방법에 대한 영감을 제공합니다.
 
-### Learn how to prevent issues from coming back
+### issues가 다시 발생하지 않도록 예방하는 방법 학습하기
 
-Snyk Code provides a curated overview on every issue of the vulnerability--this includes how it's created, what the risk is, what the possible mitigation strategies are, and other bite-size, educational content. This allows developers to improve their security knowledge and write secure code in real-time.
+Snyk Code는 취약점의 모든 issue에 대한 체계적인 개요를 제공합니다. 여기에는 취약점의 생성 방법, 위험 요소, 가능한 완화 전략 및 짤막한 교육 컨텐츠가 포함됩니다. 이를 통해 개발자는 보안 지식을 개선하고 실시간으로 보안 코드를 작성할 수 있습니다.
 
-## Reduce security debt over time
+## 시간이 지남에 따라 보안 debt 감소
 
-### Monitor your repositories to track issues over time
+### 저장소를 모니터링하여 시간 경과에 따른 issues 추적
 
-You can seamlessly and continuously monitor your repositories and discover security flaws in the source code files using static analysis provided by Snyk Code test scans.
+Snyk Code test scans에서 제공하는 정적 분석을 사용하여 저장소를 원활하고 지속적으로 모니터링하고 소스코드 파일의 보안 결함을 발견할 수 있습니다.
 
 ### Prioritize the right issues to focus on
 
-Every issue identified by Snyk Code is assigned with a Priority Score which reflects prevalence, risk, and estimated effort and allows you to focus on what matters.
+Snyk Code에서 확인된 모든 issue에는 확산률, 리스크 및 추정되는 노력을 반영하는 우선 순위 점수가 할당되며 중요한 사항에 집중할 수 있습니다.
 
-In addition, you can group issues according to vulnerability, type, or file to save time and fix several issues at once.
+또한 취약점, 유형 또는 파일에 따라 issues를 그룹화하여 시간을 절약하고 여러 issues를 한 번에 해결할 수 있습니다.
 
 ### See what matters with smart exclude and ignore mechanisms
 
-Snyk Code uses a smart fingerprinting algorithm that won't resurface previously-ignored issues in case you moved some code around or changed variable or function names.
+Snyk Code는 일부 코드를 이동하거나 변수 또는 함수 이름을 변경한 경우에도 이전에 무시된 issues가 다시 발생하지 않도록 스마트 지문 알고리즘을 사용합니다.
 
-Code also allows you to exclude files and folders from being analyzed, allowing you to filter the noise and focus on the code that matters most to your team.
+또한 Code를 사용하면 파일 및 폴더를 분석에서 제외할 수 있으므로 노이즈를 필터링하고 팀에 가장 중요한 코드에 집중할 수 있습니다.
 
-## Scale and govern security processes
+## 보안 프로세스 확장 및 관리
 
-### Easily onboard Code across teams and departments
+### 팀 및 부서에 걸쳐 손쉽게 Snyk Code를 탑재
 
 Remove the code security triage bottleneck from security teams by enabling automatic triage and fix in every step of the SDLC. Shift-left and enable developers to “self serve” on security.
 
-Using Contributing Developers you can see how many developers are using Snyk Code.
+Contributing Developers를 사용하면 얼마나 많은 개발자가 Snyk Code를 사용하고 있는지 알 수 있습니다.
 
-### Review and share progress using reporting
+### reporting을 사용하여 진행 상황 검토 및 공유
 
-Improving your company's security posture is an ongoing process and you need the right reporting to be able to answer questions like:
+기업의 보안 태도를 개선하는 것은 지속적인 프로세스이며, 다음과 같은 질문에 답할 수 있는 올바른 reporting이 필요합니다:
 
-* How many issues have been **fixed** this month?
-* How many issues have been **introduced** this month?
-* How many issues have been **ignored** this month?
+* 이번달에 몇 개의 이슈가 **fixed** 되었나요?
+* 이번달에 몇 개의 이슈가 **introduced** 되었나요?
+* 이번달에 몇 개의 이슈가 **ignored** 되었나요?
 
-### Build automation to Gate deployments and extend Code
+### Gate 배치로 자동화 구축 및 코드 확장
 
-You can make sure no high severity code issues reach production by integrating the Snyk CLI with your CI/CD processes and failing builds based upon a certain, configurable criteria.
+Snyk CLI를 CI/CD 프로세스와 통합하고 구성 가능한 특정 기준에 따른 빌드에 실패함으로써 운영 환경에 심각한 코드 문제가 발생하지 않도록 할 수 있습니다.
 
-You can also use our public APIs to manage projects, query analysis findings, and build automatic workflows on top of them.
+또한 공용 API를 사용하여 프로젝트를 관리하고 분석 결과를 쿼리하며 그 위에 자동 워크플로우를 구축할 수 있습니다.

@@ -24,6 +24,7 @@
   * [SCM(Git) 및 CI/CD 통합 구축 소개](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
   * [Snyk SCM 통합: 모범 사례](getting-started/snyk-scm-integration-good-practices.md)
   * [Snyk CI/CD 통합: 모범 사례](getting-started/snyk-cicd-integration-good-practices.md)
+  * [Snyk dashboard 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
   * [Snyk 프로젝트 소개](getting-started/introduction-to-snyk-projects/README.md)
     * [프로젝트 정보 확인](getting-started/introduction-to-snyk-projects/view-project-information.md)
     * [프로젝트 issues, fixes, dependencies 확인](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
@@ -33,7 +34,6 @@
     * [프로젝트 태그](getting-started/introduction-to-snyk-projects/project-tags/README.md)
       * [프로젝트 속성](getting-started/introduction-to-snyk-projects/project-tags/project-attributes.md)
     * [조직의 최대 프로젝트 수](getting-started/introduction-to-snyk-projects/maximum-number-of-projects-in-an-organsation.md)
-  * [Snyk dashboard 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
 
 ## PRODUCTS
 
@@ -65,7 +65,7 @@
     * [자동 PR을 사용하여 디펜던시 업그레이드](products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)
 * [Snyk Code](products/snyk-code/README.md)
   * [Use Cases](products/snyk-code/use-cases.md)
-  * [Key features](products/snyk-code/key-features/README.md)
+  * [주요 특징들](products/snyk-code/key-features/README.md)
     * [AI Engine](products/snyk-code/key-features/ai-engine.md)
     * [User Experience](products/snyk-code/key-features/user-experience.md)
     * [Integrations](products/snyk-code/key-features/integrations.md)

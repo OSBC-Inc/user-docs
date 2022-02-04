@@ -1,21 +1,21 @@
 # Snyk Code
 
-Snyk is dedicated to the premise that security needs to be implemented developer-first in order to meet the speed and scale needs of software-driven businesses.
+Snyk은 소프트웨어 중심 비즈니스의 속도와 확장 요구를 충족시키기 위해 개발자 우선으로 보안을 구현해야 한다는 전제에 전념하고 있습니다.
 
-The problem with traditional SAST products is that they do not work for developers--they are too slow with scans that can take several hours, they historically have had poor accuracy and returned too many false positives. This created hours of wasted time as false alarms were chased down. This eroded developer trust in the tool and additionally these products required security expertise to make their output actionable in order to remediate the issues they find. Snyk changed all of this.
+기존 SAST 제품의 문제는 개발자에게 작동하지 않는다는 것입니다. 검색 속도가 너무 느려서 몇 시간이 걸릴 수 있고, 역사적으로 정확도가 떨어졌으며 잘못된 긍정 결과가 너무 많이 반환되었습니다. 이로 인해 false 알람에 쫓기면서 몇 시간 동안 시간을 낭비하게 되었습니다. 이는 툴에 대한 개발자의 신뢰를 저하시켰고, 추가적으로 이러한 제품들은 발견한 문제를 해결하기 위해 출력을 실행 가능하게 만드는 보안 전문지식이 필요했습니다. Snyk은 이 모든 것을 바꾸었습니다.
 
-### Developer-first approach
+### 개발자 우선 접근 방식
 
-Snyk Code is developer-first--embedding SAST as part of the development process, enabling developers to build software securely during development, and not trying to find and fix problems after the code is compiled. Snyk Code works in the IDEs and SCMs developers use to build and review software and provides fast, actionable, meaningful results to fix issues in real-time.
+Snyk Code는 개발자 우선 접근 방식입니다. 개발 프로세스의 일부로 SAST를 포함하므로 개발자가 개발 중에 안전하게 소프트웨어를 구축할 수 있도록 하며 코드가 컴파일되기 전 문제를 찾아 수정할 수 있도록 합니다. Snyk Code는 개발자가 소프트웨어를 빌드하고 검토하는 데 사용하는 IDE와 SCM에서 작동하며 실시간으로 문제를 해결할 수 있도록 빠르고 실행 가능한 의미 있는 결과를 제공합니다.
 
-### Unparalleled accuracy
+### 독보적인 정확도
 
-Generally, SAST tools have been notorious for the amount of false positives they return. Snyk Code utilizes a semantic analysis AI engine that learns from millions of open-source commits and is paired with Snyk’s Security Intelligence database--this creates a continually growing code security knowledge base, which reduces false positives to near-zero and provide actionable findings that matter.
+일반적으로 SAST 도구는 반환되는 거짓 양성의 양으로 악명이 높습니다. Snyk Code는 수백만 개의 오픈소스 커밋에서 학습하고 Snyk의 Security Intelligence Database와 쌍을 이루는 시맨틱 분석 AI 엔진을 활용합니다. 이를 통해 지속적으로 증가하는 코드 보안 데이터베이스를 구축하여 거짓 양성을 거의 0에 가깝게 줄이고 중요한 실행 가능한 결과를 제공합니다.
 
-### Real-time
+### 실시간
 
-Speed is _the_ critical factor if you want to support rapid, agile development. Real-time speed allows developers to leverage Code from the IDE and during code review in the SCM, rather than a slow and unnecessary extra step at the end o the development process. Snyk Code scans 10-50x faster than other SAST products, enabling developers to use it _while_ they develop, rather than _after_ they develop as a slow and disruptive step in their process.
+빠르고 민첩한 개발을 지원하려면 속도가 매우 중요합니다. 실시간 속도를 통해 개발자는 개발 프로세스의 마지막에 느리고 불필요한 추가 단계가 아닌 IDE의 코드를 활용하고 SCM의 코드를 검토할 수 있습니다. Snyk Code는 다른 SAST 제품보다 스캔 속도가 10\~50배 빠르기 때문에 개발자는 개발한 후가 아니라 개발하는 동안 사용할 수 있습니다.
 
-### Actionable
+### 실행 가능
 
-Although quickly and accurately detecting potential security flaws in source code is a complicated task, we believe that it's not enough. Snyk can only shift left and empower developers if it actually helps remediate the issue and learn about prevention. Snyk Code leverages its security knowledge base to provide fix examples from real-world projects that offer insight on how to fix the issue. Additionally, Code offers curated educational content about every vulnerability to help developers grow their knowledge and reduce issues over time.
+소스 코드의 잠재적인 보안 결함을 빠르고 정확하게 탐지하는 것은 복잡한 작업이지만, 우리는 충분하지 않다고 생각합니다. Snyk can only shift left and empower developers if it actually helps remediate the issue and learn about prevention. Snyk Code는 보안 데이터베이스를 활용하여 문제 해결 방법에 대한 통찰력을 키우는 실제 프로젝트의 수정 예시를 제공합니다. 또한 Code는 개발자가 지식을 키우고 시간이 지남에 따라 문제를 줄일 수 있도록 모든 취약점에 대한 교육 컨텐츠를 제공합니다.
