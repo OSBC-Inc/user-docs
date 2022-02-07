@@ -17,7 +17,7 @@ Snyk은 CLI와 UI의 다양한 통합을 통해 프로젝트의 취약점을 테
 | [Maven](https://maven.apache.org) | ✔︎          | ✔︎          | ✔︎               | ✔︎                                                                                                                              | ✔︎                 |
 | [Gradle](https://gradle.org)      | ✔︎          | ✔︎          | ✔︎               | [Fix advice](../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/fix-your-vulnerabilities.md) only |                    |
 
-## Snyk CLI tool for Java projects (CI/CD)
+## Java 프로젝트(CI/CD)에서 Snyk CLI 사용하기
 
 Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언어 및 패키지 관리자에 따라 다릅니다.
 

@@ -1,12 +1,12 @@
 # Snyk for .NET
 
-Snyk offers security scanning to test your projects for vulnerabilities, both through your CLI and through different integrations from our UI.
+Snyk에서는 CLI와 UI의 다양한 통합을 통해 프로젝트의 취약점을 테스트하는 보안 스캔을 제공합니다.
 
-The following describes how to use Snyk to scan your .NET projects:
+이 문서는 Snyk을 사용하여 .NET 프로젝트를 스캔하는 방법을 제공합니다.
 
 {% hint style="info" %}
 **Note**\
-Features might not be available, depending on your subscription plan.
+요금제에 따라 기능을 사용하지 못할 수 있습니다.
 {% endhint %}
 
 | Package managers / Features                            | CLI support | Git support | License scanning | Fixing | Runtime monitoring |
@@ -16,156 +16,156 @@ Features might not be available, depending on your subscription plan.
 
 ## **How it works**
 
-Once we’ve built the tree, we can use our [vulnerability database ](https://snyk.io/vuln)to find vulnerabilities in any of the packages anywhere in the dependency tree.
+트리를 구축한 후에는 [vulnerability database](https://snyk.io/vuln)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
 
 {% hint style="info" %}
 **Note**\
-In order to scan your dependencies, you must ensure you have first installed the relevant package manager, and that your project contains the supported manifest files
+디펜던시를 스캔하려면 먼저 관련 패키지 매니저를 설치했는지, 프로젝트에 지원되는 매니페스트 파일이 포함되어 있는지 확인해야 합니다.
 {% endhint %}
 
-The way by which Snyk analyzes and builds the tree varies depending on the language and package manager of the project, as well as the location of your project:
+Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및 패키지 매니저와 프로젝트 위치에 따라 다릅니다. 자세한 내용은 다음을 참조하세요.
 
 * [Snyk CLI tool for .NET projects](snyk-for-.net.md#snyk-cli-tool-for-net-projects)
 * [Git services for .NET projects](snyk-for-.net.md#git-services-for-net-projects)
 
-## Snyk CLI tool for .NET projects
+## .NET 프로젝트에서 Snyk CLI 사용하기
 
 ### Nuget
 
-#### Dependencies managed by PackageReference
+#### PackageReference 에서 관리하는 디펜던시
 
-First, restore dependencies in the .NET project by running `dotnet restore` and make sure **obj/project.assets.json** has been created by the previous command, run `snyk test`. For more information on building projects, check out [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli).
+우선 `dotnet restore`를 실행하여 .NET 프로젝트의 디펜던시를 복원하고 `snyk test`를 실행하여 **obj/project.assets.json**이 생성되었는지 확인합니다. 빌드 프로젝트에 대한 자세한 내용은 [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)를 참조하세요.
 
-Examples of supported project files that resolve into **project.assets.json** include:
+**project.assets.json**에 포함하는 프로젝트 파일은 다음과 같습니다.
 
-* \*.csproj&#x20;
+* \*.csproj
 * \*.vbproj
 * \*.fsproj
 
-**Note:** Project files can be combined with [lock files](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#locking-dependencies) for a more deterministic **project.assets.json** resolution
+**Note:** 프로젝트 파일을 [lockfile](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#locking-dependencies)과 결합하여 **project.assets.json** 파일을 확인할 수 있습니다.
 
-#### Dependencies managed by packages.config
+**packages.config에서 관리하는 디펜던시**
 
-Whilst there are two approaches for dependencies managed by **packages.config**, the following is the recommended approach as this will yield the most accurate results:
+**packages.config**에서 관리하는 디펜던시에 대해 두 가지 접근 방식이 있지만 다음 방식은 가장 정확한 결과를 얻을 수 있어 권장되는 접근방식입니다.
 
-First, install the dependencies into the **packages** folder by running `nuget install -OutputDirectory packages` and make sure the **packages** dir has been created by the previous command, run `snyk test`.
+먼저 `nuget install -OutputDirectory packages`를 실행하여 **packages** 폴더에 종속성을 설치하고 `snyk test`를 실행하여 **packages** 디렉토리를 생성했는지 확인합니다.
 
-Examples of supported project files that resolve into **packages** include:
+**packages**에 포함하는 프로젝트 파일은 다음과 같습니다.
 
 * packages.config
 
-**Note:** While you should also be able to run `snyk test` without previously installing dependencies this will result in less accurate vulnerability results
+**Note:** 이전에 디펜던시를 설치하지 않고 `snyk test`를 실행할 수 있어야 하지만 이로 인해 취약점 결과의 정확도가 떨어집니다.
 
 #### **CLI parameters**
 
-This section describes the unique CLI options available when working with NuGet managed projects.
+이 섹션에서는 NuGet 프로젝트로 작업할 때 사용할 수 있는 CLI 옵션에 대해 설명합니다.
 
-| Option                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--file=.sln`            | Test all .NET projects included in the given `.sln` file. For example `snyk test --file=myApp.sln`                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `--file=packages.config` | Test an individual .NET project.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `--packages-folder`      | <p>This is the folder in which your dependencies are installed, provided you are using <code>packages.config</code>. If you’ve assigned a unique name to this folder, then Snyk can only find it if you enter a custom path.</p><p>Use the absolute or relative path, including the name of the folder where your dependencies reside. </p><p></p><p>For example: <code>snyk test --packages-folder=../location/to/packages</code> for Unix OS <code>snyk test --packages-folder=..\location\to\packages</code> for Windows.</p> |
-| `--assets-project-name`  | When monitoring a .NET project using NuGet, the `PackageReference` key uses the project name that is indicated in the project.assets.json.                                                                                                                                                                                                                                                                                                                                                                                       |
+| Option                   | Description                                                                                                                                                                                                                                                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--file=.sln`            | 주어진 `.sln` 파일에 포함된 모든 .NET 프로젝트를 테스트합니다. 예: `snyk test --file=myApp.sln`                                                                                                                                                                                                                     |
+| `--file=packages.config` | 개별 .NET 프로젝트를 테스트합니다.                                                                                                                                                                                                                                                                        |
+| `--packages-folder`      | `packages.config`를 사용하는 경우 디펜던시가 설치되는 폴더입니다. 이 폴더에 고유한 이름을 할당한 경우 사용자 정의 경로를 입력한 경우에만 해당 이름을 찾을 수 있습니다. 디펜던시가 있는 폴더 이름을 포함하여 절대 경로 또는 상대 경로를 사용하십시오. 예: `snyk test --packages-folder=../location/to/packages` for Unix OS `snyk test --packages-folder=..\location\to\packages` for Windows. |
+| `--assets-project-name`  | Nuget을 사용하여 .NET 프로젝트를 모니터링할 때 `PackageReference`키는 project.assets.json에 표시된 프로젝트 이름을 사용합니다.                                                                                                                                                                                                 |
 
 ### Paket
 
-#### Dependencies managed by Paket
+#### Paket이 관리하는 디펜던시
 
 To use Paket a **paket.lock** file is required in combination with a **paket.dependencies** file. Run `snyk test`
 
-Other support includes: **project.json** (no longer recommended, please refer to [Microsoft documentation](https://docs.microsoft.com/en-us/nuget/archive/project-json))
+기타 지원에는 **project.json**(더 이상 권장하지 않음, [Microsoft 설명서](https://docs.microsoft.com/en-us/nuget/archive/project-json) 참조) 파일이 포함됩니다.
 
-In order to build the dependency tree, Snyk analyzes the **paket.dependencies** and **paket.lock** files.
+디펜던시 트리를 구축하기 위해 Snyk은 **paket.dependencies** 및 **paket.lock** 파일을 분석합니다.
 
-## Git services for .NET projects
+## .NET 프로젝트를 위한 Git Services
 
-.NET projects can be imported from any of the Git services we support.
+.NET 프로젝트는 Snyk이 지원하는 모든 Git Services에서 가져올 수 있습니다.
 
-Once imported, Snyk analyzes your projects based on their supported manifest files and then builds the dependency tree and displays it from our app, similar to the following:
+가져오기가 완료되면 Snyk은 지원되는 매니페스트 파일을 기반으로 프로젝트를 분석한 다음 디펜던시 트리를 빌드하고 다음과 같이 앱에 표시합니다.
 
 ![](../../../.gitbook/assets/uuid-c995621c-85c8-c79f-accd-f014e2293921-en.png)
 
 ### **Nuget**
 
-Once you select a project for import, we build the dependency tree based on these manifest files:
+가져올 프로젝트를 선택하면 다음 매니페스트 파일을 기반으로 디펜던시 트리를 빌드합니다.
 
-* For .NET Core, the **\*.proj** files&#x20;
-* For .NET Framework, the **\*.proj** file, and **packages.config**&#x20;
+* .NET Core의 경우 **\*.proj** 파일
+* .NET Framework의 경우 **\*.proj** 파일 및 **packages.config** 파일
 
-Examples of supported project files include:
+지원하는 프로젝트 파일은 다음과 같습니다.
 
-* \*.csproj&#x20;
+* \*.csproj
 * \*.vbproj
 * \*.fsproj
 
-A .NET project can target multiple target frameworks. Snyk creates a separate dependency tree for each target framework, displaying each as a separate Snyk project from the interface. In this way, it’s easier to understand why a dependency is being used and also to assess the fix strategy.
+.NET 프로젝트는 여러 프레임워크를 대상으로 할 수 있습니다. Snyk은 각 프레임워크에 대해 별도의 디펜던시 트리를 생성하여 인터페이스에서 별도의 Snyk 프로젝트로 표시합니다. 이러한 방식으로 디펜던시가 사용되는 이유를 이해하고 수정하기 쉬워집니다.
 
 ### **Paket**
 
-No import support currently.
+현재 가져오기 지원이 없습니다.
 
 ### **Git settings for .NET**
 
-From the Snyk UI, you can configure whether Snyk should scan your entire project, including the build dependencies, or if the build dependencies should be skipped.
+Snyk UI에서 Snyk이 빌드 디펜던시를 포함하여 전체 프로젝트를 스캔해야 하는지 또는 빌드 디펜던시를 건너뛸지 구성할 수 있습니다.
 
-****
+***
 
-**Update language preferences**
+**언어 기본 설정 업데이트**
 
-1. Log in to your account and navigate to the relevant group and organization that you want to manage.
-2.  Go to settings ![](../../../.gitbook/assets/cog\_icon.png) > and click for .NET&#x20;
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2.  설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png) > .NET
 
-    Scan build dependencies - If checked, Snyk scans all development dependencies.
+    Scan build dependencies를 선택하면 Snyk이 모든 개발 디펜던시를 스캔합니다.
 
-## Fixing vulnerabilities
+## 취약점 수정
 
-For a general understanding of how Snyk helps you fix Open Source vulnerabilities within your projects, please visit the following document [Fix your vulnerabilities](https://docs.snyk.io/features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities).&#x20;
+Snyk이 프로젝트 내에서 오픈 소스 취약점을 수정하는 데 어떻게 도움이 되는지에 대한 자세한 내용은 [Fix your vulnerabilities](https://docs.snyk.io/features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities)를 참조하세요.
 
 {% hint style="info" %}
-Please note the Fix PR feature is _only_ available across our [SCM](https://docs.snyk.io/getting-started/scm-git-and-ci-cd-integration-deployment-intro) integrations.&#x20;
+PR 수정 기능은 [SCM](../../../getting-started/scm-git-and-ci-cd-integration-deployment-intro.md) 통합 전체에서만 사용할 수 있습니다.
 {% endhint %}
 
-### Fix PR supported manifest files
+### PR 지원 매니페스트파일 수정
 
-If you are currently managing your project dependencies with NuGet and leveraging [`PackageReference`](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) or [`packages.config`](https://docs.microsoft.com/en-us/nuget/reference/packages-config) we will be able to automatically update the dependency version in your manifest file, provided there is an actual fix for it. You should then be able to easily review and merge your fixes.&#x20;
+현재 NuGet으로 프로젝트 디펜던시를 관리하고 활용하는 경우 [`PackageReference`](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) 또는 [`packages.config`](https://docs.microsoft.com/en-us/nuget/reference/packages-config) 파일에서 실제 수정 사항이 존재하는 경우 매니페스트 파일의 디펜던시 버전을 자동으로 업데이트할 수 있습니다. 이러한 방식으로 수정사항을 쉽게 검토하고 병합할 수 있습니다.
 
-### Dependency analysis
+### 디펜던시 분석
 
-In the .NET ecosystem, there are multiple levels of dependencies, some of which are obvious and some completely hidden to a developer. To correctly identify the vulnerabilities for a given .NET application, these dependencies must be resolved accurately.
+.NET 에코 시스템에서는 여러 단계의 디펜던시가 존재하며 일부는 정확하게 나타나지만 일부는 개발자에게 완전히 숨겨져 있습니다. 주어진 .NET 애플리케이션의 취약점을 올바르게 식별하려면 이러한 디펜던시를 정확하게 해결해야 합니다.
 
-We resolve dependencies differently in the Snyk CLI, and the Source Code Management (SCM) systems such as GitHub:
+Snyk CLI와 Github와 같은 소스 코드 관리(SCM) 시스템에서 디펜던시를 다르게 해결합니다.
 
-* In the CLI, if you manage your project dependencies using `PackageReference`, we scan your `obj/project.assets.json`; if you manage your dependencies using `packages.config`, we scan the `packages` directory. This approach allows us to be very accurate.
-*   In the SCM integration, scanning uses a different process, as the generated files mentioned above are not available. To overcome this we follow the NuGet dependency [resolution algorithm](https://docs.microsoft.com/en-us/nuget/concepts/dependency-resolution) to construct a dependency tree.&#x20;
+* CLI에서 `PackageReference`를 사용하여 프로젝트 디펜던시를 관리하는 경우 `obj/project.assets.json` 파일을 스캔합니다. 만약, `packages.config`파일을 사용하여 디펜던시를 관리하는경우 `package` 디렉토리를 스캔합니다. 이 경우 매우 정확할 수 있습니다.
+*   SCM 통합에서 위에서 언급한 생성된 파일을 사용할 수 없기 때문에 스캔은 다은 프로세스를 사용합니다. 이를 극복하기 위해서 NuGet 종속성을 따라 [resolution algorithm](https://docs.microsoft.com/en-us/nuget/concepts/dependency-resolution) 디펜던시 트리를 구성합니다.
 
-    **Note**: runtime dependencies (provided by the runtime environment also known as "meta-packages") are resolved more accurately in the CLI if the host machine uses a similar runtime SDK to the server running the app.
+    **Note**: 런타임 종속성("메타 패키지"라고 하는 런타임 환경에서 제공)은 호스트 시스템이 앱을 실행하는 서버와 유사한 런타임 SDK를 사용하는경우 CLI에서 더 정확하게 해결됩니다.
 
-For further reading on .NET automated fixes, please visit our [blog](https://snyk.io/blog/automated-vulnerability-fixes-dot-net-dependencies).
+.NET 자동 수정에 대한 자세한 내용은 [blog](https://snyk.io/blog/automated-vulnerability-fixes-dot-net-dependencies)를 참조하세요.
 
 #### Build-time vs Runtime dependencies
 
-* **Build-time dependency**: We understand build time dependency to be a dependency that is resolved during build time and is not susceptible to change at runtime.
-* **Runtime dependency**: We understand build time dependency to be a dependency that is resolved against the installed runtime. For example, packages coming from the .NET framework (<=4) / .NET [runtime](https://docs.microsoft.com/en-us/dotnet/core/versions/selection?WT.mc\_id=DOP-MVP-5001511&) (for Core and .NET 5+) such as [`System.Net.Http`](https://www.nuget.org/packages/System.Net.Http) . We sometimes refer to runtime dependencies as meta-packages.
+* **Build-time dependency**: 빌드 시간 동안 해결되고 런타임 시 변경할 수 없는 디펜던시로 이해됩니다.
+* **Runtime dependency**: Build-time dependency를 설치된 런타임에 대해 해결되는 디펜던시로 이해합니다. 예를 들어, .NET framework(<=4)에서 오는 packages / [`System.Net.Http`](https://www.nuget.org/packages/System.Net.Http)에서 찾는 .NET [runtime](https://docs.microsoft.com/en-us/dotnet/core/versions/selection?WT.mc\_id=DOP-MVP-5001511&)(Core 및 .NET5+). runtime dependencies를 meta-packages라고 합니다.
 
-### Tackling vulnerabilities from runtime dependencies
+### Runtime dependencies를 이용한 취약점 해결
 
-There are a couple of actions you can choose to take in order to address these type of vulnerable dependencies. These vary if you are using the SCM or CLI:
+이러한 유형의 취약한 디펜던시를 해결하기 위해 선택할 수 있는 조치가 있습니다. SCM 또는 CLI를 사용하는 경우 다음과 같이 진행합니다.
 
 **SCM**
 
-If you believe you have found false positives because the application runs on a system that always has the latest patches from Microsoft installed, which _may_ mean the vulnerability is no longer relevant to your project, you may choose to [ignore](https://docs.snyk.io/features/fixing-and-prioritizing-issues/issue-management/ignore-issues#ignoring-issues-in-the-ui) it.&#x20;
+응용 프로그램이 항상 Microsoft의 최신 패치가 설치된 시스템에서 실행하여 발견된 취약점은 더 이상 프로젝트와 관련이 없을 수 있으므로 이를 [무시하도록 선택](../../../features/fixing-and-prioritizing-issues/issue-management/ignore-issues.md)할 수 있습니다.
 
 **CLI**
 
-If you believe you have found false positives because when the application runs in production you always pull the latest/explicit patches from Microsoft, which may mean the vulnerability is no longer relevant to your project, you may do the following:
+애플리케이션이 운영 환경에서 실행될 때 Microsoft에서 항상 최신/명시적 패치를 가져오기 때문에 취약점이 발견되었다고 생각되면 다음을 수행할 수 있습니다.
 
-* If in production your application always runs on the latest SDK patch version, you can set `TargetLatestRuntimePatch` to `true` in the project file. And make sure to upgrade your environments (e.g. dev, prod) to the latest runtime version.
+* 프로덕션에서 응용 프로그램이 항상 최신 SDK 패치 버전에서 실행된다면 프로젝트 파일에서 `TargetLatestRuntimePatch`를 `true`로 설정할 수 있습니다. 또한 환경(예: dev, prod)을 최신 런타임 버전으로 업그레이드해야 합니다.
 
 ```
 <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
 ```
 
-* You may choose to publish a [self-contained](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained) app that includes the runtime. Then set `RuntimeFrameworkVersion`to the specific patch version in the project file. You may choose to [ignore](https://docs.snyk.io/features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli) vulnerabilities that you believe are no longer relevant.
+* 런타임이 포함된 [자체 포함](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained) 앱을 게시하도록 선택할 수 있습니다. 그런 다음 `RuntimeFrameworkVersion`을 프로젝트 파일의 특정 패치 버전으로 설정하십시오. 더 이상 관련이 없다고 생각되는 취약성을 [무시하도록 선택](../../../features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)할 수 있습니다.
 
 ```
 <PropertyGroup>
@@ -173,8 +173,8 @@ If you believe you have found false positives because when the application runs 
 </PropertyGroup>
 ```
 
-## Unsupported&#x20;
+## 지원하지 않는 경우
 
-* [`Directory.Build.props`](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022#directorybuildprops-and-directorybuildtargets) and [`Directory.Build.targets`](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022#directorybuildprops-and-directorybuildtargets) are not currently supported
-* `<ProjectReference>`elements are not currently supported
-* Private dependency scanning is unsupported via the SCM integration. You can scan private dependencies using the Snyk CLI
+* [`Directory.Build.props`](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022#directorybuildprops-and-directorybuildtargets) 와 [`Directory.Build.targets`](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022#directorybuildprops-and-directorybuildtargets)는 현재 지원하지 않습니다.
+* `<ProjectReference>`는 현재 지원하지 않습니다.
+* Private dependency 스캔은 SCM 통합을 통해 지원하지 않습니다. Snyk CLI를 사용하여 스캔할 수 있습니다.
