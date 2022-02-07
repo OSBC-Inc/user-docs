@@ -127,13 +127,13 @@ JavaScript 프로젝트는 Snyk에서 지원하는 모든 GIt services에서 가
 
 ### npm
 
-Git services에서 는 npm 6.x, 7.x를 지원합니다.GIt Services는 npm 6.x, 7.x를 지원합니다.
+npm 6.x, 7.x은 Git Services에서 지원됩니다.
 
 {% hint style="info" %}
-Workspaces npm 7.x is not supported.
+Workspaces npm 7.x은 지원되지 않습니다.
 {% endhint %}
 
-We build the dependency tree based on these files:
+다음 파일을 기반으로 디펜던시 트리를 빌드합니다.
 
 * `package.json`
 * `package-lock.json`
@@ -141,10 +141,10 @@ We build the dependency tree based on these files:
 ### Yarn
 
 {% hint style="info" %}
-Yarn versions 1 & 2 are supported in Git services.
+Yarn versions 1 & 2은 Git Services에서 지원됩니다.
 {% endhint %}
 
-We build the dependency tree based on these files:
+다음 파일을 기반으로 디펜던시 트리를 빌드합니다.
 
 * `package.json`
 * `yarn.lock`
@@ -153,35 +153,35 @@ We build the dependency tree based on these files:
 
 {% hint style="info" %}
 **Note**\
-Git support for Yarn Workspaces is enabled for all projects in organisations created after March 3rd 2021. To enable this feature for organisations created before this date please contact support@snyk.io. Yarn version 1 is supported in Git services.
+에 대한 Git 지원은 2021년 3월 3일 이후 생성된 조직의 모든 프로젝트에 대해 활성화됩니다. 해당 날짜 이전에 생성된 조직에 대해 이 기능을 활성화하려면 support@snyk.io에 문의하십시오. Yarn version 1은 Git Services에서 지원됩니다.
 {% endhint %}
 
-For Yarn Workspaces we scan each `package.json` that matches the `packages` pattern from the root level `package.json` and root level `yarn.lock`
+Yarn Workspaces의 경우 root의 `package.json` 파일과 루트의 `yarn.lock`파일의 `packages`패턴과 일치하는 `package.json`파일을 스캔합니다.
 
-Fix Pull/Merge Requests are not supported for Yarn Workspaces. The fix advice can be used to manually generate PRs.
+Fix Pull/Merge Requests는 Yarn Workspaces에 대해 지원되지 않습니다. fix advice를 사용하여 PR을 수동으로 생성할 수 있습니다.
 
-Commit status checks always use the root level `yarn.lock` and workspace `package.json` for tests.
+커밋 상태 확인은 항상 테스트 진행 시 root의 `yarn.lock` 파일과 workspace의 `package.json` 파일을 사용합니다.
 
 {% hint style="info" %}
 **Warning**\
-If your `package.json` and root `yarn.lock` are out-of-sync, we will have issues re-testing the projects. Snyk shows errors on project page and import logs when this happens.\
-If you reference the locally installed packages which do not appear in a lockfile, you can disable the **Require package.json and yarn.lock files to be in sync** setting, on the **Languages Settings** page for JavaScript.
+귀하의 package.json 파일과 root의 yarn.lock 파일과 동기화되지 않은 경우 프로젝트를 다시 테스트 하는데 문제가 있습니다. Snyk은 이러한 일이 발생하면 프로젝트 페이지에 오류를 표시하고 로그를 가져옵니다.\
+lockfile에 표시되지 않는 로컬로 설치된 패키지를 참조하는 경우 JavaScript용 **언어 설정** 페이지에서 **Require package.json and yarn.lock files to be in sync** 설정을 비활성화할 수 있습니다.
 {% endhint %}
 
 ### Git settings for JavaScript
 
-**Preferences**
+**기본 설정**
 
-From the Snyk UI, use these parameters to customize your language preferences for JavaScript-based projects:
+Snyk UI에서 다음의 파라미터를 사용하여 JavaScript 기반 프로젝트에 대한 언어 기본 설정을 정의할 수 있습니다.
 
-| Option                                                                         | Description                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Scan and fix devDependencies**                                               | If selected, Snyk reads the \`devDependencies\` property on the package.json and reports & fixes any vulnerabilities accordingly.                                                                                                                                                          |
-| **Require package.json and package-lock.json to be in sync**                   | When selected if the package.json and package.lock files are out-of-sync, Snyk fails the import.                                                                                                                                                                                           |
-| **Exclude package-lock.json from being generated when fixing vulnerabilities** | If you are using private mirrors or registries, a Snyk generated lockfile might not be appropriate for you because Snyk uses the npm registry to update the lockfile. This setting allows you to opt-out of getting lockfiles generated for you in our fix pull requests / merge requests. |
+| Option                                                                         | Description                                                                                                                                                                       |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scan and fix devDependencies**                                               | Snyk은 package.json의 'devDependencies' 속성을 읽고 이에 따라 취약점을 보고하고 수정합니다.                                                                                                               |
+| **Require package.json and package-lock.json to be in sync**                   | package.json 및 package-lock.lock 파일이 동기화되지 않은 경우 선택하면 Snyk이 가져오기에 실패합니다.                                                                                                          |
+| **Exclude package-lock.json from being generated when fixing vulnerabilities** | 개인 미러 또는 레지스트리를 사용하는 경우 Snyk이 npm 레지스트리를 사용하여 lockfile을 업데이트하기 때문에 Snyk에서 생성한 lockfile이 적합하지 않을 수 있습니다. 이 설정을 사용하여 수정 pull requests / 병합 requests에서 lockfile이 생성되는 것을 제한할 수 있습니다. |
 
-### Update language preferences
+### 언어 기본 설정 업데이트
 
-1. Log in to your account and navigate to the relevant group and organization that you want to manage
-2. Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Languages**
-3. Click **Edit settings** for JavaScript to configure preferences for your JavaScript (npm and Yarn) projects in this organization
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2. 설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png) > **Languages**
+3. **Edit settings**를 클릭하여 이 조직의 JavaScript(npm 및 Yarn) 프로젝트에 대한 기본 설정을 구성합니다.
