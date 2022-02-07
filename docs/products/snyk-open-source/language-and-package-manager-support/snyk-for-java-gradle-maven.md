@@ -1,15 +1,15 @@
 # Snyk for Java (Gradle, Maven)
 
-Snyk offers security scanning to test your projects for vulnerabilities, both through your CLI and through different integrations from our UI.
+Snyk은 CLI와 UI의 다양한 통합을 통해 프로젝트의 취약점을 테스트하는 보안 스캔을 제공합니다.
 
-**Supported versions:** For officially supported Java versions, operating systems, and Node.js versions see the [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) and [Maven support](https://github.com/snyk/snyk-mvn-plugin#support) tables.
+**지원되는 버전**: 공식적으로 지원되는 Java 버전, 운영 체제 및 Node.js 버전은 [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) 와 [Maven support](https://github.com/snyk/snyk-mvn-plugin#support)를 참조하세요.
 
-## Features
+## 특징
 
-The following table provides a general outline of the general features we offer by language. In addition to these features, we also offer additional functionality related to the specific integrations you configure and more.
+다음 표는 언어 별로 제공되는 일반적인 기능에 대한 개요를 제공합니다. 이러한 기능 외에도 관련된 추가 기능을 제공합니다.
 
 {% hint style="info" %}
-Some features might not be available, depending on your pricing plan. See [pricing plans](https://snyk.io/plans/) for more details.
+요금제에 따라서 일부 기능을 사용하지 못할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하세요.
 {% endhint %}
 
 | Package managers / Features       | CLI support | Git support | License scanning | Fixing                                                                                                                          | Runtime monitoring |
@@ -19,195 +19,193 @@ Some features might not be available, depending on your pricing plan. See [prici
 
 ## Snyk CLI tool for Java projects (CI/CD)
 
-The way Snyk analyzes and builds the dependencies varies depending on the language and package manager of the project.
+Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언어 및 패키지 관리자에 따라 다릅니다.
 
-Learn how to use the tool for your Java projects as follows:
+다음과 같이 Java 프로젝트에 도구를 사용하는법을 안내합니다.
 
-* Snyk CLI with Gradle: To build the dependency graph, Snyk integrates with Gradle and inspects the dependencies returned by the build. The following manifest files are supported: `build.gradle` and `build.gradle.kts`
-* Snyk CLI with Maven: To build the dependency tree, Snyk analyzes the output of the `pom.xml` files.
+* Gradle이 포함된 Snyk CLI: 디펜던시 그래프를 빌드하기 위해 Snyk은 Gradle과 통합하고 빌드에서 반환된 디펜던시를 검사합니다. 다음 매니페스트 파일이 지원됩니다.                            `build.gradle, build.gradle.kts`
+* Maven이 포함된 Snyk CLI: 디펜던시 트리를 빌드하기 위해 Snyk은 `pom.xml`파일을 분석합니다.
 
 ## CLI parameters for Java
 
-This section describes the unique CLI commands available when working with Java-based projects as follows:
+이 섹션에서는 다음과 같이 Java 기반 프로젝트로 작업할 때 사용할 수 있는 CLI 명렁어에 대해 설명합니다.
 
 ### Prerequisites
 
-* Install the relevant package manager before you use the Snyk CLI tool.
-* Include the relevant manifest files supported by Snyk before testing.
-* Install and authenticate the Snyk CLI to start analyzing projects from your local environment. See [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli).
+* Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하세요.
+* 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
+* [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
 ### Snyk CLI parameters
 
-When working with Gradle projects from our CLI, you can add any of the following options to further refine the way the scan works:
+CLI에서 Gradle 프로젝트로 작업할 때 다음 옵션을 추가하여 스캔 작동 방식을 세분화할 수 있습니다.
 
-| **Option**                    | **Description**                                                                                                                                                                                                                                                                                     |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--sub-project=`              | For Gradle "multi-project" configurations, test a specific sub-project.                                                                                                                                                                                                                             |
-| `--all-sub-projects`          | For "multi-project" configurations, test all sub-projects.                                                                                                                                                                                                                                          |
-| `--configuration-matching=`   | Resolve dependencies using only configuration(s) that match the provided Java regular expression. For example: `'^releaseRuntimeClasspath$'`                                                                                                                                                        |
-| `--configuration-attributes=` | Select certain values of configuration attributes to resolve the dependencies. For example: `'buildtype:release,usage:java-runtime'`                                                                                                                                                                |
-| `--all-projects`              | Use for monorepos. This will detect all supported manifests. For Gradle monorepos Snyk will only look for root level **build.gradle / build.gradle.kts** files and apply the same logic as `--all-sub-projects` behind the scenes. This command is designed to be run in the root of your monorepo. |
+| **Option**                    | **Description**                                                                                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--sub-project=`              | "multi-project" 구성의 경우 특정 하위 프로젝트를 테스트합니다.                                                                                                                                                  |
+| `--all-sub-projects`          | "multi-project" 구성의 경우 모든 하위 프로젝트를 테스트합니다.                                                                                                                                                  |
+| `--configuration-matching=`   | 제공된 Java 정규식과 일치하는 구성만 사용하여 디펜던시를 해결합니다. 예: `'^releaseRuntimeClasspath$'`                                                                                                                   |
+| `--configuration-attributes=` | 디펜던시를 해결하려면 구성 속성의 특정 값을 선택하세요. 예: `'buildtype:release,usage:java-runtime'`                                                                                                                 |
+| `--all-projects`              | monorepos에 사용됩니다. 지원되는 모든 매니페스트가 감지됩니다. Gradle monorepos의 경우 Snyk은 root의 **build.gradle / build.gradle.kts** 파일만 찾고 이후 동일한 논리를 적용합니다. `--all-sub-projects`는 nomorepo의 root에서 실행되도록 설계되었습니다. |
 
-### Pass extra arguments directly to Gradle or Maven via Snyk CLI
+### Snyk CLI를 통해 추가 인수를 Gradle 또는 Maven에 직접 전달
 
-You can pass any extra Gradle or Maven arguments directly to **gradle** or **mvn** by providing them after a Snyk command like so:
+다음과 같이 Snyk 명령어 뒤에 제공하여 추가 인수를 **gradle** 또는 **mvn**에 직접 전달할 수 있습니다.
 
 ```
 snyk test -- --build-cache
 ```
 
-**Examples of how you can use Maven arguments with the Snyk CLI**
+**Snyk CLI에서 Maven 인수를 사용하는 방법 예시**
 
-Test a specific Maven profile called “prod”.
+"prod"라는 특정 Maven 프로필을 테스트합니다.
 
 ```
 snyk test -- -prod
 ```
 
-Add a system property from your pom.xml file.
+pom.xml 파일에서 시스템 속성을 추가합니다.
 
-For example:
+예:
 
-The package version appears in your pom.xml
+패키지 버전은 pom.xml에 나타납니다.
 
 ```
 ${pkg_version}
 ```
 
-Define the system property like this:
+다음과 같이 시스템 속성을 정의합니다.
 
 ```
 snyk test -- -Dpkg_version=1.4
 ```
 
-## CLI help for Gradle projects
+## Gradle 프로젝트에 대한 CLI help
 
-### Sub-projects
+### 하위 프로젝트
 
-Gradle build can consist of several sub-projects, where each sub-project has its own build.gradle, while the root project is the only one that also includes a `settings.gradle` file. Sub-projects depend on the root project, but can be configured otherwise.
+Gradle 빌드는 여러 하위 프로젝트로 구성될 수 있으며, 각 하위 프로젝트에는 자체 build.gradle 파일이 있는 반면 root 프로젝트에는 setting.gradle 파일도 포함되어 있습니다. 하위 프로젝트는 root 프로젝트에 따라 다르지만 다른 방식으로 구성할 수 있습니다.
 
-By default, Snyk CLI scans only the current project (the project in the root of the current folder), or the project that is specified by `--file=path/to/build.gradle`).
+기본적으로 Snyk CLI는 현재 프로젝트(현재 폴더의 root에 있는 프로젝트)또는                                         `--file=path/to/build.gradle`로 지정된 프로젝트만 검색합니다.
 
-*   To scan all projects at once (recommended), use the `--all-sub-projects` flag:
+*   모든 프로젝트를 한번에 스캔하려면(권장) `--all-sub-projects` 플래그를 사용하세요.
 
     ```
     snyk test --all-sub-projects
     ```
 
-**Note:** Each of the individual sub-projects appears as a separate Snyk project in the UI.
+**Note:** 개별 하위 프로젝트는 UI에서 별도의 Snyk 프로젝트로 나타납니다.
 
-*   To scan a specific project (for example, _myapp_):
+*   특정 프로젝트를 스캔하려면(예: myapp) 다음과 같이 진행합니다.
 
     ```
     snyk test --sub-project=myapp
     ```
 
-### Configurations
+### 구성
 
-Gradle dependencies are declared for a particular scope, each scope is represented by Gradle with the help of [Configurations](https://docs.gradle.org/current/userguide/declaring\_dependencies.html#sec:what-are-dependency-configurations). For example:
+Gradle 디펜던시는 특정 범위에 대해 선언되며 각 범위는 [Configurations](https://docs.gradle.org/current/userguide/declaring\_dependencies.html#sec:what-are-dependency-configurations)의 도움으로 Gradle로 표시됩니다.
 
-* **compileOnly** configuration for development dependencies
-* **compile** configuration that includes compile and runtime dependencies
+* 개발 디펜던시를 위한 **compileOnly**
+* 컴파일 및 런타임 디펜던시를 포함하는 **compile**
 
-By default Snyk merges all configurations returned by Gradle to dependency graph based on the sum total of the dependencies across all configurations in the project/projects.
+기본적으로 Snyk은 프로젝트/프로젝트의 모든 구성에 대한 디펜던시의 합계를 기반으로 Gradle에서 반환된 모든 구성을 디펜던시 그래프에 병합합니다.
 
-To test a specific configuration:
+특정 구성을 테스트하기위해 다음과 같이 진행합니다.
 
-* Use the `--configuration-matching` option with a [Java regular expression](https://docs.oracle.com/javase/tutorial/essential/regex/) (case-insensitive) as its parameter. The configuration that matches is then tested. If several configurations match, they are all merged and resolved together. For example: `'^releaseRuntimeClasspath$|^compile$'`
-* If the different sub-projects include different configurations, scan each sub-project separately.
+* `--configuration-matching` 파라미터로 [Java 정규식](https://docs.oracle.com/javase/tutorial/essential/regex/)(대소문자 구분 안 함)과 함께 옵션을 사용하세요. 이후 일치하는 구성이 테스트됩니다. 여러 구성이 일치하면 모두 병합되어 함께 해결됩니다. 예:`'^releaseRuntimeClasspath$|^compile$'`
+* 다른 하위 프로젝트에 다은 구성이 포함된 경우 각 하위 프로젝트를 개별적으로 스캔합니다.
 
-**Examples of how you can use the --configuration-matching:**
+**--configuration-matching을 사용하는 방법의 예:**
 
-* `--configuration-matching=compile` will match compile, testCompile, compileOnly etc;
-* `--configuration-matching=^compile$` will match only compile;
-* `--configuration-matching='^(debug|release)compile$'` will match debugCompile and releaseCompile
+* `--configuration-matching=compile` compile, testCompile, compileOnly 등과 일치합니다.
+* `--configuration-matching=^compile$` 컴파일만 일치합니다.
+* `--configuration-matching='^(debug|release)compile$'` debugCompile 및 releaseCompile과 일치합니다.
 
-### Android build variants
+### Android 빌드 변형
 
-Android Gradle supports creating different versions of your app by configuring [build variants.](https://developer.android.com/studio/build/build-variants)
+Android Gradle은 [빌드 변형](https://developer.android.com/studio/build/build-variants)을 구성하여 다양한 버전의 앱 생성을 지원합니다.
 
-Since Snyk defaults to merging all available configurations the variants will result in a clash of un-mergeable configurations.
+Snyk은 기본적으로 사용 가능한 모든 구성을 병합하기 때문에 변형으로 병합할 수 없는 구성이 충돌하게 됩니다.
 
-In such cases, Snyk scan fails with an error from Gradle which may contain one of the following messages:
+이 경우 Snyk 스캔은 다음 메시지 중 하나를 포함할 수 있는 Gradle의 오류와 함께 실패합니다.
 
 * _Cannot choose between the following configurations of `project :mymodulewithvariants`_
 * _Cannot choose between the following variants of `project :mymodulewithvariants`_
 * _Could not select value from candidates_
 
-To avoid such conflicts:
+이러한 충돌을 피하기 위해서 다음과 같이 진행합니다.
 
-*   **Use a specific configuration(s):** if you know of a build configuration that has all the required attributes and the configuration is identical across all sub-projects included in the test, specify that configuration.\
-    For example:
+*   **특정 구성 사용**: 모든 필수 속성이 있고 구성이 테스트에 포함된 모든 하위 프로젝트에서 동일한 빌드 구성을 알고 있는 경우 해당 구성을 지정합니다.
 
     ```
     --configuration-matching=prodReleaseRuntimeClasspath
     ```
-*   **Explicitly specify the dependency configuration:** modify intra-project dependencies in your build.gradle file(s) to use a specific configuration
+*   **디펜던시 구성을 명시적으로 지정합니다**: 특정 구성을 사용하도록 builde.gradle 파일에서 프로젝트 내 디펜던시를 수정합니다.
 
     ```
       dependencies {
           implementation project(path: ':mymodulewithvariants', configuration: 'default')
       }
     ```
-*   **Suggest configuration attributes:** if you receive an error when running the command, the error may indicate which attribute values are available, while the error details from Gradle also indicate which dependency variants match which attributes. Using these details, add the attribute filter option.\
-    For example:
+*   **구성 속성 제한**: 명령을 실행할 때 오류가 수신되면 오류는 사용 가능한 소성 값을 나타낼 수 있으며 Gradle의 오류 세부 정보는 어떤 종속성 변형이 어떤 속성과 일치하는지도 나타냅니다. 이러한 세부 정보를 사용하여 속성 필터옵션을 추가합니다.
 
     ```
     snyk test --configuration-attributes=buildtype:release,usage:java-runtime,mode:demo
     ```
 
-    matches the variants using `com.android.build.api.attributes.BuildTypeAttr=release` and `org.gradle.usage=java-runtime`
+    또는 다음의 명령어를 사용하여 변형을 일치 시킵니다. `com.android.build.api.attributes.BuildTypeAttr=release` and `org.gradle.usage=java-runtime`
 
-### Daemon
+### 데몬
 
-By default, Snyk passes `gradle build --no-daemon` in the background when running `snyk test` and `snyk monitor`. If for any reason, you run into trouble, try this:
+기본적으로 Snyk은 `gradle build --no-daemon`을 실행하여 background에서 `snyk test`와 `snyk monitor`를 진행합니다. 문제가 발생하면 다음과 같이 진행하세요.
 
-1. Start the Gradle daemon.
-2. Add `--daemon` to your `snyk test` or `snyk monitor`.
+1. Gradle 데몬을 시작합니다.
+2. `snyk test` 또는 `snyk monitor`에 `--daemon`을 추가하세요.
 
 ### Lockfiles
 
-If your Gradle project makes use of a single **gradle.lockfile** or multiple **\*.lockfile** per configuration and you are having the following issue
+Gradle 프로젝트에서 구성당 단일 **gradle.lock** 파일 또는 여러 **\*.lock** 파일을 사용하는 경우 다음과 같은 문제가 발생합니다.
 
 **Gradle Error (short): > Could not resolve all dependencies for configuration ':compileOnly'. > Locking strict mode: Configuration ':compileOnly' is locked but does not have lock state.**
 
-Bear in mind that **compileOnly configuration** **has been deprecated** and even if your project successfully generates a lockfile, it will not contain \`compileOnly\` state because this configuration cannot be resolved. Only resolvable configurations compute a dependency graph. In order to solve this issue we suggest you **update your build.gradle containing dependencyLocking logic with the following instruction**
+**compileOnly 구성은 더 이상 사용되지 않으며** 프로젝트가 잠금 파일을 성공적으로 생성하더라도 이 구성을 확인할 수 없으므로 compileOnly 상태는 포함하지 않습니다. 확인 가능한 구성만 종속성 그래프를 계산합니다. 이 문제를 해결하려면 **dependencyLocking 논리를 포함하는 build.gradle을 다음 명령으로 업데이트하는 것이 좋습니다.**
 
 ```
 compileOnly {resolutionStrategy.deactivateDependencyLocking() }
 ```
 
-This will **ignore compileOnly** and save only the necessary information to analyse your project/projects.
+이렇게 하면 **compileOnly가 무시**되고 프로젝트 분석에 필요한 정보만 저장됩니다.
 
 ### Support
 
-If you are having any trouble testing your Gradle projects with Snyk, collect the following details and send them to us at `<`[`support@snyk.io`](mailto:support@snyk.io)`>` so we can help you out:
+Snyk으로 Gradle 프로젝트를 테스트하는데 문제가 발생하는 경우 다음 세부 정보를 수집하여 [`support@snyk.io`](mailto:support@snyk.io)로 보내주시면 도와드리겠습니다.
 
 * `build.gradle`
 * `settings.gradle` (especially if we did not pick up a version of a package)
-* The output from the following commands:
+* 다음 명령어를 통한 출력된 내용:
   * `$ snyk test -d`
   * `$ gradle dependencies -q`
 
-## Git services for Maven projects
+## Maven 프로젝트를 위한 Git Services
 
-After you select a project for import, we build the dependency tree based on the `pom.xml` file.
+가져올 프로젝트를 선택한 후 `pom.xml` 파일을 기반으로 디펜던시 트리를 빌드합니다.
 
-## Git services for Gradle projects
+## Gradle 프로젝트를 위한 Git Services
 
-After you select a project for import, we build the dependency tree based on the `build.gradle` file and (optional) `gradle.lockfile`.
+가져올 프로젝트를 선택한 후 `build.gradle` 파일 및 `gradle.lockfile`(선택사항)을 기반으로 디펜던시 트리를 빌드합니다.
 
-`build.gradle.kts` files are not currently supported in Git.
+`build.gradle.kts` 파일은 현재 Git에서 지원하지 않습니다.
 
-If a lockfile is present, Snyk will use it to accurately resolve the final version of dependencies used in the project.
+lockfile이 있는 경우 Snyk은 이를 사용하여 프로젝트에 사용된 디펜던시의 최종 버전을 정확하게 해결합니다.
 
-Gradle lockfiles are an opt-in feature that, among other benefits, enable reproducible builds.Read more about Gradle dependency locking at [https://docs.gradle.org/current/userguide/dependency\_locking.html](https://docs.gradle.org/current/userguide/dependency\_locking.html)
+Gradle lockfile은 다른 이점 중에서도 재현 가능한 빌드를 가능하게 하는 옵트인 기능읍니다. 자세한내용은 [Gradle 디펜던시 잠금](https://docs.gradle.org/current/userguide/dependency\_locking.html)을 참조하세요.
 
 ## Git settings for Java
 
-From the Snyk UI you can specify mirrors or repositories from which you’d like to resolve packages in Artifactory for Maven.
+Snyk UI에서는 Artifactory for Maven에서 패키지를 확인하려는 미러 또는 저장소를 지정할 수 있습니다.
 
-See the page below for more details on configuring the Artifactory integration.
+artifactory 통합 구성에 대한 자세한 내용은 아래 페이지를 참조하세요.
 
 {% content-ref url="../../../features/integrations/private-registry-integrations/artifactory-registry-for-maven.md" %}
 [artifactory-registry-for-maven.md](../../../features/integrations/private-registry-integrations/artifactory-registry-for-maven.md)
@@ -215,7 +213,7 @@ See the page below for more details on configuring the Artifactory integration.
 
 ## Additional Snyk support for Java
 
-In addition to the CLI and Snyk UI features, you can also check your Java projects with these integrations.
+Snyk CLI 및 UI 기능 외에도 이러한 통합을 통해 Java 프로젝트를 확인할 수 있습니다.
 
 {% content-ref url="../../../features/integrations/ci-cd-integrations/maven-plugin-integration.md" %}
 [maven-plugin-integration.md](../../../features/integrations/ci-cd-integrations/maven-plugin-integration.md)
