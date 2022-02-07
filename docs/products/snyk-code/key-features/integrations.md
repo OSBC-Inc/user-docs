@@ -1,51 +1,51 @@
-# Integrations
+# 통합
 
-## IDE integrations
+## IDE 통합
 
-### JetBrains IDE plugins
+### JetBrains IDE 플러그인
 
-For more details, see [JetBrains IDE Plugins](https://docs.snyk.io/integrations/ide-tools/jetbrains-plugins).
+자세한 내용은 [JetBrains IDE Plugins](https://docs.snyk.io/integrations/ide-tools/jetbrains-plugins)를 참조하십시오.
 
-### VS Code IDE plugin
+### VS Code IDE 플러그인
 
-For more details, see the [Visual Studio Code extension for Snyk Code](../../../features/integrations/ide-tools/visual-studio-code-extension-for-snyk-code.md).
+자세한 내용은 [Visual Studio Code extension for Snyk Code](../../../features/integrations/ide-tools/visual-studio-code-extension-for-snyk-code.md)를 참조하십시오.
 
-## SCM integrations
+## SCM 통합
 
-### Repository monitoring
+### 저장소 모니터링
 
-This integration allows you to:
+이 통합을 통해 다음을 수행할 수 있습니다:
 
 * Manage Code projects using your existing native import flow and tools
-* View and prioritize security issues found in the source code
-* Run a retest of a project and see history snapshots of a project
+* 소스코드에서 발견된 보안 issues 보기 및 우선 순위 지정
+* 프로젝트 재테스트를 실행 및 프로젝트의 히스토리 스냅샷 보기
 
-#### Supported SCMs
+#### 지원되는 SCM
 
-Snyk Code integrates with the following SCMs: [GitHub](https://docs.snyk.io/integrations/git-repository-scm-integrations/github-integration), [Bitbucket](https://docs.snyk.io/integrations/git-repository-scm-integrations/bitbucket-cloud-integration) , [Azure](https://docs.snyk.io/integrations/git-repository-scm-integrations/azure-repos-integration), [GitLab](https://docs.snyk.io/integrations/git-repository-scm-integrations/gitlab-integration).
+Snyk Code는 [GitHub](https://docs.snyk.io/integrations/git-repository-scm-integrations/github-integration), [Bitbucket](https://docs.snyk.io/integrations/git-repository-scm-integrations/bitbucket-cloud-integration) , [Azure](https://docs.snyk.io/integrations/git-repository-scm-integrations/azure-repos-integration), [GitLab](https://docs.snyk.io/integrations/git-repository-scm-integrations/gitlab-integration)과 통합됩니다.
 
-#### Supported languages
+#### 지원되는 언어
 
-Snyk Code supports wide range of languages: see [Snyk Code language support](https://docs.snyk.io/snyk-code/snyk-code-language-and-framework-support) for the full list.
+Snyk Code는 다양한 언어를 지원합니다. 전체 목록은  [Snyk Code language support](https://docs.snyk.io/snyk-code/snyk-code-language-and-framework-support)를 참조하십시오.
 
-### PR checks
+### PR 확인
 
-Coming soon! Stay tuned.
+곧! 계속 지켜봐 주십시오.
 
-## CI integrations
+## CI 통합
 
-### Test code in CI/CD using Snyk CLI
+### Snyk CLI를 사용하여 CI/CD의 테스트 코드
 
-The Snyk Command Line Interface ([CLI](../../../features/snyk-cli/)) for Snyk Code helps you find and fix security flaws in your code on your local machine or in the CI/CD process.
+Snyk Code용 [CLI](../../../features/snyk-cli/)(Snyk Command Line Interface)는 로컬 컴퓨터 또는 CI/CD 프로세스에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
 
-## APIs and extensibility
+## API 및 확장성
 
-### Public APIs
+### 공개 API
 
-You can query Code projects and issues from our [v3 APIs](https://apidocs.snyk.io/?version=2021-11-03%7Eexperimental#overview).
+코드 프로젝트 및 issues는 [v3 APIs](https://apidocs.snyk.io/?version=2021-11-03%7Eexperimental#overview)에서 쿼리할 수 있습니다.
 
-## Other integrations
+## 기타 통합
 
-### Jira integration
+### Jira 통합
 
-You can connect Code with your Jira instance to allow developers to easily export issue data to Jira issues.
+Snyk Code를 Jira 인스턴스와 연결하면 개발자가 issue 데이터를 Jira issues로 쉽게 내보낼 수 있습니다.

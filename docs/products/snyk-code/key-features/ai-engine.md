@@ -1,37 +1,37 @@
-# AI Engine
+# AI 엔진
 
-Snyk Code is powered by a semantic, AI-based analysis engine and is able to analyze the following in your code.
+Snyk Code는 시맨틱 AI 기반 분석 엔진에 의해 작동되며 코드에서 다음을 분석할 수 있습니다.
 
-### **Hardcoded secrets**
+### 하드코딩된 비밀
 
-Snyk Code includes secret detection capabilities that scan and highlight secrets like keys, credentials, PII, and sensitive information in your source code. Unlike tools that use entropy checks or regular expressions, Snyk Code uses machine learning to improve the accuracy of detecting secrets and minimizing the occurrence of false positives.
+Snyk Code에는 key, 자격 증명, PII 및 소스 코드의 민감한 정보와 같은 비밀을 스캔하고 강조 표시하는 비밀 탐지 기능이 포함되어 있습니다. 엔트로피 검사나 정규식을 사용하는 도구와 달리 Snyk Code는 기계 학습을 사용하여 비밀 탐지의 정확도를 높이고 오탐지 발생을 최소화합니다.
 
 ![Example of Snyk Code reporting a hardcoded secret.](../../../.gitbook/assets/image5.png)
 
-### **Coding issues**
+### 코딩 문제
 
 Problems such as dead code, branches that are predefined, and branches having the same code on each side.
 
-### **Type inference**
+### 유형 추론
 
-Determining the initial type and its changes--this is of special interest for dynamically typed languages.
+초기 유형 및 변경 사항 확인은 동적 유형 언어에 특히 중요합니다.
 
-### **Value ranges**
+### 값 범위
 
-Infers possible values for variables used to call functions to track off-by-one errors in arrays, division-by-zero, and null dereferences.
+배열, 0으로 나누기 및 null 역참조에서 하나씩 오류를 추적하기 위해 함수를 호출하는 데 사용되는 변수의 가능한 값을 유추합니다.
 
-### **Data flow**
+### 데이터 흐름
 
 Follows the flow of data within the application from the source to the sink. Combined with AI-based learning of external insecure data source, data sinks, and sanitation functions, this enables a strong taint analysis.
 
-### **API usage**
+### **API** 사용
 
-Using open source or framework documentation to learn how functions need to be used can identify API misuse such as using the wrong parameter type or calling with the wrong value range. This mechanism can also identify use of insecure functions.
+오픈소스 또는 프레임워크 문서를 사용하여 함수를 사용하는 법을 배우면 잘못된 매개변수 유형을 사용하거나 잘못된 값 범위를 호출하는 것과 같은 API 오남용을 확인할 수 있습니다. 이 메커니즘은 또한 안전하지 않은 함수의 사용을 식별할 수 있습니다.
 
-### **Control Flow**
+### 제어 흐름
 
-Identifies null dereference or race conditions by modeling each possible control flow in the application.
+응용프로그램에서 가능한 각 제어 흐름을 모델링하여 null 역참조 또는 경쟁 조건을 식별합니다.
 
-### **Point-to Analysis**
+### 지점 분석
 
-Identifies multiple potential issues including buffer overruns, null dereferences, and type mismatches by modeling the usage of memory in variables and references.
+변수 및 참조에서 메모리 사용을 모델링하여 버퍼 오버플로우, null 역참조 및 유형 불일치를 포함한 여러 가지 잠재적인 문제를 식별합니다.

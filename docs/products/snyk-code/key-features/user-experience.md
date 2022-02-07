@@ -1,59 +1,59 @@
-# User Experience
+# 사용자 경험
 
-Here are the main features available in Snyk Code's user interface.
+다음은 Snyk Code의 사용자 인터페이스에서 사용할 수 있는 주요 기능입니다.
 
-### Issue filtering, sorting, and grouping
+### Issue 필터링, 정렬 및 그룹화
 
-You can filter issues by their severity, language, priority score, and more. Along with sorting and grouping issues by the vulnerability type or file to identify very prevalent problems, you can sort by fix in several locations or problematic files that contain multiple issues.
+심각도, 언어, 우선 순위 점수 등을 기준으로 issues를 필터링할 수 있습니다. 취약점 유형 또는 파일별로 issues를 정렬 및 그룹화하여 매우 일반적인 문제를 식별할 수 있으며, 여러 위치의 수정 사항 또는 여러 issues가 포함된 문제 파일을 기준으로 정렬할 수 있습니다.
 
-### Priority Score
+### 우선 순위 점수
 
-Priority Score allows you to sort by and prioritize the more important issues by incorporating factors such as issue prevalence, ease of fix, and risk factor into a single risk score.
+Priority Score를 사용하면 문제 확산, 수정 용이성 및 위험 요소와 같은 요소를 단일 위험 점수에 통합하여 더 중요한 문제를 선별하고 우선 순위를 지정할 수 있습니다.
 
-### Issue data flow
+### 문제 데이터 흐름
 
-See exactly how the issue flows though your application with a step-by-step visualization from the source to the sink.
+소스에서 싱크까지의 단계별 시각화를 통해 issue가 애플리케이션을 통해 어떻게 흘러가는지 정확히 확인하십시오.
 
-### Vulnerability overview
+### 취약점 개요
 
-Learn more about the vulnerability with delivered to you, curated content that explains how the vulnerability was created, what the risk factors are, and popular mitigation strategies for it.
+취약점이 생성된 방법, 위험 요소 및 이에 대한 대중적인 완화 전략을 설명하는 선별된 컨텐츠를 제공함으로써 취약점에 대해 자세히 알아볼 수 있습니다.
 
-### Fix examples
+### 수정 예시
 
-Several examples with links to actual code that show how others in the world are fixing the same issues in similar data flows to gain insight and context on how to fix the problem.
+실제 코드에 대한 링크가 포함된 몇 가지 예는 전 세계의 다른 사람들이 유사한 데이터 흐름에서 동일한 issues를 해결한 것을 보여줍니다. 이에 따라 문제 해결 방법에 대한 통찰력과 ~~_컨텍스트_~~를 얻을 수 있는 방법을 보여줍니다.
 
-### Create Jira ticket
+### Jira 티켓 생성
 
-Export issue information from Snyk directly to your project in Jira to make sure issues are tracked and followed up.
+Snyk의 issue 정보를 Jira의 프로젝트로 직접 내보내 issues를 추적하고 후속 조취를 취하도록 합니다.
 
 ### Ignore issues
 
-Use the **ignore** button to suppress specific warnings and ignore suggested fixes for that issue. For example, you may have deliberately used hard coded passwords to test your routines in test code, or you are aware of an issue but have decided not to fix it.
+특정 경고를 표시하지 않고 해당 issue에 대해 제안된 수정 사항을 무시하려면 **ignore** 버튼을 사용합니다. 예를 들어, 테스트 코드에서 루틴을 테스트하기 위해 하드 코딩된 암호를 사용했거나 문제를 알고 있지만 수정하지 않기로 결정했을 수 있습니다.
 
-After you click **ignore**, you are prompted to provide more details:
+**ignore**을 클릭하면 추가 세부 정보를 제공하라는 메시지가 표시됩니다:
 
 ![](../../../.gitbook/assets/snykcode-ignore-pic2.png)
 
 Select:
 
-* Whether this is to be marked **not vulnerable**, **ignore temporarily** (to suppress the message for now), or **ignore permanently** (won’t fix ever)
-* Add any notes to yourself or your colleagues in the comment box--we recommend writing a quick explanation for your decision.
-* Set a timer for how long to ignore the issue (14, 30, 60, or 90 days, or click **ignore forever**).
+* **not vulnerable**, **ignore temporarily** (지금은 메시지를 표시하지 않음) 또는 **ignore permanently** (결코 수정하지 않음) 중 무엇으로 표시할지 선택합니다.
+* comment box에 자신이나 동료에게 메모를 추가할 수 있습니다. 결정에 대한 간단한 설명을 작성하는 것이 좋습니다.
+* issue를 무시할 시간(14, 30, 60, 90일 또는 **ignore forever**)에 대한 타이머를 설정합니다.
 
-Click **save** to ignore this issue with the parameters selected. After you  ignore an issue it will not appear in scan results.
+매개변수가 선택된 상태에서 이 issue를 무시하려면 **save** 를 클릭합니다. issue를 무시하면 스캔 결과에 나타나지 않습니다.
 
 {% hint style="info" %}
-There is a status selector for ignored issues on the left side and you can include those (and remove or edit the ignore flag) if you want to review ignored results.
+왼쪽의 필터링을 통해 무시된 issues를 포함시킬 수 있으며 무시된 결과를 검토하려는 경우 해당 문제를 포함하고 무시 플래그를 제거하거나 편집할 수 있습니다.
 {% endhint %}
 
-See [Ignoring issues not prioritized for your project](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/ignore-issues) for full details of using the ignore function.
+무시 기능 사용에 대한 자세한 내용은 [Ignoring issues not prioritized for your project](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/ignore-issues)를 참조하십시오.
 
-See [Ignoring issues in Snyk Code](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/ignore-issues#Ignore-Snyk-Code) for specific details of how Snyk Code processes the ignore function.
+Snyk Code가 무시 기능을 처리하는 방법에 대한 자세한 내용은 [Ignoring issues in Snyk Code](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/ignore-issues#Ignore-Snyk-Code)를 참조하십시오.
 
-#### Excluding files
+#### 파일 제외
 
-1. Checks and reads for DeepCode/Snyk ignore specific files `.gitignore` `.dcignore` (if they exist)
-2. Using the information obtained in step 1, we are filtering to get only [the following source code files](../snyk-code-language-and-framework-support.md#supported-extensions):
-   * We are accessing only the files in the project directory
-   * We do not go above the current project directory
-3. Files which size is less than 4 MB found in step 2 are bundled and sent to Snyk
+1. DeepCode/Snyk에 대한 검사 및 읽기는 특정 파일을 무시합니다. `.gitignore` `.dcignore` (존재하는 경우)
+2. 1단계에서 얻은 정보를 사용하여 [the following source code files](../snyk-code-language-and-framework-support.md#supported-extensions)만 가져오도록 필터링합니다:
+   * 프로젝트 디렉터리의 파일에만 액세스하고 있습니다.
+   * 현재 프로젝트 디렉터리 위로 이동하지 않습니다.
+3. 2단계에서 찾은 크기가 4MB 미만인 파일은 번들로 제공되어 Snyk으로 전송됩니다.
