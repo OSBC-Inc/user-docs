@@ -1,16 +1,16 @@
 # Snyk for C / C++
 
 {% hint style="info" %}
-This feature is currently in Beta; contact Snyk for more details.
+이 기능은 현재 베타 버전입니다. 자세한 내용은 Snyk에 문의하십시오.
 {% endhint %}
 
-You can use Snyk to scan C / C++ projects.
+Snyk을 사용하여 C/C++ 프로젝트를 스캔할 수 있습니다.
 
-### Features
+### 특징
 
 {% hint style="info" %}
 **NOTE**\
-Features might not be available, depending on your subscription plan.
+요금제에 따라 기능을 사용하지 못할 수 있습니다.
 {% endhint %}
 
 | Package managers / Features | CLI support | Git support | License scanning | Fixing | Runtime monitoring |
@@ -19,95 +19,95 @@ Features might not be available, depending on your subscription plan.
 
 ### How it works
 
-Scans are powered by an open source database, periodically updated with the latest source code from different online sources.
+스캔은 다양한 온라인 소스의 최신 소스코드로 주기적으로 업데이트되는 오픈소스 데이터베이스에 의해 구동됩니다.
 
 {% hint style="info" %}
-Currently, we use and link to the US [National Vulnerability Database](https://nvd.nist.gov) (NVD). In future, we plan to also integrate the [Snyk Vuln DB](https://snyk.io/vuln).
+현재 미국 [National Vulnerability Database](https://nvd.nist.gov) (NVD)를 사용하고 연결합니다. 앞으로 [Snyk Vuln DB](https://snyk.io/vuln)도 통합할 계획입니다.
 {% endhint %}
 
-When you run the `snyk unmanaged test` command, Snyk:
+`snyk unmanaged test`명령어를 실행하면 다음과 같이 진행합니다.
 
-1. Converts all files down from your current folder into a list of hashes.
-2. Sends the hashes to Snyk scan server.
-3. Queries the database to find a list of potentially matching dependencies.&#x20;
-4. Links the dependencies to the known vulnerabilities.
-5. Displays the results.
+1. 현재 폴더의 모든 파일을 Hash 리스트로 변환합니다.
+2. Hash를 Snyk 스캔 서버로 전송합니다.
+3. 잠재적으로 일치하는 디펜던시 목록을 데이터베이스에서 찾습니다.
+4. 디펜던시를 알려진 취약점에 연결합니다.
+5. 결과를 표시합니다.
 
 {% hint style="info" %}
-To scan the project, the dependencies must be available as source code in the scanned directory. If the dependencies are in a different location, that location must be scanned.
+프로젝트를 스캔하려면 스캔한 디렉토리에서 디펜던시를 소스코드로 사용할 수 있어야 합니다. 디펜던시가 다른 위치에 있는 경우 해당 위치를 스캔해야 합니다.
 {% endhint %}
 
-### Constraints and limitations
+### 제약 및 제한 사항
 
 {% hint style="info" %}
-The following constraints and limitations are by design. While we may work on improvements in the future, they are not considered an issue. Issues that are planned to be addressed are in the [Known Issues ](snyk-for-c-c++.md#known-issues)section.
+다음과 같은 제약과 제한은 설계에 따른 것입니다. 우리가 앞으로 개선을 할 수는 있지만, 그것들은 문제로 간주하지 않습니다. 해결하려는 문제는 [Known Issues ](snyk-for-c-c++.md#known-issues)섹션에 있습니다.
 {% endhint %}
 
-**Dependencies source code needs to be available**
+**디펜던시 소스코드를 사용할 수 있어야합니다**
 
-For Snyk CLI to be able to find any dependencies in your source code, the full source code of the dependencies needs to be present in the scanned folder. The following is a typical directory structure Snyk can scan (abbreviated):
+Snyk CLI가 소스코드에서 디펜던시를 찾을 수있으려면 디펜던시의 전체 소스코드가 스캔한 폴더에 있어야 합니다. 다음은 Snyk이 스캔할 수 있는 일반적인 디렉토리 구조입니다.
 
 ```
 c-example
 ├── deps
-│   ├── curl-7.58.0
-│   │   ├── include
-│   │   │   ├── Makefile.am
-│   │   │   ├── Makefile.in
-│   │   │   ├── README
-│   │   │   └── curl
-│   │   ├── install-sh
-│   │   ├── lib
-│   │   │   ├── asyn.h
-│   │   │   ├── base64.c
-│   │   │   ├── checksrc.pl
-│   │   │   ├── config-amigaos.h
-│   │   │   ├── conncache.c
-│   │   │   ├── conncache.h
-│   │   ├── src
-│   │   │   ├── tool_binmode.c
-│   │   │   ├── tool_binmode.h
-│   │   │   ├── tool_bname.c
-│   │   │   ├── tool_xattr.c
+│   ├── curl-7.58.0
+│   │   ├── include
+│   │   │   ├── Makefile.am
+│   │   │   ├── Makefile.in
+│   │   │   ├── README
+│   │   │   └── curl
+│   │   ├── install-sh
+│   │   ├── lib
+│   │   │   ├── asyn.h
+│   │   │   ├── base64.c
+│   │   │   ├── checksrc.pl
+│   │   │   ├── config-amigaos.h
+│   │   │   ├── conncache.c
+│   │   │   ├── conncache.h
+│   │   ├── src
+│   │   │   ├── tool_binmode.c
+│   │   │   ├── tool_binmode.h
+│   │   │   ├── tool_bname.c
+│   │   │   ├── tool_xattr.c
 ...
 ```
 
-Having a large percentage of files in their original (unchanged) form is critical to accurately identify the dependencies and so report the correct set of vulnerabilities. If you modify many of the files (or, for example, include only header files), this reduces the confidence of the scanning engine, leading to either dependencies not being identified, or being identified incorrectly (as a different version, or even a different package).
+디펜던시를 정확하게 식별하고 올바른 취약점 집합을 보고하려면 원본(변경하지 않은) 형식의 파일 비율이 매우 중요합니다. 많은 파일을 수정할 경우(예: 헤더 파일만 포함) 검색 엔진의 신뢰도가 낮아져 디펜던시가 식별되지 않거나 잘못 식별됩니다(다른 버전 또는 다른 패키지로 식별됨).
 
-#### Data collection note
+#### 데이터 수집 참고 사항
 
-When you scan C++ projects, the following data is collected and may be stored for troubleshooting purposes:
+C++ 프로젝트를 스캔할 때 다음 데이터가 수집되고 문제 해결을 위해 저장될 수 있습니다.
 
-| Category                    | Description                                                                                 |
-| --------------------------- | ------------------------------------------------------------------------------------------- |
-| Hashes of the scanned files | All files are converted to a list of irreversible hashes.                                   |
-| Full paths to scanned files | The paths to files on your local drive are included for better identification and matching. |
+| Category       | Description                                                                                          |
+| -------------- | ---------------------------------------------------------------------------------------------------- |
+| 스캔한 파일의 Hash 값 | 모든 파일은 되돌릴 수 없는 Hash 리스트로 변환 됩니다.                                                                    |
+| 스캔한 파일의 상대 경로  | 더 나은 식별 및 오픈소스 일치를 위해 검색 중인 디렉토리와 관련된 파일 경로가 포함됩니다.예:`./project-name/vendor/bzip2-1.0.6/blocksort.c` |
 
 ### Snyk CLI for C / C++ projects
 
-#### Install the Snyk CLI
+#### Install the Snyk CLISnyk CLI 설치
 
-C/C++ scanning is available in [Snyk CLI](../../../features/snyk-cli/). See [Install the CLI](../../../features/snyk-cli/install-the-snyk-cli/) for details.
+C/C++ 스캐닝은 [Snyk CLI](../../../features/snyk-cli/)에서 사용할 수 있습니다. 자세한 내용은 [Install the CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 참조하세요.
 
 {% hint style="info" %}
-The minimum version of Snyk CLI with C/C++ scanning is 1.713.
+C/C++ 스캐닝이 포함된 Snyk CLI의 최소 버전은 1.713입니다.
 {% endhint %}
 
-#### Run the test
+#### 테스트 실행
 
-To test your project for vulnerabilities, run:
+프로젝트의 취약점을 테스트하려면 다음과 같이 진행하세요.
 
 ```
 $ snyk unmanaged test
 ```
 
 {% hint style="warning" %}
-If you scan a Linux project on Windows, make sure the repository is cloned with Linux line endings. See the [Known Issues](snyk-for-c-c++.md#known-issues) section for more details.
+Windows에서 Linux 프로젝트를 스캔하는 경우 저장소가 Linux line endings로 되어있는지 확인하세요. 자세한 내용은 [Known Issues](snyk-for-c-c++.md#known-issues)를 참조하세요.
 {% endhint %}
 
-#### Displaying dependencies
+#### 디펜던시 표시
 
-To display dependencies, use the `--print-deps` command:
+디펜던시를 표시하려면 `--print-deps` 명령어를 사용하세요.
 
 ```bash
 $ snyk unmanaged test --print-deps
@@ -121,7 +121,7 @@ Dependencies:
   confidence: 0.993
 ```
 
-To learn what files contributed to each dependency being identified, use the `--print-dep-paths` argument:
+식별하는 각 디펜던시에 기여한 파일을 확인하려면 `--print-dep-paths` 파라미터를 사용하세요.
 
 ```bash
 $ snyk unmanaged test --print-dep-paths
@@ -137,22 +137,22 @@ Dependencies:
     ... and 2857 more files
 ```
 
-#### Understanding the confidence level
+#### 신뢰 단계 이해
 
-You may need to change the source code of the dependencies that you use in your software. As Snyk uses file signatures to find the closest possible match to an open source library, your changes may decrease the accuracy of the identification of the actual library.&#x20;
+소프트웨어에서 사용하는 디펜던시의 소스코드를 변경해야 할 수도 있습니다. Snyk은 파일 시그니처를 사용하여 오픈소스 라이브러리에 가장 일치하는 항목을 찾기 때문에 변경 사항이 실제 라이브러리 식별의 정확성을 감소시킬 수 있습니다.
 
-To learn how confident Snyk is about the identified dependency and its version, use the  `--print-deps` or `--print-dep-paths` command line argument:
+Snyk이 식별된 디펜던시와 해당 버전에 대해 얼마나 확신하는지 확인하려면 `--print-deps` 또는 `--print-dep-paths` 파라미터를 사용하세요.
 
 ```
 curl|https://github.com/curl/curl/releases/download/curl-7_58_0/curl-7.58.0.tar.xz@7.58.0
 confidence: 0.993
 ```
 
-This confidence level shows how confident Snyk is about the actual identification of the dependency. The number can be between 0 and 1 and the higher it is, the more accurate the identification is. So a confidence of **1** means that all the files in the source tree fully matched all the expected files in our database.
+이 신뢰 단계는 Snyk이 디펜던시의 실제 식별에 대해서 얼마나 확신하는지 나타냅니다. 숫자는 0과 1사이로 표시되며 높을수록 식별일 더 정확합니다. 따라서 신뢰도가 **1**이라는 것은 소스 트르의 모든 파일이 데이터베이스의 모든 예상 파일과 완전히 일치한다는 것을 의미합니다.
 
-#### JSON output
+#### JSON 출력
 
-To get a machine-readable output in JSON, use the `--json` argument:
+결과를 JSON 형식으로 출력하려면 `--json` 파라미터를 사용하세요.
 
 ```
 $ snyk unmanaged test --json
@@ -246,45 +246,45 @@ $ snyk unmanaged test --json
 
 ### Command line options
 
-The following `snyk`command line options are supported with `snyk unmanaged`:
+다음 command line options은 `snyk unmanaged`에서 지원합니다.
 
 #### ORG\_NAME
 
-`--org=ORG_NAME`&#x20;
+`--org=ORG_NAME`
 
-Specify the ORG\_NAME to run Snyk commands tied to a specific organization. This defines where new projects are created after running the **monitor** command, some features have availability and private tests limits. If you have multiple organizations, you can set a default from the CLI using:
+특정 조직에 연결된 Snyk 명령을 실행할 ORG\_NAME을 지정합니다. 이것은 monitor 명령을 실행한 후 새 프로젝트가 생성되는 위치를 정의하며, 일부 기능에는 가용성과 비공개 테스트 제한이 있습니다. 조직이 여러 개인 경우 다음 명령어를 사용하여 CLI에서 기본값을 설정할 수 있습니다.
 
 ```
 snyk config set org=ORG_NAME
 ```
 
-Setting a default ensures all newly monitored projects are created under your default organization. To override the default, use the **--org=ORG\_NAME** argument.
+기본값을 설정하면 새로 모니터링하는 모든 프로젝트가 기본 조직 아래에 생성됩니다. 기본값을 재정의하려면 **--ORG=ORG\_NAME** 파라미터를 사용합니다.
 
-Default: uses the ORG\_NAME set as default in your Account settings.
+Default: 계정 설정에서 기본값으로 설정된 ORG\_NAME을 사용합니다.
 
 #### json
 
-`--json`&#x20;
+`--json`
 
-Prints results in JSON format.
+결과를 JSON 형식으로 출력합니다.
 
 #### OUTPUT\_FILE\_PATH
 
 `--json-file-output=OUTPUT_FILE_PATH`
 
-(only in test command) Save test output in JSON format directly to the specified file, regardless of whether or not you use the **--json** option.&#x20;
+(test 명령에서만 사용가능) **--json** 옵션 사용 여부에 관계없이 테스트 출력을 지정된 파일에 직접 저장합니다.
 
-This is  useful to display the human-readable test output via **stdout** and at the same time save the JSON format output to a file.
+이는 stdout을 통해 사람이 읽을 수 있는 테스트 출력을 표시하는 동시에 JSON 형식 출력을 파일에 저장하는 데 유용합니다.
 
 **target-dir**
 
 `` `--target-dir <directory>` ``
 
-Scan the path specified in the argument instead of the current directory.
+현재 디렉토리 대신 파라미터에 지정된 경로를 스캔합니다.
 
-### Import scan results in Snyk App
+### Snyk App에서 스캔 결과 가져오기
 
-To import the test results (issues and dependencies) in Snyk App, run the `snyk unmanaged monitor` command:
+Snyk App에서 테스트 결과(issues 및 디펜던시)를 가져오려면 `snyk unmanaged nonitor` 명령어를 실행합니다.
 
 ```
 $ snyk unmanaged monitor
@@ -295,31 +295,31 @@ Explore this snapshot at https://app.snyk.io/org/example-org/project/8ac0e233-d0
 Notifications about newly disclosed issues related to these dependencies will be emailed to you.
 ```
 
-This creates a snapshot of dependencies and vulnerabilities, and imports them in Snyk App, where you can review the issues and see them included in your reports.
+디펜던시 및 취약점의 스냅샷이 생성되고 Snyk App으로 가져와 문제를 검토하고 보고서에 포함된 항목을 확인할 수 있습니다.
 
-Importing a project with unmanaged dependencies creates a new project in Snyk App:
+관리되지 않은 디펜던시가 있는 프로젝트를 가져오면 Snyk App에 새 프로젝트가 생성됩니다.
 
 ![Project with unmanaged dependencies](../../../.gitbook/assets/kuva.png)
 
 {% hint style="info" %}
-Automated regular testing and re-scanning from the Snyk App is not currently supported. To run a new scan and import its updated results, manually run the `snyk unmanaged monitor` command again.
+Snyk App에서 자동화된 정기 테스트 및 재검색은 현재 지원하지 않습니다. 새 스캔을 실행하고 업데이트된 결과를 가져오려면 snyk unmanaged monitor 명령어를 수동으로 실행해야 합니다.
 {% endhint %}
 
-### Known issues
+### 알려진 문제
 
-#### Some dependencies are not found
+#### 일부 디펜던시를 찾을 수 없습니다
 
-During the beta phase, we are using an older version of our source code database. This means that open source dependencies that are being actively developed and contain many changes to their source code may not be identified correctly, or at all.
+베타 단계에서는 이전 버전의 소스코드 데이터베이스를 사용하고 있습니다. 이것은 활발하게 개발되고 소스코드에 대한 많은 변화를 포함하는 오픈소스 의존성이 정확하게 식별되지 않거나 전혀 식별되지 않을 수 있다는 것을 의미합니다.
 
-#### Files in hidden directories are ignored
+#### 숨겨진 디렉토리의 파일은 무시합니다
 
-When scanning a directory, all files that are in a hidden directory (such as **.conan** or **.git**) are ignored. Dependencies stored in such directories will not be detected.
+디렉토리를 스캔할 때 숨겨진 디렉토리(예: **.conan** 또는 **.git**)에 있는 모든 파일은 무시합니다. 이러한 디렉토리에 저장된 디펜던시는 감지하지 않습니다.
 
-**Scanning on Windows**
+**Window에서 스캔 시 발생하는 문제**
 
-Many open source projects in git use Unix line endings. By default, git on Windows converts Unix line endings to Windows line endings and only converts them back for the actual commits. Our database contains source code signatures with the original line endings (as defined in the individual projects), so when you scan on Windows, the signatures generated for the files with Windows line endings are different than the signatures in our database. In such case, it is very likely no dependencies will be found.
+Git의 많은 오픈 소스 프로젝트들은 Unix line endings을 사용한다. 기본적으로 윈도우즈의 Git은 Unix line endings을 Windows line endings으로 변환하고 실제 커밋에 대해서만 다시 변환합니다. 데이터베이스에는 원본 줄 끝이 있는 소스 코드 시그니처가 포함되어 있으므로 Windows에서 Windows line endings이 있는 파일에 대해 생성된 시그니처가 데이터베이스의 시그니처와 다릅니다. 이 경우 디펜던시가 발견되지 않을 가능성이 매우 높습니다.
 
-To scan a project with Unix line endings on Windows, disable git line endings conversion. To configure this globally, run:
+Windows에서 Unix line endings이 있는 프로젝트를 검사하려면 Git line endings 변환을 실행 중지하십시오. 이 설정을 전체적으로 적용하려면 다음 명령어를 실행하십시오.
 
 ```shell
 git config --global core.autocrlf false
@@ -327,23 +327,23 @@ git config --global core.autocrlf false
 
 ### Frequently asked questions
 
-#### **Is my source code sent to Snyk servers?**
+#### 내 소스코드가 Snyk 서버로 전송합니까?
 
-No. The files are converted to a list of hashes before they are sent for scanning.
+아니요. 파일은 스캔을 위해 전송하기 전에 Hash 리스트로 변환됩니다.
 
-#### **Why did Snyk not find any dependencies?**
+#### Snyk이 디펜던시를 찾지 못한 이유는 무엇입니까?
 
-We store the official releases of many of open source components in our database but it is possible that the source code you scanned is not there or is just simply not found. Let us know and we can help you find out what happened and potentially improve our scanning algorithms.
+많은 오픈 소스 구성 요소의 공식 릴리즈를 데이터베이스에 저장하지만 스캔한 소스 코드가 없거나 단순히 찾을 수 없는 것일 수 있습니다. 저희에게 알려주시면 어떤 일이 발생했는지 알아보고 검색 알고리즘을 개선할 수 있도록 도와드리겠습니다.
 
-Here are a few things that you can check on your own:
+다음은 사용자가 직접 확인할 수 있는 몇 가지 사항입니다.
 
-* The source code of the dependencies you scanned is actually available as source code (unpacked) in the folder that you scanned. If you use a package manager, such as Conan, the source code is likely to be in the Conan cache, along with the source code of other dependencies of your other projects. To scan dependencies managed by a package manager, we recommend that you do that in a clean environment (for example during a build).
-* The source code of the dependencies is not from an official release of the OSS component, and we do not have it in the database
-* The source code of the OSS has been modified too much, so Snyk cannot detect it. If there are too few files and you modify most of them, Snyk cannot match them to a component from our database. \
-  Examples of common modifications are whitespace formatting, adding license or copyright headers.
-* You are on Windows, and git converted line endings to Windows line endings. Currently we can recognize files that have retained their original line endings.
-* The source code of the OSS components is too new. Our database is refreshed regularly but it takes time for the latest releases to get processed.
+* 검색한 디펜던시의 소스 코드는 실제로 검색한 폴더에서 소스 코드로 사용할 수 있습니다. 만약 당신이 Conan과 같은 패키지 매니저를 사용한다면, 소스 코드는 당신의 다른 프로젝트의 디펜던시의 소스 코드와 함께 Conan 캐시에 있을 가능성이 높습니다. 패키지 매니저로 관리하는 디펜던시를 검색하려면 빌드 중과 같이 깨끗한 환경에서 작업을 수행하는 것이 좋습니다.
+* 디펜던시의 소스 코드는 OSS 구성 요소의 공식 릴리스에서 가져온 것이 아니며, 데이터베이스에 없습니다.
+* OSS의 소스 코드가 너무 많이 수정하면 Snyk가 감지할 수 없습니다. 파일의 수가 너무 적거나 당신이 대부분을 수정하면, Snyk는 우리의 데이터베이스에 있는 구성 요소와 일치시킬 수 없습니다.\
+  일반적인 수정의 예로는 공백 포맷, 라이선스 또는 저작권 헤더 추가 등이 있습니다.
+* 현재 Windows 기준으로 Git이 line endings를 Windows line endings로 변환했습니다. 현재 우리는 원래의 line endings을 유지하고 있는 파일들을 인식할 수 있습니다.
+* OSS 구성 요소의 소스 코드가 너무 최신입니다. 우리의 데이터베이스는 정기적으로 새로 고쳐지지만 최신 릴리즈를 처리하는 데 시간이 걸립니다.
 
 #### **What is coming next?**
 
-Our plan is to show more information on how and why certain components were detected in our source code (show files that were detected to be a part of the component) and allow you to bring the information in the App (using the `snyk unmanaged monitor` command) so you can see the dependencies there.
+당사의 계획은 특정 구성 요소가 소스 코드에서 탐지된 방법과 이유에 대한 자세한 정보를 보여주고(`snyk unmanaged manitor` 명령어을 사용하여 해당 구성 요소의 일부로 검색된 파일을 표시) 해당 정보를 앱에 가져올 수 있도록 하는 것입니다.
