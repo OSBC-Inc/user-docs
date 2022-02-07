@@ -1,14 +1,14 @@
 # Snyk for Golang
 
-Snyk supports testing and monitoring of Go projects that have their dependencies managed by [Go Modules](https://golang.org/ref/mod), [dep](https://github.com/golang/dep) and [govendor](https://github.com/kardianos/govendor).
+Snyk은 [Go Modules](https://golang.org/ref/mod), [dep](https://github.com/golang/dep) 그리고 [govendor](https://github.com/kardianos/govendor)가 관리하는 Go 프로젝트의 테스트 및 모니터링을 지원합니다.
 
-The following describes how to use Snyk to scan your Go projects:
+이 문서는 Snyk을 이용하여 Go 프로젝트를 스캔하는 방법을 제공합니다.
 
-### Features <a href="h_01esm3gfnmn0f7art59aek97tm" id="h_01esm3gfnmn0f7art59aek97tm"></a>
+### 특징 <a href="#h_01esm3gfnmn0f7art59aek97tm" id="h_01esm3gfnmn0f7art59aek97tm"></a>
 
 {% hint style="info" %}
 **Note**\
-Features might not be available, depending on your subscription plan.
+요금제에 따라서 기능을 사용하지 못할 수 있습니다.
 {% endhint %}
 
 | Package managers / Features                       | CLI support | Git support | License scanning | Fixing | Runtime monitoring |
@@ -19,65 +19,67 @@ Features might not be available, depending on your subscription plan.
 
 ## **How it works**
 
-Once we've built the tree, we can use our [vulnerability database](https://snyk.io/vuln) to find vulnerabilities in any of the modules or packages anywhere in the dependency tree.
+트리를 구축한 후에는 [vulnerability database](https://snyk.io/vuln)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
 
 {% hint style="info" %}
 **Note**\
-In order to scan your dependencies in the CLI, you must ensure you have first installed the relevant package manager, and that your project contains the supported manifest files.
+CLI에서 디펜던시를 스캔하려면 먼저 관련 패키지 매니저를 설치했는지, 프로젝트에 지원되는 매니페스트 파일이 포함되어 있는지 확인해야 합니다.
 {% endhint %}
 
-The way by which Snyk analyzes and builds the tree varies depending on the language and package manager of the project, as well as the location of your project.
+Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및 패키지 매니저와 프로젝트 위치에 따라 다릅니다.
 
-## Snyk CLI tool for Go projects
+## Go 프로젝트에서 Snyk CLI 사용하기
 
 **Go Modules**
 
-In order to build the dependency tree Snyk uses the `go list -json -deps` command.
+디펜던시 트리를 구축하기 위해 Snyk은 `go list -sjon -deps` 명령어를 사용합니다.
 
 {% hint style="info" %}
 **Note**\
-Snyk scans Go Modules projects in the CLI at the _package_ level rather than on the _module_ level, as we have full access to your project source code.\
-This is beneficial since you might use a vulnerable module but not the vulnerable package.
+Snyk은 프로젝트 소스코드에 대한 전체 액세스 권한이 있으므로 모듈 단계가 아닌 패키지 단계에서 Go Modules 프로젝트를 검색합니다.
+
+취약한 모듈을 사용할 수 있지만 취약한 패키지는 사용할 수 없기 때문에 유용하게 사용할 수 있습니다.
 {% endhint %}
 
-When testing Go Modules projects via the CLI Snyk does not require dependencies to be installed, but you must have a `go.mod` file at the root of your project, `go list` uses this and your project source code to build a complete dependency tree.
+Go Modules 프로젝트를 테스트하는 경우 디펜던시를 설치할 필요가 없지만 프로젝트의 root에 `go.mod` 파일이 있어야 할 경우 `go list`는 이 파일과 프로젝트 소스 코드를 사용하여 완전한 디펜던시 트리를 빌드합니다.
 
 {% hint style="info" %}
 **Note**\
-Different versions of the Go generate different results for the **go list -json -deps** command. This can affect the dependency tree and the vulnerabilities that the Snyk CLI will find.
+Go 버전은 **Go list -json -deps** 명령에 대해 다른 결과를 생성합니다. 이 문제는 디펜던시 트리와 Snyk CLI가 찾을 취약점에 영향을 미칠 수 있습니다.
 {% endhint %}
 
 **Dep**
 
-In order to build the dependency tree Snyk analyzes your `Gopkg.lock` files.
+디펜던시 트리를 구축하기 위해 Snyk은 `Gopkg.lock` 파일을 분석합니다.
 
-When testing dep projects via the CLI Snyk requires dependencies to be installed, run `dep ensure` to achieve this.
+Snyk CLI를 통해 dep 프로젝트를 테스트하려면 디펜던시를 설치해야 하는 경우 `dep ensure`명령어를 실행하세요.
 
 **Govendor**
 
-In order to build the dependency tree Snyk analyzes your `vendor/vendor.json` files.
+디펜던시 트리를 구축하기 위해 Snyk은 `vendor/vendor.json` 파일을 분석합니다.
 
-When testing Govendor projects via the CLI Snyk requires dependencies to be installed, run `govendor sync` to achieve this.
+Snyk CLI를 통해 Govendor 프로젝트를 테스트할 때 디펜던시를 설치해야 하는 경우 `govendor sync`명령어를 실행하세요.
 
-## Git services for Go projects
+## Go 프로젝트를 위한 Git Services
 
 ### **Go Modules**
 
 {% hint style="info" %}
 **Note**\
-For Go Modules projects imported via Git, dependencies are resolved at the _module_ level rather than the _package_ level, as we do not have full access to your project source code.\
-This means you may see more issues (including potential false positives) reported than for projects tested in the CLI, as we report all vulnerabilities for each module not just the package(s) referenced in your source code.
+Git을 통해 가져온 Go Modules 프로젝트의 경우 프로젝트 소스코드에 대한 전체 액세스 권한이 없기 때문에 디펜던시는 패키지 단계가 아닌 모듈 단계에서 해결됩니다.
+
+즉, 소스코드에서 참조된 패키지뿐만아니라 각 모듈에 대한 모든 취약점을 보고하므로 CLI에서 테스트한 프로젝트보다 더 많은 문제(잠재적 오탐지 포함)가 보고될 수 있습니다.
 {% endhint %}
 
-In order to build the dependency tree Snyk runs the `go mod graph` command using the `go.mod` files in the selected repository.
+디펜던시 트리를 구축하기 위해 Snyk는 선택한 리포지토리의 `go.mod` 파일을 사용하여 `go mod graph` 명령어을 실행합니다.
 
 **Private modules**
 
-Go Modules projects that depend on modules from private Git repositories are supported where the private repositories are in the same Git organisation as the main project repository.
+Private Git 저장소의 모듈에 의존하는 Go Modules 프로젝트는 private 저장소가 main 프로젝트 저장소와 동일한 Git 조직에 있는 경우에 지원됩니다.
 
-Imports for projects with private modules from repos in other Git organisations will fail. Support for private module dependencies from other Git organisations is planned for the future.
+다른 Git 조직의 저장소에서 개인 모듈이 있는 프로젝트 가져오기는 실패할 것입니다. 다른 Git 조직들의 private 모듈 의존성에 대한 지원은 향후 계획되어 있습니다.
 
-Private modules are supported for GitHub and Bitbucket Cloud. GitLab and Bitbucket Server are not currently supported.
+Private modules은 GitHub 및 Bitbucket Cloud에서 지원됩니다. GitLab 및 Bitbucket Server는 현재 지원되지 않습니다.
 
 **Broker**
 
@@ -89,8 +91,8 @@ If you are using private Go Modules (repositories) integrated via the broker, pl
 
 **Dep**
 
-In order to build the dependency tree Snyk analyzes the `Gopkg.lock` files in the selected repository.
+디펜던시 트리를 구축하기 위해 Snyk은 선택한 저장소의 `Gopkg.lock`파일을 분석합니다.
 
 **Govendor**
 
-In order to build the dependency tree Snyk analyzes the `vendor/vendor.json` files in the selected repository.
+디펜던시 트리를 구축하기 위헤 Snyk 은 선택한 저장소의 `vendor/vendor.json`파일을 분석합니다.
