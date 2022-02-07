@@ -1,8 +1,8 @@
 # Snyk for Elixir
 
-Snyk CLI를 이용하여 [Elixir](https://www.notion.so/Elixir-7c925900bf774c84b83b65c14084e80e) 프로젝트의 취약점을 테스트하기 위한 보안 스캔을 제공합니다.
+Snyk offers security scanning to test your [Elixir](https://www.notion.so/Elixir-7c925900bf774c84b83b65c14084e80e) projects for vulnerabilities using the CLI.
 
-## 특징
+## Features
 
 | Package managers / Features                                  | CLI support | Git support | License scanning | Fixing | Runtime monitoring |   |
 | ------------------------------------------------------------ | ----------- | ----------- | ---------------- | ------ | ------------------ | - |
@@ -10,43 +10,43 @@ Snyk CLI를 이용하여 [Elixir](https://www.notion.so/Elixir-7c925900bf774c84b
 
 ## How it works
 
-Snyk은 매니페스트 및 lockfile을 분석하여 프로젝트에 대한 디펜던시 트리를 구축합니다.
+Snyk builds a dependency tree for your project by analyzing your manifest and lock files.
 
-트리를 구축한 후에는 [vulnerability database](https://snyk.io/vuln)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
+After Snyk builds the tree, Snyk uses our [vulnerability database](https://snyk.io/vuln) to find vulnerabilities in the packages anywhere in the dependency tree.
 
-## Elixir 프로젝트에서 Snyk CLI 사용하기
+## Snyk CLI tool for Elixir projects
 
 ### Mix/Hex
 
 {% hint style="info" %}
-디펜던시를 스캔하려면 먼저 Elixir와 Mix를 설치하세요 자세한 내용은 [해당 문서](https://elixir-lang.org/install.html)를 참조하세요.
+To scan your dependencies, first install Elixir and Mix. For details, [see here](https://elixir-lang.org/install.html).
 {% endhint %}
 
-Mix는 Elixir 프로젝트를 생성, 컴파일 및 테스트하고 디펜던시를 관리하는 등의 작업을 제공하는 빌드 도구입니다.
+Mix is a build tool that provides tasks for creating, compiling, and testing Elixir projects, managing its dependencies, and more.
 
-Mix는 Hex 패키지 매니저와 통합하여 디펜던시를 관리합니다.
+Mix manages dependencies by integrating with the Hex package manager.
 
-디펜던시 트리를 작성하기 위해 Snyk은 `mix.ex` 및 `mix.lock` 파일을 분석합니다. `mix.lock` 파일이 있어야 하며 `mix.exs` 파일과 동기화되어야 합니다.
+To build the dependency tree, Snyk analyzes your `mix.exs` and `mix.lock` files. The `mix.lock` file must be present and in sync with the `mix.exs` file.
 
-**프로젝트 이름 지정**
+**Project naming**
 
-Snyk UI의 프로젝트 이름은 Mix에서 내보낸 `Project/0` 함수의 `app` 키워드에 따라 지정됩니다. `mix.exs` 파일에 존재합니다.
+Projects in the Snyk UI are named according to the `app` keyword from the `project/0` function exported by `Mix.Project` in the main `mix.exs` file.
 
-프로젝트 이름을 재정의하려면 `--project-name` CLI 파라미터를 사용하세요.
+To override the name, use the `--project-name` CLI parameter.
 
 **Umbrella projects**
 
-Mix Umbrella 프로젝트를 테스트하는 경우 Snyk는 이 프로젝트가 상위 프로젝트임을 감지하고 모든 하위 app을 자동으로 포함합니다.
+If you test a Mix Umbrella project, Snyk detects that this is an umbrella project and includes all the child apps automatically.
 
-메인 `mix.ex`와 함께 각 앱 `mix.ex`는 Snyk UI에서 별도의 프로젝트로 나타나며 app의 경로에 따라 이름이 지정됩니다.
+Along with the main `mix.exs`, each app `mix.exs` appears as a separate project in the Snyk UI, named according to the path to the app.
 
-**디펜던시 유형**
+**Dependency types**
 
-Snyk은 모든 전이적 디펜던시 및 취약점을 포함하여 Mix 프로젝트에 나열된 모든 `:hex` 패키지를 완벽하게 지원합니다.
+Snyk fully supports all `:hex` packages listed in the Mix project, including all their transitive dependencies and any vulnerabilities.
 
-Hex support includes both Elixir and ErlaHex 지원은 Elixir와 Erlang 패키지 모두를 포함합니다.
+Hex support includes both Elixir and Erlang packages.
 
-Snyk은 `:path`, `:git` 및 `:github` 디펜던시를 제한적으로 지원하지만 이들의 전이적 디펜던시나 취약점은 지원하지 않는다.
+Snyk also has limited support for `:path`, `:git` and `:github` dependencies, but not their transitive dependencies or vulnerabilities.
 
-* `:path` 디펜던시는 이름으로 디펜던시 트리에 나타납니다.
-* `:git` 및 `:github` 디펜던시가 리포지토리 URL 및 버전별로 디펜던시 트리에 표시됩니다(`mix.exs` 파일에 정의된 대로 `:branch`, `:tag` 또는 `:ref`).
+* `:path` dependencies appear in the dependency tree by name
+* `:git` and `:github` dependencies appear in the dependency tree by repository URL and version (either `:branch`, `:tag` or `:ref`, as defined in the `mix.exs` file)

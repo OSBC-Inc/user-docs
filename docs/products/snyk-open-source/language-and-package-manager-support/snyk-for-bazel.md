@@ -1,39 +1,39 @@
 # Snyk for Bazel
 
-Snyk supports testing projects that have their dependencies managed by Bazel. Support is available via the Snyk API.
+Snyk은 Bazel에서 관리하는 디펜던시가 있는 테스트 프로젝트를 Snyk API를 통해 지원합니다.
 
 {% hint style="info" %}
-Snyk API docs live at [https://snyk.docs.apiary.io/](https://snyk.docs.apiary.io)
+Snyk API 문서는 [https://snyk.docs.apiary.io/](https://snyk.docs.apiary.io)를 참조하세요.
 {% endhint %}
 
 {% hint style="info" %}
-**Feature availability**\
-The Snyk API is available with Business and Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 지원 여부**\
+Snyk API는 Business 및 Enterprise plans에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하세요
 {% endhint %}
 
-The Dep Graph API requires additional permissions. Please contact support@snyk.io to request access.
+Dep Graph API에는 추가 권한이 필요합니다. 액세스를 요청하려면 support@snyk.io에 문의하세요.
 
-The following describes how to use Snyk to test your Bazel projects.
+이 문서는 Snyk을 사용하여 Bazel 프로젝트를 테스트하는 방법을 제공합니다.
 
 ## Bazel Overview
 
-According to [https://docs.bazel.build/versions/master/bazel-overview.html](https://docs.bazel.build/versions/master/bazel-overview.html)
+[https://docs.bazel.build/versions/master/bazel-overview.html](https://docs.bazel.build/versions/master/bazel-overview.html)에 따르면 다음과 같이 소개되어 있습니다.
 
 > _Bazel is an open-source build and test tool similar to Make, Maven, and Gradle. It uses a human-readable, high-level build language. Bazel supports projects in multiple languages and builds outputs for multiple platforms. Bazel supports large codebases across multiple repositories, and large numbers of users_
 
-Bazel does not have dependency manifest files or lock files that package managers such as npm have. Instead, build configuration is managed in [BUILD](https://docs.bazel.build/versions/master/build-ref.html#BUILD\_files) files, using [Starlark](https://docs.bazel.build/versions/master/skylark/language.html), a domain specific language based on Python3.
+Bazel은 npm과 같은 패키지 매니저가 가지고 있는 디펜던시 매니페스트 파일이나 lockfile을 가지고 있지 않습니다. 대신 빌드 구성은 Python3 기반의 도메인별 언어인 [Starlark](https://docs.bazel.build/versions/main/skylark/language.html)를 사용하여 [BUILD](https://docs.bazel.build/versions/main/build-ref.html#BUILD\_files) 파일에서 관리합니다.
 
-Bazel has limited native integration with package registries such as npmjs.org or Maven Central. There are some Bazel rules that can be added to help with installing dependencies from external registries, e.g. [from Maven](https://docs.bazel.build/versions/master/external.html#maven-artifacts-and-repositories).
+Bazel은 npmjs.org 또는 Maven Central과 같은 패키지 레지스트리와 제한적으로 통합됩니다. [Maven](https://docs.bazel.build/versions/main/external.html#maven-artifacts-and-repositories)과 같은 외부 레지스트리에서 디펜던시를 설치하는 데 도움이 되도록 추가할 수 있는 Bazel 규칙이 있습니다.
 
-However, in many cases users must manually specify their dependency information (package name, location & version), including all transitives. These can then be fetched by Bazel during builds.
+그러나 많은 경우 사용자는 모든 전이를 포함하여 종속성 정보(패키지 이름, 위치 및 버전)를 수동으로 지정해야 한다. 그런 다음 빌드 중에 Bazel에서 가져올 수 있습니다.
 
-Because Bazel dependencies are specified as code in BUILD files using Starlark, Snyk cannot easily discover which dependencies a project has.
+Bazel 디펜던시는 Starlark를 사용하여 BUILD 파일에서 코드로 지정되기 때문에 Snyk은 프로젝트가 어떤 의존성을 가지고 있는지 쉽게 발견할 수 없다.
 
-The recommended approach is to test your dependencies via the [Snyk Dep Graph Test API](snyk-for-bazel.md).
+권장하는 접근방식은 [Snyk Dep Graph Test API](https://github.com/snyk/dep-graph) 통해 의존성을 테스트하는 것입니다.
 
 ## How it works
 
-1. For each type of dependency (e.g. Maven, Cocoapods), create a  [Dep Graph JSON object](https://github.com/snyk/dep-graph) listing all the dependency packages and versions (see below)
+1. For each type of dependency (e.g. Maven, Cocoapods), create a [Dep Graph JSON object](https://github.com/snyk/dep-graph) listing all the dependency packages and versions (see below)
 2.  As part of a Bazel test rule, send this object as a POST request to the [Dep Graph Test API](https://support.snyk.io/hc/en-us/articles/360011549737-Snyk-for-Bazel#h\_01EEWFQJFTCWFQBMQR0X32J8B8), (along with your [auth token](https://docs.snyk.io/snyk-api-info/authentication-for-api)), example curl request:
 
     ```
@@ -102,10 +102,10 @@ export interface DepGraphData {
 
 Here are some further notes on specific components in the dep graph object:
 
-* `schemaVersion` - version of the dep-graph schema, set this to `1.2.0`&#x20;
-* `pkgManager.name` - one of `deb`, `gomodules`, `gradle`, `maven`, `npm`, `nuget`, `paket`, `pip`, `rpm`, `rubygems` or `cocoapods` &#x20;
+* `schemaVersion` - version of the dep-graph schema, set this to `1.2.0`
+* `pkgManager.name` - one of `deb`, `gomodules`, `gradle`, `maven`, `npm`, `nuget`, `paket`, `pip`, `rpm`, `rubygems` or `cocoapods`
 * `pkgs` - array of objects containing `id`, `name` & `version` of all packages in the dep-graph. Note that the `id` _must_ be of the form `name@version`. List each of your dependencies in this array, including an item representing the project itself
-* `graph.nodes` - array of objects describing the relationships between entries in `pkgs`. In Bazel this is typically just the project node with all other packages defined as a flat array of direct dependencies in `deps`&#x20;
+* `graph.nodes` - array of objects describing the relationships between entries in `pkgs`. In Bazel this is typically just the project node with all other packages defined as a flat array of direct dependencies in `deps`
 * `graph.rootNodeId` - specifies the `id` of the entry in `graph.nodes` to use as the root node of the graph. You should set this to the `nodeId` of the project node
 
 ## Snyk Dep Graph Test API Response
