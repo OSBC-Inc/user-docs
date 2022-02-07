@@ -83,11 +83,11 @@ Private modules은 GitHub 및 Bitbucket Cloud에서 지원됩니다. GitLab 및 
 
 **Broker**
 
-Projects imported via the new [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker/broker-introduction) clients should work as expected.
+새로운 [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker/broker-introduction) 클라이언트를 통해 가져온 프로젝트는 예상대로 작동합니다.
 
-To add support to existing clients created before Dec 30th 2020, you should add `go.mod` and `go.sum` to your `accept.json` file, as per the changes in this [pull request](https://github.com/snyk/broker/pull/299/files).
+2020년 12월 30일 이전에 생성된 기존 클라이언트에 지원을 추가하려면 [pull request](https://github.com/snyk/broker/pull/299/files) 변경 사항에 따라 `go.mod` 및 `go.sum`을 `accept.json`파일에 추가해야 합니다.
 
-If you are using private Go Modules (repositories) integrated via the broker, please note that we require each private module to have a `go.mod` file defined.
+브로커를 통해 통합된 개인 Go Modules(저장소)을 사용하는 경우 각 개인 모듈에 `Go.mod` 파일이 정의되어 있어야 합니다.
 
 **Dep**
 
