@@ -108,61 +108,61 @@ For example:
 dephell deps convert --from=conda --to=requirements.txt
 ```
 
-## Using different Python versions
+## 다른 Python 버전 사용
 
-Some Python projects may have dependencies that are only valid using Python 3. By default, Snyk scans with Python 2.
+일부 Python 프로젝트에는 Python 3에서만 유효한 디펜던시가 있을 수 있습니다. 기본적으로 Snyk은 Python 2로 스캔합니다.
 
-You can adjust the version of Python Snyk uses to scan dependencies, in both the CLI and Git integration.
+CLI 와 Git 모두에서 디펜던시를 스캔하기 위해 Snyk에서 사용하는 Python 버전을 조정할 수 있습니다.
 
-## Setting Python version in the CLI
+## CLI에서 Python 버전 설정
 
-Add the following parameter to `snyk test` or `snyk monitor`
+다음 파라미터를 `snyk test` 또는 `snyk monitor` 시 입력합니다.
 
 ```
 --command=python3
 ```
 
-You can also set a specific Python version by adding the following to a `.snyk` [policy file](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/the-.snyk-file).
+`.snyk` [정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)에 다음 옵션을 추가하여 특정 Python 버전을 지정할 수 있습니다.
 
 ```
 language-settings:
 python: '3.7.2'
 ```
 
-## Setting Python version in Git projects
+## Git 프로젝트에서 Python 버전 설정
 
 {% hint style="info" %}
-When testing projects imported from Git, Snyk uses a recent version of either Python 2 or Python 3, for example 2.7.4 or 3.7.4.
+Git에서 가져온 프로젝트를 테스트할 때 Snyk은 Python 2 또는 Python 3의 최신 버전(예: 2.7.4 또는 3.7.4)을 사용합니다.
 {% endhint %}
 
-By default Snyk tests using Python 2.
+기본적으로 Snyk은 Python 2를 사용하여 테스트합니다.
 
-To define which Python major version Snyk uses to test your Git imported projects, use either organization settings, or a `.snyk` [policy file](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/the-.snyk-file).
+Snyk이 Git에서 가져온 프로젝트를 테스트 하는데 사용하는 Python 주 버전을 정의하려면 조직 설정 또는 `.snyk` [정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)을 사용하세요.
 
-To define Python version for all projects in an organization:
+조직의 모든 프로젝트에 대한 Python 버전을 정의하려면 다음과 같이 진행합니다.
 
-1. Log in to your account and navigate to the relevant group and organization to manage.
-2. Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Languages**.
-3. Click **Edit settings** for **Python**.
-4. Select to use **Python 2** or **Python 3** when testing projects for this organization
+1. 게정에 로그인하고 관리할 관련 그룹 및 조직으로 이동합니다.
+2. 설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png) > **Languages**.
+3. **Edit settings** for **Python**을 클릭합니다.
+4. 이 조직의 프로젝트를 테스트할 때 **Python 2** 또는 **Python 3**을 사용하도록 선택합니다.
 
 ![](../../../.gitbook/assets/mceclip1-18-.png)
 
-We recommend you create different organizations to work with different Python versions.
+다른 Python 버전으로 작업하려면 다른 조직을 만드는 것을 권장합니다..
 
-If you prefer to use one organization but require projects to use different Python versions, you may add a `.snyk` file to a project repository, and specify the desired version.
+하나의 조직을 사용하고 싶지만 프로젝트에서 다른 Python 버전을 사용해야 하는 경우 프로젝트 저장소에 `.snyk` 파일을 추가하고 원하는 버전을 지정할 수 있습니다.
 
-The`.snyk` file must be in the same directory as the project manifest file.
+`.snyk` 파일은 프로젝트 매니페스트 파일과 동일한 디렉토리에 존재해야 합니다.
 
-## Major and minor versions
+## 메이저 및 마이너 버전
 
-On finding a `.snyk` file, Snyk detects the major version specified, and uses this to control whether the project is tested with Python 2 or Python 3. It does not use the exact version specified.
+`.snyk` 파일을 찾을 때 Snyk은 지정된 메이저 버전을 감지하고 이를 사용하여 프로젝트가 Python 2 또는 Python 3으로 테스트되는지 여부를 확인합니다. 따라서 정확한 버전을 사용하지 않습니다.
 
-For example, for projects imported via Git:
+예를 들어 Git을 통해 가져온 프로젝트의 경우 다음과 같이 진행합니다.
 
 ```
 language-settings:
 python: '3.7.2'
 ```
 
-This example tells Snyk to use a recent version of Python 3, but Snyk will not use the exact minor and patch version specified.
+이 예제는 Snyk에 최신 버전의 Python 3을 사용하도록 지시하지만 Snyk은 지정된 마이너 버전 및 패치 버전을 사용하지 않습니다.
