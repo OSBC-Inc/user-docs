@@ -1,12 +1,12 @@
 # Snyk for JavaScript
 
-You can use Snyk to scan your JavaScript projects.
+Snyk을 사용하여 JavaScript 프로젝트를 스캔할 수 있습니다.
 
-### Features
+### 특징
 
 {% hint style="info" %}
 **NOTE**\
-Features might not be available, depending on your subscription plan.
+요금제에 따라서 해당 기능을 사용하지 못할 수 있습니다.
 {% endhint %}
 
 | Package managers / Features | <p>CLI</p><p>support</p> | <p>Git</p><p>support</p> | <p>License</p><p>scanning</p> | Fixing | <p>Runtime</p><p>monitoring</p> |
@@ -17,36 +17,36 @@ Features might not be available, depending on your subscription plan.
 
 ### How it works
 
-After Snyk builds a dependency tree, we use our [vulnerability database](https://snyk.io/vuln) to find vulnerabilities in any of the packages anywhere in that tree.
+Snyk이 디펜던시 트리를 구축한 후 [vulnerability database](https://snyk.io/vuln)를 사용하여 해당 트리의 모든 패키지에서 취약점을 찾습니다.
 
 {% hint style="info" %}
-To scan your dependencies, ensure you install the relevant package manager, and that your project contains the supported manifest files.
+디펜던시를 스캔하려면 관련 패키지 매니저를 설치하고 프로젝트에 지원되는 매니페스트 파일이 포함 되어있는지 확인하세요.
 {% endhint %}
 
-The way Snyk analyzes and builds the tree varies depending on the language and package manager of the project, as well as the location of your project.
+Snyk이 트리를 분석하고 구축하는 방식은 프로젝트의 언어와 패키지 매니저, 프로젝트 위치에 따라 다릅니다.
 
-See:
+자세한 내용은 다음을 참조하세요.
 
 * [Snyk CLI tool for JavaScript projects](snyk-for-javascript.md)
 * [Git services for JavaScript projects](snyk-for-javascript.md)
 
-## Snyk CLI tool for JavaScript projects
+## JavaScript 프로젝트에서 Snyk CLI 사용하기
 
-The way Snyk analyzes and builds the tree varies based on the package manager of the project.
+Snyk에서 트리를 분석하고 구축하는 방식은 프로젝트의 패키지 매니저에 따라 다릅니다.
 
 ### npm
 
-npm versions 6.x, 7.x are supported in the Snyk CLI.
+Snyk CLI는 npm 6.x, 7.x를 지원합니다.
 
 {% hint style="info" %}
-Workspaces npm 7.x is not supported.
+Workspaces npm 7.x은 지원하지 않습니다.
 {% endhint %}
 
-We analyze your `package.json` and `package-lock.json` files, to build a full structured dependency tree. If the `package-lock.json` is missing, we analyze your `node_modules` folder.
+구조화된 디펜던시 트리를 구축하기 위해 `package.json` 파일과 `package-lock.json` 파일을 분석합니다. 만약 `package-lock.json` 파일이 누락된 경우, `node_modules` 폴더를 분석합니다.
 
-Snyk can apply previously selected patches using the GNU patch utility. Patches are saved to the .snyk policy file.
+Snyk은 GNU 패치 유틸리티를 사용하여 이전에 선택한 패치를 적용할 수 있습니다. 패치는 Snyk 정책 파일에 저장됩니다.
 
-**Peer dependencies** are scanned by default in npm v7.x _unless_ they are explicitly marked as optional in the `peerDependenciesMeta` object of the `package.json` (In npm v6.x add `--peer-dependencies` to your command, as these are not installed by default).
+**Peer dependencies**는 `peerDependenciesMeta`의 `package.json`파일에서 추가로 설정을 지정하지 않는 이상 npm 7.x에서 기본적으로 검색됩니다 (npm 6.x에서는 기본적으로 설치가 되어있지 않아 해당 명령어 필요 `--peer-dependencies`).
 
 ```
 "peerDependenciesMeta": {
@@ -57,78 +57,77 @@ Snyk can apply previously selected patches using the GNU patch utility. Patches 
 
 ### Yarn
 
-Yarn versions 1 & 2 are supported in the Snyk CLI.
+Snyk CLI에서는 Yarn 1, 2를 지원합니다.
 
-We analyze your `package.json` and `yarn.lock` files, to build a full structured dependency tree. If the `yarn.lock` is missing, we analyze your `node_modules` folder.
+구조화된 디펜던시 트리를 구축하기 위해 `package.json` 파일과 `yarn.lock` 파일을 분석합니다. 만약 `yarn.lock` 파일이 누락된 경우, `node_modules` 폴더를 분석합니다.
 
-Snyk supports resolutions only in Yarn v2. We do not support resolutions for Yarn v1.
+Snyk은 Yarn v2에서만 지원을합니다. Yarn v1에 대해서는 지원하지 않습니다.
 
 ### Yarn workspaces
 
 {% hint style="info" %}
-Yarn v1 & 2 workspaces support is for `snyk test` and `snyk monitor` commands only at this time.
+Yarn v1 & 2 workspaces 지원은 현재 snyk test, snyk monitor 명령에만 해당됩니다.
 {% endhint %}
 
-For Yarn workspaces use the `--all-projects` flag to test and monitor your packages alongside other projects or `--yarn-workspaces` to specifically scan Yarn workspaces projects only. The root lock file is referenced when scanning all the packages. Use the `--detection-depth` parameter to find sub-folders that are not auto-discovered by default.
+Yarn workspaces의 경우 `--all-projects` 플래그를 사용하여 다른 프로젝트와 함께 패키지를 테스트 및 모니터링하거나 `--yarn-workspaces` 파라미터를 이용하여 yarn workspace의 프로젝트만 지정하여 스캔합니다. 모든 패키지를 스캔할 때 root lockfile이 참조됩니다. `--detection-depth` 파라미터를 사용하여 기본적으로 검색되지 않는 하위 폴더를 찾을 수 있습니다.
 
 Example usage:\
-`snyk test --all-projects --strict-out-of-sync=false --detection-depth=6` which will scan the packages that belong to any discovered workspaces this directly and 5 sub-directories deep as well as any other projects detected.
+`snyk test --all-projects --strict-out-of-sync=false --detection-depth=6`          검색된 작업 공간에 속하는 패키지를 직접 스캔하고 하위 5개의 티렉토리를 검색하여 다른 프로젝트를 찾습니다.
 
-`snyk test --yarn-workspaces --strict-out-of-sync=false --detection-depth=6` which will scan only the Yarn workspace packages that belong to any discovered workspaces this directly and 5 sub-directories deep.
+`snyk test --yarn-workspaces --strict-out-of-sync=false --detection-depth=6`    검색된 작업 공간에 속하는 Yarn workspace 패키지만 스캔하고 하위 5개의 티렉토리를 검색합니다.
 
-You may use a common **.snyk** policy file if you maintain ignores/patches in one place to be applied for all detected workspaces by providing the policy path:
+policy path를 제공하여 감지된 모든 작업 공간에 적용할 ignores/patches를 한 곳에서 관리하는 경우 **.snyk** 정책 파일을 사용할 수 있습니다.
 
 `snyk test --all-projects --strict-out-of-sync=false --policy-path=src/.snyk`
 
 ### Lerna
 
 {% hint style="info" %}
-We currently do **not** support Lerna. However, if your Lerna project is using Yarn Workspaces then the project can be scanned with the standard Yarn Workspaces support. You _might_ be able to run Snyk test/monitor with the following workaround commands to help you unblock the Snyk CLI integration.
+현재 Snyk은 Lerna를 지원하지 **않습니다**. **** 그러나 Lerna 프로젝트가 Yarn Workspaces를 사용하는 경우 표준 Yarn WorkSpaces 지원으로 프로젝트를 스캔할 수 있습니다. 다음 명령어를 통해 Snyk test/monitor를 실행하여 Snyk CLI 통합 차단을 해제할 수 있습니다.
 {% endhint %}
 
-For each example-package you can do:
+각 예제 패키지에 대해 다음 명령어를 수행할 수 있습니다.
 
 `snyk monitor --file=packages/example-package/package.json`
 
-Alternatively, you can specify a script to automate scanning nested \``` package.json` ``files:
+또는 중첩된 \``` package.json` ``파일 스캔을 자동화하는 스크립트를 지정할 수 있습니다.
 
 `ls packages | xargs -I PKG_NAME snyk monitor --file=packages/PKG_NAME/package.json`
 
-### CLI parameters for JavaScript
+### JavaScript의 CLI 파라미터
 
-Prerequisites
+전제 조건
 
-* Install the relevant package manager.
-* Include the relevant manifest files supported by Snyk.
-* Install and authenticate [the Snyk CLI](https://docs.snyk.io/snyk-cli/install-the-snyk-cli) to start analyzing projects from your local environment.
+* 관련 패키지 매니저가 설치되어 있습니다.
+* Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
+* [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트를 분석합니다.
 
-Run `npm install` or `yarn install,` depending on the package manager you use for your JavaScript projects.
+JavaScript 프로젝트에 사용하는 패키지 매니저에 따라서 `npm install` 또는 `yarn install,`을 실행합니다.
 
 {% hint style="info" %}
-As snyk test looks at the locally installed modules, it needs to be run after npm install or yarn install, and will seamlessly work with shrinkwrap, npm enterprise or any other custom installation logic you have.
+snyk test는 로컬에 설치된 모듈을 확인하기 때문에 npm install 또는 yarn install 후에 실행해야 하며, shrinkwrap, npm enterprise 또는 가지고 있는 기타 사용자 지정 설치 논리와 원할하게 작동합니다.
 {% endhint %}
 
 **Parameters**
 
-Use the following options to refine the scan:
+다음 옵션을 사용하여 스캔을 구체적으로 설정할 수 있습니다.
 
-| **Option**                         | <p><strong>Values</strong><br><strong>(default in bold)</strong></p> | **Description**                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `--strict-out-of-sync`             | **true**,false                                                       | Prevent testing out-of-sync lockfiles (test fails when set to true if there are out-of-sync lockfiles in the project)                                                                                                                                                                                                                                                          |
-| `--fail-on`                        | **all**, upgradable, patchable                                       | <p>Configure when a test should be failed if there are vulnerabilities as follows:</p><ul><li>All-fail for all projects containing vulnerabilities</li><li>Upgradable-fail only for projects with vulnerabilities that can be fixed with package upgrades</li><li>Patchable-fail for projects with vulnerabilities that can be fixed with either upgrades or patches</li></ul> |
-| `--prune-repeated-subdependencies` | true, **false**                                                      | Use this flag if any big projects fail to be tested. Default is _false_                                                                                                                                                                                                                                                                                                        |
-| `--dev`                            | true, **false**                                                      | Set to true if Snyk should scan dev dependencies                                                                                                                                                                                                                                                                                                                               |
-| `--yarn-workspaces`                | **n/a**                                                              | <p>Provide this flag to only scan a Yarn workspace project where lockfile is in the root. By default `--all-projects` automatically detects and scans Yarn workspaces projects.</p><p>Note: <code>snyk test</code> and<code>snyk monitor</code> commands only.</p>                                                                                                                                                        |
-| `--all-projects`                | **n/a**                                                              | <p>Provide this flag to detect and scan all Node and other projects.</p><p>Note: <code>snyk test</code> and<code>snyk monitor</code> commands only.</p>                                                                                                                                                        |
+| **Option**                         | <p><strong>Values</strong><br><strong>(default in bold)</strong></p> | **Description**                                                                                                                                                                                                        |
+| ---------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--strict-out-of-sync`             | **true**,false                                                       | 동기화되지 않은 잠금 파일 테스트 방지(프로젝트에 동기화되지 않은 잠금 파일이 있는 경우 true로 설정하면 테스트 실패)                                                                                                                                                   |
+| `--fail-on`                        | **all**, upgradable, patchable                                       | <p>다음과 같은 취약점이 있는 경우 테스트가 실패합니다.</p><ul><li>all: 취약점이 포함된 모든 프로젝트</li><li>upgradable: 패키지 업그레이드로 수정할 수 있는 취약점이 포함된 프로젝트</li><li>patchable: 업그레이드 또는 패치로 수정할 수 있는 취약점이 포함된 프로젝트</li></ul>                               |
+| `--prune-repeated-subdependencies` | true, **false**                                                      | 큰 프로젝트가 테스트에 실패한 경우 해당 플래그를 사용합니다. 기본 값은 false입니다.                                                                                                                                                                     |
+| `--dev`                            | true, **false**                                                      | 개발용 디펜던시를 스캔해야 하는경우 true로 설정합니다.                                                                                                                                                                                       |
+| `--yarn-workspaces`                | **n/a**                                                              | <p>lockfile이 root에 있는 Yarn workspace 프로젝트만 스캔하려면 이 플래그를 사용하세요. 기본적으로 <code>--all-projects</code>으로 Yarn workspace 프로젝트를 자동으로 감지하고 스캔합니다.</p><p>Note: <code>snyk test</code> 및<code>snyk monitor</code> 명령에만 해당됩니다.</p> |
+| `--all-projects`                   | **n/a**                                                              | <p>모든 노드 및 기타 프로젝트를 감지하고 스캔하려면 이 플래그를 사용하세요.</p><p>Note: <code>snyk test</code> 및<code>snyk monitor</code> 명령에만 해당됩니다.</p>                                                                                             |
 
+## JavaScript 프로젝트를 위한 Git services
 
-## Git services for JavaScript projects
-
-JavaScript projects can be imported from any of the Git services we support. After import, Snyk analyzes your projects based on their supported manifest files.
+JavaScript 프로젝트는 Snyk에서 지원하는 모든 GIt services에서 가져올 수 있습니다. 가져오기 후 Snyk은 지원하는 매니페스트 파일을 기반으로 프로젝트를 분석합니다.
 
 ### npm
 
-npm versions 6.x, 7.x are supported in Git services.
+Git services에서 는 npm 6.x, 7.x를 지원합니다.GIt Services는 npm 6.x, 7.x를 지원합니다.
 
 {% hint style="info" %}
 Workspaces npm 7.x is not supported.
