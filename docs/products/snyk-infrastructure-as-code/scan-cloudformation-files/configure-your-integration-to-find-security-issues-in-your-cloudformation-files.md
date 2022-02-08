@@ -8,9 +8,9 @@ Snyk는 현재 통합 Git 저장소에서 가져올 때 `JSON` 및 `YAML` 형식
 
 CloudFormation 스캔 기능은 모듈에 정적으로 구성된 모든 항목에 대한 보안 피드백을 제공합니다. 반복/예약 테스트를 통해 이점을 얻으려면 SCM에서 직접 사용자 정의 모듈을 가져오는 것이 좋습니다.
 
-## CloudFormation 구성파일을 스캔하는 Snyk 설정
+## CloudFormation 구성 파일을 스캔하는 Snyk 설정
 
-**Prerequisites**
+**전제 조건**
 
 * Snyk에서 구성하려는 조직의 관리자여야합니다.
 * 이미 Git 저장소를 통합했는지 확인하세요. 아직 수행하지 않았다면 [Git repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 확인하세요.
