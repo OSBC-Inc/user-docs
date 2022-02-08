@@ -8,7 +8,7 @@ Terraform 스캔 기능을 사용하려면 저장소에서 `.tf` 파일에 액�
 
 1. [Broker 저장소](https://github.com/snyk/broker/tree/master/client-templates)에서 소스 제어 시스템에 적합한 Accept.json 샘플 파일을 찾아 다운로드합니다.
 2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** array에 추가하세요.
-3. [Configuring the broker](detecting-terraform-configuration-files-using-a-broker.md#configuring-the-broker)를 진행하세요.
+3. [Configuring the broker](detecting-terraform-configuration-files-using-a-broker.md#configuring-the-broker) 지침을 따릅니다.
 
 ## GitHub rules
 
@@ -73,7 +73,7 @@ Terraform 스캔 기능을 사용하려면 저장소에서 `.tf` 파일에 액�
 
 ## 브로커 구성
 
-브로커는 ACCUT 환경 변수의 Accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub 브로커에게 전달한 예를 볼 수 있습니다.
+브로커는 ACCEPT 환경 변수의 Accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub 브로커에게 전달한 예를 볼 수 있습니다.
 
 ```
 docker run --restart=always \
@@ -87,4 +87,4 @@ docker run --restart=always \
   snyk/broker:github-com
 ```
 
-이를 통해 Snyk은 모든 .tf 파일을 쿼리할 수 있습니다. 더 정확해지려면 위의 예제의 경로를 특정 프로젝트나 파일 레이아웃으로 더 제한하도록 변경할 수 있습니다.
+**Note**: 이를 통해 Snyk은 모든 .tf 파일을 쿼리할 수 있습니다. 더 정확해지려면 위의 예제의 경로를 특정 프로젝트나 파일 레이아웃으로 더 제한하도록 변경할 수 있습니다.

@@ -1,22 +1,22 @@
-# Detecting CloudFormation configuration files using a broker
+# 브로커를 사용하여 CloudFormation 구성 파일 탐지
 
-When using a privately hosted Git repository, Snyk Broker must be used to connect with Snyk products. See the [broker documentation](../../../features/integrations/snyk-broker/) for details.
+비공개로 호스팅되는 Git 저장소를 사용하는 경우 Snyk Broker를 사용하여 저장소에 Snyk를 연결할 수 있습니다. 자세한 내용은 [full broker documentation for setup](../../../features/integrations/snyk-broker/set-up-snyk-broker.md)을 참조하세요.
 
-This document describes the additional configuration required for the CloudFormation files, for Snyk IaC.
+이 문서는 Snyk IaC의 CloudFormation 파일에 필요한 추가 구성에 대해 설명합니다.
 
-Part of these configurations will be the same for Kubernetes. If they have already been added for Kubernetes, then there's no need to add them again.
+이 구성 중 일부는 Kubernetes구성 시 동일하게 적용이 가능합니다. 이미 Kubernetes용으로 추가한 경우 다시 추가할 필요가 없습니다.
 
-## Writing the configuration
+## Configuration 작성
 
-The CloudFormation scanning features require access to the YAML or JSON files in the repository. This requires specific API permissions. These API permissions are slightly different depending on the source control system.
+CloudFormation 스캔 기능을 사용하려면 저장소에 있는 `YAML` 또는 `JSON` 파일에 액세스해야 합니다. 이를 위해서는 특정 API 사용 권한이 필요합니다. 이러한 API 권한은 소스 제어 시스템에 따라 다릅니다.
 
-1. Find and download the appropriate accept.json sample file for the correct source control system [from the Broker repository](https://github.com/snyk/broker/tree/master/client-templates).
-2. Rename it `accept.json` and add the rules below for the appropriate SCM to the **private** array in the JSON file.
-3. Follow the [Configuring the broker](detecting-cloudformation-configuration-files-using-a-broker.md) instructions.
+1. [Broker 저장소](https://github.com/snyk/broker/tree/master/client-templates)에서 소스 제어 시스템에 적합한 Accept.json 샘플 파일을 찾아 다운로드합니다.
+2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** array에 추가하세요.
+3. [Configuring the broker](detecting-cloudformation-configuration-files-using-a-broker.md) 지침을 따릅니다.
 
 ## GitHub & GitHub Enterprise rules
 
-```text
+```
 {
   "//": "used to determine Infrastructure as Code issues",
   "method": "GET",
@@ -57,7 +57,7 @@ The CloudFormation scanning features require access to the YAML or JSON files in
 
 ## Bitbucket rules
 
-```text
+```
 {
   "//": "used to determine Infrastructure as Code issues",
   "method": "GET",
@@ -128,7 +128,7 @@ The CloudFormation scanning features require access to the YAML or JSON files in
 
 ## GitLab rules
 
-```text
+```
 {
   "//": "used to determine Infrastructure as Code issues",
   "method": "GET",
@@ -167,11 +167,11 @@ The CloudFormation scanning features require access to the YAML or JSON files in
 },
 ```
 
-## Configuring the broker
+## 브로커 구성
 
-The broker takes the path to the accept.json file \(with the rules above added\) in the ACCEPT environment variable. The example of passing that to the GitHub broker is displayed below.
+브로커는 ACCEPT 환경 변수의 Accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub 브로커에게 전달한 예를 볼 수 있습니다.
 
-```text
+```
 docker run --restart=always \
   -p 8000:8000 \
   -e BROKER_TOKEN=secret-broker-token \
@@ -183,5 +183,4 @@ docker run --restart=always \
   snyk/broker:github-com
 ```
 
-**Note**: This gives Snyk the ability to query for any `.yaml`, `.yml`, or `.json` files. If you would prefer to be stricter you can alter the paths in the examples above to be more restrictive to certain projects or file layouts.
-
+**Note**: 이를 통해 Snyk은 모든 `.yaml`, `.yml` 또는 `.json` 파일을 쿼리할 수 있습니다. 더 정확해지려면 위의 예제의 경로를 특정 프로젝트나 파일 레이아웃으로 더 제한하도록 변경할 수 있습니다.
