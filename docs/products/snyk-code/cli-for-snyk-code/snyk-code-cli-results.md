@@ -1,12 +1,12 @@
-# Understand Snyk Code CLI results
+# Snyk Code CLI 결과 이해
 
-This example runs a code test against a project we have set locally, `goof`:
+이 예제는 로컬에서 설정한 프로젝트(`goof`)에 대해 snyk code 테스트를 실행합니다:
 
 ```
 snyk code test goof
 ```
 
-This produces results like this:
+이렇게 하면 다음과 같은 결과가 나타납니다:
 
 ```
 Testing goof ...
@@ -65,16 +65,16 @@ Project path:      goof
 4 [High]  7 [Medium]
 ```
 
-## Results review
+## 결과 검토
 
-Here we can see that our snyk code testing found 11 issues, 4 high and 7 medium.
+snyk code 테스트에서 11개의 issue(high 4개, medium 7개)를 발견했음을 알 수 있습니다.
 
-The issues are ordered by severity where the highest ones are at the bottom of our findings.
+issues는 심각도에 따라 가장 높은 문제가 맨 아래에 있도록 정렬됩니다.
 
-Each item includes:
+각 항목에는 다음이 포함됩니다:
 
-* The severity and vulnerability type of the issue
-* Path: the file and line in the file where the issue was found (potentially issues are cross-files, the location in the path refers to the issue's sink)
-* Info: A description of the issue's data flow
+* 문제의 심각도 및 취약점 유형
+* 경로: issue가 발견된 파일의 경로 및 행 (potentially issues are cross-files, the location in the path refers to the issue's sink)
+* 정보: issue의 데이터 흐름에 대한 설명
 
-CLI for Snyk Code uses the exit codes as described in the [CLI reference](../../../features/snyk-cli/guides-for-our-cli/cli-reference.md#EXIT-CODES).
+Snyk용 CLI는 [CLI reference](../../../features/snyk-cli/guides-for-our-cli/cli-reference.md#EXIT-CODES)에 설명된 대로 exit code들을 사용합니다.
