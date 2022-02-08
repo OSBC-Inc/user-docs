@@ -161,6 +161,7 @@
       * [Container security with Quay integration](products/snyk-container/image-scanning-library/quay-image-scanning/container-security-with-quay-integration.md)
       * [Scan container images from Quay in Snyk](products/snyk-container/image-scanning-library/quay-image-scanning/scan-container-images-from-quay-in-snyk.md)
 * [Snyk Infrastructure as Code](products/snyk-infrastructure-as-code/README.md)
+  * [Snyk Infrastructure as Code (IaC) 시작하기](products/snyk-infrastructure-as-code/snyk-infrastructure-as-code-iac.md)
   * [Terraform 파일 스캔](products/snyk-infrastructure-as-code/scan-terraform-files/README.md)
     * [Terraform 파일에서 보안 문제를 찾기 위한 통합 구성](products/snyk-infrastructure-as-code/scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)
     * [Terraform 파일의 보안 문제 스캔 및 수정](products/snyk-infrastructure-as-code/scan-terraform-files/scan-and-fix-security-issues-in-terraform-files.md)
