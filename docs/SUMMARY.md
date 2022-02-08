@@ -164,7 +164,7 @@
   * [Scan Terraform files](products/snyk-infrastructure-as-code/scan-terraform-files/README.md)
     * [Terraform 파일에서 보안 문제를 찾기 위한 통합 구성](products/snyk-infrastructure-as-code/scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)
     * [Terraform 파일의 보안 문제 스캔 및 수정](products/snyk-infrastructure-as-code/scan-terraform-files/scan-and-fix-security-issues-in-terraform-files.md)
-    * [Detecting Terraform configuration files using a broker](products/snyk-infrastructure-as-code/scan-terraform-files/detecting-terraform-configuration-files-using-a-broker.md)
+    * [브로커를 사용하여 Terraform 구성 파일 탐지](products/snyk-infrastructure-as-code/scan-terraform-files/detecting-terraform-configuration-files-using-a-broker.md)
   * [Scan CloudFormation files](products/snyk-infrastructure-as-code/scan-cloudformation-files/README.md)
     * [Configure your integration to find security issues in your CloudFormation files](products/snyk-infrastructure-as-code/scan-cloudformation-files/configure-your-integration-to-find-security-issues-in-your-cloudformation-files.md)
     * [Scan and fix security issues in your CloudFormation files](products/snyk-infrastructure-as-code/scan-cloudformation-files/scan-and-fix-security-issues-in-your-cloudformation-files.md)
