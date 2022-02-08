@@ -1,6 +1,6 @@
 # 브로커를 사용하여 infrastructure as code 파일 감지
 
-비공개로 호스팅되는 Git 저장소를 사용하는 경우 Snyk Broker를 사용하여 저장소에 Snyk를 연결할 수 있습니다. 자세한 내용은 [full broker documentation for setup](../../features/integrations/snyk-broker/set-up-snyk-broker.md)을 참조하세요.
+비공개로 호스팅되는 Git 저장소를 사용하는 경우 Snyk Broker를 사용하여 저장소에 Snyk를 연결할 수 있습니다. 자세한 내용은 [full broker documentation for setup](../../../features/integrations/snyk-broker/set-up-snyk-broker.md)을 참조하세요.
 
 이 문서에는 Infrastructure as Code 파일에 필요하는 추가 구성에 대해 설명합니다.
 
@@ -10,7 +10,7 @@
 
 1. [Broker 저장소](https://github.com/snyk/broker/tree/master/client-templates)에서 소스 제어 시스템에 적합한 Accept.json 샘플 파일을 찾아 다운로드합니다.
 2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** array에 추가하세요.
-3. [Configuring the broker](scan-cloudformation-files/detecting-cloudformation-configuration-files-using-a-broker.md) 지침을 따릅니다.
+3. [Configuring the broker](../scan-cloudformation-files/detecting-cloudformation-configuration-files-using-a-broker.md) 지침을 따릅니다.
 
 ## GitHub & GitHub Enterprise rules
 

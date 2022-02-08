@@ -1,34 +1,34 @@
-# Configure integration for security issues in Kubernetes configuration files
+# Kubernetes 구성 파일에서 보안 문제를 찾기 위한 통합 구성
 
-Snyk tests and monitors Kubernetes configurations stored in your source code repositories and provides information, tips, and tricks to better secure a Kubernetes environment--catching misconfigurations before they are pushed to production as well as providing fixes for vulnerabilities.
+Snyk은 소스 코드 저장소에 저장된 Kubernetes 구성을 테스트하고 모니터링하며 Kubernetes 환경을 보다 안전하게 보호하기 위한 정보를 제공하여 잘못된 구성을 프로덕션으로 전송하기 전에 포착하고 취약점에 대한 수정을 제공합니다.
 
-## Supported Git repositories and file formats
+## 지원하는 Git 저장소 및 파일 형식
 
-Snyk currently scans your Kubernetes configuration files in JSON and YAML format when imported from your integrated Git repository.
+Snyk은 현재 통합 Git 저장소에서 가져올 때 JSON 및 YAML 형식의 Kubernetes 구성 파일을 검색합니다.
 
-## Configure Snyk to scan Kubernetes configuration files
+## Kubernetes 구성 파일을 스캔하는 Snyk 설정
 
-**Prerequisites**
+**전제 조건**
 
-* Administrator access for the organization
-* Check Git repository access and authorization--more info at [Git repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations).
+* Snyk에서 구성하려는 조직의 관리자여야합니다.
+* 이미 Git 저장소를 통합했는지 확인하세요. 아직 수행하지 않았다면 [Git repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 확인하세요.
 
-**Configure Snyk**
+**Snyk 설정**
 
-Log in to [app.snyk.io](https://app.snyk.io), and navigate to the relevant group and organization that you want to manage
+계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 
 ![](<../../../.gitbook/assets/add-artifactory-images (1) (2) (46).gif>)
 
 {% hint style="info" %}
 **Note**\
-Integrations are managed per organization.
+통합은 조직별로 관리합니다.
 {% endhint %}
 
-From here:
+다음과 같이 진행합니다.
 
-1. Enable Snyk to detect Kubernetes configuration files by enabling the flag in the settings ![cog_icon.png](../../../.gitbook/assets/cog_icon.png) > **Infrastructure as code** page: 
-2. If needed, review and adjust settings in the **Infrastructure as code** settings:
+1. 설정에서 플래그를 활성화하여 Kubernetes 구성 파일을 감지하도록 Snyk을 활성화 합니다. ![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Infrastructure as code**
+2. 필요한 경우 **Infrastructure as code** 설정 영역에서 설정을 조정합니다.
 
 ![Configure-Policies.png](../../../.gitbook/assets/uuid-34af73f5-ffde-39bb-ffa4-364884089b2e-en.png)
 
-The number of tests per product are based on account plans. For information on plans and test limits, [view our plans](https://snyk.io/plans/).
+제품당 테스트 횟수는 요금제에 따라 다릅니다. 테스트 제한에 대한 정보는 [요금제](https://snyk.io/plans/)를 참조하세요.

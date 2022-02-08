@@ -1,5 +1,5 @@
-# Scan CloudFormation files
+# CloudFormation 파일 스캔
 
-* [Configure your integration to find security issues in your CloudFormation files](configure-your-integration-to-find-security-issues-in-your-cloudformation-files.md)
-* [Scan and fix security issues in your CloudFormation files](scan-and-fix-security-issues-in-your-cloudformation-files.md)
-* [Detecting CloudFormation configuration files using a broker](detecting-cloudformation-configuration-files-using-a-broker.md)
+* [CloudFormation 파일에서 보안 문제를 찾기 위한 통합 구성](configure-your-integration-to-find-security-issues-in-your-cloudformation-files.md)
+* [CloudFormation 파일의 보안 문제 스캔 및 수정](scan-and-fix-security-issues-in-your-cloudformation-files.md)
+* [브로커를 사용하여 CloudFormation 구성 파일 탐지](detecting-cloudformation-configuration-files-using-a-broker.md)

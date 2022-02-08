@@ -1,6 +1,6 @@
 # Snyk for Java (Gradle, Maven)
 
-Snyk은 CLI와 UI의 다양한 통합을 통해 프로젝트의 취약점을 테스트하는 보안 스캔을 제공합니다.
+Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
 **지원되는 버전**: 공식적으로 지원되는 Java 버전, 운영 체제 및 Node.js 버전은 [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) 와 [Maven support](https://github.com/snyk/snyk-mvn-plugin#support)를 참조하세요.
 
