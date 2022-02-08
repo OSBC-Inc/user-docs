@@ -1,28 +1,28 @@
-# Scan and fix security issues in Terraform  files
+# Terraform 파일의 보안 문제 스캔 및 수정
 
-Snyk scans your Terraform code for misconfigurations and security issues as well. For configuration files, once scanned, Snyk reports on any misconfigurations based on the settings your administrator has implemented, and makes recommendations for fixing accordingly.
+Snyk는 잘못된 구성과 보안 문제가 있는지 Terraform 코드를 스캔합니다. 구성 파일의 경우 검색된 Snyk는 관리자가 구현한 설정에 따라 잘못된 구성에 대해 보고하고 그에 따라 수정하기 위한 권장 사항을 제공합니다.
 
-## Prerequisites
+## 전제 조건
 
-* An administrator should integrate your organization with your preferred Git repository and enable detection of configuration files as described [here](https://docs.snyk.io/snyk-infrastructure-as-code/scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess).
-* You must have a Snyk account and your Terraform files should be in `.tf` format.
-* We currently detect AWS, Azure and GCP related security issues.
+* 관리자는 조직을 선호하는 Git 저장소와 통합하고 [문서](configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)에 설명한 대로 구성 파일 감지를 활성화해야 합니다.
+* Snyk 계정이 있어야 하며 Terraform 파일(`.tf`형식)이 있어야 합니다.
+* We currently detect AWS, Azure and GCP related secur현재 AWS, Azure 및 GCP 관련 보안 문제를 감지합니다.
 
-## Scan and fix your configuration files
+## 구성 파일 스캔 및 수정
 
-* Log in to your account and navigate to the relevant group and organization that you want to manage. 
+* 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 
 ![](<../../../.gitbook/assets/screenshot-2020-07-09-at-12.43.02-2- (3) (4) (4) (4) (24).png>)
 
-* If you already imported your repositories for testing before the infrastructure as code feature was enabled by your administrator, then you should re-import that repository in order to detect the Terraform code:
+* 관리자가 Infrastructure as code 기능을 활성화하기 전에 테스트하기 위해 저장소를 이미 가져온 경우 Terraform 코드를 탐지하려면 해당 저장소를 다시 가져와야 합니다.
 
 ![](<../../../.gitbook/assets/screenshot\_2020-07-09\_at\_12.44.03 (1) (1) (3) (3) (2) (10).png>)
 
-* Every time a repository is scanned:
-  * Every Terraform file is imported as a separate project, grouped together per repository, similar to this example: (If you re-imported the repository in order to import the Terraform files, then Snyk imports and re-tests the already imported application manifest files - displaying the test time as "now".)
+* 저장소를 스캔할 때마다 다음과 같이 진행합니다.
+  * 모든 Terraform 파일은 별도의 프로젝트로 가져오며 저장소별로 그룹화됩니다. 예를 들어, Terraform 파일을 가져오기 위해 저장소를 다시 가져온 경우 Snyk는 이미 가져온 애플리케이션 매니페스트 파일을 가져오고 다시 테스트합니다. 테스트 시간은 "now"로 표시됩니다.
 
 ![](<../../../.gitbook/assets/screenshot\_2020-07-09\_at\_12.44.48 (1) (3) (3) (3) (1) (11).png>)
 
-* Click the project link you're interested in, to view the scan results and to help correct your Terraform code:
+* 관심 있는 프로젝트 링크를 클릭하여 스캔 결과를 확인하고 Terraform 코드를 수정하세요.
 
 ![](<../../../.gitbook/assets/screenshot\_2020-07-09\_at\_12.45.26 (1) (1) (3) (3) (2) (6).png>)
