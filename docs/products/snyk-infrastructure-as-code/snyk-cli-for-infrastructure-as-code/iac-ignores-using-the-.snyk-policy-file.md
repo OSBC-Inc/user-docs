@@ -1,32 +1,32 @@
-# IaC ignores using the .snyk policy file
+# IaC에서 .snyk 정책 파일 사용 무시
 
-When scanning your IaC configuration files using the Snyk CLI with **snyk iac test** you can ignore issues that are not relevant to you.
+Snyk CLI에서 Snyk iac test를 사용하여 IaC 구성 파일을 검색할 때 사용자와 관련이 없는 문제는 무시할 수 있습니다.
 
-You can do this by using the [.snyk policy file](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/the-.snyk-file), which we recommend is stored and versioned in the root of your working directory for where you store your IaC configuration files.
+[.snyk 정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)을 사용하여 이 작업을 수행할 수 있습니다. 이 파일은 IaC 구성 파일을 저장할 작업 디렉토리의 root에 저장하거나 버전이 지정되는 것이 좋습니다.
 
-## Ignore paths
+## 경로 무시
 
-For rest runs using the Snyk CLI, only issues defined in the **.snyk** file are ignored.
+Snyk CLI를 사용한 실행의 경우 **.snyk** 파일에 정의된 문제만 무시합니다.
 
-For test runs from imported git repositories:
+가져온 Git 저장소에서 실행하는 경우 다음과 같이 적용됩니다.
 
-* Issues can be ignored in the Snyk UI - note these ignores will only apply to scans conducted using the Snyk UI.
-* Important: These two sources of ignores are not synchronized.
+* Snyk UI에서 issues를 무시할 수 있습니다. 이 경우 Snyk UI를 사용하여 수행된 스캔에만 적용됩니다.
+* 중요 : 이 두개의 ignore 소스는 동기화되지 않습니다.
 
-## .snyk file semantics
+## .snyk 파일
 
 {% hint style="info" %}
-The **.snyk** file has some limitations for IaC projects \(see [The .snyk file](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/the-.snyk-file) for standard functionality\):
+.snyk 파일에는 IaC 프로젝트에 대한 몇 가지 제한이 있습니다(표준 기능은 [The .snyk file](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md) 참조).
 
-* The **patches** section is not yet supported and will be ignored.
-* There are no IaC-supported language settings. This section will be ignored.
+* **패치** 섹션이 아직 지원되지 않으므로 무시합니다.
+* IaC 지원 언어 설정이 없습니다. 이 섹션은 무시합니다.
 {% endhint %}
 
-When running **snyk iac test** against a directory, either by passing in one or more directories or using the default argument of the current working directory, the Snyk CLI looks for a file named **.snyk** in each of those directories.
+하나 이상의 디렉토리를 전달하거나 현재 작업 디렉토리의 기본 인수를 사용하여 디렉토리에 대해 `snyk iac test`를 실행할 대 Snyk CLI는 각 디렉토리에서 `.snyk` 파일을 찾습니다.
 
-The syntax of the policy file is as follows:
+정책 파일의 구문은 다음과 같습니다.
 
-```text
+```
 version: v1.19.0
 ignore:
   SNYK-CC-K8S-1:
@@ -36,15 +36,15 @@ ignore:
         created: 2021-07-27T08:40:35.251Z
 ```
 
-This file can be created with the **snyk ignore** command, See [Ignore vulnerabilities](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli).
+이 파일은 `snyk ignore` 명령문으로 생성할 수 있습니다. 자세한 내용은 [Ignore vulnerabilities](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli)를 참조하세요.
 
-The \`\*\` object key causes the CLI to ignore all instances of the SNYK-CC-K8S-1 vulnerability. You can add multiple entries, keyed by the IaC issue ID, to ignore multiple vulnerabilities.
+'\*' 키를 이용하여 CLI가 SNYK-CC-K8S-1 취약점의 모든 인스턴스를 무시할 수 있습니다. IaC 문제 ID로 표시된 여러 항목을 추가하여 여러 취약점을 무시할 수 있습니다.
 
-## Ignoring a single file
+## 단일 파일 무시
 
-Ignore rules can be scoped more narrowly. To scope the ignore to a single file, change the \`\*\` to the path of that file relative to the directory under test that contains the policy file:
+Ignore rules는 범위를 더 좁힐 수 있습니다. 범위를 단일 파일로 지정하려면 '\*'를 정책 파일이 포함된 테스트 대상 디렉토리를 기준으로 해당 파일의 경로로 변경하세요.
 
-```text
+```
 version: v1.19.0
 ignore:
   SNYK-CC-K8S-1:
@@ -58,23 +58,23 @@ ignore:
         created: 2021-07-27T08:40:35.251Z
 ```
 
-In the example above we are ignoring an issue in 2 specific files.
+위의 예에서 우리는 2개의 특정 파일의 문제를 무시하고 있습니다.
 
-## Ignore instances of a vulnerability
+## 취약점 인스턴스 무시
 
-Individual instances of a vulnerability within a file can be ignored. To do this, you’ll need to take the “resource path” from the output of **snyk iac test**, and add it to the file path.
+파일 내의 개별 취약성 인스턴스는 무시될 수 있습니다. 이렇게 하려면 `snyk iac test` 출력에서 "리소스 경로"를 가져와 파일 경로에 추가해야 합니다.
 
-For example, from the following output snippet:
+예를 들어, 스니펫이 다음과 같이 출력됩니다.
 
-```text
+```
 Testing production/deployment.yaml...Infrastructure as code issues:
   ✗ Container is running in privileged mode [High Severity] [SNYK-CC-K8S-1] in Deployment
     introduced by [DocId: 0] > input > spec > template > spec > containers[web] > securityContext > privileged
 ```
 
-You could modify the policy file as follows:
+다음과 같이 정책 파일을 수정할 수 있습니다.
 
-```text
+```
 version: v1.19.0
 ignore:
   SNYK-CC-K8S-1:
@@ -84,15 +84,14 @@ ignore:
         created: 2021-07-27T08:40:35.251Z
 ```
 
-## Policy flags and policy file notes
+## 정책 플래그 및 정책 파일 참고 사항
 
-There cannot be more than one policy file per directory under test. For example, **snyk iac test dir1/ dir2/** will load **dir1/.snyk** and **dir2/.snyk**, but if the file **dir1/foo/bar/.snyk** exists, the CLI will not load it.
+테스트 중인 디렉토리당 정책 파일이 두 개 이상 있을 수 없습니다. 예를 들어 `snyk iac test dir1/ dir2/`는 `dir1/.snyk`와 `dir2/.snyk`를 로드하지만 `dir1/foo/bar/.snyk` 파일이 있으면 CLI에서 로드하지 않습니다.
 
-When running **snyk iac test**, the CLI loads **$PWD/.snyk**. One common pattern is to use a single policy file per repository, in the root of that repository.
+`snyk iac test`를 실행할 때 CLI는 `$PWD/.snyk`를 로드합니다. 일반적인 패턴 중 하나는 저장소의 root에 있는 저장소당 하나의 정책 파일을 사용하는 것입니다.
 
-The CLI accepts a flag **--policy-path=..**., which overrides the location of policy files. The path can either be a directory containing a file named **.snyk**, or the path to a file named **.snyk**. The policy file’s actual name must be **.snyk**.
+CLI에서는 정책 파일의 위치를 재정의하는 `--policy-path=...` 플래그를 허용합니다. 경로는 `.snyk` 파일이 들어 있는 디렉토리이거나 `.snyk` 파일의 경로일 수 있습니다. 정책 파일의 실제 이름은 `.snyk`이여야 합니다.
 
-Policies are not loaded automatically when the argument to **snyk iac test** is a file rather than a directory. In this case, **--policy-path** must be specified in order to load policies.
+`snyk iac test`에 대한 인수가 디렉토리가 아닌 파일인 경우 정책이 자동으로 로드되지 않습니다. 이 경우 정책을 로드하려면 `--policy-path`를 지정해야 합니다.
 
-The CLI accepts a flag **--ignore-policy**, which will cause any found **.snyk** policy files to be ignored.
-
+CLI에서는 `--ignore-policy` 플래그를 허용하므로 사용 시 발견된 `.snyk` 정책 파일이 무시됩니다.

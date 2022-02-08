@@ -178,7 +178,7 @@
   * [ARM 구성 파일 스캔](products/snyk-infrastructure-as-code/scan-arm-configuration-files.md)
   * [Snyk CLI for Infrastructure as Code](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/README.md)
     * [구성 파일 테스트](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-configuration-files.md)
-    * [IaC ignores using the .snyk policy file](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md)
+    * [IaC에서 .snyk 정책 파일 사용 무시](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md)
     * [Test your Terraform files with the CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-terraform-files-with-the-cli-tool.md)
     * [Test your CloudFormation files with CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-cloudformation-files-with-cli-tool.md)
     * [Test your AWS CDK files with our CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-aws-cdk-files-with-our-cli-tool.md)
