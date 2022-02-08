@@ -29,12 +29,12 @@ Bazel은 npmjs.org 또는 Maven Central과 같은 패키지 레지스트리와 �
 
 Bazel 디펜던시는 Starlark를 사용하여 BUILD 파일에서 코드로 지정되기 때문에 Snyk은 프로젝트가 어떤 의존성을 가지고 있는지 쉽게 발견할 수 없다.
 
-권장하는 접근방식은 [Snyk Dep Graph Test API](https://github.com/snyk/dep-graph) 통해 의존성을 테스트하는 것입니다.
+권장하는 접근방식은 [Snyk Dep Graph Test API](https://github.com/snyk/dep-graph)를 통해 의존성을 테스트하는 것입니다.
 
 ## How it works
 
-1. For each type of dependency (e.g. Maven, Cocoapods), create a [Dep Graph JSON object](https://github.com/snyk/dep-graph) listing all the dependency packages and versions (see below)
-2.  As part of a Bazel test rule, send this object as a POST request to the [Dep Graph Test API](https://support.snyk.io/hc/en-us/articles/360011549737-Snyk-for-Bazel#h\_01EEWFQJFTCWFQBMQR0X32J8B8), (along with your [auth token](https://docs.snyk.io/snyk-api-info/authentication-for-api)), example curl request:
+1. 각 디펜던시 타입(Maven, Cocoapods 등)에 대해 모든 디펜던시 패키지 및 버전을 나열하는 [Dep Graph JSON object](https://github.com/snyk/dep-graph)를 생성합니다(아래 참조).
+2.  Bazel 테스트 규칙의 일부로 이 객채를 POST request로 [Dep Graph Test API](https://support.snyk.io/hc/en-us/articles/360011549737-Snyk-for-Bazel#h\_01EEWFQJFTCWFQBMQR0X32J8B8)([auth token](https://docs.snyk.io/snyk-api-info/authentication-for-api) 포함)전송합니다. curl request를 예로 들면 다음과 같습니다.
 
     ```
     curl -X POST 'https://snyk.io/api/v1/test/dep-graph' \
@@ -42,21 +42,21 @@ Bazel 디펜던시는 Starlark를 사용하여 BUILD 파일에서 코드로 지�
       -H 'Content-Type: application/json; charset=utf-8' \
       -d @dep-graph.json
     ```
-3. Check the [API response](https://support.snyk.io/hc/en-us/articles/360011549737-Snyk-for-Bazel#h\_01EEWP8F4MK9MFJT5X0A4ZGS93) for pass/fail status and any resulting vulnerabilities
+3. pass/fail 상태를 통해 [API response](https://support.snyk.io/hc/en-us/articles/360011549737-Snyk-for-Bazel#h\_01EEWP8F4MK9MFJT5X0A4ZGS93)를 확인합니다.
 
 ## Snyk Dep Graph Test API
 
-The Snyk Dep Graph Test API takes a generic dependency graph, and returns a report containing any relevant vulnerabilities for those dependencies.
+The Snyk Dep Graph Test API는 일반 디펜던시 그래프를 가져와 해당 디펜던시에 대한 관련 취약점이 포함된 보고서를 반환합니다.
 
-The set of supported package managers/repository ecosystems are listed on the [API documentation](https://snyk.docs.apiary.io/#reference/test/dep-graph/test-dep-graph) (at time of writing these are `deb`, `gomodules`, `gradle`, `maven`, `npm`, `nuget`, `paket`, `pip`, `rpm`, `rubygems` & `cocoapods`).
+지원하는 패키지 매니저/리포지토리 에코시스템의 목록은 [API documentation](https://snyk.docs.apiary.io/#reference/test/dep-graph/test-dep-graph)에서 확인할 수 있습니다( `deb`, `gomodules`, `gradle`, `maven`, `npm`, `nuget`, `paket`, `pip`, `rpm`, `rubygems` , `cocoapods`).
 
-Any of your Bazel dependencies that are available in these ecosystems can be tested via the API.
+모든 Bazel 디펜던시는 API를 통해 테스트가 가능합니다.
 
 ## Snyk Dep Graph JSON Syntax
 
-The Dep Graph Test API takes a [Snyk Dep Graph](https://github.com/snyk/dep-graph) JSON object describing the root application, and the graph of direct and transitive dependencies.
+The Dep Graph Test API는 root 애플리케이션을 설명하는 [Snyk Dep Graph](https://github.com/snyk/dep-graph) JSON 객체와 직접 및 전이 종속성 그래프를 사용합니다.
 
-The [schema](https://github.com/snyk/dep-graph#depgraphdata) for this format is as follows:
+해당 형식의 [schema](https://github.com/snyk/dep-graph#depgraphdata)는 다음과 같습니다.
 
 ```
 export interface DepGraphData {
@@ -100,19 +100,19 @@ export interface DepGraphData {
 }
 ```
 
-Here are some further notes on specific components in the dep graph object:
+다음 사항은 dep 그래프 객체의 특정 구성 요소에 대한 참고 사항입니다.
 
 * `schemaVersion` - version of the dep-graph schema, set this to `1.2.0`
 * `pkgManager.name` - one of `deb`, `gomodules`, `gradle`, `maven`, `npm`, `nuget`, `paket`, `pip`, `rpm`, `rubygems` or `cocoapods`
-* `pkgs` - array of objects containing `id`, `name` & `version` of all packages in the dep-graph. Note that the `id` _must_ be of the form `name@version`. List each of your dependencies in this array, including an item representing the project itself
-* `graph.nodes` - array of objects describing the relationships between entries in `pkgs`. In Bazel this is typically just the project node with all other packages defined as a flat array of direct dependencies in `deps`
-* `graph.rootNodeId` - specifies the `id` of the entry in `graph.nodes` to use as the root node of the graph. You should set this to the `nodeId` of the project node
+* `pkgs` - dep-graph에 있는 모든 `id`, `name` 및 `version`을 포함한 객체 배열입니다. `id`의 형식은 `name@version`이어야 합니다. 프로젝트 자체를 나타내는 항목을 포함하여 배열의 디펜던시를 나열합니다.
+* `graph.nodes` - `pkgs`에 있는 항목간의 관계를 설명하는 객체 배열입니다. Bazel에서 `deps`의 직접적인 디펜던시의 배열이며 정의된 다른 모든 패키지와 함께 프로젝트 node입니다.
+* `graph.rootNodeId` - 그래프의 root node로 사용할 `graph.nodes` 항목의 `id`를 지정합니다 프로젝트 node의 `nodeId`로 설정해야 합니다.
 
 ## Snyk Dep Graph Test API Response
 
-The Dep Graph Test API returns a JSON object describing any issues (vulnerabilities & licences) found in the dep graph dependencies.
+The Dep Graph Test API는 dep graph 디펜던시에서 발견된 문제(취약점 및 라이선스)를 설명하는 JSON 객체를 반환합니다.
 
-Here is an example response with a single vulnerability.
+다음 예시는 단일 취약점이 존재하는 API Response입니다.
 
 ```
 {
@@ -201,20 +201,20 @@ Here is an example response with a single vulnerability.
 }
 ```
 
-Here are some further notes on specific components in the response object:
+다음은 객체의 구성 요소에 대한 참고 사항입니다.
 
-* `ok` - boolean value summarising whether Snyk found any vulnerabilities in the supplied dependencies. You can use this for a quick pass/fail test
-* `issuesData` - a hash of each unique vulnerability found. Each vulnerability contains many useful properties, such as `title`, `description`, `identifiers`, `publicationTime`, `severity` etc
-* `issues` - an simple array of mappings from vulnerabilities in `issuesData` to package. As a vulnerability may be relevant to multiple packages, this mapping is used to keep the response length as short as possible
+* `ok` - Snyk에게 제공한 디펜던시에서 취약점 발견 여부를 확인합니다.
+* `issuesData` - 발견된 취약점의 Hash값입니다. 각 취약점에는 `title`, `description`, `identifiers`, `publicationTime`, `severity` 등이 포함되어 있습니다.
+* `issues` - `issuesData`의 취약점에서 패키지로의 간단한 매핑 배열입니다. 취약점은 여러 패키지와 관련될 수 있으므로 매핑은 response 길이를 최대한 짧게 유지하는데 사용합니다.
 
 ## Examples
 
 {% hint style="info" %}
 **Note**\
-See [https://github.com/snyk/bazel-simple-app](https://github.com/snyk/bazel-simple-app) for a full example Bazel Java project, and corresponding Snyk Dep Graph object.
+Bazel Java 프로젝트 및 Snyk Dep Graph 객체는 [https://github.com/snyk/bazel-simple-app](https://github.com/snyk/bazel-simple-app)을 참조하세요.
 {% endhint %}
 
-For a simple Bazel project with a single dependency on a Maven package, you may specify the dependency like this:
+Maven 패키지에 대한 단일 디펜던시가 있는 간단한 Bazel 프로젝트의 경우 다음과 같이 디펜던시를 지정할 수 있습니다.
 
 ```
 maven_jar(
@@ -224,7 +224,7 @@ maven_jar(
 )
 ```
 
-From this you could construct the following Dep Graph JSON object:
+이를 통해 다음과 같이 Dep Graph JSON 객체를 구성할 수 있습니다.
 
 ```
 {
@@ -272,4 +272,4 @@ From this you could construct the following Dep Graph JSON object:
 }
 ```
 
-This particular package (`ch.qos.logback:logback-core@1.0.13`) contains a vulnerability, described in detail in the resulting JSON response object.
+특정 패키지 (`ch.qos.logback:logback-core@1.0.13`)에는 JSON Response 객체에 자세히 설명된 취약점이 포함되어 있습니다.
