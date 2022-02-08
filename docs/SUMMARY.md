@@ -173,7 +173,7 @@
     * [Kubernetes 구성 파일에서 보안 문제를 찾기 위한 통합 구성](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/configure-integration-for-security-issues-in-kubernetes-configuration-files.md)
     * [Kubernetes 구성 파일의 보안 문제 스캔 및 수정](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/scan-and-fix-security-issues-in-kubernetes-configuration-files.md)
     * [Helm Charts의 보안 문제 스캔 및 수정](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/scan-and-fix-security-issues-in-helm-charts.md)
-    * [Working with Kubernetes configuration file test results](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/working-with-kubernetes-configuration-file-test-results.md)
+    * [Kubernetes 구성 파일 테스트 결과 작업](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/working-with-kubernetes-configuration-file-test-results.md)
   * [Scan ARM configuration files](products/snyk-infrastructure-as-code/scan-arm-configuration-files.md)
   * [Detecting infrastructure as code files using a broker](products/snyk-infrastructure-as-code/detecting-infrastructure-as-code-files-using-a-broker.md)
   * [Snyk CLI for Infrastructure as Code](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/README.md)
