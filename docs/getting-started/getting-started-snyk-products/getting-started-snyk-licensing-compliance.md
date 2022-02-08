@@ -1,71 +1,72 @@
-# Snyk 라이선스 준수 관리 시작하기
+# Getting Started with Snyk License Compliance Management
 
 {% hint style="info" %}
-**기능 지원 여부**\
-기본 라이선스 정책에 대한 단일 라이선스 정책 구성은 비즈니스 플랜에서 사용할 수 있습니다. 엔터프라이즈 플랜에 대해서는 전체 정책 생성 및 관리가 가능합니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하세요.
+**Feature availability**  
+Basic license policy configuration on a single default license policy is available with Business plans. Full policy creation and management is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
 {% endhint %}
 
-&#x20;[Snyk Open Source](https://docs.snyk.io/snyk-open-source/open-source-basics)솔루션의 일부분이며 Snyk 라이선스 준수 관리를 시작하여 코드의 [오픈 소스 라이선스 준수](https://snyk.io/learn/open-source-licenses/)를 확인하세요.
+Get started with Snyk license compliance management, to check compliance for the [open source licenses](https://snyk.io/learn/open-source-licenses/) in your code, as part of your [Snyk Open Source](https://docs.snyk.io/snyk-open-source/open-source-basics) solution.
 
 {% hint style="info" %}
-이 프로세스는 Snyk UI 및 [지원 가능한 소스 코드 관리 시스템](../../features/integrations/git-repository-scm-integrations/) 사용에 대해서 설명합니다.\
-[IDE tool](https://docs.snyk.io/integrations/ide-tools) 또는 [CI/CD integration](https://docs.snyk.io/integrations/ci-cd-integrations)을 사용하거나 [Snyk CLI tool](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)을 사용하여 시작할 수 있습니다.
+This process describes using the Snyk UI and a [supported source code management](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations) system.  
+You can also use an [IDE tool](https://docs.snyk.io/integrations/ide-tools) or a [CI/CD integration](https://docs.snyk.io/integrations/ci-cd-integrations), or use the [Snyk CLI tool](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli) to get started using the command line.
 {% endhint %}
 
-## 전제 조건
+## **Prerequisites**
 
-다음 사항을 확인하세요.
+Ensure you have:
 
-* Snyk [유료 요금제](https://snyk.io/plans/).
-* [Snyk Open Source](https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source)에서 설명된 대로 프로젝트를 통합하고 설치한 경우.
+* A Snyk [paid plan](https://snyk.io/plans/).
+* Integrated and installed your projects, as described for [Snyk Open Source](https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source).
 
-## **1**단계: 정책 정의
+## **Stage 1: Define policies**
 
-라이선스 문제에 따라서 조치를 취하기 위해 라이선스 유형에 따른 정책을 정의해야 합니다. 정책은 조직 내에서 다양한 요구사항을 제공합니다. 법무팀과 협력하여 회사의 특정한 정책을 만드세요.
+To take effective action based on license issues, you need to define policies defining these actions, based on license types. Policies provide a way to capture different requirements within an organization, based on factors such as line of business. Work with your legal team to create policies which are specific to your company.
 
-### 정책 규칙 만들기
+### Create policy rules
 
-각 정책에는 라이선스 위반의 심각도를 나타내는 심각도 수준과 함께 허용되는 라이선스와 사용이 금지된 라이선스를 자세히 설명하는 규칙이 포함되어 있습니다. 예를 들어 내부의 전용 라이선스 문제의 심각도 수준은 외부에서 릴리스된 문제보다 심각도 수준이 낮을 수 있습니다.
+Each policy contains rules, detailing which licenses are acceptable and which are forbidden for use, together with a severity level which indicates how severe the license violation is. For example, severity levels for internal-only license issues may be less severe than for those released externally.
 
 ![](../../.gitbook/assets/license-policy.png)
 
-[Licenses overview](https://docs.snyk.io/snyk-open-source/licenses) 및 [Setting a license policy](https://docs.snyk.io/snyk-open-source/license-policies/setting-a-license-policy)를 참조하세요.
+See [Licenses overview](https://docs.snyk.io/snyk-open-source/licenses) and [Setting a license policy](https://docs.snyk.io/snyk-open-source/license-policies/setting-a-license-policy).
 
-## 2단계: 문제 확인
+## Stage 2: View issues
 
-Snyk의 [Git-based integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)은 일반 워크플로우의 일부로 라이선스 스캔을 지원합니다. 스캔을 진행하는 동안 라이선스 문제는 **Issues** 탭에 필터링 가능한 목록으로 나타납니다.
+Snyk’s [Git-based integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations) support license scanning as part of the regular workflow. During scanning, license issues appear as a filterable list in the **Issues** tab:
 
-![](<../../.gitbook/assets/image3 (1).png>)
+![](../../.gitbook/assets/image3%20%281%29.png)
 
-해당 예는 GPL-2.0 라이선스의 대한 심각도가 높은 문제와 해당 라이선스에 대한 정책에 정의된 지침을 제공합니다.
+This example shows a high-severity issue for a GPL-2.0 license, with accompanying instructions as defined in policies for that license.
 
-**snyk test**를 실행한 후 Snyk CLI를 사용하여 라이선스 문제를 확인할 수 있습니다.
+You can also view license issues using the Snyk CLI tool, after running **snyk test**:
 
 ![](../../.gitbook/assets/image2-1-.png)
 
-**디펜던시 확인**
+**View dependencies**
 
-Snyk은 어떠한 디펜던시가 라이선스 문제를 야기했는지 확인하기 위해 전체 디펜던시 트리에서 직접 및 전이 종속성의 라이선스 문제를 제공합니다.
+Snyk shows license issues in both your direct and transitive dependencies, in a full dependency tree to show what dependency introduced the license issue.
 
-![](<../../.gitbook/assets/image4 (1).png>)
+![](../../.gitbook/assets/image4%20%281%29.png)
 
-해당 예는 아래의 심각도가 높은 라이선스 정책 위반이 포함됩니다.
+This example includes two high severity license policy violations, caused by:
 
-* **wicket@1.3.5** npm 패키지에 대한 직접적인 종속성
-* **web-project-starter@0.0.3** 에 의해 도입된 **flickity@2.2.1** 패키지에 대한 전이적 종속성
+* a direct dependency on an npm package called **wicket@1.3.5**
+* a transitive dependency on a package called **flickity@2.2.1** introduced by **web-project-starter@0.0.3**
 
-**목록 및 저작권 확인**
+**View lists and copyrights**
 
-사용 중인 라이선스의 세부 목록을 확인하고 공유할 수 있으며 모든 오픈 소스 구성 요소 및 라이선스가 저작권 정보와 함께 나열되는 보고서를 볼 수 있습니다.
+You can view and share detailed lists of licenses being used, and see a report that lists all the open source components and licenses along with copyright information.
 
 ![](../../.gitbook/assets/copyright.png)
 
-## **3**단계: 프로세스 문제
+## **Stage 3: Process issues**
 
-스캔 중에 식별된 라이선스 문제를 조치를 취하여 해결되지 않은 라이선스 문제를 해소하고 애플리케이션을 구축하고 배포할 수 있습니다.
+You can now take actions to resolve the license issues identified during the scan, to help you build and deploy your application without outstanding licensing issues.
 
-수행하는 작업은 라이선스 조건과 정책에 따라 다릅니다. 예를 들어 라이선스 위반이 발견된 경우 법무팀에 연락하거나 위반을 추가한 디펜던시를 교체하여 이 문제를 해결할 수 있습니다.
+The actions you take depend on the license conditions and on your policies. For example, if a license violation is surfaced, this issue can be mitigated by either approaching your legal team, or by replacing the dependency which added the violation.
 
-## 자세한 내용 확인
+## For more information
 
-[Licenses](../../products/snyk-open-source/licenses/)를 참조하세요.
+See [Licenses](../../products/snyk-open-source/licenses/).
+

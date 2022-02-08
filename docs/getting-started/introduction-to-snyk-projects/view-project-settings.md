@@ -1,29 +1,30 @@
-# 프로젝트 설정 확인
+# View project settings
 
-**Settings**를 클릭하여 프로젝트 설정을 확인하고 편집합니다.
+Click **Settings** from your project, to view and edit project settings:
 
-![](../../.gitbook/assets/screenshot\_2021-04-14\_at\_09.23.38.png)
+![](../../.gitbook/assets/screenshot_2021-04-14_at_09.23.38.png)
 
-**GitHub integration**을 클릭하여 SCM 관련 설정을 편집합니다(다른 SCM에도 적용 가능).
+Click the **GitHub integration** section to edit SCM-specific settings \(applicable also to other SCMs\).
 
-다음을 포함한 설정을 편집할 수 있습니다.
+You can edit settings including:
 
-* 알림 설정
-* 테스트 빈도 업데이트
-* 프로젝트 ID 검색
+* Notification settings
+* Update test frequency
+* Retrieve the unique project ID
 
-## 프로젝트 비활성화
+## Deactivate a project
 
-프로젝트 비활성화는 다음과 같은 절차를 실행합니다.
+Deactivating a project will:
 
-* Github 저장소에서 웹훅을 제거합니다.
-* 새로운 취약점에 대한 pull request를 비활성화합니다.
-* 새로 공개된 취약점에 대해서 Fix pull request요청이 열리지 않도록 비활성화합니다.
-* 반복 테스트를 비활성화 하고 새로 공개된 취약점에 대한 이메일 경고가 해제됩니다.
+* Remove the webhook from the GitHub repository.
+* Disable pull request tests for new vulnerabilities.
+* Disable Fix pull request from being opened for newly disclosed vulnerabilities.
+* Disable recurring tests - email alerts about newly disclosed vulnerabilities will be turned off
 
-## 프로젝트 삭제
+## Delete a project
 
-프로젝트를 삭제하면 다음과 같은 절차가 진행됩니다.
+Deleting a project will:
 
-* Snyk에서 프로젝트 및 모든 과거 스냅샷 데이터를 삭제합니다.
-* Github 저장소에서 웹훅을 제거합니다.
+* Delete the project and all historical snapshot data from Snyk.
+* Remove the webhook from the GitHub repository.
+

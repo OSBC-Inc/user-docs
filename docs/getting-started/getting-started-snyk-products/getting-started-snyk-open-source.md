@@ -40,59 +40,57 @@ Snyk에서 프로젝트를 작업할 수 있도록 소스 코드 통합을 진�
 
 ### 2단계: 프로젝트 추가
 
-Snyk에서 테스트하고 모니터링할 리포지토리를 선택하여 프로젝트를 추가합니다.
+Add projects to test with Snyk, by choosing repositories for Snyk to test and monitor.
 
-1. Snyk.io에서 **프로젝트**를 선택 합니다.
-2. 프로젝트를 추가할 도구(예: Github)를 선택합니다.
-3. **Personal and Organization repositories**에서 사용할 리포지토리를 선택합니다.
-4. **Add selected repositories**를 클릭하여 선택한 리포지토리를 프로젝트로 가져옵니다. 해당 리포지토리는 다음과 같이 설정합니다.
-   1. 취약점에 대한 정기적인 검사를 실행하도록 설정합니다.
-   2. Webhook을 생성하므로 코드를 변경할 때 Snyk은 pull / merge requests를 테스트하여 새로운 디펜던시가 더 많은 취약점을 유발하는지 확인합니다.
-5. 진행률이 표시되며 로그 결과를 보려면 **View log**를 클릭하세요.
-6. 프로젝트 추가가 완료됩니다.
+1. Select **Projects** from snyk.io.
+2. Select the tool to add the project from (for example GitHub).
+3. In **Personal and Organization repositories**, select the repositories to use.
+4. Click **Add selected repositories** to import the selected repositories into your projects. This also:
+   1. Sets Snyk to run a regular check (daily by default) for vulnerabilities.
+   2. Creates a Webhook, so when you change code, Snyk tests your pull / merge requests, to check that new dependencies do not introduce more vulnerabilities.
+5. A progress bar appears: click **View log** to see log results.
+6. Project import completes.
 
 {% hint style="info" %}
-프로젝트 추가 중 오류가 발생하면 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하세요.
+If you encounter any errors during import, see the [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects) information.
 {% endhint %}
 
-### 3단계: 취약점 확
+### Stage 3: View vulnerabilities
 
-프로젝트에 대한 취약점 결과를 확인할 수 있습니다. **Projects** 탭은 추가 후에 기본적으로 추가된 프로젝트에 대한 취약점 정보를 제공합니다.
+You can now view vulnerability results for imported projects. The **Projects** tab appears by default after import, showing vulnerability information for project you've imported.
 
-1. 프로젝트를 클릭하면 발견된 취약점의 수를 포함하여 해당 프로젝트에 대한 취약점 정보를 심각도 수준별로 그룹화하여 확인할 수 있습니다.
-2. 항목을 클릭하여 취약점을 확인하면 모듈, 항목의 위치 수정 방법, 취약점의 자세한 내용을 포함합니다.
+1. Click on an imported project to see vulnerability information for that project, including the number of issues found, grouped by severity level (see screenshot below)
+2. Click on an entry to open the issues view for that entry, including the module, where it was introduced, and how to fix it, plus more details about the vulnerability itself:
 
 ![](<../../.gitbook/assets/view\_vulns\_\_overview (1).png>)
 
 ![](<../../.gitbook/assets/detailed-vuln-information (3) (4) (4) (4) (6) (7) (5) (1) (4).png>)
 
-자세한 내용은 [View project information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information)을 참조하세요.
+See [View project information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information) for more details.
 
-### 4단계: 취약점 수정
+### Stage 4: Fix vulnerabilities
 
-Snyk은 JavaScript, Ruby 및 Java 프로젝트의 경우 pull/merge requests를 통해 취약점을 수정할 수 있습니다.
+For JavaScript, Ruby and Java projects, Snyk can fix your vulnerabilities via fix pull/merge requests:
 
-프로젝트의 Issues로 이동합니다.
+Navigate to the issues view for a project:
 
 ![Screenshot\_2021-04-09\_at\_17.35.25.png](<../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.35.25 (1).png>)
 
-취약점을 수정하기위해 다음과 같이 진행합니다.
+To fix vulnerabilities:
 
-1. **Fix this vulnerability**를 클릭하여 업그레이드(또는 패치)하여 개별 문제를 해결하거나 를 클릭하여 여러 문제를 일괄 수정합니다.
-2. **Open a Fix PR**이 나타나고 선택한 취약점이 표시됩니다.
-3. 수정하려는 추가적인 문제를 선택하거나 항목을 취소하여 수정 사항에서 제거할 수 있습니다.
-4. 화면 하단의 **Open a Fix PR**을 클릭합니다.
-5. Snyk이 PR을 실행하면 결과 화면이 나타납니다.
-6. 추가적으로 **Files changed**탭에서 변경사항에 대한 세부 정보를 확인합니다.
+1. Click **Fix this vulnerability** to upgrade (or patch) to fix an individual issue, or click **Fix these vulnerabilities** to to fix multiple issues at once.
+2. The **Open a Fix PR** screen opens and indicates the vulnerabilities you selected:
+3. Check any additional issues you want to fix, or uncheck items to remove them from the fix. 4. Scroll down to the bottom of the screen and click **Open a Fix PR**. 5. Snyk now actions this PR, then a results screen appears:
+4. Optionally, select the **Files changed** tab to see details of the changes made.
 
 ![](<../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.46.22 (1).png>)
 
 {% hint style="info" %}
-패키지 업그레이드를 사용할 수 없는 경우 Snyk 패치를 이용하여 취약점을 수정할 수 있습니다.
+If no package upgrade is available, you may be able to use Snyk patches to fix vulnerabilities.
 {% endhint %}
 
-자세한 내용은 [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities)를 참조하세요.
+See [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities) for more details.
 
-## 추가 내용
+## For more information
 
-[Snyk Open Source](https://docs.snyk.io/snyk-open-source)를 참조하세요.
+See [Snyk Open Source](https://docs.snyk.io/snyk-open-source).
