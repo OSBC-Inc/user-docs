@@ -172,41 +172,41 @@ $ helm delete my-release
 
 ### Logging
 
-Fluentd is used to aggregate all our services' logs into one file.
+Fluentd는 모든 서비스의 로그를 하나의 파일로 집계하는 데 사용됩니다.
 
-The log file is rotated daily unless the file exceeded `fluentd-umbrella.logrotate.fileMaxSizeInMb` (default 500) and the number of files logrotate keeps is `fluentd-umbrella.logrotate.filesToKeep` (default 14). So a log file for the whole day is generated only the day after, unless it exceeds `fileMaxSizeInMb`.
+로그 파일이 `fluentd-umbrella.logrotate.fileMaxSizeInMb` (기본값 500)을 초과하고 logrotate가 유지되는 파일 수가 `fluentd-umbrella.logrotate.filesToKeep` (기본값 14)인 경우를 제외하고 로그 파일은 매일 순환됩니다. 따라서 `fileMaxSizeInMb`를 초과하지 않는 한 하루 동안의 로그 파일은 다음 날에만 생성됩니다.
 
-Logrotate validates that the number of log files is not above `fluentd-umbrella.logrotate.filesToKeep` by removing the oldest log file when the number of log files is equal to `filesToKeep`+1 files.
+Logrotate는 로그 파일 수가 `filesToKeep`과 같을 때 가장 오래된 로그 파일을 제거하여 로그 파일 수가 `fluentd-umbrella.logrotate.filesToKeep`를 초과하지 않는지 확인합니다.
 
-When a file is rotated, the date and time of rotation is added as a suffix to the file name. To see the current logs, you must tail the `code.log` file. To fetch logs written in the past, pick the log file with date and time after the timeframe you want to see.
+파일이 순환할 때 순환 날짜와 시간은 파일 이름에 접미사로 추가됩니다. 현재 로그를 보려면 `code.log` 파일을 추적해야 합니다. 과거에 작성된 로그를 가져오려면 보려는 시간 이후의 날짜 및 시간이 포함된 로그 파일을 선택합니다.
 
-To fetch all log files to current directory, run:
+모든 로그 파일을 현재 디렉터리에 가져오려면 다음을 실행합니다:
 
 ```
 kubectl cp <your-namespace>/<your-release>-fluentd-0:/var/log/snyk/logs ./
 ```
 
-To fetch log files for specific dates first get exsiting logs list, run:
+특정 날짜에 대한 로그 파일을 가져오려면 먼저 기존 로그 목록을 가져옵니다:
 
 ```
 kubectl exec -it on-prem-fluentd-0 -- ls -l /var/log/snyk/logs
 ```
 
-Then copy the log file you want to fetch by running:
+그 후 다음을 실행하여 가져올 로그 파일을 복사합니다:
 
 ```
 kubectl cp <your-namespace>/<your-release>-fluentd-0:/var/log/snyk/logs/<file-name> ./<target-file-name>
 ```
 
 {% hint style="info" %}
-It may take a few minutes to copy all files.
+모든 파일을 복사하는 데 몇 분 정도 걸릴 수 있습니다.
 {% endhint %}
 
-### Enabling webhooks for broker client for Snyk Code PR Scanning
+### Snyk Code PR 스캔을 위해 broker client에 웹훅을 사용하도록 설정
 
-In order to be able to create and handle SCM webhooks, `broker-client` must be exposed to the outside world.
+SCM 웹훅을 만들고 처리할 수 있으려면 `broker-client`가 외부에 노출되어야 합니다.
 
-A basic ingress is available for it and can be enabled by setting `broker-client.ingress.enabled` to `true` and specifying a host on which the broker client's endpoints will be available via `broker-client.ingress.host` (for example "broker-client.example.com"). The default ingress exposes `/webhook/*` and `/healthcheck` endpoints from the `broker-client` service.
+기본 수신을 사용할 수 있으며, `broker-client.ingress.enabled`를 `true`로 설정하고 `broker-client.ingress.host`를 통해 broker client의 endpoints를 사용할 호스트(예: "broker-client.example.com")를 지정하여 활성화할 수 있습니다.기본 수신은 `broker-client` 서비스에서 `/webhook/*` 및 `/healthcheck` endpoints 노출합니다.
 
 Note that the ingress IP still has to be made available on the specified host via a DNS A record, which will depend on your cloud provider or server setup.
 
