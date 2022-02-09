@@ -83,19 +83,19 @@ docker run --name code-agent \
 
 이 예에서는 다음을 수행합니다:
 
-* We set the current container to use the new network we created **--network mySnykBrokerNetwork**
-* We gave the current container a name **--name code-agent**. It will be used to define the **GIT\_CLIENT\_URL** for the broker client that we will run next.
+* 새로 만든 네트워크를 사용하도록 현재 컨테이너를 설정합니다. **--network mySnykBrokerNetwork**
+* 현재 컨테이너에 **--name code-agent**라는 이름을 지정했습니다. 다음에 실행할 broker client에 대한 **GIT\_CLIENT\_URL**을 정의하는 데 사용됩니다.
 
 ### Broker 설정 확장
 
-Extend your broker setup with the following arguments:
+다음 인수를 사용하여 broker 설정을 확장합니다:
 
 ```
 -e GIT_CLIENT_URL=http://<code agent container>:<code agent port>
 --network <name of created network>
 ```
 
-For example, to extend an existing broker client configured for Gitlab, run:
+예를 들어 Gitlab용으로 구성된 기존 broker client를 확장하려면 다음을 실행합니다:
 
 ```
 docker run \
@@ -109,12 +109,12 @@ docker run \
    snyk/broker:gitlab
 ```
 
-In this example:
+이 예에서는 다음을 수행합니다:
 
-* We set the current container to use the new network we created **--network mySnykBrokerNetwork**
-* In **GIT\_CLIENT\_URL** we used the name we defined in the code-agent container as the host here.
+* 새로 만든 네트워크를 사용하도록 현재 컨테이너를 설정합니다. **--network mySnykBrokerNetwork**
+* **GIT\_CLIENT\_URL**에서는 code agent 컨테이너에서 정의한 이름을 호스트로 사용했습니다.
 
-If you have a running Snyk broker with a custom whitelist (**accept.json**), then ensure the following rule is present in the whitelist:
+사용자 지정 화이트리스트(**accept.json**)를 가진 Snyk broker가 실행 중인 경우 화이트리스트에 다음 규칙이 있는지 확인하십시오:
 
 ```
 {
@@ -125,17 +125,17 @@ If you have a running Snyk broker with a custom whitelist (**accept.json**), the
 }
 ```
 
-(The rule is present by default, so only needed if you override the rule with a custom whitelist.)
+(규칙은 기본적으로 존재하므로 규칙을 사용자 정의 화이트리스트로 재정의하는 경우에만 필요합니다.)
 
 ## 고급 설정
 
 ### 스니펫 코드 활성화
 
-To enable code snippets, additional rules must be added to **accept.json**.
+코드 스니펫을 사용하려면 **accept.json**에 추가적인 규칙을 추가해야 합니다.
 
-See [https://github.com/snyk/broker#custom-approved-listing-filter](https://github.com/snyk/broker#custom-approved-listing-filter) for detailed instructions how to extend **accept.json**.
+**accept.json**을 확장하는 방법은 [https://github.com/snyk/broker#custom-approved-listing-filter](https://github.com/snyk/broker#custom-approved-listing-filter)을 참조하십시오.
 
-For GitHub:
+GitHub의 경우:
 
 ```
 {
@@ -146,7 +146,7 @@ For GitHub:
 }
 ```
 
-For Gitlab:
+Gitlab의 경우:
 
 ```
 {
@@ -157,7 +157,7 @@ For Gitlab:
 }
 ```
 
-For BitBucket Server:
+BitBucket 서버의 경우:
 
 ```
 {
@@ -173,7 +173,7 @@ For BitBucket Server:
 }
 ```
 
-For Azure Repos:
+Azure 저장소의 경우:
 
 ```
 {
@@ -189,12 +189,12 @@ For Azure Repos:
 ```
 
 {% hint style="info" %}
-After these snippets are added, all content from the repository can be accessed through Snyk broker.
+이러한 스니펫이 추가되면 Snyk broker를 통해 모든 컨텐츠에 액세스할 수 있습니다.
 {% endhint %}
 
 ### 프록시 지원
 
-For instructions how to run Broker client through a proxy, see [https://github.com/snyk/broker](https://github.com/snyk/broker). Make sure that requests to the Code agent are not sent through the proxy, by passing `NO_PROXY=<code agent container>`, for example:
+프록시를 통해 broker client를 실행하는 방법에 대한 지침은 [https://github.com/snyk/broker](https://github.com/snyk/broker)를 참조하십시오. `NO_PROXY=<code agent container>`를 전달하여 code agent에 대한 요청이 프록시를 통해 전송되지 않도록 합니다. 예를 들면 다음과 같습니다:
 
 ```
 -e HTTP_PROXY=http://my.proxy.address:8080
@@ -202,14 +202,14 @@ For instructions how to run Broker client through a proxy, see [https://github.c
 -e NO_PROXY=code-agent
 ```
 
-For code agent, add the following environment variables to the **docker run** command:
+code agent의 경우 **docker run** 명령에 다음 환경 변수를 추가합니다:
 
 ```
 -e HTTP_PROXY=http://my.proxy.address:8080
 -e HTTPS_PROXY=http://my.proxy.address:8080
 ```
 
-To disable certificate verification, e.g., in the case of self-signed certificates, add to the code-agent **docker run** command:
+인증서 확인을 비활성화하려면(예: 자체 서명된 인증서인 경우) code agent의 **doker run** 명령에 추가하십시오.:
 
 ```
 -e NODE_TLS_REJECT_UNAUTHORIZED=0
