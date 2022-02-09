@@ -80,7 +80,7 @@
     * [자체 호스팅된 git을 통해 Snyk Code (broker 포함)](products/snyk-code/deployment-options/snyk-code-local-git-support.md)
     * [Snyk Code 로컬 엔진](products/snyk-code/deployment-options/snyk-code-local-engine/README.md)
       * [소개](products/snyk-code/deployment-options/snyk-code-local-engine/introduction.md)
-      * [Configure and deploy Local Engine](products/snyk-code/deployment-options/snyk-code-local-engine/configure-and-deploy-local-engine.md)
+      * [로컬 엔진 구성 및 배포](products/snyk-code/deployment-options/snyk-code-local-engine/configure-and-deploy-local-engine.md)
 * [Snyk Container](products/snyk-container/README.md)
   * [Snyk Container security basics](products/snyk-container/snyk-container-security-basics/README.md)
     * [How Snyk Container works](products/snyk-container/snyk-container-security-basics/how-snyk-container-works.md)

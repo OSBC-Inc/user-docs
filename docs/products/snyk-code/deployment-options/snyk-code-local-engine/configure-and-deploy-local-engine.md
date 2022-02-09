@@ -1,172 +1,172 @@
-# Configure and deploy Local Engine
+# 로컬 엔진 구성 및 배포
 
-### Installing the Helm Chart
+### Helm Chart 설치
 
-To install the chart with the release name `my-release`:
+release 이름을 `my-release`로 chart를 설치하려면 다음을 수행하십시오.:
 
 ```
 $ helm install my-release <gziped-chart>
 ```
 
-These commands deploy `local-code-engine` on the Kubernetes cluster in the default configuration. The **Parameters** section lists the parameters that can be configured during installation.
+`local-code-engine` 이러한 명령은 기본 구성의 쿠버네티스 클러스터에 배포됩니다. **Parameters** 섹션에는 설치 중에 구성할 수 있는 매개변수가 나열됩니다.
 
-To print the default values file of the chart run:
+chart 실행의 기본값 파일을 인쇄하는 방법:
 
 ```
 $ helm show values <gziped-chart>
 ```
 
-#### Uninstalling the Helm Chart
+#### Helm Chart 제거
 
-To uninstall/delete the my-release resources:
+my-release 리소스를 제거/삭제하는 방법:
 
 ```
 $ helm delete my-release
 ```
 
-The command removes all the Kubernetes components associated with the chart and deletes the release. Use the option `--purge` to delete all history too.
+이 명령은 chart와 연결된 모든 쿠버네티스 구성 요소를 제거하고 release를 삭제합니다. 모든 기록도 삭제하려면 `--purge` 옵션을 사용합니다.
 
-### Global Parameters
+### 전역 매개변수
 
-#### Global Required parameters
+#### 전역 필수 매개변수
 
-| Name                                          | Description                  | Default Value |
-| --------------------------------------------- | ---------------------------- | ------------- |
-| `global.imagePullSecret.credentials.username` | Docker hub registry username | `""`          |
-| `global.imagePullSecret.credentials.password` | Docker hub registry password | `""`          |
+| Name                                          | Description        | Default Value |
+| --------------------------------------------- | ------------------ | ------------- |
+| `global.imagePullSecret.credentials.username` | 도커 허브 레지스트리 사용자 이름 | `""`          |
+| `global.imagePullSecret.credentials.password` | 도커 허브 레지스트리 비밀번호   | `""`          |
 
-#### Broker required parameters
+#### Broker 필수 매개 변수
 
-Please use _one_ of the following SCM configurations:
+다음 SCM 구성 중 하나를 사용하십시오.:
 
-| Name                        | Description                                                                                                           | Default Value |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `broker-client.brokerToken` | Unique broker client token                                                                                            | `""`          |
-| `broker-client.brokerType`  | Type of broker client to use. supported options: github-com, github-enterprise, gitlab, bitbucket-server, azure-repos | `""`          |
+| Name                        | Description                                                                                            | Default Value |
+| --------------------------- | ------------------------------------------------------------------------------------------------------ | ------------- |
+| `broker-client.brokerToken` | 고유한 broker client 토큰                                                                                   | `""`          |
+| `broker-client.brokerType`  | 사용할 broker client 유형입니다. 지원되는 옵션: github-com, github-enterprise, gitlab, bitbucket-server, azure-repos | `""`          |
 
-#### GitHub.com parameters
+#### GitHub.com 매개변수
 
-| Name                        | Description                                      | Default Value |
-| --------------------------- | ------------------------------------------------ | ------------- |
-| `broker-client.githubToken` | Token for [http://github.com](http://github.com) | `""`          |
+| Name                        | Description                                | Default Value |
+| --------------------------- | ------------------------------------------ | ------------- |
+| `broker-client.githubToken` | [http://github.com](http://github.com)용 토큰 | `""`          |
 
-#### GitHub Enterprise parameters
+#### GitHub Enterprise 매개변수
 
-| Name                          | Description                                      | Default Value                                     |
-| ----------------------------- | ------------------------------------------------ | ------------------------------------------------- |
-| `broker-client.githubToken`   | Token for [http://github.com](http://github.com) | `""`                                              |
-| `broker-client.githubHost`    | Host name for GitHub server                      | `""`                                              |
-| `broker-client.githubApi`     | GitHub REST API url, excluding scheme            | `"{{ .Values.broker-client.githubHost }}/api/v3"` |
-| `broker-client.githubGraphql` | GitHub GraphQL API url, excluding scheme         | `"{{ .Values.broker-client.githubHost }}/api"`    |
+| Name                          | Description                                | Default Value                                     |
+| ----------------------------- | ------------------------------------------ | ------------------------------------------------- |
+| `broker-client.githubToken`   | [http://github.com](http://github.com)용 토큰 | `""`                                              |
+| `broker-client.githubHost`    | GitHub 서버의 호스트명                            | `""`                                              |
+| `broker-client.githubApi`     | GitHub REST API URL, 스키마 제외                | `"{{ .Values.broker-client.githubHost }}/api/v3"` |
+| `broker-client.githubGraphql` | GitHub GraphQL API URL, 스키마 제외             | `"{{ .Values.broker-client.githubHost }}/api"`    |
 
-#### Gitlab parameters
+#### Gitlab 매개변수
 
-| Name                        | Description                 | Default Value |
-| --------------------------- | --------------------------- | ------------- |
-| `broker-client.gitlabToken` | gitlab Host                 | `""`          |
-| `broker-client.gitlabHost`  | Host name for gitlab server | `""`          |
+| Name                        | Description     | Default Value |
+| --------------------------- | --------------- | ------------- |
+| `broker-client.gitlabToken` | gitlab 호스트      | `""`          |
+| `broker-client.gitlabHost`  | gitlab 서버의 호스트명 | `""`          |
 
-#### Bitbucket server parameters
+#### Bitbucket server 매개변수
 
-| Name                              | Description                    | Default Value |
-| --------------------------------- | ------------------------------ | ------------- |
-| `broker-client.bitbucketUsername` | bitbucket username             | `""`          |
-| `broker-client.bitbucketPassword` | bitbucket password             | `""`          |
-| `broker-client.bitbucketHost`     | Host name for bitbucket server | `""`          |
+| Name                              | Description        | Default Value |
+| --------------------------------- | ------------------ | ------------- |
+| `broker-client.bitbucketUsername` | bitbucket 사용자명     | `""`          |
+| `broker-client.bitbucketPassword` | bitbucket 비밀번호     | `""`          |
+| `broker-client.bitbucketHost`     | bitbucket 서버의 호스트명 | `""`          |
 
-#### Azure Repos parameters
+#### Azure Repos 매개변수
 
-| Name                            | Description               | Default Value |
-| ------------------------------- | ------------------------- | ------------- |
-| `broker-client.azureReposToken` | Token for Azure Repos     | `""`          |
-| `broker-client.azureReposHost`  | Host name for Azure Repos | `""`          |
-| `broker-client.azureReposOrg`   | Azure organization name   | `""`          |
+| Name                            | Description      | Default Value |
+| ------------------------------- | ---------------- | ------------- |
+| `broker-client.azureReposToken` | Azure Repos용 토큰  | `""`          |
+| `broker-client.azureReposHost`  | Azure Repos 호스트명 | `""`          |
+| `broker-client.azureReposOrg`   | Azure 조직 이름      | `""`          |
 
-### Snyk Code Local Engine Parameters
+### Snyk Code 로컬 엔진 매개변수
 
 #### codeapi
 
-| Name                                 | Description                                                                           | Default Value |
-| ------------------------------------ | ------------------------------------------------------------------------------------- | ------------- |
-| `codeapi.imagePullSecrets`           | Docker registry secret names as an array                                              | `[]`          |
-| `codeapi.nameOverride`               | String to partially override names.fullname template (will maintain the release name) | `""`          |
-| `codeapi.fullnameOverride`           | String to fully override names.fullname template                                      | `""`          |
-| `codeapi.serviceAccount.create`      | Specify whether a ServiceAccount should be created                                    | `true`        |
-| `codeapi.serviceaccount.name`        | The name of the ServiceAccount to create                                              | `""`          |
-| `codeapi.serviceAccount.annotations` | Additional Service Account annotations (evaluated as a template)                      | `{}`          |
-| `codeapi.podAnnotations`             | Pod annotations                                                                       | `{}`          |
-| `codeapi.podSecurityContext`         | security context for pod                                                              | `{}`          |
-| `codeapi.securityContext`            | holds security configuration that will be applied to a container                      | `{}`          |
-| `codeapi.nodeSelector`               | Aggregator Node labels for pod assignment                                             | `{}`          |
-| `codeapi.tolerations`                | Aggregator Tolerations for pod assignment                                             | `[]`          |
-| `codeapi.affinity`                   | Forwarder Affinity for pod assignment                                                 | `{}`          |
+| Name                                 | Description                                         | Default Value |
+| ------------------------------------ | --------------------------------------------------- | ------------- |
+| `codeapi.imagePullSecrets`           | 도커 레지스트리 암호명을 배열로                                   | `[]`          |
+| `codeapi.nameOverride`               | names.fullname 템플릿을 부분적으로 재정의하는 문자열(release 이름 유지함) | `""`          |
+| `codeapi.fullnameOverride`           | names.fullname 템플릿을 완전히 재정의하는 문자열                   | `""`          |
+| `codeapi.serviceAccount.create`      | ServiceAccount 생성 여부를 지정                            | `true`        |
+| `codeapi.serviceaccount.name`        | 생성할 ServiceAccount의 이름                              | `""`          |
+| `codeapi.serviceAccount.annotations` | 추가 Service Account 주석(템플릿으로 평가됨)                    | `{}`          |
+| `codeapi.podAnnotations`             | Pod 주석                                              | `{}`          |
+| `codeapi.podSecurityContext`         | pod에 대한 보안 컨텍스트                                     | `{}`          |
+| `codeapi.securityContext`            | 컨테이너에 적용될 보안 구성을 보유                                 | `{}`          |
+| `codeapi.nodeSelector`               | pod 할당을 위한 집계 노드 레이블                                | `{}`          |
+| `codeapi.tolerations`                | pod 할당을 위한 집게 허용 오차                                 | `[]`          |
+| `codeapi.affinity`                   | pod 할당을 위한 전달자 선호도                                  | `{}`          |
 
 #### bundle
 
-| Name                                   | Description                                                                           | Default Value |
-| -------------------------------------- | ------------------------------------------------------------------------------------- | ------------- |
-| `bundle.imagePullSecrets`              | Docker registry secret names as an array                                              | `[]`          |
-| `bundle.nameOverride`                  | String to partially override names.fullname template (will maintain the release name) | `""`          |
-| `bundle.fullnameOverride`              | String to fully override names.fullname template                                      | `""`          |
-| `bundle.serviceAccount.create`         | Specify whether a ServiceAccount should be created                                    | `true`        |
-| `bundle.serviceaccount.name`           | The name of the ServiceAccount to create                                              | `""`          |
-| `bundle.serviceAccount.annotations`    | Additional Service Account annotations (evaluated as a template)                      | `{}`          |
-| `bundle.podAnnotations`                | Pod annotations                                                                       | `{}`          |
-| `bundle.podSecurityContext`            | security context for pod                                                              | `{}`          |
-| `bundle.securityContext`               | holds security configuration that will be applied to a container                      | `{}`          |
-| `bundle.nodeSelector`                  | Aggregator Node labels for pod assignment                                             | `{}`          |
-| `bundle.tolerations`                   | Aggregator Tolerations for pod assignment                                             | `[]`          |
-| `bundle.affinity`                      | Forwarder Affinity for pod assignment                                                 | `{}`          |
-| `bundle.terminationGracePeriodSeconds` | Duration in seconds the pod needs to terminate gracefully                             | `10`          |
+| Name                                   | Description                                        | Default Value |
+| -------------------------------------- | -------------------------------------------------- | ------------- |
+| `bundle.imagePullSecrets`              | 도커 레지스트리 암호명을 배열로                                  | `[]`          |
+| `bundle.nameOverride`                  | names.fullname 템플릿을 부분적으로 재정의하는 문자열(release명을 유지함) | `""`          |
+| `bundle.fullnameOverride`              | names.fullname 템플릿을 완전히 재정의하는 문자열                  | `""`          |
+| `bundle.serviceAccount.create`         | ServiceAccount 생성 여부 지정                            | `true`        |
+| `bundle.serviceaccount.name`           | 생성할 ServiceAccount의 이름                             | `""`          |
+| `bundle.serviceAccount.annotations`    | 추가 서비스 계정 주석(템플릿으로 평가됨)                            | `{}`          |
+| `bundle.podAnnotations`                | Pod 주석                                             | `{}`          |
+| `bundle.podSecurityContext`            | pod에 대한 보안 컨텍스트                                    | `{}`          |
+| `bundle.securityContext`               | 컨테이너에 적용될 보안 구성을 보유합니다.                            | `{}`          |
+| `bundle.nodeSelector`                  | Pod 할당을 위한 집계 노드 레이블                               | `{}`          |
+| `bundle.tolerations`                   | Pod 할당에 대한 집계 허용 오차                                | `[]`          |
+| `bundle.affinity`                      | Pod 할당을 위한 전달자 선호도                                 | `{}`          |
+| `bundle.terminationGracePeriodSeconds` | Pod가 정상적으로 종료되어야 하는 기간(초)                          | `10`          |
 
 #### suggest
 
-| Name                                 | Description                                                                           | Default Value |
-| ------------------------------------ | ------------------------------------------------------------------------------------- | ------------- |
-| `suggest.imagePullSecrets`           | Docker registry secret names as an array                                              | \`\[]         |
-| `suggest.nameOverride`               | String to partially override names.fullname template (will maintain the release name) | `""`          |
-| `suggest.fullnameOverride`           | String to fully override names.fullname template                                      | `""`          |
-| `suggest.serviceAccount.create`      | Specify whether a ServiceAccount should be created                                    | `true`        |
-| `suggest.serviceaccount.name`        | The name of the ServiceAccount to create                                              | `""`          |
-| `suggest.serviceAccount.annotations` | Additional Service Account annotations (evaluated as a template)                      | `{}`          |
-| `suggest.podAnnotations`             | Pod annotations                                                                       | `{}`          |
-| `suggest.podSecurityContext`         | security context for pod                                                              | `{}`          |
-| `suggest.securityContext`            | holds security configuration that will be applied to a container                      | `{}`          |
-| `suggest.nodeSelector`               | Aggregator Node labels for pod assignment                                             | `{}`          |
-| `suggest.tolerations`                | Aggregator Tolerations for pod assignment                                             | `[]`          |
-| `suggest.affinity`                   | Forwarder Affinity for pod assignment                                                 | `{}`          |
+| Name                                 | Description                                      | Default Value |
+| ------------------------------------ | ------------------------------------------------ | ------------- |
+| `suggest.imagePullSecrets`           | 도커 레지스트리 암호명을 배열로                                | \`\[]         |
+| `suggest.nameOverride`               | names.fullname 템플릿을 부분적으로 재정의하는 문자열(릴리스 이름을 유지함) | `""`          |
+| `suggest.fullnameOverride`           | names.fullname 템플릿을 완전히 재정의하는 문자열                | `""`          |
+| `suggest.serviceAccount.create`      | names.fullname 템플릿을 완전히 재정의하는 문자열                | `true`        |
+| `suggest.serviceaccount.name`        | 생성할 ServiceAccount의 이름                           | `""`          |
+| `suggest.serviceAccount.annotations` | 추가 서비스 계정 주석(템플릿으로 평가됨)                          | `{}`          |
+| `suggest.podAnnotations`             | Pod 주석                                           | `{}`          |
+| `suggest.podSecurityContext`         | pod에 대한 보안 컨텍스트                                  | `{}`          |
+| `suggest.securityContext`            | 컨테이너에 적용될 보안 구성을 보유합니다.                          | `{}`          |
+| `suggest.nodeSelector`               | pod 할당을 위한 집계 노드 레이블                             | `{}`          |
+| `suggest.tolerations`                | pod 할당에 대한 집계 허용 오차                              | `[]`          |
+| `suggest.affinity`                   | pod 할당을 위한 전달자 선호도                               | `{}`          |
 
 #### broker-client
 
-| Name                                       | Description                                                                           | Default Value |
-| ------------------------------------------ | ------------------------------------------------------------------------------------- | ------------- |
-| `broker-client.codeSnippet.enabled`        | Enable code Snippets                                                                  | `false`       |
-| `broker-client.imagePullSecrets`           | Docker registry secret names as an array                                              | `[]`          |
-| `broker-client.nameOverride`               | String to partially override names.fullname template (will maintain the release name) | `""`          |
-| `broker-client.fullnameOverride`           | String to fully override names.fullname template                                      | `""`          |
-| `broker-client.serviceAccount.create`      | Specify whether a ServiceAccount should be created                                    | `true`        |
-| `broker-client.serviceaccount.name`        | The name of the ServiceAccount to create                                              | `""`          |
-| `broker-client.serviceAccount.annotations` | Additional Service Account annotations (evaluated as a template)                      | `{}`          |
-| `broker-client.podAnnotations`             | Pod annotations                                                                       | `{}`          |
-| `broker-client.podSecurityContext`         | security context for pod                                                              | `{}`          |
-| `broker-client.securityContext`            | holds security configuration that will be applied to a container                      | `{}`          |
-| `broker-client.nodeSelector`               | Aggregator Node labels for pod assignment                                             | `{}`          |
-| `broker-client.tolerations`                | Aggregator Tolerations for pod assignment                                             | `[]`          |
-| `broker-client.affinity`                   | Forwarder Affinity for pod assignment                                                 | `{}`          |
+| Name                                       | Description                                      | Default Value |
+| ------------------------------------------ | ------------------------------------------------ | ------------- |
+| `broker-client.codeSnippet.enabled`        | 코드 스니펫 활성화                                       | `false`       |
+| `broker-client.imagePullSecrets`           | Docker 레지스트리 암호명을 배열로                            | `[]`          |
+| `broker-client.nameOverride`               | names.fullname 템플릿을 부분적으로 재정의하는 문자열(릴리스 이름을 유지함) | `""`          |
+| `broker-client.fullnameOverride`           | names.fullname 템플릿을 완전히 재정의하는 문자열                | `""`          |
+| `broker-client.serviceAccount.create`      | ServiceAccount 생성 여부 지정                          | `true`        |
+| `broker-client.serviceaccount.name`        | 생성할 ServiceAccount의 이름                           | `""`          |
+| `broker-client.serviceAccount.annotations` | 추가 서비스 계정 주석(템플릿으로 평가됨)                          | `{}`          |
+| `broker-client.podAnnotations`             | Pod 주석                                           | `{}`          |
+| `broker-client.podSecurityContext`         | pod에 대한 보안 컨텍스트                                  | `{}`          |
+| `broker-client.securityContext`            | <p>컨테이너에 적용될 보안 구성을 보유합니다.</p><p> </p>           | `{}`          |
+| `broker-client.nodeSelector`               | pod 할당을 위한 집계 노드 레이블                             | `{}`          |
+| `broker-client.tolerations`                | pod 할당에 대한 집계 허용 오차                              | `[]`          |
+| `broker-client.affinity`                   | pod 할당을 위한 전달자 선호도                               | `{}`          |
 
-### Third-party charts
+### 서드파티 charts
 
-If you want to configure some of the third-party services that we use, examples can be found here:
+당사가 사용하는 일부 타사 서비스를 구성하려는 경우 다음에서 예제를 참조하십시오:
 
 * [Ambassador](https://github.com/emissary-ingress/emissary/tree/master/charts/emissary-ingress)
 * [Redis](https://github.com/bitnami/charts/tree/master/bitnami/redis)
 * [Fluentd](https://github.com/bitnami/charts/tree/master/bitnami/fluentd)
 
-### Chart Usage
+### Chart 사용
 
-You can edit the provided YAML file according to your needs.
+필요에 따라 제공된 YAML 파일을 편집할 수 있습니다.
 
-Alternatively, you can use your own YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
+또는 chart를 설치하는 동안 매개변수 값을 지정하는 고유한 YAML 파일을 사용할 수 있습니다. 예를 들어,
 
 `$ helm install my-release -f your-values.yaml`
 
@@ -204,7 +204,7 @@ It may take a few minutes to copy all files.
 
 ### Enabling webhooks for broker client for Snyk Code PR Scanning
 
-In order to be able to create and handle SCM webhooks, `broker-client` must be exposed to the outside world.&#x20;
+In order to be able to create and handle SCM webhooks, `broker-client` must be exposed to the outside world.
 
 A basic ingress is available for it and can be enabled by setting `broker-client.ingress.enabled` to `true` and specifying a host on which the broker client's endpoints will be available via `broker-client.ingress.host` (for example "broker-client.example.com"). The default ingress exposes `/webhook/*` and `/healthcheck` endpoints from the `broker-client` service.
 
@@ -217,4 +217,4 @@ You can specify the name of the secret you wish to use with `broker-client.ingre
 If you do not already have a secret created for that host, you can set the `key` and `cert` values to the key and certificate, respectively, that you created for use with the host that the ingress will be using (they will be Base64 encoded for you
 
 Read more about securing an ingress with TLS [here](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls).\
-\
+\\
