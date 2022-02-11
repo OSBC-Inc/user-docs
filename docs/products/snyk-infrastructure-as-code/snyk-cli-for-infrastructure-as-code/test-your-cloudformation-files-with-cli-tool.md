@@ -1,29 +1,30 @@
-# CLI를 사용하여 CloudFormation 파일 테스트 진행
+# Test your CloudFormation files with CLI tool
 
-Snyk Infrastructure as Code를 사용하면 CLI에서 직접 구성 파일을 테스트할 수 있습니다.
+With Snyk Infrastructure as Code, you can test your configuration files directly from the CLI.
 
-CloudFormation 파일에서 Snyk Infrastructure as Code는 yaml, json 형식 검색을 지원합니다.
+Snyk Infrastructure as Code for CloudFormation supports scanning yaml & json formats.
 
 {% hint style="info" %}
-AWS CDK 응용 프로그램을 검색할 수도 있습니다. 자세한 내용은 [Test your AWS CDK files with our CLI tool](https://docs.snyk.io/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-aws-cdk-files-with-our-cli-tool)을 참조하세요.
+You can also scan AWS CDK applications. See [Test your AWS CDK files with our CLI tool](https://docs.snyk.io/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-aws-cdk-files-with-our-cli-tool).
 {% endhint %}
 
-CLI는 다음과 같이 사용할 수 있습니다.
+You can use the CLI as follows:
 
-## 지정된 파일에 대한 issue를 테스트하는 방법
+## To test for an issue on specified files:
 
-```
+```text
 snyk iac test
 ```
 
-예를 들어 CLI에서 다음과 같이 입력합니다.
+For example, from the CLI enter the following:
 
-```
+```text
 snyk iac test deploy.yaml
 ```
 
-다음과 같이 파일 이름을 추가하여 여러 파일을 지정할 수 있습니다.
+You can also specify multiple files by appending the file names after each other, such as:
 
-```
+```text
 snyk iac test file-1.yaml file-2.yaml
 ```
+
