@@ -206,15 +206,14 @@ kubectl cp <your-namespace>/<your-release>-fluentd-0:/var/log/snyk/logs/<file-na
 
 SCM 웹훅을 만들고 처리할 수 있으려면 `broker-client`가 외부에 노출되어야 합니다.
 
-기본 수신을 사용할 수 있으며, `broker-client.ingress.enabled`를 `true`로 설정하고 `broker-client.ingress.host`를 통해 broker client의 endpoints를 사용할 호스트(예: "broker-client.example.com")를 지정하여 활성화할 수 있습니다.기본 수신은 `broker-client` 서비스에서 `/webhook/*` 및 `/healthcheck` endpoints 노출합니다.
+기본 수신을 사용할 수 있으며, `broker-client.ingress.enabled`를 `true`로 설정하고 `broker-client.ingress.host`를 통해 broker client의 endpoints를 사용할 호스트(예: "broker-client.example.com")를 지정하여 활성화할 수 있습니다. 기본 수신은 `broker-client` 서비스에서 `/webhook/*` 및 `/healthcheck` endpoints 노출합니다.
 
-Note that the ingress IP still has to be made available on the specified host via a DNS A record, which will depend on your cloud provider or server setup.
+지정한 호스트에서 DNS A 레코드를 통해 수신 IP를 계속 사용할 수 있어야 하며, 이는 클라우드 제공자 또는 서버 설정에 따라 다릅니다.
 
-By default, the ingress endpoints are insecure. In order to secure them using TLS, set `broker-client.ingress.tls.enabled` to `true`.
+기본적으로 the ingress endpoints are insecure. TLS를 사용하여 이러한 파일을 보호하려면 `broker-client.ingress.tls.enabled`를 `true`로 설정하십시오.
 
-You can specify the name of the secret you wish to use with `broker-client.ingress.tls.secret.name`, or leave it empty to default to the name of the service suffixed with `-tls-secret`.
+`broker-client.ingress.tls.secret.name`과 함께 사용할 암호의 이름을 지정하거나, `-tls-secret`으로 접미사가 붙은 서비스 이름을 기본값으로 지정하려면 비워 두십시오.
 
-If you do not already have a secret created for that host, you can set the `key` and `cert` values to the key and certificate, respectively, that you created for use with the host that the ingress will be using (they will be Base64 encoded for you
+해당 호스트에 대해 생성된 암호가 없는 경우, 수신이 사용할 호스트와 함께 사용하기 위해 만든 키 및 인증서 값을 각각 설정할 수 있습니다. (Base64로 인코딩됨)
 
-Read more about securing an ingress with TLS [here](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls).\
-\\
+TLS로 수신 보안에 대한 자세한 내용은 [여기](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)를 참조하십시오.
