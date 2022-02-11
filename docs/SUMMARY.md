@@ -183,7 +183,7 @@
     * [CLI를 사용하여 Terraform 파일 테스트 진행](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-terraform-files-with-the-cli-tool.md)
     * [CLI를 사용하여 CloudFormation 파일 테스트 진행](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-cloudformation-files-with-cli-tool.md)
     * [CLI를 사용하여 AWS CDK 파일 테스트 진행](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-aws-cdk-files-with-our-cli-tool.md)
-    * [Test your Kubernetes files with our CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool.md)
+    * [CLI를 사용하여 Kubernetes 파일 테스트 진행](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool.md)
     * [Test your Kustomize files with our CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kustomize-files-with-our-cli-tool.md)
     * [Testing Helm Charts with our CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-helm-charts-with-our-cli-tool.md)
     * [Test your ARM files with the CLI tool](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-arm-files-with-the-cli-tool.md)

@@ -1,51 +1,50 @@
-# Test your Kubernetes files with our CLI tool
+# CLI를 사용하여 Kubernetes 파일 테스트 진행
 
-With Snyk Infrastructure as Code, you can test your configuration files directly from the CLI.
+Snyk Infrastructure as Code를 사용하여 CLI에서 직접 구성 파일을 테스트할 수 있습니다.
 
-Snyk Infrastructure as Code for Kubernetes supports:
+Kubernetes에서 Snyk Infrastructure as Code는 다음 항목을 지원합니다.
 
 * Deployments, Pods and Services.
 * CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet, and ReplicationController.
 
-You can use the CLI as follows:
+CLI는 다음과 같이 사용할 수 있습니다.
 
-## To test for an issue on specified files:
+## 지정된 파일에 대한 issue 테스트 진행
 
-```text
+```
 snyk iac test
 ```
 
-For example, from the CLI enter the following:
+예를 들어, CLI에서 다음과 같이 입력합니다.
 
-```text
+```
 snyk iac test deploy.yaml
 ```
 
-You can also specify multiple files by appending the file names after each other, such as:
+다음과 같이 파일 이름을 추가하여 여러 파일을 지정할 수 있습니다.
 
-```text
+```
 snyk iac test file-1.yaml file-2.yaml
 ```
 
-## To scan a Helm chart using the CLI
+## CLI를 사용하여 Helm Charts 스캔 진행
 
-You scan a Helm chart by converting the template to a rendered Kuberenetes manifest file and then scanning this using the Snyk IaC CLI.
+렌더링된 Kuberenetes 매니페스트 파일로 템플릿을 변환한 다음 Snyk IaC CLI를 사용하여 Helm Charts를 스캔합니다.
 
-```text
+```
 helm template ./iac-helm > helm.yaml
 snyk iac test helm.yaml
 ```
 
-change \`iac-helm\` for your Helm chart name.
+Helm Charts 이름을 `iac-helm`으로 변경합니다.
 
-## To scan a Kustomize template using the CLI
+## CLI를 사용하여 Kustomize 템플릿 스캔 진행
 
-You scan a Kustomize template by building the Kuberenetes manifest file and then scanning this using the Snyk IaC CLI.
+Kuberenetes 매니페스트 파일을 작성한 다음 Snyk IaC CLI를 사용하여 Kustomize 템플릿을 스캔합니다.
 
-```text
+```
 kustomize build > kubernetes.yaml
 snyk iac test kubernetes.yaml
 ```
 
-Depending on your kustomize templates, you may need to provide a name after the build argument.
-
+Kuberenetes 템플릿에 따라 빌드 파라미터 뒤에 이름을 제공해야 할 수 있습니다.
