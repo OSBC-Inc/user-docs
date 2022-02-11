@@ -1,6 +1,6 @@
-# Snyk CLI로 Terraform 파일 테스트
+# Snyk CLI를 사용하여 Terraform 파일 테스트 진행
 
-Snyk Infrastructure as Code에서 CLI를 사용하여 정적 구성 파일과 Terraform Plan 출력을 모두 검색할 수 있습니다.
+Snyk Infrastructure as Code에서 CLI를 사용하여 정적 구성 파일과 Terraform Plan output을 모두 검색할 수 있습니다.
 
 |                                   | **Terraform configuration files** | **Terraform Plan file** |
 | --------------------------------- | --------------------------------- | ----------------------- |
@@ -39,44 +39,44 @@ Terraform Plan은 구성 파일을 작성하는 것과 변경 사항을 배포�
 
 이 파일은 처리하기 위해 Snyk으로 전송하지 않으며 CLI 내에서 로컬로 검색하며 시스템을 떠나지 않습니다.
 
-## To scan Terraform Plan output:
+## Terraform Plan output 스캔 진행
 
-Provide the path to your Terraform Plan output which must be stored as a valid JSON file.
+유효한 JSON 파일로 저장해야 하는 Terraform Plan output 경로를 제공합니다.
 
 ```
 snyk iac test tf-plan.json
 ```
 
-By default, we will scan the changes that will be made to your infrastructure, not the full infrastructure.
+기본적으로 인프라에 적용하는 변경 사항을 검색합니다.
 
-You can change this behaviour by providing the `--scan=` flag
+`--scan=` 플래그를 제공하여 해당 동작을 변경할 수 있습니다.
 
-* `--scan=resource-changes` is the default behaviour. This will scan only the changes that are going to be made to your infrastructure if you ran `$ terraform apply`
-* `--scan=planned-values` will scan the full planned state, providing results of the existing infrastructure plus changes that will be made.
+* `--scan=resource-changes`는 기본 동작입니다. `$ terraform apply`를 실행한 경우 인프라 변경 내용만 검색합니다.
+* `--scan=planed-values`는 전체 plan 상태를 검색하여 기존 인프라의 결과와 변경 사항을 제공합니다.
 
-If you do not already have your terraform plan output saved as JSON file, you may need to follow these steps:
+아직 Terraform Plan output을 JSON 파일로 저장하지 않은 경우 다음 단계를 진행해야 할 수 있습니다.
 
 ```
 terraform plan -out=tfplan.binary
 terraform show -json tfplan.binary > tf-plan.json
 ```
 
-You can name the tf-plan.json file according to your needs.
+필요에 따라 `tf-plan.json` 파일의 이름을 지정할 수 있습니다.
 
-These files are considered sensitive and is not recommended to commit them to source control.
+이러한 파일은 중요한 파일로 간주하므로 커밋하지 않는 것이 좋습니다.
 
 ## Troubleshooting
 
-### There are differences between scanning the static files & plan output
+### 정적 파일 검색과 Plan output 사이에는 차이가 있습니다.
 
-This could be due to the following
+다음과 같은 이유로 발생합니다.
 
-* **Variables** - Terraform Plan output considers the values stored in variables
-* **Terraform Modules** - Terraform Plan output will include any configuration issues found from Terraform Modules that you may be using
-* **Delta** - By default, scanning the Terraform Plan output will only scan for configuration issues on the changes that will be made, not the whole deployment. Whereas the static scan looks at all of the files. Try re-running the scan with `--scan=planned-values` appended
+* **변수** - Terraform Plan output에서 변수에 저장된 값을 고려합니다.
+* **Terraform Modules** - Terraform Plan output에는 사용 중인 Terraform Modules에서 발견된 모든 구성 문제가 포함됩니다.
+* **Delta** - 기본적으로 Terraform Plan output을 검색하면 전체 배포가 아닌 변경 사항에 대한 구성 문제만 검색합니다. 반면 정적 검색은 모든 파일을 살펴봅니다. `--scan=planning-valules`를 추가하여 검색을 다시 실행해 보십시오.
 
 ```
 Note: the flag --experimental is not required anymore when testing your Terraform projects.
 ```
 
-If you have found a discrepancy that you cannot explain with the above, please raise a support ticket.
+위에서 발견하지 않은 항목이 발견되면 지원 티켓을 올려주시면 감사하겠습니다.
