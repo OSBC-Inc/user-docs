@@ -38,3 +38,25 @@ Select **Projects**, then click on the imported project entry, to see informatio
 
 ![](../../.gitbook/assets/getting-started-snyk-iac-1.png)
 
+(Issues are sorted into project types: Helm, Kubernetes and Terraform.)
+
+Click on a project to see more information and details of the issues in a configuration file:
+
+![](../../.gitbook/assets/getting-started-snyk-iac-2.png)
+
+{% hint style="info" %}
+If you encounter any errors during import, see [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects) FAQs.
+{% endhint %}
+
+## Stage 3: View and fix config files
+
+Act on the recommendations produced by Snyk IaC.
+
+1.
+2.
+3.
+4.
+
+## For more information
+
+See [Infrastructure as Code](https://docs.snyk.io/snyk-infrastructure-as-code).
