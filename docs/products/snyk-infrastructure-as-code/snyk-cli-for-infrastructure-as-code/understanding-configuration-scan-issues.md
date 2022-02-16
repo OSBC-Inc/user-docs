@@ -1,36 +1,36 @@
 # Understanding the CLI Output
 
-Snyk analyzes your provided configuration file for issues and provides advice on how to resolve the issue directly from the CLI.
+Snyk은 제공된 구성 파일에서 이슈를 분석하고 CLI에서 직접 이슈를 해결하는 방법에 대한 조언을 제공합니다.
 
-For example - scanning a Terraform file:
+예를 들어, Terraform 파일을 검색합니다.
 
 ```
 snyk iac test aws_api_gateway_stage_logging.tf
 ```
 
-could give an output as follows
+다음과 같이 출력됩니다.
 
 ![](../../../.gitbook/assets/screenshot-2021-09-28-at-19.58.22.png)
 
-This example is of output from a Terraform file, but this guide applies to any file format including Kubernetes or CloudFormation.
+이 예제는 Terraform 파일에서 출력된 것이지만, 안내문구는 Kubernetes 또는 CloudFormation을 포함한 모든 파일 형식에 적용됩니다.
 
-## List of vulnerabilities—sorted by severity, where each is detailed as follows:
+## 취약점 목록 - 심각도에 따라 정렬되며, 각 취약점은 다음과 같이 자세히 설명합니다
 
-**A clear heading line** - specifying the issue that has been detected, the severity of that issue and the Snyk Policy Id for that particular issue.
+**A clear heading line** - 탐지된 이슈, 해당 이슈의 심각도 및 특정 이슈에 대한 Snyk 정책 ID를 지정합니다.
 
-**Location** - the property path within the configuration file at which the issue has been identified. See the example below for more details.
+**Location** - 문제가 확인된 구성 파일 내의 속성 경로입니다. 자세한 내용은 아래 예를 참조하십시오.
 
-## **As an example:**
+## **Example**
 
 ![](../../../.gitbook/assets/screenshot-2021-09-28-at-20.00.36.png)
 
-The path of this issue is specified as:
+이슈의 경로는 다음과 같습니다.
 
 ```
 resource > aws_api_gateway_stage[denied] > access_log_settings
 ```
 
-In the following code you can see that line 1 represents the contents of the `aws_api_gateway_stage` block named "denied" which is missing the `access_log_settings` field.
+다음 코드에서는 1번째 줄이 `access_log_settings` 필드가 누락된 "denied"라는 이름의 `aws_api_gateway_stage` 블록의 내용을 나타내는 것을 볼 수 있습니다.
 
 {% code title="aws_api_gateway_stage_logging.tf" %}
 ```
