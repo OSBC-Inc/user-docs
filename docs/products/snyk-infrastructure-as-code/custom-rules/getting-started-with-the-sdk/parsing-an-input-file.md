@@ -1,12 +1,12 @@
 # Parsing an input file
 
-It can be difficult to understand the internal representation of your input files as you write your Rego code. As we will see when we learn [how to write a rule](writing-a-rule.md),  the input value is a JSON-like object but the input files could also be YAML, Terraform, or [Terraform Plan JSON Output](https://www.terraform.io/docs/internals/json-format.html). To help understand how these are translated into JSON we have provided a `parse` command.
+Rego 코드를 작성할 때 입력 파일의 내부 표현을 이해하는 것은 어려울 수 있습니다. [규칙 작성 방법](writing-a-rule.md)을 배울 때 알게 되겠지만 입력 값은 JSON과 유사한 객체이지만 입력 파일은 YAML, Terraform 또는 [Terraform Plan JSON Output](https://www.terraform.io/internals/json-format)일 수도 있습니다. 이러한 항목이 JSON으로 변환되는 방법을 쉽게 이해할 수 있도록 parse 명령을 제공했습니다.
 
-You will need an IaC file to use as an input file. This input file can also be used when [testing the rules](testing-a-rule.md), where we parse your files into JSON by default.
+입력 파일로 사용할 IaC 파일이 필요합니다. 이 입력 파일은 기본적으로 파일을 JSON으로 구문 분석할 때 [규칙을 테스트](testing-a-rule.md)할 때도 사용할 수 있습니다.
 
 ### Parsing Terraform files
 
-Take, for example, the following Terraform file:
+예를 들어, 다음 Terraform 파일을 사용합니다.
 
 {% code title="example.tf" %}
 ```
@@ -21,13 +21,13 @@ resource "aws_redshift_cluster" "example" {
 ```
 {% endcode %}
 
-To get the equivalent JSON format, run the parse command:
+동등한 JSON 형식을 가져오려면 parse 명령을 실행합니다.
 
 ```
 snyk-iac-rules parse example.tf --format hcl2
 ```
 
-This prints out the JSON, which you can use as guidance for writing your rules:
+다음과 같이 규칙을 작성하기 위한 JSON이 출력됩니다.
 
 ```
 {
@@ -46,7 +46,7 @@ This prints out the JSON, which you can use as guidance for writing your rules:
 }
 ```
 
-In Rego, accessing the `node_type` field would look like:&#x20;
+Rego에서 `node_type`필드에 액세스하는 것은 다음과 같습니다.
 
 ```
 input.resource.aws_redshift_cluster.example.node_type
@@ -54,7 +54,7 @@ input.resource.aws_redshift_cluster.example.node_type
 
 ### Parsing YAML files
 
-Another example is the following YAML file, defining a Kubernetes resource:
+또 다른 예는 Kubernetes 리소스를 정의하는 YAML 파일입니다.
 
 {% code title="example.yaml" %}
 ```
@@ -71,13 +71,13 @@ spec:
 ```
 {% endcode %}
 
-To get the equivalent JSON format, run the parse command:
+동등한 JSON 형식을 가져오려면 parse 명령어를 실행합니다.
 
 ```
 snyk-iac-rules parse example.yaml --format=yaml
 ```
 
-This prints out the JSON, which you can use as guidance for writing your rules:
+다음과같이 규칙을 작성하기 위한 JSON이 출력됩니다.
 
 ```
 {
@@ -100,7 +100,7 @@ This prints out the JSON, which you can use as guidance for writing your rules:
 }
 ```
 
-In Rego, accessing the `privileged` field would look like:&#x20;
+Rego에서 `privileged` 필드에 액세스하는 것은 다음과 같습니다.
 
 ```
 input.spec.containers[0].securityContext.privileged
@@ -108,7 +108,7 @@ input.spec.containers[0].securityContext.privileged
 
 ### Parsing Terraform Plan JSON Output files
 
-Another example is the following Terraform Plan JSON Output file, returned by the `terraform show -json ./plan/example.json.tfplan` command:
+또 다른 예는 다음 Terraform Plan JSON output 파일로, `terraform show -json ./plan/example.json.tfplan` 명령에서 반환됩니다.
 
 {% code title="example.json.tfplan" %}
 ```
@@ -211,17 +211,16 @@ Another example is the following Terraform Plan JSON Output file, returned by th
     }
   }
 }
-
 ```
 {% endcode %}
 
-To get the equivalent JSON format, run the parse command:
+동등한 JSON 형식을 가져오려면 parse 명령어를 실행합니다.
 
 ```
 snyk-iac-rules parse example.json.tfplan --format=tf-plan
 ```
 
-This prints out the JSON, which you can use as guidance for writing your rules:
+다음과같이 규칙을 작성하기 위한 JSON이 출력됩니다.
 
 ```
 {
@@ -240,7 +239,7 @@ This prints out the JSON, which you can use as guidance for writing your rules:
 }
 ```
 
-In Rego, accessing the `tags` field would look like:&#x20;
+Rego에서 `tags` 필드에 액세스하는 것은 다음과 같습니다.
 
 ```
 input.resource.aws_vpc.example.tags
