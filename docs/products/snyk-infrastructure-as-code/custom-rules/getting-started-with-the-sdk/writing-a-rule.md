@@ -1,49 +1,49 @@
-# Writing a rule
+# Rule 작성
 
-### Rules in Rego
+### Rego의 Rules
 
-Rules are written in Rego. When you are writing Rego, you do two things:
+Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수행합니다.
 
-1. Write **rules** that make policy decisions. A rule is a conditional assignment.
-2. Organise rules into **policies**. A policy is a set of rules with a hierarchical name
+1. 정책 결정을 내리는 Rule을 작성하세요. Rule은 조건부 할당입니다.
+2. Rule을 정책으로 구성합니다. 정책은 계층적 이름을 가진 Rule 집합입니다.
 
-To learn more about the Policy Language, please visit the official [OPA Policy Language Documentation Page](https://www.openpolicyagent.org/docs/latest/policy-language/).
+정책 언어에 대해 자세히 확인하려면 [공식 OPA 정책 언어 문서 페이지](https://www.openpolicyagent.org/docs/latest/policy-language/)를 참조하세요.
 
 {% hint style="info" %}
-You can also use the [OPA Playground](https://play.openpolicyagent.org) to try out Rego, or run examples of this guide.
+[OPA Playground](https://play.openpolicyagent.org)를 사용하여 Rego를 사용해보거나 가이드의 예시를 실행할 수도 있습니다.
 {% endhint %}
 
-### How to generate a new rule
+### 새로운 Rule을 생성하는 방법
 
-There are two options to get started:
+시작할 수 있는 두 가지 옵션이 있습니다.
 
-1.  Use the `template` command to generate the required files for writing a rule:
+1.  다음 명령어를 이용하여 template 규칙 작성에 필요한 파일을 생성합니다.
 
     ```
     snyk-iac-rules template --rule <RULE-NAME> --format <hcl2|json|yaml|tf-plan>
     ```
 
-    This generates the scaffolding for the rule, including fixture files based on the provided configuration format. For more details, read the [documentation about the template command](../sdk-reference.md#template-options).
-2. Create a Rego policy from scratch and match the expected file and folder structure on your own:\
-   `rules` \
-   `└── my_rule` \
-   &#x20;       `├── main.rego` \
-   &#x20;       `└── main_test.rego`
+    이는 제공된 구성 형식을 기반으로 하는 fixture 파일을 포함하여 Rule에 대한 스캐폴딩을 생성합니다. 자세한 내용은 [documentation about the template command](../sdk-reference.md#template-options)를 참조하세요.
+2. Rego 정책을 처음부터 만들고 예상 파일 및 폴더 구조를 직업 일치시킵니다.\
+   `rules`\
+   `└── my_rule`\
+   `├── main.rego`\
+   `└── main_test.rego`
 
 {% hint style="info" %}
-You will have to write your own Rego testing framework if you don't use the `template`command.
+`template` 명령어를 사용하지 않으면 Rego 테스트 프레임워크를 직접 작성해야 합니다.
 {% endhint %}
 
 ### Structure of the rule
 
 In Rego, you can write statements that allow or deny a request, such as:\
-`allow { input.name == "alice" }` or `deny  { input.name == "alice" }`
+`allow { input.name == "alice" }` or `deny { input.name == "alice" }`
 
 {% hint style="info" %}
-If the **`template`** command was used to generate the rules, then the default entry point is **`rules/deny`**. To override it and use a different name than `deny`, check the section [Bundling Rules](bundling-rules.md).
+`template` 명령어를 사용하여 Rule을 생성한 경우 기본 진입점은 `rules/deny`입니다. 이 Rule을 무시하고 다른 이름을 사용하려면 [Bundling Rules](bundling-rules.md)를 확인하세요.
 {% endhint %}
 
-This is what a generated skeleton of a deny rule looks like when we run `snyk-iac-rules template --rule new-rule --format hcl2`:
+`snyk-iac-rules` 템플릿을 실행할 때 생성된 거부 규칙의 골격은 다음과 같습니다. `--rule new-rule --form hcl2`
 
 {% code title="rules/new-rule/main.rego" %}
 ```
@@ -69,24 +69,24 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="warning" %}
-You must follow this format of the **msg** property to ensure the output correctly displays on the Snyk IaC CLI.
+Snyk IaC CLI에 올바르게 표시되도록 하려면 다음 형식의 **msg** 속성을 따라야 합니다.
 {% endhint %}
 
 The attributes are:
 
-* **publicId:** a naming convention unique to yourselves, such as COMPANY-001. **This should not contain/start with “SNYK-”** to differentiate from the internal Snyk rules.
-* **title:** a short title that should summarise the issue.
-* **severity:** this can be one of **low/medium/high/critical.**
-* **msg:** we recommend only changing the resource name and property e.g. `input.aws_s3_bucket[%s].tags` to match your example. The function `sprintf` is provided by Rego and enables us to provide a dynamic error message explaining exactly where the issue was found.
+* **publicId:** COMPANY-001과 같이 사용자 고유의 이름 지정 규칙입니다. 내부 Snyk 규칙과 구별하기 위해 **"SNYK-"로 시작/포함해서는 안 됩니다**.
+* **title:** 문제를 요약한 짧은 제목입니다.e.
+* **severity:** **low/medium/high/critical** 중 하나일 수 있습니다.
+* **msg:** 리소스 이름 및 속성(예: `input.aws_s3_messages[%s]`)만 변경하는 것이 좋습니다.태그를 참조하십시오. 기능 `sprintf`는 Rego에서 제공하며 문제가 발견된 정확한 위치를 설명하는 동적 오류 메시지를 제공할 수 있습니다.
 
-The following attributes are optional but can be used to enhance the scan results in the Snyk CLI:
+다음 특성은 선택 사항이지만 Snyk CLI에서 검색 결과를 향상시키는 데 사용할 수 있습니다.
 
-* **issue:** a more detailed string explanation of what the exact issue is.
-* **impact:** a more detailed string explanation of what the impact of not resolving this issue is.
-* **remediation:** a more detailed string explanation of how to resolve the issue. We recommend providing a code snippet here.
-* **references:** you can provide an array of strings with URLs to documentation
+* **issue:** 정확한 문제에 대한 자세한 설명입니다.
+* **impact:** 이 문제를 해결하지 않을 경우 미치는 영향에 대한 자세한 설명.
+* **remediation:** 문제 해결 방법에 대한 자세한 설명입니다. 여기에 snippet을 제공하는 것이 좋습니다.
+* **references:** 문자열 배열에 설명서의 URL을 제공할 수 있습니다.
 
-The generated test for the rule uses two generated Terraform files to verify if the correct `msg` field is returned by the rule for allowed and denied fixtures:
+규칙에 대해 생성된 테스트에서는 생성된 두 개의 Terraform 파일을 사용하여 올바른 msg 필드가 허용 및 거부된 고정장치에 대해 규칙에 의해 반환되는지 확인합니다.
 
 ```
 package rules
@@ -110,16 +110,15 @@ test_new_ruleryle {
 	test_cases := array.concat(allowed_test_cases, denied_test_cases)
 	testing.evaluate_test_cases("new-rule", "./rules/new-rule/fixtures", test_cases)
 }
-
 ```
 
 ### Example of a rule
 
 {% hint style="info" %}
-For more examples, see[ Custom Rules Examples](examples.md).
+더 많은 예시는[ Custom Rules Examples](examples.md)를 참조하세요.
 {% endhint %}
 
-For this example, we modified our templated rule to assign a `msg` when a resource does not have an `owner` tag:
+이 예시에서는 리소스에 `owner` 태그가 없는 경우 `msg`를 할당하도록 템플릿 규칙을 수정했습니다.
 
 {% code title="rules/my_rule/main.rego" %}
 ```
@@ -145,8 +144,8 @@ deny[msg] {
 
 ### Limitations/Notes
 
-* As we compile Rego policies into Wasm modules, you can only use built-in functions that support Wasm. There is a table at the bottom of the [Policy Reference Documentation](https://www.openpolicyagent.org/docs/latest/policy-reference/) that can help you identify those.
-* A rule may be defined multiple times with the same name, either in a file, or in separate files under the same package, e.g:&#x20;
+* Rego 정책을 Wasm 모듈로 컴파일하면서 Wasm을 지원하는 내장 기능만 사용할 수 있습니다. Policy Reference Document의 하단에 이러한 항목을 식별하는 데 도움이 되는 표가 있습니다.
+* Rule은 파일 또는 동일한 패키지의 개별 파일에 동일한 이름으로 여러 번 정의할 수 있습니다.
 
 ```
 packages rules
@@ -162,6 +161,6 @@ deny[msg] {
 ...
 ```
 
-These rules are referred as `incremental` as each definition is additive. You can read more about Incremental Definitions [here](https://www.openpolicyagent.org/docs/latest/policy-language/#incremental-definitions). Note that these same named rules have to return a different value, or OPA will return an error. You can read more about Complete Definitions [here](https://www.openpolicyagent.org/docs/latest/policy-language/#complete-definitions).&#x20;
+이러한 규칙은 각 정의가 추가되기 때문에 `incremental` 이라고합니다. Incremental 정의에 대한 자세한내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#incremental-definitions)를 참조하세요. 동일하게 명명된 Rule이 다른값을 반환해야합니다. 그렇지 않으면 OPA가 오류를 반환합니다. 전체 정의에 대한 자세한 내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#complete-definitions)를 참조하세요.
 
-For more complex topics, check [how OPA resolves Conflict Resolution](https://www.openpolicyagent.org/docs/latest/faq/#conflict-resolution).&#x20;
+보다 복잡한 항목을 확인하려면 [how OPA resolves Conflict Resolution](https://www.openpolicyagent.org/docs/latest/faq/#conflict-resolution)을 참조하세요.
