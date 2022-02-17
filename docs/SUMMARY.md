@@ -192,7 +192,7 @@
     * [Infrastructure as Code 이슈 확인](products/snyk-infrastructure-as-code/iac-functions/view-infrastructure-as-code-issues.md)
   * [Custom rules 제작](products/snyk-infrastructure-as-code/custom-rules/README.md)
     * [SDK 설치](products/snyk-infrastructure-as-code/custom-rules/install-the-sdk.md)
-    * [Getting started with the SDK](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/README.md)
+    * [SDK 시작하기](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/README.md)
       * [Parsing an input file](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/parsing-an-input-file.md)
       * [Writing a rule](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/writing-a-rule.md)
       * [Testing a rule](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/testing-a-rule.md)
