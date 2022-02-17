@@ -189,7 +189,7 @@
     * [CLI를 이용하여 ARM 파일 테스트 진행](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-arm-files-with-the-cli-tool.md)
     * [Understanding the CLI Output](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)
   * [IaC functions](products/snyk-infrastructure-as-code/iac-functions/README.md)
-    * [View Infrastructure as Code issues](products/snyk-infrastructure-as-code/iac-functions/view-infrastructure-as-code-issues.md)
+    * [Infrastructure as Code 이슈 확인](products/snyk-infrastructure-as-code/iac-functions/view-infrastructure-as-code-issues.md)
   * [Build your own custom rules](products/snyk-infrastructure-as-code/custom-rules/README.md)
     * [Install the SDK](products/snyk-infrastructure-as-code/custom-rules/install-the-sdk.md)
     * [Getting started with the SDK](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/README.md)
