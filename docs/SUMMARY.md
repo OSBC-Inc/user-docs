@@ -197,7 +197,7 @@
     * [SDK 시작하기](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/README.md)
       * [Parsing an input file](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/parsing-an-input-file.md)
       * [Rule 작성](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/writing-a-rule.md)
-      * [Testing a rule](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/testing-a-rule.md)
+      * [Rule 테스트](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/testing-a-rule.md)
       * [Bundling rules](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/bundling-rules.md)
       * [Pushing a bundle](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/pushing-a-bundle.md)
       * [Custom Rego Builtins](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/advanced-rego.md)
