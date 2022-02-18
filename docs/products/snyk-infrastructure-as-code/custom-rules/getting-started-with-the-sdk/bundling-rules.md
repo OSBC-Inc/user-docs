@@ -1,28 +1,28 @@
 # Bundling rules
 
-Once you are ready, you can build a custom rules bundle by running the following command:
+다음 명령어를 실행하여 사용자 지정 Rule bundle을 작성할 수 있습니다.
 
 ```
 snyk-iac-rules build
 ```
 
-If you have more than your generated rules in the current folder consider using the  `--ignore` flag to exclude the folders and files irrelevant for a production-ready bundle. This can both speed up the process and ensures the size of the generated bundle stays small.
+현재 폴더에 생성된 Rule보다 더 많은 Rule이 있는 경우 --ignore 플래그를 사용하여 production-ready bundle에 관련이 없는 폴더 파일을 제외하세요. 이렇게 진행하면 프로세스 속도를 높이고 생성된 bundle의 크기를 작게 유지할 수 있습니다.
 
-#### Overriding the default entry point
+#### 기본 진입점 재지정
 
-If you have chosen to name the rule that evaluates something different than **`deny`** (e.g. `allow`,`violation`, etc. ), you can override it by running:
+**`deny`**와 다른 Rule(`allow`,`violation` 등)의 이름을 지정하도록 선택한 경우 다음과 같이 실행하여 재정의할 수 있습니다.
 
 ```
 snyk-iac-rules build --entrypoint "<package name>/<function name>"
 ```
 
-Finally, you can check the contents of the bundle without extracting it by running:
+마지막으로 bundle의 압축을 풀지 않고도 다음을 실행하여 bundle의 내용을 확인할 수 있습니다.
 
 ```
 tar -tf bundle.tar.gz
 ```
 
-That will output all the files included in the bundle:
+그러면 bundle에 포함된 모든 파일이 출력됩니다.
 
 ```
 /data.json
@@ -32,4 +32,4 @@ That will output all the files included in the bundle:
 /.manifest
 ```
 
-&#x20;You can now [run snyk iac test with your newly built custom bundle. ](../use-IaC-custom-rules-with-CLI/)
+이제 새로 구축된 [사용자 지정 bundle로 snyk iac test를 실행할 수 있습니다](../use-IaC-custom-rules-with-CLI/).
