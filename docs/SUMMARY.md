@@ -205,7 +205,7 @@
     * [CLI에서 IaC custom rules 사용하기](products/snyk-infrastructure-as-code/custom-rules/use-IaC-custom-rules-with-CLI/README.md)
       * [로컬 custom rules bundle 사용](products/snyk-infrastructure-as-code/custom-rules/how-to-run-custom-rules-with-the-snyk-cli/using-a-local-custom-rules-bundle.md)
       * [원격 custom rules bundle 사용](products/snyk-infrastructure-as-code/custom-rules/how-to-run-custom-rules-with-the-snyk-cli/using-a-remote-custom-rules-bundle.md)
-    * [Integrating IaC custom rules within a pipeline](products/snyk-infrastructure-as-code/custom-rules/integrating-iac-custom-rules-within-a-pipeline.md)
+    * [파이프라인 내에서 IaC custom rules 통합](products/snyk-infrastructure-as-code/custom-rules/integrating-iac-custom-rules-within-a-pipeline.md)
     * [SDK Reference](products/snyk-infrastructure-as-code/custom-rules/sdk-reference.md)
 
 ## FEATURES
