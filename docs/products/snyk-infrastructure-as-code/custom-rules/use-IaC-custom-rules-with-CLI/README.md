@@ -1,17 +1,16 @@
-# Use IaC custom rules with CLI
+# CLI에서 IaC custom rules 사용하기
 
 {% hint style="info" %}
-Ensure you followed the steps in [Getting Started with the SDK](../getting-started-with-the-sdk/) to learn how to generate a bundle of your rules.
+Rule의 bundle을 생성하는 방법에 대해 알아보려면 [SDK 시작하기](../getting-started-with-the-sdk/)를 참조하세요.
 {% endhint %}
 
-With Snyk IaC, you can test your configuration files from the CLI using your custom rules.&#x20;
+Snyk IaC에서는 custom rules를 사용하여 CLI에서 구성 파일을 테스트할 수 있습니다.
 
-There are two ways to use your built bundle:
+built bundle을 사용하는 방법에는 두 가지가 있습니다.
 
-* [Using a local custom rules bundle](../how-to-run-custom-rules-with-the-snyk-cli/using-a-local-custom-rules-bundle.md), stored in your disk.
-* [Using a remote custom rules bundle](../how-to-run-custom-rules-with-the-snyk-cli/using-a-remote-custom-rules-bundle.md), by configuring a remote OCI Registry, in which your custom rules bundle is already stored.&#x20;
+* 디스크에 저장된 [로컬 custom rules bundle](../how-to-run-custom-rules-with-the-snyk-cli/using-a-local-custom-rules-bundle.md)을 사용합니다.
+* custom rules bundle이 이미 저장된 원격 OCI 레지스트리를 구성하여 [원격 custom rules bundle](../how-to-run-custom-rules-with-the-snyk-cli/using-a-remote-custom-rules-bundle.md)을 사용합니다.
 
 {% hint style="success" %}
-Ready to get started with Snyk? [Sign up for free!](https://snyk.io/login?cta=sign-up\&loc=footer\&page=support\_docs\_page)
+Snyk을 시작할 준비가 되셨나요? [무료로 가입하세요](https://snyk.io/login?cta=sign-up\&loc=footer\&page=support\_docs\_page)!
 {% endhint %}
-
