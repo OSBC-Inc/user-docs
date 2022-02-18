@@ -1,10 +1,11 @@
-# Custom Rego 빌트인
+# Custom Rego Builtins
 
-SDK는 테스트 중에 사용할 수 있는 일부 도우미 Rego 기능도 등록합니다.
+The SDK also registers some helper Rego functions that can be used while testing. 
 
-기능은 다음과 같습니다.
+These are:
 
-* `hcl2.unmarshal_file`: 파일의 경로를 HCL2 형식에서 JSON으로 파싱합니다.
-* `yaml.unmarshal_file`: 파일의 경로를 가져와 YAML 형식에서 JSON으로 파싱합니다.
+* `hcl2.unmarshal_file`: takes in the path to a file and parses it from HCL2 format to JSON
+* `yaml.unmarshal_file`: takes in the path to a file and parses it from YAML format to JSON
 
-이 두 가지 기능은 `lib/testing/main.rego`의 테스트 프레임워크에서 사용되므로 JSON fixture를 직접 생성할 필요 없이 fixture 파일로 이동할 수 있습니다.
+These two functions are used by the testing framework at `lib/testing/main.rego` so that you can pass in the path to fixture files instead of having to generate the JSON fixture yourself.
+
