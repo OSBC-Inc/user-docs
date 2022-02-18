@@ -1,75 +1,75 @@
-# Snyk CLI for container security
+# 컨테이너 보안을 위한 Snyk CLI
 
-The Snyk Container command line interface ([CLI](../../../features/snyk-cli/)) helps you find and fix vulnerabilities in container images on your local machine.
+[CLI](../../../features/snyk-cli/)(Snyk Container Command Line Interface)는 로컬 시스템의 컨테이너 이미지에서 취약점을 찾고 수정하는 데 도움이 됩니다.
 
-To use the CLI you must first [install](../../../features/snyk-cli/install-the-snyk-cli/) it and then [authenticate](../../../features/snyk-cli/commands/auth.md).
+CLI를 사용하려면 먼저 CLI를 [설치](../../../features/snyk-cli/install-the-snyk-cli/)한 다음 [인증](../../../features/snyk-cli/commands/auth.md)해야 합니다.
 
-## Testing an image
+## 이미지 테스트
 
-To test an image run:
+이미지 테스트를 실행하려면:
 
 ```
 snyk container test debian
 ```
 
-This command does the following:
+이 명령은 다음을 수행합니다.
 
-1. Downloads the image if it is not already available locally in your Docker daemon
-2. Determines the software installed in the image
-3. Sends that bill of materials to the Snyk service
-4. Returns a list of the vulnerabilities in your image
+1. 이미지를 Docker 데몬에서 로컬로 사용할 수 없는 경우 다운로드합니다.
+2. 이미지에 설치된 소프트웨어를 결정합니다.
+3. 해당 BOM을 Snyk 서비스로 보냅니다.
+4. 이미지의 취약점 목록을 반환합니다.
 
-You can use Snyk to test any image that you can pull from a remote registry, or any image you have built locally and made available in your local Docker daemon.
+Snyk을 사용하여 원격 레지스트리에서 가져올 수 있는 모든 이미지 또는 로컬에서 빌드하고 로컬 Docker 데몬에서 사용할 수 있게 만든 이미지를 테스트할 수 있습니다.
 
 ```
 snyk container test <repository>:<tag>
 ```
 
-If you use a Dockerfile to build your image, you can specify that when running `snyk container test`.
+Docker 파일을 사용하여 이미지를 빌드할 경우  `container test`를 실행하여 이 파일을 지정할 수 있습니다.
 
 ```
 snyk container test <repository>:<tag> --file=Dockerfile
 ```
 
-Specifying a Dockerfile provides more context, and allows Snyk to provide clear recommendations on how to fix discovered vulnerabilities.
+Dockerfile을 지정하면 더 많은 컨텍스트를 제공하고 Snyk이 발견된 취약점을 수정하는 방법에 대한 명확한 권장 사항을 제공할 수 있습니다.
 
-## Monitoring an image
+## 이미지 모니터링
 
-Snyk Container also allows you to monitor an image. This provides the following advantages:
+Snyk Container를 사용하여 이미지를 모니터링할 수도 있습니다. 이는 다음과 같은 이점을 제공합니다.
 
-* Snyk alerts you if new vulnerabilities are disclosed that affect your image, without your having to retest your image locally.
-* Snyk interactively filters the results and explores the list of vulnerabilities in your web browser.
-* You can share results on Snyk with other members of your team.
+* Snyk은 이미지에 영향을 미치는 새로운 취약점이 공개되면 이미지를 로컬에서 다시 테스트할 필요 없이 사용자에게 알려줍니다.
+* Snyk은 대화식으로 결과를 필터링하고 웹 브라우저의 취약점 목록을 탐색합니다.
+* Snyk에서 결과를 다른 팀원들과 공유할 수 있습니다.
 
-You can also access aggregate reports of vulnerabilities across all of your projects.
+또한 모든 프로젝트의 취약점에 대한 종합 보고서에 액세스할 수 있습니다.
 
 {% hint style="info" %}
-**Feature availability**\
-This aggregate reports feature is available with all paid plans. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 가용성**\
+이 집계 보고서 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-To monitor an image run:
+이미지 모니터링을 실행하려면:
 
 ```
 snyk container monitor <repository>:<tag>
 ```
 
-This command does the following
+이 명령은 다음을 수행합니다.
 
-1. Downloads the image if it is not already available locally in your Docker daemon
-2. Determines the software installed in the image
-3. Sends that bill of materials to the Snyk service
-4. Returns a link to the Snyk service where you can see the results
+1. 이미지를 Docker 데몬에서 로컬로 사용할 수 없는 경우 다운로드합니다.
+2. 이미지에 설치된 소프트웨어를 결정합니다.
+3. 해당 BOM을 Snyk 서비스로 보냅니다.
+4. 결과를 볼 수 있는 Snyk 서비스에 대한 링크를 반환합니다.
 
 ![](../../../.gitbook/assets/monitor.png)
 
 {% hint style="info" %}
-**Note**\
-It’s common to use both `test` and `monitor` with Snyk Container. The `test` command is great for quick checks. The `monitor` command can be used for ongoing assurance and easier sharing of results.
+**참고**\
+Snyk Container에서 `test`와 `monitor`를 모두 사용하는 것이 일반적입니다. `test` 명령은 빠른 확인에 좋습니다. `monitor` 명령을 사용하여 결과를 지속적으로 보장하고 보다 쉽게 공유할 수 있습니다.
 {% endhint %}
 
-## More information
+## 추가 정보
 
-* [Understand Snyk Container CLI results](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/understanding-snyk-container-cli-results)
-* [Advanced CLI usage](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage)
-* Learn more about [container security](https://snyk.io/learn/container-security/)
+* [Snyk Container CLI 결과 이해](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/understanding-snyk-container-cli-results)
+* [고급 CLI 사용](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage)
+* [컨테이너 보안](https://snyk.io/learn/container-security/)에 대해 자세히 알아보기
