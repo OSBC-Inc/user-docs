@@ -19,21 +19,21 @@ Snyk Container가 취약점을 탐지하면 다음과 같이 출력됩니다.
 | **Introduced by**      | 취약점이 기본 이미지에 있는지 또는 Dockerfile의 어느 행에서 이 취약점이 발생했는지 여부입니다.                        |
 | **Fixed in**           | 취약점에 대한 수정 사항이 있는 패키지 버전입니다.                                                      |
 
-Vulnerabilities appear in reverse severity order to limit scrolling to see the most important issues.
+취약점은 가장 중요한 문제를 확인하기 위한 스크롤을 최소화하기 위해 심각도 역순으로 나타납니다.
 
-Snyk also reports the total dependencies tested for known vulnerabilities and the total number of vulnerabilities.
+또한 Snyk은 알려진 취약점에 대해 테스트된 총 디펜던시 및 취약점 수를 보고합니다.
 
-![Total dependencies tested and issues fount](../../../.gitbook/assets/clisummary.png)
+![테스트된 총 디펜던시 및 발견된 issues](../../../.gitbook/assets/clisummary.png)
 
 {% hint style="info" %}
-Note\
-Snyk groups the same vulnerability discovered in multiple different packages together. This helps you focus on the number of vulnerabilities, not just the instances.
+**참고**\
+Snyk은 서로 다른 여러 패키지에서 발견된 동일한 취약점을 함께 그룹화합니다. 이렇게 하면 인스턴스뿐만 아니라 취약점 수에도 집중할 수 있습니다.
 {% endhint %}
 
 ## 기본 이미지 권장 사항
 
-If Snyk determines the base image used, and the image uses an [Official Docker image](https://docs.docker.com/docker-hub/official\_images/), the output includes recommendations for upgrades to resolve some of the discovered vulnerabilities.
+Snyk이 사용된 기본 이미지를 확인하고 [Official Docker image](https://docs.docker.com/docker-hub/official\_images/)를 사용하는 경우 출력에는 발견된 일부 취약점을 해결하기 위한 업그레이드 권장 사항이 포함됩니다.
 
-![Recommendations for base image upgrade](../../../.gitbook/assets/clirecommendations.png)
+![기본 이미지 업그레이드 권장 사항](../../../.gitbook/assets/clirecommendations.png)
 
-This provides a level of situational awareness, showing the vulnerability counts in minor and major upgrades or in alternative base images which might have fewer vulnerabilities.
+이는 상황 인식 수준을 제공하여 minor 및 major 업그레이드 또는 취약점이 더 적을 수 있는 대체 기본 이미지의 취약점 수를 보여줍니다.
