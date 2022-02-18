@@ -85,7 +85,7 @@
   * [Snyk Container 시작하기](products/snyk-container/getting-started-snyk-container.md)
   * [Snyk Container 보안 기본 사항](products/snyk-container/snyk-container-security-basics/README.md)
     * [How Snyk Container works](products/snyk-container/snyk-container-security-basics/how-snyk-container-works.md)
-    * [Supported operating system distributions](products/snyk-container/snyk-container-security-basics/supported-operating-system-distributions.md)
+    * [지원되는 운영체제 배포판](products/snyk-container/snyk-container-security-basics/supported-operating-system-distributions.md)
     * [Understanding Linux vulnerability severity](products/snyk-container/snyk-container-security-basics/understanding-linux-vulnerability-severity.md)
   * [Snyk CLI for container security](products/snyk-container/snyk-cli-for-container-security/README.md)
     * [Understanding Snyk Container CLI results](products/snyk-container/snyk-cli-for-container-security/understanding-snyk-container-cli-results.md)
