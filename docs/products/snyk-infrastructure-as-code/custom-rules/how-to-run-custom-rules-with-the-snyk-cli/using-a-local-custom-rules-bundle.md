@@ -1,37 +1,37 @@
-# Using a local custom rules bundle
+# 로컬 custom rules bundle 사용
 
 {% hint style="info" %}
-Where the examples show `bundle.tar.gz` you can replace this with your bundle name. For example,`bundle-v1.0.0.tar.gz` or `./bundles/team-bundle.tar.gz`
+예제에 `bundle.tar.gz`가 표시된 경우 이 값을 bundle 이름으로 바꿀 수 있습니다. 예를 들어 `bundle-v1.0.0.tar.gz` 또는 `./bundles/team-bundle.tar.gz`를 입력합니다.
 {% endhint %}
 
-In your project’s folder, run the following command:
+프로젝트의 폴더에서 다음 명령어을 실행하세요.
 
 ```
 snyk iac test --rules=bundle.tar.gz
 ```
 
-The configuration scan results now include issues from both the default Snyk rules, and your custom rules. Also see [Understanding configuration issues](https://docs.snyk.io/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues).&#x20;
+이제 configuration 스캔 결과에 기본 Snyk rules와 custom rules의 이슈가 모두 포함됩니다. [Understanding configuration issues](https://docs.snyk.io/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues)를 참조하세요.
 
 ### Troubleshooting
 
-Enable debug logs by running the command with a **-d** flag:
+**-d** 플래그로 명령어를 실행하여 디버그 로그를 사용하도록 설정합니다.
 
 ```
 snyk iac test --rules=bundle.tar.gz -d
 ```
 
-Some possible problems:
+다음과 같은 문제가 발생할 수 있습니다.
 
-* Providing an incorrect path to the bundle or a path to a non-existent bundle. Make sure the path passed to the `--rules` flag can be accessed from the current location.
+* bundle에 대한 잘못된 경로 또는 존재하지 않는 bundle에 대한 경로를 제공합니다. `--rules` 플래그에 전달된 경로가 현재 위치에서 액세스할 수 있는지 확인합니다.
 
 ```
 We were unable to extract the rules provided at: ./invalid/location/bundle.tar.gz
 ```
 
-* Providing a corrupted or invalid bundle. Make sure you have generated your bundle by following the instructions at [Getting Started with the SDK](../getting-started-with-the-sdk/).
+* [Getting Started with the SDK](../getting-started-with-the-sdk/)의 지침에 따라 bundle을 생성했는지 확인하세요.
 
 ```
 We were unable run the test. Please run the command again with the `-d` flag and contact support@snyk.io with the contents of the output.
 ```
 
-If you have found a discrepancy that you cannot explain, please raise a support ticket.
+설명할 수 없는 문제를 발견하셨다면 지원 티켓을 올려주세요.

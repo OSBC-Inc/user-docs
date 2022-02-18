@@ -1,14 +1,14 @@
-# 지원되는 운영체제 배포판
+# Supported operating system distributions
 
-Snyk Container는 다음과 같은 운영체제 배포판을 지원합니다.
+Snyk Container supports the following operating system distributions.
 
-EOL(End of Life)에 도달하여 더 이상 유지보수되지 않는 배포판과 같이 지원되지 않는 배포판을 사용할 경우 Snyk은 지원되지 않는다는 메시지를 제공합니다.
+If you use an unsupported distribution, such as one which has reached its End of life (EOL) and is no longer being maintained, Snyk provides a message to tell you this is unsupported.
 
 {% hint style="info" %}
-지원되지 않는 배포판의 경우 보안 업데이트 부족으로 인해 취약점에 대한 알림이 수신되지 않을 수 있습니다. 그러나 이미지가 안전한 것은 아닙니다.
+For unsupported distributions, you may not receive any notifications of vulnerabilities due to a lack of security updates: this does not mean that your image is secure.
 {% endhint %}
 
-## 지원되는 linux 배포판
+## Supported linux distributions
 
 ### Alpine Linux
 
@@ -110,12 +110,12 @@ EOL(End of Life)에 도달하여 더 이상 유지보수되지 않는 배포판�
 * Ubuntu 5.04
 * Ubuntu 4.10
 
-## 베타 지원
+## Beta support
 
-다음 운영체제 배포판을 현재 베타 버전으로 사용할 수 있습니다. 베타 배포판을 사용하는 경우 Snyk은 사용자에게 알림 메시지를 제공합니다.
+The following operating system distributions are currently available as beta. If you use a beta distribution, Snyk provides you a message to notify you.
 
 {% hint style="info" %}
-베타 배포판의 경우 데이터를 계속 개선하는 동안 취약점 탐지가 영향을 받을 수 있습니다.
+For beta distributions, vulnerability detection may be affected while we keep on improving the data.
 {% endhint %}
 
 ### SUSE Linux Enterprise Server

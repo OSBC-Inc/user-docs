@@ -203,8 +203,8 @@
       * [Custom Rego 빌트인](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/advanced-rego.md)
       * [Custom Rule 예시](products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/examples.md)
     * [CLI에서 IaC custom rules 사용하기](products/snyk-infrastructure-as-code/custom-rules/use-IaC-custom-rules-with-CLI/README.md)
-      * [Using a local custom rules bundle](products/snyk-infrastructure-as-code/custom-rules/how-to-run-custom-rules-with-the-snyk-cli/using-a-local-custom-rules-bundle.md)
-      * [Using a remote custom rules bundle](products/snyk-infrastructure-as-code/custom-rules/how-to-run-custom-rules-with-the-snyk-cli/using-a-remote-custom-rules-bundle.md)
+      * [로컬 custom rules bundle 사용](products/snyk-infrastructure-as-code/custom-rules/how-to-run-custom-rules-with-the-snyk-cli/using-a-local-custom-rules-bundle.md)
+      * [원격 custom rules bundle 사용](products/snyk-infrastructure-as-code/custom-rules/how-to-run-custom-rules-with-the-snyk-cli/using-a-remote-custom-rules-bundle.md)
     * [Integrating IaC custom rules within a pipeline](products/snyk-infrastructure-as-code/custom-rules/integrating-iac-custom-rules-within-a-pipeline.md)
     * [SDK Reference](products/snyk-infrastructure-as-code/custom-rules/sdk-reference.md)
 
