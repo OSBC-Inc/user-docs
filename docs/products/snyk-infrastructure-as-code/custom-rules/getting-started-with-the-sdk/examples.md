@@ -1,12 +1,12 @@
-# Custom Rule 예시
+# Examples of custom rules
 
-### Boolean Rule 예제
+### Example of a simple boolean rule
 
 {% hint style="info" %}
-이 문서의 전체 예제는 [OPA Playground](https://play.openpolicyagent.org/p/SCYndBjWxh) 및 [snyk/custom-rules-example](https://github.com/snyk/custom-rules-example) 저장소에서 확인할 수 있습니다.
+You can find a full example of this guide in [this OPA Playground](https://play.openpolicyagent.org/p/SCYndBjWxh) and the [snyk/custom-rules-example](https://github.com/snyk/custom-rules-example) repository.
 {% endhint %}
 
-SDK(`snyk-iac-rules template --rule CUSTOM-RULE-1`)를 사용하여 새로운 Rule `CUSTOM-RULE-1`을 생성했으며 Terraform 리소스가 들어 있는 매우 간단한 fixture 파일이 있다고 가정합니다.
+Let’s assume we have generated a new rule `CUSTOM-RULE-1` using the SDK (i.e. `snyk-iac-rules template --rule CUSTOM-RULE-1`) and have a very simple fixture file containing a Terraform resource:
 
 {% code title="rules/CUSTOM-RULE-1/fixtures/denied.tf" %}
 ```
@@ -19,13 +19,13 @@ resource "aws_redshift_cluster" "denied" {
 ```
 {% endcode %}
 
-이제 생성된 Rego를 수정하여 소유자가 태그된 리소스를 적용하려고 합니다.
+Now, we want to modify the generated Rego to enforce resources tagged with an owner:
 
-1. 모든 `AWS_redsshift_cluster` 리소스에서 열거할 변수 `[name]`을 생성합니다. 이 변수는 원하는 모든 변수(`i`, `j`, `name` 등)로 이름을 지정할 수 있습니다.
-2. 대입 표현식(바다코끼리 연산자) `:=;` 을 사용하여 리소스 변수에 값을 할당하여 이 값을 저장합니다.(`resource := input.resource.aws_sshift_cluster[name]`)
-3. 각 리소스에 대해 소유자 태그가 있는지 확인합니다. 그렇게 하려면 `resource.tags.owner` 경로가 정의되어 있는지 확인합니다. 정의되지 않은 경우 정의되지 않은 것으로 평가됩니다. 앞에 `NOT` 키워드를 사용하면 `TRUE`로 평가됩니다(예: `resource.tags.owner`).
+1. Create a variable `[name]` to to enumerate across all of the `aws_redshift_cluster` resources. This variable can be named anything you like (e.g. `i`, `j`, `name`, etc.).
+2. Store this into the resource variable by assigning the value to it with a walrus operator `:=`; e.g. `resource := input.resource.aws_redshift_cluster[name]`
+3. Check if the owner tag exists for each resource; to do that, check if the path `resource.tags.owner `is defined. If it is undefined, it will evaluate to undefined. So, use the `NOT` keyword in front of it, which will evaluate to `TRUE`; e.g.`not resource.tags.owner`
 
-수정한 Rego는 다음과 같습니다.
+The modified Rego is:
 
 {% code title="rules/CUSTOM-RULE-1/main.rego" %}
 ```
@@ -50,14 +50,14 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="info" %}
-Rego 코드가 이전에 제공된 Terraform 파일을 평가하는 방법을 이해하려면 SDK가 [fixture 파일을 JSON으로 파싱하는 방법](parsing-an-input-file.md)을 확인하세요.
+To understand how the Rego code evaluates the Terraform file provided earlier, have a look at how the SDK is able to [parse a fixture file](parsing-an-input-file.md) into JSON.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+We recommend always validating that your rule is correct by [updating and running the unit tests](testing-a-rule.md).
 {% endhint %}
 
-Rule에 대한 테스트에서는 Rego Rule이 본 가이드의 시작 부분에 있는 설비가 유효하지 않음을 식별할 수 있는지 확인합니다.
+The test for this rule verifies that the Rego rule is able to identify that the fixture at the beginning of this guide is invalid:
 
 {% code title="rules/CUSTOM-RULE-1/main_test.rego" %}
 ```
@@ -85,14 +85,15 @@ test_CUSTOM_RULE_1 {
 ```
 {% endcode %}
 
-### Logical AND 예제
+### Example with logical AND
 
-위의 예제를 확장하여 두 가지 조건을 만족하는 모든 경우를 허용하도록 Rule을 업데이트해 보겠습니다.
+Let’s try and extend the example above and update the rule to allow all cases that suffice two conditions:
 
-1. 리소스에 "owner" 태그가 존재, **AND**
-2. 리소스에 "description" 태그가 존재
+1. A resource has an “owner” tag\
+   **AND**
+2. A resource has a “description” tag
 
-새로운 조건을 테스트하기 위해 `template` 명령어을 사용하여 새로운 Rule `CUSTOM-RULAY-2`를 생성하고 다음 fixture 파일을 작성합니다.
+To test this new condition, we generate a new rule `CUSTOM-RULE-2` using the `template` command and write the following fixture file:
 
 {% code title="rules/CUSTOM-RULE-2/fixtures/denied.tf" %}
 ```
@@ -106,13 +107,13 @@ resource "aws_redshift_cluster" "denied" {
 ```
 {% endcode %}
 
-여러 식을 함께 결합하면 Logical `AND`가 표현됩니다.
+Joining multiple expressions together expresses logical `AND`.&#x20;
 
-* 이 작업은 `;`연산자를 사용하여 수행할 수 있습니다.
-* 또는 식을 여러 줄로 분할하여 `;` (`AND`) 연산자를 생략할 수 있습니다.
+* You can do this with the `;` operator.
+* Or, you can omit the `;` (`AND`) operator by splitting expressions across multiple lines.
 
 {% hint style="info" %}
-Logical AND는 [OPA 설명서](https://www.openpolicyagent.org/docs/latest/#expressions-logical-and)에서도 다룹니다.
+The logical AND is covered also in the [OPA documentation](https://www.openpolicyagent.org/docs/latest/#expressions-logical-and).
 {% endhint %}
 
 {% code title="rules/CUSTOM-RULE-2/main.rego" %}
@@ -142,10 +143,10 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+We recommend always validating that your rule is correct by [updating and running the unit tests](testing-a-rule.md).
 {% endhint %}
 
-Rule에 대한 테스트는 `CUSTOM-RULE-1`의 테스트와 동일하게 표시되지만 테스트 이름과 `testing.evaluate_test_cases` 함수에 전달된 처음 두 파라미터가 다릅니다.
+The test for this rule will look the same as the one for `CUSTOM-RULE-1`, but the name of the test and the first two arguments passed to the `testing.evaluate_test_cases` function will differ:
 
 {% code title="rules/CUSTOM-RULE-2/main_test.rego" %}
 ```
@@ -171,16 +172,16 @@ test_CUSTOM_RULE_2 {
 ```
 {% endcode %}
 
-### Logical OR 예제
+### Example with logical OR
 
-`NOT` 연산자와 `OR` 기능을 결합하여 위의 Rule을 다시 작성할 수 있습니다.
+We can also rewrite the rule above by combining the `NOT` operator with the OR functionality.
 
-새로운 Rule CUSTOM-RULE-3의 예제를 업데이트하여 두 조건 중 하나에 실패한 경우를 모두 **거부**하겠습니다. 다음 중 하나가 누락된 모든 aws\_redshift\_cluster 리소스를 거부합니다.
+Let’s update the example in a new rule `CUSTOM-RULE-3`, to deny all cases that fail **either** of the two conditions; we want to deny all `aws_redshift_cluster` resources that are missing either:
 
-1. “owner” 태그 , **OR**
-2. “description” 태그
+1. an “owner” tag , OR
+2. A “description” tag
 
-이를 위해 case별로 하나씩 두 개의 새로운 fixture 파일을 사용합니다.
+For this, we will use two new fixture files, one for each case:
 
 {% code title="rules/CUSTOM-RULE-3/fixtures/denied1.tf" %}
 ```
@@ -206,9 +207,9 @@ resource "aws_redshift_cluster" "denied2" {
 ```
 {% endcode %}
 
-Logical OR을 Rego로 표현하기 위해, 우리는 동일한 이름의 여러 Rule이나 함수를 정의할 수 있습니다. 이 내용은 Logical OR에 대한 [OPA 설명서](https://www.openpolicyagent.org/docs/latest/#logical-or)에도 설명되어 있습니다.
+To express logical OR in Rego, we can define multiple rules or functions with the same name. This is also described in the OPA documentation for[ Logical OR](https://www.openpolicyagent.org/docs/latest/#logical-or).
 
-우선 태그별로 `NOT`을 구현하는 기능을 추가하겠습니다. 그런 다음 리소스를 사용하여 이 함수를 호출합니다.
+First, we will add a function that will implement the `NOT` for each tag. Then, we will call this function with the resource:
 
 {% code title="rules/CUSTOM-RULE-3/main.rego" %}
 ```
@@ -239,13 +240,13 @@ deny[msg] {
 ```
 {% endcode %}
 
-이렇게 하면 거부하는 모든 Rule이 성공적으로 반환됩니다.
+This will successfully return all the rules that deny.
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+We recommend always validating that your rule is correct by [updating and running the unit tests](./#test-a-custom-rule).
 {% endhint %}
 
-이제 이 Rule에 대한 테스트에는 여러 테스트 사례가 포함되어 Logical OR이 예상대로 작동하는지 확인할 수 있습니다.
+The test for this rule will now contain multiple test cases, to show that the logical OR works as expected:
 
 {% code title="rules/CUSTOM-RULE-3/main_test.rego" %}
 ```
@@ -274,13 +275,13 @@ test_CUSTOM_RULE_3 {
 ```
 {% endcode %}
 
-### Strings 예제
+### Example with strings
 
-추가 확장하여 세 번째 조건을 추가할 수 있습니다. 모든 리소스를 거부할 수 있습니다.
+Let’s extend this further and add a third condition. Deny all resources that are missing either:
 
-1. “owner” 태그 , **OR**
-2. “description” 태그, **OR**
-3. 소유자의 이메일이 "@nota-domain.com" 도메인에 속하지 않는 경우
+1. An “owner” tag , OR
+2. A “description” tag, OR
+3. The email of the owner does not belong to the “@corp-domain.com” domain
 
 {% code title="rules/CUSTOM-RULE-4/main.rego" %}
 ```
@@ -316,25 +317,25 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+We recommend always validating that your rule is correct by [updating and running the unit tests](testing-a-rule.md).
 {% endhint %}
 
 The test for this rule will look very similar to the ones from previous example and will also require its own fixture file.
 
-### XOR 예제
+### Example with XOR
 
-다음과 같이 진행하겠습니다.
+Now let’s say that we want to add more complexity and check the following:
 
-* 태그 유형이 "user"인 경우 "email" 태그도 함께 사용하길 원합니다.
-* 그렇지 않은 경우(다른 유형이 "service"라고 가정), 서비스설명(ServiceDescription)으로 지정합니다.
-* 이 두 가지는 상호 배타적일 것입니다. 첫 번째 조건이 적용되면 두 번째 조건이 적용되면 안 되고, 두 번째 조건이 적용되면 두 번째 조건이 적용되면 안 되고, 그 반대도 마찬가지입니다.
+* If the tag type is a “user”, then we want the tag “email” to exist as well.
+* If not (assume the other type is a “service”), we want it to have a serviceDescription.
+* These two will be mutually exclusive; if the first condition applies, the second one shouldn’t, and vice versa.
 
 | Type    | Email | ServiceDescription |
 | ------- | ----- | ------------------ |
 | User    | YES   | NO                 |
 | Service | NO    | YES                |
 
-이를 위해 checkTags 도우미 기능을 사용하도록 코드를 리팩터링하겠습니다. 이렇게 하면 태그가 있는지 확인할 수 있을 뿐만 아니라 위의 두 가지 조건을 OR로 확인할 수도 있습니다.
+To do this, we are going to refactor our code to use a checkTags helper function. This can check if there are any tags, but also check for the two conditions above with an OR.
 
 {% code title="rules/CUSTOM-RULE-5/main.rego" %}
 ```
@@ -372,7 +373,7 @@ deny[msg] {
 ```
 {% endcode %}
 
-이를 XOR로 변환하려면 `else` Rule을 사용할 수 있습니다.
+To convert this to an XOR we can use an `else` rule:
 
 {% code title="rules/CUSTOM-RULE-5/main.rego" %}
 ```
@@ -423,17 +424,17 @@ deny[msg] {
 ```
 {% endcode %}
 
-직접 체험해 보고 싶다면 [OPA Playground](https://play.openpolicyagent.org/p/1xcdj9kJRw)에서 동일한 예시를 제공합니다.
+If you want to try it out yourselves, we have provided the same example in an [OPA Playground](https://play.openpolicyagent.org/p/1xcdj9kJRw).
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+We recommend always validating that your rule is correct by[ updating and running the unit tests](testing-a-rule.md).
 {% endhint %}
 
-이 Rule에 대한 테스트는 이전 예의 테스트와 매우 유사하며 fixture 파일도 필요합니다.
+The test for this rule will look very similar to the ones from previous example and will also require its own fixture file.
 
-### 그룹화된 리소스 예시
+### Examples with grouped resources
 
-리소스 배열에 추가함으로써 많은 리소스를 반복할 수 있습니다.
+We can also iterate over many resources by adding them to an array of resources.
 
 ```
 "resources": [
@@ -445,11 +446,11 @@ deny[msg] {
 ]
 ```
 
-이것을 활용하는 한 가지 방법은 denylist rules를 구현하는 것입니다.
+One way to leverage this is to implement denylist rules.&#x20;
 
-예를 들어, 누군가가 Kubernetes ConfigMap을 정의한 경우 암호, 비밀 키 및 액세스 토큰과 같은 중요한 정보를 저장하는 데 사용할 수 없도록 할 수 있습니다.
+For example, we may want to ensure that if someone defines a Kubernetes ConfigMap, then they cannot use it to store sensitive information such as passwords, secret keys, and access tokens.
 
-이를 통해 denylist 내에서 중요한 토큰 그룹을 정의함으로써 시간이 지남에 따라 "민감한 정보"로 정의한 내용을 확장할 수 있습니다.
+We can do that and expand what we define as "sensitive information" over time by defining a group of sensitive tokens inside a denylist:
 
 ```
 package rules
@@ -481,8 +482,9 @@ deny[msg] {
 		"references": [],
 	}
 }
+
 ```
 
-"pass", "secret", "key" 및 "token"이 포함된 키는 중요한 것으로 간주될 수 있으므로 ConfigMap에 포함해서는 안 됩니다.
+Any key containing the substrings "pass", "secret", "key", and "token" can be considered sensitive and so should not be included in the ConfigMap.
 
 ##
