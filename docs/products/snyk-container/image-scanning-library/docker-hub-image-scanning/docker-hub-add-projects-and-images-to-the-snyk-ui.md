@@ -23,9 +23,9 @@ Snyk에 저장소를 추가하려면 다음과 같이 진행합니다.
 
     이미지를 가져오면 페이지 상단에 상태 표시줄이 나타납니다. 그 동안 작업을 계속할 수 있습니다.
 5. 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 **Projects** 페이지를 확인하려면 새로고침합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부 프로젝트 페이지에 개별적으로 연결됩니다.
-6. 이제 Git 저장소를 이 프로젝트와 연결하여 Docker파일을 사용하여 수정 정보를 제공할 수 있습니다. 자세한 내 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요.
+6. 이제 Git 저장소를 이 프로젝트와 연결하여 Docker파일을 사용하여 수정 정보를 제공할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요.
 
-You can now also filter to view only those projects:
+이제 필터링하여 다음과 같은 프로젝트만 확인할 수 있습니다.
 
 ![](<../../../../.gitbook/assets/uuid-ce306bb8-1d6d-c895-bdb5-3a7cd551977b-en-1- (1) (1) (2) (2) (2) (2) (2) (2) (2) (2) (2) (2) (2) (2) (3).png>)
 
