@@ -116,7 +116,7 @@
       * [GCR 액세스 권한 설정](products/snyk-container/image-scanning-library/gcr-image-scanning/enable-permissions-to-access-gcr.md)
       * [GCR 통합 구성](products/snyk-container/image-scanning-library/gcr-image-scanning/configure-integration-for-gcr.md)
     * [DigitalOcean image scanning](products/snyk-container/image-scanning-library/digitalocean-image-scanning/README.md)
-      * [Container security with DigitalOcean integration](products/snyk-container/image-scanning-library/digitalocean-image-scanning/container-security-with-digitalocean-integration.md)
+      * [DigitalOcean 통합을 통한 컨테이너 보안](products/snyk-container/image-scanning-library/digitalocean-image-scanning/container-security-with-digitalocean-integration.md)
       * [Scan container images from DigitalOcean in Snyk](products/snyk-container/image-scanning-library/digitalocean-image-scanning/scan-container-images-from-digitalocean-in-snyk.md)
     * [Docker Hub image scanning](products/snyk-container/image-scanning-library/docker-hub-image-scanning/README.md)
       * [Unauthorized access or Resource does not exist: Dockerhub](products/snyk-container/image-scanning-library/docker-hub-image-scanning/unauthorized-access-or-resource-does-not-exist-dockerhub.md)
