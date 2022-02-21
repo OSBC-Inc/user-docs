@@ -1,27 +1,26 @@
-# Enable permissions to access GCR
+# GCR 액세스 권한 설정
 
-**Prerequisites:**
+**필수 조건**
 
-Enable the [Cloud Resources Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?q=cloud%20resource%20manager&id=16f5d23e-c895-4b9d-88e4-864c1766636f&project=next-for-integration-testing) for the Google account you plan on integrating with Snyk.
+Snyk과 통합하려는 Google 계정에 대해 [Cloud Resources Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?q=cloud%20resource%20manager\&id=16f5d23e-c895-4b9d-88e4-864c1766636f\&project=next-for-integration-testing)를 사용하도록 설정합니다.
 
-From the relevant project in Google, ensure the you've created a service account for this Snyk integration.
+Google의 관련 프로젝트에서 Snyk 통합을 위한 서비스 계정을 생성했는지 확인하세요.
 
-**Steps:**
+**진행 단계**
 
-1. Go to the Google Cloud Platform Console [Credentials](https://console.cloud.google.com/apis/credentials) page, select the project that you want to integrate with, and then select to set up a new service account key.
-2. From the view that loads, choose the service account from the dropdown list that you created for this integration, and configure a new key for that account with these values:
-   * **Service account name** - assign a unique name for the account in order to remember its uses later on.
-   * **Role** - Storage Object Viewer \(roles/storage.objectViewer\).
-   * **Service account ID** - leave empty
-   * **Key type** - JSON
-3. Click **Create** The key is generated for your project. 
-4. Copy _the entire contents_ of the JSON file, which appears similar to the following: 
+1. Google Cloud Platform 콘솔 [Credentials](https://console.cloud.google.com/apis/credentials) 페이지로 이동하여 통합할 프로젝트를 선택한다음 새로운 서비스 계정 키를 설정하도록 선택하세요
+2. 로드되는 보기의 이 통합에 대해 생성한 드롭다운 목록에서 서비스 계정을 선택하고 다음 값을 사용하여 해당 계정에 대한 새로운 키를 구성합니다.
+   * **Service account name** - 나중에 사용할 수 있도록 계정에 고유한 이름을 할당합니다
+   * **Role** - 스토리지 오브젝트 뷰어(roles/storage.objectViewer)를 선택합니다.
+   * **Service account ID** - 비워 두세요.
+   * **Key type** -JSON입니다.
+3. **Create**를 클릭하세요. 프로젝트에 대한 키가 생성됩니다.
+4. 다음과 유사한 JSON 파일의 전체 내용을 복사합니다.
 
 ![GCR\_key\_file\_contents.png](../../../../.gitbook/assets/uuid-c4e3b781-e575-5ab8-6cea-b0a8654068c4-en.png)
 
-Save the data you copied in order to paste it when configuring the integration with Snyk.
+복사한 데이터는 Snyk과 통합을 구성할때 붙여넣기 위해 저장합니다.
 
-**Next steps:**
+**다음 단계**
 
-Now, configure the integration: [Configure integration for GCR](https://support.snyk.io/hc/articles/360003916118#UUID-9e0df3f8-0780-b593-573b-5185bdca4a6d).
-
+이제 [GCR 통합을 구성](configure-integration-for-gcr.md)합니다.
