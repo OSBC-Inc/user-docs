@@ -1,6 +1,6 @@
 # Snyk Infrastructure as Code (IaC) 시작하기
 
-Snyk IaC를 사용하여 Terraform 또는 Kubernetes(Helm 포함) 환경의 구성 파일에서 issue를 탐색, 검사 및 수정합니다. 자세한 내용은 [Scan Kubernetes configuration files](broken-reference) 및 [Scan Terraform files](broken-reference)를 참조하세요.
+Snyk IaC를 사용하여 Terraform 또는 Kubernetes(Helm 포함) 환경의 구성 파일에서 issue를 탐색, 검사 및 수정합니다. 자세한 내용은 [Scan Kubernetes configuration files](broken-reference/) 및 [Scan Terraform files](broken-reference/)를 참조하세요.
 
 {% hint style="info" %}
 이 문서는 Snyk.io UI를 사용하는 프로세스에 대해 설명합니다. Snyk CLI에서 IaC를 사용하는 방법에 대한 자세한 내용은 [해당 문서](snyk-cli-for-infrastructure-as-code/)를 참조하세요.
@@ -25,33 +25,33 @@ Snyk에서 테스트하고 모니터링할 저장소를 선택하여 Snyk으로 
 5. 진행률 표시줄이 나타납니다. 가져오기 로그 결과를 보려면 **View log**를 클릭하십시오(Kubernetes 및 Terraform 파일을 동시에 검색할 수 있음).
 6. 프로젝트 가져오기를 완료했습니다.
 
-## Stage 2: View configuration file issues
+## 2단계: 구성 파일 이슈 확인
 
+가져온 프로젝트의 구성 파일에 대한 결과를 확인합니다.
 
-
-Select **Projects**, then click on the imported project entry, to see information for scanned configuration files, including the number of high, medium and low severity issues found. For example:View results for configuration files in imported projects.View results for configuration files in imported projects.
+**Projects**를 선택한 다음 가져온 프로젝트 항목을 클릭하여 발견된 심각도 수준별 항목 수를 포함한 스캔한 구성 파일에 대한 정보를 확인합니다.
 
 ![](../../.gitbook/assets/getting-started-snyk-iac-1.png)
 
-(Issues are sorted into project types: Helm, Kubernetes and Terraform.)
+(이슈는 Helm, Kubernetes 및 Terraform과 같은 프로젝트 유형으로 분류합니다.)
 
-Click on a project to see more information and details of the issues in a configuration file:
+프로젝트를 클릭하면 구성 파일의 이슈에 대한 자세한 정보와 세부 정보를 확인할 수 있습니다.
 
 ![](../../.gitbook/assets/getting-started-snyk-iac-2.png)
 
 {% hint style="info" %}
-If you encounter any errors during import, see [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects) FAQs.
+가져오기 중 오류가 발생하면 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하세요.
 {% endhint %}
 
-## Stage 3: View and fix config files
+## 3단계: 구성 파일 확인 및 수정
 
-Act on the recommendations produced by Snyk IaC.
+Snyk IaC에서 생성한 권장 사항에 따라서 진행합니다.
 
-1.
-2.
-3.
-4.
+1. IaC 결과는 관련 스캔 구성 파일에서 직접적인 이슈로 나타납니다.
+2. 이슈를 클릭하면 해당 이슈에 대한 세부 정보와 Snyk IaC의 권장 사항을 확인할 수 있습니다.
+3. 권장 사항에 따라 식별된 이슈를 수정하도록 구성 파일을 편집한 다음 변경 사항을 커밋합니다.
+4. Snyk에는 변경된 파일을 자동으로 다시 스캔하고 이슈 디스플레이에 반영된 변경 사항을 확인할 수 있습니다.
 
-## For more information
+## 자세한 내용 확인
 
-See [Infrastructure as Code](https://docs.snyk.io/snyk-infrastructure-as-code).
+자세한 내용은 [Infrastructure as Code](https://docs.snyk.io/snyk-infrastructure-as-code)를 참조하세요.
