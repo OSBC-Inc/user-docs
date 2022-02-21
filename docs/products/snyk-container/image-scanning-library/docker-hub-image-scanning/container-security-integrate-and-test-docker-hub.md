@@ -1,4 +1,3 @@
-# Container security: integrate and test Docker Hub
+# 컨테이너 보안: Docker Hub 통합 및 테스트
 
-Snyk integrates with Docker Hub to enable you to import snapshots of your projects to our UI and then test and monitor image layers directly from your registries.
-
+Snyk은 Docker Hub와 통합되어 프로젝트의 스냅샷을 UI로 가져온 다음 레지스트리에서 직접 이미지 계층을 테스트하고 모니터링할 수 있습니다.

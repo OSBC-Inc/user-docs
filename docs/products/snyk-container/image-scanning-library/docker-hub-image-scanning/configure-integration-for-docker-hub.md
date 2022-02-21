@@ -1,30 +1,30 @@
-# Configure integration for Docker Hub
+# Docker Hub 통합 구성
 
-Enable integration between Docker Hub and Snyk, and start managing your vulnerabilities.
+Docker Hub와 Snyk 간의 통합을 활성화하고 취약점 관리를 시작합니다.
 
-1. Navigate to **Integrations**
-2. Click **Docker Hub**
-3. Enter your Docker Hub username and Access Token (see below to generate token)
-4. click **Save**, the page will reload with new options and the Access Token field will be blank--this is normal
-5. A confirmation message that the details were saved also appears in green at the top of the screen.
+1. **Integrations**로 이동합니다.
+2. **Docker Hub**를 클릭합니다.
+3. Docker Hub 사용자 이름과 액세스 토큰을 입력하세요(토큰을 생성하려면 아래 참조).
+4. **Save**를 클릭하면 페이지가 새로운 선택사항과 함께 다시 로드되고 액세스토큰 필드가 공백으로 표시됩니다. 이는 정상적인 상황입니다.
+5. 세부 정보가 저장되었다는 확인 메시지도 화면 상단에 녹색으로 표시됩니다.
 
-![This is an example of a successful connection.](<../../../../.gitbook/assets/Screen Shot 2022-01-21 at 9.48.27 AM.png>)
+![This is an example of a successful connection.](../../../../.gitbook/assets/Screen%20Shot%202022-01-21%20at%209.48.27%20AM.png)
 
-#### Connection failure
+#### 연결 실패
 
-If the connection to Docker Hub failed, an error notification appears:
+Docker Hub에 연결하지 못한 경우 오류 알림이 나타납니다.
 
-![This is an example of an unsuccessful connect: "Could not connect to Docker Hub".](<../../../../.gitbook/assets/Screen Shot 2022-01-21 at 9.48.50 AM.png>)
+![This is an example of an unsuccessful connect: "Could not connect to Docker Hub".](../../../../.gitbook/assets/Screen%20Shot%202022-01-21%20at%209.48.50%20AM.png)
 
-### Troubleshooting Docker Hub integration
+### Docker Hub 통합 문제 해결
 
-The first line of troubleshooting Docker Hub integration issues--failure to import projects, fail to connect, no error shown, etc.--is to generate a new Access Token and resave the Docker Hub integration in the Snyk settings page.
+프로젝트 가져오기 실패, 연결 실패, 오류 표시 누락 등 Docker Hub 통합 문제를 해결 하는 첫번째 방법은 새로운 액세스 토큰을 생성하고 Snyk 설정 페이지에서 Docker Hub 통합을 다시 설정하는 것입니다.
 
-#### To generate Docker Hub Access Token:
+Docker Hub 액세스 토큰을 다시 생성하려면 다음과 같이 진행합니다.
 
-1. Navigate to [https://hub.docker.com/settings/security](https://hub.docker.com/settings/security)&#x20;
-2. Select New Access Token&#x20;
-3. Enter access token description, set permissions, and click Generate&#x20;
+1. [https://hub.docker.com/settings/security](https://hub.docker.com/settings/security)로 이동합니다.
+2. 새로운 액세스 토큰을 선택하세요.
+3. 액세스 토큰 설명을 입력하고 권한을 설정한 다음 Generate를 클릭합니다.액세스 토큰을 복사하고 위 1단계에서 사용자 이름과 함께 사용합니다.
 4. Copy Access Token, it will be used along with the username in step 1 above
 
-More information on [Docker Hub Access Tokens](https://docs.docker.com/docker-hub/access-tokens/) is available in the Docker Hub docs.
+DockerHub 액세스 토큰에 대한 자세한 내용은 [Docker Hub Access Tokens](https://docs.docker.com/docker-hub/access-tokens/)를 참조하세요.
