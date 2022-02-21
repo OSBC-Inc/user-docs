@@ -69,9 +69,9 @@ jobs:
 
 ### Snyk IaC GitHub Action
 
-Another way to test the rules is by testing the contract with the [Snyk CLI](../../../features/snyk-cli/) by using the [Snyk IaC GitHub Action](https://github.com/snyk/actions/tree/master/iac), making sure the generated bundle can be read by the CLI.
+Rule을 테스트하는 또 다른 방법은 [Snyk IaC Github Action](https://github.com/snyk/actions/tree/master/iac)을 사용하여 [Snyk CLI](../../../features/snyk-cli/)에서 테스트하여 생성된 bundle을 CLI에서 읽을 수 있는지 확인하는 것입니다.
 
-To do this, you will need a step for installing the Snyk CLI and a `SNYK_TOKEN`, which can be found in your Snyk Account Settings.
+이를 실행하려면 Snyk CLI 및 `SNYK_TOKEN` 설치 단계가 필요하며, 이 단계는 Snyk 계정 설정에서 확인할 수 있습니다.
 
 {% code title=".github/workflows/test.yml" %}
 ```
@@ -101,13 +101,13 @@ jobs:
 ```
 {% endcode %}
 
-You can also expand these tests to use [Shellspec](https://github.com/shellspec/shellspec) and verify that the desired vulnerabilities get triggered, but we recommend using the unit tests for this.
+[Shellspec](https://github.com/shellspec/shellspec)을 사용하도록 이러한 테스트를 확장하고 원하는 취약점이 나타나는지 확인할 수 있지만 단위 테스트를 사용하는 것이 좋습니다.
 
-### Publishing the custom rules
+### Custom rules 게시
 
-Once a PR passes its checks from the previous section and gets merged into the `main` branch, you can publish our rules to an OCI registry. This allows you to configure a separate pipeline, to download the custom rules bundle from this location, and run the custom rules in order to catch misconfigurations.
+PR이 이전 섹션에서 검사를 통과하고 `main` branch로 병합하면 OCI 레지스트리에서 Rule을 게시할 수 있습니다. 이를 통해 별도의 파이프라인을 구성하고, Custom rules bundle을 다운로드하고 Custom rules를 실행하여 잘못된 구성을 탐지할 수 있습니다.
 
-For this, we will add another workflow under `.github/workflows` called `publish.yml`:
+이를 위해 `publish.yml`이라는 다른 워크플로우를 `.github/workflows`에 추가합니다.
 
 {% code title=".github/workflows/publish.yml" %}
 ```
@@ -147,17 +147,17 @@ jobs:
 ```
 {% endcode %}
 
-It looks similar to the previous workflow, but there are a few things to note about this one:
+이전 워크플로우와 비슷해 보이지만 이 워크플로우에 대해 몇 가지 유의할 사항이 있습니다.
 
-* We configured it to run only on `main` branches, so that it runs when PRs are merged.
-* We added a step to authenticate with Docker Hub, our chosen OCI registry. For a list of supported registries read about [pushing bundles](getting-started-with-the-sdk/pushing-a-bundle.md). Use the [docker/login-action](https://github.com/docker/login-action) GitHub Action to do that and make sure to configure the GitHub secrets under `Settings` -> `Secrets`.
-* We added a step to run `snyk-iac-rules build` followed by `snyk-iac-rules push`, which will publish our generated custom rules bundle to an OCI registry.
+* PR이 병합할 때 실행되도록 main branch에서만 실행하도록 구성했습니다.
+* 선택한 OCI 레지스트리인 Docker Hub 인증 단계를 추가했습니다. 지원하는 레지스트리 목록을 확인하려면 [pushing a bundle](getting-started-with-the-sdk/pushing-a-bundle.md)을 참조하세요. [docker/login-action](https://github.com/docker/login-action) GitHub Action을 사용하여 이를 수행하고 `Settings` -> `Secrets`에서 Github 암호를 구성해야 합니다.
+* 생성한 Custom rules bundle을 OCI 레지스트리에 게시하는 `snyk-iac-rules build`에 이어 `snyk-iac-rules push`를 실행하는 단계를 추가했습니다.
 
-#### Versioning rules
+#### 버전 지정 규칙
 
-If we want to release an experimental version of the custom rules without affecting all our CI/CD pipelines, we can use tagging to version our bundles.
+모든 CI/CD 파이프라인에 영향을 미치지 않고 Custom rules의 실험 버전을 릴리스하려면 태그 지정을 사용하여 bundle을 버전화할 수 있습니다.
 
-So, we can start trialing bundle `v2-beta` while still using `v1` in most of our services:
+따라서 대부분의 서비스에서 `v1`을 사용하면서 bundle `v2-beta`를 평가판으로 사용할 수 있습니다.
 
 {% code title=".github/workflows/publish.yml" %}
 ```
@@ -173,14 +173,14 @@ So, we can start trialing bundle `v2-beta` while still using `v1` in most of our
 {% endcode %}
 
 {% hint style="info" %}
-Make sure that the OCI\_REGISTRY\_NAME configured in the GitHub Secrets does not already contain the tag or the protocol if you want to use this workflow.
+이 워크플로우를 사용하려면 GitHub Secrets에 구성된 OCI\_REGISTRY\_NAME에 태그 또는 프로토콜이 이미 포함되어 있는지 확인하세요.
 {% endhint %}
 
-### Enforcing the custom rules
+### Custom rules 적용
 
-After publishing the custom rules to an OCI registry, you can configure a separate pipeline to use these rules. One way to do this is by using the [public Group IaC Settings API](https://snykv3.docs.apiary.io/#reference/group-settings/infrastructure-as-code/update-infrastructure-as-code-settings).
+Custom rules를 OCI 레지스트리에 게시한 후 이러한 규칙을 사용하도록 별도의 파이프라인을 구성할 수 있습니다. 이를 위해 [public Group IaC Settings API](https://snykv3.docs.apiary.io/#reference/group-settings/infrastructure-as-code/update-infrastructure-as-code-settings)를 사용하는 것입니다.
 
-This means configuring the GitHub Action above with another job for updating Snyk to use the configured custom rules bundle:
+구성한 Custom rules bundle을 사용하도록 Snyk을 업데이트하는 다른 작업으로 위의 Github Action을 구성합니다.
 
 ```
       - name: Update Snyk
@@ -202,13 +202,13 @@ This means configuring the GitHub Action above with another job for updating Sny
           }'
 ```
 
-This API call will update the chosen Snyk group and all the organizations underneath it to use the configured custom rules bundle.
+이 API 호출은 구성한 Custom rules bundle을 사용하도록 선택한 Snyk 그룹과 아래의 모든 조직을 업데이트합니다.
 
 {% hint style="info" %}
-For now, if we want to configure an organization to use a different bundle, such as the `v2-beta` one, we are limited to using the Snyk Settings page. There we can either configure a new bundle or disable custom rules so that we can use environment variables in our CI/CD pipeline to run the custom rules.
+현재 `v2-beta`와 같은 다른 bundle을 사용하도록 조직을 구성할 경우 Snyk Settings 페이지를 사용하도록 제한합니다. CI/CD 파이프라인에서 환경 변수를 사용하여 Custom rules를 실행할 수 있도록 새로운 bundle을 구성하거나 Custom rules를 사용하지 않도록 설정할 수 있습니다.
 {% endhint %}
 
-In a different repository, all you have to do is authenticate with one of the organizations underneath this group and add the Snyk IaC GitHub Action to a workflow:
+다른 저장소에서 그룹 아래 조직 중 하나를 인증하고 Snyk IaC Github Action을 워크플로우에 추가하면 됩니다.
 
 ```
 name: Snyk Infrastructure as Code Custom Rules
@@ -229,7 +229,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 ```
 
-The result is that the GitHub action will fail until the generated misconfigurations have been resolved:
+그 결과 생성한 잘못된 구성이 해결될 때까지 Github Action이 실패합니다.
 
 ```
 Testing example.tf...
@@ -243,13 +243,13 @@ Infrastructure as code issues:
     introduced by input > resource > aws_iam_role[new_role] > tags
 ```
 
-### Configuring the custom rules
+### Custom rules 구성
 
-Additionally, if using an API or the Snyk Settings page seem too restrictive, we also provide a way to configure the custom rules by using the environment variables.
+또한 API 또는 Snyk Settings 페이지를 사용하는것이 너무 제한적일 경우 환경 변수를 사용하여 Custom rules를 구성할 수 있는 방법도 제공합니다.
 
-You can use the Snyk IaC GitHub Action with the `SNYK_CFG_OCI_REGISTRY_URL`, `SNYK_CFG_OCI_REGISTRY_USERNAME`, and `SNYK_CFG_OCI_REGISTRY_PASSWORD` environment variables to scan your configuration files for any custom rules which may have been breached.
+Snyk IaC Github Action은 `SNYK_CFG_OCI_REGISTRY_URL`, `SNYK_CFG_OCI_REGISTRY_USERNAME`, `SNYK_CFG_OCI_REGISTRY_PASSWORD` 환경 변수와 함께 사용할 수 있습니다.
 
-The GitHub Action reads these environment variables and pulls down the bundle pushed in the previous step to the configured OCI registry. The GitHub action will look similar to this:
+Github Action은 이러한 환경 변수를 읽고 이전 단계에서 push된 bundle을 구성된 OCI 레지스트리로 풀다운합니다. Github Action은 다음과 비슷하게 표시합니다.
 
 ```
 name: Snyk Infrastructure as Code Custom Rules
