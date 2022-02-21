@@ -1,70 +1,70 @@
-# Detecting application vulnerabilities in container images
+# 컨테이너 이미지에서 애플리케이션 취약점 탐지
 
 {% hint style="info" %}
-For the Container Registry integration, the feature is supported for Node, Ruby, PHP, Python, Go binaries and Java. For the CLI and Kubernetes, the feature is supported for Node, Golang, and Java.
+Container Registry 통합의 경우 이 기능은 Node, Ruby, PHP, Python, Go binaries 및 Java에 대해 지원됩니다. CLI 및 Kubernetes의 경우 이 기능은 Node, Golang 및 Java에 대해 지원됩니다.
 {% endhint %}
 
-Snyk allows detection of vulnerabilities in your application dependencies from container images, as well as from the operating system, all in one single scan.
+Snyk을 사용하면 한 번의 스캔으로 컨테이너 이미지뿐만 아니라 운영체제에서도 애플리케이션 디펜던시의 취약점을 탐지할 수 있습니다.
 
-After you integrate with a container registry and import your projects, we scan your image and test for vulnerabilities.
+컨테이너 레지스트리와 통합하고 프로젝트를 가져오면 이미지를 스캔하고 취약점을 테스트합니다.
 
-### Enable application vulnerabilities scan from container images
+### 컨테이너 이미지에서 애플리케이션 취약점 스캔 활성화
 
-1. Navigate to your container registry integration settings
-2. Enable the _**Detect application vulnerabilities**_ capability and save the changes:
+1. 컨테이너 레지스트리 통합 설정으로 이동합니다.
+2. _**Detect application vulnerabilities**_ 기능을 활성화하고 변경 내용을 저장합니다.
 
 ![](../../../.gitbook/assets/detect-app-vulns.png)
 
-When scanning an image using a container registry, Kubernetes integration, or through the Docker scan command, the scan also uses the `--app-vulns` flag by default. You are able to opt out of the flag in the container registry only. Do so by disabling the ‘_detect application vulnerabilities_’ toggle in the integration settings.
+컨테이너 레지스트리, Kubernetes 통합을 사용하거나 Docker scan 명령을 통해 이미지를 스캔할 때 기본적으로 `--apps-vulns` flag도 사용합니다.
 
-### Using CLI to detect vulnerabilities
+### CLI를 사용하여 취약점 탐지
 
-#### App Vulns Flag
+#### 앱 취약점 Flag
 
-Use the `--app-vulns` flag to detect vulnerabilities in your application dependencies from container images.&#x20;
+`--app-vulns` flag를 사용하여 컨테이너 이미지에서 애플리케이션 디펜던시의 취약점을 탐지합니다.
 
-For Java, when specifying the flag, we scan one level of nested jars by default.&#x20;
+Java의 경우 flag를 지정할 때 기본적으로 중첩된 jar의 최상위를 스캔합니다.
 
-#### Nested Jars Depth Flag
+#### 중첩된 Jars Depth Flag
 
-For Java applications, when using `--app-vulns`, you can also use the `--nested-jars-depth=n` flag to set how many levels of nested jars Snyk will unpack. The implicit default is 1. I.e when specifying 2, it means that Snyk unzips jars in jars, 3 means Snyk unzips jars in jars in jars, etc.
+Java 애플리케이션의 경우 `--apps-vulns`를 사용할 때 `--nested-jars-depth=n` flag를 사용하여 Snyk이 압축을 풀 중첩된 jar의 수준을 설정할 수 있습니다. 기본값은 1입니다. 예를 들어, 2로 지정하면 Snyk은 jar에 있는 Jar의 압축을 풉니다. 3은 jar의 jar에 있는 Jar의 압축을 풉니다.
 
-Users can use --nested-jar-depth=0 to opt out of any scans they feel are unnecessary.&#x20;
+사용자는 —nested-jar-depth=0을 사용하여 불필요하다고 생각되는 스캔을 거부할 수 있습니다.
 
-### View vulnerabilities and licensing issues
+### 취약점 및 라이선스 issues 보기
 
-After the feature is enabled, you can see:
+기능이 활성화되면 다음을 볼 수 있습니다.
 
-* Dependency vulnerabilities and licensing issues of manifest files detected in your container image.
-* Vulnerabilities detected in operating system packages.
+* 컨테이너 이미지에서 감지된 매니페스트 파일의 디펜던시 및 라이선스 issues
+* 운영체제 패키지에서 발견된 취약점
 
-When an image is imported to Snyk, it appears under its registry record in the **Projects** view, showing the operating system vulnerabilities found in your image.
+Snyk으로 가져온 이미지는 **Projects** view의 ~~레지스트리 레코드~~ 아래에 나타나 이미지에서 발견된 운영체제 취약점을 표시합니다.
 
-With this feature enabled, you can also see nested manifest files detected in the image and their vulnerabilities and licensing issues.
+이 기능을 활성화하면 이미지에서 탐지된 중첩된 매니페스트 파일과 해당 취약점 및 라이선스 issues도 볼 수 있습니다.
 
 ![](<../../../.gitbook/assets/mceclip2 (1) (1) (1) (3) (3) (4) (6) (1) (23).png>)
 
-### Automated scanning
+### 자동 스캔
 
-Snyk scans the image regularly based on your project’s settings, and updates you via email or Slack - based on your configuration - when any new vulnerabilities are identified in both the operating system and application dependencies.
+Snyk은 프로젝트 설정을 기준으로 정기적으로 이미지를 스캔하고 운영체제 및 애플리케이션 디펜던시 모두에서 새로운 취약점이 확인되면 구성에 따라 이메일이나 Slack을 통해 업데이트합니다.
 
-For each project, you can choose the test frequency under its settings (the default is daily testing).
+각 프로젝트의 설정에서 테스트 빈도를 선택할 수 있습니다.(기본 값은 일일 테스트)
 
 ![](<../../../.gitbook/assets/mceclip3 (1).png>)
 
-**Supported registries**
+**지원되는 레지스트리**
 
-This is supported across the following container registries:
+이 기능은 다음과 같은 컨테이너 레지스트리에서 지원됩니다.
 
 * [ACR](https://docs.snyk.io/snyk-container/image-scanning-library/acr-image-scanning)
-* [Amazon ECR](https://docs.snyk.io/snyk-container/image-scanning-library/ecr-image-scanning)&#x20;
+* [Amazon ECR](https://docs.snyk.io/snyk-container/image-scanning-library/ecr-image-scanning)
 * [JFrog Artifactory](https://docs.snyk.io/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning)
-* [Docker Hub](https://docs.snyk.io/snyk-container/image-scanning-library/docker-hub-image-scanning)&#x20;
+* [Docker Hub](https://docs.snyk.io/snyk-container/image-scanning-library/docker-hub-image-scanning)
 * [GCR](https://docs.snyk.io/snyk-container/image-scanning-library/gcr-image-scanning)
 
-**Supported Integrations**
+**지원되는 통합**
 
-The supported languages work on the following integrations:
+지원되는 언어는 다음과 같은 통합에서 작동합니다.
 
 | **Language** | **Container Registry** | **CLI** | **Kubernetes** |
 | ------------ | ---------------------- | ------- | -------------- |
@@ -75,4 +75,4 @@ The supported languages work on the following integrations:
 | Go Binaries  | Yes                    | Yes     | Yes            |
 | Java         | Yes                    | Yes     | Yes            |
 
-****
+***

@@ -1,6 +1,6 @@
-# Getting around the Snyk Container UI
+# Snyk Container UI 둘러보기
 
-Understanding the UI for Snyk Container.
+Snyk Container UI 이해
 
 * [Detecting application vulnerabilities in container images](detecting-application-vulnerabilities-in-container-images.md)
 * [Analysis and fixes for your images from the Snyk app](analysis-and-remediation-for-your-images-from-the-snyk-app.md)
