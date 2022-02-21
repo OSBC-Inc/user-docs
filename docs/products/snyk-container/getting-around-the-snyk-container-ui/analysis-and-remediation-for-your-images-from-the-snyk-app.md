@@ -1,27 +1,27 @@
-# Analysis and fixes for your images from the Snyk app
+# Snyk 앱에서 이미지 분석 및 수정
 
-You can import container projects into Snyk using `snyk monitor` from the CLI. Alternatively, you can import projects directly from a supported container registry from the UI.
+CLI에서 snyk monitor를 사용하여 컨테이너 프로젝트를 Snyk으로 가져올 수 있습니다. 또는 UI에서 지원되는 컨테이너 레지스트리에서 직접 프로젝트를 가져올 수 있습니다.
 
-We then scan your project, testing for vulnerabilities, and import a snapshot of your projects. Snyk scans the image snapshot dependencies (which in turn refers to its tag) regularly based on your configurations (daily or weekly) and updates you when any new vulnerabilities are identified (email or Slack, also based on your configurations). If the tag for an image changes and the original tag is used for a different image, Snyk continues to scan the image associated with the original tag, meaning we scan the new image on recurring tests. In order to continue testing an image with a different tag, import the relevant tag.
+그런 다음 프로젝트를 스캔하고 취약점을 테스트한 다음 프로젝트의 스냅샷을 가져옵니다. Snyk은 설정(매일 또는 매주)을 기준으로 정기적으로 이미지 스냅샷 디펜던시(태그 참조)를 스캔하고 새로운 취약점이 확인되면 업데이트합니다.(사용자의 설정을 기준으로 이메일 또는 Slack) 이미지의 태그가 변경되고 원래 태그가 다른 이미지에 사용되는 경우 Snyk은 원래 태그와 연결된 이미지를 계속 스캔합니다. 즉, 반복 테스트에서 새 이미지를 스캔합니다. 다른 태그를 사용하여 이미지 테스트를 계속하려면 관련 태그를 가져오십시오.
 
-From the **Projects** page, if the project is imported from a registry integration, then it is marked with the relevant registry icon; if it is imported from the CLI, then similarly it is marked with a CLI icon.
+**Projects** 페이지에서 프로젝트를 레지스트리 통합에서 가져온 경우 관련 레지스트리 아이콘으로 표시되고 CLI에서 가져오면 마찬가지로 CLI 아이콘으로 표시됩니다.
 
-You can filter for all container projects, similar to the following example:
+다음 예와 유사하게 모든 컨테이너 프로젝트를 필터링할 수 있습니다.
 
 ![](<../../../.gitbook/assets/image (10).png>)
 
-When you open any container project, the resulting analysis and fix advice appears in the Snyk UI:
+컨테이너 프로젝트를 열면 분석 결과 및 수정 조언이 Snyk UI에 나타납니다.
 
 ![](../../../.gitbook/assets/uuid-069520cd-66e8-9f80-5bcf-c7845009ff54-en.png)
 
-The following information is displayed:
+다음과 같은 정보가 표시됩니다.
 
-* Project summary, displays general project details, including these unique details:
-  * Image ID
-  * Image tag
-  * Base Image
-  * Total dependencies with known vulnerabilities, and the total number of vulnerabilities
-* Fix advice—if you included your Dockerfile for monitoring, then any available actionable fix advice is displayed. To view all advice, click the **Show more upgrade types** link. The advice offered is dependent on available fixes, and appears similar to the following image:
+* 프로젝트 요약에는 다음과 같은 고유한 세부 정보를 포함한 일반 프로젝트 세부 정보가 표시됩니다.
+  * 이미지 ID
+  * 이미지 태그
+  * 기본 이미지
+  * 알려진 취약점이 있는 총 종속성 및 총 취약점&#x20;
+* 수정 조언 – 모니터링에 Docker 파일을 포함시킨 경우 실행 가능한 모든 수정 조언이 표시됩니다. 모든 조언을 보려면 **Show more upgrade types** 링크를 클릭합니다. 제공되는 조언은 사용 가능한 수정 사항에 따라 다르며 다음 이미지와 유사하게 나타납니다.
 
 ![](../../../.gitbook/assets/uuid-431ce2b1-e5f0-0025-7932-0171b35cb9bb-en.png)
 

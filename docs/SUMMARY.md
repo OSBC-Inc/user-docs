@@ -92,7 +92,7 @@
     * [고급 Snyk Container CLI 사용](products/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage.md)
   * [Snyk Container UI 둘러보기](products/snyk-container/getting-around-the-snyk-container-ui/README.md)
     * [컨테이너 이미지에서 애플리케이션 취약점 탐지](products/snyk-container/getting-around-the-snyk-container-ui/detecting-application-vulnerabilities-in-container-images.md)
-    * [Analysis and fixes for your images from the Snyk app](products/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md)
+    * [Snyk 앱에서 이미지 분석 및 수정](products/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md)
     * [Base image detection](products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection.md)
     * [Image layer information](products/snyk-container/getting-around-the-snyk-container-ui/image-layer-information.md)
   * [Scan your Dockerfile](products/snyk-container/scan-your-dockerfile/README.md)
