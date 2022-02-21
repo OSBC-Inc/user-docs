@@ -122,7 +122,7 @@
       * [Unauthorized access or Resource does not exist: Dockerhub](products/snyk-container/image-scanning-library/docker-hub-image-scanning/unauthorized-access-or-resource-does-not-exist-dockerhub.md)
       * [컨테이너 보안: Docker Hub 통합 및 테스트](products/snyk-container/image-scanning-library/docker-hub-image-scanning/container-security-integrate-and-test-docker-hub.md)
       * [Docker Hub 통합 구성](products/snyk-container/image-scanning-library/docker-hub-image-scanning/configure-integration-for-docker-hub.md)
-      * [Docker Hub: add projects and images to the Snyk UI](products/snyk-container/image-scanning-library/docker-hub-image-scanning/docker-hub-add-projects-and-images-to-the-snyk-ui.md)
+      * [Docker Hub: Snyk UI에 프로젝트 및 이미지 추가](products/snyk-container/image-scanning-library/docker-hub-image-scanning/docker-hub-add-projects-and-images-to-the-snyk-ui.md)
     * [ECR image scanning](products/snyk-container/image-scanning-library/ecr-image-scanning/README.md)
       * [Container security with Amazon Elastic Container Registry (ECR): integrate and test](products/snyk-container/image-scanning-library/ecr-image-scanning/container-security-with-amazon-elastic-container-registry-ecr-integrate-and-test.md)
       * [Enable permissions to access Amazon Elastic Container Registry (ECR) for the first time](products/snyk-container/image-scanning-library/ecr-image-scanning/enable-permissions-to-access-amazon-elastic-container-registry-ecr-for-the-first-time.md)

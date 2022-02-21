@@ -1,33 +1,34 @@
-# Docker Hub: add projects and images to the Snyk UI
+# Docker Hub: Snyk UI에 프로젝트 및 이미지 추가
 
-Snyk tests and monitors Docker Hub repositories and images by evaluating root folders.
+Snyk은 루트 폴더를 평가하여 Docker Hub 저장소 및 이미지를 테스트하고 모니터링합니다.
 
-**To add repositories to Snyk:**
+Snyk에 저장소를 추가하려면 다음과 같이 진행합니다.
 
-**Prerequisites:**
+**필수 조건**
 
-* You must have an account with Snyk and be onboarded to your organization by an admin.
-* Ensure the integration with Docker Hub and Snyk has already been configured.
+* Snyk 계정이 있어야 하며 관리자에 의해 조직에 등록되어야 합니다.
+* Docker Hub 및 Snyk과의 통합이 이미 구성되어 있는지 확인하세요.
 
-**Steps:**
+**진행 단계**
 
-1. Log in to your account and navigate to the relevant group and organization that you want to manage.&#x20;
-2. Go to Projects, and click Add projects. The list of integrations already configured on your account opens, similar to the following:&#x20;
-   1. The Which images do you want to test? view appears, displaying all of the available images for the registry to which you connected, grouped by each of your repositories, similar to the following:
-3. Select single or multiple images with any or all of the following methods:
-   * Type the name of a single image for import in the Image Name field (#1 in the image above),
-   * Select any of the repositories if you want to import all of the associated images (#2 in the image above).
-   * Expand and collapse repositories to select multiple images (#3 in the image above) across multiple repositories.
-4.  Click **Add selected repositories**.
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2.  **Projects**로 이동하고 **Add Projects**를 클릭합니다. 계정에 이미 구성된 통합 목록이 같이 열립니다.
 
-    A status bar appears at the top of the page as the images are imported; you can continue working in the meantime.
-5. When the import ends, notification of success, or failure, appears at the top of the page. Click **Refresh** to view the Projects page with the newly imported images. Images are grouped by repository and are each linked individually to a detailed **Projects** page.
-6. You can now connect your Git repo to this project in order to use your Dockerfile for enriched fix advice. For more info, see [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29).
+    연결했던 레지스트리에 사용 가능한 모든 이미지가 다음과 비슷하게 각 저장소별로 그룹화되어 표시됩니다.
+3. 다음 방법중 하나 또는 모두 사용하여 단일 또는 여러개의 이미지를 선택합니다.
+   * **Image Name** 필드에 가져올 단일 이미지의 이름을 입력합니다. (#1)
+   * 연결된 모든 이미지를 가져오려면 저장소를 선택합니다. (#2)
+   * 여러 저장소에서 여러 이미지(#3)를 선택하려면 저장소를 확장 및 축소합니다.
+4.  **Add selected repositories**를 클릭합니다.
+
+    이미지를 가져오면 페이지 상단에 상태 표시줄이 나타납니다. 그 동안 작업을 계속할 수 있습니다.
+5. 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 **Projects** 페이지를 확인하려면 새로고침합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부 프로젝트 페이지에 개별적으로 연결됩니다.
+6. 이제 Git 저장소를 이 프로젝트와 연결하여 Docker파일을 사용하여 수정 정보를 제공할 수 있습니다. 자세한 내 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요.
 
 You can now also filter to view only those projects:
 
 ![](<../../../../.gitbook/assets/uuid-ce306bb8-1d6d-c895-bdb5-3a7cd551977b-en-1- (1) (1) (2) (2) (2) (2) (2) (2) (2) (2) (2) (2) (2) (2) (3).png>)
 
-Once repositories and images are imported, a confirmation appears in green at the top of the screen. Docker Hub files are indicated with a unique icon ![](../../../../.gitbook/assets/docker-hub-logo.png) .
+저장소와 이미지를 가져오면 화면 상단에 확인 메시지가 녹색으로 나타납니다. Docker Hub 파일은 특정 아이콘으로 표시됩니다 ![](../../../../.gitbook/assets/docker-hub-logo.png) .
 
-Docker Hub integration works similar to our other integrations. To continue to monitor, fix and manage your projects, see the relevant pages in our docs.
+Docker Hub 통합은 다른 통합과 비슷하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 문서의 관련 페이지를 참조하십시오.
