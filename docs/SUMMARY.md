@@ -129,7 +129,7 @@
       * [Snyk 인증을 위해 AWS IAM 역할에 조직 추가](products/snyk-container/image-scanning-library/ecr-image-scanning/add-additional-organizations-to-your-aws-iam-role-for-snyk-authentication.md)
       * [Amazon Elastic Container Registry (ECR) 통합 구성](products/snyk-container/image-scanning-library/ecr-image-scanning/configure-integration-for-amazon-elastic-container-registry-ecr.md)
       * [Amazon Elastic Container Registry (ECR): Snyk과 함께 통합 구성](products/snyk-container/image-scanning-library/ecr-image-scanning/amazon-elastic-container-registry-ecr-configure-your-integration-with-snyk.md)
-      * [Amazon Elastic Container Registry (ECR): add images to Snyk](products/snyk-container/image-scanning-library/ecr-image-scanning/amazon-elastic-container-registry-ecr-add-images-to-snyk.md)
+      * [Amazon Elastic Container Registry (ECR): Snyk에 이미지 추가](products/snyk-container/image-scanning-library/ecr-image-scanning/amazon-elastic-container-registry-ecr-add-images-to-snyk.md)
     * [GitHub container registry image scanning](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/README.md)
       * [Container security with GitHub container registry integration](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/container-security-with-github-container-registry-integration.md)
       * [Scan container images from GitHub container registry in Snyk](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/scan-container-images-from-github-container-registry-in-snyk.md)
