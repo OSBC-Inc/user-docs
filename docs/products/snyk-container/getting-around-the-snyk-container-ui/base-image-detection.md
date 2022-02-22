@@ -1,30 +1,30 @@
-# Base image detection
+# 기본 이미지 감지
 
-Detecting vulnerable base images allows you to identify the source of your vulnerabilities and fix by updating the base image according to recommendation.
+취약한 기본 이미지를 탐지하면 취약점의 원인을 식별하고 권장 사항에 따라 기본 이미지를 업데이트하여 수정할 수 있습니다.
 
-After you configure a [container integration](https://docs.snyk.io/snyk-container) (such as the CLI or a container registry integration), you can detect your base image.
+[container integration](https://docs.snyk.io/snyk-container)(예: CLI 또는 컨테이너 레지스트리 통합)을 구성한 후에는 기본 이미지를 탐지할 수 있습니다.
 
 {% hint style="info" %}
-For a list of supported images, consult our [image scanning library.](../image-scanning-library/)
+지원되는 이미지 목록은 [image scanning library](../image-scanning-library/) 참조하시오.
 {% endhint %}
 
-## Identification methods
+## 식별 방법
 
-To identify vulnerable base images, you can use one of these methods:
+취약한 기본 이미지를 식별하려면 다음 방법 중 하나를 사용할 수 있습니다.
 
-* **Auto-detection**: When Snyk analyses your container image, relevant metadata is extracted from the image manifest, and the base image is automatically detected. This method analyses **rootfs** layers from the image manifest, which can be equivalent to more than one images/ image tags in DockerHub.
-* **Dockerfile**: Snyk can also detect vulnerable base images with the use of your Dockerfile. It can either be attached with a **--file** flag to your CLI **snyk container** scan, linked from an SCM through your project settings, or the Dockerfile can be detected and scanned when you import a Git repository. This method can be more accurate, but requires an additional step compared to auto-detection.
+* **Auto-detection**: Snyk이 컨테이너 이미지를 분석하면 이미지 매니페스트에서 관련 메타데이터가 추출되고 기본 이미지가 자동으로 감지됩니다. 이 방법은 이미지 매니페스트에서 **rootfs** 레이어를 분석하며, 이는 DockerHub에서 하나 이상의 이미지/이미지 태그와 동일할 수 있습니다.
+* **Dockerfile**: Snyk은 Dockerfile을 사용하여 취약한 기본 이미지를 탐지할 수도 있습니다. `--file` flag를 사용하여 CLI `snyk container` 스캔에 첨부하거나 프로젝트 설정을 통해 SCM에서 연결하거나 Git 저장소를 가져올 때 Dockerfile을 감지하고 스캔할 수도 있습니다. 이 방법은 더 정확할 수 있지만 자동 탐지에 비해 추가 단계가 필요합니다.
 
-For either method, a “project” in the Snyk UI is created.
+두 방법 모두 Snyk UI에 “project”가 생성됩니다.
 
-## Base image recommendations
+## 기본 이미지 권장 사항
 
-If the base image is an [Official Docker image](https://docs.docker.com/docker-hub/official\_images/), the results include recommendations for upgrades to resolve some of the discovered vulnerabilities.
+기본 이미지가 [Official Docker image](https://docs.docker.com/docker-hub/official\_images/)인 경우, 스캔된 취약점 중 일부를 해결하기 위한 업그레이드에 대한 권장 사항이 결과에 포함됩니다.
 
-This allows you to see vulnerability counts in minor and major upgrades, as well as in alternative base images which might have fewer vulnerabilities. With that, you can decide whether to upgrade your base image, and which one will be the best fit.
+이를 통해 minor 및 major 업그레이드뿐만 아니라 취약점이 더 적을 수 있는 대체 기본 이미지의 취약점 수를 확인할 수 있습니다. 이를 통해 기본 이미지를 업그레이드할지, 어떤 이미지가 가장 적합한지 결정할 수 있습니다.
 
 ![](../../../.gitbook/assets/base-image2.png)
 
-See [Analysis and fixes for your images from the Snyk app](analysis-and-remediation-for-your-images-from-the-snyk-app.md) for more details.
+자세한 내용은 [Snyk 앱에서 이미지 분석 및 수정](analysis-and-remediation-for-your-images-from-the-snyk-app.md)을 참조하시오.
 
-You can find the base image vulnerabilities in your project, among the vulnerabilities added by your instructions, sorted by their priority score. You can also filter only the base image vulnerabilities, with the **Base image** option under the **Image Layer** handy filter. See [image layer information](image-layer-information.md) for more details.
+You can find the base image vulnerabilities in your project, among the vulnerabilities added by your instructions, sorted by their priority score. You can also filter only the base image vulnerabilities, with the **Base image** option under the **Image Layer** handy filter. 자세한 내용은 [이미지 레이어layer 정보](image-layer-information.md)를 참조하시오.

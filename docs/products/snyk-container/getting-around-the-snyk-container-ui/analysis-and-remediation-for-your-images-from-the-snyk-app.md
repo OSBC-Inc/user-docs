@@ -25,24 +25,25 @@ CLI에서 snyk monitor를 사용하여 컨테이너 프로젝트를 Snyk으로 �
 
 ![](../../../.gitbook/assets/uuid-431ce2b1-e5f0-0025-7932-0171b35cb9bb-en.png)
 
-* Upgrade suggestions can include:
-  * Minor upgrades—the safest and best minor upgrade available
-  * Major upgrades—an option for a major upgrade which will reduce more vulnerabilities but with greater risk
-  * Alternative upgrades—viable alternative image options for replacing your current base image with other, different base images that provide the least amount of vulnerabilities possible.
-  * If your base image is outdated, Snyk also recommends rebuilding your image.
-* Upgrade recommendations include these details:
-  * the name of the recommended base image version
-  * the number of vulnerabilities existent in the recommended upgrade
-  * a summary of the vulnerability severities accordingly.
-* Filters—in addition to the other filters available for all supported project types, when you view a container project, you can also filter by:
-  * a specific binary or by OS packages (for binaries/packages containing issues)
-  * Dockerfile instructions - if you attach your Dockerfile, then you can filter to view issues associated only with the base image, or to view Dockerfile-related advice (user instruction), or both
+* 업그레이드 제안 사항은 다음과 같습니다.
+  * Minor upgrades—가장 안전하고 최상의 minor 업그레이드
+  * Major upgrades—더 많은 취약점을 줄이지만 더 큰 위험이 있는 major 업그레이드 옵션
+  * Alternative upgrades—가능한 최소의 취약점을 갖는 다른 기본 이미지로 바꾸기 위한 대체 이미지 옵션
+  * 기본 이미지가 오래된 경우, Snyk은 이미지를 재구축할 것을 권장합니다.
+* 업그레이드 권장 사항에는 다음 세부 정보가 포함됩니다.
+  * 권장 기본 이미지 버전의 이름
+  * 권장 업그레이드에 존재하는 취약점의 수
+  * 그에 따른 취약점 심각도 요약
+* Filters—지원되는 모든 프로젝트 유형에 사용할 수 있는 다른 필터 외에도 컨테이너 프로젝트를 볼 때 다음을 기준으로 필터링할 수 있습니다.
+  * 특정 바이너리 또는 OS 패키지별(issues가 포함된 바이너리/패키지용)
+  * Dockerfile instructions - Dockerfile을 첨부한 경우 필터링하여 기본 이미지와 관련된 issues만 보거나 Dockerfile 관련 조언(사용자 지침)을 보거나 둘 다 볼 수 있습니다.
 
 {% hint style="info" %}
-**Note**\
-If there is only one category of issues in your container, such as Node binary vulnerabilities only or OS packages only, this filter does not appear.\
-If there is no Dockerfile attached for additional advice, the Dockerfile instruction filter does not appear
+**참고**\
+노드 바이너리 취약점만 또는 OS 패키지만과 같이 컨테이너에 issues 카테고리가 하나만 있는 경우 이 필터는 표시되지 않습니다.
+
+추가 조언을 위해 첨부된 Dockerfile이 없으면 Dockerfile 명령 필터가 표시되지 않습니다.
 {% endhint %}
 
-* Issues tab—List of vulnerabilities, including origins, paths, and an overview of the vulnerability
-* Dependencies tab—a tree view of package hierarchy inside the image
+* Issues tab—취약점의 출처, 경로 및 개요를 포함한 취약점 목록
+* Dependencies tab—이미지 내 패키지 계층 구조의 트리 보기

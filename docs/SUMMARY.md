@@ -93,7 +93,7 @@
   * [Snyk Container UI 둘러보기](products/snyk-container/getting-around-the-snyk-container-ui/README.md)
     * [컨테이너 이미지에서 애플리케이션 취약점 탐지](products/snyk-container/getting-around-the-snyk-container-ui/detecting-application-vulnerabilities-in-container-images.md)
     * [Snyk 앱에서 이미지 분석 및 수정](products/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md)
-    * [Base image detection](products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection.md)
+    * [기본 이미지 감지](products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection.md)
     * [Image layer information](products/snyk-container/getting-around-the-snyk-container-ui/image-layer-information.md)
   * [Scan your Dockerfile](products/snyk-container/scan-your-dockerfile/README.md)
     * [Automatically link between Dockerfile and images using labels](products/snyk-container/scan-your-dockerfile/automatically-link-between-dockerfile-and-images-using-labels.md)
