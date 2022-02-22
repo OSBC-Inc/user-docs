@@ -1,24 +1,24 @@
-# Configure integration for Amazon Elastic Container Registry (ECR)
+# Amazon Elastic Container Registry (ECR) 통합 구성
 
-Enable integration between one Amazon ECR registry and a Snyk organization, and start managing your image security. To integrate with multiple registries, create a unique organization for each one.
+하나의 Amazon ECR 레지스트리와 Snyk 조직 간의 통합을 활성화하고 이미지 보안 관리를 시작합니다. 여러 레지스트리와 통합하려면 각 레지스트리에 대해 고유한 조직을 생성합니다.
 
-**Automated Process:**
+**프로세스 자동화**
 
-You have the option of establishing cross-account access to enable Snyk's Amazon ECR integration as a 1-click deployment. This options is available as an official [AWS Quick Start](https://github.com/aws-quickstart/quickstart-snyk-security) and eliminates the need for manual configuration.
+계정간 액세스를 설정하여 Snyk의 Amazon ECR 통합을 원클릭 배포로 활성화할 수 있습니다. 이 옵션은 [AWS Quick Start](https://github.com/aws-quickstart/quickstart-snyk-security)로 제공되며 수동으로 구성할 필요가 없습니다.
 
 ![](../../../../.gitbook/assets/quickstart-snyk-security-ecr.png)
 
-You will need your Snyk **Organization ID** and AWS IAM [role ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference\_identifiers.html#identifiers-arns) to complete the integration. The role ARN will be provided for you in the AWS CloudFormation Console's Output tab.
+통합을 완료하려면 Snyk **Organization ID**와 AWS IAM [role ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference\_identifiers.html#identifiers-arns)이 필요합니다. ARN 역할은 AWS CloudFormation Console의 Output 탭에서 제공합니다.
 
 ![](../../../../.gitbook/assets/cloudformation-launch-stack.png)
 
-**Manual Process:**
+**수동 프로세스**
 
-To enable integration, you must first create a read-only AWS Identity and Access Management (IAM) role. The role delegates read-only access to all repositories in your registry for Snyk per organization by indicating the list of permitted Snyk-assigned organization IDs.
+통합을 사용하도록 설정하려면 먼저 읽기 전용 AWS IAM(Identity and Access Management)역할을 생성해야합니다 역할은 허용된 Snyk 할당 조직 ID 목록을 지정하여 조직별로 Snyk에대한 레지스트리의 모든 저장소에 대한 읽기 전용 액세스를 위임합니다.
 
-Thereafter, when integrating additional organizations, you can simply add the additional organization IDs as necessary.
+그런 다음 추가 조직을 통합할 때 필요에 따라서 추가 조직 ID를 추가할 수 있습니다.
 
-Follow these steps to set up your integration:
+다음 단계에 따라 통합을 설정하세요.
 
 * [enable-permissions-to-access-amazon-elastic-container-registry-ecr-for-the-first-time.md](enable-permissions-to-access-amazon-elastic-container-registry-ecr-for-the-first-time.md "mention")
 * [add-additional-organizations-to-your-aws-iam-role-for-snyk-authentication.md](add-additional-organizations-to-your-aws-iam-role-for-snyk-authentication.md "mention")

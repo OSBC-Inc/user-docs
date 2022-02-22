@@ -1,26 +1,25 @@
-# Add additional organizations to your AWS IAM role for Snyk authentication
+# Snyk 인증을 위해 AWS IAM 역할에 조직 추가
 
-Once you've created an AWS IAM role for Snyk, you can add additional organizations to the same role for repeated use.
+Snyk에 대한 AWS IAM 역할을 만든 후 에는 동일한 역할에 조직을 추가하여 반복적으로 사용할 수 있습니다.
 
-1. In [Snyk](https://app.snyk.io/), retrieve, copy the IDs for any additional Snyk organizations that you want to integrate and save them on the side. You'll need to paste them into a script in the coming steps.
-2. In AWS, navigate to the Trust relationships tab for the role you would like to update with additional organizations.
-3. Click **Edit trust relationship**.
+1. [Snyk](https://app.snyk.io)에서 통합하려는 추가 Snyk 조직의 ID를 검색하여 복사하고 따로 저장합니다. 다음단계에서 스크립트에 붙여넣어야 합니다.
+2. AWS에서 추가 조직과 업데이트할 역할에 대한 Trust relationships탭으로 이동합니다.
+3.  **Edit trust relationship**을 클릭합니다.
 
-   Make sure the value of "sts:ExternalId" is enclosed with square brackets and insert the additional organization ID inside those brackets. Use a comma \( , \) to separate between organization ID values. For example:
+    "sts:ExternalId"는 대괄호로 묶고 해당 대괄호 안에 추가 조직 ID를 삽입합니다. 쉼표( , )를 사용하여 다음과 같이 조직 ID 값을 구분합니다.
 
-   ```text
-   "sts:ExternalId": [
-   "11111111-1111-1111-1111-111111111111",
-   "22222222-2222-2222-2222-222222222222",
-   "c2fa1651-601d-41gc-abe9-03691f5287d8"
-   ]
-   ```
+    ```
+    "sts:ExternalId": [
+    "11111111-1111-1111-1111-111111111111",
+    "22222222-2222-2222-2222-222222222222",
+    "c2fa1651-601d-41gc-abe9-03691f5287d8"
+    ]
+    ```
 
-   Where:
+    다음과 같이 진행합니다.
 
-   `"11111111-1111-1111-1111-111111111111"` = a unique Org ID
+    `"11111111-1111-1111-1111-111111111111"` = 고유한 조직 ID
 
-   `"22222222-2222-2222-2222-222222222222"` = another unique Org ID
+    `"22222222-2222-2222-2222-222222222222"` = 또다른 고유한 조직 ID
 
-   `"c2fa1651-601d-41gc-abe9-03691f5287d8"` = the ID for the Org from which you are currently setting up the integration
-
+    `"c2fa1651-601d-41gc-abe9-03691f5287d8"` = 통합을 현재 설정 중인 조직의 ID입니다.
