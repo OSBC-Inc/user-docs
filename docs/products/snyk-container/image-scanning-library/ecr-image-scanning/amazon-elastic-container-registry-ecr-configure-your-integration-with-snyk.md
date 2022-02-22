@@ -1,25 +1,24 @@
-# Amazon Elastic Container Registry \(ECR\): configure your integration with Snyk
+# Amazon Elastic Container Registry (ECR): Snyk과 함께 통합 구성
 
-Once you create or update an IAM role, allow a few minutes for AWS to update the role on their servers before continuing.
+IAM 역할을 생성하거나 업데이트 한 후에는 진행하기 전에 AWS가 서버에서 역할을 업데이트할 때까지 몇 분 정도 대기하세요.
 
-1. From AWS, copy the **Role ARN** key that appears at the top of the **Summary** section \(inside the **Role** area still\).
-2. Now, log in to your Snyk account.
-3. Navigate to **Integrations** from the menu bar at the top, find and click the Amazon ECR option: 
-4. The Amazon ECR configuration page in the Settings area loads.
-5. Enter credentials as follows:
-   1. **AWS Region**—use the format region-part-\#. For example eu-west-3. You must enter the default region as configured for your AWS account in order for your repositories and images to be available for import.
-   2. **Role ARN**—copy from your AWS account, in the format `arn:aws:iam:::role/`.
-6. Click **Save**
+1. AWS에서 Summary 섹션 상단에 나타나는**Role ARN**키를 복사합니다(**Role** 영역 내부).
+2. Snyk 계정에 로그인합니다.
+3. 상단의 메뉴 모음에서 **Integrations**로 이동하여 Amazon ECR 옵션을 찾아 클릭합니다.
+4. 설정 영역의 Amazon ECR 구성 페이지가 로드됩니다.
+5. 다음과 같이 인증 정보를 입력하세요.
+   1. **AWS Region**—region-part-# 형식을 사용합니다. eu-west-3으로 예를 들면, 저장소 및 이미지를 가져올 수 있으려면 AWS 계정에 구성된 기본 영역을 입력해야 합니다.
+   2. **Role ARN**—`arn:aws:iam:::role/` 형식으로 AWS 계정에서 복사합니다.
+6. **Save**를 클릭합니다.
 
-For example:
+다음은 예시입니다.
 
-```text
+```
    arn:aws:iam::881001789406:role/TestSnykIntegration_role
 ```
 
-Snyk tests the connection values and the page reloads, now displaying Amazon ECR integration details as you entered them. A confirmation message that the details were saved also appears in green at the top of the screen.
+Snyk은 연결 값과 페이지 다시 로드를 테스트하여 입력한 Amazon ECR 통합 세부 정보를 표시합니다. 세부 정보가 저장되었다는 확인 메시지도 화면 상단에 녹색으로 표시됩니다.
 
 ![](../../../../.gitbook/assets/uuid-49671392-b5d5-389d-66c8-86b3daf9a2e1-en.png)
 
-In addition, if the connection to AWS failed, notification appears under the **Connected to Amazon ECR** section.
-
+또한 AWS에 연결하지 못한 경우 **Connected to Amazon ECR**에 알림이 나타납니다.
