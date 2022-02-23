@@ -1,28 +1,26 @@
-# Adding your Dockerfile and test your base image
+# Dockerfile 추가 및 기본 이미지 테스트
 
-To receive base image fix advice, including major, minor and alternative upgrades as well as advice when you need to rebuild your image, integrate with your preferred Git repository and import the repo that contains the relevant Dockerfile.
+major, minor 및 대체 업그레이드를 포함한 기본 이미지 수정 조언과 이미지를 다시 빌드해야 할 때를 알려면 원하는 Git 저장소와 통합한 후 관련 Dockerfile이 포함된 저장소를 가져오십시오.
 
-You can add a single Dockerfile to each image that you've imported.
+가져온 각 이미지에 하나의 Dockerfile을 추가할 수 있습니다.
 
-**To add your Dockerfile for additional fix advice:**
+**추가적인 수정 조언을 위해 Dockerfile을 추가하려면 아래와 같은 전제 조건이 있습니다.**
 
-**Prerequisites:**
+* 관련 Git 저장소가 구성되었는지 확인합니다.
+* 먼저 레지스트리에서 관련 이미지를 가져옵니다.
 
-* Ensure the relevant Git repository has been configured.
-* Import the relevant image from its registry first.
+**단계:**
 
-**Steps:**
-
-1. From the **Project** tab, filter for your project and then click the settings cog to access the settings to add a Dockerfile.
-2. From the **Project** settings page, click **Configure Dockerfile** and then select the relevant Git.
-3. The **Add Projects** view appears, displaying all repositories from the Git account with which you integrated, grouped per organization and personal account:
-4. Checkmark the relevant repo from which to import the Dockerfile.&#x20;
-5. Step 2 loads.
-6. Enter the relative path in the Path to your Dockerfile field in the following format: /path/dockerfile.
-7. Click **Save**.
+1. **Project** 탭에서 프로젝트를 필터링한 다음 톱니바퀴 모양의 설정을 클릭하여 Dockerfile을 추가할 설정에 액세스합니다.
+2. **Project** 설정 페이지에서 **Configure Dockerfile**을 클릭한 후 관련 Git을 선택합니다.
+3. **Add Projects** 화면이 나타나고 통합한 Git 계정의 모든 저장소를 조직 및 개인 계정별로 표시됩니다.
+4. Dockerfile을 가져올 관련 저장소를 선택합니다.
+5. ~~Step 2 loads.(?)~~
+6. **Path to your Dockerfile** 필드에 /path/dockerfile 형식으로 상대 경로를 입력합니다.
+7. **Save**를 클릭합니다.
 
 ![](<../../../.gitbook/assets/image (45).png>)
 
-Snyk tests the project again, this time producing any relevant base image fix advice such as in the following example:
+Snyk은 프로젝트를 다시 테스트하여 다음 예와 같은 관련 기본 이미지 수정 조언을 생성합니다.
 
 ![](../../../.gitbook/assets/mceclip1-2-.png)
