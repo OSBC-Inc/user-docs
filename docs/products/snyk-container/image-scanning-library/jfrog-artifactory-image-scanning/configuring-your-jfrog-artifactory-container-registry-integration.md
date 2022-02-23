@@ -1,27 +1,27 @@
-# Configuring your JFrog Artifactory container registry integration
+# JFrog Artifactory container registry 통합 구성
 
-Enable integration between one Artifactory instance as a container registry and a Snyk organization to start managing your image security.
+컨테이너 레지스트리로 하나의 Artifactory 인스턴스와 Snyk 조직 간의 통합을 활성화하여 이미지 보안 관리를 시작합니다.
 
-## Prerequisites
+## 전제 조건
 
-* You must be an administrator for the organization you're configuring in Snyk.
-* Snyk needs user credentials to integrate with Artifactory and does not support Artifactory when configured for single sign-on (SSO).
-* If you're using self-hosted Artifactory, refer to our documentation explaining about [broker configuration](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md).
+* Snyk에서 구성할 조직의 관리자여야 합니다.
+* Snyk은 Artifactory와 통합하려면 사용자 자격 증명이 필요하며 SSO(Single Sign-On)용으로 구성된 경우 Artifactory를 지원하지 않습니다.
+* 자체 호스팅된 Artifactory를 사용하는 경우 [broker configuration](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)에 대해 설명하는 설명서를 참조하세요.
 
-## Configure integration
+## 통합 구성
 
-1. Log in to [your Snyk account](https://app.snyk.io).
-2.  Navigate to **Integrations** from the menu bar at the top, find and click the Artifactory option:
+1. Snyk 계정으로 [로그인](https://app.snyk.io)합니다.
+2.  상단의 메뉴 모음에서 **Integrations**로 이동하여 Artifactory 옵션을 찾아 클릭합니다.
 
     ![](<../../../../.gitbook/assets/image (57).png>)
-3. The configuration page in the **Settings** area loads.
-4. Enter credentials as follows:
-   1. **Username and Password**—use your Artifactory login credentials.
-   2. **Container registry name -** the _full registry URL_ in format `<org>.jfrog.io/artifactory/api/docker/<repo-name>`.
-5. Click **Save Changes**.
+3. **Settings** 영역의 구성 페이지가 로드됩니다.
+4. 다음과 같이 인증정보를 입력합니다.
+   1. **Username and Password -** Artifactory 로그인 자격 증명을 사용합니다.
+   2. **Container registry name -** `<org>.jfrog.io/artifactory/api/docker/<repo-name>`형식의 전체 레지스트리 URL입니다.
+5. **Save Changes**를 클릭합니다.
 
 ![Screenshot 2021-12-06 at 16 37 12](https://user-images.githubusercontent.com/112600/144875482-078b715e-2834-469b-9983-7e88a65f175e.png)
 
 ![](../../../../.gitbook/assets/uuid-3b329a90-394f-5ab3-af84-658b41a1edc0-en.png)
 
-Snyk tests the connection values and the page reloads, now displaying integration details as you entered them. A confirmation message that the details were saved also appears in green at the top of the screen. In addition, if the connection failed, a notification appears.
+Snyk는 연결 값 및 page reload를 테스트하여 입력한 통합 세부 정보를 표시합니다. 세부 정보가 저장되었다는 확인 메시지도 화면 맨 위에 녹색으로 표시됩니다. 또한 연결에 실패한 경우 알림이 나타납니다.

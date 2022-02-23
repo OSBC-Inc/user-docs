@@ -141,7 +141,7 @@
       * [Snyk에서 Harbor 컨테이너 이미지 스캔](products/snyk-container/image-scanning-library/harbor-image-scanning/scan-container-images-from-harbor-in-snyk.md)
     * [JFrog Artifactory  이미지 스캔](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/README.md)
       * [JFrog Artifactory를 사용한 컨테이너 보안](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/container-security-with-jfrog-artifactory.md)
-      * [Configuring your JFrog Artifactory container registry integration](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/configuring-your-jfrog-artifactory-container-registry-integration.md)
+      * [JFrog Artifactory container registry 통합 구성](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/configuring-your-jfrog-artifactory-container-registry-integration.md)
       * [Add Artifactory images to Snyk](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/add-artifactory-images-to-snyk.md)
     * [Kubernetes workload and image scanning](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/README.md)
       * [Kubernetes integration overview](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/kubernetes-integration-overview.md)
