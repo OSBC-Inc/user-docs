@@ -2,32 +2,32 @@
 
 {% hint style="info" %}
 **Feature availability**\
-This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
+이 기능은 Enterprise 플랜에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-Snyk can integrate to private container registries you host, and help you to better secure container images in those registries.
+Snyk은 호스팅하는 개인 컨테이너 레지스트리에 통합할 수 있으며 해당 레지스트리 컨테이너 이미지를 더 잘 보호할 수 있습니다.
 
 {% hint style="warning" %}
-For this feature to work, you need two separate containers deployed in your infrastructure, creating two separate services.
+이 기능이 작동하려면 인프라에 두 개의 별도 컨테이너를 배포하여 두 개의 개별 서비스를 생성해야 합니다.
 {% endhint %}
 
 {% hint style="info" %}
-To enable and configure your hosted container registry, [contact our Support team](https://support.snyk.io/hc/en-us/requests/new).
+호스팅된 컨테이너 레지스트리를 활성화하고 구성하려면 [Support team에 문의하십시오.](https://support.snyk.io/hc/en-us/requests/new)
 {% endhint %}
 
 ## 소개
 
-Integration with private container registries allows you to:
+개인 컨테이너 레지스트리와 통합하면 다음을 수행할 수 있습니다.
 
-* Keep sensitive data such as your access tokens inside your private network, never sharing that information with Snyk.
-* Provide controlled access to the network by Snyk, limiting Snyk access and the actions that Snyk can perform.
+* 액세스 토큰과 같은 중요한 데이터를 사설 네트워크에 보관하고 해당 정보를 Snyk과 공유하지 않습니다.
+* Snyk에서 네트워크에 대한 제어된 액세스를 제공하여 Snyk 액세스와 Snyk에서 수행할 수 있는 작업을 제한합니다.
 
 ## 자체 호스팅 컨테이너 레지스트리 솔루션 구성 요소
 
-* Broker server: running on Snyk SaaS backend
-* Broker client & Container Registry Agent: Two Docker images deployed in your infrastructure, creating two separate services, responsible for sampling your container registries in a secured manner and sending the allowed information to Snyk.
+* Broker server: Snyk SaaS backend에서 실행
+* Broker client & Container Registry Agent: 인프라에 배포된 두 개의 Docker 이미지가 두 개의 개별 서비스를 생성하여 안전한 방식으로 컨테이너 레지스트리를 샘플링하고 허용된 정보를 Snyk에 보내는 역할을 합니다.
 
-The Broker client provides the Agent with the connection details. The Agent uses these details to connect to the container registry, scan the images, and send the scan results through the brokered communication using callbacks. The brokered communication happens when a Broker Client connects (using your Broker ID) to a Broker server which runs in Snyk environment. See [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker) documentation for more details.
+Broker client는 Agent에 연결 세부 정보를 제공합니다. Agent는 이러한 세부 정보를 사용하여 컨테이너 레지스트리에 연결하고 이미지를 스캔하고 콜백을 사용하여 중개된 통신을 통해 스캔 결과를 보냅니다. Broker client가 Broker ID를 사용하여 Snyk 환경에서 실행되는 Broker server에 연결할 때 중개된 통신이 발생합니다. 자세한 내용은 [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker) 설명서를 참조하십시오.
 
 ![](../../../.gitbook/assets/mceclip0-8-.png)
 
@@ -47,7 +47,7 @@ The Broker client provides the Agent with the connection details. The Agent uses
 * GitLab (type: gitlab-cr)
 
 {% hint style="info" %}
-**Note:**\
+**참고**\
 The integration pattern using broker with open source container registries from the above list is designed for users who require images to be scanned in their own environment, instead of inside the Snyk service\*\*.\*\*\
 If such a requirement is not relevant for you, you do not need the architecture described in this article, and can integrate to it in the standard way from the integrations page.
 {% endhint %}
