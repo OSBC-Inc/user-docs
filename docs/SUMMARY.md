@@ -132,7 +132,7 @@
       * [Amazon Elastic Container Registry (ECR): Snyk에 이미지 추가](products/snyk-container/image-scanning-library/ecr-image-scanning/amazon-elastic-container-registry-ecr-add-images-to-snyk.md)
     * [GitHub container registry 이미지 스캔](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/README.md)
       * [GitHub container registry 통합을 통한 컨테이너 보안](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/container-security-with-github-container-registry-integration.md)
-      * [Scan container images from GitHub container registry in Snyk](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/scan-container-images-from-github-container-registry-in-snyk.md)
+      * [Snyk에서 GitHub container registry 컨테이너 이미지 검색](products/snyk-container/image-scanning-library/github-container-registry-image-scanning/scan-container-images-from-github-container-registry-in-snyk.md)
     * [GitLab container registry image scanning](products/snyk-container/image-scanning-library/gitlab-container-registry-image-scanning/README.md)
       * [Container security with GitLab container registry integration](products/snyk-container/image-scanning-library/gitlab-container-registry-image-scanning/container-security-with-gitlab-container-registry-integration.md)
       * [Scan container images from GitLab container registry in Snyk](products/snyk-container/image-scanning-library/gitlab-container-registry-image-scanning/scan-container-images-from-gitlab-container-registry-in-snyk.md)
