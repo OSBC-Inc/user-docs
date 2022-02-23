@@ -1,4 +1,4 @@
-# Snyk integration to self-hosted container registries
+# 자체 호스팅된 컨테이너 레지스트리에 대한 Snyk 통합
 
 {% hint style="info" %}
 **Feature availability**\
@@ -15,14 +15,14 @@ For this feature to work, you need two separate containers deployed in your infr
 To enable and configure your hosted container registry, [contact our Support team](https://support.snyk.io/hc/en-us/requests/new).
 {% endhint %}
 
-## **Introduction**
+## 소개
 
 Integration with private container registries allows you to:
 
 * Keep sensitive data such as your access tokens inside your private network, never sharing that information with Snyk.
 * Provide controlled access to the network by Snyk, limiting Snyk access and the actions that Snyk can perform.
 
-## **Self-hosted container registries solution components**
+## 자체 호스팅 컨테이너 레지스트리 솔루션 구성 요소
 
 * Broker server: running on Snyk SaaS backend
 * Broker client & Container Registry Agent: Two Docker images deployed in your infrastructure, creating two separate services, responsible for sampling your container registries in a secured manner and sending the allowed information to Snyk.
@@ -31,7 +31,7 @@ The Broker client provides the Agent with the connection details. The Agent uses
 
 ![](../../../.gitbook/assets/mceclip0-8-.png)
 
-#### **Supported Container registries**
+#### 지원되는 컨테이너 레지스트리
 
 * Artifactory (type: artifactory-cr)
 * Harbor (type: harbor-cr)
@@ -52,7 +52,7 @@ The integration pattern using broker with open source container registries from 
 If such a requirement is not relevant for you, you do not need the architecture described in this article, and can integrate to it in the standard way from the integrations page.
 {% endhint %}
 
-#### **Settings prerequisites**
+#### 설정 전제 조건
 
 * Broker Client machine system requirements: 1 CPU, 256MB of RAM.
 * Container registry agent machine system requirements should be (given MAX\_ACTIVE\_OPERATIONS=1):
@@ -70,9 +70,9 @@ If such a requirement is not relevant for you, you do not need the architecture 
 With the above configuration of 1 vCPU and 2GB RAM, scanning capacity would be approximately 160 images of \~350MB in one go. You can scale this up based on your image sizes, and in case you have a specific use case that doesn't allow scaling and doesn't fit the limitations, please contact our support team.
 {% endhint %}
 
-## **Set up the remote connection**
+## 원격 연결 설정
 
-### **Running the broker client**
+### broker client 실행
 
 The Broker Client image can be pulled from Docker Hub using the link provided above in the settings prerequisites.
 
@@ -110,7 +110,7 @@ docker run --restart=always \
        snyk/broker:container-registry-agent
 ```
 
-### Run**ning the Container Registry Agent**
+### 컨테이너 레지스트리 에이전트 실행
 
 The Container Registry Agent image can be pulled from Docker Hub using the link provided above in the settings prerequisites. To run the image you can use a single environment variable for specifying the port:
 
@@ -121,7 +121,7 @@ docker run --restart=always \
        snyk/container-registry-agent:latest
 ```
 
-### **Container Registry Specific Configurations**
+### 컨테이너 레지스트리별 구성
 
 The following container Registries require specific environment variables and/or setup.
 
@@ -181,7 +181,7 @@ The above resources can be used as follows, so that a single Container Registry 
 
 For detailed information about the brokered ECR setup, click [here](setting-up-the-container-registry-agent-for-a-brokered-ecr-integration.md).
 
-## **Configuring and using system check:**
+## 시스템 구성 및 사용 검사
 
 You can use the `/systemcheck` endpoint to verify connectivity between the Broker Client, the Container Registry Agent, and your container registry.
 
@@ -195,7 +195,7 @@ When calling the `/systemcheck` endpoint of the broker client, it will use the `
 The /systemcheck endpoint is **not mandatory** for the brokered integration to function. More information can be found here: [https://github.com/snyk/broker#systemcheck](https://github.com/snyk/broker#systemcheck)
 {% endhint %}
 
-## **Debugging Methods**
+## 디버깅 방법
 
 The `LOG_LEVEL` environment variable can be set to the desired level (debug/info/warn/error), in order to change the level of the Container Registry Agent and Broker Client logs.
 
