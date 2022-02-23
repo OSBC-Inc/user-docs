@@ -1,40 +1,40 @@
-# Add Artifactory images to Snyk
+# Snyk에 Artifactory 이미지 추가
 
-Snyk tests and monitors your Artifactory container images by evaluating its tags in your repositories.
+Snyk은 저장소에 있는 Artifactory 컨테이너 이미지의 태그를 평가하여 Artifactory 컨테이너 이미지를 테스트하고 모니터링합니다.
 
-**To add images to Snyk**:
+Snyk에 이미지를 추가하려면 다음과 같이 진행합니다.
 
-**Prerequisites:**
+**전제 조건**
 
-* You must have an account with Snyk and be onboarded to your organization by an administrator.
-* The integration must be configured between Snyk and your Artifactory environment.
+* Snyk에 계정이 있어야 하며 관리자가 귀사에 등록해야 합니다.
+* Snyk과 Artifactory 환경간에 통합을 구성해야 합니다.
 
-**Steps:**
+**진행 단계**
 
-* Log in to your account and navigate to the relevant group and organization that you want to manage.
+* 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 
 ![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (20).gif>)
 
-* Go to **Projects**, and click **Add projects**. The list of integrations already configured on your account opens, similar to the following:
+* **Projects**로 이동하고 **Add Project**를 클릭합니다. 계정에 이미 구성된 통합 목록이 다음과 같이 열립니다.
 
 ![](../../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png)
 
-* **The Which images do you want to test?** view appears, displaying all of the available images for the registry to which you connected, grouped by each of your repositories, similar to the following:
+* **The Which images do you want to test?**가 나타나고, 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
 
 ![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (10).png>)
 
-* Select single or multiple images with any or all of the following methods:
-  * Type the name of a single image for import in the Image Name field (#1 in the image above),
-  * Select any of the repositories if you want to import all of the associated images (#2 in the image above).
-  * Expand and collapse repositories to select multiple images (#3 in the image above) across multiple repositories.
-*   Click **Add selected repositories**.
+* 다음 방법 중 하나 또는 모두 사용하여 단일 또는 여러 이미지를 선택합니다.
+  * 필드에 가져올 단일 이미지의 이름을 입력합니다(#1).
+  * 연결된 모든 이미지를 가져오려면 저장소를 선택합니다(#2).
+  * 여러 저장소에서 여러 이미지(#3)를 선택하려면 저장소를 확장 및 축소합니다.
+*   **Add selected repositories**를 클릭합니다.
 
-    A status bar appears at the top of the page as the images are imported; you can continue working in the meantime.
-* When the import ends, notification of success, or failure, appears at the top of the page. Click Refresh to view the Projects page with the newly imported images. Images are grouped by repository and are each linked individually to a detailed Projects page.
-* You can now connect your Git repo to this project in order to use your Dockerfile for enriched fix advice. For more info, see [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29).
+    이미지를 가져오면 페이지 상단의 상태 표시줄이 나타납니다. 작업이 진행되는 동안 다른 작업을 계속할 수 있습니다.
+* 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침 합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부프로젝트 페이지에 개별적으로 연결됩니다.
+* 이제 저장소를 프로젝트에 연결하여 Dockerfile을 사용하여 풍부한 수정 정보를 제공할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요
 
-Images are indicated with a unique icon ![](../../../../.gitbook/assets/uuid-d083d5fe-780a-cf2f-18db-42720db8c5a1-en.png) , and you can also filter to view only the Artifactory projects:
+이미지는 특정 아이콘으로표시되며 ![](../../../../.gitbook/assets/uuid-d083d5fe-780a-cf2f-18db-42720db8c5a1-en.png) , 필터링하여 Artifactory 프로젝트만 확인할 수 있습니다.
 
 ![](../../../../.gitbook/assets/uuid-5c95894c-97d8-a6a9-0969-7c5fee541211-en.png)
 
-Artifactory integration works similarly to our other integrations. To continue to monitor, fix and manage your projects, see the relevant pages in our docs.
+통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 문서의 관련 페이지를 참조하십시오.
