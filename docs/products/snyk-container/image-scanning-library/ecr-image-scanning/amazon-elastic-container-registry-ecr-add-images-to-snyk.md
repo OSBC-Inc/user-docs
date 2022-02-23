@@ -11,20 +11,20 @@ Snyk에 이미지를 추가하는방법은 다음과 같습니다.
 
 **진행 단계**
 
-1. Log in to your account and navigate to the relevant group and organization that you want to manage.
-2. Go to **Projects**, and click **Add projects**. The list of integrations already configured on your account opens.
-3. The **Which images do you want to test?** view appears, displaying all of the available images for the registry to which you connected, grouped by each of your repositories, similar to the following:
-4. Select single or multiple images with any or all of the following methods:
-   1. Type the name of a single image for import in the **Image Name** field (#1 in the image above),
-   2. Select any of the repositories if you want to import all of the associated images (#2 in the image above).
-   3. Expand and collapse repositories to select multiple images (#3 in the image above) across multiple repositories.
-5. Click **Add selected repositories.**
-6. A status bar appears at the top of the page as the images are imported; you can continue working in the meantime.
-7. When the import ends, notification of success, or failure, appears at the top of the page. Click Refresh to view the Projects page with the newly imported images. Images are grouped by repository and are each linked individually to a detailed Projects page.
-8. You can now connect your Git repo to this project in order to use your Dockerfile for enriched fix advice. For more info, see [Adding your Dockerfile and test your base image](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md).
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2. **Projects**로 이동하고 **Add projects**를 클릭 합니다. 계정에 이미 구성된 통합 목록이 열립니다.
+3. 레지스트리에 대해 사용 가능한 모든 이미지가 각 저장소별로 그룹화되어 표시됩니다.
+4. 다음 방법 중 하나 또는 모두 사용하여 단일 또는 여러 이미지를 선택합니다.
+   1. **Image Name** 필드(#1)에서 가져올 단일 이미지의 이름을 입력합니다.
+   2. 연결된 모든 이미지를 가져오려면 저장소 중 하나를 선택하세요(#2).
+   3. 저장소를 확장 및 축소하여 여러 저장소에서 여러 이미지(#3)를 선택합니다.
+5. **Add selected repositories**를 클릭합니다.
+6. 이미지를 가져올 때 페이지 상단에 상태 표시줄이 나타나며, 진행되는동안 다른 작업을 수행할 수 있습니다.
+7. 가져오기가 끝나면 페이지 상단에 성공 또는 실패 알림이 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침합니다. 이미지는 저장소별로 그룹화하여 각각 세부 프로젝트 페이지에 개별적으로 연결됩니다.
+8. 이제 저장소를 이 프로젝트에 연결하여 Docker 파일을 사용하여 풍부한 수정 정보를 제공할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)를 참조하세요.
 
-ECR files are indicated with a unique icon ![](../../../../.gitbook/assets/uuid-31aa2b29-8686-5389-b5fc-1d3bd1176f9c-en.png)--you can now filter to view only those projects:
+ECR 파일은 특정 아이콘으로 표시됩니다. ![](../../../../.gitbook/assets/uuid-31aa2b29-8686-5389-b5fc-1d3bd1176f9c-en.png)--이제 필터링하여 다음과 같은 프로젝트만 확인할 수 있습니다.
 
 ![](../../../../.gitbook/assets/uuid-439e3f37-6e4f-0ffa-0c3c-63c56b45ba5a-en.png)
 
-Amazon ECR integration works similar to our other integrations. To continue to monitor, fix and manage your projects, see the relevant pages, also in our docs.
+Amazon ECR 통합은 다른 통합과 비슷하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지와 문서를 참조하세요.
