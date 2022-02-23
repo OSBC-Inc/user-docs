@@ -1,25 +1,25 @@
-# Container security with GitLab container registry integration
+# GitLab container registry 통합을 통한 컨테이너 보안
 
-Snyk integrates with GitLab container registry to enable you to import your container images and monitor them for vulnerabilities.
+Snyk은 GitLab container registry와 통합하여 컨테이너 이미지를 가져오고 취약점을 모니터링할 수 있습니다.
 
-Snyk tests the images you’ve imported (referred to as \`projects\`) for any known security vulnerabilities, testing them at a frequency you control and alerts you when new issues are detected.
+Snyk은 가져온 이미지(프로젝트)에 알려진 보안 취약점이 존재하는지 테스트하여 사용자가 제어하는 빈도로 테스트하고 새로운 이슈가 감지되면 사용자에게 알려줍니다.
 
-Integration with GitLab container registry is available for all Snyk users.
+GitLab container registry와의 통합은 모든 Snyk 사용자가 사용할 수 있습니다.
 
-To set up GitLab container registry integration in Snyk and start managing image vulnerabilities:
+Snyk에서 GitLab container registry 통합을 설정하고 이미지 취약점 관리를 시작하려면 다음과 같이 진행합니다.
 
-Prerequisites
+필수 조건
 
-* You must be an administrator for the organization you're configuring in Snyk.
-* Snyk needs user credentials to integrate with GitLab container registry and does not support GitLab container registry when configured for single sign-on (SSO).
+* Snyk에서 구성할 조직의 관리자여야합니다.
+* Snyk은 GitLab container registry와 통합하려면 사용자 자격 증명이 필요하며 SSO(Single Sign-On)용으로 구성된 경우 GitLab container registry를 지원하지 않습니다.
 
-**Configure integration**
+**통합 구성**
 
-1. In your Snyk account, navigate to Integrations from the menu bar at the top. Under the Container Registries section, find the GitLab container registry option and click it.
-2. In the **Account credentials** section, enter your GitLab container registry username and password login credentials. In the **container registry name** fill in the full URL to the registry you want to integrate with. To finish, click **Save**.
+1. Snyk 계정으로 로그인한 후 상단의 메뉴 모음에서 Integrations으로 이동합니다. Container Registries 섹션에서 GitLab container registry 옵션을 찾아 클릭합니다.
+2. **Account credentials** 섹션에서 GitLab container registry 사용자 이름 및 암호 로그인 자격 증명을 진행합니다. **container registry name**에 통합할 레지스트리의 전체 URL을 입력합니다. 마치려면 **Save**를 클릭하세요.
 
 ![](../../../../.gitbook/assets/mceclip1-6-.png)
 
-If you are using a self-hosted GitLab container registry registry, [contact our Support team](https://support.snyk.io/hc/en-us/requests/new) to provide you with a token. You can read more about setting up private registry integration [here](https://docs.snyk.io/snyk-container/integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries).
+자체 호스팅된 GitLab container registry를 사용하는 경우 [당사 지원 팀](https://support.snyk.io/hc/en-us/requests/new)에 문의 바랍니다. 개인 레지스트리 통합 설정에 대한 자세한 내용은 [문서](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)를 참조하세요.
 
-Snyk tests the connection values and the page reloads, now displaying GitLab container registry integration information, and the **Add your GitLab container registry images to Snyk** button becomes available. In case the connection to GitLab container registry failed, notification appears under the **Connected to GitLab container registry** section. Now you can use Snyk to scan your images from GitLab container registry.
+Snyk은 연결 값과 page reload를 테스트하여 GitLab container registry 통합 정보를 표시하고 **Add your GitLab container registry images to Snyk** 버튼을 사용할 수 있습니다. GitLab container registry에 연결하지 못한경우 **Connected to GitLab container registry** 섹션 아래에 알림이 나타납니다. 이제 Snyk을 사용하여 GitLab container registry에서 이미지를 검색할 수 있습니다.
