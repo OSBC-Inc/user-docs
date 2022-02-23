@@ -138,7 +138,7 @@
       * [Snyk에서 GitLab container registry 컨테이너 이미지 스캔](products/snyk-container/image-scanning-library/gitlab-container-registry-image-scanning/scan-container-images-from-gitlab-container-registry-in-snyk.md)
     * [Harbor image scanning](products/snyk-container/image-scanning-library/harbor-image-scanning/README.md)
       * [Harbor 통합을 통한 컨테이너 보안](products/snyk-container/image-scanning-library/harbor-image-scanning/container-security-with-harbor-integration.md)
-      * [Scan container images from Harbor in Snyk](products/snyk-container/image-scanning-library/harbor-image-scanning/scan-container-images-from-harbor-in-snyk.md)
+      * [Snyk에서 Harbor 컨테이너 이미지 스캔](products/snyk-container/image-scanning-library/harbor-image-scanning/scan-container-images-from-harbor-in-snyk.md)
     * [JFrog Artifactory image scanning](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/README.md)
       * [Container security with JFrog Artifactory](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/container-security-with-jfrog-artifactory.md)
       * [Configuring your JFrog Artifactory container registry integration](products/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning/configuring-your-jfrog-artifactory-container-registry-integration.md)
