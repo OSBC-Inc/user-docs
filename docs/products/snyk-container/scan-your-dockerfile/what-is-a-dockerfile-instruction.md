@@ -1,10 +1,9 @@
-# What is a Dockerfile Instruction?
+# Dockerfile 명령어란?
 
-When you scan a Docker image in Snyk, you can see information for **Dockerfile Instruction:**
+Snyk에서 Docker 이미지를 스캔하면 **Dockerfile 명령어**에 대한 정보를 볼 수 있습니다.
 
-![](../../../.gitbook/assets/screen_shot_2020-03-17_at_3.15.27_pm.png)
+![](../../../.gitbook/assets/screen\_shot\_2020-03-17\_at\_3.15.27\_pm.png)
 
-This shows the line in the Dockerfile which introduces the vulnerability.
+이것은 취약점을 도입하는 Dockerfile의 행을 보여줍니다.
 
-There is no need to perform any action.
-
+어떠한 작업도 수행할 필요가 없습니다.

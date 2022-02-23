@@ -1,6 +1,5 @@
-# Prerequisites for Dockerfile analysis
+# Dockerfile 분석을 위한 전제 조건
 
-* Ensure the account that you integrate Snyk with contains the relevant Dockerfile repository.
-* Configure the integration for the Git that contains your Dockerfile prior to this process.
-* Ensure you have already imported the relevant container project for monitoring. See Container Vulnerability Management for more info.
-
+* Snyk과 통합할 계정에 관련 Dockerfile 저장소가 있는지 확인합니다.
+* 이 프로세스를 수행하기 전에 Dockerfile을 포함하는 Git에 대한 통합을 구성합니다.
+* 모니터링할 관련 컨테이너 프로젝트를 이미 가져왔는지 확인합니다. 자세한 내용은 취약점 관리를 참조하십시오.

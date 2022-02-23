@@ -1,8 +1,8 @@
-# Open pull requests to fix vulnerable base images in your Dockerfile
+# Dockerfile의 취약한 기본 이미지를 수정하기 위한 PR 열기
 
-Snyk detects vulnerable base images by scanning your Dockerfile when importing a Git repository, and helps you fix them using automatic pull requests. This allows you to examine security issues before you build the image, and fix them before they land in your registry or in production.
+Snyk은 Git 저장소를 가져올 때 Dockerfile을 검색하여 취약한 기본 이미지를 탐지하고 자동 PR을 사용하여 수정할 수 있도록 도와줍니다. 이렇게 하면 이미지를 빌드하기 전에 보안 문제를 검사하고 레지스트리 또는 프로덕션에 도달하기 전에 해결할 수 있습니다.
 
-Supported git-based repository managers for Dockerfile fix PRs include:
+Dockerfile 수정 PR에 지원되는 git 기반 저장소는 다음과 같습니다.
 
 * GitHub
 * GitLab
@@ -11,24 +11,24 @@ Supported git-based repository managers for Dockerfile fix PRs include:
 * GitHub Enterprise Server
 * Azure repos
 
-For any Dockerfile project created in Snyk, if the base image is an [Official Docker image](https://docs.docker.com/docker-hub/official_images/), the results include a list of suitable base images that can be used instead of the existing, more vulnerable one. See the section on [base image recommendations](https://docs.snyk.io/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app) for more information.
+Snyk에서 생성된 Dockerfile 프로젝트의 경우 기본 이미지가 [Official Docker image](https://docs.docker.com/docker-hub/official\_images/)인 경우 결과에는 기존의 더 취약한 이미지 대신 사용할 수 있는 적절한 기본 이미지 목록이 포함됩니다. 자세한 내용은 [기본 이미지 권장 사항](https://docs.snyk.io/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app)에 대한 섹션을 참조하십시오.
 
-Snyk then automatically issues a fix pull request against your Dockerfile, to upgrade to the latest minor version available.
+그런 다음 Snyk은 자동으로 Dockerfile에 대한 수정 PR을 발행하여 사용 가능한 최신 minor 버전으로 업그레이드합니다.
 
-Automatic fix PR is opened in case there is a change in the Dockerfile or a better base image detected post the initial scan.
+초기 스캔 후 Dockerfile에 변경 사항이 있거나 더 나은 기본 이미지가 감지될 경우 자동 수정 PR이 생성됩니다.
 
-Alternatively, manually open a fix PR by clicking **Open a Fix PR** for the version you wish to upgrade to.
+또는 업그레이드할 버전에 대한 **Open a Fix PR**을 클릭하여 수동으로 생성할 수 있습니다.
 
 ![](../../../.gitbook/assets/mceclip0-6-.png)
 
-After it is opened, you can view the fix PR in your Git repository, showing what the change is and where it takes place. The FROM line in your Dockerfile is updated with the new and improved version.
+Git 저장소의 수정 PR을 보고 변경 사항과 변경 사항이 발생한 위치를 확인할 수 있습니다. Dockerfile의 FROM 행이 향상된 버전으로 새롭게 업데이트됩니다.
 
 {% hint style="info" %}
-**Note:**  
-We recommend making sure your application works properly before merging the change.
+**참고**\
+변경 사항을 병합하기 전에 애플리케이션이 제대로 작동하는지 확인하는 것이 좋습니다.
 {% endhint %}
 
-Once the PR is opened and ready, you can safely merge it and instantly reduce the number of vulnerabilities in your container image.
+PR이 생성되고 확인 후 PR을 안전하게 병합하여 컨테이너 이미지의 취약점 수를 즉시 줄일 수 있습니다.
 
 ![mceclip1.png](../../../.gitbook/assets/mceclip1-1-.png)
 
@@ -36,7 +36,6 @@ Once the PR is opened and ready, you can safely merge it and instantly reduce th
 
 Availability:
 
-The feature is available for all of our users. It is on by default for all free users, and off by default for Snyk customers' existing integrations. You can opt-in to it from the integration or project settings sections.
+이 기능은 모든 사용자가 사용할 수 있습니다. 모든 무료 사용자에게는 기본적으로 활성화되어 있고 Snyk 고객의 기존 통합에 대해 기본적으로 비활성화되어 있습니다. Integration 또는 Project 설정 섹션에서 설정할 수 있습니다.
 
 ![](../../../.gitbook/assets/auto-detect-dockerfiles.png)
-
