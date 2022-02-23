@@ -146,7 +146,7 @@
     * [Kubernetes 워크로드 및 이미지 스캔](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/README.md)
       * [Kubernetes 통합 개요](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/kubernetes-integration-overview.md)
       * [워크로드 지원](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/supported-workloads.md)
-      * [Install the Snyk controller with Helm](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-with-helm.md)
+      * [Helm으로 Snyk 컨트롤러 설치](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-with-helm.md)
       * [Automatic import/deletion of Kubernetes workloads projects](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/automatic-import-deletion-of-kubernetes-workloads-projects/README.md)
         * [Advanced use of automatic import/deletion](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/automatic-import-deletion-of-kubernetes-workloads-projects/advanced-use-of-automatic-import-deletion.md)
       * [Install the Snyk controller with OpenShift 4 and OperatorHub](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-with-openshift-4-and-operatorhub.md)
