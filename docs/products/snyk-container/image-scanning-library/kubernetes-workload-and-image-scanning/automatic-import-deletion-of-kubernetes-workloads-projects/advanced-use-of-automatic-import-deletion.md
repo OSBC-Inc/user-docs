@@ -1,10 +1,10 @@
-# Advanced use of automatic import/deletion
+# 자동으로 가져오기/삭제 고급사용
 
-If you have an advanced use case for automatic import/deletion of Kubernetes workload projects, you can write your own rules. The controller evaluates policy decisions using a policy file written in [Rego policy language](https://www.openpolicyagent.org/docs/latest/policy-language/). Ensure the file is named **workload-events.rego**.
+Kubernetes 워크로드 프로젝트의 자동으로 가져오기/삭제에 대한 고급 사용 사례가 있는 경우 규칙을 작성할 수 있습니다. 컨트롤러는 [Rego policy language](https://www.openpolicyagent.org/docs/latest/policy-language/)로 작성된 정책 파일을 사용하여 정책 결정을 평가합니다. 파일이름이 **workload-events.rego**인지 확인합니다.
 
-## Policy syntax
+## 정책 구문
 
-Provide the policy file to the Snyk controller in a ConfigMap. The policy syntax looks like this:
+ConfigMap의 Snyk 컨트롤러에 정책 파일을 제공합니다. 정책 구문은 다음과 같습니다.
 
 ```
 package snyk
@@ -12,17 +12,17 @@ orgs := ["<org-id>"]
 default workload_events = false
 ```
 
-If you flip the value to true, it will automatically import or delete **everything** in the cluster.
+값을 true로 바꾸면 클러스터의 **모든 항목**을 자동으로 가져오거나 삭제합니다.
 
 {% hint style="warning" %}
-Setting the workload\_events key to true is **not recommended** as some workload types like Jobs and Pods can be noisy and generate lots of workload imports in your Snyk organization
+Jobs 및 Pods와 같은 일부 워크로드 유형은 Snyk 조직에서 많은 워크로드 가져오기를 생성할 수 있으므로 workload\_events 키를 true로 설정하는 것은 **권장하지 않습니다**.
 {% endhint %}
 
-Both **package snyk** and the key **workload\_events** are mandatory by Snyk Controller.
+**package snyk**과 주요 **workload\_events**는 모두 Snyk 컨트롤러에서 필수입니다.
 
-## Using more than one org
+## 둘 이상의 조직 사용
 
-Orgs is a list of organization public IDs. You can add more than one organization to use the auto-import and auto-delete capabilities. You can locate this public ID in the settings page for the organization.
+Orgs는 조직 공개 ID목록입니다. 자동으로 가져오기/삭제 기능을 사용하기 위해 둘 이상의 조직을 추가할 수 있습니다. 조직의 설정 페이지에서 이 공개 ID를 찾을 수 있습니다.
 
 ```
 package snyk
@@ -30,9 +30,9 @@ orgs := ["<org-id-1>","<org-id-2>"]
 default workload_events = false
 ```
 
-## Defining rules
+## Rule 정의
 
-To define your own rules, set a condition on the **workload\_events** key and by providing your organization public ID. For example, to import workloads from the **default** namespace and automatically delete them on Snyk side once they are deleted from the cluster, the policy would look like this:
+고유한 Rule을 정의하려면 **workload\_events** 키에 대한 조건을 설정하고 조직의 공개 ID를 제공하세요. 예를 들어 **기본** 네임스페이스에서 워크로드를 가져오고 클러스터에서 삭제되면 Snyk 측에서 자동으로 삭제하는 정책은 다음과 같습니다.
 
 ```
 package snyk
@@ -43,9 +43,9 @@ workload_events {
 }
 ```
 
-Here, **input** refers to the Kubernetes metadata of the workload scanned by the Snyk controller.
+여기서 **input**은 Snyk 컨트롤러에서 스캔한 워크로드의 Kubernetes 메타데이터를 나타냅니다.
 
-You can also create a policy for workload events (creation/deletion) with a specific annotation:
+특정 주석을 사용하여 워크로드 이벤트(생성/삭제)에 대한 정책을 생성할 수 있습니다.
 
 ```
 package snyk
@@ -56,9 +56,9 @@ workload_events {
 }
 ```
 
-## Excluding workload types
+## 워크로드 유형 제외
 
-As best practice, we recommend excluding specific workload types such as Pods and Jobs from workload events (creation/deletion), as they can be really noisy and can generate lots of workload imports in your Snyk organization. You can do this with the following example policy:
+Pods와 Jobs와 같은 특정 워크로드 유형을 워크로드 이벤트(생성/삭제)에서 제외하는 것이 좋습니다. 이러한 유형은 실제로 Snyk 조직에서 많은 워크로드 가져오기를 생성할 수 있기 때문입니다. 다음 예제를 사용하여 이 작업을 수행할 수 있습니다.
 
 ```
 package snyk
@@ -70,7 +70,7 @@ workload_events {
 }
 ```
 
-## Configure Snyk controller to use the policy
+## 정책을 사용하도록 Snyk 컨트롤러를 구성
 
 ```
 kubectl create configmap snyk-monitor-custom-policies \
@@ -82,4 +82,4 @@ helm upgrade --install snyk-monitor snyk-charts/snyk-monitor \
     --set workloadPoliciesMap=snyk-monitor-custom-policies
 ```
 
-Now you can deploy the Snyk controller, or restart it if it is already running in order to pick up the policy. You will now see new workloads in Snyk.
+이제 Snyk 컨트롤러를 배포하거나 정책을 선택하기 위해 이미 실행 중인 경우 다시 시작할 수 있습니다. 이제 Snyk에서 새로운 워크로드를 확인할 수 있습니다.

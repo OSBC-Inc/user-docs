@@ -148,7 +148,7 @@
       * [워크로드 지원](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/supported-workloads.md)
       * [Helm으로 Snyk 컨트롤러 설치](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-with-helm.md)
       * [Kubernetes 워크로드 프로젝트 자동으로 가져오기/삭제](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/automatic-import-deletion-of-kubernetes-workloads-projects/README.md)
-        * [Advanced use of automatic import/deletion](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/automatic-import-deletion-of-kubernetes-workloads-projects/advanced-use-of-automatic-import-deletion.md)
+        * [자동으로 가져오기/삭제 고급사용](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/automatic-import-deletion-of-kubernetes-workloads-projects/advanced-use-of-automatic-import-deletion.md)
       * [Install the Snyk controller with OpenShift 4 and OperatorHub](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-with-openshift-4-and-operatorhub.md)
       * [Install the Snyk controller on Amazon Elastic Kubernetes Service (Amazon EKS)](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-on-amazon-elastic-kubernetes-service-amazon-eks.md)
       * [Adding Kubernetes workloads for security scanning](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/adding-kubernetes-workloads-for-security-scanning.md)
