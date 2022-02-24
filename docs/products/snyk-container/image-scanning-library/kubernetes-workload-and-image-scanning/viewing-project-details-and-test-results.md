@@ -1,33 +1,33 @@
-# Viewing project details and test results
+# 프로젝트 세부 정보 및 테스트 결과 확인
 
-All workloads that you and your team have imported for monitoring appear on your **Projects** page marked with a unique Kubernetes icon:
+모니터링하기 위해 가져온 모든 워크로드는 고유한 Kubernetes 아이콘이 표시된 **Projects** 페이지에 나타납니다.
 
 ![Kubernetes icon](../../../../.gitbook/assets/uuid-24e0b69a-01c3-9434-9dac-9b44864bd269-en.png)
 
-**To view and work with the workload test results:**
+워크로드 테스트 결과를 확인하고 작업하려면 다음과 같이 진행합니다.
 
-* Go to the **Projects** page and filter for Kubernetes projects only:
+* **Projects** 페이지로 이동하여 Kubernetes 프로젝트에 대해서만 필터링합니다.
 
 ![](../../../../.gitbook/assets/uuid-08d7978e-0c64-a8c2-c289-402534ebec42-en.png)
 
-Expand any item to view:
+확인하려는 항목을 펼칩니다.
 
-* a list of the individual images used in the workload
-* a summary of the number of vulnerabilities in each image
+* 워크로드에 사용하는 개별 이미지 목록
+* 요약된 각 이미지의 취약점 수
 
-To view vulnerabilities in detail for any image, including its history, click the image name. The Project details page loads for the selected image:
+이미지 기록을 포함하여 이미지에 대한 취약점을 자세히 확인하려면 이미지 이름을 클릭하여 선택한 이미지에 대한 프로젝트 세부 정보 페이지가 나타납니다.
 
 ![](<../../../../.gitbook/assets/image (59) (2) (3) (3) (3) (3) (4) (5) (5) (5) (4) (7).png>)
 
-* To view an aggregate list of the vulnerabilities in all of the images in the workload, along with details about the security posture of the workload configuration, click the workload link. The Project details page loads for the selected image similar to the following example:
+* 워크로드 구성의 보안 상태에 대한 세부 정보와 함께 워크로드의 모든 이미지에 있는 취약점의 집계 목록을 보려면 워크로드 링크를 클릭합니다. 프로젝트 세부 정보 페이지 로드는 다음 예제와 유사합니다.
 
 ![](../../../../.gitbook/assets/uuid-79e06589-b59c-4bad-30e4-56c0e15607e0-en.png)
 
-Currently, we test the workload configuration for the following properties:
+현재 다음 속성에 대해 워크로드 구성을 테스트합니다.
 
-| **Snyk parameter**     | **Associated Kubernetes parameters**         | **Description**                                                                                                                                                                                                                                                                                                                     |
-| ---------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CPU and Memory limits  | Resources.limits.memory resources.limits.cpu | Limiting the expected CPU and Memory available to the container has operational as well as security benefits. In the context of security, this is about limiting the impact of potential denial of service attacks to affecting the app rather than the node and potentially the whole cluster.                                     |
-| runAsNonRoot           | securityContext.runAsNonRoot                 | By default, containers can run as the root user. This property prevents that at the container runtime, meaning an attacker would only have limited permissions if they were to be able to execute a command in the context of the container.                                                                                        |
-| readOnlyRootFilesystem | securityContext. readOnlyFilesystem          | By default the file system mounted for the container is writable. That means an attacker who compromises the container can also write to the disk, which makes certain kinds of attacks easier. If your containers are stateless then you don’t need a writable filesystem.                                                         |
-| Capabilities           | securityContext.capabilities                 | At a low-level, Linux capabilities control what different processes in the container are allowed to do: from being able to write to the disk, to being able to communicate over the network. Dropping all capabilities and adding in those that are required is possible but requires understanding the list of capabilities first. |
+| **Snyk parameter**     | **Associated Kubernetes parameters**         | **Description**                                                                                                                              |
+| ---------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| CPU and Memory limits  | Resources.limits.memory resources.limits.cpu | 컨테이너에서 사용할 수 있는 예상 CPU 및 메모리를 제한하면 운영상의 이점뿐만 아니라 보안상의 이점도 있습니다. 보안 측면에서 이는 잠재적인 서비스 거부 공격이 노드 및 잠재적으로 전체 클러스터가 아닌 애플리케이션에 미치는 영향을 제한하는 것입니다. |
+| runAsNonRoot           | securityContext.runAsNonRoot                 | 기본적으로 컨테이너는 루트 사용자로 실행할 수 있습니다. 이 속성을 사용하면 컨테이너 런타임에서 공격자가 컨테이너 컨텍스트에서 명령을 실행할 수 있는 경우에만 제한된 권한을 갖게 됩니다.                                     |
+| readOnlyRootFilesystem | securityContext. readOnlyFilesystem          | 기본적으로 컨테이너에 마운트된 파일 시스템은 쓰기 가능합니다. 즉, 컨테이너를 손상시키는 공격자는 디스크에 쓸 수도 있으므로 특정 종류의 공격이 더 쉬워집니다. 컨테이너가 상태 비저장 상태인 경우 쓰기 가능한 파일 시스템이 필요하지 않습니다.      |
+| Capabilities           | securityContext.capabilities                 | 낮은 수준의 Linux 기능은 디스크에 쓸 수 있는 것부터 네트워크를 통해 통신할 수 있는 것까지 컨테이너의 다양한 프로세스를 제어합니다. 모든 기능을 삭제하고 필요한 기능을 추가하는 것은 가능하지만 기능 목록을 먼저 이해해야 합니다.          |
