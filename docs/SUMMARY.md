@@ -161,7 +161,7 @@
       * [Snyk에서 Nexus 컨테이너 이미지 스캔](products/snyk-container/image-scanning-library/nexus-image-scanning/scan-container-images-from-nexus-in-snyk.md)
     * [Quay 이미지 스캔](products/snyk-container/image-scanning-library/quay-image-scanning/README.md)
       * [Quay 통합을 이용한 컨테이너 보안](products/snyk-container/image-scanning-library/quay-image-scanning/container-security-with-quay-integration.md)
-      * [Scan container images from Quay in Snyk](products/snyk-container/image-scanning-library/quay-image-scanning/scan-container-images-from-quay-in-snyk.md)
+      * [Snyk에서 Quay 컨테이너 이미지 스캔](products/snyk-container/image-scanning-library/quay-image-scanning/scan-container-images-from-quay-in-snyk.md)
 * [Snyk Infrastructure as Code](products/snyk-infrastructure-as-code/README.md)
   * [Snyk Infrastructure as Code (IaC) 시작하기](products/snyk-infrastructure-as-code/snyk-infrastructure-as-code-iac.md)
   * [Terraform 파일 스캔](products/snyk-infrastructure-as-code/scan-terraform-files/README.md)

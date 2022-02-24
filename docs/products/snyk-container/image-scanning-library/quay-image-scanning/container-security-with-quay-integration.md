@@ -13,9 +13,9 @@ Snyk에서 Quay 통합을 설정하고 이미지 취약점 관리를 시작하�
 * Snyk에서 구성할 조직의 관리자여야 합니다.
 * Snyk은 Quay와 통합하려면 사용자 자격 증명이 필요하며 SSO(Single Sign-On)용으로 구성한 경우 Quay를 지원하지 않습니다.
 
-**Configure integration**
+**통합 구성**
 
-1. In your Snyk account, navigate to **Integrations** from the menu bar at the top. Under the **Container Registries** section, find the **Quay** option and click it.
+1. Snyk 계정 상단에 있는 메뉴 모음에서 **Integrations** 으로 이동합니다. **Container Registries** 섹션에 **Quay** 옵션을 찾아 클릭합니다.
 2. **Account credentials** 섹션에서 Quay 사용자 이름과 암호 로그인 자격 증명을 입력합니다. **container registry name**에 통합할 레지스트리의 전체 URL을 입력합니다. 클라우드 기반 Quay 또는 개인 호스트일 수 있습니다. 마치려면 **Save**를 클릭하세요.
 
 ![](../../../../.gitbook/assets/mceclip1-10-.png)
