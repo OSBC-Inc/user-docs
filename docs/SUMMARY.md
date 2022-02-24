@@ -158,7 +158,7 @@
       * [Kubernetes 통합 비활성화](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/disable-the-kubernetes-integration.md)
     * [Nexus 이미지 스캔](products/snyk-container/image-scanning-library/nexus-image-scanning/README.md)
       * [Nexus 통합을 이용한 컨테이너 보안](products/snyk-container/image-scanning-library/nexus-image-scanning/container-security-with-nexus-integration.md)
-      * [Scan container images from Nexus in Snyk](products/snyk-container/image-scanning-library/nexus-image-scanning/scan-container-images-from-nexus-in-snyk.md)
+      * [Snyk에서 Nexus 컨테이너 이미지 스캔](products/snyk-container/image-scanning-library/nexus-image-scanning/scan-container-images-from-nexus-in-snyk.md)
     * [Quay image scanning](products/snyk-container/image-scanning-library/quay-image-scanning/README.md)
       * [Container security with Quay integration](products/snyk-container/image-scanning-library/quay-image-scanning/container-security-with-quay-integration.md)
       * [Scan container images from Quay in Snyk](products/snyk-container/image-scanning-library/quay-image-scanning/scan-container-images-from-quay-in-snyk.md)
