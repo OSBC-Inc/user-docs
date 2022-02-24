@@ -153,7 +153,7 @@
       * [Amazon Elastic Kubernetes Service (Amazon EKS)에 Snyk 컨트롤러 설치](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/install-the-snyk-controller-on-amazon-elastic-kubernetes-service-amazon-eks.md)
       * [보안 스캔을 위한 Kubernetes 워크로드 추가](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/adding-kubernetes-workloads-for-security-scanning.md)
       * [프로젝트 세부 정보 및 테스트 결과 확인](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/viewing-project-details-and-test-results.md)
-      * [Snyk Priority Score and Kubernetes](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/snyk-priority-score-and-kubernetes.md)
+      * [Snyk 우선순위 점수와 Kubernetes](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/snyk-priority-score-and-kubernetes.md)
       * [Viewing your Kubernetes integration settings](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/viewing-your-kubernetes-integration-settings.md)
       * [Disable the Kubernetes integration](products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/disable-the-kubernetes-integration.md)
     * [Nexus image scanning](products/snyk-container/image-scanning-library/nexus-image-scanning/README.md)

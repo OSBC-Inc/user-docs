@@ -1,28 +1,27 @@
-# Snyk Priority Score and Kubernetes
+# Snyk 우선순위 점수와 Kubernetes
 
-All issues in Snyk have a [Priority Score](../../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md). This helps determine the relative importance of vulnerabilities, taking into account both the severity of the issue and various other contextual factors. As well as the factors discussed in the main Priority Score documentation, images imported from the Kubernetes integration have a number of additional contributing factors.
+Snyk의 모든 이슈에는 [우선순위 점수](../../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)가 있습니다. 이는 문제의 심각도와 기타 다양한 상황별 요인 모두를 고려하여 취약성의 상대적 중요성을 확인하는 데 도움이 됩니다. 주요 우선순위 점수 문서에서 논의된 요인 외에도, Kubernetes 통합에서 가져온 이미지에는 여러 가지 추가 기여 요인이 있습니다.
 
-![](../../../../.gitbook/assets/screenshot_2020-06-23_at_09.09.52.png)
+![](../../../../.gitbook/assets/screenshot\_2020-06-23\_at\_09.09.52.png)
 
-## How well configured is your workload?
+## 워크로드 구성이 얼마나 잘 되어 있습니까?
 
-The Kubernetes integration collects information about how workloads are configured, focusing on options which can lead to security issues. We show this summary on the project page:
+Kubernetes 통합은 보안 문제로 이어질 수 있는 옵션에 초점을 맞춰 워크로드 구성 방법에 대한 정보를 수집합니다. 프로젝트 페이지에 다음과 같은 요약을 표시합니다.
 
-![](../../../../.gitbook/assets/screenshot_2020-06-23_at_09.10.39.png)
+![](../../../../.gitbook/assets/screenshot\_2020-06-23\_at\_09.10.39.png)
 
 .
 
 ![](../../../../.gitbook/assets/image-1.png)
 
-We also use this information to contribute to the Priority Score, based on the idea that a vulnerability present in a workload that is poorly configured scores higher than the same vulnerability in a well configured one.
+또한 이 정보는 잘못 구성된 워크로드에 존재하는 취약성이 잘 구성된 워크로드에서 동일한 취약성보다 더 높은 점수를 받는다는 생각에 따라 우선순위 점수에 기여하는 데 사용됩니다.
 
-We do this based on both the nature of the vulnerabilities and the specific issues raised by the configuration. We take the following into account today.
+이 작업은 취약성의 특성 및 구성으로 인해 발생하는 특정 문제를 기반으로 합니다. 다음을 고려합니다.
 
-| **Configuration** | **Vulnerability properties** |
-| :--- | :--- |
-| Permission issues, for instance running privileged, able to run as root, not dropping capabilities. | CVSSv3 Privileges \(PR\) vector present in the vulnerability. Weighing based on the impact. |
-| Missing memory and/or CPU limits. | CVSSv3 Availability \(A\) vector present in the vulnerability, or CWE includes denial of service. Weighing based on the impact. |
-| Not setting a read only root filesystem. | CWE indicates filesystem access required. |
+| **Configuration**                   | **Vulnerability properties**                                                           |
+| ----------------------------------- | -------------------------------------------------------------------------------------- |
+| 권한 실행, 루트로 실행할 수 있는 기능 삭제가 아닌 권한 이슈 | CVSSv3 Privileges (PR) vector가 취약점에 있으며 impact를 기준으로 가중치를 측정합니다.                       |
+| 메모리 및/또는 CPU 제한이 없습니다.              | CVSSv3 Availability (A) vector가 취약성에 있거나 CWE에 서비스 거부가 포함되어 있으며impact를 기준으로 가중치를 측정합니다. |
+| 읽기 전용 루트 파일 시스템을 설정하지 않습니다.         | CWE는 파일 시스템 액세스가 필요함을 나타냅니다.                                                           |
 
-This scoring system is not intended to be binary, rather it’s a risk calculation intended to help you with prioritization efforts. This capability is enabled automatically for all customers using the Kubernetes integration and doesn't require any additional configuration.
-
+이 점수 체계는 이진법이 아니라 우선순위 지정 작업에 도움이 되는 위험 계산법입니다. 이 기능은 Kubernetes 통합을 사용하는 모든 고객에 대해 자동으로 활성화되며 추가 구성이 필요하지 않습니다.
