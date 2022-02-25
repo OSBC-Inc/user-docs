@@ -1,10 +1,10 @@
-# GitHub container registry 통합을 통한 컨테이너 보안
+# GitHub container registry 통합을 이용한 컨테이너 보안
 
 Snyk은 GitHub container registry와 통합하여 컨테이너 이미지를 가져오고 취약점을 모니터링할 수 있습니다.
 
 Snyk은 가져온 이미지(프로젝트)에 알려진 보안 취약점이 있는지 테스트하고 사용자가 제어하는 빈도로 테스트하고 새로운 이슈가 감지되면 사용자에게 알려줍니다.
 
-Integration with GitHub container registry is available for all SnyGitHub container registry와의 통합은 모든 Snyk 사용자가 사용할 수 있습니다.
+GitHub container registry와의 통합은 모든 Snyk 사용자가 사용할 수 있습니다.
 
 Snyk에서 GitHub container registry 통합을 설정하고 이미지 취약점 관리를 시작하려면 다음과 같이 진행합니다.
 
