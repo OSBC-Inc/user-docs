@@ -1,21 +1,21 @@
-# Viewing project details and test results
+# 프로젝트 세부 정보 및 테스트 결과 확인
 
-All workloads that you and your team have imported for monitoring appear on your **Projects** page marked with a unique Kubernetes icon:
+모니터링하기 위해 가져온 모든 워크로드는 Kubernetes 아이콘이 표시된 프로젝트 페이지에 나타납니다.
 
 ![Kubernetes icon](../../../../.gitbook/assets/uuid-24e0b69a-01c3-9434-9dac-9b44864bd269-en.png)
 
-**To view and work with the workload test results:**
+워크로드 테스트 결과를 보고 작업하려면 다음과 같이 진행합니다.
 
-* Go to the **Projects** page and filter for Kubernetes projects only:
+* **Projects** 페이지로 이동하여 Kubernetes 프로젝트에 대해서만 필터링합니다.
 
 ![](../../../../.gitbook/assets/uuid-08d7978e-0c64-a8c2-c289-402534ebec42-en.png)
 
-Expand any item to view:
+확인하려는 항목을 펼칩니다.
 
-* a list of the individual images used in the workload
-* a summary of the number of vulnerabilities in each image
+* 워크로드에 사용하는 개별 이미지 목록입니다.
+* 각 이미지의 취약점 수를 요약합니다.
 
-To view vulnerabilities in detail for any image, including its history, click the image name. The Project details page loads for the selected image:
+이미지 기록을 포함하여 이미지에 대한 취약점을 자세히 확인하려면 이미지 이름을 클릭합니다. 선택한 이미지에 대한 프로젝트 세부 정보 페이지가 나타납니다.
 
 ![](<../../../../.gitbook/assets/image (59) (2) (3) (3) (3) (3) (4) (5) (5) (5) (4) (7).png>)
 
