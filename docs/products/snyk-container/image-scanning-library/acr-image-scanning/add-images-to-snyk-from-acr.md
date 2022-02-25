@@ -1,37 +1,37 @@
-# Add images to Snyk from ACR
+# ACR에서 Snyk 이미지 추가
 
-Snyk tests and monitors ACR container images by evaluating root folders and custom file locations.
+Snyk은 루트 폴더 및 사용자 정의 파일 위치를 평가하여 ACR 컨테이너 이미지를 테스트하고 모니터링합니다.
 
-**To add registry images to Snyk:**
+레지스트리 이미지를 Snyk에 추가하려면 다음과 같이 진행합니다.
 
-**Prerequisites:**
+**전제 조건**
 
-* You must have an account with Snyk and be onboarded to your organization by an administrator.
-* The integration must be configured between Snyk and your ACR repository.
+* Snyk에 계정이 있어야 하며 관리자(administrator)에 의해 조직에 등록되어야 합니다.
+* Snyk와 ACR 저장소 간에 통합을 구성해야 합니다.
 
-## Steps
+## 진행 단계
 
-1. Log in to your account and navigate to the relevant group and organization that you want to manage.
-2. Go to **Projects**, and click **Add projects**. The list of integrations already configured on your account opens, similar to the following:  ![](../../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png)
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2. **Projects**탭에서 **Add projects**를 클릭합니다. 계정에 이미 구성된 통합 목록이 다음과 같이 열립니다. ![](../../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png)
 
 ![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (45).gif>)
 
-The **Which images do you want to test?** view appears, displaying all of the available images for the registry to which you connected, grouped by each of your repositories, similar to the following:
+**Which images do you want to test?**가 나타나면 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
 
 ![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (9).png>)
 
-1. Select single or multiple images with any or all of the following methods:
-   1. Type the name of a single image for import in the **Image Name** field (#1 in the image above),
-   2. Select any of the repositories if you want to import all of the associated images (#2 in the image above).
-   3. Expand and collapse repositories to select multiple images (#3 in the image above) across multiple repositories.&#x20;
-2.  Click **Add selected repositories**.
+1. 다음 방법 중 하나 또는 모두 사용하여 단일 또는 여러 이미지 선택합니다.
+   1. 필드에 가져올 이미지의 이름을 입력합니다(#1).
+   2. 연결된 모든 이미지를 가져오려면 저장소를 선택합니다(#2).
+   3. 저장소를 확장 및 축소하여 여러 저장소에서 여러 이미지(#3)를 선택합니다.
+2.  **Add selected repositories**를 클릭합니다.
 
-    A status bar appears at the top of the page as the images are imported; you can continue working in the meantime.
-3. When the import ends, notification of success, or failure, appears at the top of the page. Click **Refresh** to view the **Projects** page with the newly imported images. Images are grouped by repository and are each linked individually to a detailed Projects page.
-4. You can now connect your Git repo to this project in order to use your Dockerfile for enriched fix advice. For more info, see [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29).
+    이미지를 가져오면 페이지 상단에 상태 표시줄이 나타납니다. 작업이 진행되는 동안 다른 작업을 계속할 수 있습니다.
+3. 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부 **Projects** 페이지에 개별적으로 연결됩니다.
+4. 이제 저장소를 프로젝트에 연결하여 풍부한 수정 정보를 제공하는 Dockerfile을 사용할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요.
 
-ACR files are indicated with a unique icon ![](../../../../.gitbook/assets/uuid-5d10608d-d674-d4ee-d6c2-6faadd6fc8ea-en.png) . You can now also filter to view only those projects:
+ACR 파일은 특정 아이콘으로 표시됩니다. ![](../../../../.gitbook/assets/uuid-5d10608d-d674-d4ee-d6c2-6faadd6fc8ea-en.png) 필터링을 사용하여 다음과 같은 프로젝트만 볼 수도 있습니다.
 
 ![](<../../../../.gitbook/assets/image (4) (3) (3) (3) (3) (4) (4) (5) (4) (9).png>)
 
-ACR integration works similar to our other integrations. To continue to monitor, fix and manage your projects, see the relevant pages, also in our docs.
+ACR 통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지를 참조하세요.
