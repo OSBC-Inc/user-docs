@@ -4,8 +4,8 @@ Snyk Infrastructure as Code를 사용하여 CLI에서 직접 구성 파일을 �
 
 Kubernetes에서 Snyk Infrastructure as Code는 다음 항목을 지원합니다.
 
-* Deployments, Pods and Services.
-* CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet, and ReplicationController.
+* Deployments, Pods 및 Services.
+* CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet, 및 ReplicationController.
 
 CLI는 다음과 같이 사용할 수 있습니다.
 
