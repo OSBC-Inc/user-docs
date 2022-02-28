@@ -4,13 +4,13 @@ Snyk은 모니터링 중인 프로젝트에서 새로운 문제가 발견되면 
 
 보안 팀이 새로운 취약점을 공개하면 다음과 같이 알려드립니다.
 
-* By email, if you have not disabled these in your [notification settings](https://app.snyk.io/account/notifications)(\*).
-* By Slack, if you have set up [Slack integration](https://docs.snyk.io/integrations/untitled-3/slack-integration).
+* [notification settings](https://app.snyk.io/account/notifications)(\*)에서 email을 비활성화하지 않은 경우 email로 알려줍니다.
+* [Slack integration](https://docs.snyk.io/integrations/untitled-3/slack-integration)을 설정한 경우 Slack으로 알려줍니다.
 
 Snyk은 모든 조직의 보안 상태를 요약하여 주간 업데이트를 안내합니다.
 
 (\*) 활성 및 비활성 프로젝트 모두에 대한 알림을 받는 것이 중요합니다. 프로젝트를 비활성으로 설정해도 Snyk은 취약점/라이선스 문제에 대한 이메일을 보내는 것을 중단하지 않습니다.
 
-## **알림 관리** &#x20;
+## **알림 관리**
 
 Snyk에는 알림을 관리하기 위한 다양한 기능이 포함되어 있습니다. 조직 관리자인 경우 조직의 다른 사용자에 대한 알림 기본값을 관리할 수 있습니다. 자세한 내용은 [알림 관리](../../features/user-and-group-management/notifications/notification-management.md)를 참조하세요.

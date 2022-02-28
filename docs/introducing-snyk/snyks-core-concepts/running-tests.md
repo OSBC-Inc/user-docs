@@ -1,4 +1,4 @@
-# Running tests
+# 테스트 실행
 
 Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다.
 
@@ -17,7 +17,7 @@ Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다
 
 * **snyk test**로 소스 코드를 스캔 합니다.
 * **snyk container test**로 컨테이너 이미지를 스캔 합니다.
-* **snyk iac test**로 Infrastructure as Code \(IaC\)파일을 스캔 합니다.
+* **snyk iac test**로 Infrastructure as Code (IaC)파일을 스캔 합니다.
 
 자세한 내용은[CLI 시작하기](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)를 참조하세요.
 
@@ -38,7 +38,7 @@ Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다
 Snyk은 반복적인 테스트와 함께 자동 검색 기능을 제공하여 새로운 취약점을 자동으로 포착할 수 있도록 합니다. 프로젝트를 가져온 후 Snyk은 주기적으로 테스트를 진행하여 소스 코드가 새로 공개된 취약점의 영향을 받는지 확인합니다.
 
 {% hint style="info" %}
-Test frequency is set to daily by default. To change frequency, go to either the **Usage** page \(see [Usage page details](https://docs.snyk.io/user-and-group-management/managing-settings/usage-page-details)\) or the project **Settings** page \(see [View project settings](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-settings)\).
+테스트 빈도는 기본적으로 매일 진행하는 것으로 설정됩니다. 변경하려면 **Usage** 페이지([Usage page details](https://docs.snyk.io/user-and-group-management/managing-settings/usage-page-details) 참조) 또는 project **Settings** 페이지([View project settings](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-settings) 참조)로 이동하세요.
 {% endhint %}
 
 ### Snyk monitor
@@ -52,4 +52,3 @@ CLI 명령어`snyk monitor`를 사용하여 Snyk 웹 사이트에서 새로운 �
 기본적으로 Snyk은 모니터링되는 리포지토리에 제출된 모든 풀 요청을 스캔하여 단일 보안 검사와 단일 라이선스 검사로 그룹화된 결과와 권장 사항을 제공합니다.
 
 자세한 내용은[PR에서 Snyk 테스트 활성화](https://docs.snyk.io/getting-started/snyk-scm-integration-good-practices)를 참조하세요.
-
