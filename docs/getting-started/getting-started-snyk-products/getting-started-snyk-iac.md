@@ -10,7 +10,7 @@ Snyk IaC를 이용하여 Terraform 및 Kubernetes(Helm 포함) 환경의 구성 
 
 다음 사항을 확인하세요.
 
-* Snyk 계정 (go to [https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products)를 참조하세요).
+* Snyk 계정 (go to [https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조).
 * 작업할 Kubernetes 또는 Terraform 환경.
 * 다른 Snyk 제품과 같이 Git 저장소를 통합합니다. 자세한 내용은 [Git repository (SCM) integrations](../../features/integrations/git-repository-scm-integrations/)를 참조하세요.
 

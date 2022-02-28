@@ -11,7 +11,7 @@ Snyk Container를 이용하여 컨테이너 이미지의 취약점을 수정하�
 다음 사항을 확인하세요.
 
 * Snyk과 함께 사용할 관련 컨테이너 레지스트리에 대한 액세스 확인. Snyk은 Amazon Elastic Container Registry ([ECR](https://docs.snyk.io/snyk-container/image-scanning-library/ecr-image-scanning)), Google Container Registry ([GCR](https://docs.snyk.io/snyk-container/image-scanning-library/gcr-image-scanning)), Microsoft Azure Container Registry ([ACR](https://docs.snyk.io/snyk-container/image-scanning-library/acr-image-scanning)), [JFrog Artifactory](https://docs.snyk.io/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning)를 지원합니다. 또는 [Kubernetes](https://docs.snyk.io/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning)에 액세스할 수 있습니다.
-* Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products)를 참조하세요).
+* Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조).
 
 ## 1단계: 컨테이너 레지스트리 통합 추가
 

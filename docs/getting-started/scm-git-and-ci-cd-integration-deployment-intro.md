@@ -1,12 +1,12 @@
 # SCM(Git) 및 CI/CD 통합 구축 소개
 
-Snyk의 가장 많이 사용되는 통합은 SCM(Git) 또는 CI/CD 파이프라인입니다.
+코드 및 오픈소스에서 Snyk은 대부분 SCM(Git) 또는 CI/CD 파이프라인 통합에 사용합니다.
 
 ![](../.gitbook/assets/scm-ci-cid.png)
 
 또한 Snyk SCM 통합을 통해 모든 fix PR에서 자동으로 다시 검색하고 새로 도입된 취약성을 차단할 수 있습니다.
 
-두 가지 모두 동일한 비즈니스 목표를 달성할 수 있다면, 둘 중 하나를 선택해야 하는 이유는 무엇일까요?&#x20;
+두 가지 모두 동일한 비즈니스 목표를 달성할 수 있다면, 둘 중 하나를 선택해야 하는 이유는 무엇일까요?
 
 \- 워크플로우 및 프로세스에 따라 모든 조직에 한정되지만 아래와 같이 고려해야 할 사항들을 제공할 수 있습니다. ~~**(\*수정 필요)**~~
 
@@ -21,8 +21,8 @@ Snyk의 가장 많이 사용되는 통합은 SCM(Git) 또는 CI/CD 파이프라�
 
 ### CI/CD 통합 고려 사항
 
-* Some package managers require local context and are better run within your environment (notably Scala, Gradle and Go modules)
-* More granular options to block
+* 일부 패키지 관리자는 로컬 컨텍스트를 필요로 하며 사용자 환경(특히 Scala, Gradle 및 Go 모듈)내에서 더 잘 실행됩니다.
+* 차단할 수 있는 더 세분화된 옵션
 * 강력한 gatekeeper
 * container scan의 모범 사례
-* Complex repo structure such as large Monorepo, where a CI/CD integration would allow more custom imports
+* CI/CD 통합으로 더 많은 사용자 지정 가져오기를 허용하는 대규모 Monorepo와 같은 복잡한 repo구조

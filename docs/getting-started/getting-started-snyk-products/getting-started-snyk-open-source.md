@@ -18,10 +18,10 @@ npm install -g snyk
 
 #### 전제 조건
 
-Ensure you have:
+다음 항목을 수행했는지 확인합니다.
 
 1. [지원되는 언어 및 패키지 관리자](../../products/snyk-open-source/language-and-package-manager-support/)(예: Java)와 함께 지원되는 [소스 코드 관리 시스템](../../features/integrations/git-repository-scm-integrations/)(예: Github)에서 오픈 소스 패키지를 사용하는 프로젝트.
-2. Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참).
+2. Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조).
 
 ### 1단계: 소스 제어 통합 추가
 
@@ -40,12 +40,12 @@ Snyk에서 프로젝트를 작업할 수 있도록 소스 코드 통합을 진�
 
 ### 2단계: 프로젝트 추가
 
-Snyk에서 테스트하고 모니터링할 리포지토리를 선택하여 프로젝트를 추가합니다.
+Snyk에서 테스트하고 모니터링할 저장소를 선택하여 프로젝트를 추가합니다.
 
 1. Snyk.io에서 **프로젝트**를 선택 합니다.
 2. 프로젝트를 추가할 도구(예: Github)를 선택합니다.
-3. **Personal and Organization repositories**에서 사용할 리포지토리를 선택합니다.
-4. **Add selected repositories**를 클릭하여 선택한 리포지토리를 프로젝트로 가져옵니다. 해당 리포지토리는 다음과 같이 설정합니다.
+3. **Personal and Organization repositories**에서 사용할 저장소를 선택합니다.
+4. **Add selected repositories**를 클릭하여 선택한 저장소를 프로젝트로 가져옵니다. 해당 저장소는 다음과 같이 설정합니다.
    1. 취약점에 대한 정기적인 검사를 실행하도록 설정합니다.
    2. Webhook을 생성하므로 코드를 변경할 때 Snyk은 pull / merge requests를 테스트하여 새로운 디펜던시가 더 많은 취약점을 유발하는지 확인합니다.
 5. 진행률이 표시되며 로그 결과를 보려면 **View log**를 클릭하세요.
@@ -55,7 +55,7 @@ Snyk에서 테스트하고 모니터링할 리포지토리를 선택하여 프�
 프로젝트 추가 중 오류가 발생하면 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하세요.
 {% endhint %}
 
-### 3단계: 취약점 확
+### 3단계: 취약점 확인
 
 프로젝트에 대한 취약점 결과를 확인할 수 있습니다. **Projects** 탭은 추가 후에 기본적으로 추가된 프로젝트에 대한 취약점 정보를 제공합니다.
 
@@ -76,9 +76,9 @@ Snyk은 JavaScript, Ruby 및 Java 프로젝트의 경우 pull/merge requests를 
 
 ![Screenshot\_2021-04-09\_at\_17.35.25.png](<../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.35.25 (1).png>)
 
-취약점을 수정하기위해 다음과 같이 진행합니다.
+취약점을 수정하기 위해 다음과 같이 진행합니다.
 
-1. **Fix this vulnerability**를 클릭하여 업그레이드(또는 패치)하여 개별 문제를 해결하거나 를 클릭하여 여러 문제를 일괄 수정합니다.
+1. **Fix this vulnerability**를 클릭하여 업그레이드(또는 패치)하여 개별 문제를 해결하거나 **Fix these vulnerabilities**를 클릭하여 여러 문제를 일괄 수정합니다.
 2. **Open a Fix PR**이 나타나고 선택한 취약점이 표시됩니다.
 3. 수정하려는 추가적인 문제를 선택하거나 항목을 취소하여 수정 사항에서 제거할 수 있습니다.
 4. 화면 하단의 **Open a Fix PR**을 클릭합니다.

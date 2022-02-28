@@ -18,7 +18,7 @@
 Snyk Code는 기본적으로 비활성화되어 있으므로 각 조직 설정에서 활성화해야 합니다.
 
 1. [Snyk.io](http://snyk.io)에 로그인합니다.
-2. settings 클릭 ![](../../.gitbook/assets/cog\_icon.png) > **Snyk Code**.
+2. settings ![](../../.gitbook/assets/cog\_icon.png) > **Snyk Code** 클릭
 3. **Enable Snyk Code**에서 **Disabled**를 **Enabled**로 변경합니다.
 4. **Save changes**를 클릭 합니다.
 
@@ -47,7 +47,7 @@ Snyk Code는 코드 분석을 위해 임시로 저장소를 복제합니다. 이
 
 Snyk이 테스트하고 모니터링할 저장소를 선택하여 프로젝트를 추가합니다.
 
-1. &#x20;[snyk.io](http://snyk.io)에서 **Projects**를 선택합니다.
+1. [snyk.io](http://snyk.io)에서 **Projects**를 선택합니다.
 2. 프로젝트를 추가할 도구를 선택하세요(예: Github).
 3. **Personal and Organization repositories**에서 사용할 저장소를 선택합니다.
 4. **Add selected repositories**를 클릭하여 선택한 저장소의 프로젝트를 추가합니다. 이 경우 Snyk이 코드 취약점에 대한 정기 검사를 실행하도록 설정합니다.

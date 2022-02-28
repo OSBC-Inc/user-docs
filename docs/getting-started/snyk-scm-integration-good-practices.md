@@ -14,16 +14,14 @@ Snyk SCM 통합을 통해 다음을 수행할 수 있습니다:
 
 모든 SCM 통합 기능을 동시에 구현하려고 하면 SDLC에 문제가 발생하여 개발 성능이 저하될 위험이 있습니다.
 
-| **배포 단계**                                                                                                              | **구성**                                                                                                                                                     | 결과                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| <p><a href="snyk-scm-integration-good-practices.md">1단계 </a></p><p>SCM 통합을 설정합니다.</p>                                  | 각 [SCM integration](../features/integrations/git-repository-scm-integrations/)에 대한 구성 설명서 참조                                                               | 프로젝트를 가져올 준비가 된 구성된 통합                                                                                  |
-| <p><a href="snyk-scm-integration-good-practices.md">2단계</a></p><p>SCM에서 모든 프로젝트를 가져옵니다.</p>                            | <p></p><p>- 공용 및 개인 리포지토리 모두 테스트</p><p>- 모든 사용자 알림 비활성화</p><p>- Snyk PR 검사 비활성화</p><p>- 자동 수정 PR 비활성화</p><p>- 실패한 PR 검사 비활성화</p><p>- 자동 종속성 업그레이드 비활성화</p> | 애플리케이션 전체의 위험을 평가할 수 있는 완전한 소프트웨어 BOM(Bill of Materials)                                                |
-| <p><a href="snyk-scm-integration-good-practices.md">3단계</a></p><p>개발자 및 보안 팀은 Snyk의 우선순위 보고 기능을 사용하여 수정 계획을 수립합니다.</p> | Snyk 우선순위 보고에 대해 자세히 알아보려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                                     | Alignment between Developers and Security on what should be fixed and when streamlines the fix process. |
-| <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 문제를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>        | <p>- Enable Snyk PR checks and fail PRs</p><p>if they contain High severity issues</p><p>with available fixes</p><p>- Enable Auto-fix PRs</p>              | 조직이 취약점을 더 빠르게 수정할 수 있습니다.                                                                              |
-| <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | <p>- Enable Failing PR checks, for ANY</p><p>High severity issues (fix or no fix)</p>                                                                      | ‘Secure by Design’ methodology achieved.                                                                |
-| <p><a href="snyk-scm-integration-good-practices.md">6단계</a></p><p>Reduce technical security debt</p>                   | - 자동 디펜던시 업그레이드 사용                                                                                                                                         | 연구 및 해결에 시간이 많이 소요될 수 있는 향후 설계 문제 및 긴급한 수정 사항을 줄일 수 있습니다.                                               |
-
-&#x20;
+| **배포 단계**                                                                                                              | **구성**                                                                                                                                              | 결과                                                        |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| <p><a href="snyk-scm-integration-good-practices.md">1단계</a></p><p>SCM 통합을 설정합니다.</p>                                   | 각 [SCM integration](../features/integrations/git-repository-scm-integrations/)에 대한 구성 설명서 참조                                                        | 프로젝트를 가져올 준비가 된 구성된 통합                                    |
+| <p><a href="snyk-scm-integration-good-practices.md">2단계</a></p><p>SCM에서 모든 프로젝트를 가져옵니다.</p>                            | <p>- 공용 및 개인 리포지토리 모두 테스트</p><p>- 모든 사용자 알림 비활성화</p><p>- Snyk PR 검사 비활성화</p><p>- 자동 수정 PR 비활성화</p><p>- 실패한 PR 검사 비활성화</p><p>- 자동 종속성 업그레이드 비활성화</p> | 애플리케이션 전체의 위험을 평가할 수 있는 완전한 소프트웨어 BOM(Bill of Materials)  |
+| <p><a href="snyk-scm-integration-good-practices.md">3단계</a></p><p>개발자 및 보안 팀은 Snyk의 우선순위 보고 기능을 사용하여 수정 계획을 수립합니다.</p> | Snyk 우선순위 보고에 대해 자세히 알아보려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                              | 수정해야 할 사항과 수정 프로세스를 합리화하는 시기를 개발자 및 보안 팀간에 조정합니다.         |
+| <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 문제를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>        | <p>- Enable Snyk PR checks and fail PRs</p><p>if they contain High severity issues</p><p>with available fixes</p><p>- Enable Auto-fix PRs</p>       | 조직이 취약점을 더 빠르게 수정할 수 있습니다.                                |
+| <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | <p>- Enable Failing PR checks, for ANY</p><p>High severity issues (fix or no fix)</p>                                                               | ‘Secure by Design’ 방법론을 달성했습니다.                           |
+| <p><a href="snyk-scm-integration-good-practices.md">6단계</a></p><p>Reduce technical security debt</p>                   | - 자동 디펜던시 업그레이드 사용                                                                                                                                  | 연구 및 해결에 시간이 많이 소요될 수 있는 향후 설계 문제 및 긴급한 수정 사항을 줄일 수 있습니다. |
 
 ## 1단계: SCM 통합 설정
 
@@ -47,7 +45,7 @@ SCM이 이미 통합되어 있다면 다음 단계로 이동합니다.
 
 ![](<../.gitbook/assets/authorize (1) (2) (6) (1) (18).png>)
 
-**저장소에 대한 SCM 권한 **~~**수정필요**~~** \*(**
+**저장소에 대한 SCM 권한 \~\~수정필요**\~\~\*\* \*(\*\*
 
 Operations triggered using the Snyk UI (such as opening a Fix PR or retesting a project) are performed for the acting user. So to perform these operation, you must connect your own SCM user or service account. This gives Snyk the required permissions for the repositories for where you would like to perform these operations.
 
@@ -132,9 +130,7 @@ At the start of rollout, 개발자가 Snyk Commit을 확인하는 것에 익숙�
 2. 조건을 설정합니다:
    * **예) Only fail when the PR is adding a dependency with issues** : PR이 문제가 있는 디펜던시를 추가하는 경우에만 실패
    * **예)** **Only Fail for high severity issues** : 심각도가 높은 문제에 대해서만 실패
-   *   **예) Only fail when the issues found have a fix available** : 발견된 문제에 수정 가능한 사항이 있는 경우에만 실패
-
-       &#x20;
+   * **예) Only fail when the issues found have a fix available** : 발견된 문제에 수정 가능한 사항이 있는 경우에만 실패
 
 ## 4단계: **정책에 따른** PRs
 
@@ -180,7 +176,7 @@ Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 
 ## 6단계: 디펜던시 업그레이드 PRs
 
-그룹이 ~~**보안 기술 부채 문제**~~를 해결할 준비가 되면 디펜던시를 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk을 구성할 수 있습니다.
+그룹이 \~\~**보안 기술 부채 문제**\~\~를 해결할 준비가 되면 디펜던시를 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk을 구성할 수 있습니다.
 
 ![](../.gitbook/assets/upgrade-node-uuid.png)
 
@@ -190,7 +186,7 @@ Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 2. Snyk은 프로젝트를 가져오면서 스캔을 하고 정기적으로 프로젝트를 계속 모니터링합니다.
 3. 각각을 모니터링할 때, Snyk이 디펜던시에 대한 새 버전을 식별하면 다음과 같이 수행합니다:
    * Snyk은 자동 업그레이드 PR을 생성합니다.(Snyk 프로젝트 설정의 테스트 빈도 기반)
-   * ~~**(재확인 필요)**~~디펜던시가 이미 다른 open된 PR에 의해 변경(업그레이드 또는 패치 적용)된 경우 새 PR을 생성하지 않습니다.
+   * \~\~**(재확인 필요)**\~\~디펜던시가 이미 다른 open된 PR에 의해 변경(업그레이드 또는 패치 적용)된 경우 새 PR을 생성하지 않습니다.
    * Snyk은 각 디펜던시에 대해 별도의 PR을 생성합니다.
    * Snyk은 5개 이상의 Snyk PR이 열려 있는 저장소에 대해 업그레이드 PR을 생성하지 않습니다. 이 숫자는 설정에서 1\~10 사이로 설정할 수 있습니다. 이 제한은 업그레이드 PR을 생성할 때만 적용되지만 수정 PR 수는 계산되지 않습니다. 따라서 수정 PR은 이러한 방식으로 제한되지 않습니다.
    * By default, Snyk recommends only patch and minor upgrades, but major version upgrade can be enabled in the settings where the feature is enabled.
