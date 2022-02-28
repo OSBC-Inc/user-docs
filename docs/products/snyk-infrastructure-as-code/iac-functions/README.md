@@ -1,4 +1,3 @@
-# IaC functions
+# IaC 기능들
 
-* [View Infrastructure as Code issues](view-infrastructure-as-code-issues.md)
-
+* [Infrastructure as Code 이슈 보기](view-infrastructure-as-code-issues.md)
