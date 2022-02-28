@@ -27,4 +27,4 @@
 
 자세한 내용은 [Snyk 앱에서 이미지 분석 및 수정](analysis-and-remediation-for-your-images-from-the-snyk-app.md)을 참조하시오.
 
-You can find the base image vulnerabilities in your project, among the vulnerabilities added by your instructions, sorted by their priority score. You can also filter only the base image vulnerabilities, with the **Base image** option under the **Image Layer** handy filter. 자세한 내용은 [이미지 레이어 정보](image-layer-information.md)를 참조하시오.
+프로젝트 지침에 의해 추가된 취약점 중 우선 순위 점수에 따라 정렬된 기본 이미지 취약점을 찾을 수 있습니다. 또한 **Image Layer** 필터 아래의 **Base image** 옵션을 사용하여 기본 이미지 취약점만 필터링할 수 있습니다. 자세한 내용은 [이미지 레이어 정보](image-layer-information.md)를 참조하시오.

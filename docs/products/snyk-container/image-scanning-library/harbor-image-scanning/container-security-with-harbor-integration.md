@@ -1,4 +1,4 @@
-# Harbor 통합을 통한 컨테이너 보안
+# Harbor 통합을 이용한 컨테이너 보안
 
 {% hint style="info" %}
 **사용 가능 여부**\
@@ -32,5 +32,5 @@ To set up the integration, the Harbor user should be an admin user. It currently
 
 ![](../../../../.gitbook/assets/mceclip1-8-.png)
 
-Snyk tests the connection values and the page reloads, now displaying Harbor integration information, and the **Add your Harbor images to Snyk** button becomes available. In case the connection to Harbor failed, notification appears under the **Connected to Harbor** section.\
-Now you can use Snyk to scan your images from Harbor.
+Snyk은 연결 값과 page reload를 테스트하여 Harbor 통합 정보를 표시하고 **Add your Harbor images to Snyk** 버튼을 사용할 수 있습니다. Harbor에 연결하지 못한 경우 **Connected to Harbor** 섹션 아래에 알림이 나타납니다.\
+이제 Snyk을 사용하여 Harbor에서 이미지를 스캔할 수 있습니다.

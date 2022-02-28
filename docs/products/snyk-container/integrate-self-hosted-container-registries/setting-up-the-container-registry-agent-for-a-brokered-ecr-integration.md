@@ -177,7 +177,7 @@ Container Registry Agent 이미지를 실행할 때 다음과 같은 환경 변�
 
 ### 3. Snyk ECR Service Role의 사용성 범위 강화
 
-This step will harden the usability of the Snyk ECR Service Role so that it could only be assumed by the Container Registry Agent IAM Role / IAM Role.
+이 단계에서는 Container Registry Agent IAM Role / IAM Role에서만 가정할 수 있도록 Snyk ECR 서비스 역할의 유용성을 강화합니다.
 
 1. **Roles** 페이지에서 다시 [SnykEcrServiceRole](https://console.aws.amazon.com/iam/home?#/roles/SnykEcrServiceRole)을 찾아 클릭하여 role configurations를 입력합니다.
 2. **Trust relationships** 탭을 선택합니다.
