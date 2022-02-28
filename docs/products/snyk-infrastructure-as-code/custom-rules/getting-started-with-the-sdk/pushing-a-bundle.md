@@ -24,9 +24,9 @@ snyk-iac-rules push -r docker.io/example/test bundle.tar.gz
 안전하지 않은 레지스트리는 지원하지 않습니다. 우리가 지원하는 유일한 프로토콜은 HTTPS입니다.
 {% endhint %}
 
-명령어 실행하면 `latest` 태그를 사용하여 사용자 지정 규칙 bundle이 OCI 레지스트리에 push합니다.bundle을 버전화할 경우에 태그를 제공할 수 있습니다.
+명령어 실행하면 `latest` 태그를 사용하여 사용자 지정 규칙 bundle이 OCI 레지스트리에 push합니다.
 
-You can also provide your own tag if you want to version the bundle:
+bundle을 버전화할 경우에 태그를 제공할 수 있습니다.
 
 ```
 snyk-iac-rules push -r docker.io/example/test:v0.0.1 bundle.tar.gz
