@@ -5,9 +5,9 @@ Log4Shell 취약점([CVE-2021-44228](https://security.snyk.io/vuln/SNYK-JAVA-ORG
 [**더 보기**](https://snyk.io/blog/log4j-rce-log4shell-vulnerability-cve-2021-4428/)
 {% endhint %}
 
-### **Snyk**이란?~~(수정필요)!~~
+### **Snyk**이란?
 
-Snyk 개발 도구 및 자동화 파이프라인에 직접 통합되어 코드, 종속성, 컨테이너 및 인프라의 보안 취약점을 쉽게 찾고 우선 순위를 정하며 수정할 수 있습니다. 업계 최고의 취약점 인텔리전스를 기반으로 개발자가 설계한 Snyk은 툴킷에 보안 전문 지식을 담을 수 있도록 개발 프로세스 적합합니다.
+Snyk은 개발 도구 및 자동화 파이프라인에 직접 통합되어 코드, 디펜던시, 컨테이너 및 Infrastructure as Code의 보안 취약점을 쉽게 찾고 우선 순위를 정해 수정할 수 있습니다. 업계 최고의 취약점 인텔리전스를 기반으로 개발자가 설계하여 툴킷에 보안 전문 지식을 담을 수 있도록 하여 개발 워크플로우에 적합한 제품입니다.
 
 ### Snyk은 어떤 제품을 제공하나요?
 
@@ -46,4 +46,3 @@ Google, Salesforce, Datadog, Atlassian, Twilio, Revolut 등 많은 업체들은 
 {% hint style="info" %}
 Snyk 데이터 처리에 대한 자세한 내용은 [Snyk 데이터 처리 방법](more-info/how-snyk-handles-your-data.md)을 참조하십시오.
 {% endhint %}
-
