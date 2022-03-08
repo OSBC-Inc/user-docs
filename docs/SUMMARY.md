@@ -2,9 +2,6 @@
 
 * [Snyk 사용자 가이드](README.md)
 * [Snyk 소개](introducing-snyk/README.md)
-  * [Snyk 소개](introducing-snyk/introduction-to-snyk/README.md)
-    * [통합 및 언어 지원](introducing-snyk/introduction-to-snyk/integrations-and-languages.md)
-    * [용어 사전](introducing-snyk/introduction-to-snyk/glossary.md)
   * [Snyk의 핵심 개념](introducing-snyk/snyks-core-concepts/README.md)
     * [그룹, 조직 및 사용자](introducing-snyk/snyks-core-concepts/groups-organizations-and-users.md)
     * [알림](introducing-snyk/snyks-core-concepts/notifications.md)
@@ -12,6 +9,7 @@
     * [심각도 수준](introducing-snyk/snyks-core-concepts/severity-levels.md)
     * [테스트 실행](introducing-snyk/snyks-core-concepts/running-tests.md)
     * [Snyk 설정](introducing-snyk/snyks-core-concepts/snyk-settings.md)
+  * [용어 사전](introducing-snyk/glossary.md)
 * [시작하기](getting-started/README.md)
   * [Snyk 시작하기](getting-started/getting-started-snyk-products/README.md)
     * [Snyk 제품 및 도구 선택](getting-started/getting-started-snyk-products/select-snyk-product-tool.md)

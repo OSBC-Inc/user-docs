@@ -59,16 +59,15 @@ The following page will show 2 different examples on how to configure a custom m
     2. Select the right user role\
        \*\*\*\*![](https://lh4.googleusercontent.com/XPclvljK5ZsmLx1Cu3odPCFWz0oj4ZRk9ZkdG-gTto3vMWZWtMQ\_ONHVggh-xHL1UkRwId1eJFh8rZwCrbfUGvhKlL9BBzi3U46d3HXYE8YzFMtS8EIJxBljOim5LvSMarKyNXyZ)
 
-    ### Configuration 1:
+    #### Configuration 1:
 
     In this configuration:
 
     * Okta groups will be mapped to Snyk Organizations
     * **User profiles will be tied to each user, not the Okta group**
-    * Once you’re set with groups and users\
+    * Once you’re set with groups and users\\
 
-
-    #### Implementation
+    **Implementation**
 
     1. Navigate to Applications -> Applications and click on the Snyk app you set
     2. General Tab -> SAML Settings -> Edit and click next to go to the Configure SAML step
