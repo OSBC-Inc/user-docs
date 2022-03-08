@@ -34,9 +34,9 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
 `template` 명령어를 사용하지 않으면 Rego 테스트 프레임워크를 직접 작성해야 합니다.
 {% endhint %}
 
-### Structure of the rule
+### Rule의 구조
 
-In Rego, you can write statements that allow or deny a request, such as:\
+Rego에서는 다음과 같이 요청을 허용하거나 거부하는 문장을 작성할 수 있습니다.\
 `allow { input.name == "alice" }` or `deny { input.name == "alice" }`
 
 {% hint style="info" %}
@@ -72,7 +72,7 @@ deny[msg] {
 Snyk IaC CLI에 올바르게 표시되도록 하려면 다음 형식의 **msg** 속성을 따라야 합니다.
 {% endhint %}
 
-The attributes are:
+속성은 다음과 같습니다.
 
 * **publicId:** COMPANY-001과 같이 사용자 고유의 이름 지정 규칙입니다. 내부 Snyk 규칙과 구별하기 위해 **"SNYK-"로 시작/포함해서는 안 됩니다**.
 * **title:** 문제를 요약한 짧은 제목입니다.e.
