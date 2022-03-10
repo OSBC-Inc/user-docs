@@ -18,7 +18,7 @@ Snyk의 [vulnerability database](https://snyk.io/product/vulnerability-database/
 보안 전문가 및 분석가 팀은 Snyk의 보안 데이터베이스를 관리하여 데이터베이스가 높은 정확도를 유지하고 오탐지를 방지할 수 있도록 합니다.
 
 * 데이터베이스의 모든 항목이 분석되고 검증됩니다.
-* 새로운 취약점을 발견하기 위한 연구에 투자합니다. [disclosed vulnerability list](https://app.snyk.io/disclosed-vulnerabilities)를 참조하세요.
+* 새로운 취약점을 발견하기 위한 연구에 투자합니다. [disclosed vulnerability list](https://app.snyk.io/disclosed-vulnerabilities)를 참조하십시오.
 
 ## Database 피드
 

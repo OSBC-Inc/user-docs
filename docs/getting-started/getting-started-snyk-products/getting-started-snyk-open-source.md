@@ -3,7 +3,7 @@
 Snyk Open Source를 이용하여 코드의 취약점을 검사하고 수정할 수 있습니다.
 
 {% hint style="info" %}
-이 프로세스는 Snyk.io UI 및 소스 코드 관리 시스템 사용에 대해 설명합니다. [IDE tool](https://docs.snyk.io/integrations/ide-tools) 또 [CI/CD integration](https://docs.snyk.io/integrations/ci-cd-integrations)을 사용할 수 있습니다. 자세한 내용은 [Integrations](https://docs.snyk.io/integrations)을 참조하세요.
+이 프로세스는 Snyk.io UI 및 소스 코드 관리 시스템 사용에 대해 설명합니다. [IDE tool](https://docs.snyk.io/integrations/ide-tools) 또 [CI/CD integration](https://docs.snyk.io/integrations/ci-cd-integrations)을 사용할 수 있습니다. 자세한 내용은 [Integrations](https://docs.snyk.io/integrations)을 참조하십시오.
 {% endhint %}
 
 ### **CLI tool** 사용하기
@@ -14,7 +14,7 @@ Snyk CLI tool을 이용하여 Snyk을 시작할 수 있습니다.
 npm install -g snyk
 ```
 
-자세한 내용은 [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)를 참조하세요.
+자세한 내용은 [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)를 참조하십시오.
 
 #### 전제 조건
 
@@ -32,11 +32,11 @@ npm install -g snyk
 Snyk에서 프로젝트를 작업할 수 있도록 소스 코드 통합을 진행합니다.
 
 1. Snyk.io에 로그인합니다.
-2. **Integrations > Source control**를 선택 합니다.
+2. **Integrations > Source control**를 선택합니다.
 3. Snyk과 통합할 소스 제어 시스템(예: Github)을 클릭합니다.
 4. Snyk 액세스 권한을 부여하기 위해 계정 자격 증명을 입력하거나 Github계정으로 인증을 진행합니다.
 
-자세한 내용은 [DevOps integrations & languages](https://docs.snyk.io/introducing-snyk/introduction-to-snyk/integrations-and-languages)를 참조하세요.
+자세한 내용은 [DevOps integrations & languages](https://docs.snyk.io/introducing-snyk/introduction-to-snyk/integrations-and-languages)를 참조하십시오.
 
 ### 2단계: 프로젝트 추가
 
@@ -48,11 +48,11 @@ Snyk에서 테스트하고 모니터링할 저장소를 선택하여 프로젝�
 4. **Add selected repositories**를 클릭하여 선택한 저장소를 프로젝트로 가져옵니다. 해당 저장소는 다음과 같이 설정합니다.
    1. 취약점에 대한 정기적인 검사를 실행하도록 설정합니다.
    2. Webhook을 생성하므로 코드를 변경할 때 Snyk은 pull / merge requests를 테스트하여 새로운 디펜던시가 더 많은 취약점을 유발하는지 확인합니다.
-5. 진행률이 표시되며 로그 결과를 보려면 **View log**를 클릭하세요.
+5. 진행률이 표시되며 로그 결과를 보려면 **View log**를 클릭하십시오.
 6. 프로젝트 추가가 완료됩니다.
 
 {% hint style="info" %}
-프로젝트 추가 중 오류가 발생하면 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하세요.
+프로젝트 추가 중 오류가 발생하면 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하십시오.
 {% endhint %}
 
 ### 3단계: 취약점 확인
@@ -66,7 +66,7 @@ Snyk에서 테스트하고 모니터링할 저장소를 선택하여 프로젝�
 
 ![](<../../.gitbook/assets/detailed-vuln-information (3) (4) (4) (4) (6) (7) (5) (1) (4).png>)
 
-자세한 내용은 [View project information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information)을 참조하세요.
+자세한 내용은 [View project information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information)을 참조하십시오.
 
 ### 4단계: 취약점 수정
 
@@ -91,8 +91,8 @@ Snyk은 JavaScript, Ruby 및 Java 프로젝트의 경우 pull/merge requests를 
 패키지 업그레이드를 사용할 수 없는 경우 Snyk 패치를 이용하여 취약점을 수정할 수 있습니다.
 {% endhint %}
 
-자세한 내용은 [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities)를 참조하세요.
+자세한 내용은 [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities)를 참조하십시오.
 
 ## 추가 내용
 
-[Snyk Open Source](https://docs.snyk.io/snyk-open-source)를 참조하세요.
+[Snyk Open Source](https://docs.snyk.io/snyk-open-source)를 참조하십시오.

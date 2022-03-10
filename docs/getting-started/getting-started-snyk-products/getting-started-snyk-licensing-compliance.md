@@ -2,10 +2,10 @@
 
 {% hint style="info" %}
 **기능 지원 여부**\
-기본 라이선스 정책에 대한 단일 라이선스 정책 구성은 비즈니스 플랜에서 사용할 수 있습니다. 엔터프라이즈 플랜에 대해서는 전체 정책 생성 및 관리가 가능합니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하세요.
+기본 라이선스 정책에 대한 단일 라이선스 정책 구성은 비즈니스 플랜에서 사용할 수 있습니다. 엔터프라이즈 플랜에 대해서는 전체 정책 생성 및 관리가 가능합니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-&#x20;[Snyk Open Source](https://docs.snyk.io/snyk-open-source/open-source-basics)솔루션의 일부분이며 Snyk 라이선스 준수 관리를 시작하여 코드의 [오픈 소스 라이선스 준수](https://snyk.io/learn/open-source-licenses/)를 확인하세요.
+[Snyk Open Source](https://docs.snyk.io/snyk-open-source/open-source-basics)솔루션의 일부분이며 Snyk 라이선스 준수 관리를 시작하여 코드의 [오픈 소스 라이선스 준수](https://snyk.io/learn/open-source-licenses/)를 확인하십시오.
 
 {% hint style="info" %}
 이 프로세스는 Snyk UI 및 [지원 가능한 소스 코드 관리 시스템](../../features/integrations/git-repository-scm-integrations/) 사용에 대해서 설명합니다.\
@@ -14,7 +14,7 @@
 
 ## 전제 조건
 
-다음 사항을 확인하세요.
+다음 사항을 확인하십시오.
 
 * Snyk [유료 요금제](https://snyk.io/plans/).
 * [Snyk Open Source](https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source)에서 설명된 대로 프로젝트를 통합하고 설치한 경우.
@@ -29,7 +29,7 @@
 
 ![](../../.gitbook/assets/license-policy.png)
 
-[Licenses overview](https://docs.snyk.io/snyk-open-source/licenses) 및 [Setting a license policy](https://docs.snyk.io/snyk-open-source/license-policies/setting-a-license-policy)를 참조하세요.
+[Licenses overview](https://docs.snyk.io/snyk-open-source/licenses) 및 [Setting a license policy](https://docs.snyk.io/snyk-open-source/license-policies/setting-a-license-policy)를 참조하십시오.
 
 ## 2단계: 문제 확인
 
@@ -66,6 +66,6 @@ Snyk은 어떠한 디펜던시가 라이선스 문제를 야기했는지 확인�
 
 수행하는 작업은 라이선스 조건과 정책에 따라 다릅니다. 예를 들어 라이선스 위반이 발견된 경우 법무팀에 연락하거나 위반을 추가한 디펜던시를 교체하여 이 문제를 해결할 수 있습니다.
 
-## 자세한 내용 확인
+## 추가 정보
 
-[Licenses](../../products/snyk-open-source/licenses/)를 참조하세요.
+[Licenses](../../products/snyk-open-source/licenses/)를 참조하십시오.
