@@ -10,7 +10,7 @@
 
 ### Base image
 
-컨테이너 이미지를 구성하는 데 사용되는 상위 이미지이며, 일반적으로 도커 파일의 FROM 지시문에 정의됩니다. Base images는 다른 base images에서 구성할 수 있습니다.
+컨테이너 이미지를 구성하는 데 사용되는 상위 이미지이며, 일반적으로 Dockerfile의 FROM 지시문에 정의됩니다. base image는 다른 base image에서 구성할 수 있습니다.
 
 ### Broker
 
@@ -18,7 +18,7 @@
 
 ### Build System
 
-소스 코드를 가져와 배포 가능한 애플리케이션(예: 컨테이너)을 구축하는 시스템입니다.
+소스 코드를 가져와 배포 가능한 애플리케이션(예: 컨테이너)을 빌드하는 시스템입니다.
 
 ## C
 
@@ -30,21 +30,21 @@
 
 Command Line Interface. [Snyk CLI](glossary.md#snyk-cli)를 참조하십시오.
 
-### Cloud Native Application Security ~~(\*수정 필요)~~&#x20;
+### Cloud Native Application Security
 
-CI/CD 파이프라인 전체에 보안을 구현하고, 마이크로 서비스에 내장된 보안을 자동화하고, 반복을 극대화하여 취약점 유입을 줄입니다. Snyk는 포괄적인 [CNAS platform](https://snyk.io/product/cloud-native-application-security/)을 제공합니다.
+CI/CD 파이프라인 전체에 보안을 구현하고, 마이크로서비스에 내장된 보안을 자동화하고, 반복을 극대화하여 취약점 유입을 줄입니다. Snyk은 포괄적인 [CNAS platform](https://snyk.io/product/cloud-native-application-security/)을 제공합니다.
 
 ### Container
 
-Containers allow you to package applications and their dependencies together, to be deployed as a single runnable unit. A container is an abstraction provided by the operating system kernel, that allows a process to be isolated from other processes running on the system. [Snyk Container](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykContainer)를 참조하십시오.
+컨테이너를 사용하면 애플리케이션과 해당 디펜던시를 함께 패키징하여 단일 실행 가능한 단위로 배포할 수 있습니다. 컨테이너는 운영체제 커널이 제공하는 추상화이며, 시스템에서 실행 중인 다른 프로세스로부터 프로세스를 분리할 수 있습니다. [Snyk Container](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykContainer)를 참조하십시오.
 
 ### Container engine
 
-For users, an application which takes a container image and turns it into a running container. Container engines typically interface with container registries, and run containers. Examples of container engines include Docker, CRI-O or LXC.
+사용자의 경우 컨테이너 이미지를 가져와 실행 중인 컨테이너로 바꾸는 애플리케이션입니다. 컨테이너 엔진은 일반적으로 컨테이너 레지스트리와 연결되며 컨테이너를 실행합니다. 컨테이너 엔진의 예로는 Docker, CRI-O 또는 LXC가 있습니다.
 
 ### Container image
 
-One or more files which, when instantiated by a container engine or runtime, provide a running container. Images are the packaging and distribution format for containers.
+컨테이너 엔진 또는 런타임에 의해 인스턴스화된 경우 실행 중인 컨테이너를 제공하는 하나 이상의 파일입니다. 이미지는 컨테이너의 패키징 및 배포 형식입니다.
 
 ### Container registry
 
@@ -52,21 +52,21 @@ One or more files which, when instantiated by a container engine or runtime, pro
 
 ### CVE
 
-Common Vulnerabilities and Exposures의 약자로, 잘 알려진 취약성에 대해 널리 사용되는 식별자입니다.
+Common Vulnerabilities and Exposures의 약자로, 잘 알려진 취약점에 대해 널리 사용되는 식별자입니다.
 
 ### CVSS
 
-Common Vulnerability Scoring System의 약자로, 0점에서 10점 사이의 점수를 사용하여 취약성의 심각도를 평가하는 업계 표준입니다. Snyk는 CVSS를 사용합니다.
+Common Vulnerability Scoring System의 약자로, 0점(가장 낮음)에서 10점(가장 높음) 사이의 점수를 사용하여 취약성의 심각도를 평가하는 업계 표준입니다. Snyk는 CVSS를 사용합니다.
 
 ### CWE
 
-Common Weakness Enumeration의 약자로, an online glossary that categorizes software and hardware weaknesses into different types. 예: **CWE-20: Input Validation**.
+Common Weakness Enumeration의 약자로, 소프트웨어 및 하드웨어의 약점을 다양한 유형으로 분류하는 용어집입니다. 예: **CWE-20: Input Validation**.
 
 ## D
 
 ### DAST
 
-동적 응용 프로그램 보안 테스트(Dynamic Application Security Testing)를 말합니다. An application that you can point at a site or service; it then typically profiles the site or service, then examines the output and behaviour to uncover security vulnerabilities. 또한 [SAST](glossary.md#sast)를 참조하십시오.
+동적 응용 프로그램 보안 테스트(Dynamic Application Security Testing)를 말합니다. 사이트 또는 서비스를 가리킬 수 있는 애플리케이션입니다. 그런 다음 일반적으로 사이트 또는 서비스를 성능 분석한 다음 출력 및 동작을 검사하여 보안 취약점을 파악합니다. 또한 [SAST](glossary.md#sast)를 참조하십시오.
 
 ### Dependency
 
@@ -75,7 +75,7 @@ Common Weakness Enumeration의 약자로, an online glossary that categorizes so
 * direct dependency는 사용자가 자신의 프로젝트에 포함하는 패키지입니다.
 * indirect dependency(deep, chained 또는transitive dependency라고도 함)는 직접 종속성 중 하나에 사용되는 패키지입니다.
 
-### Dependency tree~~(수정 필요?=직접종속성, 간접종속성이란 말 원래쓰는건지?)~~
+### Dependency tree\~\~(수정 필요?=직접종속성, 간접종속성이란 말 원래쓰는건지?)\~\~
 
 종속성 경로라고도 하며, 소프트웨어 응용 프로그램의 종속성을 보여주는 계층적 그래프이다. 여기에는 직접적, 간접적 의존성이 모두 포함되며, 많은 수준의 의존성이 포함될 수 있다.
 
@@ -105,7 +105,7 @@ A measure of how practical an exploit for a vulnerability is, based on whether t
 
 ### Fixable / Partially fixable
 
-A measure of whether a vulnerability can be fixed by Snyk, by applying a patch, upgrade, or pin.  [Fixed in version vs. fixable attributes in vulnerabilities](https://support.snyk.io/hc/en-us/articles/4405034808209)을 참조하십시오.
+A measure of whether a vulnerability can be fixed by Snyk, by applying a patch, upgrade, or pin. [Fixed in version vs. fixable attributes in vulnerabilities](https://support.snyk.io/hc/en-us/articles/4405034808209)을 참조하십시오.
 
 ### Fix PR
 
@@ -149,7 +149,7 @@ Snyk에서 식별 및 나열한 라이센스 문제 또는 취약성입니다.
 
 ## L
 
-### Library~~(수정필요)?~~&#x20;
+### Library\~\~(수정필요)?\~\~
 
 패키지의 특정 유형입니다.
 

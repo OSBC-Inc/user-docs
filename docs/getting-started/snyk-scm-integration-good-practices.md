@@ -21,7 +21,7 @@ Snyk SCM 통합을 통해 다음을 수행할 수 있습니다:
 | <p><a href="snyk-scm-integration-good-practices.md">3단계</a></p><p>개발자 및 보안 팀은 Snyk의 우선순위 보고 기능을 사용하여 수정 계획을 수립합니다.</p> | Snyk 우선순위 보고에 대해 자세히 알아보려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                              | 수정해야 할 사항과 수정 프로세스를 합리화하는 시기를 개발자 및 보안 팀간에 조정합니다.         |
 | <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 문제를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>        | <p>- Enable Snyk PR checks and fail PRs</p><p>if they contain High severity issues</p><p>with available fixes</p><p>- Enable Auto-fix PRs</p>       | 조직이 취약점을 더 빠르게 수정할 수 있습니다.                                |
 | <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | <p>- Enable Failing PR checks, for ANY</p><p>High severity issues (fix or no fix)</p>                                                               | ‘Secure by Design’ 방법론을 달성했습니다.                           |
-| <p><a href="snyk-scm-integration-good-practices.md">6단계</a></p><p>Reduce technical security debt</p>                   | - 자동 디펜던시 업그레이드 사용                                                                                                                                  | 연구 및 해결에 시간이 많이 소요될 수 있는 향후 설계 문제 및 긴급한 수정 사항을 줄일 수 있습니다. |
+| <p><a href="snyk-scm-integration-good-practices.md">6단계</a></p><p>기술 보안 부채 구축</p>                                      | - 자동 디펜던시 업그레이드 사용                                                                                                                                  | 연구 및 해결에 시간이 많이 소요될 수 있는 향후 설계 문제 및 긴급한 수정 사항을 줄일 수 있습니다. |
 
 ## 1단계: SCM 통합 설정
 
@@ -45,9 +45,9 @@ SCM이 이미 통합되어 있다면 다음 단계로 이동합니다.
 
 ![](<../.gitbook/assets/authorize (1) (2) (6) (1) (18).png>)
 
-**저장소에 대한 SCM 권한 \~\~수정필요**\~\~\*\* \*(\*\*
+**저장소에 대한 SCM 사용 권한**
 
-Operations triggered using the Snyk UI (such as opening a Fix PR or retesting a project) are performed for the acting user. So to perform these operation, you must connect your own SCM user or service account. This gives Snyk the required permissions for the repositories for where you would like to perform these operations.
+Snyk과 작업을 수행할 저장소에 대한 권한을 갖게하여 작업 중인 사용자에 대해 Snyk UI를 사용하여 트리거된 작업(예: 수정 PR 열기 또는 프로젝트 다시 테스트)이 수행됩니다. 이러한 작업을 수행하려면 자신의 SCM 사용자 또는 서비스 계정을 연결해야 합니다.
 
 예를 들어 GitHub에서 Snyk으로 연결된 계정은 대상 저장에 대해 다음과 같은 액세스 권한이 필요합니다:
 
@@ -87,7 +87,7 @@ Operations triggered using the Snyk UI (such as opening a Fix PR or retesting a 
 
 **PR 테스트 설정 & 워크플로우**
 
-기본적으로 Snyk은 모니터링되는 저장소에 제출된 모든 pull request를 검색하여 결과와 권장 사항을 단일 보안 검사와 단일 라이선스 검사로 그룹화하여 보여줍니다:
+기본적으로 Snyk은 모니터링하는 저장소에 제출된 모든 pull request를 검색하여 결과와 권장 사항을 단일 보안 검사와 단일 라이선스 검사로 그룹화하여 제공합니다.
 
 ![](../.gitbook/assets/checks-passed.png)
 
@@ -98,7 +98,7 @@ Operations triggered using the Snyk UI (such as opening a Fix PR or retesting a 
 * **Success**: 식별된 문제가 없고 모든 점검이 통과됨
 * **Processing**: Snyk 테스트가 끝날 때까지 표시됨
 * **Failure**: 문제가 확인되었을 때, 검사를 통과하기 위한 수정 필요
-* **Error**: 매니페스트 파일이 동기화되지 않았거나, Snyk이 매니페스트 파일을 읽을 수 없거나, Snyk가 매니페스트 파일을 찾을 수 없을 때 오류가 발생합니다.
+* **Error**: 매니페스트 파일이 동기화되지 않았거나, Snyk이 매니페스트 파일을 읽을 수 없거나, Snyk과 매니페스트 파일을 찾을 수 없을 때 오류가 발생합니다.
 
 ![](../.gitbook/assets/security-check.png)
 
@@ -106,15 +106,15 @@ Operations triggered using the Snyk UI (such as opening a Fix PR or retesting a 
 
 관리자는 조직 수준에서 Snyk PR 테스트 설정을 관리하여 모든 프로젝트에 적용하거나 PR 테스트를 적용할 특정 프로젝트를 선택할 수 있습니다. 기능의 설정 여부(기본적으로 활성화됨)를 구성하고, 실패 조건을 설정하여 Snyk이 PR 검사를 통과하지 못할 시기를 정의할 수 있습니다.
 
-조직의 PR 테스트 설정을 구성하려면 다음과 같이 하십시오:
+조직의 PR 테스트 설정을 구성하려면 다음과 같이 하십시오.
 
-1. **Org** > settings ![](../.gitbook/assets/cog\_icon.png) **>** Integrations > Edit Settings로 이동합니다.
+1. **Org** > settings ![](../.gitbook/assets/cog\_icon.png) **>** Integrations > Edit Settings 이동
 2. **Enabled**로 설정하고 필요에 따라 **Fail conditions** 설정합니다.
 3. **Update settings**를 클릭합니다.
 
 ![](../.gitbook/assets/image13.png)
 
-특정 프로젝트에 대한 pull request를 설정하려면 **Projects Page**> **Projects Settings > Edit Settings**로 이동하여 조건을 비슷하게 설정하십시오:
+특정 프로젝트에 대한 pull request를 설정하려면 **Projects Page**> **Projects Settings > Edit Settings**로 이동하여 조건을 비슷하게 설정하십시오.
 
 ![](../.gitbook/assets/main.png)
 
@@ -160,7 +160,7 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 
 개발자가 패치 사용 및 실행 방법을 잘 모를 경우 자동 수정 PR에서 패치를 제외하는 것이 좋습니다.
 
-개발자는 자동 수정 PR에 나타나는 merge advice를 고려해야 합니다:
+개발자는 자동 수정 PR에 나타나는 merge advice를 고려해야 합니다.
 
 ![](<../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (22).png>)
 
@@ -172,7 +172,7 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 {% endhint %}
 
-~~**\*\*수정필요**~~ SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk는 모든 Org 사용자의 자격 증명을 순환하여 자동 수정 PR을 엽니다. 필요한 경우 이 설정을 변경하고 사용자 자격 증명을 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [pening fix and upgrade pull requests from a fixed GitHub account](https://docs.snyk.io/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account)를 참조하십시오.
+당신의 SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk는 모든 Org 사용자의 인증 정보을 확인하여 자동 수정 PR을 엽니다. 필요한 경우 이 설정을 변경하고 사용자 인증 정보를 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [Opening fix and upgrade pull requests from a fixed GitHub account](../features/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)를 참조하십시오.
 
 ## 6단계: 디펜던시 업그레이드 PRs
 
@@ -189,7 +189,7 @@ Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
    * \~\~**(재확인 필요)**\~\~디펜던시가 이미 다른 open된 PR에 의해 변경(업그레이드 또는 패치 적용)된 경우 새 PR을 생성하지 않습니다.
    * Snyk은 각 디펜던시에 대해 별도의 PR을 생성합니다.
    * Snyk은 5개 이상의 Snyk PR이 열려 있는 저장소에 대해 업그레이드 PR을 생성하지 않습니다. 이 숫자는 설정에서 1\~10 사이로 설정할 수 있습니다. 이 제한은 업그레이드 PR을 생성할 때만 적용되지만 수정 PR 수는 계산되지 않습니다. 따라서 수정 PR은 이러한 방식으로 제한되지 않습니다.
-   * By default, Snyk recommends only patch and minor upgrades, but major version upgrade can be enabled in the settings where the feature is enabled.
+   * 기본적으로 Snyk은 패치 및 부분 업그레이드만 권장하지만 기능이 활성화된 설정에서 major 버전 업그레이드를 활성화할 수 있습니다.
    * 적용 가능한 최신 버전의 프로젝트에서 아직 발견되지 않은 취약점이 포함되어 있는 경우 Snyk은 업그레이드를 권장하지 않습니다.
    * Snyk은 21일 미만의 버전에는 업그레이드를 권장하지 않습니다. 이는 기능적인 버그를 도입했다가 나중에 게시되지 않은 버전이나 손상된 계정(계정 소유자가 악의적인 의도를 가진 사람에게 제어권을 빼앗긴 경우)에서 릴리즈되는 버전을 피하기 위함입니다.
 
@@ -199,7 +199,7 @@ npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server an
 
 **특정 프로젝트에 대해 자동 디펜던시 업그레이드 PR 사용**
 
-To set PR Settings on the project level, overriding the PR settings on the organization level
+프로젝트 수준에서 PR 설정을 설정하려면 조직 수준에서 PR 설정을 재지정하십시오.
 
 1. 자동 업그레이드 PR을 사용할 조직으로 이동합니다.
 2. **Projects**를 클릭하세요.

@@ -12,11 +12,11 @@
 
 ### SCM 통합 고려 사항
 
-* 보다 쉽게 설정 및 유지 관리 가
+* 보다 쉽게 설정 및 유지 관리 가능
 * webhooks 덕분에 fix PR을 차단할 수 있는 기능
 * SDLC의 초기부터 사용
 * 개발자에게 보다 친화적
-* Snyk의 fix PR(SCA 및 도커 파일)
+* Snyk의 fix PR(SCA 및 Docker 파일)
 * CI/CD 파이프라인에서 리소스를 사용하지 않음
 
 ### CI/CD 통합 고려 사항
