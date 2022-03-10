@@ -3,10 +3,10 @@
 Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다.
 
 * 수동으로 [Snyk CLI](running-tests.md), [Snyk app](running-tests.md), [Snyk API](running-tests.md)를 사용합니다.
-* Snyk은 반복적으로 리포지토리가 변경될 때 [테스트를 자동으로 실행](running-tests.md)할 수 있습니다.
+* Snyk은 반복적으로 저장소가 변경될 때 [테스트를 자동으로 실행](running-tests.md)할 수 있습니다.
 
 {% hint style="info" %}
-귀하의 계정에서 테스트가 제한될 수 있습니다.[What counts as a test?](https://support.snyk.io/hc/en-us/articles/360000925418-What-counts-as-a-test-)를 참조하세요.
+귀하의 계정에서 테스트가 제한될 수 있습니다. [무엇을 테스트로 간주합니까?](https://support.snyk.io/hc/en-us/articles/360000925418-What-counts-as-a-test-)를 참조하십시오.조하십시오.
 {% endhint %}
 
 ## 수동으로 테스트 실행

@@ -8,39 +8,39 @@
 * **Critical:** 공격자가 민감한 데이터에 액세스하고 애플리케이션에서 코드를 실행할 수 있습니다.
 
 {% hint style="info" %}
-심각도 수준은 라이선스 문제에도 적용됩니다. [Licenses overview](https://docs.snyk.io/snyk-open-source/licenses)를 참조하십시오.
+심각도 수준은 라이선스 문제에도 적용됩니다. [라이선스 개요](https://docs.snyk.io/snyk-open-source/licenses)를 참조하십시오.
 {% endhint %}
 
-### 심각도 수준 결
+### 심각도 수준 결정
 
-**Common Vulnerability Scoring System** (**CVSS**)은 취약점의 심각도 수준을 나타냅니다.
+**CVSS**(**Common Vulnerability Scoring System**)는 취약점의 심각도 수준을 나타냅니다.
 
 Snyk에서는 [CVSS framework version 3.1](https://www.first.org/cvss/v3-1/)을 사용하여 취약점의 특성과 심각도를 제공합니다.
 
-| **심각도 수** | **CVSS 점**  |
-| --------- | ----------- |
-| Low       | 0.0 - 3.9   |
-| Medium    | 4.0 - 6.9   |
-| High      | 7.0 - 8.9   |
-| Critical  | 9.0 - 10.10 |
+| **심각도 수준** | **CVSS 점수** |
+| ---------- | ----------- |
+| Low        | 0.0 - 3.9   |
+| Medium     | 4.0 - 6.9   |
+| High       | 7.0 - 8.9   |
+| Critical   | 9.0 - 10.10 |
 
-자세한 내용은 [Scoring security vulnerabilities 101: Introducing CVSS for CVEs](https://snyk.io/blog/scoring-security-vulnerabilities-101-introducing-cvss-for-cve/)를 참조하십시오.
+자세한 내용은 [보안 취약점 점수 101: CVE용 CVSS 도입](https://snyk.io/blog/scoring-security-vulnerabilities-101-introducing-cvss-for-cve/)을 참조하십시오.
 
-### 심각도 및 우선 순위 채점
+### 심각도 및 우선순위 채점
 
-심각도 수준 [Snyk Exploit Maturity](https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly/) [Reachable Vulnerabilities](https://snyk.io/blog/optimizing-prioritization-with-deep-application-level-context/) 정보와 함께 각 취약점에 대한 Snyk의 우선 순위 점수에 영향을 미치는 요소에 포함됩니다. 이 점수는 개발자가 먼저 해결해야 할 취약점을 결정하는데 도움이 됩니다.
+심각도 수준은 [Snyk Exploit Maturity](https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly/) 및 [Reachable Vulnerabilities](https://snyk.io/blog/optimizing-prioritization-with-deep-application-level-context/) 정보와 함께 각 취약점에 대한 Snyk의 우선순위 점수에 적용되는 한 요인입니다. 이 점수는 개발자가 먼저 해결해야 할 취약점을 결정하는데 도움이 됩니다.
 
-Snyk의 우선 순위 점수에서 심각도 수준이 사용되는 방식에 대한 자세한 내용은 [Snyk 우선순위 점수](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하십시오.
+Snyk의 우선순위 점수에서 심각도 수준이 사용되는 방식에 대한 자세한 내용은 [Snyk 우선순위 점수](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하십시오.
 
 ## Snyk에서 심각도 수준 보기
 
 심각도 수준을 항상 표시하기 위해 Snyk 전체에 심각도 수준이 표시됩니다.
 
-대시보드:
+초기 대시보드:
 
 ![](<../../.gitbook/assets/image (46).png>)
 
-프로젝:
+프로젝트:
 
 ![](<../../.gitbook/assets/image (43).png>)
 
@@ -48,4 +48,4 @@ Snyk의 우선 순위 점수에서 심각도 수준이 사용되는 방식에 �
 
 ![](<../../.gitbook/assets/image (39).png>)
 
-Snyk 사용에 대한 자세한 내용은 [Getting started](https://docs.snyk.io/getting-started)를 참조하십시오.
+Snyk 사용에 대한 자세한 내용은 [시작하기](https://docs.snyk.io/getting-started)를 참조하십시오.

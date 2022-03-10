@@ -1,6 +1,6 @@
 # Snyk 소개
 
-Snyk은 [자체코드](../products/snyk-code/), [오픈소스 디펜던시](../products/snyk-open-source/), [컨테이너 이미지](../products/snyk-container/), [IaC(Infrastructure as Code) 구성](../products/snyk-infrastructure-as-code/)의 취약점을 테스트하고 ~~_컨텍스트(?)_~~, 우선 순위 지정 및 수정을 제공합니다.
+Snyk은 [자체코드](../products/snyk-code/), [오픈소스 디펜던시](../products/snyk-open-source/), [컨테이너 이미지](../products/snyk-container/), [IaC(Infrastructure as Code) 구성](../products/snyk-infrastructure-as-code/)의 취약점을 테스트하고 ~~_컨텍스트(?)_~~, 우선순위 지정 및 수정을 제공합니다.
 
 ### Snyk 제품
 
