@@ -9,7 +9,7 @@ Snyk은 [자체코드](../products/snyk-code/), [오픈소스 디펜던시](../p
 * [Snyk Container](https://docs.snyk.io/snyk-container): 컨테이너 이미지 및 Kubernetes 애플리케이션의 취약점을 찾아 수정합니다.
 * [Snyk IaC(Infrastructure as Code)](https://docs.snyk.io/snyk-infrastructure-as-code): Terraform 및 Kubernetes 코드에서 안전하지 않은 구성을 찾아 수정합니다.
 
-### Snyk 언어 지원
+### 지원되는 언어
 
 Snyk은 Java, JavaScript, .NET, Python, Golang, Swift, Objective-C, Ruby, Scala, PHP and Elixir 등 다양한 언어를 지원한다.
 

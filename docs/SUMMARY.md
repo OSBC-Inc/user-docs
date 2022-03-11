@@ -12,7 +12,7 @@
   * [용어 사전](introducing-snyk/glossary.md)
 * [시작하기](getting-started/README.md)
   * [Snyk 시작하기](getting-started/getting-started-snyk-products/README.md)
-    * [Snyk 제품 및 도구 선택](getting-started/getting-started-snyk-products/select-snyk-product-tool.md)
+    * [Snyk 제품 시작하기](getting-started/getting-started-snyk-products/select-snyk-product-tool.md)
     * [Snyk Open Source 사용하기](getting-started/getting-started-snyk-products/getting-started-snyk-open-source.md)
     * [Snyk Code 사용하기](getting-started/getting-started-snyk-products/getting-started-with-snyk-code.md)
     * [Snyk Container 시작하기](getting-started/getting-started-snyk-products/getting-started-snyk-container.md)
