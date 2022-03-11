@@ -320,59 +320,61 @@ snyk test -d
 DEBUG=* snyk test
 ```
 
-#### Step 3: Use the CLI instead of the plugin
+#### 3단계: 플러그인 대신 CLI 사용
 
-Try to replace the native plugin into the CLI by installing snyk using npm or binary download.
+npm 또는 바이너리 다운로드를 사용하여 snyk을 설치하여 CLI에 기본 플러그인을 교체하십시오.
 
-For npm use the following commands:
+npm의 경우 다음 명령어를 사용합니다.
 
 * npm install -g snyk
 * Snyk auth
 * Snyk test
 
-For binary download you we need to download snyk from the following links:
+바이너리를 다운로드하려면 다음 링크에서 snyk을 다운로드해야 합니다.
 
 * [Download the Snyk CLI](https://github.com/snyk/snyk/tags)
 
-#### Common flags in a CI/CD integration
+#### CI/CD 통합의 공통 플래그
 
-Among the most common flags used in a CI/CD integration are the following:
+CI/CD 통합에 사용되는 가장 일반적인 플래그는 다음과 같습니다.
 
-**-- all-projects**: Auto-detect all projects in working directory
+**-- all-projects**: 작업 디렉토리에 있는 모든 프로젝트 자동 검색
 
-**-p**: Prune dependency trees, removing duplicate sub-dependencies. Will still find all vulnerabilities, but potentially not all of the vulnerable paths.
+**-p**: 디펜던시 트리를 제거하고 중복된 하위 디펜던시를 제거합니다. 모든 취약점을 찾지만 잠재적으로 모든 취약점 경로는 찾지 못합니다.
 
-**--org=ORG\_NAME**: Specify the ORG\_NAME to run Snyk commands tied to a specific organization. This will influence where will new projects be created after running monitor command, some features availability and private tests limits. If you have multiple organizations, you can set a default from the CLI using:
+**--org=ORG\_NAME**: 특정 조직에 연결된 Snyk 명령을 실행할 ORG\_NAME을 지정합니다. 이는 monitor 명령을 실행한 후 새 프로젝트를 생성할 위치에 영향을 미치며, 일부 기능의 가용성 및 비공개 테스트 제한에 영향을 미칩니다. 조직이 여러 개인 경우 다음 명령어를 사용하여 CLI에서 기본값을 설정할 수 있습니다.
 
 ```
 $ snyk config set org=ORG_NAME
 ```
 
-Setting a default will ensure all newly monitored projects will be created under your default organization. If you need to override the default, you can use the --org=ORG\_NAME argument.
+기본값을 설정하면 새로 모니터링되는 모든 프로젝트가 기본 조직 아래에 만들어집니다. 기본값을 재정의해야 하는 경우 --org=ORG\_NAME 옵션을 사용할 수 있습니다.
 
-Default: uses ORG\_NAME that sets as default in your Account settings [https://app.snyk.io/account](https://app.snyk.io/account)
+Default: [https://app.snyk.io/account](https://app.snyk.io/account)에서 기본값으로 설정된 ORG\_NAME을 사용합니다.
 
-**Useful resources**
+**유용한 리소스**
 
-The following repo shares some examples of binary and NPM integrations for various CI/CD tools:[GitHub CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples)
+다음 보고서는 다양한 CI/CD 도구에 대한 바이너리 및 NPM 통합의 몇 가지 예를 공유합니다.
 
-### Configure your continuous integration
+[GitHub CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples)
 
-To continuously avoid known vulnerabilities in your dependencies, integrate Snyk into your continuous integration (a.k.a. build) system. In addition to the documentation here, you're also invited to check out our integration configuration examples in our GitHub repository.
+### 지속적인 통합 구성
 
-### Set up automatic monitoring
+디펜던시에서 알려진 취약점을 지속적으로 방지하려면 Snyk을 지속적인 통합(build) 시스템에 통합하십시오. 해당 문서 외에도 GitHub 저장소에 있는 통합 구성 예제를 확인하시기 바랍니다.
 
-If you monitor a project with Snyk, you’ll get notified if your project’s dependencies are affected by newly disclosed vulnerabilities. To make sure the list of dependencies we have for your project is up to date, refresh it continuously by running Snyk monitor in your deployment process. Configure your environment to include the SNYK\_TOKEN environment variable. You can find your API token on the dashboard after logging in.
+### 자동 감시 설정
 
-### API token configuration
+Snyk으로 프로젝트를 모니터링하는 경우 새로 공개된 취약점으로 인해 프로젝트의 디펜던시가 영향을 받을 경우 알림이 표시됩니다. 프로젝트에 대한 디펜던시 목록을 최신 상태로 유지하려면 배포 프로세스에서 Snyk monitor를 실행하여 스캔을 진행하고, SNYK\_TOKEN 환경 변수를 포함하도록 환경을 구성합니다. 로그인 후 대시보드에서 API 토큰을 찾을 수 있습니다.
 
-Make sure you don’t check your API token into source control, to avoid exposing it to others. Instead, use your CI environment variables to configure it.
+### API 토큰 구성
 
-See guidance for how to do this on:
+API 토큰이 다른 사람에게 노출되지 않도록 하려면 해당 토큰을 소스 제어로 체크인하지 마십시오. 대신 CI 환경 변수를 사용하여 구성하십시오.
+
+이 작업을 수행하는 방법은 지침을 참조하십시오.
 
 * [Travis](https://docs.travis-ci.com/user/environment-variables/)
 * [Circle](https://circleci.com/docs/environment-variables/)
 * [Codeship](https://codeship.com/documentation/continuous-integration/set-environment-variables/)
 
-You can find others through an easy [Google search](https://www.google.co.uk/search?q=setting+up+env+variables+in+CI).\
-Learn more about [CI/CD](https://snyk.io/learn/what-is-ci-cd-pipeline-and-tools-explained/).
+[Google search](https://www.google.co.uk/search?q=setting+up+env+variables+in+CI)를 통해 다른 것들을 찾을 수 있습니다.\
+[CI/CD](https://snyk.io/learn/what-is-ci-cd-pipeline-and-tools-explained/)에 대해 자세히 알아봅니다.
