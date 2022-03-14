@@ -1,11 +1,11 @@
 # 취약점 수정
 
-Snyk은 취약점에 대한 실행 가능한 수정 가이드를 제공합니다. 자세한 내용은 [remediate-your-vulnerabilities.md](../../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md "mention")를 참조하세요.&#x20;
+Snyk은 취약점에 대한 실행 가능한 수정 가이드를 제공합니다. 자세한 내용은 [Fix your vulnerabilities](../../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md)를 참조하세요.
 
 Snyk은 다음 요청을 사용하여 취약점을 수정하는 워크플로우를 지원합니다.
 
-* [Automatic pull / merge requests (PRs / MRs)](fixing-vulnerabilities.md#automatic-pull-merge-requests).
-* [Manual pull / merge requests](fixing-vulnerabilities.md#manual-pull-merge-requests-for-a-project-code).
+* [Automatic pull / merge requests (PRs / MRs)](fixing-vulnerabilities.md#pull-merge-requests).
+* [Manual pull / merge requests](fixing-vulnerabilities.md#pull-merge-requests-1).
 
 {% content-ref url="../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md" %}
 [what-languages-do-we-support-fix-pull-requests-or-merge-requests.md](../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md)
@@ -15,9 +15,9 @@ Snyk은 다음 요청을 사용하여 취약점을 수정하는 워크플로우�
 
 SCM(소스 코드 관리자)을 통해 가져온 프로젝트의 경우 Snyk은 다음 유형의 자동화된 pull / merge requests를 제공합니다.
 
-* [Fix pull requests for new vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fix-pull-requests-for-new-vulnerabilities)
-* [Fix pull requests to clear the backlog of vulnerabilities in priority order](fix-pull-requests-for-known-vulnerabilities-backlog.md)
-* [Dependency upgrade pull requests](https://docs.snyk.io/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs)
+* [새로운 취약점에 대한 pull requests 수정](fix-pull-requests-for-new-vulnerabilities.md)
+* [우선 순위 순서로 취약점의 백로그를 지우도록 pull requests 수정](fix-pull-requests-for-known-vulnerabilities-backlog.md)
+* [디펜던시 업그레이드 pull requests](../dependency-management/upgrading-dependencies-with-automatic-prs.md)
 
 ### 프로젝트 코드에 대한 수동 pull / merge requests
 
