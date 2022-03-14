@@ -1,9 +1,9 @@
-# Snyk CI/CD 통합: 모범 사례
+# Snyk CI/CD 통합
 
 ### 구현 옵션
 
 {% hint style="info" %}
-이 모든 방법은 동일한 Snyk 엔진에 의존하기 때문에 동일한 결과를 제공합니다. 따라서 어떤 배포 방법을 선택하든 동일한 인수나 옵션이 참이어야 합니다.
+이 모든 방법은 동일한 Snyk 엔진에 의존하기 때문에 동일한 결과를 제공합니다. 따라서 선택한 배포 방법에 관계없이 동일한 인수 또는 옵션이 적용됩니다.
 {% endhint %}
 
 #### CI/CD 배치 방법
@@ -28,23 +28,25 @@ Snyk은 Linux, Windows 및 기타 버전을 가지고 있습니다.
 
 **Snyk 컨테이너 배치**
 
-Dockerhub의 이미지 중 하나를 사용하여 파이프라인에 Snyk을 배치할 수도 있습니다: [https://hub.docker.com/r/snyk/snyk](https://hub.docker.com/r/snyk/snyk)
+Dockerhub의 이미지 중 하나를 사용하여 파이프라인에 Snyk을 배치할 수 있습니다.
+
+[https://hub.docker.com/r/snyk/snyk](https://hub.docker.com/r/snyk/snyk)
 
 #### 예
 
-다음 저장소는 다양한 CI/CD 도구에 대한 바이너리 및 NPM 통합의 몇 가지 예를 공유합니다:
+다음 저장소는 다양한 CI/CD 도구에 대한 바이너리 및 NPM 통합의 몇 가지 예를 공유합니다.
 
 [CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples)
 
 ### 일반적인 선택 방식
 
-개발팀은 일반적으로 다음 단계를 따라 Snyk을 채택합니다:
+개발팀은 일반적으로 다음 단계를 따라 Snyk을 채택합니다.
 
 1. [취약점 노출](snyk-cicd-integration-good-practices.md) (snyk monitor)
 2. [Snyk을 gatekeeper로 사용](snyk-cicd-integration-good-practices.md) (snyk test)
 3. [지속적인 모니터링](snyk-cicd-integration-good-practices.md) (snyk test + Snyk monitor)
 
-### **1**단계\*\*:\*\* 취약점 노출 **(Snyk monitor)**
+### **1**단계: 취약점 노출 **(Snyk monitor)**
 
 이는 일반적인 초기 접근 방식이며, 개발 프로세스 중 Snyk의 결과를 통해 팀의 취약점에 대한 가시성이 향상됩니다.
 
@@ -54,15 +56,15 @@ Dockerhub의 이미지 중 하나를 사용하여 파이프라인에 Snyk을 배
 
 **snyk monitor**를 사용하여 결과를 도출하면 프로세스를 중단하지 않고 정보를 제공할 수 있습니다.
 
-### **2**단계\*\*:\*\* Snyk을 gatekeeper로 사용 **(snyk test)**
+### **2**단계: Snyk을 gatekeeper로 사용 **(snyk test)**
 
 이 접근 방식은 새로운 취약점(“stopping the bleeding”이라고도 함)의 유입을 방지합니다.
 
 팀에서 애플리케이션의 취약점을 이해하고 개발 초기에 수정하는 프로세스를 개발한 후에는 취약점에 대해 빌드에 실패하도록 Snyk을 구성하여 애플리케이션 취약점이 유입되지 않도록 할 수 있습니다.
 
-빌드에 **snyk test**를 추가하거나 fail 기능을 활성화하여 Snyk이 빌드에 실패하도록 하여 결과를 콘솔에 출력합니다. Devs 또는 DevOps 팀은 결과를 통해 빌드를 중지할지 계속할지를 결정할 수 있습니다.
+빌드에 **snyk test**를 추가하거나 fail 기능을 활성화하여 Snyk이 빌드에 실패하도록 하여 결과를 콘솔에 출력합니다. Devs 또는 DevOps 팀은 결과를 통해 빌드의 중단 및 진행 여부를 결정할 수 있습니다.
 
-### **3**단계\*\*:\*\* 지속적인 모니터링 **(snyk test + Snyk monitor)**
+### **3**단계: 지속적인 모니터링 **(snyk test + Snyk monitor)**
 
 취약점이 감지될 때 빌드에 실패하도록 Snyk을 구성한 후 지속적인 모니터링을 위해 프로젝트의 성공적인 빌드에 대한 스냅샷을 Snyk으로 보내도록 Snyk을 구성할 수 있습니다.
 
@@ -78,16 +80,16 @@ Dockerhub의 이미지 중 하나를 사용하여 파이프라인에 Snyk을 배
 
 CI/CD 플랫폼에서 Snyk을 실행할 때 일반적으로 테스트 결과 검토 및 지속적인 모니터링을 위해 Snyk에 업로드합니다.
 
-**--org** CLI 인수를 사용하여 URL slug(URL의 마지막 백슬래시 뒤의 URL 부분) 또는 조직 ID를 사용하여 Snyk CLI에서 대상 조직을 정의할 수 있습니다:
+**--org** CLI 인수를 사용하여 URL slug(URL의 마지막 백슬래시 뒤의 URL 부분) 또는 조직 ID를 사용하여 Snyk CLI에서 대상 조직을 정의할 수 있습니다.
 
-* Snyk UI에서 대상 조직을 볼 때 브라우저의 주소 표시줄에 표시되는 URL 슬러그를 사용하여 대상 조직을 정의할 수 있습니다:
+* Snyk UI에서 대상 조직을 볼 때 브라우저의 주소 표시줄에 표시되는 URL 슬러그를 사용하여 대상 조직을 정의할 수 있습니다.
 * 또는 각 조직의 설정 페이지에서 **org id**를 사용하여 대상 조직을 정의할 수 있습니다.
 
 ![](../.gitbook/assets/image1.png)
 
 **Default organization**
 
-대상 조직을 정의하지 않으면 Snyk은 사용하는 인증 토큰에 기본 조직을 사용합니다:
+대상 조직을 정의하지 않으면 Snyk은 사용하는 인증 토큰에 기본 조직을 사용합니다.
 
 * 사용자 계정의 경우 사용자가 선호하는 조직입니다.(사용자 설정에서 구성 가능)
 * 조직 서비스 계정의 경우 계정이 생성된 조직입니다.
@@ -98,7 +100,7 @@ snyk test를 실행하려면 원하는 대상 조직에 액세스할 수 있는 
 
 ## 설정
 
-Snyk은 빌드 파이프라인에 테스트를 추가하는 다음과 같은 접근 방식을 지원합니다:
+Snyk은 빌드 파이프라인에 테스트를 추가하는 다음과 같은 접근 방식을 지원합니다.
 
 * **Snyk integration plugins**: Snyk은 [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) 및 [Azure Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)를 포함한 여러 CI 서버를 위해 사전 구축된 플러그인을 제공합니다.[ ](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)자세한 내용은 [Continuous Integration](https://docs.snyk.io/integrations/ci-cd-integrations)를 참조하십시오.
 * **Snyk CLI:** 워크플로우가 복잡하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우에는 CI/CD 설정 중에 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Setting up using Snyk CLI](snyk-cicd-integration-good-practices.md) 를 참조하십시오.
@@ -122,14 +124,14 @@ Snyk CLI는 다음과 같이 구성할 수 있습니다.
 
 **CLI Examples**
 
-빌드 파이프라인에서 Snyk CLI를 실행하는 예:
+빌드 파이프라인에서 Snyk CLI를 실행하는 예는 다음과 같습니다.
 
-1.  snyk monitor를 통해 취약점을 표시하고 지속적인 모니터링을 위해 Snyk UI에 게시합니다:
+1.  snyk monitor를 통해 취약점을 표시하고 지속적인 모니터링을 위해 Snyk UI에 게시합니다.
 
     ```
     snyk monitor --all-projects --org=snyk-apps
     ```
-2.  Snyk test to fail the build on high severity issues:
+2.  심각도가 높은 문제에서 빌드를 실패하는 Snyk 테스트는 다음과 같이 실행합니다.
 
     ```
     snyk test --all-projects --org=snyk-apps --severity-threshold=high
@@ -158,7 +160,7 @@ Snyk을 사용하면 JIRA에서 새 작업 항목을 자동으로 생성할 수 
 
 ## Issues 무시
 
-기본적으로 issues를 무시하지 않거나 Snyk-delta를 사용하지 않는 경우 문제가 발견될 때 파이프라인의 “snyk test”가 빌드에 실패합니다. 이러한 문제를 해결하지 않고 빌드를 계속하려면 다음을 수행할 수 있습니다:
+기본적으로 issues를 무시하지 않거나 Snyk-delta를 사용하지 않는 경우 문제가 발견될 때 파이프라인의 “snyk test”가 빌드에 실패합니다. 이러한 문제를 해결하지 않고 빌드를 계속하려면 다음을 수행할 수 있습니다.
 
 * [Ignore issues using a Snyk policy file](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli)
 * [Ignore issues from the Snyk UI](https://support.snyk.io/hc/en-us/articles/360000923498-How-can-I-ignore-a-vulnerability-)
@@ -178,16 +180,16 @@ Snyk을 사용하면 JIRA에서 새 작업 항목을 자동으로 생성할 수 
 
 *   Snyk은 Python을 사용하여 사용자의 디펜던시를 스캔하고 찾습니다. Snyk은 스캔을 시작하기 위해서는 Python 버전이 필요하며 기본값은 “python”입니다. 여러 Python 버전을 사용하는 경우 이 파라미터를 사용하여 실행을 위한 올바른 Python 명령을 지정합니다.
 
-    test 또는 monitor cmd와 함께 다음 flag를 사용하여 Python 버전을 지정합니다. **--command=** 예:
+    test 또는 monitor cmd와 함께 다음 flag를 사용하여 Python 버전을 지정합니다. **--command=** 를 사용하는 예제는 다음과 같습니다.
 
     ```
     snyk test --command=python3
     ```
-* If you scan a Pip project and use the **--file=** because your manifest file isn’t the standard of **requirement.txt**, then the next flag is mandatory to specify Pip as the package manager **--package-manager=pip**
+* 매니페스트 파일이 **requirement.txt**의 표준이 아니므로 Pip 프로젝트를 검색하고 **--file=**을 사용하는 경우 **--package-manager=pip** 플래그를 사용하여 Pip를 패키지 매니저로 지정해야 합니다.
 
 ### .Net
 
-.sln 파일을 사용하는 경우 파일의 경로를 지정할 수 있습니다. 그러면 snyk은 저장소의 일부인 모든 하위 프로젝트를 검색합니다. 예:
+.sln 파일을 사용하는 경우 파일의 경로를 지정할 수 있으며, Snyk은 repo의 일부인 모든 하위 프로젝트를 스캔합니다. 예제는 다음과 같습니다.
 
 ```
 snyk test --file=sln/.sln
@@ -202,7 +204,7 @@ Yarn workspace의 경우 **--yarn-workspaces** flag를 사용하여 패키지를
 Yarn workspaces는 현재 **snyk test** 및 **snyk monitor** 명령만 지원합니다.
 {% endhint %}
 
-Example:
+예제는 다음과 같습니다.
 
 ```
 snyk test --yarn-workspaces --detection-depth=6
@@ -218,9 +220,9 @@ snyk test --yarn-workspaces --policy-path=src/.snyk
 
 ### Monorepo
 
-일부 고객은 단일 저장소에 여러 언어, 패키지 관리자 및 프로젝트가 포함된 복잡한 프로젝트를 가지고 있습니다. 이를 용이하게 하기 위해 다음과 같은 다양한 방법을 사용할 수 있습니다:
+일부 고객은 단일 저장소에 여러 언어, 패키지 관리자 및 프로젝트가 포함된 복잡한 프로젝트를 가지고 있습니다. 이를 용이하게 하기 위해 다음과 같은 다양한 방법을 사용할 수 있습니다.
 
-*   각 프로젝트/언어를 작성할 때 snyk test를 실행하고 특정 프로젝트 파일을 대상으로 지정하는 지시문을 추가합니다. 예:
+*   각 프로젝트/언어를 작성할 때 snyk test를 실행하고 특정 프로젝트 파일을 대상으로 지정하는 지시문을 추가합니다. 예제는 다음과 같습니다.
 
     ```
     snyk test --file=package.json
@@ -229,9 +231,9 @@ snyk test --yarn-workspaces --policy-path=src/.snyk
     각 프로젝트의 디펜던시를 설치한 후 특정 아티팩트(예: **pom.xml**)를 가리키는 비슷한 호출을 수행합니다. 이 방법은 빠르고 효율적이지만 특히 프로젝트가 익숙하지 않은 경우 확장하기 어려울 수 있습니다.
 * **--all-projects** 및 **--detection-depth** 인수를 사용합니다. 그러면 Snyk CLI 또는 CI/CD 플러그인은 폴더 구조에서 지원되는 파일 유형과 일치하는 매니페스트에 대해 **--detection-depth**까지 검색합니다. 각 프로젝트는 검사되고 자체 결과가 있습니다. 마찬가지로 **snyk-monitor**를 사용하는 경우 각 프로젝트에 대해 별도의 결과가 작성됩니다. 이것은 특히 node, .net, python 등에 걸친 프로젝트가 있는 경우 스캔을 자동화하는 좋은 방법입니다.
 
-**Specific to Gradle:**
+**Gradle에만 해당하는 경우**
 
-* 대부분의 Gradle 프로젝트에서 **--all-projects**를 사용하면 다음과 같은 형태로 백그라운드에서 Gradle 관련 옵션을 호출할 수 있습니다:
+* 대부분의 Gradle 프로젝트에서 **--all-projects**를 사용하면 다음과 같은 형태로 백그라운드에서 Gradle 관련 옵션을 호출할 수 있습니다.
 
 ```
   snyk test --file=build.gradle --all-sub-projects
