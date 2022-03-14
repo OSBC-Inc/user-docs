@@ -23,7 +23,7 @@ LCI, API 또는 Kubernetes와 같은 프로젝트 에코 시스템.
 
 Github 리포지토리의 pom 파일과 같이 대성에서 스캔할 특정 항목입니다.
 
-[Snyk Code](https://docs.snyk.io/snyk-code) 스캔은 Targetfile을 사용하지 않습니다.
+[Snyk Code](../../products/snyk-code/) 스캔은 Targetfile을 사용하지 않습니다.
 
 ## Type
 

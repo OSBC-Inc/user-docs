@@ -6,7 +6,7 @@
 * **Fixes**: 취약점에 대해서 수정을 진행합니다.
 * **Dependencies**: 직접 및 전이(충첩) 종속성의 총 수.
 
-### Issues 확인 &#x20;
+### Issues 확인
 
 프로젝트 요약 세부 정보 아래 **Issues** 탭에서 취약점 및 라이선스 문제를 확인할 수 있습니다.
 
@@ -26,12 +26,12 @@ Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대
 
 ![](../../.gitbook/assets/image26.png)
 
-개요는 [Fixing vulnerabilities](https://docs.snyk.io/snyk-open-source/open-source-basics/fixing-vulnerabilities)를 참조하세요.\
-자세한 내용은 [Fixing and prioritizing issues](https://docs.snyk.io/fixing-and-prioritizing-issues)를 참조하세요.
+개요는 [취약점 수정](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하세요.\
+자세한 내용은 [Fixing and prioritizing issues](../../features/fixing-and-prioritizing-issues/)를 참조하세요.
 
 #### Issues 세부정보 확인
 
-각 Issues에 대해 우선 순위 점수를 포함한 취약점의 세부 정보를 표시합니다([Prioritizing Snyk issues](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score) 참조).
+각 Issues에 대해 우선 순위 점수를 포함한 취약점의 세부 정보를 표시합니다([Snyk 우선순위 점수](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md) 참조).
 
 ![](../../.gitbook/assets/image12.png)
 
@@ -45,7 +45,7 @@ Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대
 
 ![](<../../.gitbook/assets/Screenshot 2021-10-19 at 11.57.07.png>)
 
-자세한 내용은 [Fixing vulnerabilities](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)를 참조하세요.
+자세한 내용은 [취약점 수정](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하세요.
 
 ### Dependencies 확인
 

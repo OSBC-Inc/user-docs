@@ -10,12 +10,12 @@ Snyk은 프로젝트의 파일에 대한 애플리케이션 취약점과 라이�
 
 ![](../../.gitbook/assets/project-page.png)
 
-* **Header**: 프로젝트 요약 정보를 확인할 수 있습니다. [View project summary information](view-project-information.md)을 참조하세요.
-* **Issue cards**: 발견된 문제의 요약된 정보를 표시합니다. [Issue card information](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/issue-card-information)을 참조하세요.
+* **Header**: 프로젝트 요약 정보를 확인할 수 있습니다. [프로젝트 정보 확인](view-project-information.md)을 참조하세요.
+* **Issue cards**: 발견된 문제의 요약된 정보를 표시합니다. [Issue card](issue-card-information.md)를 참조하세요.
 * **Views**:
-  * **Overview**: [project issues, fixes, and dependencies](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies) 표시합니다.
-  * **History**: 최근 4개의 테스트에 대한 기록 스냅샷을 제공합니다. [View project history](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-history)를 참조하세요.
-  * **Settings**: [project settings](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-settings) 표시합니다.
+  * **Overview**: [project issues, fixes, and dependencies](view-project-issues-remediations-and-dependencies.md)를 표시합니다.
+  * **History**: 최근 4개의 테스트에 대한 기록 스냅샷을 제공합니다. [프로젝트 기록 확인](view-project-history.md)을 참조하세요.
+  * **Settings**: [프로젝트 설정](view-project-settings.md)을 표시합니다.
 
 ### 프로젝트 요약 정보 확인
 
