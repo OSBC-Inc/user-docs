@@ -1,6 +1,6 @@
 # 시작하기
 
-다음 정보를 사용하여 Snyk을 시작하세요.
+다음 정보를 사용하여 Snyk을 시작하십시오.
 
 {% content-ref url="getting-started-snyk-products/" %}
 [getting-started-snyk-products](getting-started-snyk-products/)

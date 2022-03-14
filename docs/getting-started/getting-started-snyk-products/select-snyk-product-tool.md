@@ -15,7 +15,7 @@ Snyk 계정이 있으면 다음 제품을 사용하여 취약점을 찾고 수�
 
 Snyk에는 Snyk 제품과 함께 사용할 수 있는 몇가지 핵심 도구가 있습니다.
 
-* [**snyk.io**](https://apps.snyk.io): 웹 기반 UI.
-* [**Snyk CLI**](https://docs.snyk.io/snyk-cli): 명령줄 인터페이스.
+* [**snyk.io**](https://apps.snyk.io): Snyk의 웹 기반 UI입니다.
+* [**Snyk CLI**](https://docs.snyk.io/snyk-cli): Snyk CLI입니다.
 * ****[**Snyk IDE**](../../features/integrations/ide-tools/): IDE 통합을 사용하여 개발 환경에 Snyk을 포함합니다.
 * [**Snyk API**](https://support.snyk.io/hc/en-us/categories/360000665657-Snyk-API): 프로그래밍 방식으로 Snyk과 통합할 수 있습니다.
