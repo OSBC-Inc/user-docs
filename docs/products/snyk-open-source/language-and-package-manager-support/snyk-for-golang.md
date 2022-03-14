@@ -52,13 +52,13 @@ Go 버전은 **Go list -json -deps** 명령에 대해 다른 결과를 생성합
 
 디펜던시 트리를 구축하기 위해 Snyk은 `Gopkg.lock` 파일을 분석합니다.
 
-Snyk CLI를 통해 dep 프로젝트를 테스트하려면 디펜던시를 설치해야 하는 경우 `dep ensure`명령어를 실행하세요.
+Snyk CLI를 통해 dep 프로젝트를 테스트하려면 디펜던시를 설치해야 하는 경우 `dep ensure`명령어를 실행하십시오.
 
 **Govendor**
 
 디펜던시 트리를 구축하기 위해 Snyk은 `vendor/vendor.json` 파일을 분석합니다.
 
-Snyk CLI를 통해 Govendor 프로젝트를 테스트할 때 디펜던시를 설치해야 하는 경우 `govendor sync`명령어를 실행하세요.
+Snyk CLI를 통해 Govendor 프로젝트를 테스트할 때 디펜던시를 설치해야 하는 경우 `govendor sync`명령어를 실행하십시오.
 
 ## Go 프로젝트를 위한 Git Services
 

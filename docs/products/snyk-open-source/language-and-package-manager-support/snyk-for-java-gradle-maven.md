@@ -2,14 +2,14 @@
 
 Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
-**지원되는 버전**: 공식적으로 지원되는 Java 버전, 운영 체제 및 Node.js 버전은 [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) 와 [Maven support](https://github.com/snyk/snyk-mvn-plugin#support)를 참조하세요.
+**지원되는 버전**: 공식적으로 지원되는 Java 버전, 운영 체제 및 Node.js 버전은 [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) 와 [Maven support](https://github.com/snyk/snyk-mvn-plugin#support)를 참조하십시오.
 
 ## 특징
 
 다음 표는 언어 별로 제공되는 일반적인 기능에 대한 개요를 제공합니다. 이러한 기능 외에도 관련된 추가 기능을 제공합니다.
 
 {% hint style="info" %}
-요금제에 따라서 일부 기능을 사용하지 못할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하세요.
+요금제에 따라서 일부 기능을 사용하지 못할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하십시오.
 {% endhint %}
 
 | Package managers / Features       | CLI support | Git support | License scanning | Fixing                                                                                                                          | Runtime monitoring |
@@ -23,7 +23,7 @@ Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언�
 
 다음과 같이 Java 프로젝트에 도구를 사용하는법을 안내합니다.
 
-* Gradle이 포함된 Snyk CLI: 디펜던시 그래프를 빌드하기 위해 Snyk은 Gradle과 통합하고 빌드에서 반환된 디펜던시를 검사합니다. 다음 매니페스트 파일이 지원됩니다.                            `build.gradle, build.gradle.kts`
+* Gradle이 포함된 Snyk CLI: 디펜던시 그래프를 빌드하기 위해 Snyk은 Gradle과 통합하고 빌드에서 반환된 디펜던시를 검사합니다. 다음 매니페스트 파일이 지원됩니다. `build.gradle, build.gradle.kts`
 * Maven이 포함된 Snyk CLI: 디펜던시 트리를 빌드하기 위해 Snyk은 `pom.xml`파일을 분석합니다.
 
 ## CLI parameters for Java
@@ -32,7 +32,7 @@ Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언�
 
 ### 전제 조건
 
-* Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하세요.
+* Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하십시오.
 * 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
 * [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
@@ -86,7 +86,7 @@ snyk test -- -Dpkg_version=1.4
 
 Gradle 빌드는 여러 하위 프로젝트로 구성될 수 있으며, 각 하위 프로젝트에는 자체 build.gradle 파일이 있는 반면 root 프로젝트에는 setting.gradle 파일도 포함되어 있습니다. 하위 프로젝트는 root 프로젝트에 따라 다르지만 다른 방식으로 구성할 수 있습니다.
 
-기본적으로 Snyk CLI는 현재 프로젝트(현재 폴더의 root에 있는 프로젝트)또는                                         `--file=path/to/build.gradle`로 지정된 프로젝트만 검색합니다.
+기본적으로 Snyk CLI는 현재 프로젝트(현재 폴더의 root에 있는 프로젝트)또는 `--file=path/to/build.gradle`로 지정된 프로젝트만 검색합니다.
 
 *   모든 프로젝트를 한번에 스캔하려면(권장) `--all-sub-projects` 플래그를 사용하세요.
 
@@ -158,7 +158,7 @@ Snyk은 기본적으로 사용 가능한 모든 구성을 병합하기 때문에
 
 ### 데몬
 
-기본적으로 Snyk은 `gradle build --no-daemon`을 실행하여 background에서 `snyk test`와 `snyk monitor`를 진행합니다. 문제가 발생하면 다음과 같이 진행하세요.
+기본적으로 Snyk은 `gradle build --no-daemon`을 실행하여 background에서 `snyk test`와 `snyk monitor`를 진행합니다. 문제가 발생하면 다음과 같이 진행하십시오.
 
 1. Gradle 데몬을 시작합니다.
 2. `snyk test` 또는 `snyk monitor`에 `--daemon`을 추가하세요.
@@ -199,13 +199,13 @@ Snyk으로 Gradle 프로젝트를 테스트하는데 문제가 발생하는 경�
 
 lockfile이 있는 경우 Snyk은 이를 사용하여 프로젝트에 사용된 디펜던시의 최종 버전을 정확하게 해결합니다.
 
-Gradle lockfile은 다른 이점 중에서도 재현 가능한 빌드를 가능하게 하는 옵트인 기능읍니다. 자세한내용은 [Gradle 디펜던시 잠금](https://docs.gradle.org/current/userguide/dependency\_locking.html)을 참조하세요.
+Gradle lockfile은 다른 이점 중에서도 재현 가능한 빌드를 가능하게 하는 옵트인 기능입니다. 자세한내용은 [Gradle 디펜던시 잠금](https://docs.gradle.org/current/userguide/dependency\_locking.html)을 참조하십시오.
 
 ## Git settings for Java
 
 Snyk UI에서는 Artifactory for Maven에서 패키지를 확인하려는 미러 또는 저장소를 지정할 수 있습니다.
 
-artifactory 통합 구성에 대한 자세한 내용은 아래 페이지를 참조하세요.
+artifactory 통합 구성에 대한 자세한 내용은 아래 페이지를 참조하십시오.
 
 {% content-ref url="../../../features/integrations/private-registry-integrations/artifactory-registry-for-maven.md" %}
 [artifactory-registry-for-maven.md](../../../features/integrations/private-registry-integrations/artifactory-registry-for-maven.md)

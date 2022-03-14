@@ -10,7 +10,7 @@
 
 ![](../../../.gitbook/assets/os1.png)
 
-마지막 24시간 실행이 시작된 시간을 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**를 확인하세요. 또한 특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일도 확인하세요.
+마지막 24시간 실행이 시작된 시간을 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**를 확인하고, 특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일도 확인하십시오.
 
 ![](../../../.gitbook/assets/os2.png)
 

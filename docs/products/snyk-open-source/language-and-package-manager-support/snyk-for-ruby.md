@@ -4,7 +4,7 @@ Snyk는 [Bundler](https://bundler.io)에서 관리하는 디펜던시를 갖는 
 
 Snyk는 모든 Bundler 그룹을 테스트하며 현재 특정 그룹(예: 테스트 또는 개발 그룹)을 제외할 수 없습니다.
 
-Gemfile이 개인 Gem 소스에 액세스해야 하는 경우 [see below](snyk-for-ruby.md)를 참조하세요.
+Gemfile이 개인 Gem 소스에 액세스해야 하는 경우 [see below](snyk-for-ruby.md)를 참조하십시오.
 
 매니페스트 파일은 다음 파일들을 지원합니다.
 

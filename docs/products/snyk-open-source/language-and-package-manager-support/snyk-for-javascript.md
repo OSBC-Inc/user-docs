@@ -25,7 +25,7 @@ Snyk이 디펜던시 트리를 구축한 후 [vulnerability database](https://sn
 
 Snyk이 트리를 분석하고 구축하는 방식은 프로젝트의 언어와 패키지 매니저, 프로젝트 위치에 따라 다릅니다.
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
 * [Snyk CLI tool for JavaScript projects](snyk-for-javascript.md)
 * [Git services for JavaScript projects](snyk-for-javascript.md)
@@ -72,9 +72,9 @@ Yarn v1 & 2 workspaces 지원은 현재 snyk test, snyk monitor 명령에만 해
 Yarn workspaces의 경우 `--all-projects` 플래그를 사용하여 다른 프로젝트와 함께 패키지를 테스트 및 모니터링하거나 `--yarn-workspaces` 파라미터를 이용하여 yarn workspace의 프로젝트만 지정하여 스캔합니다. 모든 패키지를 스캔할 때 root lockfile이 참조됩니다. `--detection-depth` 파라미터를 사용하여 기본적으로 검색되지 않는 하위 폴더를 찾을 수 있습니다.
 
 Example usage:\
-`snyk test --all-projects --strict-out-of-sync=false --detection-depth=6`          검색된 작업 공간에 속하는 패키지를 직접 스캔하고 하위 5개의 티렉토리를 검색하여 다른 프로젝트를 찾습니다.
+`snyk test --all-projects --strict-out-of-sync=false --detection-depth=6` 검색된 작업 공간에 속하는 패키지를 직접 스캔하고 하위 5개의 티렉토리를 검색하여 다른 프로젝트를 찾습니다.
 
-`snyk test --yarn-workspaces --strict-out-of-sync=false --detection-depth=6`    검색된 작업 공간에 속하는 Yarn workspace 패키지만 스캔하고 하위 5개의 티렉토리를 검색합니다.
+`snyk test --yarn-workspaces --strict-out-of-sync=false --detection-depth=6` 검색된 작업 공간에 속하는 Yarn workspace 패키지만 스캔하고 하위 5개의 티렉토리를 검색합니다.
 
 policy path를 제공하여 감지된 모든 작업 공간에 적용할 ignores/patches를 한 곳에서 관리하는 경우 **.snyk** 정책 파일을 사용할 수 있습니다.
 
@@ -83,7 +83,7 @@ policy path를 제공하여 감지된 모든 작업 공간에 적용할 ignores/
 ### Lerna
 
 {% hint style="info" %}
-현재 Snyk은 Lerna를 지원하지 **않습니다**. **** 그러나 Lerna 프로젝트가 Yarn Workspaces를 사용하는 경우 표준 Yarn WorkSpaces 지원으로 프로젝트를 스캔할 수 있습니다. 다음 명령어를 통해 Snyk test/monitor를 실행하여 Snyk CLI 통합 차단을 해제할 수 있습니다.
+현재 Snyk은 Lerna를 지원하지 **않습니다**. \*\*\*\* 그러나 Lerna 프로젝트가 Yarn Workspaces를 사용하는 경우 표준 Yarn WorkSpaces 지원으로 프로젝트를 스캔할 수 있습니다. 다음 명령어를 통해 Snyk test/monitor를 실행하여 Snyk CLI 통합 차단을 해제할 수 있습니다.
 {% endhint %}
 
 각 예제 패키지에 대해 다음 명령어를 수행할 수 있습니다.

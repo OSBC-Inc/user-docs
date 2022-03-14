@@ -8,10 +8,10 @@ Snyk API 문서는 [https://snyk.docs.apiary.io/](https://snyk.docs.apiary.io)�
 
 {% hint style="info" %}
 **기능 지원 여부**\
-Snyk API는 Business 및 Enterprise plans에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하세요
+Snyk API는 Business 및 Enterprise plans에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하십시오.하세요
 {% endhint %}
 
-Dep Graph API에는 추가 권한이 필요합니다. 액세스를 요청하려면 support@snyk.io에 문의하세요.
+Dep Graph API에는 추가 권한이 필요합니다. 액세스를 요청하려면 support@snyk.io에 문의하십시오.
 
 이 문서는 Snyk을 사용하여 Bazel 프로젝트를 테스트하는 방법을 제공합니다.
 
@@ -27,7 +27,7 @@ Bazel은 npmjs.org 또는 Maven Central과 같은 패키지 레지스트리와 �
 
 그러나 많은 경우 사용자는 모든 전이를 포함하여 종속성 정보(패키지 이름, 위치 및 버전)를 수동으로 지정해야 한다. 그런 다음 빌드 중에 Bazel에서 가져올 수 있습니다.
 
-Bazel 디펜던시는 Starlark를 사용하여 BUILD 파일에서 코드로 지정되기 때문에 Snyk은 프로젝트가 어떤 의존성을 가지고 있는지 쉽게 발견할 수 없다.
+Bazel 디펜던시는 Starlark를 사용하여 BUILD 파일에서 코드로 지정되기 때문에 Snyk은 프로젝트가 어떤 의존성을 가지고 있는지 쉽게 발견할 수 없습니다.
 
 권장하는 접근방식은 [Snyk Dep Graph Test API](https://github.com/snyk/dep-graph)를 통해 의존성을 테스트하는 것입니다.
 
@@ -211,7 +211,7 @@ The Dep Graph Test API는 dep graph 디펜던시에서 발견된 문제(취약�
 
 {% hint style="info" %}
 **Note**\
-Bazel Java 프로젝트 및 Snyk Dep Graph 객체는 [https://github.com/snyk/bazel-simple-app](https://github.com/snyk/bazel-simple-app)을 참조하세요.
+Bazel Java 프로젝트 및 Snyk Dep Graph 객체는 [https://github.com/snyk/bazel-simple-app](https://github.com/snyk/bazel-simple-app)을 참조하십시오.
 {% endhint %}
 
 Maven 패키지에 대한 단일 디펜던시가 있는 간단한 Bazel 프로젝트의 경우 다음과 같이 디펜던시를 지정할 수 있습니다.

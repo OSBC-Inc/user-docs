@@ -23,7 +23,7 @@ Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한
 디펜던시를 스캔하려면 먼저 관련 패키지 매니저를 설치했는지, 프로젝트에 지원되는 매니페스트 파일이 포함되어 있는지 확인해야 합니다.
 {% endhint %}
 
-Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및 패키지 매니저와 프로젝트 위치에 따라 다릅니다. 자세한 내용은 다음을 참조하세요.
+Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및 패키지 매니저와 프로젝트 위치에 따라 다릅니다. 자세한 내용은 다음을 참조하십시오.
 
 * [Snyk CLI tool for .NET projects](snyk-for-.net.md#snyk-cli-tool-for-net-projects)
 * [Git services for .NET projects](snyk-for-.net.md#git-services-for-net-projects)
@@ -34,7 +34,7 @@ Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및
 
 #### PackageReference 에서 관리하는 디펜던시
 
-우선 `dotnet restore`를 실행하여 .NET 프로젝트의 디펜던시를 복원하고 `snyk test`를 실행하여 **obj/project.assets.json**이 생성되었는지 확인합니다. 빌드 프로젝트에 대한 자세한 내용은 [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)를 참조하세요.
+우선 `dotnet restore`를 실행하여 .NET 프로젝트의 디펜던시를 복원하고 `snyk test`를 실행하여 **obj/project.assets.json**이 생성되었는지 확인합니다. 빌드 프로젝트에 대한 자세한 내용은 [Getting started with the CLI](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)를 참조하십시오.
 
 **project.assets.json**에 포함하는 프로젝트 파일은 다음과 같습니다.
 
@@ -140,7 +140,7 @@ Snyk CLI와 Github와 같은 소스 코드 관리(SCM) 시스템에서 디펜던
 
     **Note**: 런타임 종속성("메타 패키지"라고 하는 런타임 환경에서 제공)은 호스트 시스템이 앱을 실행하는 서버와 유사한 런타임 SDK를 사용하는경우 CLI에서 더 정확하게 해결됩니다.
 
-.NET 자동 수정에 대한 자세한 내용은 [blog](https://snyk.io/blog/automated-vulnerability-fixes-dot-net-dependencies)를 참조하세요.
+.NET 자동 수정에 대한 자세한 내용은 [blog](https://snyk.io/blog/automated-vulnerability-fixes-dot-net-dependencies)를 참조하십시오.
 
 #### Build-time vs Runtime dependencies
 

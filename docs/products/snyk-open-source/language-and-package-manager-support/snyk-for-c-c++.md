@@ -87,7 +87,7 @@ C++ 프로젝트를 스캔할 때 다음 데이터가 수집되고 문제 해결
 
 #### Install the Snyk CLISnyk CLI 설치
 
-C/C++ 스캐닝은 [Snyk CLI](../../../features/snyk-cli/)에서 사용할 수 있습니다. 자세한 내용은 [Install the CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 참조하세요.
+C/C++ 스캐닝은 [Snyk CLI](../../../features/snyk-cli/)에서 사용할 수 있습니다. 자세한 내용은 [Install the CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 참조하십시오.
 
 {% hint style="info" %}
 C/C++ 스캐닝이 포함된 Snyk CLI의 최소 버전은 1.713입니다.
@@ -95,19 +95,19 @@ C/C++ 스캐닝이 포함된 Snyk CLI의 최소 버전은 1.713입니다.
 
 #### 테스트 실행
 
-프로젝트의 취약점을 테스트하려면 다음과 같이 진행하세요.
+프로젝트의 취약점을 테스트하려면 다음과 같이 진행하십시오.
 
 ```
 $ snyk unmanaged test
 ```
 
 {% hint style="warning" %}
-Windows에서 Linux 프로젝트를 스캔하는 경우 저장소가 Linux line endings로 되어있는지 확인하세요. 자세한 내용은 [Known Issues](snyk-for-c-c++.md#known-issues)를 참조하세요.
+Windows에서 Linux 프로젝트를 스캔하는 경우 저장소가 Linux line endings로 되어있는지 확인하십시오. 자세한 내용은 [Known Issues](snyk-for-c-c++.md#known-issues)를 참조하십시오.
 {% endhint %}
 
 #### 디펜던시 표시
 
-디펜던시를 표시하려면 `--print-deps` 명령어를 사용하세요.
+디펜던시를 표시하려면 `--print-deps` 명령어를 사용하십시오.
 
 ```bash
 $ snyk unmanaged test --print-deps
@@ -121,7 +121,7 @@ Dependencies:
   confidence: 0.993
 ```
 
-식별하는 각 디펜던시에 기여한 파일을 확인하려면 `--print-dep-paths` 파라미터를 사용하세요.
+식별하는 각 디펜던시에 기여한 파일을 확인하려면 `--print-dep-paths` 파라미터를 사용하십시오.
 
 ```bash
 $ snyk unmanaged test --print-dep-paths
@@ -141,7 +141,7 @@ Dependencies:
 
 소프트웨어에서 사용하는 디펜던시의 소스코드를 변경해야 할 수도 있습니다. Snyk은 파일 시그니처를 사용하여 오픈소스 라이브러리에 가장 일치하는 항목을 찾기 때문에 변경 사항이 실제 라이브러리 식별의 정확성을 감소시킬 수 있습니다.
 
-Snyk이 식별된 디펜던시와 해당 버전에 대해 얼마나 확신하는지 확인하려면 `--print-deps` 또는 `--print-dep-paths` 파라미터를 사용하세요.
+Snyk이 식별된 디펜던시와 해당 버전에 대해 얼마나 확신하는지 확인하려면 `--print-deps` 또는 `--print-dep-paths` 파라미터를 사용하십시오.
 
 ```
 curl|https://github.com/curl/curl/releases/download/curl-7_58_0/curl-7.58.0.tar.xz@7.58.0
@@ -152,7 +152,7 @@ confidence: 0.993
 
 #### JSON 출력
 
-결과를 JSON 형식으로 출력하려면 `--json` 파라미터를 사용하세요.
+결과를 JSON 형식으로 출력하려면 `--json` 파라미터를 사용하십시오.
 
 ```
 $ snyk unmanaged test --json

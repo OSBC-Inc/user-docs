@@ -6,17 +6,17 @@
 * 스캔이 수동으로 실행되는 경우(프로젝트에 대해 **Retest now**를 클릭 함) 24시간동안 실행된 것으로 표시되고 다음 자동 스캔이 실행될 때까지 자동 PR이 생성되지 않습니다.
 * 프로젝트당 하나의 pull request가 생성됩니다(우선순위 점수 700 이상만 해당).
 * 취약점 자체가 새롭고 사용 가능한 수정 사항이 있거나 수정 사항이 새로 추가되어 무시되지 않는 경우
-* 알려진 취약점에 대해서는 [fix-pull-requests-for-known-vulnerabilities-backlog.md](fix-pull-requests-for-known-vulnerabilities-backlog.md "mention")를 참조하세요.
+* 알려진 취약점에 대해서는 [fix-pull-requests-for-known-vulnerabilities-backlog.md](fix-pull-requests-for-known-vulnerabilities-backlog.md "mention")를 참조하십시오.
 
 ![](../../../.gitbook/assets/os1.png)
 
-최근 24시간의 내용을 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**을 확인하세요. 특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일도 확인하십시오.
+최근 24시간의 내용을 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**을 확인하고,특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일도 확인하십시오.
 
 ![](../../../.gitbook/assets/os2.png)
 
 새로운 취약점에 대한 pull request는 새로운 통합에 대해 기본적으로 활성화되어 있습니다.
 
-통합에 대한 자세한 내용은 [Git repository SCM integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 참조하세요.
+통합에 대한 자세한 내용은 [Git repository SCM integrations](../../../features/integrations/git-repository-scm-integrations/)을 참조하십시오.
 
 ## 통합에 대한 pull requests 활성화 또는 비활성화
 
