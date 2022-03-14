@@ -1,8 +1,8 @@
-# Snyk SCM 통합: 모범 사례
+# Snyk SCM 통합
 
 Snyk을 SCM(Source Control Manager)과 통합하여 모든 프로젝트를 쉽고 빠르게 파악할 수 있습니다.
 
-Snyk SCM 통합을 통해 다음을 수행할 수 있습니다:
+Snyk SCM 통합을 통해 다음을 수행할 수 있습니다.
 
 * 통합된 모든 저장에 대한 지속적인 보안 스캐닝 수행
 * 오픈소스 컴포넌트의 취약성 탐지
@@ -19,13 +19,13 @@ Snyk SCM 통합을 통해 다음을 수행할 수 있습니다:
 | <p><a href="snyk-scm-integration-good-practices.md">1단계</a></p><p>SCM 통합을 설정합니다.</p>                                   | 각 [SCM integration](../features/integrations/git-repository-scm-integrations/)에 대한 구성 설명서 참조                                                        | 프로젝트를 가져올 준비가 된 구성된 통합                                    |
 | <p><a href="snyk-scm-integration-good-practices.md">2단계</a></p><p>SCM에서 모든 프로젝트를 가져옵니다.</p>                            | <p>- 공용 및 개인 리포지토리 모두 테스트</p><p>- 모든 사용자 알림 비활성화</p><p>- Snyk PR 검사 비활성화</p><p>- 자동 수정 PR 비활성화</p><p>- 실패한 PR 검사 비활성화</p><p>- 자동 종속성 업그레이드 비활성화</p> | 애플리케이션 전체의 위험을 평가할 수 있는 완전한 소프트웨어 BOM(Bill of Materials)  |
 | <p><a href="snyk-scm-integration-good-practices.md">3단계</a></p><p>개발자 및 보안 팀은 Snyk의 우선순위 보고 기능을 사용하여 수정 계획을 수립합니다.</p> | Snyk 우선순위 보고에 대해 자세히 알아보려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                              | 수정해야 할 사항과 수정 프로세스를 합리화하는 시기를 개발자 및 보안 팀간에 조정합니다.         |
-| <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 문제를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>        | <p>- Enable Snyk PR checks and fail PRs</p><p>if they contain High severity issues</p><p>with available fixes</p><p>- Enable Auto-fix PRs</p>       | 조직이 취약점을 더 빠르게 수정할 수 있습니다.                                |
-| <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | <p>- Enable Failing PR checks, for ANY</p><p>High severity issues (fix or no fix)</p>                                                               | ‘Secure by Design’ 방법론을 달성했습니다.                           |
+| <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 문제를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>        | <p>- 사용 가능한 수정 사항과 함께 심각도가 높은 문제가 포함된 경우 Snyk PR 검사 및 실패한 PR 활성화</p><p>- 자동 수정 PR 사용</p>                                                            | 조직이 취약점을 더 빠르게 수정할 수 있습니다.                                |
+| <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | - 심각도가 높은 문제(수정 또는 수정 안 함)에 대해 실패한 PR 검사 활성화                                                                                                        | ‘Secure by Design’ 방법론을 달성했습니다.                           |
 | <p><a href="snyk-scm-integration-good-practices.md">6단계</a></p><p>기술 보안 부채 구축</p>                                      | - 자동 디펜던시 업그레이드 사용                                                                                                                                  | 연구 및 해결에 시간이 많이 소요될 수 있는 향후 설계 문제 및 긴급한 수정 사항을 줄일 수 있습니다. |
 
 ## 1단계: SCM 통합 설정
 
-Snyk은 GitHub, GitHub Enterprise, Bitbucket Cloud 등 SCM을 위한 사전 통합을 구축했습니다. 전체 목록은 [GIT 저장(SCM) 통합](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 참조하십시오.
+Snyk은 GitHub, GitHub Enterprise, Bitbucket Cloud 등 SCM을 위한 사전 통합을 구축했습니다. 전체 목록은 [Git 저장소(SCM) 통합](../features/integrations/git-repository-scm-integrations/)을 참조하십시오.
 
 SCM이 이미 구성되어 있는지 확인하려면 **Integrations** 탭으로 이동합니다. 통합된 SCM은 **Configured**로 표시됩니다.
 
@@ -35,13 +35,13 @@ SCM이 이미 구성되어 있는지 확인하려면 **Integrations** 탭으로 
 SCM이 이미 통합되어 있다면 다음 단계로 이동합니다.
 {% endhint %}
 
-## 예: GitHub
+## GitHub 통합 설정
 
 다음은 **Github.com**에 통합을 설정하는 방법의 예입니다.
 
 1. **Integrations** 탭으로 이동하여 **GitHub**를 클릭합니다.
-2. Snyk에게 public 및 private 저장소 모두에 대한 액세스 권한을 부여할지 또는 public 저장소에만 액세스 권한을 부여할지 선택합니다:
-3. Snyk에게 저장소에 대한 액세스 권한을 제공하려면 **Authorize snyk**을 클릭합니다:
+2. Snyk에게 public 및 private 저장소 모두에 대한 액세스 권한을 부여할지 또는 public 저장소에만 액세스 권한을 부여할지 선택합니다.
+3. Snyk에게 저장소에 대한 액세스 권한을 제공하려면 **Authorize snyk**을 클릭합니다.
 
 ![](<../.gitbook/assets/authorize (1) (2) (6) (1) (18).png>)
 
@@ -51,12 +51,12 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게하여 작업 �
 
 예를 들어 GitHub에서 Snyk으로 연결된 계정은 대상 저장에 대해 다음과 같은 액세스 권한이 필요합니다:
 
-| **Action**                         | **Why?**                                                                             | **Required permissions on the repository** |
-| ---------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------ |
-| 일별/주간별 테스트                         | private 저장에 파일 읽기용                                                                   | _**Write**_ 권한 이상                          |
-| pull requests에서 Snyk 테스트           | 새로운 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 전송하기 위함                           |                                            |
-| 수정 및 업그레이드 pull requests 열기        | 모니터링되는 저장소에 수정/업그레이드 PR 작성용                                                          |                                            |
-| pull requests에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 웹훅을 추가하면 pull requests가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _**Admin**_                                |
+| **Action**                         | **Why?**                                                                             | **저장소에 대한 권한**    |
+| ---------------------------------- | ------------------------------------------------------------------------------------ | ----------------- |
+| 일별/주간별 테스트                         | private 저장에 파일 읽기용                                                                   | _**Write**_ 권한 이상 |
+| pull requests에서 Snyk 테스트           | 새로운 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 전송하기 위함                           |                   |
+| 수정 및 업그레이드 pull requests 열기        | 모니터링되는 저장소에 수정/업그레이드 PR 작성용                                                          |                   |
+| pull requests에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 웹훅을 추가하면 pull requests가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _**Admin**_       |
 
 ### 알림 설정 변경
 
@@ -68,7 +68,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게하여 작업 �
 
 ![](<../.gitbook/assets/image (58).png>)
 
-자세한 내용은 [Notification management](https://support.snyk.io/hc/en-us/articles/360004037657-Notification-management)를 참조하십시오.
+자세한 내용은 [Notification management](https://docs.snyk.io/features/user-and-group-management/notifications/notification-management)를 참조하십시오.
 
 ## 2단계: 프로젝트 가져오기
 
@@ -93,7 +93,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게하여 작업 �
 
 **상태 세부 정보**
 
-"Details" 링크를 클릭하면 Snyk 검사에서 다음과 같은 상태가 나타날 수 있습니다:
+"Details" 링크를 클릭하면 Snyk 검사에서 다음과 같은 상태가 나타날 수 있습니다.
 
 * **Success**: 식별된 문제가 없고 모든 점검이 통과됨
 * **Processing**: Snyk 테스트가 끝날 때까지 표시됨
@@ -127,7 +127,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게하여 작업 �
 At the start of rollout, 개발자가 Snyk Commit을 확인하는 것에 익숙해지도록, PR을 테스트하는 것부터 시작하는 것이 좋습니다.
 
 1. 이를 조직 또는 특정 프로젝트에 적용하기로 결정합니다.
-2. 조건을 설정합니다:
+2. 조건을 설정합니다.
    * **예) Only fail when the PR is adding a dependency with issues** : PR이 문제가 있는 디펜던시를 추가하는 경우에만 실패
    * **예)** **Only Fail for high severity issues** : 심각도가 높은 문제에 대해서만 실패
    * **예) Only fail when the issues found have a fix available** : 발견된 문제에 수정 가능한 사항이 있는 경우에만 실패
@@ -176,7 +176,7 @@ Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 
 ## 6단계: 디펜던시 업그레이드 PRs
 
-그룹이 \~\~**보안 기술 부채 문제**\~\~를 해결할 준비가 되면 디펜던시를 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk을 구성할 수 있습니다.
+그룹이 보안 기술 부채 문제를 해결할 준비가 되면 종속성을 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk를 구성할 수 있습니다.
 
 ![](../.gitbook/assets/upgrade-node-uuid.png)
 
@@ -184,7 +184,7 @@ Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
 
 1. SCM과 통합을 한 후 사용자가 자동 업그레이드 PR을 사용 가능으로 설정합니다.
 2. Snyk은 프로젝트를 가져오면서 스캔을 하고 정기적으로 프로젝트를 계속 모니터링합니다.
-3. 각각을 모니터링할 때, Snyk이 디펜던시에 대한 새 버전을 식별하면 다음과 같이 수행합니다:
+3. 각각을 모니터링할 때, Snyk이 디펜던시에 대한 새 버전을 식별하면 다음과 같이 수행합니다.
    * Snyk은 자동 업그레이드 PR을 생성합니다.(Snyk 프로젝트 설정의 테스트 빈도 기반)
    * Snyk은 열려 있는 다른 Snyk PR에서 이미 변경(업그레이드 또는 패치 적용)된 디펜던시에 대해 새 업그레이드 PR을 열지 않습니다.
    * Snyk은 각 디펜던시에 대해 별도의 PR을 생성합니다.

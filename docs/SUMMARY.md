@@ -20,7 +20,7 @@
     * [Snyk 라이선스 준수 관리 시작하기](getting-started/getting-started-snyk-products/getting-started-snyk-licensing-compliance.md)
     * [Snyk intel vulnerability DB 액세스 시작하기](getting-started/getting-started-snyk-products/getting-started-snyk-intel-vuln-db-access.md)
   * [SCM(Git) 및 CI/CD 통합 구축 소개](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
-  * [Snyk SCM 통합: 모범 사례](getting-started/snyk-scm-integration-good-practices.md)
+  * [Snyk SCM 통합](getting-started/snyk-scm-integration-good-practices.md)
   * [Snyk CI/CD 통합](getting-started/snyk-cicd-integration-good-practices.md)
   * [Snyk dashboard 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
   * [Snyk 프로젝트 소개](getting-started/introduction-to-snyk-projects/README.md)
