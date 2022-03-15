@@ -1,7 +1,9 @@
 # 컨테이너 이미지에서 애플리케이션 취약점 탐지
 
 {% hint style="info" %}
-Container Registry 통합의 경우 이 기능은 Node, Ruby, PHP, Python, Go binaries 및 Java에 대해 지원됩니다. CLI 및 Kubernetes의 경우 이 기능은 Node, Golang 및 Java에 대해 지원됩니다.
+Container Registry 통합의 경우 Node, Ruby, PHP, Python, Go binaries 및 Java에서 해당 기능을 지원합니다.
+
+CLI 및 Kubernetes의 경우 Node, Golang 및 Java에서 해당 기능을 지원합니다.
 {% endhint %}
 
 Snyk을 사용하면 한 번의 스캔으로 컨테이너 이미지뿐만 아니라 운영체제에서도 애플리케이션 디펜던시의 취약점을 탐지할 수 있습니다.
@@ -38,7 +40,7 @@ Java 애플리케이션의 경우 `--apps-vulns`를 사용할 때 `--nested-jars
 * 컨테이너 이미지에서 감지된 매니페스트 파일의 디펜던시 및 라이선스 issues
 * 운영체제 패키지에서 발견된 취약점
 
-Snyk으로 가져온 이미지는 **Projects** view의 ~~레지스트리 레코드~~ 아래에 나타나 이미지에서 발견된 운영체제 취약점을 표시합니다.
+Snyk으로 가져온 이미지는 **Projects** view의 레지스트리 레코드 아래에 나타나 이미지에서 발견된 운영체제 취약점을 표시합니다.
 
 이 기능을 활성화하면 이미지에서 탐지된 중첩된 매니페스트 파일과 해당 취약점 및 라이선스 issues도 볼 수 있습니다.
 

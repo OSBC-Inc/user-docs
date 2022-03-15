@@ -5,7 +5,7 @@
 [container integration](https://docs.snyk.io/snyk-container)(예: CLI 또는 컨테이너 레지스트리 통합)을 구성한 후에는 기본 이미지를 탐지할 수 있습니다.
 
 {% hint style="info" %}
-지원되는 이미지 목록은 [image scanning library](../image-scanning-library/) 참조하시오.
+지원되는 이미지 목록은 [image scanning library](../image-scanning-library/)를 참조하십시오.
 {% endhint %}
 
 ## 식별 방법
