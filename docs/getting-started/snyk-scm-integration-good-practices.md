@@ -83,11 +83,11 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 ![](../.gitbook/assets/aws-sdk.png)
 
-## 3단계: PR에서 Snyk 테스트 사용
+## 3단계: PR에 대한 Snyk 테스트 활성화
 
 **PR 테스트 설정 & 워크플로우**
 
-기본적으로 Snyk은 모니터링하는 저장소에 제출된 모든 pull request를 검색하여 결과와 권장 사항을 단일 보안 검사와 단일 라이선스 검사로 그룹화하여 제공합니다.
+기본적으로 Snyk은 모니터링되는 저장소에 제출된 모든 pull request를 스캔하여 결과와 권장 사항을 단일 보안 검사와 단일 라이선스 검사로 그룹화하여 제공합니다.
 
 ![](../.gitbook/assets/checks-passed.png)
 
@@ -95,16 +95,16 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 "Details" 링크를 클릭하면 Snyk 검사에서 다음과 같은 상태가 나타날 수 있습니다.
 
-* **Success**: 식별된 문제가 없고 모든 점검이 통과됨
+* **Success**: 식별된 issue가 없고 모든 검사를 통과함
 * **Processing**: Snyk 테스트가 끝날 때까지 표시됨
-* **Failure**: 문제가 확인되었을 때, 검사를 통과하기 위한 수정 필요
-* **Error**: 매니페스트 파일이 동기화되지 않았거나, Snyk이 매니페스트 파일을 읽을 수 없거나, Snyk과 매니페스트 파일을 찾을 수 없을 때 오류가 발생합니다.
+* **Failure**: 검사를 통과하기 위한 수정해야 하는 issue가 식별된 경우
+* **Error**: 매니페스트 파일이 동기화되지 않았거나, Snyk이 매니페스트 파일을 읽을 수 없거나, Snyk이 매니페스트 파일을 찾을 수 없을 때 오류가 발생합니다.
 
 ![](../.gitbook/assets/security-check.png)
 
 **PR 테스트 설정 관리**
 
-관리자는 조직 수준에서 Snyk PR 테스트 설정을 관리하여 모든 프로젝트에 적용하거나 PR 테스트를 적용할 특정 프로젝트를 선택할 수 있습니다. 기능의 설정 여부(기본적으로 활성화됨)를 구성하고, 실패 조건을 설정하여 Snyk이 PR 검사를 통과하지 못할 시기를 정의할 수 있습니다.
+관리자는 조직 수준에서 Snyk PR 테스트 설정을 관리하여 모든 프로젝트에 적용하거나 PR 테스트를 적용할 특정 프로젝트를 선택할 수 있습니다. 기능의 활성화 여부(기본적으로 활성화됨)를 구성하고, 실패 조건을 설정하여 Snyk이 PR 검사를 통과하지 못할 시기를 정의할 수 있습니다.
 
 조직의 PR 테스트 설정을 구성하려면 다음과 같이 하십시오.
 
@@ -119,31 +119,31 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 ![](../.gitbook/assets/main.png)
 
 {% hint style="info" %}
-라이선스 정책을 사용하여 라이선스 문제로 인해 Snyk이 PR에 실패하는 것을 방지할 수 있습니다. 자세한 내용은 [라이선스 정책](https://support.snyk.io/hc/en-us/sections/360002249578-License-Policies)을 참조하십시오.
+라이선스 정책을 사용하여 라이선스 issue로 인해 Snyk이 PR에 실패하는 것을 방지할 수 있습니다. 자세한 내용은 [라이선스 정책](https://support.snyk.io/hc/en-us/sections/360002249578-License-Policies)을 참조하십시오.
 {% endhint %}
 
-**Initial step: visibility** 및 **fail conditions** 설정
+**초기 단계: visibility** 및 **fail conditions** 설정
 
-At the start of rollout, 개발자가 Snyk Commit을 확인하는 것에 익숙해지도록, PR을 테스트하는 것부터 시작하는 것이 좋습니다.
+~~_At the start of rollout_~~, 개발자가 Snyk Commit을 확인하는 것에 익숙해지도록, PR을 테스트하는 것부터 시작하는 것이 좋습니다.
 
 1. 이를 조직 또는 특정 프로젝트에 적용하기로 결정합니다.
 2. 조건을 설정합니다.
-   * **예) Only fail when the PR is adding a dependency with issues** : PR이 문제가 있는 디펜던시를 추가하는 경우에만 실패
-   * **예)** **Only Fail for high severity issues** : 심각도가 높은 문제에 대해서만 실패
-   * **예) Only fail when the issues found have a fix available** : 발견된 문제에 수정 가능한 사항이 있는 경우에만 실패
+   * **예) Only fail when the PR is adding a dependency with issues** : PR이 issue가 있는 디펜던시를 추가하는 경우에만 실패
+   * **예)** **Only Fail for high severity issues** : 심각도가 높은 issue에 대해서만 실패
+   * **예) Only fail when the issues found have a fix available** : 발견된 issue에 수정 가능한 사항이 있는 경우에만 실패
 
 ## 4단계: **정책에 따른** PRs
 
-SDLC에 Snyk을 내장하고 Snyk에 대한 개발자의 인지를 높인 후에는 보다 엄격한 정책을 적용하여 전반적인 보안 상태를 개선할 수 있습니다.
+Snyk을 SDLC에 포함하고 Snyk에 대한 개발자의 인지를 높인 후에는 보다 엄격한 정책을 적용하여 전반적인 보안 상태를 개선할 수 있습니다.
 
 **예)**
 
 * **낮은 우선 순위의 프로젝트**: 수정 가능한 새로운 높은 심각도에 대해서만 PR을 실패할 수 있습니다.
-* **중간 우선 순위의 프로젝트**: 심각도가 높은 문제에 대해서만 PR에 실패합니다.
-* **높은 우선 순위의 프로젝트(PCI/GDPR compliance)**: 모든 문제에 대해 PR에 실패합니다.
+* **중간 우선 순위의 프로젝트**: 심각도가 높은 issue에 대해서만 PR에 실패합니다.
+* **높은 우선 순위의 프로젝트(PCI/GDPR compliance)**: 모든 issue에 대해 PR에 실패합니다.
 
 {% hint style="info" %}
-취약점 심각도를 내부의 정책과 일치시키려면 보안 정책을 사용하여 문제의 심각도를 변경하고 관련 프로젝트 특성에 연결하십시오. 자세한 내용은 [보안 정책](https://support.snyk.io/hc/en-us/sections/360004225818-Security-Policies)을 참조하십시오.
+취약점 심각도를 내부 정책에 맞추려면 보안 정책을 사용하여 issue의 심각도를 변경하고 관련 프로젝트 특성에 연결하십시오. 자세한 내용은 [보안 정책](https://support.snyk.io/hc/en-us/sections/360004225818-Security-Policies)을 참조하십시오.
 {% endhint %}
 
 ## 5단계: 자동 수정 PRs
@@ -169,48 +169,48 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 ![](<../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (20).png>)
 
 {% hint style="info" %}
-Snyk 자동 수정 PR은 새로운 문제에 대해서만 생성됩니다.
+Snyk 자동 수정 PR은 새로운 issue에 대해서만 생성됩니다.
 {% endhint %}
 
-당신의 SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk는 모든 Org 사용자의 인증 정보을 확인하여 자동 수정 PR을 엽니다. 필요한 경우 이 설정을 변경하고 사용자 인증 정보를 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [Opening fix and upgrade pull requests from a fixed GitHub account](../features/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)를 참조하십시오.
+당신의 SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk은 모든 Org 사용자의 인증 정보을 확인하여 자동 수정 PR을 엽니다. 필요한 경우 이 설정을 변경하고 사용자 인증 정보를 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [Opening fix and upgrade pull requests from a fixed GitHub account](../features/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)를 참조하십시오.
 
-## 6단계: 디펜던시 업그레이드 PRs
+## 6단계: 디펜던시 업그레이드 PR
 
-그룹이 보안 기술 부채 문제를 해결할 준비가 되면 종속성을 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk를 구성할 수 있습니다.
+그룹이 보안 기술 ~~_부채_~~ 문제를 해결할 준비가 되면 디펜던시를 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk을 구성할 수 있습니다.
 
 ![](../.gitbook/assets/upgrade-node-uuid.png)
 
 **작동 방식**
 
-1. SCM과 통합을 한 후 사용자가 자동 업그레이드 PR을 사용 가능으로 설정합니다.
+1. SCM과 통합을 한 후 사용자가 자동 업그레이드 PR을 활성화합니다.
 2. Snyk은 프로젝트를 가져오면서 스캔을 하고 정기적으로 프로젝트를 계속 모니터링합니다.
 3. 각각을 모니터링할 때, Snyk이 디펜던시에 대한 새 버전을 식별하면 다음과 같이 수행합니다.
    * Snyk은 자동 업그레이드 PR을 생성합니다.(Snyk 프로젝트 설정의 테스트 빈도 기반)
    * Snyk은 열려 있는 다른 Snyk PR에서 이미 변경(업그레이드 또는 패치 적용)된 디펜던시에 대해 새 업그레이드 PR을 열지 않습니다.
    * Snyk은 각 디펜던시에 대해 별도의 PR을 생성합니다.
    * Snyk은 5개 이상의 Snyk PR이 열려 있는 저장소에 대해 업그레이드 PR을 생성하지 않습니다. 이 숫자는 설정에서 1\~10 사이로 설정할 수 있습니다. 이 제한은 업그레이드 PR을 생성할 때만 적용되지만 수정 PR 수는 계산되지 않습니다. 따라서 수정 PR은 이러한 방식으로 제한되지 않습니다.
-   * 기본적으로 Snyk은 패치 및 부분 업그레이드만 권장하지만 기능이 활성화된 설정에서 major 버전 업그레이드를 활성화할 수 있습니다.
+   * 기본적으로 Snyk은 패치 및 minor 업그레이드만 권장하지만 기능이 활성화된 설정에서 major 버전 업그레이드를 활성화할 수 있습니다.
    * 적용 가능한 최신 버전의 프로젝트에서 아직 발견되지 않은 취약점이 포함되어 있는 경우 Snyk은 업그레이드를 권장하지 않습니다.
    * Snyk은 21일 미만의 버전에는 업그레이드를 권장하지 않습니다. 이는 기능적인 버그를 도입했다가 나중에 게시되지 않은 버전이나 손상된 계정(계정 소유자가 악의적인 의도를 가진 사람에게 제어권을 빼앗긴 경우)에서 릴리즈되는 버전을 피하기 위함입니다.
 
 **지원되는 언어 및 저장소**
 
-npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud, including use of the Snyk Broker. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드를 해야 합니다.
+Snyk은 현재 Snyk Broker 사용을 포함하여 GitHub, GitHub Enterprise Server, BitBucket Cloud를 통해 npm, Yarn, Maven-Central 프로젝트에 대해 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드를 해야 합니다.
 
 **특정 프로젝트에 대해 자동 디펜던시 업그레이드 PR 사용**
 
-프로젝트 수준에서 PR 설정을 설정하려면 조직 수준에서 PR 설정을 재지정하십시오.
+프로젝트 수준에서 PR 설정을 지정하려면 조직 수준에서 PR 설정을 재정의하십시오.
 
 1. 자동 업그레이드 PR을 사용할 조직으로 이동합니다.
 2. **Projects**를 클릭하세요.
-3.  관련 프로젝트로 이동하고 **Settings** 톱니바퀴 아이콘을 클릭합니다.
+3.  관련 프로젝트로 이동하고 **Settings**(톱니바퀴 아이콘)를 클릭합니다.
 
     ![](<../.gitbook/assets/image (56) (2) (3) (3) (3) (3) (4) (5) (5) (5) (5) (3) (1) (7).png>)
 4. 설정 영역의 왼쪽 패널 메뉴에서 통합 설정을 클릭하여 해당 프로젝트에 고유한 설정을 적용합니다.
 5. **Automatic dependency upgrade pull requests**로 스크롤하고 Disabled를 클릭합니다.
 6. 표시되는 옵션:
    1. Snyk은 저장소마다 최대 10개의 PR을 동시에 생성할 수 있습니다. 이 수를 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 자세한 내용은 [Upgrading dependencies with automatic PRs](https://docs.snyk.io/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs)를 참조하십시오.
-   2. Dependencies to ignore 필드에 자동 기능의 일부로 처리되지 않는 디펜던시의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
-   3. 프로젝트를 모니터링할 때마다 ‘Upgrade dependency settings’를 클릭하면 결과에 따라 업그레이드 PR이 자동으로 제출됩니다. 기존 Snyk 업그레이드 PR 또는 기존 수정 PR에 대해 최신 버전이 릴리즈된 경우 기존 PR을 closed 하거나 merge해야 Snyk이 새 PR을 생성할 수 있습니다.
+   2. Dependencies to ignore 필드에 자동 기능의 일부로 처리되지 않아야 하는 디펜던시의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
+   3. 프로젝트를 스캔할 때마다 ‘Upgrade dependency settings’를 클릭하면 결과에 따라 업그레이드 PR이 자동으로 제출됩니다. 기존 Snyk 업그레이드 PR 또는 기존 수정 PR에 대해 최신 버전이 릴리즈된 경우 기존 PR을 closed 하거나 merge해야 Snyk이 새 PR을 생성할 수 있습니다.
 
 ![](../.gitbook/assets/general-github\_integration.png)
