@@ -39,7 +39,7 @@ Docker가 설치되면 Snyk CLI `container` 명령은 미리 구성된 레지스
 snyk container test <repository>:<tag> --username= --password=
 ```
 
-두 옵션이 모두 전달되는 경우 옵션이 환경 변수보다 우선입니다.
+두 옵션이 모두 전달되는 경우 옵션이 환경 변수보다 우선 적용됩니다.
 
 ## 일반적인 추가 옵션
 
@@ -54,7 +54,7 @@ snyk container test <repository>:<tag> --username= --password=
 | `--app-vulns`                | Snyk을 사용하면 한 번의 스캔으로 컨테이너 이미지와 운영체제에서 애플리케이션 디펜던시의 취약점을 모두 감지할 수 있습니다.                                                                           |
 | `--nested-jars-depth`        | `--app-vulns`를 사용할 경우 `--nested-jars-depth=n` 옵션을 사용하여 Snyk이 압축을 풀어야 하는 중첩된 jar의 수준을 설정합니다.                                                      |
 
-더 많은 옵션은 Snyk CLI `container` [도움말](../../../features/snyk-cli/commands/container.md) 참조하거나 다음을 실행하여 도움말을 표시하십시오.
+더 많은 옵션은 Snyk CLI `container` [도움말](../../../features/snyk-cli/commands/container.md) 참조하거나 다음을 실행하여 도움말을 참고하십시오.
 
 ```
 snyk container --help
@@ -62,5 +62,5 @@ snyk container --help
 
 ## 추가 정보
 
-* [Snyk Container CLI를 사용하여 이미지 테스트](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security)
-* [Snyk Container CLI 결과 이해](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/understanding-snyk-container-cli-results)
+* [컨테이너 보안을 위한 Snyk CLI](./)
+* [Snyk Container CLI 결과 이해](understanding-snyk-container-cli-results.md)

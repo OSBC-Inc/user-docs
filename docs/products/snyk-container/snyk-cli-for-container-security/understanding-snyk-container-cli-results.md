@@ -36,4 +36,4 @@ Snyk이 사용된 기본 이미지를 확인하고 [Official Docker image](https
 
 ![기본 이미지 업그레이드 권장 사항](../../../.gitbook/assets/clirecommendations.png)
 
-이는 상황 인식 수준을 제공하여 minor 및 major 업그레이드 또는 취약점이 더 적을 수 있는 대체 기본 이미지의 취약점 수를 보여줍니다.
+이는 상황 인식 수준을 제공하여 minor 및 major 업그레이드 또는 취약점이 더 적을 수 있는 대체 기본 이미지의 취약점 수를 제공합니다.

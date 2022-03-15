@@ -13,7 +13,7 @@ Snyk Container:
 
 ![](../../../.gitbook/assets/projects.png)
 
-컨테이너 이미지 보안 문제를 해결하기 위해 Snyk Container는 프로젝트를 Snyk으로 가져오는 다양한 통합을 제공합니다. 이는 사용자와 고객을 위한 다양한 워크플로우를 지원합니다.
+컨테이너 이미지 보안 문제를 해결하기 위해 Snyk Container는 프로젝트를 Snyk으로 가져오는 다양한 통합을 제공합니다. 이러한 통합은 사용자와 고객을 위한 다양한 워크플로우를 지원합니다.
 
 주요 통합은 다음과 같습니다.
 
@@ -27,4 +27,4 @@ Snyk Container:
 
 예를 들어 CI 통합을 사용하여 이미지를 작성할 때 개발 팀에 빠른 피드백을 제공하고, Kubernetes 통합을 사용하여 프로덕션에서 실행 중인 이미지에 대한 확신을 제공하는 것이 일반적입니다.
 
-[container security](https://snyk.io/learn/container-security/)를 통해 자세한 내용을 확인할 수 있습니다.
+[container security](https://snyk.io/learn/container-security/)에 대해 자세히 알아보십시오.

@@ -6,7 +6,7 @@ CLI를 사용하려면 먼저 CLI를 [설치](../../../features/snyk-cli/install
 
 ## 이미지 테스트
 
-이미지 테스트를 실행하려면 다음 명령어를 입력합니다.
+이미지 테스트를 실행하려면:
 
 ```
 snyk container test debian
@@ -25,7 +25,7 @@ Snyk을 사용하여 원격 레지스트리에서 가져올 수 있는 모든 �
 snyk container test <repository>:<tag>
 ```
 
-Docker 파일을 사용하여 이미지를 빌드할 경우 `container test`를 실행하여 이 파일을 지정할 수 있습니다.
+Docker 파일을 사용하여 이미지를 빌드할 경우  `container test`를 실행하여 이 파일을 지정할 수 있습니다.
 
 ```
 snyk container test <repository>:<tag> --file=Dockerfile
@@ -44,7 +44,7 @@ Snyk Container를 사용하여 이미지를 모니터링할 수도 있습니다.
 또한 모든 프로젝트의 취약점에 대한 종합 보고서에 액세스할 수 있습니다.
 
 {% hint style="info" %}
-**기능 사용 여부**\
+**기능 가용성**\
 이 집계 보고서 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
@@ -64,12 +64,12 @@ snyk container monitor <repository>:<tag>
 ![](../../../.gitbook/assets/monitor.png)
 
 {% hint style="info" %}
-**Note**\
+**참고**\
 Snyk Container에서 `test`와 `monitor`를 모두 사용하는 것이 일반적입니다. `test` 명령은 빠른 확인에 좋습니다. `monitor` 명령을 사용하여 결과를 지속적으로 보장하고 보다 쉽게 공유할 수 있습니다.
 {% endhint %}
 
 ## 추가 정보
 
-* [Snyk Container CLI 결과 이해](understanding-snyk-container-cli-results.md)
-* [고급 CLI 사용](advanced-snyk-container-cli-usage.md)
-* [컨테이너 보안](https://snyk.io/learn/container-security/)
+* [Snyk Container CLI 결과 이해](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/understanding-snyk-container-cli-results)
+* [고급 CLI 사용](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage)
+* [컨테이너 보안](https://snyk.io/learn/container-security/)에 대해 자세히 알아보기
