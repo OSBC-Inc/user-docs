@@ -11,7 +11,7 @@ Snyk은 현재 통합 Git 저장소에서 가져올 때 JSON 및 YAML 형식의 
 **전제 조건**
 
 * Snyk에서 구성하려는 조직의 관리자여야합니다.
-* 이미 Git 저장소를 통합했는지 확인하세요. 아직 수행하지 않았다면 [Git repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 확인하세요.
+* 이미 Git 저장소를 통합했는지 확인하십시오. 아직 수행하지 않았다면 [Git 저장소(SCM) 통합](../../../features/integrations/git-repository-scm-integrations/)을 확인하십시오.
 
 **Snyk 설정**
 
@@ -31,4 +31,4 @@ Snyk은 현재 통합 Git 저장소에서 가져올 때 JSON 및 YAML 형식의 
 
 ![Configure-Policies.png](../../../.gitbook/assets/uuid-34af73f5-ffde-39bb-ffa4-364884089b2e-en.png)
 
-제품당 테스트 횟수는 요금제에 따라 다릅니다. 테스트 제한에 대한 정보는 [요금제](https://snyk.io/plans/)를 참조하세요.
+제품당 테스트 횟수는 요금제에 따라 다릅니다. 테스트 제한에 대한 정보는 [요금제](https://snyk.io/plans/)를 참조하십시오.

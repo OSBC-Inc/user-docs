@@ -36,13 +36,13 @@ ignore:
         created: 2021-07-27T08:40:35.251Z
 ```
 
-이 파일은 `snyk ignore` 명령문으로 생성할 수 있습니다. 자세한 내용은 [Ignore vulnerabilities](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli)를 참조하세요.
+이 파일은 `snyk ignore` 명령문으로 생성할 수 있습니다. 자세한 내용은 [Ignore vulnerabilities](../../../features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)를 참조하십시오.
 
 '\*' 키를 이용하여 CLI가 SNYK-CC-K8S-1 취약점의 모든 인스턴스를 무시할 수 있습니다. IaC 문제 ID로 표시된 여러 항목을 추가하여 여러 취약점을 무시할 수 있습니다.
 
 ## 단일 파일 무시
 
-Ignore rules는 범위를 더 좁힐 수 있습니다. 범위를 단일 파일로 지정하려면 '\*'를 정책 파일이 포함된 테스트 대상 디렉토리를 기준으로 해당 파일의 경로로 변경하세요.
+Ignore rules는 범위를 더 좁힐 수 있습니다. 범위를 단일 파일로 지정하려면 '\*'를 정책 파일이 포함된 테스트 대상 디렉토리를 기준으로 해당 파일의 경로로 변경하십시오.
 
 ```
 version: v1.19.0
