@@ -21,7 +21,7 @@
 2. **Integrations**를 선택합니다.
 3. **Container registries** 항목을 선택합니다.
 4. Snyk과 통합할 항목을 클릭합니다.
-5. 프롬프트가 나타나면 계정 자격 증명 및 기타 세부 정보를 입력한 다음 변경 사항을 저장하여 이 항목을 Snyk과 통합합니다:
+5. 프롬프트가 나타나면 계정 자격 증명 및 기타 세부 정보를 입력한 다음 변경 사항을 저장하여 이 항목을 Snyk과 통합합니다.
 
 ![](../../.gitbook/assets/container-account-credentials.png)
 
@@ -47,11 +47,11 @@
 
 탐지된 취약점의 심각도에 대한 요약을 볼 수 있습니다.
 
-발견된 취약점에 대한 세부 정보를 보려면 항목을 클릭하십시오.
+발견된 취약점의 세부정보를 확인하려면 항목을 클릭하십시오.
 
 ![image5.png](../../.gitbook/assets/image5-1-.png)
 
-자세한 내용은 [Analysis and fixes for your images from the Snyk app](https://docs.snyk.io/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app)을 참조하십시오.
+자세한 내용은 [Snyk 앱에서 이미지 분석 및 수정](getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md)을 참조하십시오.
 
 ## 4단계: 수정 및 검토
 
@@ -61,4 +61,4 @@
 
 ## 자세한 내용은
 
-[Snyk Container](https://docs.snyk.io/snyk-container)를 참조하십시오.
+[Snyk Container](./)를 참조하십시오.
