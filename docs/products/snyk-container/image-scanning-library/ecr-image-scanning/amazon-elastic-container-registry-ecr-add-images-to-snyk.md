@@ -21,10 +21,10 @@ Snyk에 이미지를 추가하는방법은 다음과 같습니다.
 5. **Add selected repositories**를 클릭합니다.
 6. 이미지를 가져올 때 페이지 상단에 상태 표시줄이 나타나며, 진행되는동안 다른 작업을 수행할 수 있습니다.
 7. 가져오기가 끝나면 페이지 상단에 성공 또는 실패 알림이 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침합니다. 이미지는 저장소별로 그룹화하여 각각 세부 프로젝트 페이지에 개별적으로 연결됩니다.
-8. 이제 저장소를 이 프로젝트에 연결하여 Docker 파일을 사용하여 풍부한 수정 정보를 제공할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)를 참조하세요.
+8. 이제 저장소를 이 프로젝트에 연결하여 Docker 파일을 사용하여 풍부한 수정 정보를 제공할 수 있습니다. 자세한 내용은 [Dockerfile 추가 및 기본 이미지 테스트](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)를 참조하세요.
 
 ECR 파일은 특정 아이콘으로 표시됩니다. ![](../../../../.gitbook/assets/uuid-31aa2b29-8686-5389-b5fc-1d3bd1176f9c-en.png)--이제 필터링하여 다음과 같은 프로젝트만 확인할 수 있습니다.
 
 ![](../../../../.gitbook/assets/uuid-439e3f37-6e4f-0ffa-0c3c-63c56b45ba5a-en.png)
 
-Amazon ECR 통합은 다른 통합과 비슷하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지와 문서를 참조하세요.
+Amazon ECR 통합은 다른 통합과 비슷하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지와 문서를 참조하십시오.

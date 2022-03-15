@@ -1,8 +1,8 @@
-# Enable permissions to access Amazon Elastic Container Registry (ECR)에 액세스 할 수 있는 권한 활성화
+# 처음으로 ECR(Amazon Elastic Container Registry)에 액세스할 수 있는 사용 권한 사용
 
 이 프로세스에서는 AWS에서 리소스 역할을 설정하는 방법과 필요한 정책을 설명합니다. 자세한 내용은 [Amazon ECR documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ecr\_managed\_policies.html)을 참조하세요.
 
-1. AWS Management Console에 로그인하려면 [여기](https://signin.aws.amazon.com/signin?redirect\_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fiam%2Fhome%3Fstate%3DhashArgs%2523%252Fpolicies%26isauthcode%3Dtrue\&client\_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fiam\&forceMobileApp=0\&code\_challenge=8MHkyBbsvlrprSFBU3Pxe6hD\_Wh55wIbVaGbl7Bgvfc\&code\_challenge\_method=SHA-256)를 클릭하고 IAM 서비스로 이동한 다음 정책 페이지로 이동하여 다음과 같이 JSON 파일을 업데이트하여 정책을 생성하세요.
+1. AWS Management Console에 로그인하려면 [여기](https://signin.aws.amazon.com/signin?redirect\_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fiam%2Fhome%3Fstate%3DhashArgs%2523%252Fpolicies%26isauthcode%3Dtrue\&client\_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fiam\&forceMobileApp=0\&code\_challenge=8MHkyBbsvlrprSFBU3Pxe6hD\_Wh55wIbVaGbl7Bgvfc\&code\_challenge\_method=SHA-256)를 클릭하고 IAM 서비스로 이동한 다음 정책 페이지로 이동하여 다음과 같이 JSON 파일을 업데이트하여 정책을 생성하십시오.
    1. 새로운 정책을 생성합니다.
    2. JSON 탭으로 이동합니다.
    3. JSON 파일의 기본 텍스트를 모두 선택하고 삭제합니다.

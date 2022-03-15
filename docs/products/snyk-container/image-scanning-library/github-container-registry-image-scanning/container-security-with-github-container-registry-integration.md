@@ -8,7 +8,7 @@ GitHub container registry와의 통합은 모든 Snyk 사용자가 사용할 수
 
 Snyk에서 GitHub container registry 통합을 설정하고 이미지 취약점 관리를 시작하려면 다음과 같이 진행합니다.
 
-필수 구성 요소
+**전제 조건**
 
 * Snyk에서 구성할 조직의 관리자여야 합니다.
 * Snyk은 GitHub container registry와 통합하려면 사용자 자격 증명이 필요하며 SSO(Single Sign-On)용으로 구성한 경우 GitHub container registry를 지원하지 않습니다.
@@ -20,7 +20,7 @@ Snyk에서 GitHub container registry 통합을 설정하고 이미지 취약점 
 
 ![mceclip1.png](../../../../.gitbook/assets/mceclip1-4-.png)
 
-자체 호스팅된 GitHub container registry를 사용하는 경우 [당사 지원 팀](https://support.snyk.io/hc/en-us/requests/new)에 문의 바랍니다. 개인 레지스트리 통합 설정에 대한 자세한 내용은 [문서](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)를 참조하세요.
+자체 호스팅된 GitHub container registry를 사용하는 경우 [당사 지원 팀](https://support.snyk.io/hc/en-us/requests/new)에 문의 바랍니다. 개인 레지스트리 통합 설정에 대한 자세한 내용은 [문서](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)를 참조하십시오.
 
 Snyk은 연결 값과 page reload를 테스트하여 GitHub container registry 통합 정보를 표시하고 **Add your GitHub container registry images to Snyk** 버튼을 사용할 수 있습니다.
 
