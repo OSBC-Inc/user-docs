@@ -28,10 +28,10 @@ Snyk은 루트 폴더 및 사용자 정의 파일 위치를 평가하여 ACR 컨
 
     이미지를 가져오면 페이지 상단에 상태 표시줄이 나타납니다. 작업이 진행되는 동안 다른 작업을 계속할 수 있습니다.
 3. 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부 **Projects** 페이지에 개별적으로 연결됩니다.
-4. 이제 저장소를 프로젝트에 연결하여 풍부한 수정 정보를 제공하는 Dockerfile을 사용할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요.
+4. 이제 저장소를 프로젝트에 연결하여 풍부한 수정 정보를 제공하는 Dockerfile을 사용할 수 있습니다. 자세한 내용은 [Dockerfile 추가 및 기본 이미지 테스트](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)를 참조하십시오.
 
 ACR 파일은 특정 아이콘으로 표시됩니다. ![](../../../../.gitbook/assets/uuid-5d10608d-d674-d4ee-d6c2-6faadd6fc8ea-en.png) 필터링을 사용하여 다음과 같은 프로젝트만 볼 수도 있습니다.
 
 ![](<../../../../.gitbook/assets/image (4) (3) (3) (3) (3) (4) (4) (5) (4) (9).png>)
 
-ACR 통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지를 참조하세요.
+ACR 통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지를 참조하십시오.

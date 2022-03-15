@@ -16,7 +16,7 @@ Snyk에서 DigitalOcean 통합을 설정하고 이미지 취약점 관리를 시
 **통합 구성**
 
 1. Snyk 계정 상단의 메뉴에서 Integrations로 이동합니다. 컨테이너 레지스트리 섹션에서 **DigitalOcean**을 찾아 클릭합니다.
-2. **Account credentials** 섹션에서 DigitalOcean 개인 액세스 토큰을 로그인 자격 증명으로 입력하세요. 액세스 토큰을 만드는 자세한 사항은 Integrations 페이지에서 찾을 수 있습니다. 완료하려면 **Save**를 클릭하세요.
+2. **Account credentials** 섹션에서 DigitalOcean 개인 액세스 토큰을 로그인 자격 증명으로 입력하세요. 액세스 토큰을 만드는 자세한 사항은 Integrations 페이지에서 찾을 수 있습니다. 완료하려면 **Save**를 클릭하십시오.
 
 ![](../../../../.gitbook/assets/mceclip0-10-.png)
 
@@ -24,7 +24,7 @@ Snyk에서 DigitalOcean 통합을 설정하고 이미지 취약점 관리를 시
 
 {% hint style="info" %}
 **Note**\
-연결에 성공하려면 DigitalOcean에 저장소가 있는지 확인하세요.
+연결에 성공하려면 DigitalOcean에 저장소가 있는지 확인하십시오.
 {% endhint %}
 
 Snyk은 연결 값을 테스트하고 페이지를 다시 로드하여 이제 DigitalOcean 통합 정보를 표시하고 **Add your DigitalOcean images to Snyk** 버튼을 사용할 수 있습니다. DigitalOcenan 연결에 실패한 경우 **Connected to DigitalOcean** 섹션 아래에 알림이 나타납니다.\

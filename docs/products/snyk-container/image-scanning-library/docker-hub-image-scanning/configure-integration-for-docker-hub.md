@@ -23,8 +23,8 @@ Docker Hub에 연결하지 못한 경우 오류 알림이 나타납니다.
 Docker Hub 액세스 토큰을 다시 생성하려면 다음과 같이 진행합니다.
 
 1. [https://hub.docker.com/settings/security](https://hub.docker.com/settings/security)로 이동합니다.
-2. 새로운 액세스 토큰을 선택하세요.
+2. 새로운 액세스 토큰을 선택하십시오.
 3. 액세스 토큰 설명을 입력하고 권한을 설정한 다음 Generate를 클릭합니다.액세스 토큰을 복사하고 위 1단계에서 사용자 이름과 함께 사용합니다.
-4. Copy Access Token, it will be used along with the username in step 1 above
+4. 액세스 토큰은 복사합니다. 위의 1단계에서 사용자 이름과 함께 사용합니다.
 
-DockerHub 액세스 토큰에 대한 자세한 내용은 [Docker Hub Access Tokens](https://docs.docker.com/docker-hub/access-tokens/)를 참조하세요.
+DockerHub 액세스 토큰에 대한 자세한 내용은 [Docker Hub Access Tokens](https://docs.docker.com/docker-hub/access-tokens/)를 참조하십시오.
