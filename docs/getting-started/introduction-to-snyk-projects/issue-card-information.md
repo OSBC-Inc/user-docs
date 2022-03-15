@@ -1,6 +1,6 @@
 # Issue card
 
-Issue card는 프로젝트의 세부 정보 페이지에 나타납니다. [프로젝트 정보 확인](view-project-information.md)을 참조하세요.
+Issue card는 프로젝트의 세부 정보 페이지에 나타납니다. [프로젝트 정보 확인](view-project-information/)을 참조하세요.
 
 Issue card는 특정 취약점 또는 라이선스 문제에 대한 세부 정보와 이에 대한 해결 방안을 제시합니다.
 

@@ -37,7 +37,7 @@ Snyk Container는 컨테이너 이미지의 취약점을 찾고 수정하는 데
 가져오는 동안 오류가 발생하는 경우 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects) 정보를 참조하십시오.
 {% endhint %}
 
-## 3단계: 취약점 보기
+## 3단계: 취약점 확인
 
 이제 가져온 프로젝트에 대한 취약점 결과를 확인할 수 있습니다.
 

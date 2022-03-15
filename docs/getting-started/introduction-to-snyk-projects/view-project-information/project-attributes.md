@@ -4,20 +4,20 @@
 
 ## 사용가능한 속성 및 value
 
-**수명 주기 단계**
+### **Lifecycle stage**
 
 * Production
 * Development
 * Sandbox
 
-**비즈니스 중요도**
+### **Business criticality**
 
 * Critical
 * High
 * Medium
 * Low
 
-**환경**
+### **Environment**
 
 * Frontend
 * Backend
