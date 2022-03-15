@@ -12,7 +12,7 @@
 
 SDK는 Rego로 작성한 Custom rules를 작성, 디버그, 테스트 bundle 및 배포를 지원하며, 이 Rule을 Snyk IaC CLI에서 사용하여 IaC 구성 파일에 취약점을 찾을 수 있습니다.
 
-Snyk에 대한 자세한 내용은 [https://snyk.io](https://snyk.io)을 참조하세요.
+Snyk에 대한 자세한 내용은 [https://snyk.io](https://snyk.io)을 참조하십시오.
 
 #### 시작 방법
 
@@ -24,29 +24,29 @@ Snyk에 대한 자세한 내용은 [https://snyk.io](https://snyk.io)을 참조�
 
 ### 명령어
 
-명령어별 플래그 및 사용법, `help` 명령어를 참조하세요.(예: `snyk-iac-rules --help`)
+명령어별 플래그 및 사용법, `help` 명령어를 참조하십시오.(예: `snyk-iac-rules --help`)
 
 Available top-level SDK commands:사용가능한 최상위 SDK 명령어는 다음과 같습니다.
 
-`template` - 새로운 Rule을 작성하기위한 스캐폴딩을 생성합니다. `snyk-iac-rules template --help`를 참조하세요.
+`template` - 새로운 Rule을 작성하기위한 스캐폴딩을 생성합니다. `snyk-iac-rules template --help`를 참조하십시오.
 
-`parse` - 제공한 fixture 파일의 JSON 형식으로 반환합니다. Rego에는 JSON 입력이 필요하여 이를 사용하여 Rego Rule을 만드세요. `snyk-iac-rules parse --help`를 참조하세요.
+`parse` - 제공한 fixture 파일의 JSON 형식으로 반환합니다. Rego에는 JSON 입력이 필요하여 이를 사용하여 Rego Rule을 만드세요. `snyk-iac-rules parse --help`를 참조하십시오.
 
-`test` - 일치하는 파일에서 검색된 모든 테스트 사례를 실행합니다. `snyk-iac-rules test --help`를 참조하세요.
+`test` - 일치하는 파일에서 검색된 모든 테스트 사례를 실행합니다. `snyk-iac-rules test --help`를 참조하십시오.
 
-`build` - OPA 정책 및 데이터 파일을 bundle로 패키징합니다. `snyk-iac-rules build --help`를 참조하세요.
+`build` - OPA 정책 및 데이터 파일을 bundle로 패키징합니다. `snyk-iac-rules build --help`를 참조하십시오.
 
-`push` - `build` 명령어로 생성된 bundle을 지원하는 컨테이너 레지스트리 중 하나로 지정합니다. `snyk-iac-rules push --help`를 참조하세요.
+`push` - `build` 명령어로 생성된 bundle을 지원하는 컨테이너 레지스트리 중 하나로 지정합니다. `snyk-iac-rules push --help`를 참조하십시오.
 
 ### 경로
 
-SDK의 모든 명령어은 Rule의 위치를 지정하는 폴더에 대한 선택적 경로를 사용할 수 있습니다. `parse` 및 `push` 명령어은 이 경로가 엄격하게 필요한 유일한 명령입니다.
+SDK의 모든 명령어는 Rule의 위치를 지정하는 폴더에 대한 선택적 경로를 사용할 수 있습니다. `parse` 및 `push` 명령어는 이 경로가 엄격하게 필요한 유일한 명령입니다.
 
 절대 경로 또는 상대 경로를 제공할 수 있습니다.
 
 ### 옵션
 
-명령어별 플래그 및 사용법, `help` 명령어를 참조하세요.(예:6`snyk-iac-rules template --help`)
+명령어별 플래그 및 사용법, `help` 명령어를 참조하세요.(예:`snyk-iac-rules template --help`)
 
 #### 템플릿 옵션
 
