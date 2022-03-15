@@ -1,6 +1,6 @@
 # Snyk Container 시작하기
 
-컨테이너 이미지의 취약성을 찾고 수정하는 데 도움이 되는 Snyk Container를 시작합니다. 자세한 내용은 [Container security overview](https://support.snyk.io/hc/en-us/articles/360003946897-Container-security-overview) 및 [Snyk Container](https://solutions.snyk.io/snyk-academy/container)를 참조하십시오.
+Snyk Container는 컨테이너 이미지의 취약점을 찾고 수정하는 데 도움을 줍니다.
 
 {% hint style="info" %}
 이 프로세스에서는 Snyk.io UI를 사용합니다. Snyk CLI (Command-Line Interface) 도구를 사용하는 Snyk Container에 대한 자세한 내용은 [snyk-cli-for-container-security](snyk-cli-for-container-security/ "mention")를 참조하십시오.
@@ -10,8 +10,8 @@
 
 다음 사항이 있는지 확인하십시오.
 
-* Snyk과 함께 사용할 관련 컨테이너 레지스트리에 대한 액세스. Snyk은 Amazon Elastic Container Registry ([ECR](https://docs.snyk.io/snyk-container/image-scanning-library/ecr-image-scanning)), Google Container Registry ([GCR](https://docs.snyk.io/snyk-container/image-scanning-library/gcr-image-scanning)), Microsoft Azure Container Registry ([ACR](https://docs.snyk.io/snyk-container/image-scanning-library/acr-image-scanning)) 및 [JFrog Artifactory](https://docs.snyk.io/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning)등의 레지스트리를 지원합니다. 또는 통합으로 선택한 경우 [Kubernetes](https://docs.snyk.io/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning)에 액세스할 수 있습니다.
-* Snyk 계정([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조).
+* Snyk과 함께 사용할 관련 컨테이너 레지스트리에 대한 액세스. Snyk은  [ECR(Amazon Elastic Container Registry)](image-scanning-library/ecr-image-scanning/), [GCR(Google Container Registry)](image-scanning-library/gcr-image-scanning/),  [ACR(Microsoft Azure Container Registry)](image-scanning-library/acr-image-scanning/) 및 [JFrog Artifactory](https://docs.snyk.io/snyk-container/image-scanning-library/jfrog-artifactory-image-scanning)등의 레지스트리를 지원합니다. 또는 통합으로 선택한 경우 [Kubernetes](image-scanning-library/kubernetes-workload-and-image-scanning/)에 액세스할 수 있습니다.
+* Snyk 계정([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Snyk 제품 시작하기](../../getting-started/getting-started-snyk-products/select-snyk-product-tool.md) 참조).
 
 ## 1단계: 컨테이너 레지스트리 통합하기
 
@@ -39,7 +39,7 @@
 
 ## 3단계: 취약점 보기
 
-이제 가져온 프로젝트에 대한 취약점 결과를 볼 수 있습니다.
+이제 가져온 프로젝트에 대한 취약점 결과를 확인할 수 있습니다.
 
 **Projects**를 선택한 다음 레지스트리 레코드 아래에서 가져온 프로젝트 항목을 클릭하여 해당 프로젝트에 대한 취약점 정보를 확인하십시오.
 
@@ -56,9 +56,9 @@
 ## 4단계: 수정 및 검토
 
 1. Snyk 권장 사항에 따라 발견된 문제를 해결합니다.
-2. 이미지를 재구축하십시오.
+2. 이미지를 재구축합니다.
 3. 새 이미지를 푸시한 후 Snyk이 자동으로 다시 스캔합니다.
 
-## 자세한 내용은
+## 자세한 내용
 
 [Snyk Container](./)를 참조하십시오.
