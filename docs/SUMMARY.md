@@ -177,7 +177,7 @@
     * [Kubernetes 구성 파일 테스트 결과 작업](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/working-with-kubernetes-configuration-file-test-results.md)
     * [브로커를 사용하여 infrastructure as code 파일 감지](products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/detecting-infrastructure-as-code-files-using-a-broker.md)
   * [ARM 구성 파일 스캔](products/snyk-infrastructure-as-code/scan-arm-configuration-files.md)
-  * [Snyk CLI for Infrastructure as Code](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/README.md)
+  * [Infrastructure as Code용 Snyk CLI](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/README.md)
     * [구성 파일 테스트](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-configuration-files.md)
     * [IaC에서 .snyk 정책 파일 사용 무시](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md)
     * [CLI를 사용하여 Terraform 파일 테스트 진행](products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-terraform-files-with-the-cli-tool.md)
