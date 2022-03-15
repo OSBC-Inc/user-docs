@@ -15,7 +15,7 @@ Terraform을 스캔하면 모듈에 정적으로 구성된 모든 항목에 대�
 **전제 조건**
 
 * Snyk에서 구성하려는 조직의 관리자여야합니다.
-* 이미 Git 저장소를 통합했는지 확인하세요. 아직 수행하지 않았다면 [Git repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 확인하세요.
+* 이미 Git 저장소를 통합했는지 확인하세요. 아직 수행하지 않았다면 [Git repository (SCM) integrations](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)을 확인하십시오.
 
 **Snyk 설정**
 
