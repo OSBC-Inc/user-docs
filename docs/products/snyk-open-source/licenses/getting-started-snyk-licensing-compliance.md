@@ -8,7 +8,7 @@
 [Snyk Open Source](https://docs.snyk.io/snyk-open-source/open-source-basics) 솔루션의 일부분이며 Snyk 라이선스 컴플라이언스 관리를 시작하여 코드의 [오픈 소스 라이선스 컴플라이언스](https://snyk.io/learn/open-source-licenses/)를 확인하십시오.
 
 {% hint style="info" %}
-이 프로세스는 Snyk UI 및 [지원 가능한 소스 코드 관리 시스템](../../features/integrations/git-repository-scm-integrations/) 사용에 대해서 설명합니다.\
+이 프로세스는 Snyk UI 및 [지원 가능한 소스 코드 관리 시스템](../../../features/integrations/git-repository-scm-integrations/) 사용에 대해서 설명합니다.\
 [IDE tool](https://docs.snyk.io/integrations/ide-tools) 또는 [CI/CD integration](https://docs.snyk.io/integrations/ci-cd-integrations)을 사용하거나 [Snyk CLI tool](https://docs.snyk.io/snyk-cli/guides-for-our-cli/getting-started-with-the-cli)을 사용하여 시작할 수 있습니다.
 {% endhint %}
 
@@ -29,7 +29,7 @@
 
 각 정책에는 라이선스 위반의 심각성을 나타내는 심각도 수준과 함께 허용되는 라이선스와 사용이 금지된 라이선스를 자세히 설명하는 규칙이 포함되어 있습니다. 예를 들어 내부의 전용 라이선스 issue의 심각도 수준은 외부에서 릴리스된 issue보다 심각도 수준이 낮을 수 있습니다.
 
-![](../../.gitbook/assets/license-policy.png)
+![](../../../.gitbook/assets/license-policy.png)
 
 [Licenses overview](https://docs.snyk.io/snyk-open-source/licenses) 및 [Setting a license policy](https://docs.snyk.io/snyk-open-source/license-policies/setting-a-license-policy)를 참조하십시오.
 
@@ -37,19 +37,19 @@
 
 Snyk의 [Git 기반 통합](https://support.snyk.io/hc/en-us/sections/360001138098-Git-repository-SCM-integrations)은 일반 워크플로우의 일부로 라이선스 스캔을 지원합니다. 스캔을 진행하는 동안 라이선스 issue는 **Issues** 탭에 필터링 가능한 목록으로 나타납니다.
 
-![](<../../.gitbook/assets/image3 (1).png>)
+![](<../../../.gitbook/assets/image3 (1).png>)
 
 해당 예는 GPL-2.0 라이선스의 대한 심각도가 높은 issue와 해당 라이선스에 대한 정책에 정의된 지침을 보여줍니다.
 
 **snyk test**를 실행한 후 Snyk CLI를 사용하여 라이선스 issue를 볼 수도 있습니다.
 
-![](../../.gitbook/assets/image2-1-.png)
+![](../../../.gitbook/assets/image2-1-.png)
 
 **디펜던시 확인**
 
 Snyk은 어떠한 디펜던시가 라이선스 issue를 야기했는지 확인하기 위해 전체 디펜던시 트리에서 직접 및 전이 종속성의 라이선스 issue를 제공합니다.
 
-![](<../../.gitbook/assets/image4 (1).png>)
+![](<../../../.gitbook/assets/image4 (1).png>)
 
 해당 예는 다음과 같은 원인으로 인해 발생하는 두 가지 높은 심각도 라이선스 정책 위반이 존재합니다.
 
@@ -60,7 +60,7 @@ Snyk은 어떠한 디펜던시가 라이선스 issue를 야기했는지 확인�
 
 사용 중인 라이선스의 세부 목록을 확인하고 공유할 수 있으며 모든 오픈 소스 구성 요소 및 라이선스가 저작권 정보와 함께 나열되는 보고서를 볼 수 있습니다.
 
-![](../../.gitbook/assets/copyright.png)
+![](../../../.gitbook/assets/copyright.png)
 
 ## **3**단계: 프로세스 문제
 
@@ -70,4 +70,4 @@ Snyk은 어떠한 디펜던시가 라이선스 issue를 야기했는지 확인�
 
 ## 추가 정보
 
-[Licenses](../../products/snyk-open-source/licenses/)를 참조하십시오.
+[Licenses](./)를 참조하십시오.
