@@ -2,13 +2,13 @@
 
 다음 옵션 중 하나를 사용하여 SDK를 설치합니다.
 
-* [Install the SDK with npm](install-the-sdk.md#install-the-sdk-with-npm)
-* ​[Install the SDK using the prebuilt binaries​](install-the-sdk.md#install-the-sdk-using-the-prebuilt-binaries)
-* [Install the SDK with Homebrew](install-the-sdk.md#install-the-sdk-with-homebrew)
-* [​Install the SDK with the Windows Scoop package manager](install-the-sdk.md#install-the-sdk-with-the-windows-scoop-package-manager)
-* [Install the SDK with Docker](install-the-sdk.md#install-the-sdk-with-docker)
+* [npm을 이용하여 SDK 설치](install-the-sdk.md#npm-sdk)
+* ​[사전 빌드된 바이너리 파일을 사용하여 SDK 설치](install-the-sdk.md#sdk)
+* [Homebrew를 이용하여 SDK 설치](install-the-sdk.md#homebrew-sdk)
+* [Windows Scoop package manager를 이용하여 SDK 설치](install-the-sdk.md#windows-scoop-package-manager-sdk)
+* [Docker를 이용하여 SDK 설치](install-the-sdk.md#docker-sdk)
 
-설치 후 [Getting started](getting-started-with-the-sdk/) 가이드를 통해 Rule 작성을 시작할 수 있습니다.
+설치 후 [SDK 시작하기](getting-started-with-the-sdk/)를 통해 Rule 작성을 시작할 수 있습니다.
 
 ### npm을 이용하여 SDK 설치
 
@@ -16,7 +16,7 @@ npm을 이용하여 SDK를 설치합니다.
 
 #### 전제 조건
 
-* Node version 10 이상을 사용하여 로컬 환경에 최신 버전의 npm을 설치했는지 확인하세요.
+* Node version 10 이상을 사용하여 로컬 환경에 최신 버전의 npm을 설치했는지 확인하십시오.하십시오.
 
 #### **Steps**
 
@@ -26,7 +26,7 @@ npm을 이용하여 SDK를 설치합니다.
 npm install -g snyk-iac-rules
 ```
 
-설치했으면 SDK를 사용할 준비가 된 것입니다. 다음 명령어를 실행하여 작동하는지 확인하세요.
+설치했으면 SDK를 사용할 준비가 된 것입니다. 다음 명령어를 실행하여 작동하는지 확인하십시오.
 
 ```
 snyk-iac-rules --help
@@ -34,7 +34,7 @@ snyk-iac-rules --help
 
 ### 사전 빌드된 바이너리 파일을 사용하여 SDK 설치
 
-SDK의 사전 빌드된 바이너리 파일을 다운로드하여 사용할 수 있습니다. 사전 빌드된 바이너리를 다운로드하려면 GitHub의 SDK 저장소 페이지에 있는 [**Releases tab**](https://github.com/snyk/snyk-iac-rules/releases)을 방문하세요.
+SDK의 사전 빌드된 바이너리 파일을 다운로드하여 사용할 수 있습니다. 사전 빌드된 바이너리를 다운로드하려면 GitHub의 SDK 저장소 페이지에 있는 [**Releases tab**](https://github.com/snyk/snyk-iac-rules/releases)을 방문하십시오.
 
 ![](../../../.gitbook/assets/screenshot-2021-09-24-at-13.44.36.png)
 
@@ -45,7 +45,7 @@ $ tar xzf snyk-iac-rules_0.0.5_Darwin_x86_64.tar.gz
 $ sudo mv snyk-iac-rules /usr/local/bin
 ```
 
-설치가 완료되었는지 확인하려면 다음 명령어를 실행하세요.
+설치가 완료되었는지 확인하려면 다음 명령어를 실행하십시오.
 
 ```
 snyk-iac-rules --help
@@ -99,7 +99,7 @@ scoop install snyk-iac-rules
 
 #### **Prerequisites**
 
-* [Docker](https://docs.docker.com/get-docker/)가 이미 설치되었는지 확인하세요.
+* [Docker](https://docs.docker.com/get-docker/)가 이미 설치되었는지 확인하십시오.
 * Linux 컨테이너에서만 지원합니다.
 
 #### **Steps**

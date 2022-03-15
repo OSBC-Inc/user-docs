@@ -1,4 +1,4 @@
-# Understanding the CLI Output
+# CLI Output 이해
 
 Snyk은 제공된 구성 파일에서 이슈를 분석하고 CLI에서 직접 이슈를 해결하는 방법에 대한 조언을 제공합니다.
 
@@ -14,7 +14,7 @@ snyk iac test aws_api_gateway_stage_logging.tf
 
 이 예제는 Terraform 파일에서 출력된 것이지만, 안내문구는 Kubernetes 또는 CloudFormation을 포함한 모든 파일 형식에 적용됩니다.
 
-## 취약점 목록 - 심각도에 따라 정렬되며, 각 취약점은 다음과 같이 자세히 설명합니다
+## 취약점 목록
 
 **A clear heading line** - 탐지된 이슈, 해당 이슈의 심각도 및 특정 이슈에 대한 Snyk 정책 ID를 지정합니다.
 
