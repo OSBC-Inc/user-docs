@@ -8,17 +8,17 @@ Docker Hub와 Snyk 간의 통합을 활성화하고 취약점 관리를 시작�
 4. **Save**를 클릭하면 페이지가 새로운 선택사항과 함께 다시 로드되고 액세스토큰 필드가 공백으로 표시됩니다. 이는 정상적인 상황입니다.
 5. 세부 정보가 저장되었다는 확인 메시지도 화면 상단에 녹색으로 표시됩니다.
 
-![This is an example of a successful connection.](../../../../.gitbook/assets/Screen%20Shot%202022-01-21%20at%209.48.27%20AM.png)
+![성공적인 연결 예시](<../../../../.gitbook/assets/Configure integration for Docker Hub-1.png>)
 
 #### 연결 실패
 
 Docker Hub에 연결하지 못한 경우 오류 알림이 나타납니다.
 
-![This is an example of an unsuccessful connect: "Could not connect to Docker Hub".](../../../../.gitbook/assets/Screen%20Shot%202022-01-21%20at%209.48.50%20AM.png)
+![실패한 연결 예시: "Could not connect to Docker Hub".](<../../../../.gitbook/assets/Configure integration for Docker Hub-2.png>)
 
 ### Docker Hub 통합 문제 해결
 
-프로젝트 가져오기 실패, 연결 실패, 오류 표시 누락 등 Docker Hub 통합 문제를 해결 하는 첫번째 방법은 새로운 액세스 토큰을 생성하고 Snyk 설정 페이지에서 Docker Hub 통합을 다시 설정하는 것입니다.
+프로젝트 가져오기 실패, 연결 실패, 오류 표시 누락 등 Docker Hub 통합 문제를 해결 하는 첫번째 방법은 새로운 액세스 토큰을 생성하고 Snyk 설정 페이지에서 Docker Hub 통합을 다시 설정합니다.
 
 Docker Hub 액세스 토큰을 다시 생성하려면 다음과 같이 진행합니다.
 
