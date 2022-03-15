@@ -8,7 +8,7 @@ custom rules bundle을 성공적으로 push한 후 다음 항목을 사용하여
 * [Snyk API](using-a-remote-custom-rules-bundle.md#snyk-api)
 * [Environment variables](using-a-remote-custom-rules-bundle.md#environment-variables)
 
-마지막으로 위의 옵션 중 하나를 통해 custom rules를 적용했으면 OCI 레지스트리에서 pull 권한을 부여할 수 있도록 사용자 이름과 암호를 사용하여 Snyk CLI를 구성하세요.
+마지막으로 위의 옵션 중 하나를 통해 custom rules를 적용했으면 OCI 레지스트리에서 pull 권한을 부여할 수 있도록 사용자 이름과 암호를 사용하여 Snyk CLI를 구성하십시오.
 
 ```
 snyk config set oci-registry-username=<org registry username>
@@ -26,7 +26,7 @@ snyk config set oci-registry-password=<org registry password>
 snyk iac test <file>
 ```
 
-결과 구성 스캔 문제에는 기본 Snyk rules과 custom rules의 문제가 모두 포함됩니다. [Understanding the CLI Output](../../snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)을 참조세요.
+결과 구성 스캔 문제에는 기본 Snyk rules과 custom rules의 문제가 모두 포함됩니다. [Understanding the CLI Output](../../snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)을 참조하십시오.
 
 {% hint style="warning" %}
 bundle 경로를 정의하는 방법은 한 번에 하나만 정의해야 합니다. Snyk 설정 페이지 또는 Snyk API를 통해 custom rules 설정을 비활성화해야 합니다. 또는 `snyk config unset`을 사용하여 이전에 저장된 설정을 지웁니다.
@@ -155,7 +155,7 @@ API가 그룹 설정으로 회신하므로 사용자는 변경 사항을 확인�
 
 설정 페이지와 유사하게 [Group IaC Settings API](https://snykv3.docs.apiary.io/#reference) \*\*\*\*는 원격 bundle을 그룹의 모든 조직에 적용합니다. 조직은 API 호출을 사용하여 그룹의 구성을 재정의하고 고유한 bundle 및 태그를 정의할 수 있습니다.
 
-* 그룹의 구성을 재정의하려면 요청 본문에 다른 custom rules bundle 및 태그를 제공하여 [**Org IaC Settings API**](https://snykv3.docs.apiary.io/#reference) endpoint를 호출하세요.
+* 그룹의 구성을 재정의하려면 요청 본문에 다른 custom rules bundle 및 태그를 제공하여 [**Org IaC Settings API**](https://snykv3.docs.apiary.io/#reference) endpoint를 호출하십시오.
 
 ```
 {

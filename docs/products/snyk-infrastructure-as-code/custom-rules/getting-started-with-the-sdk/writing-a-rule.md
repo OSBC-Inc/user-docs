@@ -7,7 +7,7 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
 1. 정책 결정을 내리는 Rule을 작성하세요. Rule은 조건부 할당입니다.
 2. Rule을 정책으로 구성합니다. 정책은 계층적 이름을 가진 Rule 집합입니다.
 
-정책 언어에 대해 자세히 확인하려면 [공식 OPA 정책 언어 문서 페이지](https://www.openpolicyagent.org/docs/latest/policy-language/)를 참조하세요.
+정책 언어에 대해 자세히 확인하려면 [공식 OPA 정책 언어 문서 페이지](https://www.openpolicyagent.org/docs/latest/policy-language/)를 참조하십시오.
 
 {% hint style="info" %}
 [OPA Playground](https://play.openpolicyagent.org)를 사용하여 Rego를 사용해보거나 가이드의 예시를 실행할 수도 있습니다.
@@ -23,7 +23,7 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
     snyk-iac-rules template --rule <RULE-NAME> --format <hcl2|json|yaml|tf-plan>
     ```
 
-    이는 제공된 구성 형식을 기반으로 하는 fixture 파일을 포함하여 Rule에 대한 스캐폴딩을 생성합니다. 자세한 내용은 [documentation about the template command](../sdk-reference.md#template-options)를 참조하세요.
+    이는 제공된 구성 형식을 기반으로 하는 fixture 파일을 포함하여 Rule에 대한 스캐폴딩을 생성합니다. 자세한 내용은 [documentation about the template command](../sdk-reference.md#template-options)를 참조하십시오.
 2. Rego 정책을 처음부터 만들고 예상 파일 및 폴더 구조를 직업 일치시킵니다.\
    `rules`\
    `└── my_rule`\
@@ -40,7 +40,7 @@ Rego에서는 다음과 같이 요청을 허용하거나 거부하는 문장을 
 `allow { input.name == "alice" }` or `deny { input.name == "alice" }`
 
 {% hint style="info" %}
-`template` 명령어를 사용하여 Rule을 생성한 경우 기본 진입점은 `rules/deny`입니다. 이 Rule을 무시하고 다른 이름을 사용하려면 [Bundling Rules](bundling-rules.md)를 확인하세요.
+`template` 명령어를 사용하여 Rule을 생성한 경우 기본 진입점은 `rules/deny`입니다. 이 Rule을 무시하고 다른 이름을 사용하려면 [Bundling Rules](bundling-rules.md)를 확인하십시오.
 {% endhint %}
 
 `snyk-iac-rules` 템플릿을 실행할 때 생성된 거부 규칙의 골격은 다음과 같습니다. `--rule new-rule --form hcl2`
@@ -75,7 +75,7 @@ Snyk IaC CLI에 올바르게 표시되도록 하려면 다음 형식의 **msg** 
 속성은 다음과 같습니다.
 
 * **publicId:** COMPANY-001과 같이 사용자 고유의 이름 지정 규칙입니다. 내부 Snyk 규칙과 구별하기 위해 **"SNYK-"로 시작/포함해서는 안 됩니다**.
-* **title:** 문제를 요약한 짧은 제목입니다.e.
+* **title:** 문제를 요약한 짧은 제목입니다.
 * **severity:** **low/medium/high/critical** 중 하나일 수 있습니다.
 * **msg:** 리소스 이름 및 속성(예: `input.aws_s3_messages[%s]`)만 변경하는 것이 좋습니다.태그를 참조하십시오. 기능 `sprintf`는 Rego에서 제공하며 문제가 발견된 정확한 위치를 설명하는 동적 오류 메시지를 제공할 수 있습니다.
 
@@ -115,7 +115,7 @@ test_new_ruleryle {
 ### Example of a rule
 
 {% hint style="info" %}
-더 많은 예시는[ Custom Rules Examples](examples.md)를 참조하세요.
+더 많은 예시는[ Custom Rules Examples](examples.md)를 참조하십시오.
 {% endhint %}
 
 이 예시에서는 리소스에 `owner` 태그가 없는 경우 `msg`를 할당하도록 템플릿 규칙을 수정했습니다.
@@ -161,6 +161,6 @@ deny[msg] {
 ...
 ```
 
-이러한 규칙은 각 정의가 추가되기 때문에 `incremental` 이라고합니다. Incremental 정의에 대한 자세한내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#incremental-definitions)를 참조하세요. 동일하게 명명된 Rule이 다른값을 반환해야합니다. 그렇지 않으면 OPA가 오류를 반환합니다. 전체 정의에 대한 자세한 내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#complete-definitions)를 참조하세요.
+이러한 규칙은 각 정의가 추가되기 때문에 `incremental` 이라고합니다. Incremental 정의에 대한 자세한내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#incremental-definitions)를 참조하세요. 동일하게 명명된 Rule이 다른값을 반환해야합니다. 그렇지 않으면 OPA가 오류를 반환합니다. 전체 정의에 대한 자세한 내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#complete-definitions)를 참조하십시오.
 
-보다 복잡한 항목을 확인하려면 [how OPA resolves Conflict Resolution](https://www.openpolicyagent.org/docs/latest/faq/#conflict-resolution)을 참조하세요.
+보다 복잡한 항목을 확인하려면 [how OPA resolves Conflict Resolution](https://www.openpolicyagent.org/docs/latest/faq/#conflict-resolution)을 참조하십시오.

@@ -1,6 +1,6 @@
 # 파이프라인 내에서 IaC custom rules 통합
 
-Custom rule을 관리, 배포 및 적용하는 데 이상적인 시나리오는 [GitHub Actions](https://github.com/features/actions)와 같은 CI/CD를 사용하는 것입니다.
+Custom rule을 관리, 배포 및 적용하는 데 이상적인 시나리오는 [GitHub Actions](https://github.com/features/actions)와 같은 CI/CD를 사용하는 경우입니다.
 
 ### 개요
 
@@ -16,7 +16,7 @@ Custom rule을 관리, 배포 및 적용하는 데 이상적인 시나리오는 
 
 파이프라인을 다음과 같이 구성하려고 합니다.
 
-* 새로운 Rule이나 기존 Rule의 변경 사항이 기존 기능을 손상시키지 안흔ㄴ지 확인합니다.
+* 새로운 Rule이나 기존 Rule의 변경 사항이 기존 기능을 손상시키지 않는지 확인합니다.
 * Rule은 OCI 레지스트리의 `main`에 게시합니다.
 * 다른 파이프라인에서 Custom rules를 사용합니다.
 * (선택 사항)환경 변수를 사용하여 Custom rules를 구성합니다.
@@ -64,7 +64,7 @@ jobs:
 * `snyk-iac-rules test`를 실행하기 위한 단계를 추가했는데, 테스트 중 하나라도 실패하면 PR 검사가 실패합니다.
 
 {% hint style="info" %}
-설정에서 `main` branch를 구성해야 합니다. -> 먼저 branch를 설정하여 아무도 `main`branch에 직접 push할수 없도록 합니다.
+설정에서 **main branch**를 구성해야 합니다. -> 먼저 branch를 설정하여 아무도 **main branch**에 직접 push할 수 없도록 합니다.
 {% endhint %}
 
 ### Snyk IaC GitHub Action
@@ -178,7 +178,7 @@ jobs:
 
 ### Custom rules 적용
 
-Custom rules를 OCI 레지스트리에 게시한 후 이러한 규칙을 사용하도록 별도의 파이프라인을 구성할 수 있습니다. 이를 위해 [public Group IaC Settings API](https://snykv3.docs.apiary.io/#reference/group-settings/infrastructure-as-code/update-infrastructure-as-code-settings)를 사용하는 것입니다.
+Custom rules를 OCI 레지스트리에 게시한 후 이러한 규칙을 사용하도록 별도의 파이프라인을 구성할 수 있습니다. 이를 위해 [public Group IaC Settings API](https://snykv3.docs.apiary.io/#reference/group-settings/infrastructure-as-code/update-infrastructure-as-code-settings)를 사용합니다.
 
 구성한 Custom rules bundle을 사용하도록 Snyk을 업데이트하는 다른 작업으로 위의 Github Action을 구성합니다.
 

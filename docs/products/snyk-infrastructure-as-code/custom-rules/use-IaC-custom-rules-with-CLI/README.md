@@ -1,7 +1,7 @@
 # CLI에서 IaC custom rules 사용하기
 
 {% hint style="info" %}
-Rule의 bundle을 생성하는 방법에 대해 알아보려면 [SDK 시작하기](../getting-started-with-the-sdk/)를 참조하세요.
+Rule의 bundle을 생성하는 방법에 대해 알아보려면 [SDK 시작하기](../getting-started-with-the-sdk/)를 참조하십시오.
 {% endhint %}
 
 Snyk IaC에서는 custom rules를 사용하여 CLI에서 구성 파일을 테스트할 수 있습니다.

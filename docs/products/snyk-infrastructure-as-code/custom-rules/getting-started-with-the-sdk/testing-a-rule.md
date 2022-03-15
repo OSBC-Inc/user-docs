@@ -11,7 +11,7 @@
 `rules/my_rule/fixtures`에 따라 리소스를 저장할 고정장치 파일을 작성하거나 수정합니다. 이러한 파일에는 모든 이름이 있을 수 있으므로 `denied.tf` 및 `allowed.tf`를 예로 들 수 있습니다.
 
 {% hint style="warning" %}
-파일에는 모든 이름이 있을 수 있지만 파일 확장명에 주의를 기울입니다. Terraform Plan JSON Output이 포함된 fixture 파일에 대한 테스트를 작성하려면 테스트 라이브러리가 일반 JSON과 Terraform Plan JSON Output을 구별할 수 있도록 파일 이름 확장자가 `.json.tfplan`인지 확인하세요.
+파일에는 모든 이름이 있을 수 있지만 파일 확장명에 주의를 기울입니다. Terraform Plan JSON Output이 포함된 fixture 파일에 대한 테스트를 작성하려면 테스트 라이브러리가 일반 JSON과 Terraform Plan JSON Output을 구별할 수 있도록 파일 이름 확장자가 `.json.tfplan`인지 확인하십시오.
 {% endhint %}
 
 {% code title="rules/my_rule/fixtures/denied.tf" %}

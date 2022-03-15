@@ -50,7 +50,7 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="info" %}
-Rego 코드가 이전에 제공된 Terraform 파일을 평가하는 방법을 이해하려면 SDK가 [fixture 파일을 JSON으로 파싱하는 방법](parsing-an-input-file.md)을 확인하세요.
+Rego 코드가 이전에 제공된 Terraform 파일을 평가하는 방법을 이해하려면 SDK가 [fixture 파일을 JSON으로 파싱하는 방법](parsing-an-input-file.md)을 확인하십시오.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -319,7 +319,7 @@ deny[msg] {
 [유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
 {% endhint %}
 
-The test for this rule will look very similar to the ones from previous example and will also require its own fixture file.
+이 Rule에 대한 테스트는 이전의 테스트와 매우 유사하며 자체 설비 파일도 필요합니다.
 
 ### XOR 예제
 
