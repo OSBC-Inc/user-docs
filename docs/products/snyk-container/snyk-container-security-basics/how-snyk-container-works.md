@@ -11,17 +11,17 @@
 
 ## Snyk Container가 감지하는 것
 
-가 사용 가능한 통합을 사용하여 이미지를 스캔할 때 먼저 이미지에 설치된 소프트웨어를 찾습니다. 여기에는 다음이 포함됩니다.
+Snyk Container가 사용 가능한 통합을 사용하여 이미지를 스캔할 때 먼저 이미지에 설치된 소프트웨어를 찾습니다. 여기에는 다음이 포함됩니다.
 
 * dpkg, rpm 및 apk 운영체제 패키지
 * 관리되지 않는 일반적인 소프트웨어(패키지 매니저 외부에 설치됨)
 * 매니페스트 파일의 존재에 기반한 애플리케이션 패키지
 
-**참고:** Snyk이 파일 시스템에서 정보를 읽을 때 컨테이너를 실행할 필요가 없으므로, 성공적으로 스캔하기 위해 컨테이너나 외부 코드를 실행할 필요가 없습니다.
+**Note:** Snyk이 파일 시스템에서 정보를 읽을 때 컨테이너를 실행할 필요가 없으므로, 성공적으로 스캔하기 위해 컨테이너나 외부 코드를 실행할 필요가 없습니다.
 
 설치된 소프트웨어 목록을 확보한 후, 공용 소스 및 독점 연구를 결합하는 취약점 데이터베이스와 대조하여 찾습니다.
 
-## 지원되는 운영체제
+## 지원하는 운영체제
 
 다음을 기반으로 이미지의 취약점을 감지합니다.
 
@@ -37,7 +37,7 @@
 특정 버전 지원은 [Operating Systems Support](https://docs.snyk.io/snyk-container/snyk-container-security-basics/supported-operating-system-distributions) 페이지를 확인하고, 모든 최신 업데이트에 대해서는 [updates](https://updates.snyk.io) 페이지를 확인하십시오.
 
 {% hint style="info" %}
-**참고:** Snyk은 Distroless 이미지와 같은 관련 패키지 매니저가 없어도 해당 배포판의 패키지를 사용하여 이미지를 지원합니다.
+**Note:** Snyk은 Distroless 이미지와 같은 관련 패키지 매니저가 없어도 해당 배포판의 패키지를 사용하여 이미지를 지원합니다.
 {% endhint %}
 
 ## 관리되지 않는 소프트웨어
@@ -56,9 +56,9 @@ Snyk 서비스에 설치된 소프트웨어의 스냅샷을 저장하는 통합�
 {% hint style="info" %}
 반복 스캔은 응용 프로그램의 디펜던시에 대한 업데이트를 감지하지 못합니다. 반복 스캔에서는 응용 프로그램을 가져올 때 애플리케이션 디펜던시의 스냅샷을 사용하여 새로운 취약점을 테스트하기만 합니다.\
 \
-업데이트된 디펜던시와 같은 애플리케이션의 변경 사항을 감지하려면 Snyk에서 컨테이너 이미지를 다시 가져오십시오.&#x20;
+업데이트된 디펜던시와 같은 애플리케이션의 변경 사항을 감지하려면 Snyk에서 컨테이너 이미지를 다시 가져오십시오.
 
-다음은 이미지를 가져오는 방법에 대한 예입니다.[getting-started-snyk-container.md](../getting-started-snyk-container.md "mention")&#x20;
+다음은 이미지를 가져오는 방법에 대한 예입니다.[getting-started-snyk-container.md](../getting-started-snyk-container.md "mention")
 {% endhint %}
 
-[container security](https://snyk.io/learn/container-security/)에 대해 자세히 알아보십시오.
+[container security](https://snyk.io/learn/container-security/)를 통해 자세한 내용을 확인할 수 있습니다.
