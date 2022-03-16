@@ -2,7 +2,7 @@
 
 Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
-**지원되는 버전**: 공식적으로 지원되는 Java 버전, 운영 체제 및 Node.js 버전은 [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) 와 [Maven support](https://github.com/snyk/snyk-mvn-plugin#support)를 참조하십시오.
+**지원하는 버전**: 공식적으로 지원되는 Java 버전, 운영 체제 및 Node.js 버전은 [Gradle support](https://github.com/snyk/snyk-gradle-plugin#support) 와 [Maven support](https://github.com/snyk/snyk-mvn-plugin#support)를 참조하십시오.
 
 ## 특징
 
@@ -28,7 +28,7 @@ Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언�
 
 ## CLI parameters for Java
 
-이 섹션에서는 다음과 같이 Java 기반 프로젝트로 작업할 때 사용할 수 있는 CLI 명렁어에 대해 설명합니다.
+이 섹션에서는 다음과 같이 Java 기반 프로젝트로 작업할 때 사용할 수 있는 CLI 명령어에 대해 설명합니다.
 
 ### 전제 조건
 
@@ -36,7 +36,7 @@ Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언�
 * 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
 * [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
-### Snyk CLI parameters
+### Snyk CLI 파라미터
 
 CLI에서 Gradle 프로젝트로 작업할 때 다음 옵션을 추가하여 스캔 작동 방식을 세분화할 수 있습니다.
 
@@ -66,7 +66,7 @@ snyk test -- -prod
 
 pom.xml 파일에서 시스템 속성을 추가합니다.
 
-예:
+예제는 다음과 같습니다.
 
 패키지 버전은 pom.xml에 나타납니다.
 
@@ -183,7 +183,7 @@ Snyk으로 Gradle 프로젝트를 테스트하는데 문제가 발생하는 경�
 
 * `build.gradle`
 * `settings.gradle` (especially if we did not pick up a version of a package)
-* 다음 명령어를 통한 출력된 내용:
+* 다음 명령어를 통한 출력된 내용
   * `$ snyk test -d`
   * `$ gradle dependencies -q`
 
@@ -199,7 +199,7 @@ Snyk으로 Gradle 프로젝트를 테스트하는데 문제가 발생하는 경�
 
 lockfile이 있는 경우 Snyk은 이를 사용하여 프로젝트에 사용된 디펜던시의 최종 버전을 정확하게 해결합니다.
 
-Gradle lockfile은 다른 이점 중에서도 재현 가능한 빌드를 가능하게 하는 옵트인 기능입니다. 자세한내용은 [Gradle 디펜던시 잠금](https://docs.gradle.org/current/userguide/dependency\_locking.html)을 참조하십시오.
+Gradle lockfile은 다른 이점 중에서도 재현 가능한 빌드를 가능하게 하는 옵트인 기능입니다. 자세한 내용은 [Gradle 디펜던시 잠금](https://docs.gradle.org/current/userguide/dependency\_locking.html)을 참조하십시오.
 
 ## Git settings for Java
 

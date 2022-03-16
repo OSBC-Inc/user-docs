@@ -16,11 +16,11 @@
 
 새로운 취약점에 대한 pull request는 새로운 통합에 대해 기본적으로 활성화되어 있습니다.
 
-통합에 대한 자세한 내용은 [Git repository SCM integrations](../../../features/integrations/git-repository-scm-integrations/)을 참조하십시오.
+통합에 대한 자세한 내용은 [Git 저장소(SCM) 통합](../../../features/integrations/git-repository-scm-integrations/)을 참조하십시오.
 
 ## 통합에 대한 pull requests 활성화 또는 비활성화
 
-Enable at the global integration level:
+전역 통합 설정을 진행하는 방법은 다음과 같습니다.
 
 1. 설정으로 이동하여 ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
 2. SCM 통합(예: Github)을 선택합니다.
@@ -34,7 +34,7 @@ Enable at the global integration level:
 
 프로젝트 수준에서 활성화/비활성화를 설정하면 전역 통합 설정과 별개로 해당 프로젝트를 재정의합니다.
 
-1. **Projects**에서 프로젝트를 선택하고 **Settings**(오른쪽상단)을 선택합니다.
+1. **Projects**에서 프로젝트를 선택하고 **Settings**(오른쪽상단)를 선택합니다.
 2. **GitHub integration** 선택
 3. **Automatic fix pull requests** 섹션에서 설정을 진행합니다.
    * **Customize for only this project**를 선택합니다.

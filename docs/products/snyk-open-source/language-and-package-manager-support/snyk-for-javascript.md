@@ -20,15 +20,15 @@ Snyk을 사용하여 JavaScript 프로젝트를 스캔할 수 있습니다.
 Snyk이 디펜던시 트리를 구축한 후 [vulnerability database](https://snyk.io/vuln)를 사용하여 해당 트리의 모든 패키지에서 취약점을 찾습니다.
 
 {% hint style="info" %}
-디펜던시를 스캔하려면 관련 패키지 매니저를 설치하고 프로젝트에 지원되는 매니페스트 파일이 포함 되어있는지 확인하세요.
+디펜던시를 스캔하려면 관련 패키지 매니저를 설치하고 프로젝트에 지원되는 매니페스트 파일이 포함 되어있는지 확인하십시오.
 {% endhint %}
 
 Snyk이 트리를 분석하고 구축하는 방식은 프로젝트의 언어와 패키지 매니저, 프로젝트 위치에 따라 다릅니다.
 
 자세한 내용은 다음을 참조하십시오.
 
-* [Snyk CLI tool for JavaScript projects](snyk-for-javascript.md)
-* [Git services for JavaScript projects](snyk-for-javascript.md)
+* [Snyk CLI tool for JavaScript projects](snyk-for-javascript.md#javascript-snyk-cli)
+* [Git services for JavaScript projects](snyk-for-javascript.md#git-settings-for-javascript)
 
 ## JavaScript 프로젝트에서 Snyk CLI 사용하기
 
@@ -61,7 +61,7 @@ Snyk CLI에서는 Yarn 1, 2를 지원합니다.
 
 구조화된 디펜던시 트리를 구축하기 위해 `package.json` 파일과 `yarn.lock` 파일을 분석합니다. 만약 `yarn.lock` 파일이 누락된 경우, `node_modules` 폴더를 분석합니다.
 
-Snyk은 Yarn v2에서만 지원을합니다. Yarn v1에 대해서는 지원하지 않습니다.
+Snyk은 Yarn v2에서만 지원을 합니다. Yarn v1에 대해서는 지원하지 않습니다.
 
 ### Yarn workspaces
 
@@ -71,7 +71,7 @@ Yarn v1 & 2 workspaces 지원은 현재 snyk test, snyk monitor 명령에만 해
 
 Yarn workspaces의 경우 `--all-projects` 플래그를 사용하여 다른 프로젝트와 함께 패키지를 테스트 및 모니터링하거나 `--yarn-workspaces` 파라미터를 이용하여 yarn workspace의 프로젝트만 지정하여 스캔합니다. 모든 패키지를 스캔할 때 root lockfile이 참조됩니다. `--detection-depth` 파라미터를 사용하여 기본적으로 검색되지 않는 하위 폴더를 찾을 수 있습니다.
 
-Example usage:\
+예제는 다음과 같습니다.\
 `snyk test --all-projects --strict-out-of-sync=false --detection-depth=6` 검색된 작업 공간에 속하는 패키지를 직접 스캔하고 하위 5개의 티렉토리를 검색하여 다른 프로젝트를 찾습니다.
 
 `snyk test --yarn-workspaces --strict-out-of-sync=false --detection-depth=6` 검색된 작업 공간에 속하는 Yarn workspace 패키지만 스캔하고 하위 5개의 티렉토리를 검색합니다.
@@ -83,7 +83,7 @@ policy path를 제공하여 감지된 모든 작업 공간에 적용할 ignores/
 ### Lerna
 
 {% hint style="info" %}
-현재 Snyk은 Lerna를 지원하지 **않습니다**. \*\*\*\* 그러나 Lerna 프로젝트가 Yarn Workspaces를 사용하는 경우 표준 Yarn WorkSpaces 지원으로 프로젝트를 스캔할 수 있습니다. 다음 명령어를 통해 Snyk test/monitor를 실행하여 Snyk CLI 통합 차단을 해제할 수 있습니다.
+현재 Snyk은 Lerna를 지원하지 **않습니다**. 그러나 Lerna 프로젝트가 Yarn Workspaces를 사용하는 경우 표준 Yarn WorkSpaces 지원으로 프로젝트를 스캔할 수 있습니다. 다음 명령어를 통해 Snyk test/monitor를 실행하여 Snyk CLI 통합 차단을 해제할 수 있습니다.
 {% endhint %}
 
 각 예제 패키지에 대해 다음 명령어를 수행할 수 있습니다.
@@ -108,7 +108,7 @@ JavaScript 프로젝트에 사용하는 패키지 매니저에 따라서 `npm in
 snyk test는 로컬에 설치된 모듈을 확인하기 때문에 npm install 또는 yarn install 후에 실행해야 하며, shrinkwrap, npm enterprise 또는 가지고 있는 기타 사용자 지정 설치 논리와 원할하게 작동합니다.
 {% endhint %}
 
-**Parameters**
+**파라미터 목록**
 
 다음 옵션을 사용하여 스캔을 구체적으로 설정할 수 있습니다.
 
@@ -153,7 +153,7 @@ Yarn versions 1 & 2은 Git Services에서 지원됩니다.
 
 {% hint style="info" %}
 **Note**\
-에 대한 Git 지원은 2021년 3월 3일 이후 생성된 조직의 모든 프로젝트에 대해 활성화됩니다. 해당 날짜 이전에 생성된 조직에 대해 이 기능을 활성화하려면 support@snyk.io에 문의하십시오. Yarn version 1은 Git Services에서 지원됩니다.
+Yarn Workspaces에 대한 Git 지원은 2021년 3월 3일 이후 생성된 조직의 모든 프로젝트에 대해 활성화됩니다. 해당 날짜 이전에 생성된 조직에 대해 이 기능을 활성화하려면 support@snyk.io에 문의하십시오. Yarn version 1은 Git Services에서 지원됩니다.
 {% endhint %}
 
 Yarn Workspaces의 경우 root의 `package.json` 파일과 루트의 `yarn.lock`파일의 `packages`패턴과 일치하는 `package.json`파일을 스캔합니다.
@@ -183,5 +183,5 @@ Snyk UI에서 다음의 파라미터를 사용하여 JavaScript 기반 프로젝
 ### 언어 기본 설정 업데이트
 
 1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
-2. 설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png) > **Languages**
+2. 설정 ![](../../../.gitbook/assets/cog\_icon.png) > **Languages**
 3. **Edit settings**를 클릭하여 이 조직의 JavaScript(npm 및 Yarn) 프로젝트에 대한 기본 설정을 구성합니다.

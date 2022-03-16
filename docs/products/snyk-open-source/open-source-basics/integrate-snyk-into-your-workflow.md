@@ -1,6 +1,6 @@
 # Snyk을 워크플로우에 통합하는 방법
 
-이 문서는 Snyk이 Github 기반 워크플로우에 통합되는 방법을 제시합니다.
+이 문서는 Snyk이 Github 기반 워크플로우에 통합하는 방법을 제공합니다.
 
 ## 1단계: 환경 설정
 
@@ -44,7 +44,7 @@
 ```
 
 {% hint style="info" %}
-Tip: 이전 디펜던시 뒤에 쉼표를 누락하지 마세요.
+Tip: 이전 디펜던시 뒤에 쉼표를 추가해야 합니다.
 {% endhint %}
 
 *   Node 애플리케이션에 대한 [lock file](https://docs.npmjs.com/files/package-lock.json)을 생성합니다.
@@ -91,4 +91,4 @@ PR 워크플로우가 완료되면 Snyk 프로젝트에 설정된 취약점과 �
 
 이를 통해 보안 게이트를 설정하고 pull requests가 새로운 취약점 또는 라이선스 정책을 충족하지 않는 새로운 오픈소스 라이브러리를 소스 코드 기준에 추가하는 것을 방지할 수 있습니다.
 
-PR 확인에 대한 자세한 내용은 [GitHub integration](../../../features/integrations/git-repository-scm-integrations/github-integration.md)문서를 참조하세요.
+PR 확인에 대한 자세한 내용은 [GitHub integration](../../../features/integrations/git-repository-scm-integrations/github-integration.md)문서를 참조하십시오.

@@ -6,7 +6,7 @@ Snyk은 다양한 개발 언어를 지원하며 각 언어마다 여러 빌드 �
 
 [FossID](https://fossid.com)를 인수한 후 Snyk은 FossID의 핑거 프린팅을 이용하여 관리되지 않는 패키지를 식별할 수 있습니다. 현재 Snyk CLI에서도 이 기능을 제공하기 위해 노력하고 있습니다.
 
-이 문서는 개발 언어 지원에 대해 설명합니다. 자세한 내용은 [Language and package manager support](https://support.snyk.io/hc/en-us/sections/360001087857-Language-package-manager-support)를 참조하세요.
+이 문서는 개발 언어 지원에 대해 설명합니다. 자세한 내용은 [Language and package manager support](https://support.snyk.io/hc/en-us/sections/360001087857-Language-package-manager-support)를 참조하십시오.
 
 ## 개발 언어 및 패키지 매니저/빌드 도구
 
