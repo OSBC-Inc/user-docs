@@ -146,7 +146,7 @@ CLI에서 전체 flags 목록을 보려면 **snyk --help** 또는 **snyk contain
 * **--severity-threshold=high**: 높은 심각도 문제에 대해서만 빌드 실패:
 * **--fail-on=upgradable**: 업그레이드 가능한 문제에 대해서만 빌드 실패(Snyk 수정 조언을 통해 해결할 수 있음):
 
-또한 Snyk JSON 출력의 다른 파라미터(예: CVSS 점수)에 대해 [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 wrapper를 사용하여 빌드에 실패하거나 [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 문제에 대해서만 빌드를 실패할 수 있습니다.
+또한 Snyk JSON 출력의 다른 파라미터(예: CVSS 점수)에 대해 [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 wrapper를 사용하여 빌드에 실패하거나 [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 Issue에 대해서만 빌드를 실패할 수 있습니다.
 
 ## 사용자 지정 빌드 아티팩트 작성
 
@@ -160,7 +160,7 @@ Snyk을 사용하면 JIRA에서 새 작업 항목을 자동으로 생성할 수 
 
 ## Issues 무시
 
-기본적으로 issues를 무시하지 않거나 Snyk-delta를 사용하지 않는 경우 문제가 발견될 때 파이프라인의 “snyk test”가 빌드에 실패합니다. 이러한 문제를 해결하지 않고 빌드를 계속하려면 다음을 수행할 수 있습니다.
+기본적으로 Issue를 무시하지 않거나 Snyk-delta를 사용하지 않는 경우 문제가 발견될 때 파이프라인의 “snyk test”가 빌드에 실패합니다. 이러한 문제를 해결하지 않고 빌드를 계속하려면 다음을 수행할 수 있습니다.
 
 * [Ignore issues using a Snyk policy file](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli)
 * [Ignore issues from the Snyk UI](https://support.snyk.io/hc/en-us/articles/360000923498-How-can-I-ignore-a-vulnerability-)
@@ -220,7 +220,7 @@ snyk test --yarn-workspaces --policy-path=src/.snyk
 
 ### Monorepo
 
-일부 고객은 단일 저장소에 여러 언어, 패키지 관리자 및 프로젝트가 포함된 복잡한 프로젝트를 가지고 있습니다. 이를 용이하게 하기 위해 다음과 같은 다양한 방법을 사용할 수 있습니다.
+일부 고객은 단일 저장소에 여러 언어, 패키지 매니저 및 프로젝트가 포함된 복잡한 프로젝트를 가지고 있습니다. 이를 용이하게 하기 위해 다음과 같은 다양한 방법을 사용할 수 있습니다.
 
 *   각 프로젝트/언어를 작성할 때 snyk test를 실행하고 특정 프로젝트 파일을 대상으로 지정하는 지시문을 추가합니다. 예제는 다음과 같습니다.
 

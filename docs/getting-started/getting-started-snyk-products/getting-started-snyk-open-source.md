@@ -79,9 +79,9 @@ Snyk은 일부 언어의 경우 pull/merge requests를 사용하여 취약점을
 
 취약점을 수정하기 위해 다음과 같이 진행합니다.
 
-1. **Fix this vulnerability**를 클릭하여 업그레이드(또는 패치)하여 개별 issue를 해결하거나 **Fix these vulnerabilities**를 클릭하여 여러 issue를 일괄 수정합니다.
+1. **Fix this vulnerability**를 클릭하여 업그레이드(또는 패치)하여 개별 issue를 해결하거나 **Fix these vulnerabilities**를 클릭하여 여러 Issue를 일괄 수정합니다.
 2. **Open a Fix PR**이 나타나고 선택한 취약점이 표시됩니다.
-3. 수정하려는 추가적인 issue를 선택하거나 항목을 취소하여 수정 사항에서 제거할 수 있습니다.
+3. 수정하려는 추가적인 Issue를 선택하거나 항목을 취소하여 수정 사항에서 제거할 수 있습니다.
 4. 화면 하단의 **Open a Fix PR**을 클릭합니다.
 5. Snyk이 PR을 실행하면 결과 화면이 나타납니다.
 6. 추가적으로 **Files changed**탭에서 변경 사항에 대한 세부 정보를 확인합니다.

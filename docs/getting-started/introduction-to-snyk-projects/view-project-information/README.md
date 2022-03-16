@@ -2,7 +2,7 @@
 
 ## 애플리케이션 취약점 보기
 
-Snyk은 프로젝트의 파일에 대한 애플리케이션 취약점과 라이선스 issue를 표시합니다. 이러한 취약점을 확인하려면 [projects 탭](https://app.snyk.io/projects)으로 이동한 다음 프로젝트와 연결된 파일을 선택하십시오. 예를 들어 애플리케이션 goof의 package.json파일은 다음과 같습니다.
+Snyk은 프로젝트의 파일에 대한 애플리케이션 취약점과 라이선스 Issue를 표시합니다. 이러한 취약점을 확인하려면 [projects 탭](https://app.snyk.io/projects)으로 이동한 다음 프로젝트와 연결된 파일을 선택하십시오. 예를 들어 애플리케이션 goof의 package.json파일은 다음과 같습니다.
 
 ![](../../../.gitbook/assets/application-vuln.png)
 
@@ -11,7 +11,7 @@ Snyk은 프로젝트의 파일에 대한 애플리케이션 취약점과 라이�
 ![](../../../.gitbook/assets/project-page.png)
 
 * **Header**: 프로젝트 요약 정보를 확인할 수 있습니다. [프로젝트 정보 보기](./)를 참조하십시오.
-* **Issue cards**: 발견된 issue의 요약된 정보를 표시합니다. [Issue card](../issue-card-information.md)를 참조하십시오.
+* **Issue cards**: 발견된 Issue의 요약된 정보를 표시합니다. [Issue card](../issue-card-information.md)를 참조하십시오.
 * **Views**:
   * **Overview**: [프로젝트 issues, fixes, dependencies](../view-project-issues-remediations-and-dependencies.md)를 표시합니다.
   * **History**: 최근 4개의 테스트에 대한 기록 스냅샷을 제공합니다. [프로젝트 기록 보기](../view-project-history.md)를 참조하십시오.

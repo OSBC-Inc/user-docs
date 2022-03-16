@@ -72,12 +72,12 @@ Common Weakness Enumeration의 약자로, 소프트웨어 및 하드웨어의 �
 
 응용 프로그램에서 다른 패키지를 사용하면 이 다른 패키지가 사용자 소프트웨어에 종속됩니다.
 
-* direct dependency는 사용자가 자신의 프로젝트에 포함하는 패키지입니다.
-* indirect dependency(deep, chained 또는 transitive dependency라고도 함)는 direct dependency 중 하나에 사용되는 패키지입니다.
+* 직접 의존성은 사용자가 자신의 프로젝트에 포함하는 패키지입니다.
+* 간접 의존성(deep, chained 또는 transitive dependency라고도 함)은 직접 의존성 중 하나에 사용되는 패키지입니다.
 
 ### Dependency tree
 
-Dependency path라고도 하며, 소프트웨어 애플리케이션의 종속성을 보여주는 계층적 그래프이다. 여기에는 direct 및 indirect dependencies가 모두 포함되며, 많은 수준의 의존성이 포함될 수 있다.
+Dependency path라고도 하며, 소프트웨어 애플리케이션의 종속성을 보여주는 계층적 그래프이다. 여기에는 직접  및 간접 의존성 모두 포함되며, 많은 수준의 의존성이 포함될 수 있다.
 
 ### DevOps
 
@@ -189,7 +189,7 @@ Snyk의 조직은 프로젝트를 수집하고 구성하는 방법입니다. 그
 
 ### Pinnable
 
-수정 유형 중 하나이며, 취약한 버전을 가져오는 direct dependency를 피하기 위해 indirect dependency의 특정 버전을 정의하고 “pin”합니다.
+수정 유형 중 하나이며, 취약한 버전을 가져오는 직접 의존성을 피하기 위해 간접 의존성의 특정 버전을 정의하고 “pin”합니다.
 
 ### PR
 
@@ -197,7 +197,7 @@ Pull Request의 약자로, 사용자가 소스 코드의 변경 사항을 반영
 
 ### Priority Score
 
-Snyk는 issues(취약점 및 라이선스)를 점수화하여 각각의 issue 해결의 우선순위를 정하는 데 도움이 됩니다. 점수는 CVSS 점수를 포함한 여러 요소를 기반으로 하며 0(낮음)에서 1000(높음) 사이의 범위를 가집니다. [Snyk 우선순위 점수](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score)를 참조하십시오.
+Snyk는 Issue(취약점 및 라이선스)를 점수화하여 각각의 Issue 해결의 우선순위를 정하는 데 도움이 됩니다. 점수는 CVSS 점수를 포함한 여러 요소를 기반으로 하며 0(낮음)에서 1000(높음) 사이의 범위를 가집니다. [Snyk 우선순위 점수](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score)를 참조하십시오.
 
 ### Project
 

@@ -25,10 +25,10 @@
     * [프로젝트 정보 보기](getting-started/introduction-to-snyk-projects/view-project-information/README.md)
       * [프로젝트 속성](getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)
       * [프로젝트 태그](getting-started/introduction-to-snyk-projects/view-project-information/project-tags.md)
-    * [프로젝트 issues, fixes, dependencies 확인](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
-    * [프로젝트 설정 를](getting-started/introduction-to-snyk-projects/view-project-settings.md)
+    * [프로젝트 issues, fixes, dependencies 보기](getting-started/introduction-to-snyk-projects/view-project-issues-remediations-and-dependencies.md)
+    * [프로젝트 설정 보기](getting-started/introduction-to-snyk-projects/view-project-settings.md)
     * [프로젝트 기록 보기](getting-started/introduction-to-snyk-projects/view-project-history.md)
-    * [Issue card](getting-started/introduction-to-snyk-projects/issue-card-information.md)
+    * [Issue card 정보](getting-started/introduction-to-snyk-projects/issue-card-information.md)
     * [조직의 최대 프로젝트 수](getting-started/introduction-to-snyk-projects/maximum-number-of-projects-in-an-organsation.md)
   * [Snyk dashboard 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
 

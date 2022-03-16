@@ -19,8 +19,8 @@ Snyk SCM 통합을 통해 다음을 수행할 수 있습니다.
 | <p><a href="snyk-scm-integration-good-practices.md">1단계</a></p><p>SCM 통합을 설정합니다.</p>                                   | 각 [SCM integration](../features/integrations/git-repository-scm-integrations/)에 대한 구성 설명서 참조                                                                | 프로젝트를 가져올 준비가 된 구성된 통합                                    |
 | <p><a href="snyk-scm-integration-good-practices.md">2단계</a></p><p>SCM에서 모든 프로젝트를 가져옵니다.</p>                            | <p>- public 및 private 저장소 모두 테스트</p><p>- 모든 사용자 알림 비활성화</p><p>- Snyk PR 검사 비활성화</p><p>- 자동 수정 PR 비활성화</p><p>- 실패한 PR 검사 비활성화</p><p>- 자동 디펜던시 업그레이드 비활성화</p> | 애플리케이션 전체의 위험을 평가할 수 있는 완전한 소프트웨어 BOM(Bill of Materials)  |
 | <p><a href="snyk-scm-integration-good-practices.md">3단계</a></p><p>개발자 및 보안 팀은 Snyk의 우선순위 보고 기능을 사용하여 수정 계획을 수립합니다.</p> | Snyk 우선순위 보고에 대해 자세히 알아보려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                                      | 무엇을 수정해야 하고 언제 수정 프로세스를 간소화할지에 대해 개발자와 보안 팀간의 조정          |
-| <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 issue를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>     | <p>- 사용 가능한 수정 사항과 함께 심각도가 높은 문제가 포함된 경우 Snyk PR 검사 및 실패한 PR 활성화</p><p>- 자동 수정 PR 사용</p>                                                                    | 조직이 취약점을 더 빠르게 수정 가능                                      |
-| <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | - 심각도가 높은 issue(수정 또는 수정 안 함)에 대해 실패한 PR 검사 활성화                                                                                                             | ‘Secure by Design’ 방법론 달성                                 |
+| <p><a href="snyk-scm-integration-good-practices.md">4단계</a></p><p>개발자에게 실시간으로 Issue를 경고하고 수정 가능한 사항에 대해 알려줍니다.</p>     | <p>- 사용 가능한 수정 사항과 함께 심각도가 높은 문제가 포함된 경우 Snyk PR 검사 및 실패한 PR 활성화</p><p>- 자동 수정 PR 사용</p>                                                                    | 조직이 취약점을 더 빠르게 수정 가능                                      |
+| <p><a href="snyk-scm-integration-good-practices.md">5단계</a></p><p>개발자가 새로운 취약점을 들어오지 못하도록 방지합니다.</p>                   | - 심각도가 높은 Issue(수정 또는 수정 안 함)에 대해 실패한 PR 검사 활성화                                                                                                             | ‘Secure by Design’ 방법론 달성                                 |
 | <p><a href="snyk-scm-integration-good-practices.md">6단계</a></p><p>기술 보안 부채 감소</p>                                      | - 자동 디펜던시 업그레이드 사용                                                                                                                                          | 연구 및 해결에 시간이 많이 소요될 수 있는 향후 설계 문제 및 긴급한 수정 사항을 줄일 수 있습니다. |
 
 ## 1단계: SCM 통합 설정
@@ -60,7 +60,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 ### 알림 설정 변경
 
-기본적으로 프로젝트 디펜던시의 새로운 issue 또는 수정 사항이 발견되면 Snyk은 조직 내 모든 사용자에게 메일을 통해 조직 전체의 보안 상태를 알립니다. 많은 프로젝트를 조직으로 가져오려는 경우 사용자에게 너무 많은 이메일 알림이 전송되지 않도록 해당 조직에 대한 모든 알림을 비활성화할 수 있습니다.
+기본적으로 프로젝트 디펜던시의 새로운 Issue 또는 수정 사항이 발견되면 Snyk은 조직 내 모든 사용자에게 메일을 통해 조직 전체의 보안 상태를 알립니다. 많은 프로젝트를 조직으로 가져오려는 경우 사용자에게 너무 많은 이메일 알림이 전송되지 않도록 해당 조직에 대한 모든 알림을 비활성화할 수 있습니다.
 
 조직 내 사용자가 수신하는 이메일을 설정하려면 조직의 settings ![](../.gitbook/assets/cog\_icon.png) > **Notifications**로 이동합니다. 여기서 변경한 내용은 조직의 모든 구성원에게 영향을 미치지만, 조직 내 사용자는 사용자 수준 계정 설정에서 이러한 기본 설정을 재정의할 수 있습니다.
 
@@ -95,9 +95,9 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 "Details" 링크를 클릭하면 Snyk 검사에서 다음과 같은 상태가 나타날 수 있습니다.
 
-* **Success**: 식별된 issue가 없고 모든 검사를 통과함
+* **Success**: 식별된 Issue가 없고 모든 검사를 통과함
 * **Processing**: Snyk 테스트가 끝날 때까지 표시됨
-* **Failure**: 검사를 통과하기 위한 수정해야 하는 issue가 식별된 경우
+* **Failure**: 검사를 통과하기 위한 수정해야 하는 Issue가 식별된 경우
 * **Error**: 매니페스트 파일이 동기화되지 않았거나, Snyk이 매니페스트 파일을 읽을 수 없거나, Snyk이 매니페스트 파일을 찾을 수 없을 때 오류가 발생합니다.
 
 ![](../.gitbook/assets/security-check.png)
@@ -119,7 +119,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 ![](../.gitbook/assets/main.png)
 
 {% hint style="info" %}
-라이선스 정책을 사용하여 라이선스 issue로 인해 Snyk이 PR에 실패하는 것을 방지할 수 있습니다. 자세한 내용은 [라이선스 정책](https://support.snyk.io/hc/en-us/sections/360002249578-License-Policies)을 참조하십시오.
+라이선스 정책을 사용하여 라이선스 Issue로 인해 Snyk이 PR에 실패하는 것을 방지할 수 있습니다. 자세한 내용은 [라이선스 정책](https://support.snyk.io/hc/en-us/sections/360002249578-License-Policies)을 참조하십시오.
 {% endhint %}
 
 **초기 단계: visibility** 및 **fail conditions** 설정
@@ -128,9 +128,9 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 1. 이를 조직 또는 특정 프로젝트에 적용하기로 결정합니다.
 2. 조건을 설정합니다.
-   * **예) Only fail when the PR is adding a dependency with issues** : PR이 issue가 있는 디펜던시를 추가하는 경우에만 실패
-   * **예)** **Only Fail for high severity issues** : 심각도가 높은 issue에 대해서만 실패
-   * **예) Only fail when the issues found have a fix available** : 발견된 issue에 수정 가능한 사항이 있는 경우에만 실패
+   * **예) Only fail when the PR is adding a dependency with issues** : PR이 Issue가 있는 디펜던시를 추가하는 경우에만 실패
+   * **예)** **Only Fail for high severity issues** : 심각도가 높은 Issue에 대해서만 실패
+   * **예) Only fail when the issues found have a fix available** : 발견된 Issue에 수정 가능한 사항이 있는 경우에만 실패
 
 ## 4단계: **정책에 따른** PRs
 
@@ -139,11 +139,11 @@ Snyk을 SDLC에 포함하고 Snyk에 대한 개발자의 인지를 높인 후에
 **예)**
 
 * **낮은 우선 순위의 프로젝트**: 수정 가능한 새로운 높은 심각도에 대해서만 PR을 실패할 수 있습니다.
-* **중간 우선 순위의 프로젝트**: 심각도가 높은 issue에 대해서만 PR에 실패합니다.
-* **높은 우선 순위의 프로젝트(PCI/GDPR compliance)**: 모든 issue에 대해 PR에 실패합니다.
+* **중간 우선 순위의 프로젝트**: 심각도가 높은 Issue에 대해서만 PR에 실패합니다.
+* **높은 우선 순위의 프로젝트(PCI/GDPR compliance)**: 모든 Issue에 대해 PR에 실패합니다.
 
 {% hint style="info" %}
-취약점 심각도를 내부 정책에 맞추려면 보안 정책을 사용하여 issue의 심각도를 변경하고 관련 프로젝트 특성에 연결하십시오. 자세한 내용은 [보안 정책](https://support.snyk.io/hc/en-us/sections/360004225818-Security-Policies)을 참조하십시오.
+취약점 심각도를 내부 정책에 맞추려면 보안 정책을 사용하여 Issue의 심각도를 변경하고 관련 프로젝트 특성에 연결하십시오. 자세한 내용은 [보안 정책](https://support.snyk.io/hc/en-us/sections/360004225818-Security-Policies)을 참조하십시오.
 {% endhint %}
 
 ## 5단계: 자동 수정 PRs
@@ -169,7 +169,7 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 ![](<../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (20).png>)
 
 {% hint style="info" %}
-Snyk 자동 수정 PR은 새로운 issue에 대해서만 생성됩니다.
+Snyk 자동 수정 PR은 새로운 Issue에 대해서만 생성됩니다.
 {% endhint %}
 
 당신의 SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk은 모든 Org 사용자의 인증 정보을 확인하여 자동 수정 PR을 엽니다. 필요한 경우 이 설정을 변경하고 사용자 인증 정보를 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [Opening fix and upgrade pull requests from a fixed GitHub account](../features/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)를 참조하십시오.

@@ -35,7 +35,7 @@ Snyk으로 스캔을 시작하려면 컨테이너에 대한 프로젝트를 추�
 프로젝트 추가 중 오류가 발생하면 [Importing projects](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하십시오.
 {% endhint %}
 
-## 3단계: 취약점 확인
+## 3단계: 취약점 보기
 
 이제 가져온 프로젝트에 대한 취약점 결과를 볼 수 있습니다.
 
