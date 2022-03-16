@@ -170,23 +170,21 @@ Snyk을 사용하면 JIRA에서 새 작업 항목을 자동으로 생성할 수 
 
 #### Gradle & Scala
 
-* “다중 프로젝트” 구성의 경우, 모든 하위 프로젝트를 테스트하고, `monitor` 또는 `test` 명령과 함께 다음 flag를 사용합니다. `--all-sub-projects`
-* 특정 구성을 스캔하려면 디펜던시를 해결할 특정 구성 값을 선택해야 합니다. 다음 flag를 `test` 또는 `monitor` 명령과 함께 사용합니다. `--configuration-attributes=`
+* “다중 프로젝트” 구성의 경우 모든 하위 프로젝트를 테스트합니다. `--all-sub-projects` 옵션은 `monitor` 또는 `test` 명령과 함께 사용합니다.
+* 특정 구성을 스캔하려면 구성 특성 값을 선택하여 디펜던시를 해결합니다. `configuration-attributes=` 옵션은 `test` 명령 또는 `monitor` 명령과 함께 사용합니다.
 
 #### Python
 
-*   Snyk은 Python을 사용하여 사용자의 디펜던시를 스캔하고 찾습니다. Snyk은 스캔을 시작하기 위해서는 Python 버전이 필요하며 기본값은 “python”입니다. 여러 Python 버전을 사용하는 경우 이 파라미터를 사용하여 실행을 위한 올바른 Python 명령을 지정합니다.
-
-    `test` 또는 `monitor` cmd와 함께 다음 flag를 사용하여 Python 버전을 지정합니다. `--command=` 를 사용하는 예제는 다음과 같습니다.
+*   Snyk은 Python을 사용하여 디펜던시를 스캔하고 찾습니다. Snyk은 스캔을 시작하기 위해서는 Python 버전이 필요하며 기본값은 “python”입니다. 여러 Python 버전을 사용하는 경우 `test` 또는 `monitor` 명령과 함께 `-command=` 옵션을 사용하여 올바른 Python 명령을 실행합니다. 예제는 다음과 같습니다.
 
     ```
     snyk test --command=python3
     ```
-* 매니페스트 파일이 `requirement.txt`의 표준이 아니므로 Pip 프로젝트를 검색하고 `--file=`을 사용하는 경우 `--package-manager=pip` 플래그를 사용하여 Pip를 패키지 매니저로 지정해야 합니다.
+* 매니페스트 파일이 표준 `requirement.txt`의 가 아니기 때문에 Pip 프로젝트를 스캔하고 `--file=`옵션을 사용하는 경우, `--package-manager=pip`통해 Pip를 패키지 매니저로 지정해야 합니다.
 
 #### .Net
 
-.sln 파일을 사용하는 경우 파일의 경로를 지정할 수 있으며, Snyk은 repo의 일부인 모든 하위 프로젝트를 스캔합니다. 예제는 다음과 같습니다.
+`.sln` 파일을 사용하는 경우 파일의 경로를 지정할 수 있으며 Snyk은 저장소의 일부인 모든 하위 프로젝트를 스캔합니다. 예제는 다음과 같습니다.
 
 ```
 snyk test --file=sln/.sln
@@ -194,22 +192,20 @@ snyk test --file=sln/.sln
 
 #### Yarn Workspace
 
-Yarn workspace의 경우 **--yarn-workspaces** flag를 사용하여 패키지를 테스트하고 모니터링합니다. root lockfile은 모든 패키지를 검색할 때 참조됩니다. -**-detection-depth** 파라미터를 사용하여 기본적으로 자동 검색되지 않는 하위 폴더를 찾습니다.
+Yarn workspace의 경우 `--yarn-workspaces` 옵션을 사용하여 패키지를 테스트하고 모니터링합니다. root lockfile은 모든 패키지를 스캔할 때 참조됩니다. `--detection-depth` 옵션을 사용하여 기본적으로 자동 스캔되지 않는 하위 폴더를 찾습니다.
 
 {% hint style="info" %}
 **Note**\
-Yarn workspaces는 현재 **snyk test** 및 **snyk monitor** 명령만 지원합니다.
+Yarn workspaces는 현재 `snyk test` 및 `snyk monitor` 명령만 지원합니다.
 {% endhint %}
 
-예제는 다음과 같습니다.
+예: 현재 디렉토리와 5개의 하위 디렉토리에서 검색된 워크스페이스에 속하는 패키지만 스캔합니다.
 
 ```
 snyk test --yarn-workspaces --detection-depth=6
 ```
 
-이 디렉토리와 깊이 5개의 하위 디렉토리가 검색된 작업 영역에 속한 패키지만 검색합니다.
-
-정책 경로를 제공하여 탐지된 모든 작업 공간에 적용되도록 한 곳에서 무시/패치를 유지하는 경우 공통 **.snyk** 정책 파일을 사용할 수 있습니다.
+탐지된 모든 워크스페이스에 적용할 무시 및 패치를 한 곳에서 관리하는 경우 다음과 같이 policy file의 경로를 제공하여 공통 .snyk 정policy file을 사용할 수 있습니다.
 
 ```
 snyk test --yarn-workspaces --policy-path=src/.snyk
@@ -219,95 +215,85 @@ snyk test --yarn-workspaces --policy-path=src/.snyk
 
 일부 고객은 단일 저장소에 여러 언어, 패키지 매니저 및 프로젝트가 포함된 복잡한 프로젝트를 가지고 있습니다. 이를 용이하게 하기 위해 다음과 같은 다양한 방법을 사용할 수 있습니다.
 
-*   각 프로젝트/언어를 작성할 때 snyk test를 실행하고 특정 프로젝트 파일을 대상으로 지정하는 지시문을 추가합니다. 예제는 다음과 같습니다.
+*   각 프로젝트/언어를 빌드할 때 `snyk test`를 실행하고 특정 프로젝트 파일을 대상으로 지정하는 지시문을 추가합니다. 예제는 다음과 같습니다.
 
     ```
     snyk test --file=package.json
     ```
 
-    각 프로젝트의 디펜던시를 설치한 후 특정 아티팩트(예: **pom.xml**)를 가리키는 비슷한 호출을 수행합니다. 이 방법은 빠르고 효율적이지만 특히 프로젝트가 익숙하지 않은 경우 확장하기 어려울 수 있습니다.
-* **--all-projects** 및 **--detection-depth** 인수를 사용합니다. 그러면 Snyk CLI 또는 CI/CD 플러그인은 폴더 구조에서 지원되는 파일 유형과 일치하는 매니페스트에 대해 **--detection-depth**까지 검색합니다. 각 프로젝트는 검사되고 자체 결과가 있습니다. 마찬가지로 **snyk-monitor**를 사용하는 경우 각 프로젝트에 대해 별도의 결과가 작성됩니다. 이것은 특히 node, .net, python 등에 걸친 프로젝트가 있는 경우 스캔을 자동화하는 좋은 방법입니다.
-
-**Gradle에만 해당하는 경우**
-
-* 대부분의 Gradle 프로젝트에서 **--all-projects**를 사용하면 다음과 같은 형태로 백그라운드에서 Gradle 관련 옵션을 호출할 수 있습니다.
-
-```
-  snyk test --file=build.gradle --all-sub-projects
-```
-
-when it finds the build file as part of the **--all-projects** search
-
-* Gradle에는 추가 구성 파라미터가 필요할 수 있습니다. 이 경우 첫 번째 옵션에서 언급한 것처럼 다른 언어/패키지매니저에 대해 \*\*--file=\*\*을 사용하여 다른 아티팩트를 대상으로 지정합니다. 그런 다음 **--all-sub-projects** 및 잠재적으로 **--configuration-matching** 및 --configuration-matching을 사용하여 복잡한 gradle 프로젝트를 스캔해야 합니다.
+    각 프로젝트의 디펜던시를 설치한 후 특정 아티팩트(예: `pom.xml`)를 가리키는 비슷한 호출을 수행합니다. 이 방법은 빠르고 효율적이지만 특히 프로젝트가 익숙하지 않은 경우 확장하기 어려울 수 있습니다.
+* `--all-projects` 및 `--detection-depth` 옵션을 사용하는 경우 Snyk CLI 또는 CI/CD 플러그인은 지원되는 파일 유형과 일치하는 매니페스트에 대해 폴더 구조의 `--detection-depth`까지 검색합니다. 각 프로젝트는 스캔되고 자체 결과가 있습니다. 마찬가지로 `snyk-monitor`를 사용하는 경우 각 프로젝트에 대해 별도의 결과가 생성됩니다. 이것은 특히 node, .net, python 등에 걸친 프로젝트가 있는 경우 스캔을 자동화하는 좋은 방법입니다.
+* 대부분의 Gradle 프로젝트에서 `--all-projects`를 사용하면 `--all-projects` 검색의 일부로 빌드 파일을 찾을 때 다음과 같은 형식으로 백그라운드에서 Gradle 고유의 옵션을 호출할 수 있습니다. `snyk test --file=build.gradle --all-sub-projects`&#x20;
+* Gradle에는 추가 설정 매개변수가 필요할 수 있습니다. 이 경우 다른 언어 및 패키지 매니저의 각 매니페스트에 대해 `--file=`을 사용하여 다른 아티팩트를 대상으로 합니다. 그런 다음 `--all-sub-projects` 및 `--configuration-matching`을 사용하여 복잡한 Gradle 프로젝트를 할 수도 있습니다.
 
 자세한 내용은 [Snyk for Java (Gradle, Maven)](https://support.snyk.io/hc/en-us/articles/360003817357-Java-for-Snyk)를 참조하십시오.
 
 ### Snyk 컨테이너별 전략
 
-파이프라인에서 Snyk Container를 구현하는 가장 좋은 단계는 컨테이너 이미지가 빌드된 후(“docker build”와 동등한 단계를 실행한 후)와 이미지가 레지스트리에 푸시되거나 실행중인 인프라에 배포되기 전입니다. (“helm install”, “kubectl apply” 등).
+파이프라인에서 Snyk Container를 구현하는 가장 좋은 단계는 컨테이너 이미지가 빌드된 후(“docker build”와 동등한 실행 후)와 이미지가 레지스트리에 푸시되거나 실행중인 인프라에 배포되기 전입니다. (“helm install”, “kubectl apply” 등).
 
-일반적으로 컨테이너 빌드 테스트 배포 파이프라인을 실행하는 방법은 빌드 에이전트에서 도커 데몬을 사용할 수 있는지 여부에 따라 달라집니다.
+일반적으로 컨테이너 빌드-테스트-배포 파이프라인을 실행하는 방법은 빌드 에이전트에서 Docker 데몬을 사용할 수 있는지 여부에 따라 달라집니다.
 
 **Docker 데몬을 사용할 수 있는 경우 파이프라인 실행**
 
-If:
+다음 상황이 있는 경우:
 
-* Docker가 기본적으로 설치된 호스트에서 직접 빌드 도구(예: Jenkins)를 실행하고 있습니다.
-* 파이프라인 작업은 도커 소켓 \[/var/run/docker.sock] 바인드가 호스트에 마운트된 컨테이너 내에서 실행됩니다.
-* Docker-inside-Docker setup을 실행하고 있습니다.
+* Docker가 기본적으로 설치된 호스트에서 직접 빌드 도구(예: Jenkins)를 실행하고 있는 경우
+* 파이프라인 작업은 Docker 소켓 \[/var/run/docker.sock] 호스트에 bind-mounted 컨테이너 내에서 실행되는 경우
+* Docker-inside-Docker setup을 실행하고 있는 경우
 
-Snyk은 다음 항목을 도울 수 있습니다.
+Snyk은 다음과 같이 도울 수 있습니다.
 
-* snyk 컨테이너 테스트 **snyk container test $IMAGE\_NAME**을 실행하면, Snyk은 로컬 데몬의 저장소에서 해당 이미지를 찾고, 이미지가 없는 경우 업스트림 레지스트리에서 도커와 동등한 작업을 수행하여 다운로드합니다.
-* 레지스트리 인증의 경우 Snyk은 이미 구성한 인증을 사용합니다(**docker login** 등).
-* 명령줄에 **--file=Dockerfile**을 지정하여 이미지 취약점 결과를 만든 Dockerfile과 연결하고 인라인 수정 조언 및 대체 기본 이미지 제안을 받을 수 있습니다.
+* `snyk container test $IMAGE_NAME`을 실행하면 Snyk은 로컬 데몬의 스토리지에서 해당 이미지를 찾습니다.이미지가 없는 경우 업스트림 레지스트리에서 다운로드하기 위해 **docker pull**과 동일한 작업을 수행합니다.
+* 레지스트리 인증의 경우 Snyk은 이미 설정한 인증 정보(Docker 로그인 등)를 사용합니다.
+* 명령줄에 `--file=Dockerfile`을 지정하여 이미지 취약점 결과를 빌드한 Dockerfile과 연결하고 인라인 수정 조언 및 대체 기본 이미지 제안을 받을 수 있습니다.
 
 **Docker 데몬을 사용할 수 없는 경우 파이프라인 실행**
 
-해당 상황은 다음과 같은 경우입니다.
+다음 상황이 있는 경우:
 
 * 각 빌드 작업을 컨테이너에 포함하지만 보안/성능상의 이유로 Docker 소켓을 마운트하지 않는 경우
-* 파이프라인 작업은 호스트(또는 클러스터) 간에 분할되며 중앙 볼륨 또는 중간 레지스트리/오브젝트 저장소를 통해 전달할 아티팩트에 의존하는 경우
+* 파이프라인 작업은 호스트(또는 클러스터) 간에 분할되며 중앙 볼륨 또는 중간 레지스트리/오브젝트 저장소를 통해 전달되는 아티팩트에 의존하는 경우
 * OCI 호환 컨테이너 이미지만 사용하는 에코시스템에서만 작업하는 경우
 
 Snyk은 다음과 같이 도울 수 있습니다.
 
-* 도커 데몬에 의존하지 않고 tar 형식 컨테이너 이미지에 대한 Snyk 취약점 결과를 가져오려면 `snyk container test docker-archive:archive.tar` 또는 `snyk container test oci-archive:archive.tar` 를 실행합니다.
-* tar 아카이브는 공유 볼륨 또는 객체 저장소에 저장 및 저장되는 **docker save**와 동등한 기능을 사용하여 빌드 프로세스에서 생성할 수 있습니다. 그런 다음 Snyk 바이너리를 실행하는 빌드 에이전트 컨테이너로 액세스할 수 있으며 다른 종속성이 필요하지 않습니다.
+* Docker 데몬에 의존하지 않고 tar 형식 컨테이너 이미지에 대한 Snyk 취약점 결과를 가져오려면 `snyk container test docker-archive:archive.tar` 또는 `snyk container test oci-archive:archive.tar` 를 실행합니다.
+* tar 아카이브는 **docker save**와 동등한 기능을 사용하여 빌드 프로세스에서 생성되어 공유 볼륨 또는 객체 저장소에 저장할 수 있습니다. 이것은 Snyk 바이너리를 실행하는 빌드 에이전트 컨테이너에서 액세스할 수 있으며 다른 디펜던시는 필요하지 않습니다.
 
 ### 모범 사례 권장 사항
 
-* CI 중에 컨테이너 이미지와 통합하는 방법에 관계없이 Snyk Open Source(애플리케이션 SCA) 테스트와는 별도의 빌드 단계로 Snyk Container 스캔을 실행합니다. 이를 통해 각각 컨테이너/OS 계층 또는 애플리케이션 계층 내의 취약성에 대한 build failures를 분리할 수 있습니다. 또한 컨테이너 빌드 작업을 보다 쉽게 수행할 수 있습니다.
-* 빌드 작업의 실패 상태를 사용자 지정하려면 **--fail-on** 및 **--severity-threshold**와 같은 CLI 플래그를 사용합니다. 추가적인 사용을 위해 **--json**을 사용하여 전체 취약점 보고서가 포함된 JSON 파일을 생성하고 JSON 데이터 기반의 자체 빌드 실패 상태를 설정할 수 있습니다.
-* 컨테이너의 기본 이미지(Dockerfile의 FROM 절에 지정한 이미지)에서 발생하는 취약점 대신 사용자 계층에서 도입된 취약점만 보고하려면 **--exclude-base-image-vulns**를 전달합니다.
-* **snyk container test** 후 **snyk container monitor**를 실행(또는 plugin settings에서 **Monitor** 확인란)하여 이 컨테이너의 BOM(Bill of Material) 기록을 Snyk UI 내에 유지하고 매일 새로운 취약점을 사전에 모니터링합니다. 이 기능은 새 릴리스를 프로덕션 환경으로 push할 때 유용합니다. **--project-name**을 사용하여 릴리스의 고유 식별자를 지정하여 프로덕션 컨테이너가 빌드 프로세스에서 다른 컨테이너와 별도로 추적하도록 할 수 있습니다.
+* CI 중 컨테이너 이미지와 통합하는 방법에 관계없이 Snyk Open Source(애플리케이션 SCA) 테스트와는 별도의 빌드 단계로 Snyk Container 스캔을 실행합니다. 이를 통해 각각 컨테이너/OS 계층 또는 애플리케이션 계층 내의 취약점에 대한 빌드 실패를 분리할 수 있습니다. 이를 통해 컨테이너 빌드 작업을 보다 쉽게 수행할 수 있습니다.
+* 빌드 작업의 실패 상태를 사용자 지정하려면 `--fail-on` 및 `--severity-threshold`와 같은 CLI 옵션을 사용합니다. 고급 사용을 위해 **`--json`**을 사용하여 전체 취약점 보고서가 포함된 JSON 파일을 생성하고 JSON 데이터 기반의 자체적인 빌드 실패 상태를 설정할 수 있습니다.
+* 컨테이너의 기본 이미지(Dockerfile의 FROM절에 지정한 이미지)가 아닌 사용자 계층에서 발생한 취약점만 보고하려면 `--exclude-base-image-vulns`를 전달합니다.
+* `snyk container test` 후 `snyk container monitor`를 실행(또는 플러그인 설정에서 **Monitor** 확인란)하여 이 컨테이너의 BOM(Bill of Material) 기록을 Snyk UI 내에 유지하고 매일 새로운 취약점을 사전에 모니터링합니다. 이 기능은 새 릴리스를 프로덕션 환경으로 push할 때 유용합니다. `--project-name`을 사용하여 릴리스의 고유 식별자를 지정하여 프로덕션 컨테이너가 빌드 프로세스에서 다른 컨테이너와 별도로 추적되도록 할 수 있습니다.
 
 ### Snyk IaC별 전략
 
-SCA 및 Containers 단계 이후 파이프라인에 Snyk Infrastructure as Code를 구현할 수 있는 최적의 단계입니다.
+Snyk Infrastructure As Code를 단계의 일부로 구현하기 위한 최적의 단계입니다. 단, SCA와 컨테이너 단계 이후입니다.
 
 Snyk Infrastructure as Code는 다음 항목을 지원합니다.
 
-* Deployments, Pods and Services.
-* CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet, and ReplicationController.
+* Deployments, Pods 및 Services
+* CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet 및 ReplicationController
 
 자세한 내용은 [CLI를 사용하여 Kubernetes 파일 테스트 진행](../products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool.md)을 참조하십시오.
 
-### CI/CD 문제 해결 & 팁
+### CI/CD 문제 해결 및 고급 팀
 
-이 섹션에서는 CI/CD 통합을 해결하거나 확장하는 데 도움이 되는 몇 가지 팁을 알려드리겠습니다.
+이 섹션에서는 CI/CD 통합 문제를 해결하거나 확장하는 데 도움이 되는 몇 가지 팁을 제공합니다.
 
-#### 1단계: Snyk CLI를 사용한 복제 시도
+#### 1단계: Snyk CLI로 복제 시도
 
-CLI와 파이프라인이 동일한 엔진을 실행하고 있습니다. 프로젝트를 복제하고 CLI를 사용하여 검색하십시오.
+CLI와 파이프라인이 동일한 엔진을 실행하고 있는 경우 프로젝트를 복제하고 CLI를 사용하여 스캔을 시도합니다.
 
-CLI 플래그 사용 - 파이프라인에서 실행하면서 알려진 취약성을 찾고 수정하려면 Snyk CLI 도구를 사용하십시오. [플래그 링크](../features/snyk-cli/cli-reference/)
+Snyk CLI 도구를 사용하여 파이프라인에서 실행할 때 알려진 취약점을 찾아 수정합니다. 자세한 내용은 [CLI reference](broken-reference)를 참조하십시오.
 
 #### 2단계: 로그 가져오기
 
 CLI를 사용하여 복제할 수 있지만 여전히 문제가 있는 경우 다음 명령을 사용하여 CLI에 디버그 로깅을 출력하도록 요청하십시오.
 
-capture logs는 DEBUG=\* or the -d flag 입니다.
+`DEBUG=*` 또는 `-d` 옵션을 사용하여 로그를 캡처합니다.
 
 ```
 snyk test -d
@@ -321,49 +307,39 @@ DEBUG=* snyk test
 
 #### 3단계: 플러그인 대신 CLI 사용
 
-npm 또는 바이너리 다운로드를 사용하여 snyk을 설치하여 CLI에 기본 플러그인을 교체하십시오.
-
-npm의 경우 다음 명령어를 사용합니다.
-
-* npm install -g snyk
-* Snyk auth
-* Snyk test
-
-바이너리를 다운로드하려면 다음 링크에서 snyk을 다운로드해야 합니다.
-
-* [Download the Snyk CLI](https://github.com/snyk/snyk/tags)
+CLI를 설치하여 기본 플러그인을 CLI로 교체해 보십시오. 지침은 [Snyk CLI 설치](../features/snyk-cli/install-the-snyk-cli/)를 참조하십시오.
 
 ### CI/CD 통합의 공통 플래그
 
-CI/CD 통합에 사용되는 가장 일반적인 플래그는 다음과 같습니다.
+CI/CD 통합에 사용되는 가장 일반적인 옵션은 다음과 같습니다.
 
-**-- all-projects**: 작업 디렉토리에 있는 모든 프로젝트 자동 검색
+`-- all-projects`: 작업 디렉토리에 있는 모든 프로젝트 자동 감지
 
-**-p**: 디펜던시 트리를 제거하고 중복된 하위 디펜던시를 제거합니다. 모든 취약점을 찾지만 잠재적으로 모든 취약점 경로는 찾지 못합니다.
+`-p`: 디펜던시 트리를 정리하고 중복된 하위 디펜던시를 제거합니다. 계속해서 모든 취약점을 찾지만 모든 취약점이 있는 경로를 찾지는 못할 수 있습니다.
 
-**--org=ORG\_NAME**: 특정 조직에 연결된 Snyk 명령을 실행할 ORG\_NAME을 지정합니다. 이는 monitor 명령을 실행한 후 새 프로젝트를 생성할 위치에 영향을 미치며, 일부 기능의 가용성 및 비공개 테스트 제한에 영향을 미칩니다. 조직이 여러 개인 경우 다음 명령어를 사용하여 CLI에서 기본값을 설정할 수 있습니다.
+\--org=\<ORG\_ID>: 특정 조직에 연결된 Snyk 명령을 실행할 ORG\_ID을 지정합니다. 이는 `monitor` 명령을 실행한 후 새 프로젝트를 생성할 위치에 영향을 미치며, 일부 기능의 가용성 및 비공개 테스트 제한에 영향을 미칩니다. 조직이 여러 개인 경우 다음 명령어를 사용하여 CLI에서 기본값을 설정할 수 있습니다.
 
 ```
-$ snyk config set org=ORG_NAME
+$ snyk config set org=<ORG_ID>
 ```
 
-기본값을 설정하면 새로 모니터링되는 모든 프로젝트가 기본 조직 아래에 만들어집니다. 기본값을 재정의해야 하는 경우 --org=ORG\_NAME 옵션을 사용할 수 있습니다.
+기본값을 설정하면 새로 모니터링되는 모든 프로젝트가 기본 조직 아래에 만들어집니다. 기본값을 재정의해야 하는 경우 `--org=<ORG_ID>` 옵션을 사용할 수 있습니다.
 
-Default: [https://app.snyk.io/account](https://app.snyk.io/account)에서 기본값으로 설정된 ORG\_NAME을 사용합니다.
+기본값: `<ORG_ID>`, [계정 설정](https://app.snyk.io/account)에서 현재 선호하는 조직입니다.
 
 ### **유용한 리소스**
 
-다음 보고서는 다양한 CI/CD 도구에 대한 바이너리 및 NPM 통합의 몇 가지 예를 공유합니다.
+다음 저장소는 다양한 CI/CD 도구에 대한 바이너리 및 npm 통합의 몇 가지 예를 공유합니다.
 
 [GitHub CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples)
 
-## 지속적인 통합 구성
+## 지속적 통합 구성
 
-디펜던시에서 알려진 취약점을 지속적으로 방지하려면 Snyk을 지속적인 통합(build) 시스템에 통합하십시오. 해당 문서 외에도 GitHub 저장소에 있는 통합 구성 예제를 확인하시기 바랍니다.
+디펜던시에서 알려진 취약점을 지속적으로 방지하려면 Snyk을 지속적 통합(build) 시스템에 통합하십시오. 해당 문서 외에도 GitHub 저장소에 있는 통합 구성 예제를 확인하시기 바랍니다.
 
-### 자동 감시 설정
+### 자동 모니터링 설정
 
-Snyk으로 프로젝트를 모니터링하는 경우 새로 공개된 취약점으로 인해 프로젝트의 디펜던시가 영향을 받을 경우 알림이 표시됩니다. 프로젝트에 대한 디펜던시 목록을 최신 상태로 유지하려면 배포 프로세스에서 Snyk monitor를 실행하여 스캔을 진행하고, SNYK\_TOKEN 환경 변수를 포함하도록 환경을 구성합니다. 로그인 후 대시보드에서 API 토큰을 찾을 수 있습니다.
+Snyk으로 프로젝트를 모니터링하는 경우 새로 공개된 취약점으로 인해 프로젝트의 디펜던시가 영향을 받을 경우 알림이 표시됩니다. 프로젝트에 대한 디펜던시 목록을 최신 상태로 유지하려면 배포 프로세스에서 Snyk monitor를 실행하여 스캔을 진행하고, SNYK\_TOKEN 환경 변수를 포함하도록 환경을 구성하십시오. API 토큰은 로그인 후 대시보드에서 확인할 수 있습니다.
 
 ### API 토큰 구성
 
@@ -375,5 +351,5 @@ API 토큰이 다른 사람에게 노출되지 않도록 하려면 해당 토큰
 * [Circle](https://circleci.com/docs/environment-variables/)
 * [Codeship](https://codeship.com/documentation/continuous-integration/set-environment-variables/)
 
-[Google search](https://www.google.co.uk/search?q=setting+up+env+variables+in+CI)를 통해 다른 것들을 찾을 수 있습니다.\
+[구글 검색](https://www.google.co.uk/search?q=setting+up+env+variables+in+CI)을 통해 다른 것들을 찾을 수 있습니다.\
 [CI/CD](https://snyk.io/learn/what-is-ci-cd-pipeline-and-tools-explained/)에 대해 자세히 알아봅니다.
