@@ -45,10 +45,10 @@ Snyk Container를 사용하여 이미지를 모니터링할 수도 있습니다.
 
 {% hint style="info" %}
 **기능 사용 여부**\
-이 집계 보고서 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
+해당 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-이미지 모니터링을 실행하려면:
+이미지 모니터링을 실행하려면 다음과 같이 입력합니다.
 
 ```
 snyk container monitor <repository>:<tag>
