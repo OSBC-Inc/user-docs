@@ -4,11 +4,11 @@
 조직에 Snyk Code가 활성화되어 있는지 확인하십시오. 자세한 내용은 [Getting started with Snyk Code](../../../getting-started/getting-started-snyk-products/getting-started-with-snyk-code.md#stage-1-enable-snyk-code)를 참조하십시오.
 {% endhint %}
 
-Snyk Code용 Snyk Command Line Interface([CLI](../../../features/snyk-cli/))는 로컬 컴퓨터에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.&#x20;
+Snyk Code용 Snyk Command Line Interface([CLI](../../../features/snyk-cli/))는 로컬 컴퓨터에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
 
 ## Snyk CLI 설치
 
-다음 중 하나를 사용하여 Snyk CLI를 설치할 수 있습니다:
+다음 중 하나를 사용하여 Snyk CLI를 설치할 수 있습니다.
 
 * npm: `npm install -g snyk`
 * Homebrew: `brew tap snyk/tap && brew install snyk`
@@ -19,13 +19,13 @@ Snyk Code용 Snyk Command Line Interface([CLI](../../../features/snyk-cli/))는 
 
 ## 인증
 
-After the installation, authenticate with Snyk to test your image, running snyk auth from the CLI:
+설치 후 CLI에서 snyk auth를 실행하여 Snyk 인증을 진행하고 이미지를 테스트합니다.
 
 ```
 snyk auth
 ```
 
-인증에 대한 자세한 내용은 [Authenticate the CLI with your account](../../../features/snyk-cli/install-the-snyk-cli/authenticate-the-cli-with-your-account.md)을 참조하십시오.
+인증에 대한 자세한 내용은 [Authenticate the CLI with your account](../../../features/snyk-cli/authenticate-the-cli-with-your-account/)을 참조하십시오.
 
 ## 프로젝트 또는 폴더 테스트
 
@@ -38,7 +38,7 @@ snyk auth
 ### "Not supported" 메시지
 
 {% hint style="danger" %}
-~~_**org**  **your.org**_~~**에서는 Snyk Code가 지원되지 않습니다.**
+**Snyk Code is not supported for org** _**your.org**_
 
 Snyk Code용 CLI를 사용하려면 최소 1.716.0 버전이 필요합니다.
 {% endhint %}

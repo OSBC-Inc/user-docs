@@ -4,7 +4,7 @@ IDE 통합은 Snyk Code의 빠른 분석 및 응답을 사용하므로 코드를
 
 ### JetBrains IDE 플러그인
 
-Snyk Code는 IDE에서 직접 issues를 찾고 수정할 수 있는 플러그인으로 IntelliJ, Webstorm, PyCharm 등과 같은 JetBrains IDE를 지원합니다:
+Snyk Code는 IDE에서 직접 issues를 찾고 수정할 수 있는 플러그인으로 IntelliJ, Webstorm, PyCharm 등과 같은 JetBrains IDE를 지원합니다.
 
 ![](../../.gitbook/assets/results-code.png)
 
@@ -12,7 +12,7 @@ Snyk Code는 IDE에서 직접 issues를 찾고 수정할 수 있는 플러그인
 
 ### VS Code IDE 플러그인
 
-Snyk Code는 IDE에서 직접 issue를 찾고 수정할 수 있는 Visual Studio Code 플러그인을 지원합니다:
+Snyk Code는 IDE에서 직접 issue를 찾고 수정할 수 있는 Visual Studio Code 플러그인을 지원합니다.
 
 ![](<../../.gitbook/assets/image3-2- (2) (2) (4) (4) (4) (3) (5).png>)
 

@@ -1,12 +1,12 @@
 # Snyk Code CLI 결과 이해
 
-이 예제는 로컬에서 설정한 프로젝트(`goof`)에 대해 snyk code 테스트를 실행합니다:
+이 예제는 로컬에서 설정한 프로젝트(`goof`)에 대해 snyk code 테스트를 실행합니다.
 
 ```
 snyk code test goof
 ```
 
-이렇게 하면 다음과 같은 결과가 나타납니다:
+이렇게 하면 다음과 같은 결과가 나타납니다.
 
 ```
 Testing goof ...
@@ -71,7 +71,7 @@ snyk code 테스트에서 11개의 issue(high 4개, medium 7개)를 발견했음
 
 issues는 심각도에 따라 가장 높은 문제가 맨 아래에 있도록 정렬됩니다.
 
-각 항목에는 다음이 포함됩니다:
+각 항목에는 다음이 포함됩니다.
 
 * 문제의 심각도 및 취약점 유형
 * 경로: issue가 발견된 파일의 경로 및 행 (potentially issues are cross-files, the location in the path refers to the issue's sink)

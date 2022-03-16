@@ -2,15 +2,15 @@
 
 Snyk Code는 시맨틱 AI 기반 분석 엔진에 의해 작동되며 코드에서 다음을 분석할 수 있습니다.
 
-### 하드코딩된 보안정보
+### 하드코딩된 비밀
 
-Snyk Code에는 key, 인증 정보, PII 및 소스 코드의 민감한 정보와 같은 비밀을 스캔하고 강조 표시하는 비밀 탐지 기능이 포함되어 있습니다. 엔트로피 검사나 정규식을 사용하는 도구와 달리 Snyk Code는 기계 학습을 사용하여 비밀 탐지의 정확도를 높이고 오탐지 발생을 최소화합니다.
+Snyk Code에는 key, 자격 증명, PII 및 소스 코드의 민감한 정보와 같은 비밀을 스캔하고 강조 표시하는 비밀 탐지 기능이 포함되어 있습니다. 엔트로피 검사나 정규식을 사용하는 도구와 달리 Snyk Code는 기계 학습을 사용하여 비밀 탐지의 정확도를 높이고 오탐지 발생을 최소화합니다.
 
 ![Example of Snyk Code reporting a hardcoded secret.](../../../.gitbook/assets/image5.png)
 
 ### 코딩 문제
 
-dead code, 미리 정의된 브랜치, 양쪽에 동일한 코드가 존재하는 브랜치 등의 문제.
+Problems such as dead code, branches that are predefined, and branches having the same code on each side.
 
 ### 유형 추론
 
@@ -22,7 +22,7 @@ dead code, 미리 정의된 브랜치, 양쪽에 동일한 코드가 존재하�
 
 ### 데이터 흐름
 
-소스에서 싱크까지 애플리케이션 내의 데이터 흐름을 추적합니다. 외부 보안되지 않은 데이터 소스, 데이터 싱크, sanitation functions에 대한 AI 기반 학습과 결합되어 강력한 오염 분석이 가능합니다.
+Follows the flow of data within the application from the source to the sink. Combined with AI-based learning of external insecure data source, data sinks, and sanitation functions, this enables a strong taint analysis.
 
 ### **API** 사용
 
