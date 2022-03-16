@@ -2,7 +2,7 @@
 
 ### Helm Chart 설치
 
-release 이름을 `my-release`로 chart를 설치하려면 다음을 수행하십시오.:
+release 이름을 `my-release`로 chart를 설치하려면 다음을 수행하십시오.
 
 ```
 $ helm install my-release <gziped-chart>
@@ -10,7 +10,7 @@ $ helm install my-release <gziped-chart>
 
 `local-code-engine` 이러한 명령은 기본 구성의 쿠버네티스 클러스터에 배포됩니다. **Parameters** 섹션에는 설치 중에 구성할 수 있는 매개변수가 나열됩니다.
 
-chart 실행의 기본값 파일을 인쇄하는 방법:
+chart 실행의 기본값 파일을 인쇄하는 방법은 다음과 같습니다.
 
 ```
 $ helm show values <gziped-chart>
@@ -18,7 +18,7 @@ $ helm show values <gziped-chart>
 
 #### Helm Chart 제거
 
-my-release 리소스를 제거/삭제하는 방법:
+my-release 리소스를 제거/삭제하는 방법은 다음과 같습니다.
 
 ```
 $ helm delete my-release
@@ -37,7 +37,7 @@ $ helm delete my-release
 
 #### Broker 필수 매개 변수
 
-다음 SCM 구성 중 하나를 사용하십시오.:
+다음 SCM 구성 중 하나를 사용하십시오.
 
 | Name                        | Description                                                                                            | Default Value |
 | --------------------------- | ------------------------------------------------------------------------------------------------------ | ------------- |
@@ -149,14 +149,14 @@ $ helm delete my-release
 | `broker-client.serviceAccount.annotations` | 추가 서비스 계정 주석(템플릿으로 평가됨)                          | `{}`          |
 | `broker-client.podAnnotations`             | Pod 주석                                           | `{}`          |
 | `broker-client.podSecurityContext`         | pod에 대한 보안 컨텍스트                                  | `{}`          |
-| `broker-client.securityContext`            | <p>컨테이너에 적용될 보안 구성을 보유합니다.</p><p> </p>           | `{}`          |
+| `broker-client.securityContext`            | 컨테이너에 적용될 보안 구성을 보유합니다.                          | `{}`          |
 | `broker-client.nodeSelector`               | pod 할당을 위한 집계 노드 레이블                             | `{}`          |
 | `broker-client.tolerations`                | pod 할당에 대한 집계 허용 오차                              | `[]`          |
 | `broker-client.affinity`                   | pod 할당을 위한 전달자 선호도                               | `{}`          |
 
 ### 서드파티 charts
 
-당사가 사용하는 일부 타사 서비스를 구성하려는 경우 다음에서 예제를 참조하십시오:
+당사가 사용하는 일부 타사 서비스를 구성하려는 경우 다음에서 예제를 참조하십시오.
 
 * [Ambassador](https://github.com/emissary-ingress/emissary/tree/master/charts/emissary-ingress)
 * [Redis](https://github.com/bitnami/charts/tree/master/bitnami/redis)
@@ -166,7 +166,7 @@ $ helm delete my-release
 
 필요에 따라 제공된 YAML 파일을 편집할 수 있습니다.
 
-또는 chart를 설치하는 동안 매개변수 값을 지정하는 고유한 YAML 파일을 사용할 수 있습니다. 예를 들어,
+또는 chart를 설치하는 동안 매개변수 값을 지정하는 고유한 YAML 파일을 사용할 수 있습니다. 예제는 다음과 같습니다.
 
 `$ helm install my-release -f your-values.yaml`
 
@@ -180,19 +180,19 @@ Logrotate는 로그 파일 수가 `filesToKeep`과 같을 때 가장 오래된 �
 
 파일이 순환할 때 순환 날짜와 시간은 파일 이름에 접미사로 추가됩니다. 현재 로그를 보려면 `code.log` 파일을 추적해야 합니다. 과거에 작성된 로그를 가져오려면 보려는 시간 이후의 날짜 및 시간이 포함된 로그 파일을 선택합니다.
 
-모든 로그 파일을 현재 디렉터리에 가져오려면 다음을 실행합니다:
+모든 로그 파일을 현재 디렉터리에 가져오려면 다음을 실행합니다.
 
 ```
 kubectl cp <your-namespace>/<your-release>-fluentd-0:/var/log/snyk/logs ./
 ```
 
-특정 날짜에 대한 로그 파일을 가져오려면 먼저 기존 로그 목록을 가져옵니다:
+특정 날짜에 대한 로그 파일을 가져오려면 먼저 기존 로그 목록을 가져옵니다.
 
 ```
 kubectl exec -it on-prem-fluentd-0 -- ls -l /var/log/snyk/logs
 ```
 
-그 후 다음을 실행하여 가져올 로그 파일을 복사합니다:
+그 후 다음을 실행하여 가져올 로그 파일을 복사합니다.
 
 ```
 kubectl cp <your-namespace>/<your-release>-fluentd-0:/var/log/snyk/logs/<file-name> ./<target-file-name>
