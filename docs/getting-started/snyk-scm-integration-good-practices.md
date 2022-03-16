@@ -68,7 +68,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 ![](<../.gitbook/assets/image (58).png>)
 
-자세한 내용은 [Notification management](https://docs.snyk.io/features/user-and-group-management/notifications/notification-management)를 참조하십시오.
+자세한 내용은 [알림 관리](../features/user-and-group-management/notifications/notification-management.md)를 참조하십시오.
 
 ## 2단계: 프로젝트 가져오기
 
@@ -79,7 +79,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 ![](../.gitbook/assets/int3.png)
 
-5\. 프로젝트를 가져왔는지 확인하려면 Add projects 페이지로 이동하십시오. 가져온 프로젝트에는 저장소 이름 옆에 ✔ 아이콘이 있습니다. (프로젝트를 가져온 후 지속적인 취약성 검사)
+5\. 프로젝트를 가져왔는지 확인하려면 Add projects 페이지로 이동하십시오. 가져온 프로젝트에는 저장소 이름 옆에 ✔ 아이콘이 있습니다. (프로젝트를 가져온 후 지속적인 취약점 검사)
 
 ![](../.gitbook/assets/aws-sdk.png)
 
@@ -209,7 +209,7 @@ Snyk은 현재 Snyk Broker 사용을 포함하여 GitHub, GitHub Enterprise Serv
 4. 설정 영역의 왼쪽 패널 메뉴에서 통합 설정을 클릭하여 해당 프로젝트에 고유한 설정을 적용합니다.
 5. **Automatic dependency upgrade pull requests**로 스크롤하고 Disabled를 클릭합니다.
 6. 표시되는 옵션:
-   1. Snyk은 저장소마다 최대 10개의 PR을 동시에 생성할 수 있습니다. 이 수를 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 자세한 내용은 [Upgrading dependencies with automatic PRs](https://docs.snyk.io/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs)를 참조하십시오.
+   1. Snyk은 저장소마다 최대 10개의 PR을 동시에 생성할 수 있습니다. 이 수를 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 자세한 내용은 [자동 PR로 디펜던시 업그레이드](../products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)를 참조하십시오.
    2. Dependencies to ignore 필드에 자동 기능의 일부로 처리되지 않아야 하는 디펜던시의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
    3. 프로젝트를 스캔할 때마다 ‘Upgrade dependency settings’를 클릭하면 결과에 따라 업그레이드 PR이 자동으로 제출됩니다. 기존 Snyk 업그레이드 PR 또는 기존 수정 PR에 대해 최신 버전이 릴리즈된 경우 기존 PR을 closed 하거나 merge해야 Snyk이 새 PR을 생성할 수 있습니다.
 

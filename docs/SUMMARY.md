@@ -30,7 +30,7 @@
     * [프로젝트 기록 보기](getting-started/introduction-to-snyk-projects/view-project-history.md)
     * [Issue card 정보](getting-started/introduction-to-snyk-projects/issue-card-information.md)
     * [조직의 최대 프로젝트 수](getting-started/introduction-to-snyk-projects/maximum-number-of-projects-in-an-organsation.md)
-  * [Snyk dashboard 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
+  * [Snyk 대시보드 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
 
 ## PRODUCTS
 
