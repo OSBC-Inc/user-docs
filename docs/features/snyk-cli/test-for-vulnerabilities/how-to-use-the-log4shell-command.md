@@ -1,10 +1,8 @@
 # How to use the log4shell command
 
-
-
 ### Introduction
 
-`snyk log4shell` is a Snyk CLI command, that helps find traces of the **log4j** library that are affected by the **Log4Shell** vulnerability ([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228)), even if this library is not declared in the manifest files (such as pom.xml or build.gradle).&#x20;
+`snyk log4shell` is a Snyk CLI command, that helps find traces of the **log4j** library that are affected by the **Log4Shell** vulnerability ([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228)), even if this library is not declared in the manifest files (such as pom.xml or build.gradle).
 
 This command tests your built project and third-party applications, and it is complementary to the `snyk test` and `snyk test --scan-all-unmanaged` commands.
 
@@ -12,7 +10,7 @@ This command tests your built project and third-party applications, and it is co
 Read more about the Log4Shell vulnerability in [our VulnDB entry](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720).
 {% endhint %}
 
-To test Java projects using their package manager manifest files, see [snyk-for-java-gradle-maven.md](../../../products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md "mention"). To learn more about the `snyk test --scan-all-unmanaged`, see the [#maven-options](../guides-for-our-cli/cli-reference.md#maven-options "mention") section of the CLI reference.
+To test Java projects using their package manager manifest files, see [snyk-for-java-gradle-maven.md](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md "mention"). To learn more about the `snyk test --scan-all-unmanaged`, see the [cli-reference.md](../guides-for-our-cli/cli-reference.md#maven-options "mention") section of the CLI reference.
 
 #### Usage
 
@@ -24,7 +22,7 @@ Use `snyk log4shell` to scan a Java project, to see if the project includes:
 ### How to run
 
 1. Install the latest version of the Snyk CLI - see [install-the-snyk-cli](../install-the-snyk-cli/ "mention").
-2. Make sure you have built the project.&#x20;
+2. Make sure you have built the project.
 3. Navigate to the project directory to scan.
 4. Enter `snyk log4shell`.\
    **Note**: this command does not require (nor support) any additional arguments.
@@ -48,7 +46,6 @@ A vulnerable version of log4j was detected:
  We highly recommend fixing this vulnerability. If it cannot be fixed by upgrading, see mitigation information here:
         - https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720
         - https://snyk.io/blog/log4shell-remediation-cheat-sheet/
-
 ```
 
 If no traces of a vulnerable log4j library are found, the results show this:

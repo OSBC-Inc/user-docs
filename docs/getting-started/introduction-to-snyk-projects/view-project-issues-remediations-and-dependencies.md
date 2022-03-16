@@ -26,7 +26,7 @@ Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대
 
 ![](../../.gitbook/assets/image26.png)
 
-개요는 [취약점 수정](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.\
+개요는 [취약점 수정](../../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.\
 자세한 내용은 [Fixing and prioritizing issues](../../features/fixing-and-prioritizing-issues/)를 참조하십시오.
 
 #### Issues 세부 정보 보기
@@ -45,7 +45,7 @@ Snyk은 프로젝트 내의 간접 의존성에 대해 잘 알고 있기 때문�
 
 ![](<../../.gitbook/assets/Screenshot 2021-10-19 at 11.57.07.png>)
 
-자세한 내용은 [취약점 수정](../../products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.
+자세한 내용은 [취약점 수정](../../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.
 
 ### Dependencies 보기
 

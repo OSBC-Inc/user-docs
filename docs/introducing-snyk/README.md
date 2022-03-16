@@ -1,10 +1,10 @@
 # Snyk 소개
 
-Snyk은 [자체코드](../products/snyk-code/), [오픈소스 디펜던시](../products/snyk-open-source/), [컨테이너 이미지](../products/snyk-container/), [IaC(Infrastructure as Code) 구성](../products/snyk-infrastructure-as-code/)의 취약점을 테스트하고 ~~_컨텍스트(?)_~~, 우선순위 지정 및 수정을 제공합니다.
+Snyk은 [자체코드](../snyk-products/snyk-code/), [오픈소스 디펜던시](../snyk-products/snyk-open-source/), [컨테이너 이미지](../snyk-products/snyk-container/), [IaC(Infrastructure as Code) 구성](../snyk-products/snyk-infrastructure-as-code/)의 취약점을 테스트하고 ~~_컨텍스트(?)_~~, 우선순위 지정 및 수정을 제공합니다.
 
 ### Snyk 제품
 
-* [Snyk Open Source](https://docs.snyk.io/snyk-open-source): 개발자가 오픈소스 취약점을 쉽게 찾고 자동으로 수정할 수 있도록 합니다. Snyk Open Source에는 오픈소스 라이선스 사용을 관리하는 데 도움이 되는 [Snyk 라이선스 컴플라이언스](../products/snyk-open-source/)가 포함되어 있습니다.
+* [Snyk Open Source](https://docs.snyk.io/snyk-open-source): 개발자가 오픈소스 취약점을 쉽게 찾고 자동으로 수정할 수 있도록 합니다. Snyk Open Source에는 오픈소스 라이선스 사용을 관리하는 데 도움이 되는 [Snyk 라이선스 컴플라이언스](../snyk-products/snyk-open-source/)가 포함되어 있습니다.
 * [Snyk Code](https://snyk.io/product/snyk-code/): 개발 프로세스 중에 애플리케이션 코드의 취약점을 실시간으로 찾아 수정합니다.
 * [Snyk Container](https://docs.snyk.io/snyk-container): 컨테이너 이미지 및 Kubernetes 애플리케이션의 취약점을 찾아 수정합니다.
 * [Snyk IaC(Infrastructure as Code)](https://docs.snyk.io/snyk-infrastructure-as-code): Terraform 및 Kubernetes 코드에서 안전하지 않은 구성을 찾아 수정합니다.

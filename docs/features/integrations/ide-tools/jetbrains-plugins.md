@@ -56,8 +56,8 @@ The first time it is needed, the plugin automatically downloads the CLI in the b
 ![This is that confirmation message we talked about.](../../../.gitbook/assets/screen-shot-2021-09-29-at-4.05.55-pm.png)
 
 * Close the browser window and return to the IDE because if you don't, the IDE will sit waiting like a little kid after soccer practice for his or her ride home.
-* The IDE then reads and saves the authentication on your local machine.&#x20;
-* In the IDE, you can select which Snyk products to use ([Snyk Open Source](../../../products/snyk-open-source/), [Snyk Advisor](https://snyk.io/advisor/) or [Snyk Code](../../../products/snyk-code/) can be enabled later in configuration).&#x20;
+* The IDE then reads and saves the authentication on your local machine.
+* In the IDE, you can select which Snyk products to use ([Snyk Open Source](../../../snyk-products/snyk-open-source/), [Snyk Advisor](https://snyk.io/advisor/) or [Snyk Code](../../../snyk-products/snyk-code/) can be enabled later in configuration).
 * You can start the analysis by pressing the **Analyze now!** button:
 
 ![If it doesn't say this, that's a problem.](../../../.gitbook/assets/screen-shot-2021-09-29-at-4.07.22-pm.png)

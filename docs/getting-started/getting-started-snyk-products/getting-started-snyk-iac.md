@@ -1,9 +1,9 @@
 # Snyk IaC (Infrastructure as Code) 시작하기
 
-Snyk IaC를 이용하여 Terraform 및 Kubernetes(Helm 포함) 환경의 구성 파일에서 문제를 스캔하여 수정하세요. 자세한 내용은 [Kubernetes 구성 파일 스캔](../../products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/) 및 [Terraform 파일 스캔](../../products/snyk-infrastructure-as-code/scan-terraform-files/)을 참조하십시오.
+Snyk IaC를 이용하여 Terraform 및 Kubernetes(Helm 포함) 환경의 구성 파일에서 문제를 스캔하여 수정하세요. 자세한 내용은 [Kubernetes 구성 파일 스캔](../../snyk-products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/) 및 [Terraform 파일 스캔](../../snyk-products/snyk-infrastructure-as-code/scan-terraform-files/)을 참조하십시오.
 
 {% hint style="info" %}
-이 문서에는 Snyk.io UI를 사용하는 프로세스에 대해 설명합니다. Snyk CLI를 이용하여 Snyk IaC를 사용하는 방법에 대한 자세한 내용은 [Infrastructure as Code용 Snyk CLI](../../products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)를 참조하십시오.
+이 문서에는 Snyk.io UI를 사용하는 프로세스에 대해 설명합니다. Snyk CLI를 이용하여 Snyk IaC를 사용하는 방법에 대한 자세한 내용은 [Infrastructure as Code용 Snyk CLI](../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)를 참조하십시오.
 {% endhint %}
 
 ## 전제 조건
@@ -16,8 +16,8 @@ Snyk IaC를 이용하여 Terraform 및 Kubernetes(Helm 포함) 환경의 구성 
 
 자세한 내용은 다음 문서를 참조하십시오.
 
-* [Kubernetes 구성 파일에서 보안 issue를 찾기 위한 통합 구성](../../products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/scan-and-fix-security-issues-in-kubernetes-configuration-files.md)
-* [Terraform 파일에서 보안 issue를 찾기 위한 통합 구성](../../products/snyk-infrastructure-as-code/scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)
+* [Kubernetes 구성 파일에서 보안 issue를 찾기 위한 통합 구성](../../snyk-products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/scan-and-fix-security-issues-in-kubernetes-configuration-files.md)
+* [Terraform 파일에서 보안 issue를 찾기 위한 통합 구성](../../snyk-products/snyk-infrastructure-as-code/scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)
 
 ## 1단계: 프로젝트 추가
 

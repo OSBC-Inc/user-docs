@@ -61,7 +61,7 @@ Project는 Snyk 대시보드의 **Projects** 메뉴에서 확인할 수 있습�
 
 Github 저장소의 pom 파일과 같이 Target에서 스캔할 특정 항목입니다.
 
-[Snyk Code](../../products/snyk-code/) 스캔은 Targetfile을 사용하지 않습니다.
+[Snyk Code](../../snyk-products/snyk-code/) 스캔은 Targetfile을 사용하지 않습니다.
 
 ## Type
 

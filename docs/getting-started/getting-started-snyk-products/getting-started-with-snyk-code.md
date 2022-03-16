@@ -11,7 +11,7 @@
 다음 사항이 존재하는지 확인하십시오.
 
 * Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조)
-* [지원하는 언어](../../products/snyk-code/snyk-code-language-and-framework-support.md)로 된 코드를 포함하는 프로젝트
+* [지원하는 언어](../../snyk-products/snyk-code/snyk-code-language-and-framework-support.md)로 된 코드를 포함하는 프로젝트
 * 지원하는 소스 코드 관리 시스템(SCMs) 중 하나 필요: GitHub, GitHub Enterprise, Bitbucket Cloud, Bitbucket Server, GitLab Cloud, Azure Repos
 
 ## 1단계: Snyk Code 활성화

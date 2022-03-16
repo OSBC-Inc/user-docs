@@ -277,7 +277,7 @@ Snyk Infrastructure as Code는 다음 항목을 지원합니다.
 * Deployments, Pods 및 Services
 * CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet 및 ReplicationController
 
-자세한 내용은 [CLI를 사용하여 Kubernetes 파일 테스트 진행](../products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool.md)을 참조하십시오.
+자세한 내용은 [CLI를 사용하여 Kubernetes 파일 테스트 진행](../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool.md)을 참조하십시오.
 
 ### CI/CD 문제 해결 및 고급 팀
 

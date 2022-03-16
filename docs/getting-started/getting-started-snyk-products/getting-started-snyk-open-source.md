@@ -22,7 +22,7 @@ npm install -g snyk
 
 * Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조)
 * GitHub와 같은 지원되는 [소스 코드 관리 시스템](../../features/integrations/git-repository-scm-integrations/)에서 오픈소스 패키지를 사용하는 프로젝트
-* Java와 같은 지원되는 [언어 및 패키지 매니저](../../products/snyk-open-source/language-and-package-manager-support/)
+* Java와 같은 지원되는 [언어 및 패키지 매니저](../../snyk-products/snyk-open-source/language-and-package-manager-support/)
 
 ## 1단계: 소스 제어 통합 추가
 

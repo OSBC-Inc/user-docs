@@ -1,8 +1,8 @@
-# Getting started with the CLI
+# Snyk CLI 시작하기
 
 The Snyk Command Line Interface (CLI) helps you find and fix known vulnerabilities in your dependencies, both manually and as part of your Continuous Integration (CI) build system.
 
-See [Language and package manager support](../../../products/snyk-open-source/language-and-package-manager-support/) for details about package managers and languages that the CLI supports.
+See [Language and package manager support](../../../snyk-products/snyk-open-source/language-and-package-manager-support/) for details about package managers and languages that the CLI supports.
 
 ## Install and authenticate the Snyk CLI
 
@@ -11,7 +11,7 @@ See [Language and package manager support](../../../products/snyk-open-source/la
 
 ## Build your project
 
-Before testing for vulnerabilities you must build your project, with limited exceptions. For details refer to [Language and package manager support](../../../products/snyk-open-source/language-and-package-manager-support/).
+Before testing for vulnerabilities you must build your project, with limited exceptions. For details refer to [Language and package manager support](../../../snyk-products/snyk-open-source/language-and-package-manager-support/).
 
 ## Test for vulnerabilities
 

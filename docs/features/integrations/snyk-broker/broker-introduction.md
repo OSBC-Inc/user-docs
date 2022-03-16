@@ -62,7 +62,7 @@ In addition, Snyk Broker integrates with [Jira Server](https://docs.snyk.io/inte
 
 Snyk.io fetches and views dependency manifest files to analyze and deliver vulnerability results. To get proper test results and to create Snyk projects, one or more supported manifest files must be present in the tested folder (for integration with CLI), or in the repository (for integration with Git).
 
-See [Language support](../../../products/snyk-open-source/language-and-package-manager-support/) for details of supported manifest files for different languages.
+See [Language support](../../../snyk-products/snyk-open-source/language-and-package-manager-support/) for details of supported manifest files for different languages.
 
 ## **Broker usage**
 

@@ -126,7 +126,7 @@ When scanning your IaC configuration files using the Snyk CLI with **snyk iac te
 
 You can do this by using the [.snyk policy file](../policies/the-.snyk-file.md), which we recommend is stored and versioned in the root of your working directory for where you store your IaC configuration files.
 
-See [iac-ignores-using-the-.snyk-policy-file.md](../../../products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md "mention")for more details.&#x20;
+See [iac-ignores-using-the-.snyk-policy-file.md](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md "mention")for more details.
 
 ### Set who can configure ignore settings
 

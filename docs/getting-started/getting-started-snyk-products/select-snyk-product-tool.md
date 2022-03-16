@@ -6,10 +6,10 @@
 
 Snyk 계정이 있으면 다음 제품을 사용하여 취약점을 찾고 수정할 수 있습니다.
 
-* [**Snyk Open Source**](../../products/snyk-open-source/open-source-basics/): 오픈 소스 코드의 취약점을 찾아 수정합니다.
-* [**Snyk Code**](../../products/snyk-code/): 애플리케이션 코드에서 취약점을 찾아 수정합니다.
-* [**Snyk Container**](../../products/snyk-container/): 컨테이너 이미지에서 취약점을 찾아 수정합니다.
-* [**Snyk Infrastructure as Code**](../../products/snyk-infrastructure-as-code/): Kubernetes, Helm 및 Terraform 구성 파일의 취약점을 찾아 수정합니다.
+* [**Snyk Open Source**](../../snyk-products/snyk-open-source/open-source-basics/): 오픈 소스 코드의 취약점을 찾아 수정합니다.
+* [**Snyk Code**](../../snyk-products/snyk-code/): 애플리케이션 코드에서 취약점을 찾아 수정합니다.
+* [**Snyk Container**](../../snyk-products/snyk-container/): 컨테이너 이미지에서 취약점을 찾아 수정합니다.
+* [**Snyk Infrastructure as Code**](../../snyk-products/snyk-infrastructure-as-code/): Kubernetes, Helm 및 Terraform 구성 파일의 취약점을 찾아 수정합니다.
 
 ### Snyk 도구
 
