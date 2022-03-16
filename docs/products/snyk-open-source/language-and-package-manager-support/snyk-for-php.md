@@ -37,7 +37,7 @@ Snyk이 트리를 분석하고 구축하는 방식은 프로젝트의 언어와 
 
 ## **CLI parameters for PHP**
 
-### **Prerequisites**
+### 전제 조건
 
 * Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하세요.테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
 * 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
@@ -47,7 +47,7 @@ Snyk이 트리를 분석하고 구축하는 방식은 프로젝트의 언어와 
 
 Snyk을 실행할때 PHP 전용 파라미터가 없습니다.
 
-CLI에 대한 자세한내용은 [Getting started with the CLI](../../../features/snyk-cli/guides-for-our-cli/getting-started-with-the-cli.md)를 참조하십시오.
+CLI에 대한 자세한 내용은 [Getting started with the CLI](../../../features/snyk-cli/guides-for-our-cli/getting-started-with-the-cli.md)를 참조하십시오.
 
 ## PHP 프로젝트를 위한 Git Services
 
@@ -55,7 +55,7 @@ PHP 프로젝트는 Snyk에서 지원하는 모든 Git Services에서 가져올 
 
 가져올 프로젝트를 선택하면 다음 매니페스트 파일을 기반으로 디펜던시 트리를 빌드합니다.
 
-* Composer.json
+* composer.json
 * composer.lock
 
 ## **Git settings for PHP**

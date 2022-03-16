@@ -19,9 +19,9 @@ Snyk은 현재 GitHub, GitHub Enterprise Server and BitBucket Cloud를 통해 np
    * 적용 가능한 최신 버전의 프로젝트에서 아직 발견되지 않은 취약점이 포함되어 있는 경우 Snyk은 업그레이드를 권장하지 않습니다.
    * Snyk은 21일 미만의 버전에는 업그레이드를 권장하지 않습니다. 이는 기능적인 버그를 도입했다가 나중에 게시되지 않은 버전이나 손상된 계정(계정 소유자가 악의적인 의도를 가진 사람에게 제어권을 빼앗긴 경우)에서 릴리즈되는 버전을 피하기 위함입니다.
 
-## 지원되는 언어 및 저장소
+## 지원하는 언어 및 저장소
 
-Snyk currently supports this feature for npm, Yarn and Maven-Central projects through GitHub, GitHub Enterprise Server and BitBucket Cloud, including use of the Snyk Broker. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드를 해야 합니다. Broker 업그레이드 시 추가 도움이 필요한 경우 문서를 참조하십시오.
+Snyk는 현재 Snyk Broker 사용을 포함하여 GitHub, GitHub Enterprise Server 및 BitBucket Cloud를 통해 npm, Yarn 및 Maven-Central 프로젝트에 해당 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드를 해야 합니다. Broker 업그레이드 시 추가 도움이 필요한 경우 문서를 참조하십시오.
 
 ## 자동 PR을 사용하여 디펜던시 업그레이드
 
@@ -42,7 +42,7 @@ Snyk이 디펜던시 상태를 정기적으로 검사하고 디펜던시 업그�
 프로젝트 수준의 설정은 조직 수준의 설정을 재정의합니다. 현재 GitHub, GitLab, Bitbucket Azure 저장소와 통합하는 Git 저장소에서 지원되는 모든 언어를 지원합니다.
 {% endhint %}
 
-### 특정 프로젝트에 대한 자동 업그레이드 PR을 구성하려면\*\*:\*\*
+### 특정 프로젝트에 대한 자동 업그레이드 PR 사용
 
 **전제조건**
 
@@ -52,9 +52,9 @@ Snyk이 디펜던시 상태를 정기적으로 검사하고 디펜던시 업그�
 
 1. 자동 업그레이드 PR을 사용할 조직으로 이동한 다음 프로젝트를 선택합니다.
 2. 관련 프로젝트로 이동하고 설정 아이콘![](../../../.gitbook/assets/cog\_icon.png)을 클릭합니다.
-3. 설정 영역의 왼쪽 패널 메뉴에서 통합 설정을 클릭합니다. **참고**: 이러한 설정은 해당 프로젝트에 대한 통합에만 적용됩니다.
+3. 설정 영역의 왼쪽 패널 메뉴에서 통합 설정을 클릭합니다. **Note**: 이러한 설정은 해당 프로젝트에 대한 통합에만 적용됩니다.
 4. 설정에서 **Automatic dependency upgrade pull requests**로 이동하고 사용 안 함을 클릭합니다.
-5. 표시되는 옵션:
+5. 표시되는 옵션에서 다음 항목을 수행할 수 있습니다.
    1. Snyk은 저장소당 최대 10개의 PR을 동시에 생성합니다. 이 수를 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 이에 대한 자세한 내용은 작동 방식에 대해 자세히 읽어 보십시오.
    2. Dependencies to ignore 필드에 자동 기능의 일부로 처리되지 않는 디펜던시의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
 6. **Update dependency upgrade settings**를 클릭합니다.

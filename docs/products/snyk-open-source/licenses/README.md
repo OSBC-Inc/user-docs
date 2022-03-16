@@ -3,7 +3,7 @@
 ## 라이선스 개요
 
 {% hint style="info" %}
-**Feature availability**\
+**기능 사용 여부**\
 라이선스는 모든 유료 요금제에 제공됩니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
@@ -12,7 +12,7 @@ CLI 또는 애플리케이션으로 프로젝트를 테스트할 때마다 프�
 고객이 라이선스 컴플라이언스를 보다 신속하게 시작할 수 있도록 기본 정책을 수립했습니다. 기본 정책은 여러 유형의 애플리케이션(SaaS, 분산 등)의 요구 사항에 대한 응답을 시도하는 기준선으로, 추가 라이선스 정책을 보정하는 출발점으로 사용할 수 있습니다. 기본 정책은 라이선스를 승인하거나 비판하지 않습니다.\
 고객마다 라이선스 유형에 따라 요구사항과 허용 범위가 다를 수 있습니다. 필요한 내용을 변경하거나 회사의 특정 요구사항에 맞는 새로운 정책을 만들었는지 확인하는 것이 좋습니다.
 
-[기본적으로](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview) 다음과 같은 방법으로 라이선스의 심각도를 결정합니다:
+[기본적으로](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview) 다음과 같은 방법으로 라이선스의 심각도를 결정합니다.
 
 * High severity - 상용 소프트웨어에 대한 문제를 분명히 제기하는 라이선스
 * Medium severity - 문제가 될 수 있고 검토해야 할 조항이 있는 라이선스

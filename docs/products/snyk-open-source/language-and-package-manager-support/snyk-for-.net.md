@@ -113,13 +113,13 @@ Snyk UI에서 Snyk이 빌드 디펜던시를 포함하여 전체 프로젝트를
 **언어 기본 설정 업데이트**
 
 1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
-2.  설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png) > .NET
+2.  설정 ![](../../../.gitbook/assets/cog\_icon.png) > .NET
 
     Scan build dependencies를 선택하면 Snyk이 모든 개발 디펜던시를 스캔합니다.
 
 ## 취약점 수정
 
-Snyk이 프로젝트 내에서 오픈 소스 취약점을 수정하는 데 어떻게 도움이 되는지에 대한 자세한 내용은 [Fix your vulnerabilities](https://docs.snyk.io/features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities)를 참조하세요.
+Snyk이 프로젝트 내에서 오픈 소스 취약점을 수정하는 데 어떻게 도움이 되는지에 대한 자세한 내용은 [Fix your vulnerabilities](https://docs.snyk.io/features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities)를 참조하십시오.
 
 {% hint style="info" %}
 PR 수정 기능은 [SCM](../../../getting-started/scm-git-and-ci-cd-integration-deployment-intro.md) 통합 전체에서만 사용할 수 있습니다.

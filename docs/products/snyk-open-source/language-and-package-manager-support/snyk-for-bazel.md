@@ -3,12 +3,12 @@
 Snyk은 Bazel에서 관리하는 디펜던시가 있는 테스트 프로젝트를 Snyk API를 통해 지원합니다.
 
 {% hint style="info" %}
-Snyk API 문서는 [https://snyk.docs.apiary.io/](https://snyk.docs.apiary.io)를 참조하세요.
+Snyk API 문서는 [https://snyk.docs.apiary.io/](https://snyk.docs.apiary.io)를 참조하십시오.
 {% endhint %}
 
 {% hint style="info" %}
 **기능 지원 여부**\
-Snyk API는 Business 및 Enterprise plans에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하십시오.하세요
+Snyk API는 Business 및 Enterprise plans에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)을 참조하십시오.
 {% endhint %}
 
 Dep Graph API에는 추가 권한이 필요합니다. 액세스를 요청하려면 support@snyk.io에 문의하십시오.

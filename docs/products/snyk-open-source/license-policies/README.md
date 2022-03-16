@@ -7,7 +7,7 @@
 
 **Business customers의 경우:**
 
-조직 관리자는 settings ![](../../../.gitbook/assets/cog\_icon.png) **>** Licenses [라이선스 정책 규칙을 액세스하고 설정](https://docs.snyk.io/snyk-open-source/license-policies/setting-a-license-policy)할 수 있습니다.
+조직 관리자는 settings ![](../../../.gitbook/assets/cog\_icon.png) **>** Licenses [라이선스 정책 규칙을 액세스하고 설정](setting-a-license-policy.md)할 수 있습니다.
 
 **Enterprise customers의 경우:**
 

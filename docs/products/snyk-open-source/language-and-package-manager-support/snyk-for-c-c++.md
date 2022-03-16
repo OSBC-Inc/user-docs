@@ -43,7 +43,7 @@ Snyk을 사용하여 C/C++ 프로젝트를 스캔할 수 있습니다.
 다음과 같은 제약과 제한은 설계에 따른 것입니다. 우리가 앞으로 개선을 할 수는 있지만, 그것들은 문제로 간주하지 않습니다. 해결하려는 문제는 [Known Issues ](snyk-for-c-c++.md#known-issues)섹션에 있습니다.
 {% endhint %}
 
-**디펜던시 소스코드를 사용할 수 있어야합니다**
+**디펜던시 소스코드를 사용할 수 있어야 합니다**
 
 Snyk CLI가 소스코드에서 디펜던시를 찾을 수있으려면 디펜던시의 전체 소스코드가 스캔한 폴더에 있어야 합니다. 다음은 Snyk이 스캔할 수 있는 일반적인 디렉토리 구조입니다.
 
@@ -85,7 +85,7 @@ C++ 프로젝트를 스캔할 때 다음 데이터가 수집되고 문제 해결
 
 ### Snyk CLI for C / C++ projects
 
-#### Install the Snyk CLISnyk CLI 설치
+#### Snyk CLI 설치
 
 C/C++ 스캐닝은 [Snyk CLI](../../../features/snyk-cli/)에서 사용할 수 있습니다. 자세한 내용은 [Install the CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 참조하십시오.
 
@@ -317,7 +317,7 @@ Snyk App에서 자동화된 정기 테스트 및 재검색은 현재 지원하�
 
 **Window에서 스캔 시 발생하는 문제**
 
-Git의 많은 오픈 소스 프로젝트들은 Unix line endings을 사용한다. 기본적으로 윈도우즈의 Git은 Unix line endings을 Windows line endings으로 변환하고 실제 커밋에 대해서만 다시 변환합니다. 데이터베이스에는 원본 줄 끝이 있는 소스 코드 시그니처가 포함되어 있으므로 Windows에서 Windows line endings이 있는 파일에 대해 생성된 시그니처가 데이터베이스의 시그니처와 다릅니다. 이 경우 디펜던시가 발견되지 않을 가능성이 매우 높습니다.
+Git의 많은 오픈 소스 프로젝트들은 Unix line endings을 사용합니다. 기본적으로 Windows의 Git은 Unix line endings을 Windows line endings으로 변환하고 실제 커밋에 대해서만 다시 변환합니다. 데이터베이스에는 원본 줄 끝이 있는 소스 코드 시그니처가 포함되어 있으므로 Windows에서 Windows line endings이 있는 파일에 대해 생성된 시그니처가 데이터베이스의 시그니처와 다릅니다. 이 경우 디펜던시가 발견되지 않을 가능성이 매우 높습니다.
 
 Windows에서 Unix line endings이 있는 프로젝트를 검사하려면 Git line endings 변환을 실행 중지하십시오. 이 설정을 전체적으로 적용하려면 다음 명령어를 실행하십시오.
 

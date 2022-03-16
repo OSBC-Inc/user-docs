@@ -10,7 +10,7 @@
   * CLI 결과 및 프로젝트 뷰 내의 issue cards에 법적 지침이 표시됩니다.
 
 {% hint style="info" %}
-**Feature availability**\
+**기능 사용 여부**\
 Business customers의 경우: 그룹을 사용할 수 없는 경우 조직 관리자가 라이선스 정책을 변경할 수 있으며, 그룹 사용이 가능한 경우 그룹 관리자가 라이선스 정책을 변경할 수 있습니다. Enterprise customers의 경우: 그룹 관리자는 정책을 만들거나 수정할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 

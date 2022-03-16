@@ -161,7 +161,7 @@ Snyk은 기본적으로 사용 가능한 모든 구성을 병합하기 때문에
 기본적으로 Snyk은 `gradle build --no-daemon`을 실행하여 background에서 `snyk test`와 `snyk monitor`를 진행합니다. 문제가 발생하면 다음과 같이 진행하십시오.
 
 1. Gradle 데몬을 시작합니다.
-2. `snyk test` 또는 `snyk monitor`에 `--daemon`을 추가하세요.
+2. `snyk test` 또는 `snyk monitor`에 `--daemon`을 추가하십시오.
 
 ### Lockfiles
 
