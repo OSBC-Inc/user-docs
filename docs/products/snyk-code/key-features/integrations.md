@@ -4,7 +4,7 @@
 
 ### JetBrains IDE 플러그인
 
-자세한 내용은 [JetBrains IDE Plugins](https://docs.snyk.io/integrations/ide-tools/jetbrains-plugins)를 참조하십시오.
+자세한 내용은 [JetBrains IDE Plugins](../../../features/integrations/ide-tools/jetbrains-plugins.md)를 참조하십시오.
 
 ### VS Code IDE 플러그인
 
@@ -16,7 +16,7 @@
 
 이 통합을 통해 다음을 수행할 수 있습니다:
 
-* Manage Code projects using your existing native import flow and tools
+* 기존 네이티브 Import 흐름 및 툴을 사용하여 코드 프로젝트 관리
 * 소스코드에서 발견된 보안 issues 보기 및 우선 순위 지정
 * 프로젝트 재테스트를 실행 및 프로젝트의 히스토리 스냅샷 보기
 
@@ -26,11 +26,11 @@ Snyk Code는 [GitHub](https://docs.snyk.io/integrations/git-repository-scm-integ
 
 #### 지원되는 언어
 
-Snyk Code는 다양한 언어를 지원합니다. 전체 목록은  [Snyk Code language support](https://docs.snyk.io/snyk-code/snyk-code-language-and-framework-support)를 참조하십시오.
+Snyk Code는 다양한 언어를 지원합니다. 전체 목록은 [언어 및 프레임워크](../snyk-code-language-and-framework-support.md)를 참조하십시오.
 
 ### PR 확인
 
-곧! 계속 지켜봐 주십시오.
+준비 중입니다! 계속 지켜봐 주십시오.
 
 ## CI 통합
 

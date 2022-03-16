@@ -8,7 +8,7 @@ IDE 또는 PR 확인(현재 베타 버전)에서 코드를 사용하여 도입�
 
 ### 애플리케이션 전반에서 문제가 어떻게 진행되는지 파악
 
-Some issues are one-liners but they are not the majority. Most SAST issues are multi-step, multi-file--and sometimes--multi-language. To best represent that, Code presents a full data-flow visualization that allows you to navigate through your source code from source (user input) to sink (the operation that needs to receive clean input and could be otherwise exploited).
+일부 이슈는 간단하지만 대부분은 그렇지 않습니다. 대부분의 SAST 문제는 다단계, 다중 파일, 때로는 다중 언어입니다. 이를 잘 표현하기 위해 코드는 소스(사용자 입력)에서 싱크(클린 입력을 수신해야 하며 그렇지 않으면 악용될 수 있는 작업)까지 소스 코드를 탐색할 수있는 완전한 데이터 흐름 시각화를 제공합니다.
 
 ### 다른 사용자의 경험을 바탕으로 더 많은 issues 해결
 
@@ -24,13 +24,13 @@ Snyk Code는 취약점의 모든 issue에 대한 체계적인 개요를 제공�
 
 Snyk Code test scans에서 제공하는 정적 분석을 사용하여 저장소를 원활하고 지속적으로 모니터링하고 소스코드 파일의 보안 결함을 발견할 수 있습니다.
 
-### Prioritize the right issues to focus on
+### 집중할 수 있는 적절한 issues에 우선순위 부여
 
 Snyk Code에서 확인된 모든 issue에는 확산률, 리스크 및 추정되는 노력을 반영하는 우선 순위 점수가 할당되며 중요한 사항에 집중할 수 있습니다.
 
 또한 취약점, 유형 또는 파일에 따라 issues를 그룹화하여 시간을 절약하고 여러 issues를 한 번에 해결할 수 있습니다.
 
-### See what matters with smart exclude and ignore mechanisms
+### 스마트 exclude 및 ignore 매커니즘의 중요성
 
 Snyk Code는 일부 코드를 이동하거나 변수 또는 함수 이름을 변경한 경우에도 이전에 무시된 issues가 다시 발생하지 않도록 스마트 지문 알고리즘을 사용합니다.
 
@@ -40,13 +40,13 @@ Snyk Code는 일부 코드를 이동하거나 변수 또는 함수 이름을 변
 
 ### 팀 및 부서에 걸쳐 손쉽게 Snyk Code를 탑재
 
-Remove the code security triage bottleneck from security teams by enabling automatic triage and fix in every step of the SDLC. Shift-left and enable developers to “self serve” on security.
+SDLC의 모든 단계에서 자동 분류 및 수정을 활성화하여 보안 팀에서 코드 보안 분류 병목 현상을 제거합니다. Shift-left를 통해 개발자가 보안에 대해 "셀프 서브"할 수 있습니다.
 
 Contributing Developers를 사용하면 얼마나 많은 개발자가 Snyk Code를 사용하고 있는지 알 수 있습니다.
 
 ### reporting을 사용하여 진행 상황 검토 및 공유
 
-기업의 보안 태도를 개선하는 것은 지속적인 프로세스이며, 다음과 같은 질문에 답할 수 있는 올바른 reporting이 필요합니다:
+기업의 보안 태도를 개선하는 것은 지속적인 프로세스이며, 다음과 같은 질문에 답할 수 있는 올바른 reporting이 필요합니다.
 
 * 이번달에 몇 개의 이슈가 **fixed** 되었나요?
 * 이번달에 몇 개의 이슈가 **introduced** 되었나요?

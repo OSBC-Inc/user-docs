@@ -6,7 +6,7 @@ Snyk Code는 AI를 활용한 심층 코드 시맨틱 코드 분석 엔진을 기
 
 분석을 위해 파일이 제공되면 엔진은 언어 독립적인 공통 중간 형식으로 어떤 파서에 어떤 파일을 넣을지 결정합니다. 이 형식은 스캔한 소스 코드의 특성을 보존하고 노출합니다.
 
-이 기술을 통해 Snyk Code는 다음을 수행할 수 있습니다:
+이 기술을 통해 Snyk Code는 다음을 수행할 수 있습니다.
 
 * 모든 프로그래밍 언어를 쉽게 지원합니다.
 * 다양한 언어에 대한 보안 스캔에 걸쳐 다국어 프로젝트를 지원합니다.
@@ -26,17 +26,17 @@ _베타 지원은 다음과 같습니다. Go, Ruby 및 Kotlin은 자세한 내�
 
 ## 언어 유형 및 프레임워크 지원
 
-Snyk Code는 다양한 관련 언어 유형에서 사용할 수 있습니다:
+Snyk Code는 다양한 관련 언어 유형에서 사용할 수 있습니다.
 
 * JavaScript 및 Python과 같은 동적 유형 언어.
-* Optionally strong typed languages such as TypeScript.
-* Strong typed languages such as Java.
+* TypeScript와 같은 강력한 유형의 언어(옵션).
+* Java와 같은 강력한 유형의 언어.
 
 프레임워크, 라이브러리 및 취약점 유형에 대한 전체 지원 목록은 Snyk에 문의하십시오.
 
-## 지원되는 확장자
+## 지원하는 확장자
 
-다음은 지원되는 확장자입니다:
+지원하는 확장자는 다음과 같습니다.
 
 {% hint style="info" %}
 c,cc,cpp,cxx,h,hpp,hxx,ejs,es,es6,htm,html,js,jsx,ts,tsx,vue,java,erb,haml,rb,rhtml,slim,py,go,ASPX,Aspx,CS,Cs,aspx,cs,php, xml
