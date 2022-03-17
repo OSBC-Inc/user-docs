@@ -4,7 +4,7 @@ Snyk Open Source를 사용하여 애플리케이션에서 사용하는 오픈 �
 
 Snyk Open Source는 많은 공통 언어 및 플랫폼에서 사용할 수 있습니다. [개발 언어 및 패키지 매니저 지원](language-and-package-manager-support/)을 참조하십시오.
 
-Snyk Web app, Snyk CLI, IDE 또는 API에서 Snyk Open Source를 사용할 수 있습니다. [Snyk Open Source 사용하기](../../getting-started/getting-started-snyk-products/getting-started-snyk-open-source.md)를 참조하십시오.
+Snyk Web app, Snyk CLI, IDE 또는 API에서 Snyk Open Source를 사용할 수 있습니다. [Snyk Open Source 사용하기](getting-started-snyk-open-source.md)를 참조하십시오.
 
 ### 취약점 탐지 및 수정
 

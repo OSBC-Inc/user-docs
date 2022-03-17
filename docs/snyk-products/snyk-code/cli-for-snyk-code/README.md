@@ -1,7 +1,7 @@
 # CLI를 통해 Snyk Code 사용
 
 {% hint style="info" %}
-조직에 Snyk Code가 활성화되어 있는지 확인하십시오. 자세한 내용은 [Getting started with Snyk Code](../../../getting-started/getting-started-snyk-products/getting-started-with-snyk-code.md#stage-1-enable-snyk-code)를 참조하십시오.
+조직에 Snyk Code가 활성화되어 있는지 확인하십시오. 자세한 내용은 [Getting started with Snyk Code](../getting-started-with-snyk-code.md#stage-1-enable-snyk-code)를 참조하십시오.
 {% endhint %}
 
 Snyk Code용 Snyk Command Line Interface([CLI](../../../features/snyk-cli/))는 로컬 컴퓨터에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
