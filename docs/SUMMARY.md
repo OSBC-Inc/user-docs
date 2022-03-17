@@ -34,7 +34,7 @@
   * [Open Source 기본 사항](snyk-products/snyk-open-source/open-source-basics/README.md)
     * [취약점 수정](snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)
     * [새로운 수정 사항에 대한 자동 pull request 생성](snyk-products/snyk-open-source/open-source-basics/fix-pull-requests-for-new-vulnerabilities.md)
-    * [알려진 취약점(backlog)에 대한 자동화된 pull requests](snyk-products/snyk-open-source/open-source-basics/fix-pull-requests-for-known-vulnerabilities-backlog.md)
+    * [알려진 취약점(backlog)에 대한 자동 pull requests](snyk-products/snyk-open-source/open-source-basics/fix-pull-requests-for-known-vulnerabilities-backlog.md)
     * [Snyk을 워크플로우에 통합하는 방법](snyk-products/snyk-open-source/open-source-basics/integrate-snyk-into-your-workflow.md)
   * [개발 언어 및 패키지 매니저 지원](snyk-products/snyk-open-source/language-and-package-manager-support/README.md)
     * [JavaScript용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-javascript.md)
