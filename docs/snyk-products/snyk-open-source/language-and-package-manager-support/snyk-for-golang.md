@@ -1,4 +1,4 @@
-# Golang용 Snyk
+# Snyk for Golang
 
 Snyk은 [Go Modules](https://golang.org/ref/mod), [dep](https://github.com/golang/dep) 그리고 [govendor](https://github.com/kardianos/govendor)가 관리하는 Go 프로젝트의 테스트 및 모니터링을 지원합니다.
 
@@ -17,7 +17,7 @@ Snyk은 [Go Modules](https://golang.org/ref/mod), [dep](https://github.com/golan
 | [dep](https://github.com/golang/dep)              | ✔︎          | ✔︎          | ✔︎               |        |                    |
 | [govendor](https://github.com/kardianos/govendor) | ✔︎          | ✔︎          | ✔︎               |        |                    |
 
-## 작동 방식
+## **How it works**
 
 트리를 구축한 후에는 [vulnerability database](https://snyk.io/vuln)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
 

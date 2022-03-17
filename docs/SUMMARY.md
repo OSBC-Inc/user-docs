@@ -54,7 +54,7 @@
     * [보고서의 라이선스 탭](snyk-products/snyk-open-source/licenses/reports-licenses-tab.md)
   * [라이선스 정책](snyk-products/snyk-open-source/license-policies/README.md)
     * [라이선스 정책 설정](snyk-products/snyk-open-source/license-policies/setting-a-license-policy.md)
-    * [라이선스 정책: 공동작업자가 보는 내용](snyk-products/snyk-open-source/license-policies/license-policies-what-collaborators-see.md)
+    * [라이선스 정책: collaborator가 보는 내용](snyk-products/snyk-open-source/license-policies/license-policies-what-collaborators-see.md)
   * [디펜던시 관리](snyk-products/snyk-open-source/dependency-management/README.md)
     * [자동 PR을 사용하여 디펜던시 업그레이드](snyk-products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)
 * [Snyk Code](snyk-products/snyk-code/README.md)

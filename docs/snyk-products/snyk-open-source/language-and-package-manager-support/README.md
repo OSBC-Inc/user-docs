@@ -4,40 +4,40 @@
 
 Snyk은 다양한 개발 언어를 지원하며 각 언어마다 여러 빌드 도구 및 패키지 매니저를 지원합니다.
 
-{% hint style="info" %}
-다른 Snyk 제품에 대한 언어 지원은 해당 제품에 대한 문서를 참조하십시오 예를 들어 Snyk Code 언어 지원의 자세한 내용은 [언어 및 프레임워크](../../snyk-code/snyk-code-language-and-framework-support.md)를 참조하십시오
-{% endhint %}
+[FossID](https://fossid.com)를 인수한 후 Snyk은 FossID의 핑거 프린팅을 이용하여 관리되지 않는 패키지를 식별할 수 있습니다. 현재 Snyk CLI에서도 이 기능을 제공하기 위해 노력하고 있습니다.
+
+이 문서는 개발 언어 지원에 대해 설명합니다. 자세한 내용은 [Language and package manager support](https://support.snyk.io/hc/en-us/sections/360001087857-Language-package-manager-support)를 참조하십시오.
 
 ## 개발 언어 및 패키지 매니저/빌드 도구
 
-| **개발 언어**   | **패키지 매니저/빌드 도구** |
-| ----------- | ----------------- |
-| .NET- C#    | Nuget             |
-| .NET- F#    | Nuget             |
-| .NET- VB#   | Nuget             |
-| .NET- C#    | Paket             |
-| .NET- F#    | Paket             |
-| .NET- VB#   | Paket             |
-| C           |                   |
-| C++         |                   |
-| Elixir      | hex               |
-| Go          | Modules           |
-| Go          | govendor          |
-| Go          | dep               |
-| Java        | Gradle            |
-| Java        | Maven             |
-| Java        | ivy               |
-| Java        | Bazel             |
-| javascript  | npm               |
-| javascript  | yarn              |
-| Objective-C | CocoaPods         |
-| PHP         | Composer          |
-| Python      | pip               |
-| Python      | Poetry            |
-| Python      | pipenv            |
-| Ruby        | Bundler           |
-| Scala       | sbt               |
-| Swift       | CocoaPods         |
+| **Development Language** | **Package manager/build tool** |
+| ------------------------ | ------------------------------ |
+| .NET- C#                 | Nuget                          |
+| .NET- F#                 | Nuget                          |
+| .NET- VB#                | Nuget                          |
+| .NET- C#                 | Paket                          |
+| .NET- F#                 | Paket                          |
+| .NET- VB#                | Paket                          |
+| C                        |                                |
+| C++                      |                                |
+| Elixir                   | hex                            |
+| Go                       | Modules                        |
+| Go                       | govendor                       |
+| Go                       | dep                            |
+| Java                     | Gradle                         |
+| Java                     | Maven                          |
+| Java                     | ivy                            |
+| Java                     | Bazel                          |
+| javascript               | npm                            |
+| javascript               | yarn                           |
+| Objective-C              | CocoaPods                      |
+| PHP                      | Composer                       |
+| Python                   | pip                            |
+| Python                   | Poetry                         |
+| Python                   | pipenv                         |
+| Ruby                     | Bundler                        |
+| Scala                    | sbt                            |
+| Swift                    | CocoaPods                      |
 
 ## 지원하는 개발 언어 및 프레임워크
 
