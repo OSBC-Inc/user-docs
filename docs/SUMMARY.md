@@ -12,11 +12,7 @@
     * [Snyk intel vulnerability DB](introducing-snyk/snyks-core-concepts/getting-started-snyk-intel-vuln-db-access.md)
   * [용어 사전](introducing-snyk/glossary.md)
 * [시작하기](getting-started/README.md)
-  * [Snyk 시작하기](getting-started/getting-started-snyk-products/README.md)
-    * [Snyk 제품 시작하기](getting-started/getting-started-snyk-products/select-snyk-product-tool.md)
-  * [SCM(Git) 및 CI/CD 통합 구축 소개](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
-  * [Snyk SCM 통합](getting-started/snyk-scm-integration-good-practices.md)
-  * [Snyk CI/CD 통합](getting-started/snyk-cicd-integration-good-practices.md)
+  * [Snyk 제품 시작하기](getting-started/select-snyk-product-tool.md)
   * [Snyk Target 및 Projects 소개](getting-started/introduction-to-snyk-projects/README.md)
     * [프로젝트 정보 보기](getting-started/introduction-to-snyk-projects/view-project-information/README.md)
       * [프로젝트 속성](getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)
@@ -27,6 +23,9 @@
     * [Issue card 정보](getting-started/introduction-to-snyk-projects/issue-card-information.md)
     * [조직의 최대 프로젝트 수](getting-started/introduction-to-snyk-projects/maximum-number-of-projects-in-an-organsation.md)
   * [Snyk 대시보드 시작하기](getting-started/getting-started-with-snyk-dashboard.md)
+  * [SCM(Git) 및 CI/CD 통합 구축 소개](getting-started/scm-git-and-ci-cd-integration-deployment-intro.md)
+  * [Snyk SCM 통합](getting-started/snyk-scm-integration-good-practices.md)
+  * [Snyk CI/CD 통합](getting-started/snyk-cicd-integration-good-practices.md)
 
 ## SNYK PRODUCTS
 

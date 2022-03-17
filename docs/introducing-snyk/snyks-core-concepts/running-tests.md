@@ -25,7 +25,7 @@ Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다
 
 새 프로젝트를 추가하거나 재테스트 버튼을 클릭하면 테스트가 실행됩니다.
 
-자세한 내용은 [Snyk 시작하기](../../getting-started/getting-started-snyk-products/)를 참조하십시오.
+자세한 내용은 [Snyk 시작하기](broken-reference)를 참조하십시오.
 
 ### API로 테스트 실행
 
