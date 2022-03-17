@@ -1,4 +1,4 @@
-# Snyk for Bazel
+# Bazel용 Snyk
 
 Snyk은 Bazel에서 관리하는 디펜던시가 있는 테스트 프로젝트를 Snyk API를 통해 지원합니다.
 
@@ -31,7 +31,7 @@ Bazel 디펜던시는 Starlark를 사용하여 BUILD 파일에서 코드로 지�
 
 권장하는 접근방식은 [Snyk Dep Graph Test API](https://github.com/snyk/dep-graph)를 통해 의존성을 테스트하는 것입니다.
 
-## How it works
+## 작동 방식
 
 1. 각 디펜던시 타입(Maven, Cocoapods 등)에 대해 모든 디펜던시 패키지 및 버전을 나열하는 [Dep Graph JSON object](https://github.com/snyk/dep-graph)를 생성합니다(아래 참조).
 2.  Bazel 테스트 규칙의 일부로 이 객채를 POST request로 [Dep Graph Test API](https://support.snyk.io/hc/en-us/articles/360011549737-Snyk-for-Bazel#h\_01EEWFQJFTCWFQBMQR0X32J8B8)([auth token](https://docs.snyk.io/snyk-api-info/authentication-for-api) 포함)전송합니다. curl request를 예로 들면 다음과 같습니다.

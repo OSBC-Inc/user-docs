@@ -1,4 +1,4 @@
-# Snyk for JavaScript
+# JavaScript용 Snyk
 
 Snyk을 사용하여 JavaScript 프로젝트를 스캔할 수 있습니다.
 
@@ -15,7 +15,7 @@ Snyk을 사용하여 JavaScript 프로젝트를 스캔할 수 있습니다.
 | Yarn                        | ✔︎                       | ✔︎                       | ✔︎                            | ✔︎     | ✔︎                              |
 | Yarn Workspaces             | ✔︎                       | ✔︎                       | ✔                             | ✖️     | ✔︎                              |
 
-### How it works
+### 작동 방식
 
 Snyk이 디펜던시 트리를 구축한 후 [vulnerability database](https://snyk.io/vuln)를 사용하여 해당 트리의 모든 패키지에서 취약점을 찾습니다.
 
@@ -96,7 +96,7 @@ policy path를 제공하여 감지된 모든 작업 공간에 적용할 ignores/
 
 ### JavaScript의 CLI 파라미터
 
-### 전제 조건
+#### 전제 조건
 
 * 관련 패키지 매니저가 설치되어 있습니다.
 * Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.

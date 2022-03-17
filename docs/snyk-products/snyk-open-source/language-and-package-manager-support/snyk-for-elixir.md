@@ -1,4 +1,4 @@
-# Snyk for Elixir
+# Elixir용 Snyk
 
 Snyk CLI를 이용하여 [Elixir](https://www.notion.so/Elixir-7c925900bf774c84b83b65c14084e80e) 프로젝트의 취약점을 테스트하기 위한 보안 스캔을 제공합니다.
 
@@ -8,7 +8,7 @@ Snyk CLI를 이용하여 [Elixir](https://www.notion.so/Elixir-7c925900bf774c84b
 | ------------------------------------------------------------ | ----------- | ----------- | ---------------- | ------ | ------------------ | - |
 | [Mix](https://hexdocs.pm/mix/Mix.html)/[Hex](https://hex.pm) | ✔︎          |             |                  |        |                    |   |
 
-## How it works
+## 작동 방식
 
 Snyk은 매니페스트 및 lockfile을 분석하여 프로젝트에 대한 디펜던시 트리를 구축합니다.
 

@@ -51,7 +51,7 @@
     * [Bazel용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-bazel.md)
   * [라이선스](snyk-products/snyk-open-source/licenses/README.md)
     * [Snyk 라이선스 컴플라이언스 관리 시작하기](snyk-products/snyk-open-source/licenses/getting-started-snyk-licensing-compliance.md)
-    * [Reports: 라이선스 탭](snyk-products/snyk-open-source/licenses/reports-licenses-tab.md)
+    * [보고서의 라이선스 탭](snyk-products/snyk-open-source/licenses/reports-licenses-tab.md)
   * [라이선스 정책](snyk-products/snyk-open-source/license-policies/README.md)
     * [라이선스 정책 설정](snyk-products/snyk-open-source/license-policies/setting-a-license-policy.md)
     * [라이선스 정책: 공동작업자가 보는 내용](snyk-products/snyk-open-source/license-policies/license-policies-what-collaborators-see.md)

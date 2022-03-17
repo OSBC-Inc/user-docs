@@ -138,12 +138,12 @@ CLI 옵션 전체 목록을 보려면 `snyk test --help`, `snyk monitor --help` 
 
 ### 빌드 실패에 대한 옵션 구성
 
-`snyk test` 명령에 옵션을 추가하여 빌드 실패의 원인이 될 수 있는 매개변수를 구체화할 수 있습니다.
+`snyk test` 명령에 옵션을 추가하여 빌드 실패의 원인이 될 수 있는 파라미터를 구체화할 수 있습니다.
 
 * `--severity-threshold=high`: 심각도가 높은 Issue에 대해서만 빌드 실패
 * `--fail-on=upgradable`: 업그레이드 가능한 Issue에 대해서만 빌드 실패(Snyk 수정 조언을 통해 해결 가능)
 
-Snyk JSON 출력의 다른 매개변수(예: CVSS 점수)에 대한 빌드에 실패하거나 [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 wrapper를 사용하거나 [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 Issue에 대해서만 빌드에 실패할 수 있습니다. snyk-delta 사용에 대한 정보는 [Snyk CLI에서 고급 빌드 실패](../features/snyk-cli/advanced-failing-of-builds-in-snyk-cli.md)를 참조하십시오.
+Snyk JSON 출력의 다른 파라미터(예: CVSS 점수)에 대한 빌드에 실패하거나 [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 wrapper를 사용하거나 [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 Issue에 대해서만 빌드에 실패할 수 있습니다. snyk-delta 사용에 대한 정보는 [Snyk CLI에서 고급 빌드 실패](../features/snyk-cli/advanced-failing-of-builds-in-snyk-cli.md)를 참조하십시오.
 
 ### 사용자 정의 빌드 아티팩트 생성
 
@@ -224,7 +224,7 @@ snyk test --yarn-workspaces --policy-path=src/.snyk
     각 프로젝트의 디펜던시를 설치한 후 특정 아티팩트(예: `pom.xml`)를 가리키는 비슷한 호출을 수행합니다. 이 방법은 빠르고 효율적이지만 특히 프로젝트가 익숙하지 않은 경우 확장하기 어려울 수 있습니다.
 * `--all-projects` 및 `--detection-depth` 옵션을 사용하는 경우 Snyk CLI 또는 CI/CD 플러그인은 지원되는 파일 유형과 일치하는 매니페스트에 대해 폴더 구조의 `--detection-depth`까지 검색합니다. 각 프로젝트는 스캔되고 자체 결과가 있습니다. 마찬가지로 `snyk-monitor`를 사용하는 경우 각 프로젝트에 대해 별도의 결과가 생성됩니다. 이것은 특히 node, .net, python 등에 걸친 프로젝트가 있는 경우 스캔을 자동화하는 좋은 방법입니다.
 * 대부분의 Gradle 프로젝트에서 `--all-projects`를 사용하면 `--all-projects` 검색의 일부로 빌드 파일을 찾을 때 다음과 같은 형식으로 백그라운드에서 Gradle 고유의 옵션을 호출할 수 있습니다. `snyk test --file=build.gradle --all-sub-projects`&#x20;
-* Gradle에는 추가 설정 매개변수가 필요할 수 있습니다. 이 경우 다른 언어 및 패키지 매니저의 각 매니페스트에 대해 `--file=`을 사용하여 다른 아티팩트를 대상으로 합니다. 그런 다음 `--all-sub-projects` 및 `--configuration-matching`을 사용하여 복잡한 Gradle 프로젝트를 할 수도 있습니다.
+* Gradle에는 추가 설정 파라미터가 필요할 수 있습니다. 이 경우 다른 언어 및 패키지 매니저의 각 매니페스트에 대해 `--file=`을 사용하여 다른 아티팩트를 대상으로 합니다. 그런 다음 `--all-sub-projects` 및 `--configuration-matching`을 사용하여 복잡한 Gradle 프로젝트를 할 수도 있습니다.
 
 자세한 내용은 [Snyk for Java (Gradle, Maven)](https://support.snyk.io/hc/en-us/articles/360003817357-Java-for-Snyk)를 참조하십시오.
 

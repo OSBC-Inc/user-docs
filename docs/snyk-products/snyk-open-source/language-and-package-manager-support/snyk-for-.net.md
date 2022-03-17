@@ -1,4 +1,4 @@
-# Snyk for .NET
+# .NET용 Snyk
 
 Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
@@ -14,7 +14,7 @@ Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한
 | [NuGet](https://www.nuget.org)                         | ✔︎          | ✔︎          | ✔︎               | ✔︎     |                    |
 | [Paket](https://fsprojects.github.io/Paket/index.html) | ✔︎          |             |                  |        |                    |
 
-## **How it works**
+## 작동 방식
 
 트리를 구축한 후에는 [vulnerability database](https://snyk.io/vuln)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
 
