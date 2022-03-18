@@ -11,7 +11,7 @@ Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk �
 
 {% hint style="info" %}
 **기능 사용 여부**\
-이 기능은 모든 유료 플랜에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하세요.
+이 기능은 모든 유료 플랜에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
 * Snyk 조직의 관리자 계정입니다.
@@ -34,7 +34,7 @@ Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk �
 
     **Tip:** 컨트롤러 리소스를 보다 쉽게 분리하려면 고유한 네임스페이스를 사용하세요. 이는 일반적으로 Kubernetes 애플리케이션에 대한 모범 사례입니다. 네임스페이스는 snyk-monitor라고 하며 나중에 다른 리소스를 구성할 때 필요합니다.
 3. 이제 Snyk 계정에 로그인하고 **Integrations**로 이동합니다.
-4. **Kubernetes**를 검색하여 클릭하세요.
+4. **Kubernetes**를 검색하여 클릭하십시오.
 5. 를**Connect** 을 클릭하고 **Integration ID**를 복사하세요. Snyk **Integration ID**는: `abcd1234-abcd-1234-abcd-1234abcd1234`형식과 유사한 UUID입니다. 다음 단계에서 Kuernetes 환경에서 사용할 수 있도록 저장하세요.
 6.  Snyk monitor는 Snyk **Integration ID**를 사용하고 `Dockercfg`파일을 사용하여 실행합니다. 개인 레지스트리를 사용하지 않는경우 다음 명령어를 실행하여 이전 단계의 Snyk **Integration ID**가 포함된 `snyk-monitor`라는 Kubernetes 암호를 생성합니다.
 
@@ -130,7 +130,7 @@ Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk �
     ```
 
     **Tip**: **Production cluster** 이름을 모니터링 중인 클러스터를 기반으로 하는 이름으로 바꾸세요. 이 레이블을 사용하여 나중에 Snyk에서 워크로드를 찾을 수 있습니다. 클러스터는 이름에 `/` 를 허용하지 않습니다. 클러스터 이름에 있는 임의의 `/`가 제거됩니다.\
-    Also, to avoid naming the cluster on every update, you can use Helm's existing option fo또한 모든 업데이트에서 클러스터 이름을 지정하지 않으려면 **--reuse-values**에 대해 Helm의 기존 옵션을 사용할 수 있습니다. 즉, 업그레이드할 때 마지막 릴리스의 값을 재사용하고 명령줄에서 **--set** 및 -f를 통해 병합합니다. 만약  '**--reset-values**'가 지정된 경우에는 무시합니다.
+    Also, to avoid naming the cluster on every update, you can use Helm's existing option fo또한 모든 업데이트에서 클러스터 이름을 지정하지 않으려면 **--reuse-values**에 대해 Helm의 기존 옵션을 사용할 수 있습니다. 즉, 업그레이드할 때 마지막 릴리스의 값을 재사용하고 명령줄에서 **--set** 및 -f를 통해 병합합니다. 만약 '**--reset-values**'가 지정된 경우에는 무시합니다.
 11. Snyk에 대한 outbound 연결에 프록시를 사용하는 경우 해당 프록시를 사용하도록 통합을 구성해야 합니다 프록시 세트를 구성하려면 Helm Charts에 제공된 다음 값을 선택합니다.
 
     * `http_proxy`
@@ -200,7 +200,7 @@ Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk �
                  --set pvc.enabled=true \
                  --set pvc.name="snyk-monitor-pvc"
     ```
-15. 기본적으로 _**kube-\***_로 시작하는 모든 네임스페이스는 [여기](https://github.com/snyk/kubernetes-monitor/blob/master/src/supervisor/watchers/internal-namespaces.ts)서 찾을 수 있으며, Kube-\*로 시작하는 모든 네임스페이스는 일부러 무시합니다. 이 설정을 변경하려면 제외된 네임스페이스를 구성할 수 있습니다.\
+15. 기본적으로 \_**kube-\***\_로 시작하는 모든 네임스페이스는 [여기](https://github.com/snyk/kubernetes-monitor/blob/master/src/supervisor/watchers/internal-namespaces.ts)서 찾을 수 있으며, Kube-\*로 시작하는 모든 네임스페이스는 일부러 무시합니다. 이 설정을 변경하려면 제외된 네임스페이스를 구성할 수 있습니다.\
     제외된 네임스페이스 설정을 사용하여 제외할 사용자 고유의 네임스페이스 목록을 추가하면 기본 설정을 무시하고 사용자가 제공하는 네임스페이스 목록을 사용합니다.
 
     ```

@@ -4,5 +4,5 @@ Snyk은 Microsoft ACR(Azure Container Registry)과 통합하여 컨테이너의 
 
 이 문서에서는 다음 항목을 설명합니다.
 
-* ACR에 대한 통합 구성
-* Snyk에 프로젝트 추가
+* [ACR에 대한 통합 구성](configure-integration-for-acr.md)
+* [Snyk에 프로젝트 추가](add-images-to-snyk-from-acr.md)

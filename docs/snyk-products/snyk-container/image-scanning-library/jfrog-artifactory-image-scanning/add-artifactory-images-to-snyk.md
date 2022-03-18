@@ -19,7 +19,7 @@ Snyk에 이미지를 추가하려면 다음과 같이 진행합니다.
 
 ![](../../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png)
 
-* **The Which images do you want to test?**가 나타나고, 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
+* The Which images do you want to test?가 나타나고, 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
 
 ![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (10).png>)
 

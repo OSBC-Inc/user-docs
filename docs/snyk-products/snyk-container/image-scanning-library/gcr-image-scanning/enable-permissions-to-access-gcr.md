@@ -1,6 +1,6 @@
 # GCR 액세스 권한 설정
 
-**필수 조건**
+**전제 조건**
 
 Snyk과 통합하려는 Google 계정에 대해 [Cloud Resources Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?q=cloud%20resource%20manager\&id=16f5d23e-c895-4b9d-88e4-864c1766636f\&project=next-for-integration-testing)를 사용하도록 설정합니다.
 

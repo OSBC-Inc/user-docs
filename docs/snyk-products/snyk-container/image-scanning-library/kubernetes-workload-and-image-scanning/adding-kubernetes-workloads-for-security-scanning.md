@@ -41,7 +41,7 @@ Snyk과 클러스터 간의 통합을 구성한 후에는 워크로드에 주석
 
 1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 2. settings ![](../../../../.gitbook/assets/cog\_icon.png) > **General**를 클릭합니다.
-3. **Organization ID** 값을 복사합니다..
+3. **Organization ID** 값을 복사합니다.
 4. `orgs.k8s.snyk.io/v1` 키를 사용하여 워크로드에 주석을 추가합니다. 이 키는 쉼표로 구분된 목록에 조직 ID를 값으로 입력합니다.
 
 단일 워크로드에 주석을 추가하여 여러 조직에 추가할 수도 있습니다.
@@ -77,7 +77,7 @@ Snyk과 클러스터 간의 통합을 구성한 후에는 워크로드에 주석
 
 ![](../../../../.gitbook/assets/uuid-3a8568e0-b5a4-34af-d612-83466b206882-en.png)
 
-우리는 Kubernetes 내부의 특정 네임스페이스(_**kube-\***_로 시작하는 모든 네임스페이스) 검색을 의도적으로 무시하므로, 해당 네임스페이스는 물론 해당 네임스페이스가 포함하는 워크로드도 목록에 표시되지 않습니다.\
+우리는 Kubernetes 내부의 특정 네임스페이스(\_**kube-\***\_로 시작하는 모든 네임스페이스) 검색을 의도적으로 무시하므로, 해당 네임스페이스는 물론 해당 네임스페이스가 포함하는 워크로드도 목록에 표시되지 않습니다.\
 무시된 네임스페이스의 전체 목록은 [여기](https://github.com/snyk/kubernetes-monitor/blob/master/src/supervisor/watchers/internal-namespaces.ts)에서 찾을 수 있습니다. 이는 snyk-monitor를 설정할 때 helm에 다음을 추가하여 구성할 수 있습니다.
 
 ```

@@ -47,7 +47,7 @@ Broker Client는 Agent에 연결 세부 정보를 제공합니다. Agent는 이�
 * GitLab (type: gitlab-cr)
 
 {% hint style="info" %}
-**참고**\
+**Note**\
 위 목록의 오픈소스 컨테이너 레지스트리가 있는 broker를 사용하는 통합 패턴은 Snyk service\*\*.\*\*가 내부가 아닌 자체 환경에서 이미지를 스캔해야 하는 사용자를 위해 설계되었습니다.\
 이러한 요구사항이 귀사와 관련이 없는 경우 이 문서에서 설명하는 아키텍처는 필요하지 않으며 Integration 페이지에서 표준 방식으로 통합할 수 있습니다.
 {% endhint %}
@@ -169,7 +169,7 @@ ECR을 설정하려면 두 가지 종류의 IAM 리소스를 만들어야 합니
 
 단일 Container Registry Agent 인스턴스가 다른 계정에 있는 ECR 저장소에 액세스할 수 있도록 위의 리소스를 다음과 같이 사용할 수 있습니다.
 
-1.  **(이 단계는 한 번만 실행)** Container Registry Agent IAM Role / IAM User를 만들어 Container Registry Agent를 실행하는 데 사용합니다. [여기](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html)에 설명된 방법 중 하나를 사용하여 IAM Role / IAM User를 Container Registry Agent에 제공할 수 있습니다.
+1.  **(한 번만 실행하는 단계)** Container Registry Agent IAM Role / IAM User를 만들어 Container Registry Agent를 실행하는 데 사용합니다. [여기](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html)에 설명된 방법 중 하나를 사용하여 IAM Role / IAM User를 Container Registry Agent에 제공할 수 있습니다.
 
     **각 ECR 계정에 대해 별도의 broker 인스턴스를 사용하여 각 ECR 계정에 대해 다음 단계를 실행합니다.**
 2. ECR이 있는 AWS 계정에서 ECR에 대한 읽기 액세스 권한을 가진 Snyk ECR Service Role을 만들고 이전 단계에서 만든 특정 Container Registry Agent IAM Role / IAM User만 이 역할을 맡을 수 있도록 trust relationship을 편집합니다.
@@ -191,7 +191,7 @@ ECR을 설정하려면 두 가지 종류의 IAM 리소스를 만들어야 합니
 브로커 클라이언트의 `/systemcheck` endpoint를 호출하면 브로커 클라이언트에 제공된 인증 정보로 `BROKER_CLIENT_VALIDATION_URL`을 사용하여 `/systemcheck` endpoint 컨테이너 레지스트리 에이전트에 요청을 합니다. 그러면 Container Registry Agent가 컨테이너 레지스트리에 request를 생성하여 연결을 확인할 것입니다.
 
 {% hint style="info" %}
-**참고**\
+**Note**\
 중개된 통합이 작동하려면 /systemcheck endpoint가 **반드시 필요한 것은 아닙니다.** 자세한 내용은 다음 웹사이트에서 확인할 수 있습니다. [https://github.com/snyk/broker#systemcheck](https://github.com/snyk/broker#systemcheck)
 {% endhint %}
 

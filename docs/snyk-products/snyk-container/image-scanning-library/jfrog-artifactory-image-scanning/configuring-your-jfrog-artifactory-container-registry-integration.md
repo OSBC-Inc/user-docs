@@ -6,7 +6,7 @@
 
 * Snyk에서 구성할 조직의 관리자여야 합니다.
 * Snyk은 Artifactory와 통합하려면 사용자 자격 증명이 필요하며 SSO(Single Sign-On)용으로 구성된 경우 Artifactory를 지원하지 않습니다.
-* 자체 호스팅된 Artifactory를 사용하는 경우 [broker configuration](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)에 대해 설명하는 설명서를 참조하세요.
+* 자체 호스팅된 Artifactory를 사용하는 경우 [broker configuration](../../integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)에 대해 설명하는 설명서를 참조하십시오.
 
 ## 통합 구성
 
@@ -14,9 +14,9 @@
 2.  상단의 메뉴 모음에서 **Integrations**로 이동하여 Artifactory 옵션을 찾아 클릭합니다.
 
     ![](<../../../../.gitbook/assets/image (57).png>)
-3. **Settings** 영역의 구성 페이지가 로드됩니다.
-4. 다음과 같이 인증정보를 입력합니다.
-   1. **Username and Password -** Artifactory 로그인 자격 증명을 사용합니다.
+3. **Settings** 영역의 구성 페이지가 나타납니다.
+4. 다음과 같이 인증 정보를 입력합니다.
+   1. **Username and Password -** Artifactory 로그인 인증 정보를 사용합니다.
    2. **Container registry name -** `<org>.jfrog.io/artifactory/api/docker/<repo-name>`형식의 전체 레지스트리 URL입니다.
 5. **Save Changes**를 클릭합니다.
 

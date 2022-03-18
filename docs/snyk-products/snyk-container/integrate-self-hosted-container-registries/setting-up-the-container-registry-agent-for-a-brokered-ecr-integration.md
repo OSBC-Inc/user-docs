@@ -34,7 +34,7 @@
 
 **참고:** Amazon ECS 작업에서 전용 역할을 제공할 수도 있습니다. 자세한 내용은 [여기](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html)를 참조하십시오.
 
-### 예 **a:** Amazon EC2에 대한 전용 EC2 Service Role을 생성하고 AWS IAM(Identify and Access Management) Role에서 자격 증명을 로드합니다.
+### 예 **a:** 전용 EC2 서비스 Role을 생성하고 Amazon EC2의 AWS IAM(Identify and Access Management) Role에서 인증 정보 가져오기
 
 #### 1단계: Role 생성
 
@@ -224,7 +224,7 @@ Container Registry Agent 이미지를 실행할 때 다음과 같은 환경 변�
      2. **SnykCraAssumeRolePolicy**에서 JSON 편집을 선택합니다.
      3. [SnykEcrServiceRole](https://console.aws.amazon.com/iam/home?#/roles/SnykEcrServiceRole)의 ARN Role을 resource로 추가합니다.`"Resource": "<Role ARN of SnykEcrServiceRole>"`
 
-**참고:** Container Registry Agent가 다른 계정에 있는 여러 ECR 레지스트리에 액세스해야 하는 경우, 별도의 항목을 Statement 목록에 추가해야 각 ECR 계정에 별도의 statement가 있습니다. 예:
+**참고:** Container Registry Agent가 다른 계정에 있는 여러 ECR 레지스트리에 액세스해야 하는 경우, 별도의 항목을 Statement 목록에 추가해야 각 ECR 계정에 별도의 statement가 있습니다. 예제는 다음과 같습니다.
 
 ```
 {
@@ -251,7 +251,7 @@ Container Registry Agent 이미지를 실행할 때 다음과 같은 환경 변�
 마지막 단계에서는 Broker Client에 제공되는 SnykEcrServiceRole의 Role ARN이 사용됩니다. Broker Client는 이를 Container Registry Agent에 전달하며, 이 Agent는 ECR에 연결하는 것으로 간주합니다.
 
 1. [SnykEcrServiceRole](https://console.aws.amazon.com/iam/home?#/roles/SnykEcrServiceRole)의 **Summary** 섹션 상단에 나타나는 **Role ARN** 키를 복사합니다.
-2. Broker Client를 실행할 때 Container Registry Agent가 ECR 계정에 액세스할 수 있도록 다음 환경 변수를 제공합니다. (사용자 이름/암호는 필요하지 않음):
+2. Broker Client를 실행할 때 Container Registry Agent가 ECR 계정에 액세스할 수 있도록 다음 환경 변수를 제공합니다. (사용자 이름/암호는 필요하지 않음)
    * CR\_TYPE=ecr
    * CR\_ROLE\_ARN=\<the role ARN of SnykEcrServiceRole>
    * CR\_REGION=\<AWS Region of ECR>

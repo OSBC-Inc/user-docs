@@ -10,7 +10,7 @@ Snyk에서 GitLab container registry 통합을 설정하고 이미지 취약점 
 
 **전제 조건**
 
-* Snyk에서 구성할 조직의 관리자여야합니다.
+* Snyk에서 구성할 조직의 관리자여야 합니다.
 * Snyk은 GitLab container registry와 통합하려면 사용자 자격 증명이 필요하며 SSO(Single Sign-On)용으로 구성된 경우 GitLab container registry를 지원하지 않습니다.
 
 **통합 구성**
