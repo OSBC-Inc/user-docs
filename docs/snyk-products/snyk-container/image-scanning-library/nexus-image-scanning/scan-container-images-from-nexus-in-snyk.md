@@ -6,13 +6,13 @@ Nexus에서 Snyk으로 이미지를 추가하려면 다음과 같이 진행합�
 
 **전제 조건**
 
-* 관련 조직에 대한 Nexus 통합이 구성되어야 합니다. 자세한 내용은 [Container security with Nexus integration](https://docs.snyk.io/snyk-container/image-scanning-library/nexus-image-scanning/container-security-with-nexus-integration)을 참조하여 진행하세요.
+* 관련 조직에 대한 Nexus 통합이 구성되어야 합니다. 자세한 내용은 [Nexus 통합을 이용한 컨테이너 보안](container-security-with-nexus-integration.md)을 참조하여 진행하십시오.
 
 **진행 단계**
 
 1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
-2. **Projects** 탭에서 **Add project**를 클릭합니다. 계정에 이미 구성된 통합 목록이 열립니다. **Nexus**가 나타나지 않으면 **Other**를 선택하세요.
-3. **Which images do you want to test?**가 나타나면 연결된 레지스트리에 사용가능한 모든 이미지를 각 저장소별로 그룹화하여 표시합니다.
+2. **Projects** 탭에서 **Add project**를 클릭합니다. 계정에 이미 구성된 통합 목록이 열립니다. **Nexus**가 나타나지 않으면 **Other**를 선택하십시오.
+3. Which images do you want to test?가 나타나면 연결된 레지스트리에 사용가능한 모든 이미지를 각 저장소별로 그룹화하여 표시합니다.
 4. Snyk으로 가져올 단일 또는 여러 이미지를 선택합니다. 특정 이미지를 선택하거나 전체 저장소를 선택할 수 있습니다. 이미지 이름으로 검색하여 가져올 특정 이미지를 찾을 수 있습니다. 마치려면 오른쪽 상단에 있는 **Add selected repositories**를 클릭합니다.
 5. 이미지를 가져오면 페이지 상단에 상태표시줄이 나타납니다. 작업이 진행되는 동안 다른 작업을 계속할 수 있습니다.
 6. 가져오기가 끝나면 다음과 같이 진행합니다.
