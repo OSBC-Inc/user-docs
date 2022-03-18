@@ -1,7 +1,7 @@
 # 자체 호스팅된 컨테이너 레지스트리에 대한 Snyk 통합
 
 {% hint style="info" %}
-**Feature availability**\
+**기능 사용 여부**\
 이 기능은 Enterprise 플랜에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
@@ -65,7 +65,7 @@ Broker Client는 Agent에 연결 세부 정보를 제공합니다. Agent는 이�
 * Container Registry Agent 이미지는 [여기](https://hub.docker.com/r/snyk/container-registry-agent/tags?page=1\&ordering=last\_updated)에서 다운로드할 수 있습니다.
 
 {% hint style="info" %}
-**Scaling to adjust scan capacity**
+**Scaling을 통한 스캔 용량 조절**
 
 위와 같이 vCPU 1개와 RAM 2GB를 사용할 경우, 스캔 용량은 한 번에 최대 350MB의 약 160개 이미지입니다. 이미지 크기에 따라 이 기능을 확장할 수 있으며, 확장이 허용되지 않거나 제한에 맞지 않는 사용 사례가 있는 경우 지원 팀에 문의하십시오.
 {% endhint %}
@@ -145,8 +145,8 @@ docker run --restart=always \
 
 ECR을 설정하려면 두 가지 종류의 IAM 리소스를 만들어야 합니다.
 
-* Container Registry Agent IAM Role / IAM User: an IAM Role / IAM User the Container Registry Agent uses to assume a cross-account role with access to ECR. 다음과 같은 권한이 있어야 합니다. `"sts:AssumeRole"`
-*   Snyk ECR Service Role: an IAM Role with access to ECR which is assumed by the Container Registry Agent IAM Role / IAM User to gain read-only access to ECR.\
+* Container Registry Agent IAM Role / IAM User: 컨테이너 레지스트리 에이전트가 ECR에 대한 액세스 권한이 있는 교차 계정 역할을 가정하는 데 사용하는 IAM Role / IAM User입니다. 다음과 같은 권한이 있어야 합니다. `"sts:AssumeRole"`
+*   Snyk ECR Service Role: ECR에 대한 액세스 권한이 있는 IAM Role. 컨테이너 레지스트리 에이전트 IAM Role / IAM User가 ECR에 대한 읽기 전용 액세스 권한을 얻는 것으로 가정합니다.\
     다음 권한이 있어야 합니다.
 
     ```
@@ -188,7 +188,7 @@ ECR을 설정하려면 두 가지 종류의 IAM 리소스를 만들어야 합니
 이를 사용하기 위해 다음 환경 변수를 Broker Client에 제공합니다.\
 `BROKER_CLIENT_VALIDATION_URL=<agent-url>/systemcheck`
 
-~~Broker Client의 `/systemcheck` endpoint를 호출할 때 Broker Client에 제공된 자격 증명으로 `BROKER_CLIENT_VALIDATION_URL`를 사용하여 Broker Client에 제공된 자격 증명으로 `/systemcheck` endpoint Container Registry Agent에 요청합니다.(이상)~~ 그러면 Container Registry Agent가 컨테이너 레지스트리에 request를 생성하여 연결을 확인할 것입니다.
+브로커 클라이언트의 `/systemcheck` endpoint를 호출하면 브로커 클라이언트에 제공된 인증 정보로 `BROKER_CLIENT_VALIDATION_URL`을 사용하여 `/systemcheck` endpoint 컨테이너 레지스트리 에이전트에 요청을 합니다. 그러면 Container Registry Agent가 컨테이너 레지스트리에 request를 생성하여 연결을 확인할 것입니다.
 
 {% hint style="info" %}
 **참고**\
@@ -206,6 +206,6 @@ ECR을 설정하려면 두 가지 종류의 IAM 리소스를 만들어야 합니
 프로덕션 환경에서는 타사 도구의 디버깅 옵션을 사용하지 않는 것이 좋습니다. Snyk에서 유지 관리하지 않는 중요한 정보가 로그에 기록될 수 있기 때문입니다. 예를 들어 HTTP requests의 헤더 정보가 있습니다.
 {% endhint %}
 
-**이미지 보안:**
+**이미지 보안**
 
 이제 개인 저장소에서 직접 컨테이너 이미지 스캔을 시작할 수 있습니다. 자세한 내용은 [컨테이너 레지스트리에서 이미지 스캔](https://docs.snyk.io/snyk-container/jfrog-artifactory-image-scanning/configuring-your-jfrog-artifactory-container-registry-integration)(Artifactory 예시)를 참조하십시오.

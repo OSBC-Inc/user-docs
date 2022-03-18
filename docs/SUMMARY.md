@@ -95,7 +95,7 @@
     * [Dockerfile에서 취약한 기본 이미지 감지](snyk-products/snyk-container/scan-your-dockerfile/detect-vulnerable-bases-images-from-dockerfile.md)
     * [Dockerfile의 취약한 기본 이미지를 수정하기 위한 PR 열기](snyk-products/snyk-container/scan-your-dockerfile/open-pull-requests-to-fix-vulnerable-base-images-in-your-dockerfile.md)
     * [Dockerfile 명령어란?](snyk-products/snyk-container/scan-your-dockerfile/what-is-a-dockerfile-instruction.md)
-    * [Dockerfile 분석을 위해 지원되는 저장소](snyk-products/snyk-container/scan-your-dockerfile/supported-repos-for-dockerfile-analysis.md)
+    * [Dockerfile 분석을 지원하는 저장소](snyk-products/snyk-container/scan-your-dockerfile/supported-repos-for-dockerfile-analysis.md)
     * [Dockerfile 분석을 위한 전제 조건](snyk-products/snyk-container/scan-your-dockerfile/prerequisites-for-dockerfile-analysis.md)
     * [Dockerfile 추가 및 기본 이미지 테스트](snyk-products/snyk-container/scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)
   * [자체 호스팅된 컨테이너 레지스트리 통합](snyk-products/snyk-container/integrate-self-hosted-container-registries/README.md)
