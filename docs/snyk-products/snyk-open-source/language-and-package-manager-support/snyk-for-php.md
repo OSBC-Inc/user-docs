@@ -1,8 +1,8 @@
 # PHP용 Snyk
 
-하십시오.Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
+Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
-이 문서는 Snyk을 사용하여 PHP 프로젝트를 스캔하는 방법을 제공합니다.
+이 문서는 Snyk을 사용하여 PHP 프로젝트를 스캔하는 설명을 제공합니다.
 
 ## 특징
 
@@ -26,8 +26,8 @@
 
 Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및 패키지 매니저와 프로젝트 위치에 따라 다릅니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [Snyk CLI tool for PHP projects](https://docs.snyk.io/snyk-open-source/language-and-package-manager-support/snyk-for-php)
-* [Git services for PHP projects](snyk-for-php.md#git-services-for-php-projects)
+* [PHP 프로젝트에서 Snyk CLI 사용하기](snyk-for-php.md#php-snyk-cli)
+* [PHP 프로젝트를 위한 Git Services](snyk-for-php.md#php-git-services)
 
 ## PHP 프로젝트에서 Snyk CLI 사용하기
 
@@ -35,19 +35,19 @@ Snyk이 트리를 분석하고 구축하는 방식은 프로젝트의 언어와 
 
 디펜던시 트리를 구축하기 위해 Snyk은 디펜던시 및 해당 버전을 분석하기 위해 `composer.json` 과 `composer.lock` 파일을 분석합니다.
 
-## **CLI parameters for PHP**
+## PHP용 CLI 파라미터
 
 ### 전제 조건
 
-* Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하세요.테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
-* 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
+* Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치했는지 확인하십시오.
+* Snyk에서 지원하는 관련 매니페스트 파일을 포함했는지 확인하십시오.
 * [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
-### **Parameters**
+### 파라미터
 
-Snyk을 실행할때 PHP 전용 파라미터가 없습니다.
+Snyk을 실행할 때 PHP 전용 파라미터는 없습니다.
 
-CLI에 대한 자세한 내용은 [Getting started with the CLI](../../../features/snyk-cli/guides-for-our-cli/getting-started-with-the-cli.md)를 참조하십시오.
+CLI에 대한 자세한 내용은 [CLI 시작하기](../../../features/snyk-cli/getting-started-with-the-cli/)를 참조하십시오.
 
 ## PHP 프로젝트를 위한 Git Services
 
@@ -58,14 +58,14 @@ PHP 프로젝트는 Snyk에서 지원하는 모든 Git Services에서 가져올 
 * composer.json
 * composer.lock
 
-## **Git settings for PHP**
+## PHP용 Git 설정
 
-기본적으로 Snyk은 프로덕션 디펜던시를 스캔합니다. Snyk UI에서 취약점 스캔에 개발 디펜던시(`require_dev`)를 포함 여부를 구성할 수 있습니다.
+기본적으로 Snyk은 프로덕션 디펜던시를 스캔합니다. Snyk UI에서 취약점 스캔에 개발 디펜던시(`require_dev`) 포함 여부를 구성할 수 있습니다.
 
 ### 언어 기본 설정 업데이트
 
-1. 정에 로그인하고 관리할 관련 그룹 및 조직으로 이동합니다.
-2. 설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png)> **Languages**.
+1. 계정에 로그인하고 관리할 관련 그룹 및 조직으로 이동합니다.
+2. 설정 클릭 ![](../../../.gitbook/assets/cog\_icon.png)> **Languages**
 3. **Edit settings**를 클릭하고 **Scan dev dependencies**를 선택하여 특정 조직의 PHP 프로젝트에 대한 개발 및 프로덕션 디펜던시를 모두 포함하도록 설정합니다.
 4. **Update settings**를 클릭합니다.
 
@@ -82,7 +82,7 @@ PHP 프로젝트로 작업할 때 다음 오류 메시지가 나타날 수 있�
 * Lockfile missing packages property
 * Lockfile or manifest file is not a valid JSON
 
-## Support
+## 지원
 
 이러한 문제나 다른 문제가 발생하는 경우 해당 파일을 [support@snyk.io](mailto:support@snyk.io)로 보내 주시면 도와드리겠습니다.
 
