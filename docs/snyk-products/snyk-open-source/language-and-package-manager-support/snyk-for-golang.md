@@ -1,8 +1,8 @@
 # Golang용 Snyk
 
-Snyk은 [Go Modules](https://golang.org/ref/mod), [dep](https://github.com/golang/dep) 그리고 [govendor](https://github.com/kardianos/govendor)가 관리하는 Go 프로젝트의 테스트 및 모니터링을 지원합니다.
+Snyk은 [Go Modules](https://golang.org/ref/mod), [dep](https://github.com/golang/dep) 및 [govendor](https://github.com/kardianos/govendor)에 의해 관리되는 디펜던시가 있는 Go 프로젝트의 테스트 및 모니터링을 지원합니다.
 
-이 문서는 Snyk을 이용하여 Go 프로젝트를 스캔하는 방법을 제공합니다.
+이 문서는 Snyk을 이용하여 Go 프로젝트를 스캔하는 방법을 설명합니다.
 
 ### 특징 <a href="#h_01esm3gfnmn0f7art59aek97tm" id="h_01esm3gfnmn0f7art59aek97tm"></a>
 
@@ -45,20 +45,20 @@ Go Modules 프로젝트를 테스트하는 경우 디펜던시를 설치할 필�
 
 {% hint style="info" %}
 **Note**\
-Go 버전은 **Go list -json -deps** 명령에 대해 다른 결과를 생성합니다. 이 문제는 디펜던시 트리와 Snyk CLI가 찾을 취약점에 영향을 미칠 수 있습니다.
+Go 버전은 **Go list -json -deps** 명령에 대해 다른 결과를 생성합니다. 이는 디펜던시 트리와 Snyk CLI가 찾을 취약점에 영향을 미칠 수 있습니다.
 {% endhint %}
 
 **Dep**
 
 디펜던시 트리를 구축하기 위해 Snyk은 `Gopkg.lock` 파일을 분석합니다.
 
-Snyk CLI를 통해 dep 프로젝트를 테스트하려면 디펜던시를 설치해야 하는 경우 `dep ensure`명령어를 실행하십시오.
+Snyk CLI를 통해 dep 프로젝트를 테스트하려면 디펜던시를 설치해야 하는 경우 `dep ensure` 명령어를 실행하십시오.
 
 **Govendor**
 
 디펜던시 트리를 구축하기 위해 Snyk은 `vendor/vendor.json` 파일을 분석합니다.
 
-Snyk CLI를 통해 Govendor 프로젝트를 테스트할 때 디펜던시를 설치해야 하는 경우 `govendor sync`명령어를 실행하십시오.
+Snyk CLI를 통해 Govendor 프로젝트를 테스트할 때 디펜던시를 설치해야 하는 경우 `govendor sync` 명령어를 실행하십시오.
 
 ## Go 프로젝트를 위한 Git Services
 
@@ -68,18 +68,18 @@ Snyk CLI를 통해 Govendor 프로젝트를 테스트할 때 디펜던시를 설
 **Note**\
 Git을 통해 가져온 Go Modules 프로젝트의 경우 프로젝트 소스코드에 대한 전체 액세스 권한이 없기 때문에 디펜던시는 패키지 단계가 아닌 모듈 단계에서 해결됩니다.
 
-즉, 소스코드에서 참조된 패키지뿐만아니라 각 모듈에 대한 모든 취약점을 보고하므로 CLI에서 테스트한 프로젝트보다 더 많은 문제(잠재적 오탐지 포함)가 보고될 수 있습니다.
+즉, 소스코드에서 참조된 패키지뿐만 아니라 각 모듈에 대한 모든 취약점을 보고하므로 CLI에서 테스트한 프로젝트보다 더 많은 Issue(잠재적 오탐지 포함)가 보고될 수 있습니다.
 {% endhint %}
 
-디펜던시 트리를 구축하기 위해 Snyk는 선택한 리포지토리의 `go.mod` 파일을 사용하여 `go mod graph` 명령어을 실행합니다.
+디펜던시 트리를 구축하기 위해 Snyk은 선택한 리포지토리의 `go.mod` 파일을 사용하여 `go mod graph` 명령어를 실행합니다.
 
 **Private modules**
 
 Private Git 저장소의 모듈에 의존하는 Go Modules 프로젝트는 private 저장소가 main 프로젝트 저장소와 동일한 Git 조직에 있는 경우에 지원됩니다.
 
-다른 Git 조직의 저장소에서 개인 모듈이 있는 프로젝트 가져오기는 실패할 것입니다. 다른 Git 조직들의 private 모듈 의존성에 대한 지원은 향후 계획되어 있습니다.
+다른 Git 조직의 저장소에서 Private module이 있는 프로젝트 가져오기는 실패할 것입니다. 다른 Git 조직들의 private module 의존성에 대한 지원은 향후 계획되어 있습니다.
 
-Private modules은 GitHub 및 Bitbucket Cloud에서 지원됩니다. GitLab 및 Bitbucket Server는 현재 지원되지 않습니다.
+Private modules는 GitHub 및 Bitbucket Cloud에서 지원됩니다. GitLab 및 Bitbucket Server는 현재 지원되지 않습니다.
 
 **Broker**
 
@@ -87,12 +87,12 @@ Private modules은 GitHub 및 Bitbucket Cloud에서 지원됩니다. GitLab 및 
 
 2020년 12월 30일 이전에 생성된 기존 클라이언트에 지원을 추가하려면 [pull request](https://github.com/snyk/broker/pull/299/files) 변경 사항에 따라 `go.mod` 및 `go.sum`을 `accept.json`파일에 추가해야 합니다.
 
-브로커를 통해 통합된 개인 Go Modules(저장소)을 사용하는 경우 각 개인 모듈에 `Go.mod` 파일이 정의되어 있어야 합니다.
+Broker를 통해 통합된 Private Go Modules(저장소)를 사용하는 경우 각 Private module에 `Go.mod` 파일이 정의되어 있어야 합니다.
 
 **Dep**
 
-디펜던시 트리를 구축하기 위해 Snyk은 선택한 저장소의 `Gopkg.lock`파일을 분석합니다.
+디펜던시 트리를 구축하기 위해 Snyk은 선택한 저장소의 `Gopkg.lock` 파일을 분석합니다.
 
 **Govendor**
 
-디펜던시 트리를 구축하기 위헤 Snyk 은 선택한 저장소의 `vendor/vendor.json`파일을 분석합니다.
+디펜던시 트리를 구축하기 위해 Snyk은 선택한 저장소의 `vendor/vendor.json` 파일을 분석합니다.

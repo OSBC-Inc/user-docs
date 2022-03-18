@@ -2,7 +2,7 @@
 
 Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
-이 문서는 Snyk을 사용하여 CocoaPods 프로젝트를 스캔하는 방법을 제공합니다.
+이 문서는 Snyk을 사용하여 CocoaPods 프로젝트를 스캔하는 방법을 설명합니다.
 
 ### 특징
 
@@ -29,23 +29,23 @@ Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및
 
 Snyk은 CocoaPods 프로젝트를 스캔하고 Podfile 및 Podfile.lock 파일을 검사합니다. 이후 프로젝트의 모든 직접적이고 심층적인 디펜던시의 특정 버전을 취약점 데이터베이스와 비교하여 그에 따라 프로젝트 디펜던시 트리를 구축합니다.
 
-### **CLI parameters for Swift and Objective-C**
+### Swift 및 Objective-C용 CLI 파라미터
 
 #### 전제 조건
 
 * Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하십시오.
-* 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
+* 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함하십시오.
 * [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
-#### **Parameters**
+#### 파라미터
 
-CLI 에서 Swift 및 Objective-C 프로젝트로 작업할 때 다음과 같이 동기화되지 않은 lockfile 테스트를 방지할 수 있습니다.
+CLI에서 Swift 및 Objective-C 프로젝트로 작업할 때 다음과 같이 동기화되지 않은 lockfile 테스트를 방지할 수 있습니다.
 
 | Option                  | Description                                     |
 | ----------------------- | ----------------------------------------------- |
 | `--strict-out-of-sync=` | 동기화되지 않은 lockfile 테스트를 방지합니다. 기본값은 **true**입니다. |
 
-### CocoaPods 프로젝트를 위한 Git Servicess
+### CocoaPods 프로젝트를 위한 Git Services
 
 CocoaPods 프로젝트를 스캔하고 Podfile 및 Podfile.lock 파일을 검사합니다. 이후 프로젝트의 모든 직접적이고 심층적인 디펜던시의 특정 버전을 취약점 데이터베이스와 비교하여 그에 따라 프로젝트 디펜던시 트리를 구축합니다.
 
