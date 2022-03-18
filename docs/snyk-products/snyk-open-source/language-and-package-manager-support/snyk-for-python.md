@@ -1,4 +1,4 @@
-# Snyk for Python
+# Python용 Snyk
 
 Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한 보안 스캔을 제공합니다.
 
@@ -21,9 +21,9 @@ Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한
 PyPI 라이선스는 모든 Python 프로젝트에서 지원합니다.
 {% endhint %}
 
-## How it works
+## 작동 방식
 
-트리를 구축한 후에는 [vulnerability database](https://snyk.io/vuln)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
+트리를 구축한 후에는 [취약점 데이터베이스](https://security.snyk.io)를 사용하여 디펜던시 트리의 모든 패키지에서 취약점을 찾을 수 있습니다.
 
 {% hint style="info" %}
 디펜던시를 스캔하려면 먼저 관련 패키지 매니저를 설치했는지, 프로젝트에 지원되는 매니페스트 파일이 포함되어 있는지 확인해야 합니다.

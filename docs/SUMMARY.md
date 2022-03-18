@@ -38,7 +38,7 @@
     * [Snyk을 워크플로우에 통합하는 방법](snyk-products/snyk-open-source/open-source-basics/integrate-snyk-into-your-workflow.md)
   * [개발 언어 및 패키지 매니저 지원](snyk-products/snyk-open-source/language-and-package-manager-support/README.md)
     * [JavaScript용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-javascript.md)
-    * [Java(Gradle, Maven)용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)
+    * [Java 및 Kotlin용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)
     * [.NET용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-.net.md)
     * [Python용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-python.md)
     * [Golang용 Snyk](snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-golang.md)
