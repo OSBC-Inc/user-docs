@@ -3,7 +3,7 @@
 Snyk Container를 이용하여 컨테이너 이미지의 취약점을 수정하십시오. 자세한 내용은 [Container security overview](https://support.snyk.io/hc/en-us/articles/360003946897-Container-security-overview) 와 [Snyk Container](https://solutions.snyk.io/snyk-academy/container)를 참조하십시오.
 
 {% hint style="info" %}
-이 프로세스는 Snyk.io UI에서 진행합니다. Snyk CLI를 이용하여 Snyk Container를 사용하는 경우 [Snyk CLI for container security](../../snyk-products/snyk-container/snyk-cli-for-container-security/)를 참조하십시오.
+이 프로세스는 Snyk.io UI에서 진행합니다. Snyk CLI를 이용하여 Snyk Container를 사용하는 경우 [Snyk CLI for container security](snyk-cli-for-container-security/)를 참조하십시오.
 {% endhint %}
 
 ## 전제 조건
@@ -11,7 +11,7 @@ Snyk Container를 이용하여 컨테이너 이미지의 취약점을 수정하�
 다음 사항이 존재하는지 확인하십시오.
 
 * Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조)
-* Snyk과 함께 사용할 관련 컨테이너 레지스트리에 대한 액세스 확인. Snyk은 여러 레지스트리를 지원합니다. 자세한 내용은 [image scanning information library](../../snyk-products/snyk-container/image-scanning-library/)를 참조하십시오.
+* Snyk과 함께 사용할 관련 컨테이너 레지스트리에 대한 액세스 확인. Snyk은 여러 레지스트리를 지원합니다. 자세한 내용은 [image scanning information library](image-scanning-library/)를 참조하십시오.
 
 ## 1단계: 컨테이너 레지스트리 통합 추가
 
@@ -49,7 +49,7 @@ Snyk으로 스캔을 시작하려면 컨테이너에 대한 프로젝트를 추�
 
 ![image5.png](../../.gitbook/assets/image5-1-.png)
 
-자세한 내용은 [Analysis and fixes for your images from the Snyk app](https://docs.snyk.io/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app)을 참조하십시오.
+자세한 내용은 [Snyk 앱에서 이미지 분석 및 수정](getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md)을 참조하십시오.
 
 ## 4단계: 수정 및 검토
 

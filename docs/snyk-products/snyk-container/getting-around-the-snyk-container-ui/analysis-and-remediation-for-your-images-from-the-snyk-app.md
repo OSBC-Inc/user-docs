@@ -26,7 +26,7 @@ CLI에서 snyk monitor를 사용하여 컨테이너 프로젝트를 Snyk으로 �
 ![](../../../.gitbook/assets/uuid-431ce2b1-e5f0-0025-7932-0171b35cb9bb-en.png)
 
 * 업그레이드 제안사항은 다음과 같습니다.
-  * Minor upgrades - 사용 가능한 가장 안정적인 업그레이드입니다. safest and best minor upgrade available
+  * Minor upgrades - 사용 가능한 가장 안정적인 업그레이드입니다. 가장 안전한 마이너 업그레이드를 이용할 수 있습니다.
   * Major upgrades - 더 많은 취약점을 줄이지만 큰 주요한 업그레이드 옵션입니다.
   * Alternative upgrades - 현재 기본 이미지를 최소의 취약점을 제공하는 다른 기본 이미지로 바꾸기 위한 대체 이미지 옵션입니다.
   * 기본 이미지가 오래된 경우, Snyk은 이미지 재구성을 권장합니다.

@@ -58,7 +58,7 @@ Snyk 서비스에 설치된 소프트웨어의 스냅샷을 저장하는 통합�
 \
 업데이트된 디펜던시와 같은 애플리케이션의 변경 사항을 감지하려면 Snyk에서 컨테이너 이미지를 다시 가져오십시오.
 
-다음은 이미지를 가져오는 방법에 대한 예입니다.[Broken link](broken-reference "mention")
+다음은 이미지를 가져오는 방법에 대해서 [Snyk Container 시작하기](../getting-started-snyk-container.md)를 참조하십시오.
 {% endhint %}
 
 [container security](https://snyk.io/learn/container-security/)를 통해 자세한 내용을 확인할 수 있습니다.
