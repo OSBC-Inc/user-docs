@@ -1,12 +1,12 @@
-# Snyk CLI를 사용하여 Terraform 파일 테스트 진행
+# CLI를 사용하여 Terraform 파일 테스트 진행
 
 Snyk Infrastructure as Code에서 CLI를 사용하여 정적 구성 파일과 Terraform Plan output을 모두 검색할 수 있습니다.
 
-|                                   | **Terraform configuration files** | **Terraform Plan file** |
-| --------------------------------- | --------------------------------- | ----------------------- |
-| **Identify configuration issues** | Yes                               | Yes                     |
-| **Process Variables**             | No                                | Yes                     |
-| **Scan Terraform Modules**        | No                                | Yes - public & private  |
+|                                   | **Terraform 설정 파일** | **Terraform Plan 파일**  |
+| --------------------------------- | ------------------- | ---------------------- |
+| **Identify configuration issues** | Yes                 | Yes                    |
+| **Process Variables**             | No                  | Yes                    |
+| **Scan Terraform Modules**        | No                  | Yes - public & private |
 
 ## Terraform 구성 파일
 

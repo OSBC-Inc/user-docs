@@ -1,6 +1,6 @@
-# Infrastructure as Code 이슈 보기
+# Infrastructure as Code 이슈 확인
 
-[Snyk reports](https://docs.snyk.io/reports/reports)를 사용하여 Infrastructure as Code의 구성 파일에서 구성 이슈를 볼 수 있습니다.
+[Snyk reports](https://docs.snyk.io/reports/reports)를 사용하여 Infrastructure as Code의 구성 파일에서 구성 이슈를 확인할 수 있습니다.
 
 {% hint style="info" %}
 **Feature availability**\

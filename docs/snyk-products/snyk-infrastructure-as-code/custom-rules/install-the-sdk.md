@@ -85,7 +85,7 @@ Wndows 환경에서 Scoop을 사용하여 snyk-iac-rules SDK를 설치할 수 �
     scoop bucket add snyk https://github.com/snyk/scoop-snyk
     ```
 
-#### **Steps**
+#### 진행 단계
 
 다음과 같이 SDK를 설치합니다.
 
@@ -97,12 +97,12 @@ scoop install snyk-iac-rules
 
 로컬 디렉토리에 custom rules를 작성하는 동안 Docker를 사용하여 snyk-iac-rules SDK를 설치하고 실행할 수 있습니다. 이미지는[ Docker Hub repo](https://hub.docker.com/r/snyk/snyk-iac-rules)에서 저장합니다.
 
-#### **Prerequisites**
+#### 전제 조건
 
 * [Docker](https://docs.docker.com/get-docker/)가 이미 설치되었는지 확인하십시오.
 * Linux 컨테이너에서만 지원합니다.
 
-#### **Steps**
+#### 진행 단계
 
 다음과 같이 Docker 이미지를 pull합니다.
 
@@ -124,5 +124,5 @@ docker run --rm -v $(pwd):/app snyk/snyk-iac-rules template -r {rule_name}
 
 ### 참고 항목
 
-* [​Getting started with the SDK​](getting-started-with-the-sdk/)
+* [​](getting-started-with-the-sdk/)SDK 시작하기
 * ​[SDK reference​](sdk-reference.md)
