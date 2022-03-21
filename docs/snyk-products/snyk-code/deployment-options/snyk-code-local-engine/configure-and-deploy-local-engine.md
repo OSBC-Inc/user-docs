@@ -8,7 +8,7 @@ release 이름을 `my-release`로 chart를 설치하려면 다음을 수행하�
 $ helm install my-release <gziped-chart>
 ```
 
-`local-code-engine` 이러한 명령은 기본 구성의 쿠버네티스 클러스터에 배포됩니다. **Parameters** 섹션에는 설치 중에 구성할 수 있는 매개변수가 나열됩니다.
+`local-code-engine` 이러한 명령은 기본 구성의 Kubernetes 클러스터에 배포됩니다. **Parameters** 섹션에는 설치 중에 구성할 수 있는 파라미터가 나열됩니다.
 
 chart 실행의 기본값 파일을 인쇄하는 방법은 다음과 같습니다.
 
@@ -24,18 +24,18 @@ my-release 리소스를 제거/삭제하는 방법은 다음과 같습니다.
 $ helm delete my-release
 ```
 
-이 명령은 chart와 연결된 모든 쿠버네티스 구성 요소를 제거하고 release를 삭제합니다. 모든 기록도 삭제하려면 `--purge` 옵션을 사용합니다.
+이 명령은 chart와 연결된 모든 Kubernetes 구성 요소를 제거하고 release를 삭제합니다. 모든 기록도 삭제하려면 `--purge` 옵션을 사용합니다.
 
-### 전역 매개변수
+### 전역 파라미터
 
-#### 전역 필수 매개변수
+#### 전역 필수 파라미터
 
-| Name                                          | Description        | Default Value |
-| --------------------------------------------- | ------------------ | ------------- |
-| `global.imagePullSecret.credentials.username` | 도커 허브 레지스트리 사용자 이름 | `""`          |
-| `global.imagePullSecret.credentials.password` | 도커 허브 레지스트리 비밀번호   | `""`          |
+| Name                                          | Description             | Default Value |
+| --------------------------------------------- | ----------------------- | ------------- |
+| `global.imagePullSecret.credentials.username` | Docker Hub 레지스트리 사용자 이름 | `""`          |
+| `global.imagePullSecret.credentials.password` | Docker Hub 레지스트리 비밀번호   | `""`          |
 
-#### Broker 필수 매개 변수
+#### Broker 필수 파라미터
 
 다음 SCM 구성 중 하나를 사용하십시오.
 
@@ -44,13 +44,13 @@ $ helm delete my-release
 | `broker-client.brokerToken` | 고유한 broker client 토큰                                                                                   | `""`          |
 | `broker-client.brokerType`  | 사용할 broker client 유형입니다. 지원되는 옵션: github-com, github-enterprise, gitlab, bitbucket-server, azure-repos | `""`          |
 
-#### GitHub.com 매개변수
+#### GitHub.com 파라미터
 
 | Name                        | Description                                | Default Value |
 | --------------------------- | ------------------------------------------ | ------------- |
 | `broker-client.githubToken` | [http://github.com](http://github.com)용 토큰 | `""`          |
 
-#### GitHub Enterprise 매개변수
+#### GitHub Enterprise 파라미터
 
 | Name                          | Description                                | Default Value                                     |
 | ----------------------------- | ------------------------------------------ | ------------------------------------------------- |
@@ -59,14 +59,14 @@ $ helm delete my-release
 | `broker-client.githubApi`     | GitHub REST API URL, 스키마 제외                | `"{{ .Values.broker-client.githubHost }}/api/v3"` |
 | `broker-client.githubGraphql` | GitHub GraphQL API URL, 스키마 제외             | `"{{ .Values.broker-client.githubHost }}/api"`    |
 
-#### Gitlab 매개변수
+#### Gitlab 파라미터
 
 | Name                        | Description     | Default Value |
 | --------------------------- | --------------- | ------------- |
 | `broker-client.gitlabToken` | gitlab 호스트      | `""`          |
 | `broker-client.gitlabHost`  | gitlab 서버의 호스트명 | `""`          |
 
-#### Bitbucket server 매개변수
+#### Bitbucket server 파라미터
 
 | Name                              | Description        | Default Value |
 | --------------------------------- | ------------------ | ------------- |
@@ -74,7 +74,7 @@ $ helm delete my-release
 | `broker-client.bitbucketPassword` | bitbucket 비밀번호     | `""`          |
 | `broker-client.bitbucketHost`     | bitbucket 서버의 호스트명 | `""`          |
 
-#### Azure Repos 매개변수
+#### Azure Repos 파라미터
 
 | Name                            | Description      | Default Value |
 | ------------------------------- | ---------------- | ------------- |
@@ -82,13 +82,13 @@ $ helm delete my-release
 | `broker-client.azureReposHost`  | Azure Repos 호스트명 | `""`          |
 | `broker-client.azureReposOrg`   | Azure 조직 이름      | `""`          |
 
-### Snyk Code 로컬 엔진 매개변수
+### Snyk Code 로컬 엔진 파라미터
 
 #### codeapi
 
 | Name                                 | Description                                         | Default Value |
 | ------------------------------------ | --------------------------------------------------- | ------------- |
-| `codeapi.imagePullSecrets`           | 도커 레지스트리 암호명을 배열로                                   | `[]`          |
+| `codeapi.imagePullSecrets`           | Docker 레지스트리 암호명을 배열로                               | `[]`          |
 | `codeapi.nameOverride`               | names.fullname 템플릿을 부분적으로 재정의하는 문자열(release 이름 유지함) | `""`          |
 | `codeapi.fullnameOverride`           | names.fullname 템플릿을 완전히 재정의하는 문자열                   | `""`          |
 | `codeapi.serviceAccount.create`      | ServiceAccount 생성 여부를 지정                            | `true`        |
@@ -98,14 +98,14 @@ $ helm delete my-release
 | `codeapi.podSecurityContext`         | pod에 대한 보안 컨텍스트                                     | `{}`          |
 | `codeapi.securityContext`            | 컨테이너에 적용될 보안 구성을 보유                                 | `{}`          |
 | `codeapi.nodeSelector`               | pod 할당을 위한 집계 노드 레이블                                | `{}`          |
-| `codeapi.tolerations`                | pod 할당을 위한 집게 허용 오차                                 | `[]`          |
+| `codeapi.tolerations`                | pod 할당을 위한 집계 허용 오차                                 | `[]`          |
 | `codeapi.affinity`                   | pod 할당을 위한 전달자 선호도                                  | `{}`          |
 
 #### bundle
 
 | Name                                   | Description                                        | Default Value |
 | -------------------------------------- | -------------------------------------------------- | ------------- |
-| `bundle.imagePullSecrets`              | 도커 레지스트리 암호명을 배열로                                  | `[]`          |
+| `bundle.imagePullSecrets`              | Docker 레지스트리 암호명을 배열로                              | `[]`          |
 | `bundle.nameOverride`                  | names.fullname 템플릿을 부분적으로 재정의하는 문자열(release명을 유지함) | `""`          |
 | `bundle.fullnameOverride`              | names.fullname 템플릿을 완전히 재정의하는 문자열                  | `""`          |
 | `bundle.serviceAccount.create`         | ServiceAccount 생성 여부 지정                            | `true`        |
@@ -123,7 +123,7 @@ $ helm delete my-release
 
 | Name                                 | Description                                      | Default Value |
 | ------------------------------------ | ------------------------------------------------ | ------------- |
-| `suggest.imagePullSecrets`           | 도커 레지스트리 암호명을 배열로                                | \`\[]         |
+| `suggest.imagePullSecrets`           | Docker 레지스트리 암호명을 배열로                            | \`\[]         |
 | `suggest.nameOverride`               | names.fullname 템플릿을 부분적으로 재정의하는 문자열(릴리스 이름을 유지함) | `""`          |
 | `suggest.fullnameOverride`           | names.fullname 템플릿을 완전히 재정의하는 문자열                | `""`          |
 | `suggest.serviceAccount.create`      | names.fullname 템플릿을 완전히 재정의하는 문자열                | `true`        |
@@ -154,7 +154,7 @@ $ helm delete my-release
 | `broker-client.tolerations`                | pod 할당에 대한 집계 허용 오차                              | `[]`          |
 | `broker-client.affinity`                   | pod 할당을 위한 전달자 선호도                               | `{}`          |
 
-### 서드파티 charts
+### 타사 charts
 
 당사가 사용하는 일부 타사 서비스를 구성하려는 경우 다음에서 예제를 참조하십시오.
 
@@ -166,7 +166,7 @@ $ helm delete my-release
 
 필요에 따라 제공된 YAML 파일을 편집할 수 있습니다.
 
-또는 chart를 설치하는 동안 매개변수 값을 지정하는 고유한 YAML 파일을 사용할 수 있습니다. 예제는 다음과 같습니다.
+또는 chart를 설치하는 동안 파라미터 값을 지정하는 고유한 YAML 파일을 사용할 수 있습니다. 예제는 다음과 같습니다.
 
 `$ helm install my-release -f your-values.yaml`
 

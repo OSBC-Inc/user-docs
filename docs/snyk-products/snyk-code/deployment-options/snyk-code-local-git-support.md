@@ -4,9 +4,9 @@
 이 기능은 현재 베타 버전입니다. 참여에 관심이 있으시다면 CSM에 문의하시기 바랍니다.
 {% endhint %}
 
-기본적으로 Snyk Code를 로컬 git 서버에 연결할 수 있습니다. 이를 통해 GitHub Enterprise 또는 BitBucket Server와 같은 자체 호스팅된 git 공급자를 사용하는 고객은 자사 코드에서 잠재적인 취약점을 찾고 우선 순위를 지정하고 수정할 수 있습니다.
+Snyk Broker를 사용하면 git 서버가 인터넷에 연결할 수 없는 경우 로컬 git 서버를 Snyk에 연결할 수 있습니다. Snyk Broker Code Agent를 사용하면 GitHub Enterprise, BitBucket Server 또는 GitLab과 같은 자체 호스팅된 git 공급자를 사용하는 고객은 자사 코드에서 잠재적인 취약점을 발견, 우선순위 부여 및 수정할 수 있습니다.
 
-## Snyk Code 액세스 구성 요소
+## Snyk Code Broker 액세스 구성 요소
 
 * **Broker server**: Snyk SaaS 백엔드에서 실행
 * **Broker client**: 인프라에 배포된 [Docker image](https://hub.docker.com/r/snyk/broker/)입니다.
@@ -18,7 +18,7 @@ Broker client는 Agent에 연결 세부 정보를 제공합니다. Agent는 이�
 
 ![](../../../.gitbook/assets/local-git.png)
 
-자세한 내용은 [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker/broker-introduction) 설명서를 참조하십시오.
+자세한 내용은 Snyk Broker Code Agent 설명서를 참조하십시오.
 
 ## 설정
 
@@ -114,7 +114,7 @@ docker run \
 * 새로 만든 네트워크를 사용하도록 현재 컨테이너를 설정합니다. **--network mySnykBrokerNetwork**
 * **GIT\_CLIENT\_URL**에서는 code agent 컨테이너에서 정의한 이름을 호스트로 사용했습니다.
 
-사용자 지정 화이트리스트(**accept.json**)를 가진 Snyk broker가 실행 중인 경우 화이트리스트에 다음 규칙이 있는지 확인하십시오:.
+사용자 지정 화이트리스트(**accept.json**)를 가진 Snyk broker가 실행 중인 경우 화이트리스트에 다음 규칙이 있는지 확인하십시오.
 
 ```
 {
