@@ -1,23 +1,23 @@
 # Snyk IaC (Infrastructure as Code) 시작하기
 
-Snyk IaC를 이용하여 Terraform 및 Kubernetes(Helm 포함) 환경의 구성 파일에서 문제를 스캔하여 수정하세요. 자세한 내용은 [Kubernetes 구성 파일 스캔](../../snyk-products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/) 및 [Terraform 파일 스캔](../../snyk-products/snyk-infrastructure-as-code/scan-terraform-files/)을 참조하십시오.
+Snyk IaC를 이용하여 Terraform 및 Kubernetes(Helm 포함) 환경의 구성 파일에서 문제를 스캔하여 수정하세요. 자세한 내용은 [Kubernetes 구성 파일 스캔](scan-kubernetes-configuration-files/) 및 [Terraform 파일 스캔](scan-terraform-files/)을 참조하십시오.
 
 {% hint style="info" %}
-이 문서에는 Snyk.io UI를 사용하는 프로세스에 대해 설명합니다. Snyk CLI를 이용하여 Snyk IaC를 사용하는 방법에 대한 자세한 내용은 [Infrastructure as Code용 Snyk CLI](../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)를 참조하십시오.
+이 문서에는 Snyk.io UI를 사용하는 프로세스에 대해 설명합니다. Snyk CLI를 이용하여 Snyk IaC를 사용하는 방법에 대한 자세한 내용은 [Infrastructure as Code용 Snyk CLI](snyk-cli-for-infrastructure-as-code/)를 참조하십시오.
 {% endhint %}
 
 ## 전제 조건
 
 다음 사항이 존재하는지 확인하십시오.
 
-* Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Create a Snyk account](https://docs.snyk.io/getting-started/getting-started-snyk-products) 참조)
+* Snyk 계정 ([https://snyk.io/](https://snyk.io)로 이동하여 가입 - 자세한 내용은 [Snyk 제품 시작하기](../../getting-started/select-snyk-product-tool.md) 참조)
 * 작업할 Kubernetes 또는 Terraform 환경
 * 다른 Snyk 제품과 마찬가지로 Git 저장소를 통합합니다. 자세한 내용은 [Git 저장소(SCM) 통합](../../features/integrations/git-repository-scm-integrations/)을 참조하십시오.
 
 자세한 내용은 다음 문서를 참조하십시오.
 
-* [Kubernetes 구성 파일에서 보안 issue를 찾기 위한 통합 구성](../../snyk-products/snyk-infrastructure-as-code/scan-kubernetes-configuration-files/scan-and-fix-security-issues-in-kubernetes-configuration-files.md)
-* [Terraform 파일에서 보안 issue를 찾기 위한 통합 구성](../../snyk-products/snyk-infrastructure-as-code/scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)
+* [Kubernetes 구성 파일에서 보안 issue를 찾기 위한 통합 구성](scan-kubernetes-configuration-files/scan-and-fix-security-issues-in-kubernetes-configuration-files.md)
+* [Terraform 파일에서 보안 issue를 찾기 위한 통합 구성](scan-terraform-files/configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)
 
 ## 1단계: 프로젝트 추가
 

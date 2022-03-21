@@ -169,7 +169,7 @@ CloudFormation 스캔 기능을 사용하려면 저장소에 있는 `YAML` 또�
 
 ## 브로커 구성
 
-브로커는 ACCEPT 환경 변수의 Accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub 브로커에게 전달한 예를 볼 수 있습니다.
+브로커는 ACCEPT 환경 변수의 Accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub 브로커에게 전달한 예를 확인할 수 있습니다.
 
 ```
 docker run --restart=always \
