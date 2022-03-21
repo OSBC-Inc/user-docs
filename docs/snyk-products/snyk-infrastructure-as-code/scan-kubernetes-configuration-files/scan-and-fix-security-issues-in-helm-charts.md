@@ -5,8 +5,8 @@
 ## 전제 조건
 
 * 관리자는 조직을 선호하는 Git 저장소와 통합하고 [문서](../scan-cloudformation-files/configure-your-integration-to-find-security-issues-in-your-cloudformation-files.md)에 설명한 대로 구성 파일 감지를 활성화해야 합니다.
-* 저장소는 [standard Chart directory structure](https://helm.sh/docs/topics/charts/#the-chart-file-structure)를 따라야합니다.
-* 현재 우리는 기본값 파일인 values.yaml을 사용한 Helm Charts 템플릿만 지원합니다. Helm 값의 특정 구성을 검색하려는 경우 지원되는 워크플로는 Snyk 외부의 차트를 템플릿으로 만들고 매니페스트를 일반 Kubernetes 파일로 스캔하는 것입니다.
+* 저장소는 [standard Chart directory structure](https://helm.sh/docs/topics/charts/#the-chart-file-structure)에 맞추어 진행합니다.
+* 현재 우리는 기본값 파일인 values.yaml을 사용한 Helm Charts 템플릿만 지원합니다. Helm 값의 특정 구성을 검색하려는 경우 지원되는 워크플로는 Snyk 외부의 차트를 템플릿으로 만들고 매니페스트를 일반 Kubernetes 파일로 스캔합니다.
   * 기본값 파일에서 템플릿할 수 없는 Helm Charts는 현재 지원하지 않습니다.
 * 모든 차트 디펜던시는 구성된 Helm 저장소에서 공개적으로 다운로드할 수 있거나 테스트 대상 차트와 동일한 git 저장소에서 찾을 수 있어야 합니다.
 
@@ -24,7 +24,7 @@
 
 ## 사용자 정의 Helm 값 구성 테스트
 
-기본값만 사용하여 차트를 테스트하는 것만으로는 충분하지 않을 때가 있습니다. Snyk은 현재 사용자 지정 값을 가져오기에 전달하는 기능을 지원하지 않습니다. 이 섹션은 Snyk 이외의 사용자 지정 구성을 템플릿으로 지정하고 결과 Kubernetes 매니페스트를 검색하는 방법에 대한 지침을 제공하기 위한 것입니다.
+기본값만 사용하여 차트를 테스트하는 것만으로는 충분하지 않을 때가 있습니다. Snyk은 현재 사용자 지정 값을 가져오기에 전달하는 기능을 지원하지 않습니다. 이 섹션은 Snyk 이외의 사용자 지정 구성을 템플릿으로 지정하고 결과 Kubernetes 매니페스트를 검색하는 방법에 대한 지침을 제공합니다.
 
 Snyk CLI와 Helm을 함께 사용할 수 있습니다.
 
