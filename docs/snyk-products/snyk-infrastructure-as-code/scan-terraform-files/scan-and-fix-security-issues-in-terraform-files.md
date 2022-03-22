@@ -6,7 +6,7 @@ Snyk은 잘못된 구성과 보안 문제가 있는지 Terraform 코드를 스�
 
 * 관리자는 조직을 선호하는 Git 저장소와 통합하고 [문서](configure-your-integration-to-find-security-issues-in-your-terraform-filess.md)에 설명한 대로 구성 파일 감지를 활성화해야 합니다.
 * Snyk 계정이 있어야 하며 Terraform 파일(`.tf`형식)이 있어야 합니다.
-* We currently detect AWS, Azure and GCP related secur현재 AWS, Azure 및 GCP 관련 보안 문제를 감지합니다.
+* 현재 AWS, Azure 및 GCP 관련 보안 문제를 감지합니다.
 
 ## 구성 파일 스캔 및 수정
 
