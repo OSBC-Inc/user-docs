@@ -62,7 +62,7 @@
   * [Use Cases](snyk-products/snyk-code/use-cases.md)
   * [주요 특징들](snyk-products/snyk-code/key-features/README.md)
     * [AI 엔진](snyk-products/snyk-code/key-features/ai-engine.md)
-    * [사용자 경험](snyk-products/snyk-code/key-features/user-experience.md)
+    * [주요 기능](snyk-products/snyk-code/key-features/user-experience.md)
     * [통합](snyk-products/snyk-code/key-features/integrations.md)
   * [언어 및 프레임워크](snyk-products/snyk-code/snyk-code-language-and-framework-support.md)
   * [Snyk Code 구성](snyk-products/snyk-code/configuring-snyk-code.md)

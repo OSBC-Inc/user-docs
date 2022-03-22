@@ -10,7 +10,7 @@
 
 ![](../../../.gitbook/assets/os1.png)
 
-마지막 스캔이 언제 시작되었는지 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**을 확인하고, 특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일을 확인하십시오.
+마지막 스캔이 언제 시작되었는지 확인하려면 프로젝트 페이지에서 **Snapshot taken by recurring test**을 확인하고, 특정 스캔 결과에 대한 **\[snyk] Vulnerability alert** 이메일도 확인하십시오.
 
 ![](../../../.gitbook/assets/os2.png)
 
