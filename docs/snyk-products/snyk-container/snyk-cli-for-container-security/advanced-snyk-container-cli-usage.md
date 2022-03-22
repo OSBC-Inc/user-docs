@@ -11,13 +11,13 @@ snyk container test oci-archive:archive.tar
 
 ## 다중 플랫폼 이미지 테스트
 
-일부 저장소는 필요한 운영체제 및 아키텍쳐에 따라 여러 다른 이미지를 가리키는 다중 매니페스트를 나타냅니다. Snyk CLI `container` 명령을 사용하여 특정 플랫폼에 대한 이미지를 명시적으로 테스트할 수 있습니다.
+일부 저장소는 필요한 운영 체제 및 아키텍처에 따라 여러 다른 이미지를 가리키는 다중 매니페스트를 나타냅니다. Snyk CLI `container` 명령을 사용하여 특정 플랫폼에 대한 이미지를 명시적으로 테스트할 수 있습니다.
 
 ```
 snyk container test --platform=linux/arm64 debian
 ```
 
-`--platform` flag에는 다음 중 하나가 포함되어야 합니다.
+`--platform` 옵션에는 다음 중 하나가 포함되어야 합니다.
 
 * linux/amd64
 * linux/arm64
@@ -49,12 +49,12 @@ snyk container test <repository>:<tag> --username= --password=
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--json`                     | 결과를 JSON 형식으로 인쇄하여 다른 도구와 통합하는 데 유용합니다.                                                                                                          |
 | `--sarif`                    | 결과를 다른 도구와 통합하는 데 유용한 [SARIF](https://www.oasis-open.org/committees/tc\_home.php?wg\_abbrev=sarif) 형식으로 반환합니다. 이렇게 하려면 `--file`로도 테스트를 실행해야 합니다. |
-| `--exclude-base-image-vulns` | 기본 이미지에 의해서만 도입된 취약점을 표시하지 않습니다. `snyk container test` 사용 시에만 사용할 수 있습니다.                                                                        |
+| `--exclude-base-image-vulns` | 기본 이미지에서만 발생하는 취약점을 표시하지 않습니다. `snyk container test` 사용 시에만 사용할 수 있습니다.                                                                          |
 | `--severity-threshold`       | 지정된 수준 이상의 취약점만 보고합니다.                                                                                                                           |
-| `--app-vulns`                | Snyk을 사용하면 한 번의 스캔으로 컨테이너 이미지와 운영체제에서 애플리케이션 디펜던시의 취약점을 모두 감지할 수 있습니다.                                                                           |
+| `--app-vulns`                | Snyk을 사용하면 한 번의 스캔으로 컨테이너 이미지와 운영 체제에서 애플리케이션 디펜던시의 취약점을 모두 감지할 수 있습니다.                                                                          |
 | `--nested-jars-depth`        | `--app-vulns`를 사용할 경우 `--nested-jars-depth=n` 옵션을 사용하여 Snyk이 압축을 풀어야 하는 중첩된 jar의 수준을 설정합니다.                                                      |
 
-더 많은 옵션은 Snyk CLI `container` [도움말](../../../features/snyk-cli/commands/container.md) 참조하거나 다음을 실행하여 도움말을 참고하십시오.
+더 많은 옵션은 [Snyk CLI container 도움말](https://docs.snyk.io/snyk-cli/commands#snyk-container) 참조하거나 다음을 실행하여 도움말을 참고하십시오.
 
 ```
 snyk container --help
