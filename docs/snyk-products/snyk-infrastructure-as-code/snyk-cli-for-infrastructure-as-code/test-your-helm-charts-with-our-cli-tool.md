@@ -1,4 +1,4 @@
-# CLI를 이용하여 Helm Charts with our CLI tool
+# CLI 도구를 사용하여 Helm Charts 테스트 진행
 
 Helm 템플릿을 Kuberenetes 매니페스트 파일로 렌더링한 다음 Snyk CLI에서 `snyk iac` 명령을 사용하여 Helm Charts를 스캔합니다.
 
@@ -27,4 +27,4 @@ helm template ./helm > output.yaml
 snyk iac test output.yaml
 ```
 
-현재 Snyk CLI는 표준 입력에서 읽을 수 없지만 이 기능은 현재 우리가 연구하고 있는 기능입니다.
+현재 Snyk CLI는 표준 입력에서 읽을 수 없지만 이 기능은 연구하고 있는 기능입니다.

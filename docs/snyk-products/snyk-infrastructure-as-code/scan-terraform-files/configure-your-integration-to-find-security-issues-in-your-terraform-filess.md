@@ -6,7 +6,7 @@ Snyk는 소스 코드 저장소에서 Terraform 파일을 테스트 및 모니�
 
 Snyk은 현재 통합 Git 저장소에서 가져올 때 Terraform(`.tf`) 파일을 검색합니다. Terraform 모듈 저장소 스캔은 SCM에서 모듈을 고정하는 저장소를 가져오거나 `snyk iac test` 명령을 사용하여 디렉토리 자체를 스캔하여 수행합니다.
 
-Terraform을 스캔하면 모듈에 정적으로 구성된 모든 항목에 대한 보안 피드백을 제공합니다. 반복/예약 테스트를 통해 이점을 얻으려면 SCM에서 직접 사용자 정의 모듈을 가져오는 것이 좋습니다.
+Terraform을 스캔하면 모듈에 정적으로 구성된 모든 항목에 대한 보안 피드백을 제공합니다. 반복/예약 테스트를 통해 이점을 얻으려면 SCM에서 직접 사용자 정의 모듈을 가져오는 것을 권장합니다.
 
 변수 보간 기능에 대한 blog post를 참조하세요. [Snyk IaC public beta는 Terraform plan analysis](https://snyk.io/blog/snyk-iac-public-beta-introduces-terraform-plan-analysis/)를 도입하고 Terraform 모듈을 스캔합니다. 이를 통해 CLI를 통해 Terraform Plan 출력을 스캔할 수 있습니다. 배치를 만드는 데 사용된 모듈의 결과를 포함하도록 전체 Terraform 배포 스캔을 활성화합니다.
 
@@ -14,7 +14,7 @@ Terraform을 스캔하면 모듈에 정적으로 구성된 모든 항목에 대�
 
 **전제 조건**
 
-* Snyk에서 구성하려는 조직의 관리자여야합니다.
+* Snyk에서 구성하려는 조직의 관리자여야 합니다.
 * 이미 Git 저장소를 통합했는지 확인하세요. 아직 수행하지 않았다면 [Git 저장소(SCM) 통합](../../../features/integrations/git-repository-scm-integrations/)을 확인하십시오.
 
 **Snyk 설정**

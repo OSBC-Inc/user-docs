@@ -29,7 +29,7 @@ snyk iac test <file>
 결과 구성 스캔 문제에는 기본 Snyk rules과 custom rules의 문제가 모두 포함됩니다. [Understanding the CLI Output](../../snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)을 참조하십시오.
 
 {% hint style="warning" %}
-bundle 경로를 정의하는 방법은 한 번에 하나만 정의해야 합니다. Snyk 설정 페이지 또는 Snyk API를 통해 custom rules 설정을 비활성화해야 합니다. 또는 `snyk config unset`을 사용하여 이전에 저장된 설정을 지웁니다.
+bundle 경로를 정의하는 방법은 한 번에 하나만 정의해야 합니다. Snyk 설정 페이지 또는 Snyk API를 통해 custom rules 설정을 비활성화해야 합니다. 또는 `snyk config unset`을 사용하여 이전에 저장된 설정을 제거합니다.
 {% endhint %}
 
 ### Snyk 설정 페이지

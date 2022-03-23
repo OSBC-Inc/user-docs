@@ -18,7 +18,7 @@ cdk synth
 
 이 파일은 YAML output으로 터미널에 출력하고 **cdk.out** 디렉토리에 JSON 파일이 생성됩니다.
 
-Snyk IaC CLI를 사용하여 생성된 json 파일을 스캔하고 스캔하려는 애플리케이션의 이름으로 바꿉니다.
+Snyk IaC CLI를 사용하여 생성된 json 파일을 스캔하고 스캔하려는 애플리케이션의 이름으로 변경합니다.
 
 ```
 snyk iac test cdk.out/.json

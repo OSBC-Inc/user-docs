@@ -3,7 +3,7 @@
 [Snyk reports](https://docs.snyk.io/reports/reports)를 사용하여 Infrastructure as Code의 구성 파일에서 구성 이슈를 확인할 수 있습니다.
 
 {% hint style="info" %}
-**Feature availability**\
+**기능 사용 여부**\
 이 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 

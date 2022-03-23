@@ -24,7 +24,7 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
     ```
 
     이는 제공된 구성 형식을 기반으로 하는 fixture 파일을 포함하여 Rule에 대한 스캐폴딩을 생성합니다. 자세한 내용은 [documentation about the template command](../sdk-reference.md#template-options)를 참조하십시오.
-2. Rego 정책을 처음부터 만들고 예상 파일 및 폴더 구조를 직업 일치시킵니다.\
+2. Rego 정책을 처음부터 만들고 예상 파일 및 폴더 구조를 직접 일치시킵니다.\
    `rules`\
    `└── my_rule`\
    `├── main.rego`\
@@ -74,7 +74,7 @@ Snyk IaC CLI에 올바르게 표시되도록 하려면 다음 형식의 **msg** 
 
 속성은 다음과 같습니다.
 
-* **publicId:** COMPANY-001과 같이 사용자 고유의 이름 지정 규칙입니다. 내부 Snyk 규칙과 구별하기 위해 **"SNYK-"로 시작/포함해서는 안 됩니다**.
+* **publicId:** COMPANY-001과 같이 사용자 고유의 이름 지정 규칙입니다. 내부 Snyk 규칙과 구별하기 위해 **"SNYK-"으로 시작하거나 포함하지 못합니다.**
 * **title:** 문제를 요약한 짧은 제목입니다.
 * **severity:** **low/medium/high/critical** 중 하나일 수 있습니다.
 * **msg:** 리소스 이름 및 속성(예: `input.aws_s3_messages[%s]`)만 변경하는 것이 좋습니다.태그를 참조하십시오. 기능 `sprintf`는 Rego에서 제공하며 문제가 발견된 정확한 위치를 설명하는 동적 오류 메시지를 제공할 수 있습니다.

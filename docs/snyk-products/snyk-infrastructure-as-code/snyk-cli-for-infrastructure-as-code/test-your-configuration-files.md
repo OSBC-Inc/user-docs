@@ -15,7 +15,7 @@ CLI를 사용하여 Kubernetes, Terraform 및 CloudFomation 파일을 스캔할 
 기본적으로 이전 버전은 Snyk으로 구성 파일을 전송하여 처리합니다. 최신 버전의 CLI로 업그레이드하는 것을 권장합니다.
 {% endhint %}
 
-예제가 `main.tf`을 표시하는 경우 파일 이름(예: `deployment.yaml`)을 바꿀 수 있습니다.
+예제가 `main.tf`을 표시하는 경우 파일 이름(예: `deployment.yaml`)을 변경할 수 있습니다.
 
 ## 지정된 파일 테스트
 
@@ -45,7 +45,7 @@ snyk iac test file-1.tf file-2.tf
 snyk iac test
 ```
 
-또는 스캔하고 반복하고싶은 특정 폴더 지정이 가능합니다.
+또는 특정 폴더를 지정하여 스캔을 진행할 수 있습니다.
 
 ```
 snyk iac test my-folder

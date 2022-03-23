@@ -7,7 +7,7 @@
 Terraform 스캔 기능을 사용하려면 저장소에서 `.tf` 파일에 액세스해야 합니다. 이를 위해서는 특정 API 사용 권한이 필요합니다. 이러한 API 권한은 사용 중인 소스 제어 시스템에 따라 다릅니다.
 
 1. [Broker 저장소](https://github.com/snyk/broker/tree/master/client-templates)에서 소스 제어 시스템에 적합한 Accept.json 샘플 파일을 찾아 다운로드합니다.
-2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** array에 추가하세요.
+2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** array에 추가하십시오.
 3. [브로커 구성](detecting-terraform-configuration-files-using-a-broker.md#undefined)을 진행합니다.
 
 ## GitHub rules

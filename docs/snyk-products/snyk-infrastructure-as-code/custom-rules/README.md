@@ -22,7 +22,7 @@ Snyk IaC(Infrastructure as Code) SDK를 시작하기 위한 초기 지침은 다
 * [파이프라인 내에 사용자 정의 규칙을 통합하는 법](integrating-iac-custom-rules-within-a-pipeline.md)
 * [SDK reference](sdk-reference.md)
 
-![Snyk　CLI로 파일을 스캔하고 배포하는 데 사용하는 고유한 사용자 지정 규칙을 작성하는 종단 간 흐름](<../../../.gitbook/assets/image (77) (1) (1).png>)
+![Snyk　CLI로 파일을 스캔하고 배포하는 데 사용하는 고유한 사용자 지정 규칙을 작성하는 흐름](<../../../.gitbook/assets/image (77) (1) (1).png>)
 
 #### Snyk 플랫폼 정책 및 Snyk IaC 사용자 지정 규칙
 
@@ -36,5 +36,3 @@ Snyk IaC(Infrastructure as Code) SDK를 시작하기 위한 초기 지침은 다
 Snyk 플랫폼을 사용하면 [po](../../../features/fixing-and-prioritizing-issues/policies/)[icies](../../../features/fixing-and-prioritizing-issues/policies/)을 직접 만들고 스캔 중 Snyk이 식별한 이슈의 우선 순위 지정 및 분류 방법을 관리할 수 있습니다. 예를 들어 이슈에 특정 속성이 있는 경우 이슈의 우선 순위를 medium에서 high로 변경하거나 특정 기준을 충족하는 경우 이슈를 대량 무시하도록 정책을 정의할 수 있습니다.
 
 Snyk IaC 사용자 정의 규칙 기능을 사용하면 시행하려는 잘못된 구성 검사에 대한 규칙을 직접 정의할 수 있습니다. 구성 파일에서 사용자 지정 규칙이 실패하면 이슈가 발생합니다.
-
-\\

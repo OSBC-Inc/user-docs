@@ -5,7 +5,7 @@ Snyk Infrastructure as Code를 사용하면 CLI에서 직접 구성 파일을 �
 CloudFormation 파일에서 Snyk Infrastructure as Code는 yaml, json 형식 검색을 지원합니다.
 
 {% hint style="info" %}
-AWS CDK 응용 프로그램을 검색할 수도 있습니다. 자세한 내용은 [CLI를 사용하여 AWS CDK 파일 테스트 진행](test-your-aws-cdk-files-with-our-cli-tool.md)을 참조하십시오.
+AWS CDK 응용 프로그램을 검색할 수도 있습니다. 자세한 내용은 [CLI를 사용하여 AWS CDK 파일 테스트 진행](test-your-aws-cdk-files-with-our-cli-tool.md) 문서를 참조하십시오.
 {% endhint %}
 
 CLI는 다음과 같이 사용할 수 있습니다.

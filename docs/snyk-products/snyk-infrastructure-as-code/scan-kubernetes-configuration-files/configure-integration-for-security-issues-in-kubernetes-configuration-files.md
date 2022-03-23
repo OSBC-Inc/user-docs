@@ -10,7 +10,7 @@ Snyk은 현재 통합 Git 저장소에서 가져올 때 JSON 및 YAML 형식의 
 
 **전제 조건**
 
-* Snyk에서 구성하려는 조직의 관리자여야합니다.
+* Snyk에서 구성하려는 조직의 관리자여야 합니다.
 * 이미 Git 저장소를 통합했는지 확인하십시오. 아직 수행하지 않았다면 [Git 저장소(SCM) 통합](../../../features/integrations/git-repository-scm-integrations/)을 확인하십시오.
 
 **Snyk 설정**

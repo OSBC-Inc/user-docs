@@ -2,7 +2,7 @@
 
 Snyk CLI에서 Snyk iac test를 사용하여 IaC 구성 파일을 검색할 때 사용자와 관련이 없는 문제는 무시할 수 있습니다.
 
-[.snyk 정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)을 사용하여 이 작업을 수행할 수 있습니다. 이 파일은 IaC 구성 파일을 저장할 작업 디렉토리의 root에 저장하거나 버전이 지정되는 것이 좋습니다.
+[.snyk 정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)을 사용하여 이 작업을 수행할 수 있습니다. 이 파일은 IaC 구성 파일을 저장할 작업 디렉토리의 root에 저장하거나 버전을 지정하는 것을 권장합니다.
 
 ## 경로 무시
 

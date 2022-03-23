@@ -18,7 +18,7 @@ npm을 이용하여 SDK를 설치합니다.
 
 * Node version 10 이상을 사용하여 로컬 환경에 최신 버전의 npm을 설치했는지 확인하십시오.
 
-#### **Steps**
+#### 진행 단계
 
 로컬에서 사용하기 위해 설치하려면 다음 명령어를 실행합니다.
 
@@ -64,7 +64,7 @@ macOS 및 Linux 환경에서 Homebrew를 사용하여 SDK를 설치할 수 있�
     brew tap snyk/tap
     ```
 
-#### **Steps**
+#### 진행 단계
 
 다음과 같이 SDK를 설치합니다.
 
@@ -124,5 +124,5 @@ docker run --rm -v $(pwd):/app snyk/snyk-iac-rules template -r {rule_name}
 
 ### 참고 항목
 
-* [​](getting-started-with-the-sdk/)SDK 시작하기
+* [​](getting-started-with-the-sdk/)[SDK 시작하기](getting-started-with-the-sdk/)
 * ​[SDK reference​](sdk-reference.md)
