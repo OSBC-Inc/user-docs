@@ -19,7 +19,7 @@ DigitalOcean에서 Snyk으로 이미지를 추가하려면 다음과 같이 진�
 6. 가져오기가 끝나면 다음을 수행합니다.
    1. 새로 가져온 이미지는 **Projects** 페이지(**NEW** 태그로 표시)에서 확인할 수 있습니다. 이미지는 저장소별로 그룹화되며 각각 자세한 프로젝트 페이지에 개별적으로 연결합니다.
    2. **import log**를 사용할 수 있고 프로젝트 목록 상단에서 접근할 수 있습니다.
-   3. 데이터를 풍부하게 만들고 기본 이미지에 대한 권장 사항을 얻으려면 **Settings**에서 이미지 프로젝트에 Dockerfile을 연결할 수 있습니다. 자세한 내용은 [Dockerfile 추가 및 기본 이미지 테스트](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)를 참조하세요.
+   3. 데이터를 보강하고 기본 이미지에 대한 권장 사항을 얻으려면 **Settings**에서 이미지 프로젝트에 Dockerfile을 연결할 수 있습니다. 자세한 내용은 [Dockerfile 추가 및 기본 이미지 테스트](../../scan-your-dockerfile/adding-your-dockerfile-and-test-your-base-image.md)를 참조하세요.
 
 DigitalOcean은 특정 아이콘으로 표시되며 **projects** view에서 통합을 필터링하여 DigitalOcean 프로젝트만 확인할 수 있습니다.
 

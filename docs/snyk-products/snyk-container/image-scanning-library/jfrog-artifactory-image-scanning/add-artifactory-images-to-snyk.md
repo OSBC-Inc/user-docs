@@ -1,13 +1,13 @@
 # Snyk에 Artifactory 이미지 추가
 
-Snyk은 저장소에 있는 Artifactory 컨테이너 이미지의 태그를 평가하여 Artifactory 컨테이너 이미지를 테스트하고 모니터링합니다.
+Snyk은 저장소에 있는 해당 태그를 평가하여 Artifactory 컨테이너 이미지를 테스트하고 모니터링합니다.
 
-Snyk에 이미지를 추가하려면 다음과 같이 진행합니다.
+**Snyk에 이미지를 추가하려면 다음과 같이 진행합니다.**
 
 **전제 조건**
 
-* Snyk에 계정이 있어야 하며 관리자가 귀사에 등록해야 합니다.
-* Snyk과 Artifactory 환경간에 통합을 구성해야 합니다.
+* Snyk 계정이 있어야 하며 조직에 등록해야 합니다.
+* Snyk과 Artifactory 환경 간에 통합을 구성해야 합니다.
 
 **진행 단계**
 
@@ -15,11 +15,11 @@ Snyk에 이미지를 추가하려면 다음과 같이 진행합니다.
 
 ![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (20).gif>)
 
-* **Projects**로 이동하고 **Add Project**를 클릭합니다. 계정에 이미 구성된 통합 목록이 다음과 같이 열립니다.
+* **Projects**로 이동하고 **Add Project**를 클릭합니다. 다음과 유사하게 계정에 이미 구성된 통합 목록이 열립니다.
 
 ![](../../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png)
 
-* The Which images do you want to test?가 나타나고, 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
+* **The Which images do you want to test?**가 나타나고, 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
 
 ![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (10).png>)
 
@@ -29,11 +29,11 @@ Snyk에 이미지를 추가하려면 다음과 같이 진행합니다.
   * 여러 저장소에서 여러 이미지(#3)를 선택하려면 저장소를 확장 및 축소합니다.
 *   **Add selected repositories**를 클릭합니다.
 
-    이미지를 가져오면 페이지 상단의 상태 표시줄이 나타납니다. 작업이 진행되는 동안 다른 작업을 계속할 수 있습니다.
-* 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침 합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부프로젝트 페이지에 개별적으로 연결됩니다.
-* 이제 저장소를 프로젝트에 연결하여 Dockerfile을 사용하여 풍부한 수정 정보를 제공할 수 있습니다. 자세한 내용은 [Adding your Dockerfile and test your base image](https://support.snyk.io/hc/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하세요
+    이미지를 가져오면 페이지 상단에 상태 표시줄이 나타납니다. 작업이 진행되는 동안 다른 작업을 계속할 수 있습니다.
+* 가져오기가 끝나면 성공 또는 실패 메시지가 페이지 상단에 나타납니다. 새로 가져온 이미지가 있는 프로젝트 페이지를 확인하려면 새로고침 합니다. 이미지는 저장소별로 그룹화되어 있으며 각각 세부 프로젝트 페이지에 개별적으로 연결됩니다.
+* 이제 Dockerfile을 사용하여 강화된 수정 조언을 얻기 위해 Git 저장소를 이 프로젝트에 연결할 수 있습니다. 자세한 내용은 [Dockerfile 추가 및 기본 이미지 테스트](https://support.snyk.io/hc/en-us/articles/360003916218#UUID-9ab347a6-8af0-ef6c-5ebd-cec21fbfab29)를 참조하십시오.
 
-이미지는 특정 아이콘으로표시되며 ![](../../../../.gitbook/assets/uuid-d083d5fe-780a-cf2f-18db-42720db8c5a1-en.png) , 필터링하여 Artifactory 프로젝트만 확인할 수 있습니다.
+이미지는 특정 아이콘으로 표시되며 ![](../../../../.gitbook/assets/uuid-d083d5fe-780a-cf2f-18db-42720db8c5a1-en.png), 필터링하여 Artifactory 프로젝트만 확인할 수 있습니다.
 
 ![](../../../../.gitbook/assets/uuid-5c95894c-97d8-a6a9-0969-7c5fee541211-en.png)
 
