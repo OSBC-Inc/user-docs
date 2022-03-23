@@ -92,7 +92,7 @@
     * [기본 이미지 감지](snyk-products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection.md)
     * [이미지 레이어 정보](snyk-products/snyk-container/getting-around-the-snyk-container-ui/image-layer-information.md)
   * [Dockerfile 스캔](snyk-products/snyk-container/scan-your-dockerfile/README.md)
-    * [labels를 사용하여 Dockerfile과 이미지를 자동으로 연결](snyk-products/snyk-container/scan-your-dockerfile/automatically-link-between-dockerfile-and-images-using-labels.md)
+    * [label를 사용하여 Dockerfile과 이미지를 자동으로 연결](snyk-products/snyk-container/scan-your-dockerfile/automatically-link-between-dockerfile-and-images-using-labels.md)
     * [Dockerfile에서 취약한 기본 이미지 감지](snyk-products/snyk-container/scan-your-dockerfile/detect-vulnerable-bases-images-from-dockerfile.md)
     * [Dockerfile의 취약한 기본 이미지를 수정하기 위한 PR 열기](snyk-products/snyk-container/scan-your-dockerfile/open-pull-requests-to-fix-vulnerable-base-images-in-your-dockerfile.md)
     * [Dockerfile 명령어란?](snyk-products/snyk-container/scan-your-dockerfile/what-is-a-dockerfile-instruction.md)
