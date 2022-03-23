@@ -1,6 +1,6 @@
 # Dockerfile에서 취약한 기본 이미지 감지
 
-Snyk은 Git 저장소를 가져올 때 Docker 파일을 스캔하여 취약한 기본 이미지를 탐지합니다. 이렇게 하면 이미지를 구축하기 전에 보안 문제를 검사할 수 있으므로 잠재적인 문제가 레지스트리나 프로덕션에 해결하는 데 도움이 됩니다.
+Snyk은 Git 저장소를 가져올 때 Dockerfile을 스캔하여 취약한 기본 이미지를 탐지합니다. 이렇게 하면 이미지를 빌드하기 전에 보안 문제를 검사할 수 있으므로 잠재적인 문제가 레지스트리나 운영 환경에 도달하기 전에 해결하는 데 도움이 됩니다.
 
 [Git 저장소를 Snyk에 통합](../../../features/integrations/git-repository-scm-integrations/)하면 해당 저장소에 있는 모든 Dockerfile이 자동으로 선택되어 웹 UI에 ‘projects’로 표시됩니다.
 
