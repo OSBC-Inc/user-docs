@@ -113,7 +113,7 @@ FAIL: 1/1
  snyk-iac-rules test --run test_my_rule --explain notes
 ```
 
-옵션을 추가하면 실패한 테스트를 디버깅하기 위한 자세한 정보가 출력됩니다.
+이렇게하면 실패한 테스트를 디버깅하기 위한 자세한 정보가 출력됩니다.
 
 {% hint style="info" %}
 현재 폴더에 생성된 Rule보다 더 많은 Rule이 있는 경우 `--ignore` 플래그를 사용하여 테스트와 무관한 폴더 및 파일 제외하세요(`template` 명령어를 사용한 경우 `lib/` 및 `rules`는 제외하지 마세요). 이렇게하면 테스트 속도를 높이고 Rego가 비 Rego 파일을 평가하려고 하는 문제를 방지할 수 있습니다.

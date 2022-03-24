@@ -6,7 +6,7 @@
 snyk-iac-rules build
 ```
 
-현재 폴더에 생성된 Rule보다 더 많은 Rule이 있는 경우 `--ignore` 플래그를 사용하여 production-ready bundle에 관련이 없는 폴더 파일을 제외하십시오. 플래그를 사용하여 진행하면 프로세스 속도를 높이고 생성된 bundle의 크기를 작게 유지할 수 있습니다.
+현재 폴더에 생성된 Rule보다 더 많은 Rule이 있는 경우 `--ignore` 플래그를 사용하여 production-ready bundle에 관련이 없는 폴더 파일을 제외하세요. 이렇게 진행하면 프로세스 속도를 높이고 생성된 bundle의 크기를 작게 유지할 수 있습니다.
 
 #### default entry point 재지정
 

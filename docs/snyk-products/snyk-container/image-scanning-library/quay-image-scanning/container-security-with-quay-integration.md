@@ -15,8 +15,8 @@ Snyk에서 Quay 통합을 설정하고 이미지 취약점 관리를 시작하�
 
 **통합 구성**
 
-1. Snyk 계정 상단에 있는 메뉴 모음에서 **Integrations** 으로 이동합니다. **Container Registries** 섹션에 **Quay** 옵션을 찾아 클릭합니다.
-2. **Account credentials** 섹션에서 Quay 사용자 이름과 암호 로그인 자격 증명을 입력합니다. **container registry name**에 통합할 레지스트리의 전체 URL을 입력합니다. 클라우드 기반 Quay 또는 개인 호스트일 수 있습니다. 마치려면 **Save**를 클릭하세요.
+1. Snyk 계정 상단에 있는 메뉴 모음에서 **Integrations**로 이동합니다. **Container Registries** 섹션에 **Quay** 옵션을 찾아 클릭합니다.
+2. **Account credentials** 섹션에서 Quay Username과 Password를 통해 로그인 인증 정보를 입력합니다. **container registry name**에 통합할 레지스트리의 전체 URL을 입력합니다. 클라우드 기반 Quay 또는 개인 호스트일 수 있습니다. 마치려면 **Save**를 클릭하세요.
 
 ![](../../../../.gitbook/assets/mceclip1-10-.png)
 
@@ -24,7 +24,7 @@ Snyk에서 Quay 통합을 설정하고 이미지 취약점 관리를 시작하�
 
 {% hint style="info" %}
 **Note**\
-[Quay.io](http://quay.io)는 2021년 6월까지 Quay 사용을 [중지](https://access.redhat.com/articles/5925591)하고 있습니다. 자격 증명은 더이상 Quay 사용자 이름과 비밀번호가 아니라 원하는 repo\*\*.\*\*에 대해 'read' 권한이 있는 Quay 로봇 계정 자격 증명(사용자 이름 및 토큰)이 될수 있습니다.
+[Quay.io](http://quay.io)는 2021년 6월까지 Quay 사용을 [중지](https://access.redhat.com/articles/5925591)하고 있습니다. 자격 증명은 더 이상 Quay 사용자명과 비밀번호가 아니라 원하는 저장소에 대해 'read' 권한이 있는 Quay 로봇 계정 자격 증명(사용자명과 토큰)이 될 수 있습니다.
 {% endhint %}
 
-Snyk은 연결 값과 page reload를 테스트하여 Quay 통합 정보를 표시하고 **Add your Quay images to Snyk** 버튼을 사용할 수 있습니다. Quay와의 연결에 실패한 경우 **Connected to Quay** 섹션 아래에 알림이 나타납니다. 이제 Snyk을 사용하여 Quay에서 이미지를 스캔할 수 있습니다.
+Snyk은 연결 값을 테스트하고 페이지를 다시 로드하여 이제 Quay 통합 정보를 표시하고 **Add your Quay images to Snyk** 버튼을 사용할 수 있습니다. Quay 연결에 실패한 경우 **Connected to Quay** 섹션 아래에 알림이 나타납니다. 이제 Snyk을 사용하여 Quay에서 이미지를 스캔할 수 있습니다.

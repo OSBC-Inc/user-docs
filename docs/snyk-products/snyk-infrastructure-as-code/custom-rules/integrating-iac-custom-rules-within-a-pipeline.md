@@ -173,7 +173,7 @@ jobs:
 {% endcode %}
 
 {% hint style="info" %}
-이 워크플로우를 사용하려면 GitHub Secrets에 구성된 OCI\_REGISTRY\_NAME에 태그 또는 프로토콜이 이미 포함되어 있는지 확인하십시오.
+이 워크플로우를 사용하려면 GitHub Secrets에 구성된 OCI\_REGISTRY\_NAME에 태그 또는 프로토콜이 이미 포함되어 있는지 확인하세요.
 {% endhint %}
 
 ### Custom rules 적용
@@ -208,7 +208,7 @@ Custom rules를 OCI 레지스트리에 게시한 후 이러한 규칙을 사용�
 현재 `v2-beta`와 같은 다른 bundle을 사용하도록 조직을 구성할 경우 Snyk Settings 페이지를 사용하도록 제한합니다. CI/CD 파이프라인에서 환경 변수를 사용하여 Custom rules를 실행할 수 있도록 새로운 bundle을 구성하거나 Custom rules를 사용하지 않도록 설정할 수 있습니다.
 {% endhint %}
 
-다른 저장소에서 그룹 아래 조직 중 하나를 인증하고 Snyk IaC Github Action을 워크플로우에 추가합니다.
+다른 저장소에서 그룹 아래 조직 중 하나를 인증하고 Snyk IaC Github Action을 워크플로우에 추가하면 됩니다.
 
 ```
 name: Snyk Infrastructure as Code Custom Rules

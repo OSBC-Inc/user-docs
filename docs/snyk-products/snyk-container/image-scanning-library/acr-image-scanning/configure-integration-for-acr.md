@@ -2,7 +2,7 @@
 
 ACR 레지스트리와 Snyk 조직 간의 통합을 활성화하고 취약점 관리를 시작합니다. 여러 레지스트리와 통합하려면 각 레지스트리에 대해 고유한 조직을 만드십시오.
 
-**단계:**
+#### 진행 단계
 
 1. ACR 계정에 액세스하여, AcrPull 역할과 함께 Snyk에서 사용할 고유한 서비스 주체의 인증 정보를 가져옵니다. 이 작업에 대한 도움말은 [ACR documentation](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-service-principal)을 참조하십시오.
 2. Snyk 계정에 로그인합니다.
