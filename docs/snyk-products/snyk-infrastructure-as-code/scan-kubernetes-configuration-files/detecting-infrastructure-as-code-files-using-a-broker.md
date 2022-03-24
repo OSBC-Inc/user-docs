@@ -1,18 +1,18 @@
-# 브로커를 사용하여 infrastructure as code 파일 감지
+# Broker를 사용하여 Kubernetes 구성 파일 감지
 
-비공개로 호스팅되는 Git 저장소를 사용하는 경우 Snyk Broker를 사용하여 저장소에 Snyk를 연결할 수 있습니다. 자세한 내용은 [full broker documentation for setup](../../../features/integrations/snyk-broker/set-up-snyk-broker.md)을 참조하십시오.
+비공개로 호스팅되는 Git 저장소를 사용하는 경우 Snyk Broker를 사용하여 저장소에 Snyk을 연결할 수 있습니다. 자세한 내용은 [설정을 위한 전체 brocker 문서](../../../features/integrations/snyk-broker/set-up-snyk-broker.md)를 참조하십시오.
 
-이 문서에는 Infrastructure as Code 파일에 필요하는 추가 구성에 대해 설명합니다.
+이 문서에는 Infrastructure as Code 파일에 필요한 추가 구성에 대해 설명합니다.
 
 ## Configuration 작성
 
-저장소의 특정 파일에 대한 브로커 액세스 권한을 부여해야 합니다. 이를 위해서는 특정 API 사용 권한이 필요합니다. 이러한 API 권한은 사용 중인 소스 제어 시스템에 따라 다릅니다. 아래 구성은 파일 확장자 `.yaml`, `.yml` 및 `.json`에 대한 것으로, 브로커가 잠재적인 Kubernetes 및 CloudFormation 파일에 액세스할 수 있지만 필요에 따라 조정하십시오. 예를 들어, Terraform HCL 파일을 검색하기 위해 `.tf` 파일에 대한 구성을 추가할 수 있습니다.
+저장소의 특정 파일에 대한 액세스 권한을 Broker에게 부여해야 합니다. 이를 위해서는 특정 API 사용 권한이 필요합니다. 이러한 API 권한은 사용 중인 소스 제어 시스템에 따라 다릅니다. 아래 구성은 파일 확장자 `.yaml`, `.yml` 및 `.json`에 대한 것으로, Broker가 잠재적인 Kubernetes 및 CloudFormation 파일에 액세스할 수 있지만 필요에 따라 조정하십시오. 예를 들어, Terraform HCL 파일을 스캔하기 위해 `.tf` 파일에 대한 구성을 추가할 수 있습니다.
 
 1. [Broker 저장소](https://github.com/snyk/broker/tree/master/client-templates)에서 소스 제어 시스템에 적합한 Accept.json 샘플 파일을 찾아 다운로드합니다.
-2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** array에 추가하세요.
-3. [브로커 구성](detecting-infrastructure-as-code-files-using-a-broker.md#undefined)을 진행합니다.
+2. 이름을 `accept.json`으로 바꾸고 SCM에 해당하는 아래 규칙을 JSON 파일의 **private** 배열에 추가하십시오.
+3. [Broker 구성](detecting-infrastructure-as-code-files-using-a-broker.md#undefined) 지침을 따르십시오.
 
-## GitHub & GitHub Enterprise rules
+## GitHub & GitHub Enterprise 규칙
 
 ```
 {
@@ -65,7 +65,7 @@
 },
 ```
 
-## Bitbucket rules
+## Bitbucket 규칙
 
 ```
 {
@@ -158,7 +158,7 @@
 },
 ```
 
-## GitLab rules
+## GitLab 규칙
 
 ```
 {
@@ -211,25 +211,7 @@
 },
 ```
 
-## 브로커 구성
-
-브로커는 ACCEPT 환경 변수의 Accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub 브로커에게 전달한 예를 볼 수 있습니다.
-
-```
-docker run --restart=always \
-  -p 8000:8000 \
-  -e BROKER_TOKEN=secret-broker-token \
-  -e GITHUB_TOKEN=secret-github-token \
-  -e PORT=8000 \
-  -e BROKER_CLIENT_URL=https://my.broker.client:8000 \
-  -e ACCEPT=/private/accept.json
-  -v /local/path/to/private:/private \
-  snyk/broker:github-com
-```
-
-**Note**: 이를 통해 Snyk은 모든 `.yaml`, `.yml` 또는 `.json` 파일을 쿼리할 수 있습니다. 더 정확해지려면 위의 예제의 경로를 특정 프로젝트나 파일 레이아웃으로 더 제한하도록 변경할 수 있습니다.
-
-## Azure repo
+## Azure repo 규칙
 
 ```
 {
@@ -499,3 +481,21 @@ docker run --restart=always \
   ]
 }
 ```
+
+## Broker 구성
+
+Broker는 ACCEPT 환경 변수에서 accept.json 파일(위의 규칙이 추가됨)에 대한 경로를 사용합니다. 아래에서 GitHub Broker에게 전달한 예를 볼 수 있습니다.
+
+```
+docker run --restart=always \
+  -p 8000:8000 \
+  -e BROKER_TOKEN=secret-broker-token \
+  -e GITHUB_TOKEN=secret-github-token \
+  -e PORT=8000 \
+  -e BROKER_CLIENT_URL=https://my.broker.client:8000 \
+  -e ACCEPT=/private/accept.json
+  -v /local/path/to/private:/private \
+  snyk/broker:github-com
+```
+
+**Note**: 이를 통해 Snyk은 모든 `.yaml`, `.yml` 또는 `.json` 파일을 쿼리할 수 있습니다. 보다 정확하게 하려면 위의 예제의 경로를 특정 프로젝트나 파일 레이아웃으로 더 제한하도록 변경할 수 있습니다.

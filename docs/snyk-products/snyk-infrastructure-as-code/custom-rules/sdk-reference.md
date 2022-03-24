@@ -16,11 +16,11 @@ Snyk에 대한 자세한 내용은 [https://snyk.io](https://snyk.io)을 참조�
 
 #### 시작 방법
 
-1. 새로운 Rule 작성 `$ snyk-iac-rules template`
-2. Rego 작성, fixture를 JSON을 파싱 `$ snyk-iac-rules parse`
-3. Rule 테스트h `$ snyk-iac-rules test`
-4. Rule을 Bundle로 구성 `$ snyk-iac-rules build`
-5. Rule 배포 `$ snyk-iac-rules push`
+1. 새로운 Rule 작성: `$ snyk-iac-rules template`
+2. Rego 작성, fixture를 JSON을 파싱: `$ snyk-iac-rules parse`
+3. Rule 테스트: `$ snyk-iac-rules test`
+4. Rule을 Bundle로 구성: `$ snyk-iac-rules build`
+5. Rule 배포: `$ snyk-iac-rules push`
 
 ### 명령어
 
@@ -30,7 +30,7 @@ Available top-level SDK commands:사용가능한 최상위 SDK 명령어는 다�
 
 `template` - 새로운 Rule을 작성하기위한 스캐폴딩을 생성합니다. `snyk-iac-rules template --help`를 참조하십시오.
 
-`parse` - 제공한 fixture 파일의 JSON 형식으로 반환합니다. Rego에는 JSON 입력이 필요하여 이를 사용하여 Rego Rule을 만드세요. `snyk-iac-rules parse --help`를 참조하십시오.
+`parse` - 제공한 fixture 파일의 JSON 형식으로 반환합니다. Rego에는 JSON 입력이 필요하여 이를 사용하여 Rego Rule을 생성합니다. `snyk-iac-rules parse --help`를 참조하십시오.
 
 `test` - 일치하는 파일에서 검색된 모든 테스트 사례를 실행합니다. `snyk-iac-rules test --help`를 참조하십시오.
 
@@ -85,7 +85,7 @@ Snyk Infrastructure as Code CLI를 실행할 때 표시되는 Rule의 심각도�
 
 Snyk Infrastructure as Code CLI를 실행할 때 표시되는 Rule의 제목입니다.
 
-#### Parse options
+#### Parse 옵션
 
 `--format`=`hcl2`|`yaml|tf-plan`
 
@@ -93,7 +93,7 @@ The forfixture의 형식입니다. 이 형식은 fixture에서 JSON을 생성하
 
 기본값: `hcl2`
 
-#### Test options
+#### Test 옵션
 
 `--verbose`
 
@@ -121,7 +121,7 @@ tracing 로그를 필터링합니다.
 
 테스트의 하위 집합을 실행할 때 사용할 수 있는 정규식을 허용합니다.
 
-#### Build options
+#### Build 옵션
 
 `--output`
 
@@ -159,7 +159,7 @@ bundle에 사용할 형식입니다. 지금은 Snyk IaC CLI에서 Rego 번들을
 
 bundle을 push할 레지스트리 위치입니다(예: `docker.io/`, `/bundle.tar.gz`)
 
-#### Flags available across all commands
+#### 모든 명령어에서 사용 가능한 플래그
 
 \[COMMAND] `--help`, `--help` \[COMMAND], `-h`
 

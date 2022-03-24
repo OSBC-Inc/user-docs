@@ -74,7 +74,7 @@ brew install snyk-iac-rules
 
 ### Windows Scoop package manager를 이용하여 SDK 설치
 
-Wndows 환경에서 Scoop을 사용하여 snyk-iac-rules SDK를 설치할 수 있습니다. 설치를 위한 저장소는 [Github](https://github.com/snyk/scoop-snyk)에 있습니다.
+Wndows 환경에서 Scoop을 사용하여 `snyk-iac-rules` SDK를 설치할 수 있습니다. 설치를 위한 저장소는 [Github](https://github.com/snyk/scoop-snyk)에 있습니다.
 
 #### 전제 조건
 
@@ -95,7 +95,7 @@ scoop install snyk-iac-rules
 
 ### Docker를 이용하여 SDK 설치
 
-로컬 디렉토리에 custom rules를 작성하는 동안 Docker를 사용하여 snyk-iac-rules SDK를 설치하고 실행할 수 있습니다. 이미지는[ Docker Hub repo](https://hub.docker.com/r/snyk/snyk-iac-rules)에서 저장합니다.
+로컬 디렉토리에 custom rules를 작성하는 동안 Docker를 사용하여 `snyk-iac-rules` SDK를 설치하고 실행할 수 있습니다. 이미지는[ Docker Hub repo](https://hub.docker.com/r/snyk/snyk-iac-rules)에서 저장합니다.
 
 #### 전제 조건
 

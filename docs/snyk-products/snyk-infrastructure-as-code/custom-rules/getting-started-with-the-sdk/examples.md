@@ -112,7 +112,7 @@ resource "aws_redshift_cluster" "denied" {
 * 또는 식을 여러 줄로 분할하여 `;` (`AND`) 연산자를 생략할 수 있습니다.
 
 {% hint style="info" %}
-Logical AND는 [OPA 설명서](https://www.openpolicyagent.org/docs/latest/#expressions-logical-and)에서도 다룹니다.
+Logical AND는 [OPA 설명서](https://www.openpolicyagent.org/docs/latest/#expressions-logical-and)에서도 다루고 있습니다.
 {% endhint %}
 
 {% code title="rules/CUSTOM-RULE-2/main.rego" %}
@@ -142,10 +142,10 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것을 권장합니다.
 {% endhint %}
 
-Rule에 대한 테스트는 `CUSTOM-RULE-1`의 테스트와 동일하게 표시되지만 테스트 이름과 `testing.evaluate_test_cases` 함수에 전달된 처음 두 파라미터가 다릅니다.
+Rule에 대한 테스트는 `CUSTOM-RULE-1`의 테스트와 동일하게 표시되지만 테스트 이름과 `testing.evaluate_test_cases` 함수에 전달된 처음 두 파라미터가 다르게 나타납니다.
 
 {% code title="rules/CUSTOM-RULE-2/main_test.rego" %}
 ```
@@ -242,7 +242,7 @@ deny[msg] {
 이렇게 하면 거부하는 모든 Rule이 성공적으로 반환됩니다.
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것을 권장합니다.
 {% endhint %}
 
 이제 이 Rule에 대한 테스트에는 여러 테스트 사례가 포함되어 Logical OR이 예상대로 작동하는지 확인할 수 있습니다.
@@ -316,7 +316,7 @@ deny[msg] {
 {% endcode %}
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것을 권장합니다.
 {% endhint %}
 
 이 Rule에 대한 테스트는 이전의 테스트와 매우 유사하며 자체 설비 파일도 필요합니다.
@@ -327,7 +327,7 @@ deny[msg] {
 
 * 태그 유형이 "user"인 경우 "email" 태그도 함께 사용하길 원합니다.
 * 그렇지 않은 경우(다른 유형이 "service"라고 가정), 서비스설명(ServiceDescription)으로 지정합니다.
-* 이 두 가지는 상호 배타적일 것입니다. 첫 번째 조건이 적용되면 두 번째 조건이 적용되면 안 되고, 두 번째 조건이 적용되면 두 번째 조건이 적용되면 안 되고, 그 반대도 마찬가지입니다.
+* 이 두 가지 조건은 상호 배타적입니다. 첫 번째 조건이 적용되면 두 번째 조건이 적용되지 않으며, 그 반대도 마찬가지입니다.
 
 | Type    | Email | ServiceDescription |
 | ------- | ----- | ------------------ |
@@ -426,7 +426,7 @@ deny[msg] {
 직접 체험해 보고 싶다면 [OPA Playground](https://play.openpolicyagent.org/p/1xcdj9kJRw)에서 동일한 예시를 제공합니다.
 
 {% hint style="warning" %}
-[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것이 좋습니다.
+[유닛 테스트를 업데이트하고 실행](testing-a-rule.md)하여 Rule이 올바른지 확인하는 것을 권장합니다.
 {% endhint %}
 
 이 Rule에 대한 테스트는 이전 예의 테스트와 매우 유사하며 fixture 파일도 필요합니다.
