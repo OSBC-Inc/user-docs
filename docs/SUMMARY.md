@@ -190,7 +190,7 @@
   * [custom rules 만들기](snyk-products/snyk-infrastructure-as-code/custom-rules/README.md)
     * [SDK 설치](snyk-products/snyk-infrastructure-as-code/custom-rules/install-the-sdk.md)
     * [SDK 시작하기](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/README.md)
-      * [Parsing an input file](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/parsing-an-input-file.md)
+      * [입력 파일 파싱](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/parsing-an-input-file.md)
       * [Rule 작성](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/writing-a-rule.md)
       * [Rule 테스트](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/testing-a-rule.md)
       * [Bundling rules](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/bundling-rules.md)

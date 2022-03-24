@@ -4,8 +4,8 @@
 
 Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수행합니다.
 
-1. 정책 결정을 내리는 Rule을 작성하세요. Rule은 조건부 할당입니다.
-2. Rule을 정책으로 구성합니다. 정책은 계층적 이름을 가진 Rule 집합입니다.
+1. 정책 결정을 내리는 **Rule**을 작성하십시오. Rule은 조건부 할당입니다.
+2. Rule을 **Policies**로 구성합니다. 정책은 계층적 이름을 가진 Rule 집합입니다.
 
 정책 언어에 대해 자세히 확인하려면 [공식 OPA 정책 언어 문서 페이지](https://www.openpolicyagent.org/docs/latest/policy-language/)를 참조하십시오.
 
@@ -17,13 +17,13 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
 
 시작할 수 있는 두 가지 옵션이 있습니다.
 
-1.  다음 명령어를 이용하여 template 규칙 작성에 필요한 파일을 생성합니다.
+1.  다음 명령어를 이용하여 `template` 규칙 작성에 필요한 파일을 생성합니다.
 
     ```
     snyk-iac-rules template --rule <RULE-NAME> --format <hcl2|json|yaml|tf-plan>
     ```
 
-    이는 제공된 구성 형식을 기반으로 하는 fixture 파일을 포함하여 Rule에 대한 스캐폴딩을 생성합니다. 자세한 내용은 [documentation about the template command](../sdk-reference.md#template-options)를 참조하십시오.
+    이는 제공된 구성 형식을 기반으로 하는 fixture 파일을 포함하여 Rule에 대한 스캐폴딩을 생성합니다. 자세한 내용은 [template 명령에 대한 설명서](https://docs.snyk.io/products/snyk-infrastructure-as-code/custom-rules/sdk-reference#template-options)를 참조하십시오.
 2. Rego 정책을 처음부터 만들고 예상 파일 및 폴더 구조를 직접 일치시킵니다.\
    `rules`\
    `└── my_rule`\
@@ -36,7 +36,7 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
 
 ### Rule의 구조
 
-Rego에서는 다음과 같이 요청을 허용하거나 거부하는 문장을 작성할 수 있습니다.\
+Rego에서는 다음과 같이 요청을 허용하거나 거부하는 명령문을 작성할 수 있습니다.\
 `allow { input.name == "alice" }` or `deny { input.name == "alice" }`
 
 {% hint style="info" %}
@@ -75,18 +75,18 @@ Snyk IaC CLI에 올바르게 표시되도록 하려면 다음 형식의 **msg** 
 속성은 다음과 같습니다.
 
 * **publicId:** COMPANY-001과 같이 사용자 고유의 이름 지정 규칙입니다. 내부 Snyk 규칙과 구별하기 위해 **"SNYK-"으로 시작하거나 포함하지 못합니다.**
-* **title:** 문제를 요약한 짧은 제목입니다.
+* **title:** Issue를 요약한 짧은 제목입니다.
 * **severity:** **low/medium/high/critical** 중 하나일 수 있습니다.
-* **msg:** 리소스 이름 및 속성(예: `input.aws_s3_messages[%s]`)만 변경하는 것이 좋습니다.태그를 참조하십시오. 기능 `sprintf`는 Rego에서 제공하며 문제가 발견된 정확한 위치를 설명하는 동적 오류 메시지를 제공할 수 있습니다.
+* **msg:** 리소스 이름 및 속성(예: `input.aws_s3_messages[%s]`)만 변경하는 것이 좋습니다. 태그를 참조하십시오. 기능 `sprintf`는 Rego에서 제공하며 Issue가 발견된 정확한 위치를 설명하는 동적 오류 메시지를 제공할 수 있습니다.
 
-다음 특성은 선택 사항이지만 Snyk CLI에서 검색 결과를 향상시키는 데 사용할 수 있습니다.
+다음 특성은 선택 사항이지만 Snyk CLI에서 스캔 결과를 향상시키는 데 사용할 수 있습니다.
 
-* **issue:** 정확한 문제에 대한 자세한 설명입니다.
-* **impact:** 이 문제를 해결하지 않을 경우 미치는 영향에 대한 자세한 설명.
-* **remediation:** 문제 해결 방법에 대한 자세한 설명입니다. 여기에 snippet을 제공하는 것이 좋습니다.
-* **references:** 문자열 배열에 설명서의 URL을 제공할 수 있습니다.
+* **issue:** 정확한 Issue에 대한 자세한 설명입니다.
+* **impact:** 이 Issue를 해결하지 않을 경우 미치는 영향에 대한 자세한 설명입니다.
+* **remediation:** Issue 해결 방법에 대한 자세한 설명입니다. 여기에 snippet을 제공하는 것이 좋습니다.
+* **references:** 문서에 대한 URL이 있는 문자열 배열을 제공할 수 있습니다 .
 
-규칙에 대해 생성된 테스트에서는 생성된 두 개의 Terraform 파일을 사용하여 올바른 msg 필드가 허용 및 거부된 고정장치에 대해 규칙에 의해 반환되는지 확인합니다.
+규칙에 대해 생성된 테스트에서는 생성된 두 개의 Terraform 파일을 사용하여 올바른 `msg` 필드가 허용 및 거부된 fixtures에 대해 규칙에 의해 반환되는지 확인합니다.
 
 ```
 package rules
@@ -112,10 +112,10 @@ test_new_ruleryle {
 }
 ```
 
-### Example of a rule
+### Rule의 예
 
 {% hint style="info" %}
-더 많은 예시는[ Custom Rules Examples](examples.md)를 참조하십시오.
+더 많은 예시는[ ](examples.md)[Custom Rule 예시](examples.md)를 참조하십시오.
 {% endhint %}
 
 이 예시에서는 리소스에 `owner` 태그가 없는 경우 `msg`를 할당하도록 템플릿 규칙을 수정했습니다.
@@ -142,9 +142,9 @@ deny[msg] {
 ```
 {% endcode %}
 
-### Limitations/Notes
+### 제한 사항 / 참고 사항
 
-* Rego 정책을 Wasm 모듈로 컴파일하면서 Wasm을 지원하는 내장 기능만 사용할 수 있습니다. Policy Reference Document의 하단에 이러한 항목을 식별하는 데 도움이 되는 표가 있습니다.
+* Rego 정책을 Wasm 모듈로 컴파일하면서 Wasm을 지원하는 내장 기능만 사용할 수 있습니다. [정책 참조 문서](https://www.openpolicyagent.org/docs/latest/policy-reference/)의 하단에 이러한 항목을 식별하는 데 도움이 되는 표가 있습니다.
 * Rule은 파일 또는 동일한 패키지의 개별 파일에 동일한 이름으로 여러 번 정의할 수 있습니다.
 
 ```
@@ -161,6 +161,6 @@ deny[msg] {
 ...
 ```
 
-이러한 규칙은 각 정의가 추가되기 때문에 `incremental` 이라고합니다. Incremental 정의에 대한 자세한내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#incremental-definitions)를 참조하세요. 동일하게 명명된 Rule이 다른값을 반환해야합니다. 그렇지 않으면 OPA가 오류를 반환합니다. 전체 정의에 대한 자세한 내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#complete-definitions)를 참조하십시오.
+이러한 규칙은 각 정의가 추가되기 때문에 `incremental`이라고 합니다. Incremental 정의에 대한 자세한 내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#incremental-definitions)를 참조하십시오. 동일하게 명명된 Rule이 다른 값을 반환해야 합니다. 그렇지 않으면 OPA가 오류를 반환합니다. 전체 정의에 대한 자세한 내용은 [문서](https://www.openpolicyagent.org/docs/latest/policy-language/#complete-definitions)를 참조하십시오.
 
-보다 복잡한 항목을 확인하려면 [how OPA resolves Conflict Resolution](https://www.openpolicyagent.org/docs/latest/faq/#conflict-resolution)을 참조하십시오.
+보다 복잡한 항목을 확인하려면 [OPA가 Conflict Resolution을 해결하는 방법](https://www.openpolicyagent.org/docs/latest/faq/#conflict-resolution)을 참조하십시오.

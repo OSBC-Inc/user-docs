@@ -1,10 +1,10 @@
-# Parsing an input file
+# 입력 파일 파싱
 
-Rego 코드를 작성할 때 입력 파일의 내부 표현을 이해하는 것은 어려울 수 있습니다. [규칙 작성 방법](writing-a-rule.md)을 배울 때 알게 되겠지만 입력 값은 JSON과 유사한 객체이지만 입력 파일은 YAML, Terraform 또는 [Terraform Plan JSON Output](https://www.terraform.io/internals/json-format)일 수도 있습니다. 이러한 항목이 JSON으로 변환되는 방법을 쉽게 이해할 수 있도록 parse 명령을 제공했습니다.
+Rego 코드를 작성할 때 입력 파일의 내부 표현을 이해하는 것은 어려울 수 있습니다. [규칙 작성 방법](writing-a-rule.md)을 배울 때 알게 되겠지만 입력 값은 JSON과 유사한 객체이지만 입력 파일은 YAML, Terraform 또는 [Terraform Plan JSON Output](https://www.terraform.io/internals/json-format)일 수도 있습니다. 이러한 항목이 JSON으로 변환되는 방법을 쉽게 이해할 수 있도록 `parse` 명령을 제공했습니다.
 
-입력 파일로 사용할 IaC 파일이 필요합니다. 이 입력 파일은 기본적으로 파일을 JSON으로 구문 분석할 때 [규칙을 테스트](testing-a-rule.md)할 때도 사용할 수 있습니다.
+입력 파일로 사용할 IaC 파일이 필요합니다. 이 입력 파일은 기본적으로 파일을 JSON으로 파싱하는 [규칙을 테스트](testing-a-rule.md)할 때도 사용할 수 있습니다.
 
-### Parsing Terraform files
+### Terraform 파일 파싱
 
 예를 들어, 다음 Terraform 파일을 사용합니다.
 
@@ -46,13 +46,13 @@ snyk-iac-rules parse example.tf --format hcl2
 }
 ```
 
-Rego에서 `node_type`필드에 액세스하는 것은 다음과 같습니다.
+Rego에서 `node_type` 필드에 액세스하는 것은 다음과 같습니다.
 
 ```
 input.resource.aws_redshift_cluster.example.node_type
 ```
 
-### Parsing YAML files
+### YAML 파일 파싱
 
 또 다른 예는 Kubernetes 리소스를 정의하는 YAML 파일입니다.
 
@@ -77,7 +77,7 @@ spec:
 snyk-iac-rules parse example.yaml --format=yaml
 ```
 
-다음과같이 규칙을 작성하기 위한 JSON이 출력됩니다.
+다음과 같이 규칙을 작성하기 위한 JSON이 출력됩니다.
 
 ```
 {
@@ -106,7 +106,7 @@ Rego에서 `privileged` 필드에 액세스하는 것은 다음과 같습니다.
 input.spec.containers[0].securityContext.privileged
 ```
 
-### Parsing Terraform Plan JSON Output files
+### Terraform Plan JSON Output 파일 파싱
 
 또 다른 예는 다음 Terraform Plan JSON output 파일로, `terraform show -json ./plan/example.json.tfplan` 명령에서 반환됩니다.
 
@@ -220,7 +220,7 @@ input.spec.containers[0].securityContext.privileged
 snyk-iac-rules parse example.json.tfplan --format=tf-plan
 ```
 
-다음과같이 규칙을 작성하기 위한 JSON이 출력됩니다.
+다음과 같이 규칙을 작성하기 위한 JSON이 출력됩니다.
 
 ```
 {
