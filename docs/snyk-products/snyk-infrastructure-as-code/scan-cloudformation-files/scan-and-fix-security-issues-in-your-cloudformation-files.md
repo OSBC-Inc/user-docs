@@ -1,6 +1,6 @@
 # CloudFormation 파일의 보안 문제 스캔 및 수정
 
-Snyk은 CloudForm 코드를 스캔하여 잘못된 구성과 보안 문제를 확인합니다. 구성 파일의 경우, 검색된 Snyk은 관리자가 구현하는 설정에 따라 잘못된 구성에 대해 보고하고 그에 따라 수정 권장 사항을 제공합니다.
+Snyk은 CloudFormation 코드를 스캔하여 잘못된 구성과 보안 문제를 확인합니다. 구성 파일의 경우, 일단 스캔되면 Snyk은 관리자가 구현하는 설정에 따라 잘못된 구성에 대해 보고하고 그에 따라 수정 권장 사항을 제공합니다.
 
 ## 전제 조건
 
@@ -13,7 +13,7 @@ Snyk은 CloudForm 코드를 스캔하여 잘못된 구성과 보안 문제를 �
 
 ![](<../../../.gitbook/assets/screenshot-2020-07-09-at-12.43.02-2- (3) (4) (4) (4) (23).png>)
 
-* CloudFormation 코드를 감지하기위해 infrastructure as code 기능이 활성화되기 전에 테스트가 수행된 경우 저장소를 다시 가져옵니다.
+* CloudFormation 코드를 감지하기 위해 infrastructure as code 기능이 활성화되기 전에 테스트가 수행된 경우 저장소를 다시 가져옵니다.
 
 ![](<../../../.gitbook/assets/screenshot\_2020-07-09\_at\_12.44.03 (1) (1) (3) (3) (2) (14).png>)
 
