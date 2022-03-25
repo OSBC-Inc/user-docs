@@ -14,7 +14,7 @@
 
 ### Broker
 
-[Snyk Broker](https://docs.snyk.io/integrations/snyk-broker)를 참조하십시오.
+[Snyk Broker](../features/integrations/snyk-broker/)를 참조하십시오.
 
 ### Build System
 
@@ -28,15 +28,15 @@
 
 ### CLI
 
-Command Line Interface의 약자로, [Snyk CLI](glossary.md#snyk-cli)를 참조하십시오.
+Command Line Interface의 약자로, [Snyk CLI](../features/snyk-cli/)를 참조하십시오.
 
 ### Cloud Native Application Security
 
-CI/CD 파이프라인 전체에 보안을 구현하고, 마이크로서비스에 내장된 보안을 자동화하고, 반복을 극대화하여 취약점 유입을 줄입니다. Snyk은 포괄적인 [CNAS platform](https://snyk.io/product/cloud-native-application-security/)을 제공합니다.
+CI/CD 파이프라인 전체에 보안을 구현하고, 마이크로서비스에 내장된 보안을 자동화하고, 반복을 극대화하여 취약점 유입을 줄입니다. Snyk은 포괄적인 [CNAS platform](https://snyk.io/product/cloud-native-application-security/)을 제공하고 있습니다.
 
 ### Container
 
-컨테이너를 사용하면 애플리케이션과 해당 디펜던시를 함께 패키징하여 단일 실행 가능한 단위로 배포할 수 있습니다. 컨테이너는 운영체제 커널이 제공하는 추상화이며, 시스템에서 실행 중인 다른 프로세스로부터 프로세스를 분리할 수 있습니다. [Snyk Container](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#SnykContainer)를 참조하십시오.
+컨테이너를 사용하면 애플리케이션과 해당 디펜던시를 함께 패키징하여 단일 실행 가능한 단위로 배포할 수 있습니다. 컨테이너는 운영체제 커널이 제공하는 추상화이며, 시스템에서 실행 중인 다른 프로세스로부터 프로세스를 분리할 수 있습니다. 자세한 내용은 [Snyk Container](../snyk-products/snyk-container/)를 참조하십시오.
 
 ### Container engine
 
@@ -66,7 +66,7 @@ Common Weakness Enumeration의 약자로, 소프트웨어 및 하드웨어의 �
 
 ### DAST
 
-동적 응용 프로그램 보안 테스트(Dynamic Application Security Testing)를 말합니다. 사이트 또는 서비스를 가리킬 수 있는 애플리케이션입니다. 그런 다음 일반적으로 사이트 또는 서비스를 성능 분석한 다음 출력 및 동작을 검사하여 보안 취약점을 파악합니다. 또한 [SAST](glossary.md#sast)를 참조하십시오.
+동적 응용 프로그램 보안 테스트(Dynamic Application Security Testing)를 말합니다. 사이트 또는 서비스를 가리킬 수 있는 애플리케이션입니다. 그런 다음 일반적으로 사이트 또는 서비스를 성능 분석한 다음 출력 및 동작을 검사하여 보안 취약점을 파악합니다. [SAST](glossary.md#sast)를 참조하십시오.
 
 ### Dependency
 
@@ -77,7 +77,7 @@ Common Weakness Enumeration의 약자로, 소프트웨어 및 하드웨어의 �
 
 ### Dependency tree
 
-Dependency path라고도 하며, 소프트웨어 애플리케이션의 종속성을 보여주는 계층적 그래프이다. 여기에는 직접  및 간접 의존성 모두 포함되며, 많은 수준의 의존성이 포함될 수 있다.
+Dependency path라고도 하며, 소프트웨어 애플리케이션의 종속성을 보여주는 계층적 그래프입니다. 그래프에는 직접 및 간접 디펜던시 모두 포함되며, 많은 수준의 디펜던시가 포함될 수 있습니다.
 
 ### DevOps
 
@@ -99,13 +99,13 @@ Docker를 사용하여 컨테이너 이미지를 빌드하는 데 사용되는 �
 
 ### Exploit Maturity
 
-취약점에 대한 공격이 얼마나 실현 가능한지, 취약점이 널리 게시되었는지, 공격자에게 얼마나 유용한지 측정합니다. [취약점 평가 및 우선 순위 지정](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/evaluating-and-prioritizing-vulnerabilities)을 참조하십시오.
+취약점에 대한 공격이 얼마나 실현 가능한지, 취약점이 널리 게시되었는지, 공격자에게 얼마나 유용한지 측정합니다. [Evaluating and prioritizing vulnerabilities](../features/fixing-and-prioritizing-issues/issue-management/evaluating-and-prioritizing-vulnerabilities.md)을 참조하십시오.
 
 ## F
 
 ### Fixable / Partially fixable
 
-패치, 업그레이드 또는 핀을 적용하여 Snyk에서 취약점을 수정할 수 있는지 여부를 측정합니다. [Fixed in version vs. fixable attributes in vulnerabilities](https://support.snyk.io/hc/en-us/articles/4405034808209)를 참조하십시오.
+패치, 업그레이드 또는 핀을 적용하여 Snyk에서 취약점 수정 여부를 확인합니다. [Fixed in version vs. fixable attributes in vulnerabilities](https://support.snyk.io/hc/en-us/articles/4405034808209)를 참조하십시오.
 
 ### Fix PR
 
@@ -121,15 +121,15 @@ Snyk은 사용자에게 취약점에 대한 자동 수정이 포함된 pull requ
 
 ### IAC
 
-Infrastructure as Code의 약자로, [Snyk Infrastructure as Code](glossary.md#snyk-infrastructure-as-code)를 참조하십시오.
+Infrastructure as Code의 약자로,[ Snyk Infrastructure as Code](../snyk-products/snyk-infrastructure-as-code/)를 참조하십시오.
 
 ### IAST
 
-Interactive Application Security Testing의 약자로, 이 접근 방식은 애플리케이션을 실행하는 동안 취약점을 테스트합니다. **DAST** 및 **SAST**를 참조하십시오.
+Interactive Application Security Testing의 약자로, 이 접근 방식은 애플리케이션을 실행하는 동안 취약점을 테스트합니다. [**DAST**](glossary.md#dast) 및 [**SAST**](glossary.md#sast)를 참조하십시오.
 
 ### IDE
 
-통합 개발 환경(Integrated Development Environment)을 말합니다. 일반적으로 소스 코드 편집기, 빌드 자동화 도구 및 디버거와 함께 소프트웨어 개발을 위한 기능을 제공하는 애플리케이션입니다.
+통합 개발 환경(Integrated Development Environment)의 약자입니다. 일반적으로 소스 코드 편집기, 빌드 자동화 도구 및 디버거와 함께 소프트웨어 개발을 위한 기능을 제공하는 애플리케이션입니다.
 
 ### Image
 
@@ -137,7 +137,7 @@ Interactive Application Security Testing의 약자로, 이 접근 방식은 애�
 
 ### Image layer
 
-컨테이너 이미지는 일반적으로 여러 개의 서로 다른 파일 시스템 계층으로 구성되며 런타임에 단일 파일 시스템으로 결합됩니다.
+컨테이너 이미지는 일반적으로 여러 개의 서로 다른 파일 시스템 계층으로 구성되어 있으며, 런타임에 단일 파일 시스템으로 결합합니다.
 
 ### Integrations
 
@@ -181,7 +181,7 @@ Snyk의 조직은 프로젝트를 수집하고 구성하는 방법입니다. 그
 
 ### Package manager
 
-패키지를 자동화하고 관리하는 도구 집합으로, 일반적으로 언어에 따라 다릅니다. (예: npm)
+패키지를 자동화하고 관리하는 도구 집합으로, 일반적으로 언어에 따라 다른 Package manager를 사용합니다. (예: npm)
 
 ### Package registry
 
@@ -197,21 +197,21 @@ Pull Request의 약자로, 사용자가 소스 코드의 변경 사항을 반영
 
 ### Priority Score
 
-Snyk는 Issue(취약점 및 라이선스)를 점수화하여 각각의 Issue 해결의 우선순위를 정하는 데 도움이 됩니다. 점수는 CVSS 점수를 포함한 여러 요소를 기반으로 하며 0(낮음)에서 1000(높음) 사이의 범위를 가집니다. [Snyk 우선순위 점수](https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score)를 참조하십시오.
+Snyk는 Issue(취약점 및 라이선스)를 점수화하여 각각의 Issue 해결의 우선순위를 정하는 데 도움이 됩니다. 점수는 CVSS 점수를 포함한 여러 요소를 기반으로 하며 0(낮음)에서 1000(높음) 사이의 범위를 가집니다. [Snyk 우선순위 점수](../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하십시오.
 
 ### Project
 
-Snyk이 스캔하는 외부 항목으로, 해당 스캔을 실행하는 방법을 정의하는 구성입니다. Snyk 대시보드의 프로젝트 메뉴에 나타납니다. [프로젝트 소개](https://docs.snyk.io/getting-started/introduction-to-snyk-projects)를 참조하십시오.
+Snyk이 스캔하는 외부 항목으로, 해당 스캔을 실행하는 방법을 정의하는 구성입니다. Snyk 대시보드의 프로젝트 메뉴에 나타납니다. [Snyk Target 및 Projects 소개](../getting-started/introduction-to-snyk-projects/)를 참조하십시오.
 
 ## R
 
 ### Reachability
 
-실행 중 공격 가능한 취약한 경로의 코드가 애플리케이션에 포함되어 있는지 여부입니다. [도달 가능한 취약점](https://support.snyk.io/hc/en-us/articles/360010554837-Reachable-Vulnerabilities-)을 참조하십시오.
+실행 중 공격 가능한 취약한 경로의 코드가 애플리케이션에 포함되어 있는지 여부입니다. [Reachable vulnerabilities](../features/fixing-and-prioritizing-issues/prioritizing-issues/reachable-vulnerabilities.md)를 참조하십시오.
 
 ### Registry
 
-[컨테이너 레지스트리](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#ContainerRegistry) 또는 [패키지 레지스트리](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary#PackageRegistry)를 참조하십시오.
+[Container Registry](glossary.md#container-registry) 또는 [Package Registry](glossary.md#package-registry)를 참조하십시오.
 
 ### Repository
 
@@ -253,7 +253,7 @@ Software Development Life Cycle의 약자로, 소프트웨어 개발 수명 주�
 
 ### Severity
 
-심각도 수준은 취약점 또는 라이선스 문제에 적용되어 애플리케이션에서 해당 항목의 위험을 나타냅니다. [심각도 수준](https://docs.snyk.io/introducing-snyk/snyks-core-concepts/severity-levels)을 참조하십시오.
+심각도 수준은 취약점 또는 라이선스 문제에 적용되어 애플리케이션에서 해당 항목의 위험을 나타냅니다. [심각도 수준](snyks-core-concepts/severity-levels.md)을 참조하십시오.
 
 ### Snapshot
 
@@ -275,27 +275,27 @@ Synk은 또한 Snyk 플랫폼을 제공하는 회사입니다.
 
 ### Snyk Broker
 
-Agent/Proxy 역할을 하는 클라이언트/서버 시스템으로, Snyk이 개인 고객 환경(Jira, 소스코드 저장소 또는 컨테이너 레지스트리)을 스캔할 수 있습니다. 메시지를 중계하고 사용자가 통과할 수 있는 메시지를 필터링할 수 있습니다. 예를 들어, 사용자가 일부 GitHub API만 Snyk에 노출할 수 있도록 허용한다. [Snyk Broker documentation](https://docs.snyk.io/integrations/snyk-broker)을 참조하십시오.
+Agent/Proxy 역할을 하는 클라이언트/서버 시스템으로, Snyk이 개인 고객 환경(Jira, 소스코드 저장소 또는 컨테이너 레지스트리)을 스캔할 수 있습니다. 메시지를 중계하고 사용자가 통과할 수 있는 메시지를 필터링할 수 있습니다. 예를 들어, 사용자가 일부 GitHub API만 Snyk에 노출할 수 있도록 허용한다. Snyk [Broker documentation](../features/integrations/snyk-broker/)을 참조하십시오.
 
 ### Snyk CLI
 
-Snyk 플랫폼 도구입니다. Snyk CLI를 사용하면 개발자가 CLI를 사용하여 디펜던시의 알려진 취약점을 찾아 수정할 수 있습니다. [Snyk CLI documentation](https://docs.snyk.io/snyk-cli)을 참조하십시오.
+Snyk 플랫폼 도구입니다. Snyk CLI를 사용하면 개발자가 CLI를 사용하여 디펜던시의 알려진 취약점을 찾아 수정할 수 있습니다. [Snyk CLI documentation](../features/snyk-cli/)을 참조하십시오.
 
 ### Snyk Code
 
-Snyk의 제품 중 하나입니다. 개발자가 독점 애플리케이션 코드의 취약점을 찾아 수정할 수 있는 SAST 제품입니다. [Snyk Code documentation](https://docs.snyk.io/snyk-code)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 독점 애플리케이션 코드의 취약점을 찾아 수정할 수 있는 SAST 제품입니다. [Snyk Code documentation](../snyk-products/snyk-code/)을 참조하십시오.
 
 ### Snyk Container
 
-Snyk의 제품 중 하나입니다. 개발자가 컨테이너 이미지 및 Kubernetes 애플리케이션에서 취약점을 찾아 수정할 수 있습니다. [Snyk Container documentation](https://docs.snyk.io/snyk-container)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 컨테이너 이미지 및 Kubernetes 애플리케이션에서 취약점을 찾아 수정할 수 있습니다. [Snyk Container documentation](../snyk-products/snyk-container/)을 참조하십시오.
 
 ### Snyk Infrastructure as Code
 
-Snyk의 제품 중 하나입니다. 개발자가 Kubernetes, Helm 및 Terraform 구성 파일의 취약점을 찾아 수정할 수 있습니다. [Snyk IaC documentation](https://docs.snyk.io/snyk-infrastructure-as-code)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 Kubernetes, Helm 및 Terraform 구성 파일의 취약점을 찾아 수정할 수 있습니다. [Snyk IaC documentation](../tutorials/springone-workshop/snyk-iac-for-developers/)을 참조하십시오.
 
 ### Snyk Open Source
 
-Snyk의 제품 중 하나입니다. 개발자가 오픈소스 취약점을 찾아 수정할 수 있습니다. [Snyk Open Source documentation](https://docs.snyk.io/snyk-open-source)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 오픈소스 취약점을 찾아 수정할 수 있습니다. [Snyk Open Source documentation](../snyk-products/snyk-open-source/)을 참조하십시오.
 
 ### Snyk plugin
 
@@ -304,11 +304,11 @@ Snyk CLI에서 특정 언어/빌드 시스템을 스캔하는 데 사용하는 �
 ### Snyk Security Intelligence
 
 Snyk의 클라우드 네이티브 애플리케이션 보안 플랫폼을 지원하는 구성 요소입니다.\
-**Snyk Intel Vulnerability DB** 통합: Snyk의 취약점 데이터베이스를 통합하여 자세한 정보를 제공하고 알려진 취약점에 대한 조언을 제공합니다. [Vulnerability DB](https://snyk.io/vuln)를 참조하십시오.
+**Snyk Intel Vulnerability DB** 통합: Snyk의 취약점 데이터베이스를 통합하여 자세한 정보를 제공하고 알려진 취약점에 대한 조언을 제공합니다. [Vulnerability DB](https://security.snyk.io)를 참조하십시오.
 
 ### Social Trends
 
-Snyk는 Twitter에서 활발하게 논의되고 있는 이슈에 대해 트렌드 배너를 보여줍니다. [소셜 트렌드 우선순위](https://docs.snyk.io/fixing-and-prioritizing-issues/prioritizing-issues/prioritize-by-social-trends) 문서를 참조하십시오.
+Snyk는 Twitter에서 활발하게 논의되고 있는 이슈에 대해 트렌드 배너를 보여줍니다. [Prioritize by Social Trends](../features/fixing-and-prioritizing-issues/prioritizing-issues/prioritize-by-social-trends.md) 문서를 참조하십시오.
 
 ### SPDX
 
@@ -324,7 +324,7 @@ Software Package Data Exchange의 약자로, 소프트웨어가 배포되는 소
 
 ### Vulnerability
 
-Snyk가 식별한 보안 취약점입니다. [취약점 수정](https://docs.snyk.io/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities)을 참조하십시오.
+Snyk가 식별한 보안 취약점입니다. [취약점 수정](../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.
 
 ## W
 

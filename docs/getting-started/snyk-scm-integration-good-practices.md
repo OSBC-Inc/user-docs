@@ -83,7 +83,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 ![](../.gitbook/assets/aws-sdk.png)
 
-## 3단계: PR에 대한 Snyk 테스트 활성화
+## 3단계: PR에서 Snyk 테스트 활성화
 
 **PR 테스트 설정 & 워크플로우**
 

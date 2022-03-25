@@ -24,7 +24,7 @@ Snyk에서는 [CVSS framework version 3.1](https://www.first.org/cvss/v3-1/)을 
 | High       | 7.0 - 8.9   |
 | Critical   | 9.0 - 10.10 |
 
-자세한 내용은 [보안 취약점 점수 101: CVE용 CVSS 도입](https://snyk.io/blog/scoring-security-vulnerabilities-101-introducing-cvss-for-cve/)을 참조하십시오.
+자세한 내용은 [Scoring security vulnerabilities 101: Introducing CVSS for CVEs](https://snyk.io/blog/scoring-security-vulnerabilities-101-introducing-cvss-for-cve/)를 참조하십시오.
 
 ### 심각도 및 우선순위 채점
 
@@ -32,19 +32,19 @@ Snyk에서는 [CVSS framework version 3.1](https://www.first.org/cvss/v3-1/)을 
 
 Snyk의 우선순위 점수에서 심각도 수준이 사용되는 방식에 대한 자세한 내용은 [Snyk 우선순위 점수](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하십시오.
 
-## Snyk에서 심각도 수준 보기
+## Snyk에서 심각도 수준 확인
 
 심각도 수준을 항상 표시하기 위해 Snyk 전체에 심각도 수준이 표시됩니다.
 
-초기 대시보드:
+대시보드에서 다음과 같이 확인할 수 있습니다.
 
 ![](<../../.gitbook/assets/image (46).png>)
 
-프로젝트:
+프로젝트에서 다음과 같이 확인할 수 있습니다.
 
 ![](<../../.gitbook/assets/image (43).png>)
 
-프로젝트의 각 취약점 정보:
+프로젝트의 각 취약점 정보를 확인할 수 있습니다.
 
 ![](<../../.gitbook/assets/image (39).png>)
 
