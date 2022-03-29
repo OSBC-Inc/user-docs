@@ -1,8 +1,8 @@
 # 입력 파일 파싱
 
-Rego 코드를 작성할 때 입력 파일의 내부 표현을 이해하는 것은 어려울 수 있습니다. [규칙 작성 방법](writing-a-rule.md)을 배울 때 알게 되겠지만 입력 값은 JSON과 유사한 객체이지만 입력 파일은 YAML, Terraform 또는 [Terraform Plan JSON Output](https://www.terraform.io/internals/json-format)일 수도 있습니다. 이러한 항목이 JSON으로 변환되는 방법을 쉽게 이해할 수 있도록 `parse` 명령을 제공했습니다.
+Rego 코드를 작성할 때 입력 파일의 내부 표현을 이해하는 것은 어려울 수 있습니다. [Rule 작성 방법](writing-a-rule.md)을 배울 때 알게 되겠지만 입력 값은 JSON과 유사한 객체이지만 입력 파일은 YAML, Terraform 또는 [Terraform Plan JSON Output](https://www.terraform.io/internals/json-format)일 수도 있습니다. 이러한 항목이 JSON으로 변환되는 방법을 쉽게 이해할 수 있도록 `parse` 명령을 제공했습니다.
 
-입력 파일로 사용할 IaC 파일이 필요합니다. 이 입력 파일은 기본적으로 파일을 JSON으로 파싱하는 [규칙을 테스트](testing-a-rule.md)할 때도 사용할 수 있습니다.
+입력 파일로 사용할 IaC 파일이 필요합니다. 이 입력 파일은 기본적으로 파일을 JSON으로 파싱하는 [Rule을 테스트](testing-a-rule.md)할 때도 사용할 수 있습니다.
 
 ### Terraform 파일 파싱
 

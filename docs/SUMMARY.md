@@ -187,7 +187,7 @@
     * [CLI 도구를 사용하여 Helm Charts 테스트 진행](snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-helm-charts-with-our-cli-tool.md)
     * [CLI 출력 이해](snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)
   * [Infrastructure as Code Issue 보고서 보기](snyk-products/snyk-infrastructure-as-code/view-infrastructure-as-code-issues.md)
-  * [custom rules 만들기](snyk-products/snyk-infrastructure-as-code/custom-rules/README.md)
+  * [custom rule 만들기](snyk-products/snyk-infrastructure-as-code/custom-rules/README.md)
     * [SDK 설치](snyk-products/snyk-infrastructure-as-code/custom-rules/install-the-sdk.md)
     * [SDK 시작하기](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/README.md)
       * [입력 파일 파싱](snyk-products/snyk-infrastructure-as-code/custom-rules/getting-started-with-the-sdk/parsing-an-input-file.md)

@@ -38,7 +38,7 @@ SDK의 사전 빌드된 바이너리 파일을 다운로드하여 사용할 수 
 
 ![](../../../.gitbook/assets/screenshot-2021-09-24-at-13.44.36.png)
 
-원하는 바이너리 아카이브를 다운로드한 후 터미널을 열고 다음 명령어를 실행합니다(이러한 명렁어는 Intel 기반 macOS에서 실행 중이며 SDK 버전 `0.0.5`를 다운로드 한다고 가정합니다).
+원하는 바이너리 아카이브를 다운로드한 후 터미널을 열고 다음 명령어를 실행합니다. (이러한 명령어는 Intel 기반 macOS에서 실행 중이며 SDK 버전 `0.0.5`를 다운로드 한다고 가정합니다)
 
 ```
 $ tar xzf snyk-iac-rules_0.0.5_Darwin_x86_64.tar.gz 
@@ -57,7 +57,7 @@ macOS 및 Linux 환경에서 Homebrew를 사용하여 SDK를 설치할 수 있�
 
 #### 전제 조건
 
-* macOS 및 Linux 환경에서만 지원합니다.
+* macOS 및 Linux 환경에서만 지원됩니다.
 *   [Homebrew](https://brew.sh/index\_he)가 이미 설치되어 있는지 확인합니다.
 
     ```
@@ -104,7 +104,7 @@ scoop install snyk-iac-rules
 
 #### 진행 단계
 
-다음과 같이 Docker 이미지를 pull합니다.
+다음과 같이 Docker 이미지를 가져옵니다.
 
 ```
 docker pull snyk/snyk-iac-rules
