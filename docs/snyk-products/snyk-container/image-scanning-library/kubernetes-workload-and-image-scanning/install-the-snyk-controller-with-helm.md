@@ -1,8 +1,8 @@
 # Helm으로 Snyk 컨트롤러 설치
 
-Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk 관리자가 먼저 클러스터에 Snyk 컨트롤러를 설치해야 합니다. Snyk 컨트롤러는 [Helm Hub](https://hub.helm.sh/charts/snyk/snyk-monitor)에 게시됩니다.
+Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk 관리자가 먼저 클러스터에 Snyk 컨트롤러를 설치해야 합니다. Snyk 컨트롤러는 [Helm Hub](https://hub.helm.sh/charts/snyk/snyk-monitor)에 게시합니다.
 
-이 섹션에서는 다음 항목을 다룹니다.
+이 섹션에서는 다음 항목을 다루고 있습니다.
 
 * 대부분의 Kubernetes 플랫폼을 위한 Snyk 통합
 * Amazon Elastic Kubernetes Service (EKS) 클러스터와 함께 Amazon Elastic Container Registry (ECR)를 사용할 때 통합을 위한 추가 구성 단계
@@ -35,7 +35,7 @@ Kubernetes 워크로드에 대한 취약점 세부 정보를 얻으려면 Snyk �
     **Tip:** 컨트롤러 리소스를 보다 쉽게 분리하려면 고유한 네임스페이스를 사용하세요. 이는 일반적으로 Kubernetes 애플리케이션에 대한 모범 사례입니다. 네임스페이스는 snyk-monitor라고 하며 나중에 다른 리소스를 구성할 때 필요합니다.
 3. 이제 Snyk 계정에 로그인하고 **Integrations**로 이동합니다.
 4. **Kubernetes**를 검색하여 클릭하십시오.
-5. 를**Connect** 을 클릭하고 **Integration ID**를 복사하세요. Snyk **Integration ID**는: `abcd1234-abcd-1234-abcd-1234abcd1234`형식과 유사한 UUID입니다. 다음 단계에서 Kuernetes 환경에서 사용할 수 있도록 저장하세요.
+5. 를**Connect** 을 클릭하고 **Integration ID**를 복사하십시오 Snyk **Integration ID**는 `abcd1234-abcd-1234-abcd-1234abcd1234`형식과 유사한 UUID입니다. 다음 단계에서 Kuernetes 환경에서 사용할 수 있도록 저장하세요.
 6.  Snyk monitor는 Snyk **Integration ID**를 사용하고 `Dockercfg`파일을 사용하여 실행합니다. 개인 레지스트리를 사용하지 않는경우 다음 명령어를 실행하여 이전 단계의 Snyk **Integration ID**가 포함된 `snyk-monitor`라는 Kubernetes 암호를 생성합니다.
 
     ```

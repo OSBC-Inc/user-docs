@@ -16,7 +16,7 @@ Snyk에서 Quay 통합을 설정하고 이미지 취약점 관리를 시작하�
 **통합 구성**
 
 1. Snyk 계정 상단에 있는 메뉴 모음에서 **Integrations**로 이동합니다. **Container Registries** 섹션에 **Quay** 옵션을 찾아 클릭합니다.
-2. **Account credentials** 섹션에서 Quay Username과 Password를 통해 로그인 인증 정보를 입력합니다. **container registry name**에 통합할 레지스트리의 전체 URL을 입력합니다. 클라우드 기반 Quay 또는 개인 호스트일 수 있습니다. 마치려면 **Save**를 클릭하세요.
+2. **Account credentials** 섹션에서 Quay Username과 Password를 통해 로그인 인증 정보를 입력합니다. **container registry name**에 통합할 레지스트리의 전체 URL을 입력합니다. 클라우드 기반 Quay 또는 개인 호스트일 수 있습니다. 마치려면 **Save**를 클릭하십시오.
 
 ![](../../../../.gitbook/assets/mceclip1-10-.png)
 

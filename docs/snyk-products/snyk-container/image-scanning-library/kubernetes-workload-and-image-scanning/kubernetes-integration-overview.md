@@ -7,7 +7,7 @@ Snyk은 Kubernetes와 통합하여 실행중인 워크로드를 가져오고 테
 이 기능은 Business 및 Enterprise plan에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-**How it works**
+**진행 단계**
 
 1. 관리자가 클러스터에 컨트롤러를 설치하여 Snyk 계정에서 생성된 고유한 ID로 통합을 인증합니다. 다음 옵션 중 하나를 사용하여 컨트롤러를 설치합니다.
    * [Helm으로 Snyk 컨트롤러 설치](install-the-snyk-controller-with-helm.md)
@@ -20,7 +20,7 @@ Snyk은 Kubernetes와 통합하여 실행중인 워크로드를 가져오고 테
 6. 취약점이 발견되면 즉시 조치를 취할 수 있도록 Snyk은 email 또는 Slack을 통해 사용자에게 알립니다.
 
 {% hint style="warning" %}
-데이터베이스의 상태를 유지하기 위해 **4일동안 변경 또는 업데이트**되지 않은 작업 부하와 관련된 모든 정보가 제거됩니다. 이로 인해 워크로드를 **다시 테스트하지 못할 수 있습니다**.
+데이터베이스의 상태를 유지하기 위해 **4일동안 변경 또는 업데이트**하지 않은 작업 부하와 관련된 모든 정보가 제거됩니다. 이로 인해 워크로드를 **다시 테스트하지 못할 수 있습니다**.
 {% endhint %}
 
 **Terms and conditions**

@@ -102,7 +102,7 @@
   * [자체 호스팅된 컨테이너 레지스트리 통합](snyk-products/snyk-container/integrate-self-hosted-container-registries/README.md)
     * [자체 호스팅된 컨테이너 레지스트리에 대한 Snyk 통합](snyk-products/snyk-container/integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries.md)
     * [중개 ECR 통합을 위한 Container Registry Agent 설정](snyk-products/snyk-container/integrate-self-hosted-container-registries/setting-up-the-container-registry-agent-for-a-brokered-ecr-integration.md)
-  * [이미지 스캔 information library](snyk-products/snyk-container/image-scanning-library/README.md)
+  * [이미지 스캔 정보](snyk-products/snyk-container/image-scanning-library/README.md)
     * [ACR 이미지 스캔](snyk-products/snyk-container/image-scanning-library/acr-image-scanning/README.md)
       * [ACR을 이용한 컨테이너 보안: 통합 및 테스트](snyk-products/snyk-container/image-scanning-library/acr-image-scanning/container-security-with-acr-integrate-and-test.md)
       * [ACR 통합 구성](snyk-products/snyk-container/image-scanning-library/acr-image-scanning/configure-integration-for-acr.md)
