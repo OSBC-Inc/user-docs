@@ -1,6 +1,6 @@
-# CLI를 이용하여 Kustomize 파일 테스트 진행
+# CLI를 이용하여 Kustomize 파일 테스트
 
-Kuberenetes 매니페스트 파일을 작성한 다음 Snyk IaC CLI를 사용하여 Kustomize 템플릿을 스캔합니다.
+Kustomize 템플릿을 스캔하려면 Kubernetes 매니페스트 파일을 빌드한 후 Snyk CLI의 `iac test` 명령을 사용합니다.
 
 ```
 kustomize build > kubernetes.yaml

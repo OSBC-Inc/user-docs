@@ -2,7 +2,7 @@
 
 Helm 템플릿을 Kuberenetes 매니페스트 파일로 렌더링한 다음 Snyk CLI에서 `snyk iac` 명령을 사용하여 Helm Charts를 스캔합니다.
 
-예를 들어 `./helm` 디렉토리에 Helm 프로젝트가 있는 경우 다음 명령을 실행하여 템플릿 파일을 `./output`디렉토리로 출력합니다.
+예를 들어 `./helm` 디렉토리에 Helm 프로젝트가 있는 경우 다음 명령을 실행하여 템플릿 파일을 `./output` 디렉토리로 출력합니다.
 
 {% tabs %}
 {% tab title="macOS/Linux/Unix" %}
