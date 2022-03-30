@@ -6,7 +6,7 @@
 이 문서의 전체 예제는 [OPA Playground](https://play.openpolicyagent.org/p/SCYndBjWxh) 및 [snyk/custom-rules-example](https://github.com/snyk/custom-rules-example) 저장소에서 확인할 수 있습니다.
 {% endhint %}
 
-SDK(`snyk-iac-rules template --rule CUSTOM-RULE-1`)를 사용하여 새로운 Rule `CUSTOM-RULE-1`을 생성했으며 Terraform 리소스가 들어 있는 매우 간단한 fixture 파일이 있다고 가정합니다.
+SDK(`snyk-iac-rules template --rule CUSTOM-RULE-1`)를 사용하여 새로운 Rule `CUSTOM-RULE-1`을 생성했으며 Terraform resource가 들어 있는 매우 간단한 fixture 파일이 있다고 가정합니다.
 
 {% code title="rules/CUSTOM-RULE-1/fixtures/denied.tf" %}
 ```
@@ -19,11 +19,11 @@ resource "aws_redshift_cluster" "denied" {
 ```
 {% endcode %}
 
-이제 생성된 Rego를 수정하여 소유자가 태그된 리소스를 적용하려고 합니다.
+이제 생성된 Rego를 수정하여 owner tag가 지정된 resource를 적용하려고 합니다.
 
-1. 모든 `AWS_redsshift_cluster` 리소스에서 열거할 변수 `[name]`을 생성합니다. 이 변수는 원하는 모든 변수(`i`, `j`, `name` 등)로 이름을 지정할 수 있습니다.
-2. 대입 표현식(바다코끼리 연산자) `:=;` 을 사용하여 리소스 변수에 값을 할당하여 이 값을 저장합니다.(`resource := input.resource.aws_sshift_cluster[name]`)
-3. 각 리소스에 대해 소유자 태그가 있는지 확인합니다. 그렇게 하려면 `resource.tags.owner` 경로가 정의되어 있는지 확인합니다. 정의되지 않은 경우 정의되지 않은 것으로 평가됩니다. 앞에 `NOT` 키워드를 사용하면 `TRUE`로 평가됩니다(예: `resource.tags.owner`).
+1. 모든 `aws_redshift_cluster` resource에서 열거할 변수 `[name]`을 생성합니다. 이 변수는 원하는 모든 변수(`i`, `j`, `name` 등)로 이름을 지정할 수 있습니다.
+2. 대입 표현식( `:=` )을 사용하여 resource 변수에 값을 할당하여 이 값을 저장합니다.(`resource := input.resource.aws_redshift_cluster[name]`)
+3. 각 resource에 대해 owner tag가 있는지 확인합니다. 그렇게 하려면 `resource.tags.owner` 경로가 정의되어 있는지 확인합니다. 정의되지 않은 경우 정의되지 않은 것으로 평가됩니다. 앞에 `NOT` 키워드를 사용하면 `TRUE`로 평가됩니다(예: `not resource.tags.owner`).
 
 수정한 Rego는 다음과 같습니다.
 
@@ -89,8 +89,8 @@ test_CUSTOM_RULE_1 {
 
 위의 예제를 확장하여 두 가지 조건을 만족하는 모든 경우를 허용하도록 Rule을 업데이트해 보겠습니다.
 
-1. 리소스에 "owner" 태그가 존재, **AND**
-2. 리소스에 "description" 태그가 존재
+1. resource에 "owner" tag가 존재
+2. resource에 "description" tag가 존재
 
 새로운 조건을 테스트하기 위해 `template` 명령어를 사용하여 새로운 Rule `CUSTOM-RULAY-2`를 생성하고 다음 fixture 파일을 작성합니다.
 
@@ -175,10 +175,10 @@ test_CUSTOM_RULE_2 {
 
 `NOT` 연산자와 `OR` 기능을 결합하여 위의 Rule을 다시 작성할 수 있습니다.
 
-새로운 Rule CUSTOM-RULE-3의 예제를 업데이트하여 두 조건 중 하나에 실패한 경우를 모두 **거부**하겠습니다. 다음 중 하나가 누락된 모든 aws\_redshift\_cluster 리소스를 거부합니다.
+새로운 Rule `CUSTOM-RULE-3`의 예제를 업데이트하여 두 조건 중 하나에 실패한 경우를 모두 **거부**하겠습니다. 다음 중 하나가 누락된 모든 `aws_redshift_cluster` resource를 거부합니다.
 
-1. “owner” 태그 , **OR**
-2. “description” 태그
+1. “owner” tag
+2. “description” tag
 
 이를 위해 case별로 하나씩 두 개의 새로운 fixture 파일을 사용합니다.
 
@@ -208,7 +208,7 @@ resource "aws_redshift_cluster" "denied2" {
 
 Logical OR을 Rego로 표현하기 위해, 우리는 동일한 이름의 여러 Rule이나 함수를 정의할 수 있습니다. 이 내용은 Logical OR에 대한 [OPA 설명서](https://www.openpolicyagent.org/docs/latest/#logical-or)에도 설명되어 있습니다.
 
-우선 태그별로 `NOT`을 구현하는 기능을 추가하겠습니다. 그런 다음 리소스를 사용하여 이 함수를 호출합니다.
+우선 태그별로 `NOT`을 구현하는 기능을 추가하겠습니다. 그런 다음 resource를 사용하여 이 함수를 호출합니다.
 
 {% code title="rules/CUSTOM-RULE-3/main.rego" %}
 ```
@@ -276,11 +276,11 @@ test_CUSTOM_RULE_3 {
 
 ### Strings 예제
 
-추가 확장하여 세 번째 조건을 추가할 수 있습니다. 모든 리소스를 거부할 수 있습니다.
+추가 확장하여 세 번째 조건을 추가할 수 있습니다. 다음 중 하나가 누락된 모든 resource를 거부할 수 있습니다.
 
-1. “owner” 태그 , **OR**
-2. “description” 태그, **OR**
-3. 소유자의 이메일이 "@nota-domain.com" 도메인에 속하지 않는 경우
+1. “owner” tag
+2. “description” tag
+3. owner의 이메일이 "@nota-domain.com" 도메인에 속하지 않는 경우
 
 {% code title="rules/CUSTOM-RULE-4/main.rego" %}
 ```
@@ -325,8 +325,8 @@ deny[msg] {
 
 다음과 같이 진행하겠습니다.
 
-* 태그 유형이 "user"인 경우 "email" 태그도 함께 사용하길 원합니다.
-* 그렇지 않은 경우(다른 유형이 "service"라고 가정), 서비스설명(ServiceDescription)으로 지정합니다.
+* tag types "user"인 경우 "email" 태그도 함께 사용하길 원합니다.
+* 그렇지 않은 경우(다른 types  "service"라고 가정), "ServiceDescription"으로 지정합니다.
 * 이 두 가지 조건은 상호 배타적입니다. 첫 번째 조건이 적용되면 두 번째 조건이 적용되지 않으며, 그 반대도 마찬가지입니다.
 
 | Type    | Email | ServiceDescription |
@@ -334,7 +334,7 @@ deny[msg] {
 | User    | YES   | NO                 |
 | Service | NO    | YES                |
 
-이를 위해 checkTags 도우미 기능을 사용하도록 코드를 리팩터링하겠습니다. 이렇게 하면 태그가 있는지 확인할 수 있을 뿐만 아니라 위의 두 가지 조건을 OR로 확인할 수도 있습니다.
+이를 위해 checkTags 도우미 기능을 사용하도록 코드를 리팩토링하겠습니다. 이렇게 하면 tag가 있는지 확인할 수 있을 뿐만 아니라 위의 두 가지 조건을 OR로 확인할 수도 있습니다.
 
 {% code title="rules/CUSTOM-RULE-5/main.rego" %}
 ```
@@ -447,7 +447,7 @@ deny[msg] {
 
 이것을 활용하는 한 가지 방법은 denylist rules를 구현하는 것입니다.
 
-예를 들어 누군가가 Kubernetes ConfigMap을 정의한 경우 암호, 비밀 키 및 액세스 토큰과 같은 중요한 정보를 저장하는 데 사용할 수 없도록 할 수 있습니다.
+예를 들어 누군가가 Kubernetes ConfigMap을 정의하는 경우 암호, 비밀 키 및 액세스 토큰과 같은 중요한 정보를 저장하는 데 사용할 수 없도록 할 수 있습니다.
 
 이를 통해 denylist 내에서 중요한 토큰 그룹을 정의함으로써 시간이 지남에 따라 "민감한 정보"로 정의한 내용을 확장할 수 있습니다.
 
@@ -483,6 +483,6 @@ deny[msg] {
 }
 ```
 
-"pass", "secret", "key" 및 "token"이 포함된 키는 중요한 것으로 간주될 수 있으므로 ConfigMap에 포함해서는 안 됩니다.
+"pass", "secret", "key" 및 "token"이 포함하는 키는 중요한 것으로 간주될 수 있으므로 ConfigMap에 포함되어서는 안 됩니다.
 
 ##

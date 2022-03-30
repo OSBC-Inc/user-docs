@@ -6,7 +6,7 @@ Rule의 bundle을 생성하는 방법에 대해 알아보려면 [SDK 시작하�
 
 Snyk IaC에서는 custom rules를 사용하여 CLI에서 구성 파일을 테스트할 수 있습니다.
 
-built bundle을 사용하는 방법에는 두 가지가 있습니다.
+빌드된 bundle을 사용하는 방법에는 두 가지가 있습니다.
 
 * 디스크에 저장된 [로컬 custom rules bundle](using-a-local-custom-rules-bundle.md)을 사용합니다.
 * custom rules bundle이 이미 저장된 원격 OCI 레지스트리를 구성하여 [원격 custom rules bundle](using-a-remote-custom-rules-bundle.md)을 사용합니다.

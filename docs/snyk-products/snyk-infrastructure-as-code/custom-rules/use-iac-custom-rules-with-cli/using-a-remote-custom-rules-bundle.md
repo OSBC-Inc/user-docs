@@ -8,7 +8,7 @@ custom rules bundle을 성공적으로 push한 후 다음 항목을 사용하여
 * [Snyk API](using-a-remote-custom-rules-bundle.md#snyk-api)
 * [Environment variables](using-a-remote-custom-rules-bundle.md#environment-variables)
 
-마지막으로 위의 옵션 중 하나를 통해 custom rules를 적용했으면 OCI 레지스트리에서 pull 권한을 부여할 수 있도록 사용자 이름과 암호를 사용하여 Snyk CLI를 구성하십시오.
+마지막으로 위의 옵션 중 하나를 통해 custom rules를 적용했으면 사용자 이름과 비밀번호를 사용하여 Snyk CLI를 구성하고 OCI 레지스트리에서 pull 권한을 부여합니다.
 
 ```
 snyk config set oci-registry-username=<org registry username>
@@ -26,7 +26,7 @@ snyk config set oci-registry-password=<org registry password>
 snyk iac test <file>
 ```
 
-결과 구성 스캔 문제에는 기본 Snyk rules과 custom rules의 문제가 모두 포함됩니다. [Understanding the CLI Output](../../snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)을 참조하십시오.
+결과적으로 발생하는 구성 파일 스캔 Issue에는 기본 Snyk rules와 custom rules의 문제가 모두 포함됩니다. [구성 파일 Issue 이해](../../snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md)를 참조하십시오.
 
 {% hint style="warning" %}
 bundle 경로를 정의하는 방법은 한 번에 하나만 정의해야 합니다. Snyk 설정 페이지 또는 Snyk API를 통해 custom rules 설정을 비활성화해야 합니다. 또는 `snyk config unset`을 사용하여 이전에 저장된 설정을 제거합니다.
