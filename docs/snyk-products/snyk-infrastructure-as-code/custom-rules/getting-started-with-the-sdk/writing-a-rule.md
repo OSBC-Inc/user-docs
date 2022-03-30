@@ -17,7 +17,7 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
 
 시작할 수 있는 두 가지 옵션이 있습니다.
 
-1.  다음 명령어를 이용하여 `template` Rule 작성에 필요한 파일을 생성합니다.
+1.  `template` 명령어를 이용하여 Rule 작성에 필요한 파일을 생성합니다.
 
     ```
     snyk-iac-rules template --rule <RULE-NAME> --format <hcl2|json|yaml|tf-plan>
@@ -37,13 +37,13 @@ Rule은 Rego로 작성합니다. Rego를 작성할 때 두 가지 작업을 수�
 ### Rule의 구조
 
 Rego에서는 다음과 같이 요청을 허용하거나 거부하는 명령문을 작성할 수 있습니다.\
-`allow { input.name == "alice" }` or `deny { input.name == "alice" }`
+`allow { input.name == "alice" }` 또는 `deny { input.name == "alice" }`
 
 {% hint style="info" %}
 **`template`** 명령어를 사용하여 Rule을 생성한 경우 기본 진입점은 **rules/deny**입니다. 이 Rule을 무시하고 다른 이름을 사용하려면 [Bundling Rules](bundling-rules.md)를 확인하십시오.
 {% endhint %}
 
-`snyk-iac-rules` 템플릿을 실행할 때 생성된 거부 규칙은 다음과 같습니다. `--rule new-rule --form hcl2`
+`snyk-iac-rules --rule new-rule --form hcl2`를 실행할 때 생성된 거부 규칙은 다음과 같습니다.
 
 {% code title="rules/new-rule/main.rego" %}
 ```
@@ -118,7 +118,7 @@ test_new_ruleryle {
 더 많은 예시는[ ](examples.md)[Custom Rule 예시](examples.md)를 참조하십시오.
 {% endhint %}
 
-이 예시에서는 리소스에 `owner` 태그가 없는 경우 `msg`를 할당하도록 템플릿 Rule을 수정했습니다.
+이 예시에서는 resource에 `owner` 태그가 없는 경우 `msg`를 할당하도록 템플릿 Rule을 수정했습니다.
 
 {% code title="rules/my_rule/main.rego" %}
 ```

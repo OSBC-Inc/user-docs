@@ -43,10 +43,10 @@ resource "aws_redshift_cluster" "allowed" {
 ```
 {% endcode %}
 
-테스트 사례의 `want_msgs` 필드에 거부 규칙이 evaluate/return 할 것으로 예상되는 리소스의 msg 필드를 추가해야 합니다.`["input.resource.aws_redshift_cluster[denied].tags"]`.
+테스트 사례의 `want_msgs` 필드에 거부 규칙이 평가/반환할 것으로 예상되는 리소스의 msg 필드를 추가해야 합니다.`["input.resource.aws_redshift_cluster[denied].tags"]`.
 
 {% hint style="info" %}
-`want_msgs` 필드는 적절한 Rego 규칙에서 계산된 `msg` 필드에 해당하는 하드코딩된 값을 포함하는 배열이어야 합니다.
+`want_msgs` 필드는 적절한 Rego rule에서 계산된 `msg` 필드에 해당하는 하드코딩된 값을 포함하는 배열이어야 합니다.
 {% endhint %}
 
 {% code title="rules/my_rule/main_test.rego" %}
@@ -85,7 +85,7 @@ test_my_rule {
 PASS: 3/3
 ```
 
-그러나 이들 중 하나라도 실패하면 다음과 유사한 출력이 나타납니다.
+그러나 이들 중 어떤 실패가 발생하면 다음과 유사한 출력이 나타납니다.
 
 ```
 data.rules.test_my_rule: FAIL (1.12234ms)
@@ -116,5 +116,5 @@ FAIL: 1/1
 옵션을 추가하면 실패한 테스트를 디버깅하기 위한 자세한 정보가 출력됩니다.
 
 {% hint style="info" %}
-현재 폴더에 생성된 Rule보다 더 많은 Rule이 있는 경우 `--ignore` 옵션을 사용하여 테스트와 무관한 폴더 및 파일 제외하십시오(`template` 명령어를 사용한 경우 `lib/` 및 `rules`는 제외하지 마십시오). 이렇게 하면 테스트 속도를 높이고 Rego가 비 Rego 파일을 평가하려고 하는 문제를 방지할 수 있습니다.
+현재 폴더에 생성된 Rule보다 더 많은 Rule이 있는 경우 `--ignore` 옵션을 사용하여 테스트와 무관한 폴더 및 파일을 제외하십시오(`template` 명령어를 사용한 경우 `lib/` 및 `rules`는 제외하지 마십시오). 이렇게 하면 테스트 속도를 높이고 Rego가 비 Rego 파일을 평가하려고 하는 문제를 방지할 수 있습니다.
 {% endhint %}
