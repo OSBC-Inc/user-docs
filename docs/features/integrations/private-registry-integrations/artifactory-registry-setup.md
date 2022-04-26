@@ -1,6 +1,6 @@
 # Artifactory Registry setup
 
-## **Overview**
+### **Overview**
 
 {% hint style="info" %}
 **Feature availability**\
@@ -8,7 +8,7 @@ This feature is available with Enterprise plans. See [pricing plans](https://sny
 {% endhint %}
 
 {% hint style="success" %}
-The Artifactory Package Repository integration currently supports [Maven](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md) and [Node.js](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-javascript.md) (npm and Yarn) projects.
+The Artifactory Package Repository integration currently supports [Maven](../../../products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md) and [Node.js](../../../products/snyk-open-source/language-and-package-manager-support/snyk-for-javascript.md) (npm and Yarn) projects.
 {% endhint %}
 
 Connecting a custom Artifactory Package Repository enables Snyk to resolve all direct and transitive dependencies of packages hosted on the custom registry and calculate a more complete, accurate dependency graph and related vulnerabilities.
@@ -18,7 +18,7 @@ You can configure two types of Artifactory Package Repository:
 1. Publicly accessible instances protected by basic authentication
 2. Instances on a private network accessed via a [Snyk Broker](../snyk-broker/broker-introduction.md) (with or without basic authentication)
 
-## Getting started
+### Getting started
 
 1. Go to settings ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations > Package Repositories > Artifactory**
 2. You should see this screen at the beginning
@@ -27,17 +27,17 @@ You can configure two types of Artifactory Package Repository:
 
 {% hint style="info" %}
 If you do not see the “Snyk Broker” switch you do not have the necessary permissions and can only add a publicly accessible instance.\
-Contact [support@snyk.io](mailto:support@snyk.io) if you want to add a private registry
+[Contact our Support team](https://support.snyk.io/hc/en-us/requests/new). if you want to add a private registry.
 {% endhint %}
 
-## Set up publicly accessible instances
+### Set up publicly accessible instances
 
 1. Enter URL of your Artifactory instance, this **must** end with **/artifactory**
 2. Enter Username
 3. Enter Password
 4. Hit **Save**
 
-## Set up brokered instances
+### Set up brokered instances
 
 1. Toggle **Artifactory (publicly accessible)** switch, you should now see a form for generating an Artifactory Broker token
 2. Click on **Generate and Save** button
@@ -59,7 +59,7 @@ Contact [support@snyk.io](mailto:support@snyk.io) if you want to add a private r
     ```
 6. Check connection status by refreshing Artifactory Integration Settings page, no connection error should be displayed
 
-### Broker variables
+#### Broker variables
 
 | Variable           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,4 +1,4 @@
-# Git repository \(SCM\) integrations
+# Git repository (SCM) integrations
 
 * [GitHub integration](github-integration.md)
 * [GitHub Enterprise Integration](github-enterprise-integration.md)
@@ -11,4 +11,3 @@
 * [Test your PRs for vulnerabilities before merging](test-your-prs-for-vulnerabilities-before-merging.md)
 * [Snyk checks on pull requests](snyk-checks-on-pull-requests.md)
 * [View and understand Snyk upgrade pull requests](view-and-understand-snyk-upgrade-pull-requests.md)
-

@@ -1,28 +1,15 @@
-# Integrations
+# Snyk Integrations
 
-{% page-ref page="managing-integrations/" %}
+Snyk integrates with many languages, platforms, and systems. Each of the existing integration paths are documented in this group of docs pages.
 
-{% page-ref page="git-repository-scm-integrations/" %}
+### General Information
 
-{% page-ref page="ci-cd-integrations/" %}
+Snyk customers typically start with [Snyk CI/CD Integration](ci-cd-integrations/), as this doc has information on [setting up](ci-cd-integrations/#setting-up) and [configuring Snyk integrations](ci-cd-integrations/#configure-your-continuous-integration).
 
-{% page-ref page="ide-tools/" %}
+### Troubleshooting
 
-{% page-ref page="platform-as-a-service-integrations/" %}
+If you do not find the integration you're looking in this group of docs pages, [submit a request to Snyk Support](https://support.snyk.io/hc/en-us/requests/new).
 
-{% page-ref page="private-registry-integrations/" %}
+### Training
 
-{% page-ref page="private-registry-gatekeeper-plugins/" %}
-
-{% page-ref page="serverless-integrations/" %}
-
-{% page-ref page="snyk-apps/" %}
-
-{% page-ref page="snyk-broker/" %}
-
-{% page-ref page="notifications-ticketing-system-integrations/" %}
-
-{% page-ref page="vulnerability-management-tools/" %}
-
-
-
+Training is available to customers based on their [current pricing plan](https://snyk.io/plans/). Contact your account executive to learn more.

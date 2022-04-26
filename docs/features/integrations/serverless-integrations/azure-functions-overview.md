@@ -14,7 +14,7 @@ In order to turn on the Azure Function Apps integration you'll need to:
 
 ## **Connect Snyk to Azure Functions**
 
-For Snyk to monitor your deployed Azure Function apps, you must connect Snyk to your Azure account.&#x20;
+For Snyk to monitor your deployed Azure Function apps, you must connect Snyk to your Azure account.
 
 To do this, in [your Integrations page](https://app.snyk.io/integrations), navigate to **Serverless** and click **Azure Functions**:
 
@@ -32,15 +32,21 @@ To give Snyk access to your Azure account, you'll need a valid service principal
 
 To create a service principal for use by Snyk, you can either use the [Azure Portal](https://portal.azure.com) or the [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-After installing the Azure CLI 2.0, you should have the az command. Authenticate the CLI with your account using:
+After installing the Azure CLI 2.0, you have access to the `az` command. Authenticate the CLI with your account using:
 
-`az login`
+```
+az login
+```
 
-Once authenticated, use it to create the service principal:
+Once authenticated, create the service principal:
 
+#### Input:
+
+```
 az ad sp create-for-rbac --name SpNameExample --role "Website Contributor"
+```
 
-This would result in JSON output similar to the following, which contains the service principal name, password and tenant that you'll need for setting up Snyk:
+#### Output:
 
 ```
 {
@@ -52,11 +58,7 @@ This would result in JSON output similar to the following, which contains the se
 }
 ```
 
-From there you can login to your Snyk account and paste in your name, password and tenant.
-
-More information on creating a service principal for Azure can be found in Azure's documentation:
-
-[CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli) , [Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)
+The results above contain JSON output of the service principal name, password, and tenant that you'll need for setting up Snyk. From there you can login to your Snyk account and paste in your name, password, and tenant. More information on creating a service principal for Azure can be found in Azure's documentation: [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli) , [Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)
 
 ## **Azure Functions: check your connection status**
 
@@ -70,7 +72,7 @@ You can also check the status directly on the Azure Functions integration settin
 
 ![](<../../../.gitbook/assets/image (31).png>)
 
-If you are unable to connect, please re-enter your account credentials to verify that they are correct:
+If you are unable to connect, re-enter your account credentials to verify that they are correct:
 
 ![](<../../../.gitbook/assets/image (27).png>)
 
@@ -92,8 +94,9 @@ Once you've successfully connected Snyk to your Azure account, you'll be able to
 
 In either case, you'll see a list of any available Function apps on the Azure account you connected. Select the ones you want to monitor and click the "**Add to Snyk**" button.
 
-**NOTE**\
-We currently support importing only v2 functions. v1 functions will be ignored.
+{% hint style="warning" %}
+**NOTE:** Current support exists for importing **v2 functions only--all functions will be ignored.**
+{% endhint %}
 
 ![](<../../../.gitbook/assets/image (30).png>)
 

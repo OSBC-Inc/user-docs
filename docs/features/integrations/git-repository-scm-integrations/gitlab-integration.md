@@ -1,6 +1,6 @@
 # GitLab integration
 
-Snyk's Gitlab integration supports Gitlab versions 9.5 and above (API v4).
+Snyk's GitLab integration supports GitLab versions 9.5 and above (API v4).
 
 ## Integration features
 
@@ -11,19 +11,21 @@ The integration allows you to:
 3. Get email alerts and a Snyk pull request if a new upgrade or patch is available for a vulnerability that affects you.
 4. Trigger a Snyk pull request with fixes yourself from the test report page or the project page for your repo on snyk.io.
 
+{% hint style="info" %}
+**GitLab webhooks** send out an event to Snyk when merge requests occur. This event then starts a series of other events like pulling project files, running the test process, and posting the results to GitLab--all of which takes place on Snyk's side.
+{% endhint %}
+
 ## Set up GitLab integration
 
 This integration only works with GitLab instances that are publicly reachable (not on a private network). A [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker/set-up-snyk-broker) environment is required for private network instances.
 
 **Steps:**
 
-1. Generate a Personal Access Token in your GitLab. You’ll find this option in your user account settings area, in the **Access Tokens** section.
+1. Generate a Personal Access Token in your GitLab. You’ll find this option in your user account settings area, in the **Access Tokens** section. Alternatively, a [Group Access Token](https://docs.gitlab.com/ee/user/group/settings/group\_access\_tokens.html) can be used to grant access to all projects within a GitLab group or subgroup, without contributing to GitLab's licensed user count.
 2. Go to Snyk’s [integrations](https://app.snyk.io/integrations) page and click “Connect to GitLab”.
 3. Add your account credentials and the token you just generated to the GitLab integration settings area in Snyk.
 
 ![](../../../.gitbook/assets/uuid-aa58b5a9-dd17-3219-6067-4ee6e3f4b384-en.png)
-
-**NOTE:** When using GitLab Enterprise integration, it is important to use the correct URL. For example, use [https://gitlab.yourcompany.com/](https://gitlab.yourcompany.com) instead of [https://gitlab.yourcompany.com/subfolder1/](https://gitlab.yourcompany.com/subfolder1/)... The PAT will provide access to any of the repositories that have access granted to them.
 
 ## Required permissions and roles
 
@@ -31,18 +33,27 @@ There are two ways to integrate Snyk with GitLab, either via our Broker or direc
 
 To integrate with GitLab, as a Snyk admin user or as a member of the organization:
 
-1. Generate a personal access token enabling the _**API scope**_ for access:
-2. Ensure that the Gitlab user that you've just generated the access token from, is either the owner of the projects (repos) you'd like to monitor with Snyk or has **Maintainer** permissions to them.
+### User with Personal Access Token
+
+1. Generate a [personal access token](https://gitlab.com/-/profile/personal\_access\_tokens) enabling the **api** scope for access.
+2. Ensure that the GitLab user that you've just generated the access token from, is either the **Owner** of the projects (repos) you'd like to monitor with Snyk or has **Maintainer** permissions to them.
 
 ![](../../../.gitbook/assets/gitlab\_token.png)
 
-**This scope enables:**
+### Group Access Token
+
+1. Locate your group in GitLab, and select **Settings > Access Tokens**.
+2. Enter a descriptive token name (such as 'Snyk token'), select the **Maintainer** role, and check the **api** scope.
+
+![](../../../.gitbook/assets/gitlab\_group\_token.png)
+
+**The 'api' scope with a Maintainer role enables:**
 
 * Snyk to authenticate user accounts and to create webhooks, which are necessary for automating fix pull requests and Snyk test on your pull requests
 * Continuous write access to enable the Snyk organization users to manually trigger the creation of fix pull requests
 * Continuous read access enabling Snyk to monitor your projects and enabling you and the organization’s other members to manually re-trigger tests.
 
-When the first user in a Snyk organization (a Snyk admin account user) sets up an integration with a GitLab personal token, the token is authenticated with GitLab, enabling Snyk access to the repositories in that account. Thereafter, all users in that Snyk organization can add and work with any related projects, while the merge requests themselves will appear in GitLab as having been opened by the original GitLab user (the Snyk admin who set up the configuration)
+When the first user in a Snyk organization (a Snyk admin account user) sets up an integration with a GitLab personal access token or group access token, the token is authenticated with GitLab, enabling Snyk access to the repositories in that account. Thereafter, all users in that Snyk organization can add and work with any related projects, while the merge requests themselves will appear in GitLab as having been opened by the original GitLab user (the Snyk admin who set up the configuration)
 
 ## **Fix vulnerabilities with Snyk merge requests in GitLab**
 
@@ -71,9 +82,9 @@ When no upgrade is available, you can ignore or patch the vulnerability (patchin
 
 ## Disable the GitLab integration
 
-> **WARNING:**
->
-> Disabling a GitLab integration effectively removes all Snyk integrations, webhooks, as well as removal of the Snyk credentials and deactivation of the GitLab projects in the Snyk app.
+{% hint style="warning" %}
+Disabling a GitLab integration effectively removes all Snyk integrations, webhooks, as well as removal of the Snyk credentials and deactivation of the GitLab projects in the Snyk Web UI.
+{% endhint %}
 
 The project will be set to inactive and you’ll no longer get alerts, pull requests or Snyk tests on your pull requests. Again, the webhook that enables the integration for this repo will be removed.
 

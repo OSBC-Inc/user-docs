@@ -1,18 +1,17 @@
 # Retrieve the App Org IDs
 
-To use the Snyk API in your App, you must know the Snyk Org ID that the user has authorized the App for.
+Users may connect with a single Org, or a single Group. Most of Snyk's API endpoints require an Org ID in the path, which is used for authorizing the action being performed. For more information see [Integrating Apps with Snyk](https://docs.snyk.io/integrations/snyk-apps#integrating-apps-with-snyk).
 
-To retrieve this information, send a GET request to the `orgs` endpoint:
+To retrieve the Org ID that is used by your App, send a GET request to the `orgs` endpoint:
 
-```text
-https://api.snyk.io/v3/apps/{clientId}/orgs?version={version}
+```
+https://api.snyk.io/rest/orgs?version={version}
 ```
 
-The current **version** can be found in our [API documentation](https://snykv3.docs.apiary.io/#reference/apps/app-org-access/get-app's-granted-access).
-
-We recommend you store this value and associate it with the user's details.
-
-{% hint style="info" %}
-For the beta release of Snyk Apps, users may only install an App on a single Organization per authorization request.
+{% hint style="danger" %}
+Snyk deprecated the `/rest/apps/{clientId}/orgs?version={version}` endpoint as of 2022-03-02, and sunset it after 2022-04-03.
 {% endhint %}
 
+The current **version** can be found in the Snyk [API documentation](https://apidocs.snyk.io/#get-/orgs).
+
+Snyk recommends you store this value and associate it with the user's details.

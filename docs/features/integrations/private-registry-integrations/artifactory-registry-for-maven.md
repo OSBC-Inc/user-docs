@@ -1,7 +1,7 @@
 # Artifactory Registry for Maven
 
 {% hint style="info" %}
-**Feature availability**  
+**Feature availability**\
 This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
 {% endhint %}
 
@@ -15,7 +15,7 @@ Maven projects can be configured to mirror all requests through a custom package
 
 If authentication is required to access your custom registry you will need to first configure the Artifactory package repository integration, see [Artifactory Registry Setup.](https://docs.snyk.io/integrations/private-registry-integrations/artifactory-registry-setup)
 
-Once the integration is set up you can configure Maven settings by navigating to settings ![](../../../.gitbook/assets/cog_icon.png) **&gt; Languages &gt; Java**.
+Once the integration is set up you can configure Maven settings by navigating to settings ![](../../../.gitbook/assets/cog\_icon.png) **> Languages > Java**.
 
 You can choose whether to use Artifactory as a mirror or as an additional repository where your artifacts will reside. These settings will be very similar to what you have in `~/.m2/settings.xml`.
 
@@ -42,4 +42,3 @@ For example, if the URL is `http://artifactory.company.io/artifactory/libs-relea
 Alternatively, you can configure repositories which will be used as additional locations to check for artifacts.
 
 Repositories are configured in the same way as [Mirrors](artifactory-registry-for-maven.md#mirrors), but do not require **Mirror Of**.
-
