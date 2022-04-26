@@ -246,7 +246,7 @@
 * [Snyk API](features/snyk-api-info/README.md)
   * [Authentication for API](features/snyk-api-info/authentication-for-api.md)
   * [Revoking and regenerating Snyk API tokens](features/snyk-api-info/revoking-and-regenerating-snyk-api-tokens.md)
-[Snyk Integrations](features/integrations/README.md)
+* [Snyk Integrations](features/integrations/README.md)
   * [Managing integrations](features/integrations/managing-integrations/README.md)
     * [SCM (Git) and CI/CD integration deployment intro](features/integrations/managing-integrations/scm-git-and-ci-cd-integration-deployment-intro.md)
     * [Service accounts](features/integrations/managing-integrations/service-accounts.md)
