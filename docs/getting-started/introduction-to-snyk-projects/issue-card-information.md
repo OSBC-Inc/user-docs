@@ -49,8 +49,8 @@ Body 섹션 정보는 다음과 같습니다.
 
 Issue card에서 다음 작업을 수행할 수 있습니다.
 
-* ****[**Ignore the issue**](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/introduction-to-ignoring-issues.md): Issue에 대해서 조치를 취하거나 보고서에 표시할 필요가 없는 경우 무시할 수 있습니다.
-* ****[**Create a Jira ticket**](../../features/integrations/notifications-ticketing-system-integrations/jira.md): [Jira integration](../../features/integrations/notifications-ticketing-system-integrations/jira.md)이 있는 경우 Issue board에 Snyk을 연결하고 프로젝트 세부 정보 페이지에서 직접 jira 티켓을 생성하여 취약점을 수정할 수 있습니다.
-* [**취약점 수정**](../../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)**:** 취약점에 대한 수정 사항이 있는 경우 개별 취약점을 수정할 수 있습니다.
+* \*\*\*\*[**Ignore the issue**](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/introduction-to-ignoring-issues.md): Issue에 대해서 조치를 취하거나 보고서에 표시할 필요가 없는 경우 무시할 수 있습니다.
+* \*\*\*\*[**Create a Jira ticket**](../../features/integrations/notifications-ticketing-system-integrations/jira.md): [Jira integration](../../features/integrations/notifications-ticketing-system-integrations/jira.md)이 있는 경우 Issue board에 Snyk을 연결하고 프로젝트 세부 정보 페이지에서 직접 jira 티켓을 생성하여 취약점을 수정할 수 있습니다.
+* [**취약점 수정**](broken-reference)**:** 취약점에 대한 수정 사항이 있는 경우 개별 취약점을 수정할 수 있습니다.
 * **View more information about the CWE, CVE, and CVSS score**: Issue card에서 CWE, CVE, CVSS점수에 대한 추가 정보를 확인할 수 있습니다.
 * **View the Snyk vulnerability database:** Issue card에서 특정 취약점에 대한 Snyk vulnerability database로 이동합니다.

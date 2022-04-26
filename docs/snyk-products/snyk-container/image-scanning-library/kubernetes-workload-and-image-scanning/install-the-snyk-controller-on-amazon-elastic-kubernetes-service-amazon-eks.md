@@ -6,7 +6,7 @@ Snyk 컨트롤러를 설치하면 실행 중인 EKS 워크로드를 가져오고
 
 Amazon EKS용 Snyk 컨트롤러를 [AWS Quick Start](https://aws.amazon.com/quickstart/architecture/eks-snyk/)로 배포할 수 있습니다. 이 옵션을 사용하면 수동으로 구성할 필요가 없습니다. 기본 파라미터를 사용하여 Quick Start를 기존 Amazon EKS 클러스터에 배포하면 다음과 같은 환경이 구축됩니다.
 
-![](<../../../../.gitbook/assets/architecture (1).png>)
+![](../../../../.gitbook/assets/architecture.png)
 
 일반적으로 사용하는 세 가지 배포 옵션은 다음과 같습니다.
 

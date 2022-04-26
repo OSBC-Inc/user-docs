@@ -14,7 +14,7 @@
 
 ### Broker
 
-[Snyk Broker](../features/integrations/snyk-broker/)를 참조하십시오.
+[Snyk Broker](broken-reference)를 참조하십시오.
 
 ### Build System
 
@@ -28,7 +28,7 @@
 
 ### CLI
 
-Command Line Interface의 약자로, [Snyk CLI](../features/snyk-cli/)를 참조하십시오.
+Command Line Interface의 약자로, [Snyk CLI](broken-reference)를 참조하십시오.
 
 ### Cloud Native Application Security
 
@@ -36,7 +36,7 @@ CI/CD 파이프라인 전체에 보안을 구현하고, 마이크로서비스에
 
 ### Container
 
-컨테이너를 사용하면 애플리케이션과 해당 디펜던시를 함께 패키징하여 단일 실행 가능한 단위로 배포할 수 있습니다. 컨테이너는 운영체제 커널이 제공하는 추상화이며, 시스템에서 실행 중인 다른 프로세스로부터 프로세스를 분리할 수 있습니다. 자세한 내용은 [Snyk Container](../snyk-products/snyk-container/)를 참조하십시오.
+컨테이너를 사용하면 애플리케이션과 해당 디펜던시를 함께 패키징하여 단일 실행 가능한 단위로 배포할 수 있습니다. 컨테이너는 운영체제 커널이 제공하는 추상화이며, 시스템에서 실행 중인 다른 프로세스로부터 프로세스를 분리할 수 있습니다. 자세한 내용은 [Snyk Container](broken-reference)를 참조하십시오.
 
 ### Container engine
 
@@ -121,7 +121,7 @@ Snyk은 사용자에게 취약점에 대한 자동 수정이 포함된 pull requ
 
 ### IAC
 
-Infrastructure as Code의 약자로,[ Snyk Infrastructure as Code](../snyk-products/snyk-infrastructure-as-code/)를 참조하십시오.
+Infrastructure as Code의 약자로,[ Snyk Infrastructure as Code](broken-reference)를 참조하십시오.
 
 ### IAST
 
@@ -275,19 +275,19 @@ Synk은 또한 Snyk 플랫폼을 제공하는 회사입니다.
 
 ### Snyk Broker
 
-Agent/Proxy 역할을 하는 클라이언트/서버 시스템으로, Snyk이 개인 고객 환경(Jira, 소스코드 저장소 또는 컨테이너 레지스트리)을 스캔할 수 있습니다. 메시지를 중계하고 사용자가 통과할 수 있는 메시지를 필터링할 수 있습니다. 예를 들어, 사용자가 일부 GitHub API만 Snyk에 노출할 수 있도록 허용한다. Snyk [Broker documentation](../features/integrations/snyk-broker/)을 참조하십시오.
+Agent/Proxy 역할을 하는 클라이언트/서버 시스템으로, Snyk이 개인 고객 환경(Jira, 소스코드 저장소 또는 컨테이너 레지스트리)을 스캔할 수 있습니다. 메시지를 중계하고 사용자가 통과할 수 있는 메시지를 필터링할 수 있습니다. 예를 들어, 사용자가 일부 GitHub API만 Snyk에 노출할 수 있도록 허용한다. Snyk [Broker documentation](broken-reference)을 참조하십시오.
 
 ### Snyk CLI
 
-Snyk 플랫폼 도구입니다. Snyk CLI를 사용하면 개발자가 CLI를 사용하여 디펜던시의 알려진 취약점을 찾아 수정할 수 있습니다. [Snyk CLI documentation](../features/snyk-cli/)을 참조하십시오.
+Snyk 플랫폼 도구입니다. Snyk CLI를 사용하면 개발자가 CLI를 사용하여 디펜던시의 알려진 취약점을 찾아 수정할 수 있습니다. [Snyk CLI documentation](broken-reference)을 참조하십시오.
 
 ### Snyk Code
 
-Snyk의 제품 중 하나입니다. 개발자가 독점 애플리케이션 코드의 취약점을 찾아 수정할 수 있는 SAST 제품입니다. [Snyk Code documentation](../snyk-products/snyk-code/)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 독점 애플리케이션 코드의 취약점을 찾아 수정할 수 있는 SAST 제품입니다. [Snyk Code documentation](broken-reference)을 참조하십시오.
 
 ### Snyk Container
 
-Snyk의 제품 중 하나입니다. 개발자가 컨테이너 이미지 및 Kubernetes 애플리케이션에서 취약점을 찾아 수정할 수 있습니다. [Snyk Container documentation](../snyk-products/snyk-container/)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 컨테이너 이미지 및 Kubernetes 애플리케이션에서 취약점을 찾아 수정할 수 있습니다. [Snyk Container documentation](broken-reference)을 참조하십시오.
 
 ### Snyk Infrastructure as Code
 
@@ -295,7 +295,7 @@ Snyk의 제품 중 하나입니다. 개발자가 Kubernetes, Helm 및 Terraform 
 
 ### Snyk Open Source
 
-Snyk의 제품 중 하나입니다. 개발자가 오픈소스 취약점을 찾아 수정할 수 있습니다. [Snyk Open Source documentation](../snyk-products/snyk-open-source/)을 참조하십시오.
+Snyk의 제품 중 하나입니다. 개발자가 오픈소스 취약점을 찾아 수정할 수 있습니다. [Snyk Open Source documentation](broken-reference)을 참조하십시오.
 
 ### Snyk plugin
 
@@ -324,7 +324,7 @@ Software Package Data Exchange의 약자로, 소프트웨어가 배포되는 소
 
 ### Vulnerability
 
-Snyk가 식별한 보안 취약점입니다. [취약점 수정](../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.
+Snyk가 식별한 보안 취약점입니다. [취약점 수정](broken-reference)을 참조하십시오.
 
 ## W
 

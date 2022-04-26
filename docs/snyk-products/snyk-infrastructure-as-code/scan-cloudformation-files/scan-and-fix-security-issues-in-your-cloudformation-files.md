@@ -11,11 +11,11 @@ Snyk은 CloudFormation 코드를 스캔하여 잘못된 구성과 보안 문제�
 
 * 계정에 로그인하여 해당 그룹 및 조직으로 이동합니다.
 
-![](<../../../.gitbook/assets/screenshot-2020-07-09-at-12.43.02-2- (3) (4) (4) (4) (23).png>)
+![](<../../../.gitbook/assets/screenshot-2020-07-09-at-12.43.02-2- (3) (4) (4) (4) (1) (3).png>)
 
 * CloudFormation 코드를 감지하기 위해 infrastructure as code 기능이 활성화되기 전에 테스트가 수행된 경우 저장소를 다시 가져옵니다.
 
-![](<../../../.gitbook/assets/screenshot\_2020-07-09\_at\_12.44.03 (1) (1) (3) (3) (2) (14).png>)
+![](<../../../.gitbook/assets/screenshot\_2020-07-09\_at\_12.44.03 (1) (1) (3) (3) (2) (1) (3).png>)
 
 * 저장소를 스캔할 때마다 다음과 같이 진행합니다.
   * 모든 CloudFormation 파일은 다음 예제와 같이 저장소별로 그룹화된 별도의 프로젝트로 가져옵니다.

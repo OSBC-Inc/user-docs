@@ -26,7 +26,7 @@ Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대
 
 ![](../../.gitbook/assets/image26.png)
 
-개요는 [취약점 수정](../../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.\
+개요는 [취약점 수정](broken-reference)을 참조하십시오.\
 자세한 내용은 [Fixing and prioritizing issues](../../features/fixing-and-prioritizing-issues/)를 참조하십시오.
 
 #### Issues 세부 정보 보기
@@ -37,7 +37,7 @@ Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대
 
 **More about this issue**를 클릭하면 [Snyk의 vulnerability database](https://snyk.io/product/vulnerability-database/)를 사용하여 취약점에 대한 자세한 정보를 확인할 수 있으며 CVSS 점수를 포함하여 Issue에 대한 더 자세한 사항을 확인할 수 있습니다.
 
-![](../../.gitbook/assets/image15.png)
+![](<../../.gitbook/assets/image15 (1).png>)
 
 ### Fixes 보기
 
@@ -45,12 +45,12 @@ Snyk은 프로젝트 내의 간접 의존성에 대해 잘 알고 있기 때문�
 
 ![](<../../.gitbook/assets/Screenshot 2021-10-19 at 11.57.07.png>)
 
-자세한 내용은 [취약점 수정](../../snyk-products/snyk-open-source/open-source-basics/fixing-vulnerabilities.md)을 참조하십시오.
+자세한 내용은 [취약점 수정](broken-reference)을 참조하십시오.
 
 ### Dependencies 보기
 
 Snyk은 애플리케이션의 패키지 매니저를 사용하여 디펜던시 트리를 빌드하고 프로젝트의 **dependency** 탭에 표시합니다. 이는 어떤 구성 요소가 취약점을 가지고 있는지 확인할 수 있으며 디펜던시가 애플리케이션에 어떻게 도입되었는지 보여줍니다.
 
-![](../../.gitbook/assets/image23.png)
+![](<../../.gitbook/assets/image23 (1).png>)
 
 예를 들어 위 내용에서 직접 의존성 **body-parser@ 1.9.0**에서 가져온 간접 의존성 **qs@2.2.4**에 기반한 취약점을 나타냅니다.

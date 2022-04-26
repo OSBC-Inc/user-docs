@@ -28,7 +28,7 @@
 * Hosted
 * Distributed
 
-속성에서 값을 할당 및 제거하는 기능은 [API](https://snyk.docs.apiary.io/#reference/projects/project-attributes) 및 [CLI](../../../features/integrations/snyk-ide-plugins/snyk-cli.md)에서 사용할 수 있습니다. 값으로 프로젝트를 필터링하는 기능은 [API](https://snyk.docs.apiary.io/#reference/projects/project-attributes)에서도 사용할 수 있습니다 .
+속성에서 값을 할당 및 제거하는 기능은 [API](https://snyk.docs.apiary.io/#reference/projects/project-attributes) 및 [CLI](broken-reference)에서 사용할 수 있습니다. 값으로 프로젝트를 필터링하는 기능은 [API](https://snyk.docs.apiary.io/#reference/projects/project-attributes)에서도 사용할 수 있습니다 .
 
 ## **속성에 값 할당**
 

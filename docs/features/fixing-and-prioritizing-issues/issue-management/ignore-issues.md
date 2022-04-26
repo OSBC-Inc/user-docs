@@ -36,7 +36,7 @@ Suppressing issues is possible via the CLI. For node.js projects, you can use **
 
 `snyk ignore --id='npm:braces:20180219' --expiry='2018-04-01' --reason='testing'`
 
-See [Ignore vulnerabilities using Snyk CLI](../../snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md) for more details.
+See [Ignore vulnerabilities using Snyk CLI](broken-reference) for more details.
 
 When using **Snyk wizard** or **Snyk ignore**, the .snyk policy file is updated with the path and given a reason (if one was provided). For example:
 
@@ -126,7 +126,7 @@ When scanning your IaC configuration files using the Snyk CLI with **snyk iac te
 
 You can do this by using the [.snyk policy file](../policies/the-.snyk-file.md), which we recommend is stored and versioned in the root of your working directory for where you store your IaC configuration files.
 
-See [iac-ignores-using-the-.snyk-policy-file.md](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md "mention")for more details.
+See [Broken link](broken-reference "mention")for more details.
 
 ### Set who can configure ignore settings
 

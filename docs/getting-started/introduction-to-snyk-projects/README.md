@@ -10,7 +10,7 @@ Target은 Snyk 대시보드의 **Projects** 메뉴에 나타납니다.
 
 ## Origin
 
-CLI, GitHub 또는 Kubernetes와 같은 ~~_Target ecosystem_~~입니다.
+CLI, GitHub 또는 Kubernetes와 같은 \~\~_Target ecosystem_\~\~입니다.
 
 가능한 값은 다음과 같습니다.
 
@@ -61,7 +61,7 @@ Project는 Snyk 대시보드의 **Projects** 메뉴에서 확인할 수 있습�
 
 Github 저장소의 pom 파일과 같이 Target에서 스캔할 특정 항목입니다.
 
-[Snyk Code](../../snyk-products/snyk-code/) 스캔은 Targetfile을 사용하지 않습니다.
+[Snyk Code](broken-reference) 스캔은 Targetfile을 사용하지 않습니다.
 
 ## Type
 

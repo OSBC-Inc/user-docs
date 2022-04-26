@@ -17,7 +17,7 @@ Snyk은 현재 통합 Git 저장소에서 가져올 때 JSON 및 YAML 형식의 
 
 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 
-![](<../../../.gitbook/assets/add-artifactory-images (1) (2) (46).gif>)
+![](<../../../.gitbook/assets/add-artifactory-images (1) (2) (1) (1).gif>)
 
 {% hint style="info" %}
 **Note**\

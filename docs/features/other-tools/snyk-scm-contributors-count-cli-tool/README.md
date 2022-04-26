@@ -4,7 +4,7 @@ description: Index
 
 # CLI Tool: Snyk-SCM-Contributors-Count
 
-* [Overview](overview.md)
+* [Overview](broken-reference)
 * [Flow](flowchart.md)
 * [Usage](usage.md)
 * [Output](output.md)

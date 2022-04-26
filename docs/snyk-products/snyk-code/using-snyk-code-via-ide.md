@@ -14,6 +14,6 @@ Snyk Code는 IDE에서 직접 Issue를 찾고 수정할 수 있는 플러그인�
 
 Snyk Code는 IDE에서 직접 Issue를 찾고 수정할 수 있는 Visual Studio Code 플러그인을 지원합니다.
 
-![](<../../.gitbook/assets/image3-2- (2) (2) (4) (4) (4) (3) (5).png>)
+![](<../../.gitbook/assets/image3-2- (2) (2) (4) (4) (4) (3) (1).png>)
 
 자세한 내용은 [Visual Studio Code extension for Snyk Code](../../features/integrations/ide-tools/visual-studio-code-extension-for-snyk-code.md)을 참조하십시오.

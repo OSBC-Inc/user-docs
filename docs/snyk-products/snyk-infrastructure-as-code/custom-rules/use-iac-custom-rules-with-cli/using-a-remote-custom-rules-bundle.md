@@ -56,7 +56,7 @@ Snyk 설정 페이지를 사용하여custom rules 설정을 구성하는 것이 
 
 * **Enable rules** 토글을 사용하여 원격 bundle 구성을 사용하도록 설정합니다. 이렇게 하면 아래와 같이 양식이 표시됩니다.
 
-![](<../../../../.gitbook/assets/image (91).png>)
+![](<../../../../.gitbook/assets/image (77).png>)
 
 * custom rules의 원격 bundle에 대한 OCI 레지스트리 URL 및 태그를 구성하고 **Save changes**를 클릭하여 저장합니다.
 

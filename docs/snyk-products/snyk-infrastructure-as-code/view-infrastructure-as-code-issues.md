@@ -4,7 +4,7 @@
 
 {% hint style="info" %}
 **기능 지원 여부**\
-****이 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
+\*\*\*\*이 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
 ### Summary 페이지
@@ -31,7 +31,7 @@ IaC Issue만 보려면 **Issue filters** 드롭다운에서 **Configuration**을
 
 그룹화되지 않은 Issue도 볼 수 있습니다. 이렇게 하면 Issue가 발견된 프로젝트 파일에 대한 자세한 정보와 Issue가 처음 도입된 시기에 대한 상세 정보가 표시됩니다.
 
-![](<../../.gitbook/assets/image2-3- (1) (2) (2) (2) (3) (4) (4) (3) (1) (1) (10).png>)
+![](<../../.gitbook/assets/image2-3- (1) (2) (2) (2) (3) (4) (4) (3) (1) (1) (1).png>)
 
 Issues 탭에 대한 자세한 내용은 [Issues tab](../../features/general-reports/reports/issues-tab.md) 설명서를 참조하십시오.
 

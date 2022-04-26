@@ -17,4 +17,4 @@ Snyk 사용자가 되기 위한 첫 번째 단계는 Snyk 계정을 만드는 �
 
 다음으로 하나 이상의 특정 Snyk 제품 및 도구를 선택하여 시작합니다.
 
-[Snyk 제품 시작하기](select-snyk-product-tool.md)를 참조하십시오.
+[Snyk 제품 시작하기](broken-reference)를 참조하십시오.

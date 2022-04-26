@@ -13,23 +13,23 @@ Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다
 
 ### CLI로 테스트 실행
 
-****[**CLI**](../../features/snyk-cli/cli-reference/)를 사용하면 다음 명령을 사용할 수 있습니다.
+\*\*\*\*[**CLI**](broken-reference)를 사용하면 다음 명령을 사용할 수 있습니다.
 
 * **snyk test**로 오픈소스 코드를 스캔 합니다.
 * **snyk container test**로 컨테이너 이미지를 스캔합니다.
 * **snyk iac test**로 IaC(Infrastructure as Code)파일을 스캔 합니다.
 
-자세한 내용은 [Snyk CLI 시작하기](../../features/snyk-cli/getting-started-with-the-cli/)를 참조하십시오.
+자세한 내용은 [Snyk CLI 시작하기](broken-reference)를 참조하십시오.
 
 ### Snyk 앱으로 테스트 실행
 
 새 프로젝트를 추가하거나 Retest now 버튼을 클릭하면 테스트가 실행됩니다.
 
-자세한 내용은 [Snyk 시작하기](../../getting-started/select-snyk-product-tool.md)를 참조하십시오.
+자세한 내용은 [Snyk 시작하기](broken-reference)를 참조하십시오.
 
 ### API로 테스트 실행
 
-테스트는 [**https://snyk.io/api/v1/test**](https://snyk.io/api/v1/test) **** endpoint를 호출할 때 진행합니다.
+테스트는 [**https://snyk.io/api/v1/test**](https://snyk.io/api/v1/test) \*\*\*\* endpoint를 호출할 때 진행합니다.
 
 자세한 내용은 [API 문서](https://github.com/snyk/user-docs/tree/54e0dec0fe0e081d49f34119a9018499ad5c9e96/introducing-snyk/snyks-core-concepts/running-tests/README.md)를 참조하십시오.
 
@@ -45,10 +45,10 @@ Snyk은 반복되는 테스트와 함께 자동 스캔 기능을 제공하여 �
 
 CLI 명령어 `snyk monitor`를 사용하여 Snyk 웹 사이트에서 새로운 취약점에 대해 지속적으로 모니터링할 프로젝트의 스냅샷을 생성합니다.
 
-자세한 내용은 [Monitor your projects at regular intervals](../../features/snyk-cli/secure-your-projects-in-the-long-term/monitor-your-projects-at-regular-intervals.md)를 참조하십시오.
+자세한 내용은 [Monitor your projects at regular intervals](broken-reference)를 참조하십시오.
 
 ### PR/MR 자동 테스트
 
 기본적으로 Snyk은 모니터링되는 저장소에 생성된 모든 PR을 스캔하여 단일 보안 검사와 단일 라이선스 검사로 그룹화된 결과와 권장 사항을 제공합니다.
 
-자세한 내용은 [PR에서 Snyk 테스트 활성화](../../getting-started/snyk-scm-integration-good-practices.md#3-pr-snyk)를 참조하십시오.
+자세한 내용은 [PR에서 Snyk 테스트 활성화](broken-reference)를 참조하십시오.

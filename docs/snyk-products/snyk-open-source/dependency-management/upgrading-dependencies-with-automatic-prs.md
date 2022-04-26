@@ -2,9 +2,9 @@
 
 Git 저장소를 가져오면 Snyk은 이러한 저장소를 모니터링하여 취약점, 라이선스 및 디펜던시 상태의 Issue를 정기적으로 스캔합니다. 수정 조언 외에도 Snyk은 스캔 결과를 기반으로 디펜던시를 업그레이드하기 위해 자동으로 PR(pull request)을 생성할 수 있습니다.
 
-Snyk은 현재 GitHub, GitHub Enterprise Server,  BitBucket Cloud를 통해 npm, Yarn, Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 지원이 필요한 경우 문서를 참조하십시오.
+Snyk은 현재 GitHub, GitHub Enterprise Server, BitBucket Cloud를 통해 npm, Yarn, Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 지원이 필요한 경우 문서를 참조하십시오.
 
-![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (13).png>)
+![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (1) (5).png>)
 
 ## 작동 방식
 
@@ -27,9 +27,9 @@ Snyk은 현재 Snyk Broker 사용을 포함하여 GitHub, GitHub Enterprise Serv
 
 Git 저장소를 가져오면 Snyk은 이러한 저장소를 모니터링하여 취약점, 라이선스 및 디펜던시 상태의 Issue를 정기적으로 스캔합니다. 수정 조언 외에도 Snyk은 자동으로 사용자를 대신하여 PR(pull request)을 생성하여 스캔 결과에 따라 디펜던시를 업그레이드할 수 있습니다.
 
-Snyk은 현재 GitHub, GitHub Enterprise Server,  BitBucket Cloud를 통해 npm, Yarn,  Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 지원이 필요한 경우 문서를 참조하십시오.
+Snyk은 현재 GitHub, GitHub Enterprise Server, BitBucket Cloud를 통해 npm, Yarn, Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 지원이 필요한 경우 문서를 참조하십시오.
 
-![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (14).png>)
+![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (1) (3).png>)
 
 ## 특정 프로젝트에 대해 자동 디펜던시 업그레이드 PR 사용
 

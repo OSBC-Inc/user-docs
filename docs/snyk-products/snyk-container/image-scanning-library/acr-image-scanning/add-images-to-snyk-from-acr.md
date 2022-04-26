@@ -14,11 +14,11 @@ Snyk은 루트 폴더 및 사용자 지정 파일 위치를 평가하여 ACR 컨
 1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 2. **Projects** 탭에서 **Add projects**를 클릭합니다. 계정에 이미 구성된 통합 목록이 다음과 같이 열립니다. ![](../../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png)
 
-![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (45).gif>)
+![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (1) (2).gif>)
 
-**Which images do you want to test?**가 나타나면 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
+\*\*Which images do you want to test?\*\*가 나타나면 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
 
-![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (9).png>)
+![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (1).png>)
 
 1. 다음 방법 중 하나 또는 모두 사용하여 단일 또는 여러 이미지를 선택합니다.
    1. 필드에 가져올 이미지의 이름을 입력합니다(#1).
@@ -32,6 +32,6 @@ Snyk은 루트 폴더 및 사용자 지정 파일 위치를 평가하여 ACR 컨
 
 ACR 파일은 특정 아이콘으로 표시됩니다. ![](../../../../.gitbook/assets/uuid-5d10608d-d674-d4ee-d6c2-6faadd6fc8ea-en.png) 필터링을 사용하여 다음과 같은 프로젝트만 볼 수도 있습니다.
 
-![](<../../../../.gitbook/assets/image (4) (3) (3) (3) (3) (4) (4) (5) (4) (9).png>)
+![](<../../../../.gitbook/assets/image (4) (3) (3) (3) (3) (4) (4) (5) (4) (1).png>)
 
 ACR 통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 관련 페이지를 참조하십시오.
