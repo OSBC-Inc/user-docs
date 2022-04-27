@@ -248,7 +248,7 @@
   * [Revoking and regenerating Snyk API tokens](features/snyk-api-info/revoking-and-regenerating-snyk-api-tokens.md)
 * [Snyk Integrations](features/integrations/README.md)
   * [Managing integrations](features/integrations/managing-integrations/README.md)
-    * [SCM (Git) and CI/CD integration deployment intro](features/integrations/managing-integrations/scm-git-and-ci-cd-integration-deployment-intro.md)
+    * [SCM(Git) 및 CI/CD 통합 배포](features/integrations/managing-integrations/scm-git-and-ci-cd-integration-deployment-intro.md)
     * [Service accounts](features/integrations/managing-integrations/service-accounts.md)
     * [Clone an integration across your Snyk orgs](features/integrations/managing-integrations/clone-an-integration-across-your-snyk-orgs.md)
     * [Disable a git integration](features/integrations/managing-integrations/disable-a-git-integration.md)

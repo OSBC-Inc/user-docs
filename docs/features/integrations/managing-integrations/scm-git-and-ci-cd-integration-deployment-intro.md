@@ -1,24 +1,24 @@
-# SCM (Git) and CI/CD integration deployment intro
+# SCM(Git) 및 CI/CD 통합 배포
 
-Snyk for Code and Open Source most popular integrations are in the Source Code Management (or Git) or in the CI/CD pipeline integration.
+코드 및 오픈 소스 관리에 사용하는 Snyk은 소스 코드 관리(Git) 또는 CI/CD 파이프라인 통합에서 가장 많이 사용됩니다.
 
 ![](../../../.gitbook/assets/scm-ci-cid.png)
 
-Snyk SCM integration also allows you to rescan automatically on every fix PR thanks to our webhooks, and to block newly introduced vulnerabilities. If both may achieve the same business objective, what would be the reasons to choose one versus the other? While the answer will be specific to every organization based on your workflows and processes, we can provide a list of considerations before taking a decision:
+Snyk SCM 통합을 사용한 웹 훅 덕분에 모든 수정 PR에서 자동으로 다시 검색하고 새로 도입된 취약점을 차단할 수 있습니다. 워크플로우 및 프로세스에 따라 모든 조직에 대해 고려해야 할 사항의 목록을 제공할 수 있습니다.
 
-### SCM Integration considerations
+### SCM 통합 고려 사항
 
-* Easier to setup & maintain
-* Ability to block fix PR thanks to webhooks
-* Earlier in the SDLC
-* More friendly experience for developers
-* Fix PR from Snyk (SCA and Dockerfiles)
-* Does not take resources from your CI/CD pipeline
+* 설정 및 유지보수 용이함
+* 웹 훅을 이용한 수정 PR 차단
+* SDLC의 이전 버전
+* 개발자에게 더욱 친근한 경험 제공
+* Snyk에서 PR 수정(SCA 및 Dockerfiles)
+* CI/CD 파이프라인에서 리소스를 사용하지 않음
 
-### CI/CD Integration considerations
+### CI/CD 통합 고려 사항
 
-* Some package managers require local context and are better run within your environment (notably Scala, Gradle and Go modules)
-* More granular options to block
-* Strong gatekeeper
-* Best practice for container scans
-* Complex repo structure such as large Monorepo, where a CI/CD integration would allow more custom imports
+* 일부 패키지 관리자는 로컬 컨텍스트를 필요로 하며 사용자 환경 내에서 더 잘 실행됩니다(Scala, Gradle 및 Go 모듈)
+* 세분화된 차단 옵션
+* 강한 gatekeeper
+* 컨테이너 검색에 대한 모범 사례
+* CI/CD 통합으로 더 많은 사용자 지정 가져오기를 허용하는 대형 Monorepo와 같은 복잡한 재구성 구조

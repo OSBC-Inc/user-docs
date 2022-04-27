@@ -1,6 +1,6 @@
 # Service accounts
 
-You can set up a service account to be used for continuous integration (CI) and other automation purposes without using an actual Snyk user’s token. Service accounts are a special type of system user that has only an API token associated with it, substituting for standard user credentials. Use this token to provide credentials for accessing your Snyk account when setting up integration with your development tools and when working with our CLI and API. For more information about our APIs, see our [API documentation](../../snyk-api-info/).
+실제 Snyk 사용자 토큰을 사용하지 않고도 CI(지속적 통합) 및 기타 자동화 용도로 사용할 서비스 계정을 설정할 수 있습니다. 서비스 계정은 연결된 API 토큰만 있는 특수한 시스템 사용자 유형으로 표준 사용자 인증 정보를 대체합니다. 이 토큰을 사용하여 개발 도구와의 통합을 설정하고 CLI 및 API를 사용할 때 Snyk 계정에 액세스하기 위한 인증 정보를 제공합니다. API에 대한 자세한 내용은 [API documentation](../../snyk-api-info/)을 참조하십시오.
 
 You can generate single or multiple tokens on the organization or group levels to manage your integrations. Use group-level tokens to access group API endpoints, organization API endpoints, and the CLI—for all organizations within the group.
 
@@ -53,7 +53,7 @@ This process describes all options.
 
     Make sure you copy this token as you won’t see it again. You can click **Close and Hide** once you've copied the token; either way, when you navigate away from this page it will no longer be accessible. This is a security standard to keep your tokens safe. The new token is also added to your **Existing service accounts** list, similar to the following image:
 
-![](<../../../.gitbook/assets/uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en (3) (3) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (12).png>)
+![](../../../.gitbook/assets/uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en%20\(3\)%20\(3\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(12\).png)
 
 * Furthermore, if you created the token for the entire group with an **Admin** role, the token also appears in the **Existing service accounts** list for each of its organizations, though it can only be edited from the **Group** level.
 
@@ -81,7 +81,7 @@ Administrators can change token names and delete tokens. When you delete a servi
 * Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Service accounts**.
 * Scroll to find the list of existing service accounts:
 
-![](<../../../.gitbook/assets/uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en (3) (3) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (9).png>)
+![](../../../.gitbook/assets/uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en%20\(3\)%20\(3\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(9\).png)
 
 * From the list of existing tokens:
   * Click **Delete** to delete a token and invalidate it immediately. When prompted, click **OK**. Remember that you cannot re-generate the same token!
