@@ -1,73 +1,73 @@
-# Connect Snyk to Heroku
+# Snyk을 Heroku에 연결하기
 
-In order for Snyk to be able to monitor your deployed Heroku applications, you’ll first need to connect Snyk to your Heroku account. You can do this by navigating to the [Integrations page](https://app.snyk.io/integrations) and clicking on “Connect to Heroku”.
+Snyk이 배포된 Heroku 애플리케이션을 모니터링할 수 있으려면 먼저 Snyk을 Heroku 계정에 연결해야 합니다. [Integrations 페이지](https://app.snyk.io/integrations)로 이동한 후 “Connect to Heroku”를 클릭하면 됩니다.
 
-![](<../../../.gitbook/assets/uuid-e7c43047-5065-ad28-db37-1c56e8796a8b-en-1- (2) (2) (2) (2) (5) (7) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (22).png>)
+![](../../../.gitbook/assets/uuid-e7c43047-5065-ad28-db37-1c56e8796a8b-en-1-%20\(2\)%20\(2\)%20\(2\)%20\(2\)%20\(5\)%20\(7\)%20\(2\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(22\).png)
 
-This will take you to a page where you’ll be prompted to enter your Heroku API Key. There is only one API Key per Heroku user so we recommend setting up a dedicated user for your Snyk organization.
+다음으로 Heroku API 키를 입력하라는 메시지가 표시되는 페이지로 이동합니다. Heroku 사용자당 하나의 API 키만 있으므로 Snyk 조직에 대한 전용 사용자를 설정하는 것이 좋습니다.
 
 ![](../../../.gitbook/assets/uuid-b571c9a8-8f33-e6a1-bbb3-e37e482562bc-en.png)
 
-Instructions for how to generate and locate your Heroku API key are below.
+Heroku API 키를 생성하고 찾는 방법은 다음과 같습니다.
 
-## Generate your Heroku API key
+## Heroku API 키 생성
 
-You can find and generate your Heroku API key in your “Account Settings” section of your Heroku Account.
+Heroku 계정의 “Account Settings” 섹션에서 Heroku API 키를 찾아 생성할 수 있습니다.
 
-Alternatively, you can use the Heroku CLI to generate your API key and copy it directly to your clipboard:
+또는 Heroku CLI를 사용하여 API 키를 생성하고 클립보드에 직접 복사할 수 있습니다.
 
 `heroku auth:token | pbcopy`
 
-From there you can login to your Snyk account and paste in your Heroku credentials.
+여기서 Snyk 계정에 로그인하고 Heroku 인증 정보를 붙여넣을 수 있습니다.
 
-## Heroku: check your connection status
+## Heroku: 연결 상태 확인
 
-At any time after you’ve entered your Heroku credentials, you can check on the connection status in one of two places.
+Heroku 인증 정보를 입력한 후 언제든지 두 곳 중 한 곳에서 연결 상태를 확인할 수 있습니다.
 
-The first is on your integration settings page, where you’ll see your current integrations listed as well as their connection status.
+첫 번째는 통합 설정 페이지에서 현재 통합과 연결 상태를 볼 수 있습니다.
 
-![](<../../../.gitbook/assets/uuid-fb1cad51-f7f5-34ae-1142-f24fab0b0751-en (3) (3) (3) (3) (3) (3) (3) (3) (3) (3) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (15) (1) (1) (1) (1) (1) (14).png>)
+![](../../../.gitbook/assets/uuid-fb1cad51-f7f5-34ae-1142-f24fab0b0751-en%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(3\)%20\(2\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(15\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(14\).png)
 
-The connection status is also displayed directly on the Heroku integration settings page (found by clicking “Edit settings” on the integration settings page shown above). If you’ve entered credentials, you’ll see a box indicating whether or not Snyk is able to correctly connect to Heroku.
+연결 상태는 Heroku 통합 설정 페이지에도 직접 표시됩니다.(위에 표시된 통합 설정 페이지에서 “Edit settings”를 클릭하여 확인할 수 있음.) 인증 정보를 입력한 경우 Snyk이 Heroku에 올바르게 연결할 수 있는지 여부를 나타내는 상자가 표시됩니다.
 
 ![](../../../.gitbook/assets/uuid-36c5692a-e30e-973d-2ad4-548e38b9af93-en.png)
 
-If you are unable to connect, re-enter your account credentials to verify that they are correct.
+연결할 수 없는 경우 계정 인증 정보를 다시 입력하여 올바른지 확인하십시오.
 
 ![](../../../.gitbook/assets/uuid-f49dfc90-5951-c28f-3efb-32709c051b56-en.png)
 
-## Add a Snyk-specific user to Heroku
+## Heroku에 Snyk 관련 사용자 추가
 
-On Heroku, each user is limited to one API key so we suggest adding a dedicated user for your Snyk org. That way if at some point you need to revoke the key for any reason, you can do so without impacting anyone within your org.
+Heroku에서는 각 사용자가 하나의 API 키로 제한되므로 Snyk 조직에 대한 전용 사용자를 추가하는 것이 좋습니다. 이렇게 하면 어떤 이유로든 키를 해지해야 하는 경우 조직 내의 누구에게도 영향을 미치지 않고 해지할 수 있습니다.
 
-This can be accomplished through the Heroku admin interface, or from the command line using the following command:
+이 작업은 Heroku 관리자 인터페이스를 통해 수행하거나 다음 명령을 사용하여 명령줄에서 수행할 수 있습니다.
 
 `heroku access:add joe@example.com`
 
-You can learn more about how to add another user to your application on the [Heroku documentation](https://devcenter.heroku.com/articles/collaborating).
+[Heroku documentation](https://devcenter.heroku.com/articles/collaborating)에서 다른 사용자를 애플리케이션에 추가하는 방법에 대해 자세히 알아볼 수 있습니다.
 
-## Disable the Heroku integration
+## Heroku 통합 비활성화
 
-If you decide to disable this integration for any reason, you can accomplish this from the Integrations page in your Settings.
+어떤 이유로든 이 통합을 비활성화하기로 결정한 경우 Settings의 Integrations 페이지에서 이 작업을 수행할 수 있습니다.
 
-You need to find the specific integration you wish to deactivate in your list of integrations and click Edit settings. You are taken to a page that shows the current status of your integration, a place to update your credentials, specific to each integration (credentials, API key, Service Principal, or connection details), and a red box at the bottom to disconnect this integration, like in the example seen below:
+통합 목록에서 비활성화하려는 특정 통합을 찾아 Edit settings를 클릭해야 합니다. 아래 예와 같이 통합의 현재 상태, 각 통합(인증 정보, API 키, 서비스 주체 또는 연결 세부 정보)에 대한 인증 정보를 업데이트할 수 있는 장소 및 연결을 끊을 수 있는 하단의 빨간색 상자를 보여주는 페이지로 이동합니다.
 
-![](<../../../.gitbook/assets/uuid-b3a98f2c-4cc8-7753-8efa-396e9ec1e717-en-2- (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (23).png>)
+![](../../../.gitbook/assets/uuid-b3a98f2c-4cc8-7753-8efa-396e9ec1e717-en-2-%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(23\).png)
 
-If you choose to disconnect, your credentials will be removed from Snyk and any integration-specific projects we had been monitoring will be deactivated on Snyk.
+연결 해제를 선택하면 인증 정보가 Snyk에서 제거되고 우리가 모니터링하던 통합 관련 프로젝트가 Snyk에서 비활성화됩니다.
 
-If you choose to re-enable this integration at any time, you need to re-enter your credentials and activate your projects.
+언제든지 이 통합을 다시 활성화하려면 인증 정보를 다시 입력하고 프로젝트를 활성화해야 합니다.
 
-## Add Heroku projects to Snyk
+## Snyk에 Heroku 프로젝트 추가
 
-Once you’ve successfully connected Snyk to your Heroku account, you’ll be able to select Heroku projects that you would like Snyk to monitor. You can do this either using the “Add projects” button on the integrations page or directly from the Heroku integration settings page.
+Snyk을 Heroku 계정에 성공적으로 연결했으면 Snyk이 모니터링할 Heroku 프로젝트를 선택할 수 있습니다. 통합 페이지의 “Add projects” 버튼을 사용하거나 Heroku 통합 설정 페이지에서 직접 이 작업을 수행할 수 있습니다.
 
-In either case, you’ll see a list of any available projects on the Heroku account you connected. Select the ones you want to monitor and click the “add to Snyk” button.
+두 경우 모두 연결한 Heroku 계정에서 사용 가능한 프로젝트 목록을 볼 수 있습니다. 모니터링할 항목을 선택하고 “add to Snyk” 버튼을 클릭합니다.
 
 ![](../../../.gitbook/assets/uuid-ad9e6940-96f8-4e22-787a-03d3e7cf99dd-en.png)
 
-As soon as you’ve added the projects to Snyk, Snyk will test them and begin to display a list of all monitored Heroku applications in your [project dashboard](https://app.snyk.io/projects). You’ll also see a snapshot of any current vulnerabilities, and be able to click through for a more detailed report including any steps to fix.
+Snyk에 프로젝트를 추가하는 즉시 Snyk이 프로젝트를 테스트하고 [프로젝트 대시보드](https://app.snyk.io/projects)에 모니터링되는 모든 Heroku 애플리케이션 목록을 표시하기 시작합니다. 또한 현재 취약점의 스냅샷을 볼 수 있으며 수정 단계가 포함된 더 자세한 보고서를 클릭하여 볼 수 있습니다.
 
 ![](../../../.gitbook/assets/uuid-702795f8-5943-3dba-06a0-095d6bdc6f0c-en.png)
 
-Snyk will now continuously monitor each of those projects for known vulnerabilities. You can add more projects at any time.
+이제 Snyk은 알려진 취약점에 대해 각 프로젝트를 지속적으로 모니터링합니다. 언제든지 프로젝트를 추가할 수 있습니다.

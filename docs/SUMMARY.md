@@ -322,7 +322,7 @@
     * [Cloud Foundry 통합 개요](features/integrations/platform-as-a-service-integrations/cloud-foundry-integration-overview.md)
     * [Snyk 및 Heroku 시작하기](features/integrations/platform-as-a-service-integrations/getting-started-with-snyk-and-heroku.md)
     * [Snyk을 Heroku에 연결하기](features/integrations/platform-as-a-service-integrations/connect-snyk-to-heroku.md)
-    * [핵심 통합 개요](features/integrations/platform-as-a-service-integrations/pivotal-integration-overview.md)
+    * [Pivotal 통합 개요](features/integrations/platform-as-a-service-integrations/pivotal-integration-overview.md)
 * [사용자 및 그룹 관리](features/user-and-group-management/README.md)
   * [Authentication](features/user-and-group-management/authentication/README.md)
     * [Authentication for third-party tools](features/user-and-group-management/authentication/authentication-for-third-party-tools.md)
