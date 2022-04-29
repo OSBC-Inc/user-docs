@@ -1,44 +1,44 @@
-# Azure Functions overview
+# Azure Functions 개요
 
-Snyk's Azure Function Apps integration lets you monitor the deployed code of your node.js, .Net and Java Azure Function Apps for any known vulnerabilities found in the application's dependencies, testing at a frequency you control.
+Snyk의 Azure Function Apps 통합으로 node.js, .Net 및 Java Azure Function Apps의 배포된 코드를 모니터링하여 애플리케이션의 디펜던시에서 발견되는 알려진 취약점을 제어하고 설정한 빈도로 테스트할 수 있습니다.
 
-For each test, Snyk will communicate directly with Azure to determine exactly what code is currently deployed and what dependencies are being used. Each dependency will in turn be tested against Snyk's vulnerability database to see if it contains any known vulnerabilities.
+각 테스트마다 Snyk은 Azure와 직접 통신하여 현재 어떤 코드가 배포되고 어떤 디펜던시가 사용되고 있는지 정확히 파악합니다. 각 디펜던시는 Snyk의 취약점 데이터베이스에 대해 테스트되어 알려진 취약점이 있는지 확인합니다.
 
-If vulnerabilities are found, you will be alerted (via email or Slack) so that you can take immediate action.
+취약점이 발견되면 즉시 조치를 취할 수 있도록 이메일 또는 슬랙을 통해 경고를 받게 됩니다.
 
-In order to turn on the Azure Function Apps integration you'll need to:
+Azure Function Apps 통합을 설정하려면 다음 작업을 수행해야 합니다.
 
-1. Connect to Azure from the integrations page
-2. Add your Azure account credentials to Snyk
-3. Select the projects you want to monitor and click "**Add to Snyk**"
+1. 통합 페이지에서 Azure에 연결
+2. Snyk에 Azure 계정 인증 정보 추가
+3. 모니터링할 프로젝트를 선택하고 "**Add to Snyk**"을 클릭합니다.
 
-## **Connect Snyk to Azure Functions**
+## Snyk을 **Azure Functions**에 연결
 
-For Snyk to monitor your deployed Azure Function apps, you must connect Snyk to your Azure account.
+Snyk이 배포된 Azure Function 앱을 모니터링하려면 Snyk을 Azure 계정에 연결해야 합니다.
 
-To do this, in [your Integrations page](https://app.snyk.io/integrations), navigate to **Serverless** and click **Azure Functions**:
+이렇게 하려면 [Integrations 페이지](https://app.snyk.io/integrations)에서 Serverless로 이동하고 Azure Functions를 클릭합니다.
 
 ![](<../../../.gitbook/assets/Screenshot 2021-10-27 at 09.36.33.png>)
 
-This will take you to a page where you'll be prompted to enter your Azure service principal credentials:
+다음으로 Azure 서비스 주체 인증 정보를 입력하라는 메시지가 표시되는 페이지로 이동합니다.
 
 ![](<../../../.gitbook/assets/image (29).png>)
 
-Instructions for how to generate and locate your Azure service principal credentials are below.
+Azure 서비스 주체 인증 정보를 생성하고 찾는 방법은 다음과 같습니다.
 
-## **Generate your Azure service principal**
+## **Azure** 서비스 주체 생성
 
-To give Snyk access to your Azure account, you'll need a valid service principal.
+Snyk에게 Azure 계정에 대한 액세스 권한을 부여하려면 유효한 서비스 주체가 필요합니다.
 
-To create a service principal for use by Snyk, you can either use the [Azure Portal](https://portal.azure.com) or the [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+Snyk에서 사용할 서비스 주체를 생성하려면 [Azure 포탈](https://portal.azure.com) 또는 [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)을 사용하면 됩니다.
 
-After installing the Azure CLI 2.0, you have access to the `az` command. Authenticate the CLI with your account using:
+Azure CLI 2.0을 설치한 후에는 `az` 명령에 액세스할 수 있습니다. 다음을 사용하여 계정으로 CLI를 인증합니다.
 
 ```
 az login
 ```
 
-Once authenticated, create the service principal:
+인증되면 서비스 주체를 생성합니다.
 
 #### Input:
 
@@ -58,53 +58,53 @@ az ad sp create-for-rbac --name SpNameExample --role "Website Contributor"
 }
 ```
 
-The results above contain JSON output of the service principal name, password, and tenant that you'll need for setting up Snyk. From there you can login to your Snyk account and paste in your name, password, and tenant. More information on creating a service principal for Azure can be found in Azure's documentation: [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli) , [Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)
+위의 결과에는 Snyk 설정에 필요한 서비스 주체 이름, 비밀번호 및 tenant의 JSON 출력이 포함되어 있습니다. 여기서 Snyk 계정에 로그인하고 이름, 비밀번호 및 tenant에 붙여넣을 수 있습니다. Azure의 서비스 주체 새성에 대한 자세한 내용은 Azure의 문서인 [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli) , [포탈](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)에서 확인할 수 있습니다.
 
-## **Azure Functions: check your connection status**
+## **Azure Functions:** 연결 상태 확인
 
-At any time after you've entered your Azure service principal, you can check on the connection status in one of two places.
+Azure 서비스 주체를 입력한 후 언제든지 두 곳 중 한 곳에서 연결 상태를 확인할 수 있습니다.
 
-The first is on your integration settings page, where you'll see your current integrations listed as well as their connection status.
+첫 번째는 통합 설정 페이지에서 현재 통합과 연결 상태를 볼 수 있습니다.
 
 ![](<../../../.gitbook/assets/image (25).png>)
 
-You can also check the status directly on the Azure Functions integration settings page (found by clicking "**Edit settings**" on the integration settings page shown above). If you've entered credentials, you'll see a box indicating whether or not Snyk is able to correctly connect to Azure:
+또한 Azure Functions 통합 설정 페이지에서 직접 상태를 확인할 수 있습니다.(위에 표시된 통합 설정 페이지에서 "**Edit settings**"를 클릭하면 확인할 수 있음.) 인증 정보를 입력한 경우 Snyk이 Azure에 올바르게 연결할 수 있는지 여부를 나타내는 상자가 표시됩니다.
 
 ![](<../../../.gitbook/assets/image (31).png>)
 
-If you are unable to connect, re-enter your account credentials to verify that they are correct:
+연결할 수 없는 경우 계정 인증 정보를 다시 입력하여 올바른지 확인합니다.
 
 ![](<../../../.gitbook/assets/image (27).png>)
 
-## **Disable the Azure Functions integration**
+## **Azure Functions** 통합 비활성화
 
-If you decide to disable this integration for any reason, you can accomplish this from the Integrations page in your Settings.
+어떤 이유로든 이 통합을 비활성화하기로 결정한 경우 설정의 통합 페이지에서 이 작업을 수행할 수 있습니다.
 
-You need to find the specific integration you wish to deactivate in your list of integrations and click Edit settings. You are taken to a page that shows the current status of your integration, a place to update your credentials, specific to each integration (credentials, API key, Service Principal, or connection details), and a red box at the bottom to disconnect this integration, like in the example seen below:
+통합 목록에서 비활성화하려는 특정 통합을 찾아 Edit settings를 클릭해야 합니다. 아래 예와 같이 통합의 현재 상태, 각 통합(인증 정보, API 키, 서비스 주체 또는 연결 세부 정보)에 대한 인증 정보를 업데이트할 수 있는 장소 및 연결을 끊을 수 있는 하단의 빨간색 상자를 보여주는 페이지로 이동합니다.
 
 ![](<../../../.gitbook/assets/image (26).png>)
 
-If you choose to disconnect, your credentials will be removed from Snyk and any integration-specific projects we had been monitoring will be deactivated on Snyk.
+연결을 끊도록 선택하면 Snyk에서 인증 정보가 제거되고 모니터링하던 모든 통합 관련 프로젝가 Snyk에서 비활성화됩니다.
 
-If you choose to re-enable this integration at any time, you need to re-enter your credentials and activate your projects.
+언제든지 이 통합을 다시 사용하도록 선택한 경우 인증 정보를 다시 입력하고 프로젝트를 활성화해야 합니다.
 
-## **Add Azure Functions to Snyk**
+## Snyk에 Azure Functions 추가
 
-Once you've successfully connected Snyk to your Azure account, you'll be able to select Azure functions that you would like Snyk to monitor. You can do this either using the **"Add projects"** button on the integrations page, or directly from the Azure Functions integration settings page.
+Snyk을 Azure 계정에 성공적으로 연결했으면 Snyk이 모니터링할 Azure Functions를 선택할 수 있습니다. 통합 페이지의 **"Add projects"** 버튼을 사용하거나 Azure Functions 통합 설정 페이지에서 직접 이 작업을 수행할 수 있습니다.
 
-In either case, you'll see a list of any available Function apps on the Azure account you connected. Select the ones you want to monitor and click the "**Add to Snyk**" button.
+두 경우 모두 연결한 Azure 계정에서 사용 가능한 Function 앱 목록을 볼 수 있습니다. 모니터링할 항목을 선택하고 **“Add to Snyk”** 버튼을 클릭합니다.
 
 {% hint style="warning" %}
-**NOTE:** Current support exists for importing **v2 functions only--all functions will be ignored.**
+**NOTE:** 현재 **v2 functions** 가져오기에 대한 지원만 존재합니다. **모든 functions 무시됩니다.**&#x20;
 {% endhint %}
 
 ![](<../../../.gitbook/assets/image (30).png>)
 
-As soon as you've added the projects to Snyk, Snyk will test them and begin to display a list of all monitored Azure functions in your [project dashboard](https://app.snyk.io/projects). You'll also see a snapshot of any current vulnerabilities, and be able to click through for a more detailed report including any steps to fix:
+Snyk에 프로젝트를 추가하는 즉시 Snyk이 프로젝트를 테스트하고 [프로젝트 대시보드](https://app.snyk.io/projects)에 모니터링되는 모든 Azure functions 목록을 표시하기 시작합니다. 또한 현재 취약점의 스냅샷을 볼 수 있으며 수정 단계가 포함된 더 자세한 보고서를 클릭하여 볼 수 있습니다.
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
-Snyk will now continuously monitor each of those functions for known vulnerabilities. You can add more functions at any time.
+이제 Snyk은 알려진 취약점에 대해 각 functions를 지속적으로 모니터링합니다. 언제든지 더 많은 functions를 추가할 수 있습니다.
 
 **NOTE**\
-for Node.js and .Net, dev dependencies will be ignored.
+Node.js 및 .Net의 경우 개발 디펜던시는 무시됩니다.

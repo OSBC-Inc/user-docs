@@ -1,16 +1,16 @@
-# AWS Lambda integration
+# AWS Lambda 통합
 
-Enable integration between your deployed AWS Lambda resources and a Snyk organization, and start managing the security of your deployed code.
+배포된 AWS Lambda 리소스와 Snyk 조직 간의 통합을 사용하도록 설정하고 배포된 코드의 보안 관리를 시작합니다.
 
-**Automated Process:**
+**자동 프로세스:**
 
-### [Open the Snyk Security on AWS Guide](https://aws.amazon.com/quickstart/architecture/snyk-security/)
+### [AWS에서 Snyk 보안 가이드 열기 ](https://aws.amazon.com/quickstart/architecture/snyk-security/)
 
-You have the option of establishing cross-account access to enable Snyk's AWS Lambda integration as a 1-click deployment. This options is available as an official [AWS Quick Start](https://aws.amazon.com/quickstart/architecture/snyk-security/) and eliminates the need for manual configuration.
+단일 계정 액세스를 설정하여 Snyk의 AWS Lambda 통합을 클릭 한 번으로 구현할 수 있습니다. 이 옵션은 공식 [AWS Quick Start](https://aws.amazon.com/quickstart/architecture/snyk-security/)로 사용 가능하며 수동 구성이 필요하지 않습니다.
 
 ![](../../../.gitbook/assets/quickstart-snyk-security-lambda.png)
 
-You will need your Snyk **Organization ID** and AWS IAM [role ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference\_identifiers.html#identifiers-arns) to complete the integration. The role ARN will be provided for you in the AWS CloudFormation Console's Output tab.
+통합을 완료하려면 Snyk **Organization ID** 와 AWS IAM [role ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference\_identifiers.html#identifiers-arns)이 필요합니다. role ARN은 AWS Cloud Formation Console의 Output 탭에서 제공됩니다.
 
 ![](../../../.gitbook/assets/cloudformation-launch-stack.png)
 
