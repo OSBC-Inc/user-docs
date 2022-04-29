@@ -1,42 +1,42 @@
-# Service accounts
+# 서비스 계정
 
 실제 Snyk 사용자 토큰을 사용하지 않고도 CI(지속적 통합) 및 기타 자동화 용도로 사용할 서비스 계정을 설정할 수 있습니다. 서비스 계정은 연결된 API 토큰만 있는 특수한 시스템 사용자 유형으로 표준 사용자 인증 정보를 대체합니다. 이 토큰을 사용하여 개발 도구와의 통합을 설정하고 CLI 및 API를 사용할 때 Snyk 계정에 액세스하기 위한 인증 정보를 제공합니다. API에 대한 자세한 내용은 [API documentation](../../snyk-api-info/)을 참조하십시오.
 
-You can generate single or multiple tokens on the organization or group levels to manage your integrations. Use group-level tokens to access group API endpoints, organization API endpoints, and the CLI—for all organizations within the group.
+조직 또는 그룹 수준에서 단일 또는 여러 토큰을 생성하여 통합을 관리할 수 있습니다. 그룹 수준 토큰을 사용하여 그룹 내 모든 조직에 대한 그룹 API endpoint, 조직 API endpoint 및 CLI에 액세스할 수 있습니다.
 
-Each service account has a unique name associated with it to make it easier to recognize. The name is unique for the organization and cannot be re-used.
+각 서비스 계정에는 인식하기 쉽도록 연결된 고유한 이름이 있습니다. 이름은 조직에서 중복되어 존재할 수 없으며 재사용할 수 없습니다.
 
-By using a service account token, you can:
+서비스 계정 토큰을 사용하여 다음 작업을 수행할 수 있습니다.
 
-* Create multiple tokens for different uses or integrations in order to manage each separately
-* Ensure seamless integrations even when employees change roles or close their Snyk accounts, for example.
+* 통합을 개별적으로 관리하기 위한 여러개의 토큰 생성
+* 직원이 Role을 변경하거나 Snyk 계정을 닫는 경우에도 원활한 통합을 보장합니다.
 
 {% hint style="info" %}
-Roles are only for service accounts on the group level, and are only for paid accounts.
+Role은 그룹 수준의 서비스 계정에만 해당되며 유료 계정에만 해당됩니다.
 {% endhint %}
 
 {% hint style="info" %}
-Service accounts can be used for GitHub Enterprise integrations. If your team needs to set up a service account in GitHub, it will need to be set up as a GitHub Enterprise integration. GHE is only available though Snyk Enterprise accounts.
+서비스 계정은 GitHub Enterprise 통합에 사용할 수 있습니다. 팀이 GitHub에서 서비스 계정을 설정해야 하는 경우 GitHub Enterprise 통합으로 설정해야 합니다. GHE는 Snyk Enterprise 계정을 통해서만 사용할 수 있습니다.
 {% endhint %}
 
-## Set up a service account
+## 서비스 계정 설정
 
-Generate single or multiple tokens on the organization or group levels to manage your integrations.
+조직 또는 그룹 수준에서 단일 또는 여러 토큰을 생성하여 통합을 관리합니다.
 
-### Prerequisites
+### 전제 조건
 
-**Feature availability**\
-This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 사용 여부**\
+이 기능은 Enterprise plan에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 
-To create a group service account you must be a group admin. To create an org service account you must be an org admin or a group admin.
+그룹 서비스 계정을 만들려면 그룹 관리자여야 합니다. 조직 서비스 계정을 만들려면 조직 관리자 또는 그룹 관리자여야 합니다.
 
-This process describes all options.
+이 프로세스에서는 모든 옵션을 설명합니다.
 
-## How to set up a service account
+## 서비스 계정 설정 방법
 
-* Log in to your account and navigate to the relevant group and organization that you want to manage.
-* Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Service accounts** to view existing service accounts and their details.
-* Click **Create a service account** to create a new one. The screen that loads varies a little, depending on if you chose a group (left) or an organization (right):
+* 계정에 로그인하고 관리할 관련 그룹 및 조직으로 이동합니다.
+* 기존 서비스 계정과 해당 세부 정보를 확인하려면 settings ![](../../../.gitbook/assets/cog\_icon.png) > **Service accounts**를 클릭하십시오.
+* **Create a service account**를 클릭하여 새로운 계정을 생성합니다. 화면은 그룹 또는 조직 중 어느 쪽을 선택했는지에 따라 다르게 나타납니다.
 
 ![](../../../.gitbook/assets/uuid-115442e7-a8bd-44df-43f8-8867a4cdc6ba-en.png)
 

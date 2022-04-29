@@ -249,7 +249,7 @@
 * [Snyk Integrations](features/integrations/README.md)
   * [통합 관리](features/integrations/managing-integrations/README.md)
     * [SCM(Git) 및 CI/CD 통합 배포](features/integrations/managing-integrations/scm-git-and-ci-cd-integration-deployment-intro.md)
-    * [Service accounts](features/integrations/managing-integrations/service-accounts.md)
+    * [서비스 계정](features/integrations/managing-integrations/service-accounts.md)
     * [Clone an integration across your Snyk orgs](features/integrations/managing-integrations/clone-an-integration-across-your-snyk-orgs.md)
     * [Disable a git integration](features/integrations/managing-integrations/disable-a-git-integration.md)
   * [Snyk CI/CD Integration](features/integrations/ci-cd-integrations/README.md)
