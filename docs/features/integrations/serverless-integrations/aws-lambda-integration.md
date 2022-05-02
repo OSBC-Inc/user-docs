@@ -4,7 +4,7 @@
 
 **자동 프로세스:**
 
-### [AWS에서 Snyk 보안 가이드 열기 ](https://aws.amazon.com/quickstart/architecture/snyk-security/)
+### ****[AWS에서 Snyk 보안 가이드 열기 ](https://aws.amazon.com/quickstart/architecture/snyk-security/)
 
 단일 계정 액세스를 설정하여 Snyk의 AWS Lambda 통합을 클릭 한 번으로 구현할 수 있습니다. 이 옵션은 공식 [AWS Quick Start](https://aws.amazon.com/quickstart/architecture/snyk-security/)로 사용 가능하며 수동 구성이 필요하지 않습니다.
 
