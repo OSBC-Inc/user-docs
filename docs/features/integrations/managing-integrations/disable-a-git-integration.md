@@ -1,13 +1,13 @@
-# Disable a git integration
+# Git 통합 비활성화
 
-If you decide to disable this integration for any reason, you can accomplish this from the Integrations page in your Settings.
+어떤 이유로든 해당 통합을 비활성화하기로 결정한 경우 설정의 통합 페이지에서 작업을 수행할 수 있습니다.
 
-You need to find the specific integration you wish to deactivate in your list of integrations and click Edit settings. You are taken to a page that shows the current status of your integration, a place to update your credentials, specific to each integration (credentials, API key, Service Principal, or connection details), and a red box at the bottom to disconnect this integration, like in the example seen below:
+비활성화할 특정 통합을 통합 목록에서 찾고 설정 편집을 클릭해야 합니다. 아래 예와 같이 통합의 현재 상태, 각 통합(인증서, API 키, Service Principle 또는 연결 세부 정보)에 대한 자격 증명을 업데이트하는 위치, 이 통합의 연결을 끊는 빨간색 상자가 표시됩니다.
 
-![](<../../../.gitbook/assets/uuid-b3a98f2c-4cc8-7753-8efa-396e9ec1e717-en-2- (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (33).png>)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-926c943b46f0588c314539edbf29b4b9dd29051d\_uuid-b3a98f2c-4cc8-7753-8efa-396e9ec1e717-en-2- (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (30).png>)
 
-If you choose to disconnect, your credentials will be removed from Snyk and any integration-specific projects we had been monitoring will be deactivated on Snyk.
+연결을 끊도록 선택하면 Snyk에서 인증 정보가 제거되고 모니터링하던 모든 통합 관련 프로젝트가 Snyk에서 비활성화됩니다.
 
-If you choose to re-enable this integration at any time, you need to re-enter your credentials and activate your projects.
+언제든지 이 통합을 다시 사용하도록 선택한 경우 인증 정보를 다시 입력하고 프로젝트를 활성화해야 합니다.위의 내용은 GitHub 통합에는 적용되지 않습니다. GitHub 연결을 해제하려면 GitHub 통합 페이지를 참조하십시오.
 
-**Please note**, the above does **NOT** apply to a GitHub integration. For disconnecting GitHub, see our [GitHub Integration page](../git-repository-scm-integrations/github-integration.md#disconnecting-the-github-integration).
+위의 내용은 **GitHub 통합에는 적용되지 않습니다**. GitHub 연결을 해제하려면 [GitHub Integration page](../git-repository-scm-integrations/github-integration.md#disconnecting-the-github-integration)를 참조하십시오.

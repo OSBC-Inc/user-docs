@@ -1,20 +1,20 @@
-# Snyk CI/CD Integration
+# Snyk CI/CD 통합
 
-## CI/CD deployment methods
+## CI/CD 배포 방법
 
 {% hint style="info" %}
-All of these methods provide the same results, as they all rely on the same Snyk engine. Thus the same arguments or options apply regardless of the deployment method you select.
+이 모든 방법은 동일한 Snyk 엔진에 의존하기 때문에 동일한 결과를 제공합니다. 따라서 선택한 배포 방법에 관계없이 동일한 인수 또는 옵션이 적용됩니다.
 {% endhint %}
 
-There are various ways to configure Snyk within your pipeline. Choose a method depending on your environment and preference. You can expect all methods to lead to a successful run.
+파이프라인 내에서 Snyk를 구성하는 방법은 다양합니다. 환경 및 기본 설정에 따라 방법을 선택합니다. 모든 방법이 성공적인 실행으로 이어지기를 기대할 수 있습니다.
 
-### **Use Snyk native plugins**
+### Snyk 네이티브 플러그인 사용
 
-Snyk native plugins are available for most common CI/CD tools. Using these plugins is the easiest way to set up and get started. The plugins include the most common parameters and options in the user interface (UI).
+Snyk 네이티브 플러그인은 대부분의 일반적인 CI/CD 도구에 사용할 수 있습니다. 이러한 플러그인을 사용하는 것이 가장 쉬운 설정 및 시작 방법입니다. 플러그인에는 사용자 인터페이스(UI)의 가장 일반적인 매개 변수 및 옵션이 포함됩니다.
 
-### **Deploy Snyk CLI using the npm method**
+### **npm method**를 사용하여 Snyk CLI 배포
 
-Follow steps similar to those for [installing the CLI](../../../snyk-cli/install-the-snyk-cli/) locally. You must be able to run an npm command in the pipeline script. This method has the advantage of completely aligning with the CLI experience so you can easily troubleshoot and configure.
+[CLI를 로컬로 설치](../../snyk-cli/install-the-snyk-cli/)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
 
 ### **Deploy Snyk CLI binary version**
 

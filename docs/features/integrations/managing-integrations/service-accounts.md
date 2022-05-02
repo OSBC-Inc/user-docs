@@ -42,47 +42,47 @@ Role은 그룹 수준의 서비스 계정에만 해당되며 유료 계정에만
 
 ![](../../../.gitbook/assets/uuid-632ed37e-ed7a-519d-dade-a245a35e6ac6-en.png)
 
-* From the **Service Account** name field, enter a unique name for this token. Remember this name can be used only once for tokens in the same area, either per organization or per group.
+* **Service Account**에 토큰 명을 입력합니다. 토큰 명은 조직 또는 그룹별로 동일한 영역의 토큰에 한 번만 사용할 수 있습니다.
 
 ![](../../../.gitbook/assets/uuid-01c4cc98-23c9-3cb1-4972-1aa4f83ad98e-en.png)
 
-* From the **Role** dropdown list, select **Viewer** or **Admin** to configure the scope of the token:
-  * Viewer enables read-only access.
-  * Admin enables full administrator access.
-*   Click **Create**. The token is generated and displayed from the same area, similar to the following:
+* **Role** 목록에서 **Viewer** 또는 **Admin**을 선택하여 토큰의 범위를 구성합니다.
+  * Viewer는 읽기 전용 액세스를 활성화합니다.
+  * Admin은 전체 관리자 액세스를 활성화합니다.
+*   **Create**를 클릭합니다. 토큰은 다음과 유사한 동일한 영역에서 생성 및 표시됩니다.
 
-    Make sure you copy this token as you won’t see it again. You can click **Close and Hide** once you've copied the token; either way, when you navigate away from this page it will no longer be accessible. This is a security standard to keep your tokens safe. The new token is also added to your **Existing service accounts** list, similar to the following image:
+    이 토큰은 다시 볼 수 없으므로 반드시 복사하십시오. 토큰을 복사한 후 **Close 및 Hide**를 클릭할 수 있습니다. 어느 쪽이든 이 페이지에서 벗어나면 더 이상 액세스할 수 없습니다. 이는 토큰을 안전하게 보호하기 위한 보안 표준입니다. 다음 이미지와 유사한 **기존 서비스 계정** 목록에도 새로운 토큰이 추가됩니다.
 
-![](../../../.gitbook/assets/uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en%20\(3\)%20\(3\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(12\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-61a8f06ca370909c1292d121c731849f7c68b9fb\_uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en (3) (3) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (12).png>)
 
-* Furthermore, if you created the token for the entire group with an **Admin** role, the token also appears in the **Existing service accounts** list for each of its organizations, though it can only be edited from the **Group** level.
+* 또한 **관리자** Role로 전체 그룹에 대한 토큰을 생성한 경우 **그룹** 수준에서만 편집할 수 있지만 각 조직의 **기존 서비스 계정** 목록에도 토큰이 표시됩니다.
 
 ![](../../../.gitbook/assets/uuid-1110723e-74e7-3090-3e69-da65f93acfcc-en.png)
 
-* If you created the token from an organization that is part of a group, the token now also appears in the **Existing service account** list on the group level, where the group admin can also change the token name or even delete it.
+* 그룹에 속한 조직에서 토큰을 생성한 경우 그룹 수준의 **기존 서비스 계정** 목록에도 토큰이 나타나며 그룹 관리자가 토큰 이름을 변경하거나 삭제할 수도 있습니다.
 
 ![](../../../.gitbook/assets/uuid-50563edb-6a75-9f37-2040-cd814fdf9ead-en.png)
 
-* Click any of the links to update the names for a service account token - for Group-level tokens, from the Group level only; for Organization-level tokens, from the relevant organization and also from the Group level:
+* 서비스 계정 토큰의 이름을 업데이트하려면 링크를 클릭합니다. 그룹 레벨의 경우 그룹 레벨의 경우에만 적용되며, 조직 레벨의 경우 관련 조직 및 그룹 레벨에 적용됩니다.
 
 ![](../../../.gitbook/assets/uuid-b34e3d10-bb0c-b608-bc08-12f2bf0a4fc0-en.png)
 
-* Repeat these steps to create multiple tokens for the same or any other organization or group.
+* 이 단계를 반복하여 동일하거나 다른 조직 또는 그룹에 대해 여러 개의 토큰을 작성합니다.
 
-## Edit and delete a service account
+## 서비스 계정 편집 및 삭제
 
-Administrators can change token names and delete tokens. When you delete a service account, the API token associated with it becomes immediately invalidated. When an account is managed with groups, the organization and the group admins can delete tokens for the organization; only group admins can view and manage tokens on the group level. Deleting a service account is the same as revoking the API token.
+관리자는 토큰 이름을 변경하고 토큰을 삭제할 수 있습니다. 서비스 계정을 삭제하면 서비스 계정과 연결된 API 토큰이 즉시 무효화됩니다. 계정을 그룹으로 관리하는 경우 조직 및 그룹 관리자는 조직의 토큰을 삭제할 수 있습니다. 그룹 관리자만 그룹 수준에서 토큰을 확인하고 관리할 수 있습니다. 서비스 계정을 삭제하는 것은 API 토큰을 삭제하는 것과 같습니다.
 
-## How to edit and delete a service account
+## 서비스 계정 편집 및 삭제 방법
 
-*   Log in to your account and navigate to the relevant group and organization that you want to manage.
+*   계정에 로그인하고 관리할 관련 그룹 및 조직으로 이동합니다.
 
-    For group tokens, navigate to the group level. For organization tokens, group admins can delete from either the group or the relevant organization; organization admins should navigate to the relevant organization.
-* Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Service accounts**.
-* Scroll to find the list of existing service accounts:
+    그룹 토큰의 경우 그룹 수준으로 이동합니다. 조직 토큰의 경우 그룹 관리자는 그룹 또는 관련 조직에서 삭제할 수 있습니다. 조직 관리자는 관련 조직으로 이동해야 합니다.
+* settings ![](../../../.gitbook/assets/cog\_icon.png) > **Service accounts**를 클릭합니다.
+* 스크롤하여 기존 서비스 계정 목록을 찾습니다.
 
-![](../../../.gitbook/assets/uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en%20\(3\)%20\(3\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(9\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-61a8f06ca370909c1292d121c731849f7c68b9fb\_uuid-799b88fc-d1d7-72c9-5ceb-30fb2a8d572e-en (3) (3) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (13).png>)
 
-* From the list of existing tokens:
-  * Click **Delete** to delete a token and invalidate it immediately. When prompted, click **OK**. Remember that you cannot re-generate the same token!
-  * Click the token name to navigate to change the token name and click **Save**.
+* 기존 토큰 목록에서 다음 작업을 수행합니다.
+  * 토큰을 삭제하고 즉시 무효화하려면 **Delete**를 클릭합니다. 메시지가 나타나면 **OK**를 클릭합니다.삭제 후 동일한 토큰을 다시 생성할 수 없습니다!
+  * 토큰 이름을 클릭하여 토큰 이름을 변경하고 **Save**를 클릭합니다.
