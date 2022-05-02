@@ -1,6 +1,6 @@
 # Snyk CI/CD 통합
 
-## CI/CD 배포 방법
+## Snyk을 게이트키퍼로 사용CI/CD 배포 방법
 
 {% hint style="info" %}
 이 모든 방법은 동일한 Snyk 엔진에 의존하기 때문에 동일한 결과를 제공합니다. 따라서 선택한 배포 방법에 관계없이 동일한 인수 또는 옵션이 적용됩니다.
@@ -16,59 +16,59 @@ Snyk 네이티브 플러그인은 대부분의 일반적인 CI/CD 도구에 사�
 
 [CLI를 로컬로 설치](../../snyk-cli/install-the-snyk-cli/)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
 
-### **Deploy Snyk CLI binary version**
+### Snyk CLI 바이너리 버전 배포
 
-The advantage of the binary setup is that it has no dependency with the local environment. For example, it is useful if you cannot run an npm command in your pipeline.
+바이너리 설치의 장점은 로컬 환경과의 종속성이 없다는 것입니다. 예를 들어 파이프라인에서 npm 명령을 실행할 수 없는 경우에 유용합니다.
 
-CLI binaries are available on the [CLI GitHub repository](https://github.com/snyk/cli/tags).
+CLI 바이너리 파일은 [CLI GitHub repository](https://github.com/snyk/cli/tags)에서 사용할 수 있습니다.
 
-Snyk has Linux, Windows and other versions.
+Snyk은 Linux, Windows 및 다른 버전을 가지고 있습니다.
 
-### **Deploy a Snyk container**
+### Snyk 컨테이너 배포
 
-You may also deploy Snyk in your pipeline using one of the Snyk images in [Dockerhub](https://hub.docker.com/r/snyk/snyk).
+[Dockerhub](https://hub.docker.com/r/snyk/snyk)의 Snyk 이미지 중 하나를 사용하여 파이프라인에 Snyk를 배포할 수 있습니다.
 
-### Examples of Snyk CI/CD Integrations
+### Snyk CI/CD 통합 예시
 
-This repo shows some examples of binary and npm integrations for various CI/CD tools: [CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples).
+[CI/CD examples](https://github.com/snyk-labs/snyk-cicd-integration-examples)는 다양한 CI/CD 도구에 대한 바이너리 및 npm 통합의 몇 가지 예시를 제공합니다.
 
-## Typical stages of adoption
+## 일반적인 채택 단계
 
-Developer teams typically adopt Snyk in the following stages:
+개발 팀은 일반적으로 다음과 같은 단계에서 Snyk을 채택합니다.
 
-1. [Expose vulnerabilities](./#stage-1-expose-vulnerabilities-snyk-monitor) (`snyk monitor`)
-2. [Use Snyk as a gatekeeper](./#stage-2-use-snyk-as-a-gatekeeper-snyk-test) (`snyk test`)
-3. [Continuous monitoring](./#stage-3-continuous-monitoring-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
+1. [취약점 노출](./#stage-1-expose-vulnerabilities-snyk-monitor) (`snyk monitor`)
+2. [Snyk을 게이트 키퍼로 사용](./#stage-2-use-snyk-as-a-gatekeeper-snyk-test) (`snyk test`)
+3. [지속적인 모니터링](./#stage-3-continuous-monitoring-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
 
-### **Stage 1: Expose vulnerabilities (snyk monitor)**
+### **1** 단계**:** 취약점 노출 **(snyk monitor)**
 
-A typical approach is using Snyk results to expose vulnerabilities during the development process. This increases visibility of vulnerabilities among members of your team.
+일반적인 접근 방식은 Snyk 결과를 사용하여 개발 프로세스 중에 취약점을 노출하는 것입니다. 이렇게 하면 팀 구성원 간의 취약점에 대한 가시성이 향상됩니다.
 
-When you first implement Snyk in your pipeline, using only the `snyk monitor` command is recommended. If you use one of the Snyk CI plugins, it is recommended that you configure the plugin to _not_ fail the build.
+파이프라인에서 Snyk를 처음 구현할 때는 snyk monitor 명령만 사용하는 것이 좋습니다. Snyk CI 플러그인 중 하나를 사용하는 경우 빌드에 실패하지 않도록 플러그인을 구성하는 것이 좋습니다.
 
-This is because all projects have vulnerabilities, and after you set Snyk to fail the build, every build fails because of Snyk. This may cause problems with your team being quickly overwhelmed with failure messages.
+이는 모든 프로젝트에 취약점이 있으며 Snyk를 빌드에 실패하도록 설정한 후에는 모든 빌드가 Snyk으로 인해 실패하기 때문입니다. 이로 인해 팀이 실패 메시지로 빠르게 처리되는 문제가 발생할 수 있습니다.
 
-Using `snyk monitor` to expose results provides information without disrupting processes.
+`snyk monitor`를 사용하여 결과를 노출하면 프로세스를 중단하지 않고 정보를 제공합니다.
 
-For information about `snyk monitor`, see the [`monitor` command help](../../../snyk-cli/commands/monitor.md).
+`snyk monitor`에 대한 자세한 내용은 [`monitor` command help](../../../snyk-cli/commands/monitor.md)를 참조하십시오.
 
-### **Stage 2: Use Snyk as a gatekeeper (snyk test)**
+### **2** 단계**:** Snyk을 게이트 키퍼로 사용 **(snyk test)**
 
-Using Snyk as a gatekeeper prevents the introduction of new vulnerabilities (sometimes known as "stopping the bleeding").
+Snyk을 게이트 키퍼로 사용하면 새로운 취약점(때로는"stopping the bleeding"라고도 함)이 발생하는 것을 방지할 수 있습니다.
 
-After your teams understand the vulnerabilities in their applications, and develop a process for fixing them early in the development cycle, you can configure Snyk to fail your builds, to prevent introducing vulnerabilities into your applications.
+팀이 애플리케이션의 취약점을 파악하고 개발 주기 초기에 이를 수정하기 위한 프로세스를 개발하면 Snyk이 빌드에 실패하도록 구성하여 애플리케이션에 취약점이 유입되는 것을 방지할 수 있습니다.
 
-Add `snyk test` to your build or enable the fail functionality to make Snyk fail your builds, providing the results output to the console. Your developers or DevOps teams can use the results to decide whether to stop or continue the build.
+`snyk test`를 빌드에 추가하거나 실패 기능을 활성화하여 Snyk가 빌드에 실패하도록 하여 결과 출력을 콘솔에 제공합니다. 개발자 또는 DevOps 팀은 결과를 사용하여 빌드를 중지할지 아니면 계속할지 결정할 수 있습니다.
 
-For information about `snyk test`, see the [`test` command help](../../../snyk-cli/commands/test.md).
+`snyk test`에 대한 자세한 내용은 [`test` command help](../../../snyk-cli/commands/test.md)를 참조하십시오.
 
-### **Stage 3: Continuous monitoring (snyk test** and **snyk monitor)**
+### **3** 단계**:** 지속적인 모니터링 **(snyk test** and **snyk monitor)**
 
-After you configure Snyk to fail the build when vulnerabilities are detected, you can configure Snyk to send a snapshot of your project's successful builds to Snyk for ongoing monitoring.
+취약점이 감지될 때 빌드에 실패하도록 Snyk을 구성한 후 지속적인 모니터링을 위해 프로젝트의 성공적인 빌드의 스냅샷을 Snyk으로 보내도록 Snyk을 구성할 수 있습니다.
 
-To do this, configure your pipeline to run `snyk monitor` if your `snyk test` returns a successful exit code.
+이렇게 하려면 `snyk test`가 종료 코드를 성공적으로 반환할 경우 `snyk monitor`를 실행하도록 파이프라인을 구성하십시오.
 
-## **Technical implementation**
+## 기술적 구현
 
 To configure Snyk to run in a pipeline, retrieve key configuration inputs from your Snyk account.
 
