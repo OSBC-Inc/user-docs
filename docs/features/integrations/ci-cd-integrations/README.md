@@ -70,118 +70,118 @@ Snyk을 게이트 키퍼로 사용하면 새로운 취약점(때로는"stopping 
 
 ## 기술적 구현
 
-To configure Snyk to run in a pipeline, retrieve key configuration inputs from your Snyk account.
+파이프라인에서 실행하도록 Snyk를 구성하려면 Snyk 계정에서 주요 구성 입력을 검색합니다.
 
-### Target organization
+### 대상 조직
 
-When you run Snyk in your CI/CD platform, you typically want to post the test results to Snyk for review and ongoing monitoring.
+CI/CD 플랫폼에서 Snyk을 실행하는 경우 일반적으로 검토 및 지속적인 모니터링을 위해 테스트 결과를 Snyk에 게시하려고 합니다.
 
-**If you do not define a target organization**, Snyk uses the default organization for the authentication token you use:
+**대상 조직을 정의하지 않으면** Snyk은 사용하는 인증 토큰에 기본 조직을 사용합니다.
 
-* For user accounts, this is the user's preferred organization (configurable in the user's settings).
-* For organization service accounts, this is the organization in which the account was created.
+* 사용자 계정의 경우 구성은 사용자가 선호하는 구성입니다(사용자 설정에서 구성 가능).
+* 조직 서비스 계정의 경우 계정이 생성된 조직입니다.
 
-You can **define the target organization** in the Snyk CLI, by either URL slug or organization ID, using the `--org` CLI option:
+`--org` CLI 옵션을 사용하여 URL slug 또는 조직 ID로 Snyk CLI에서 **대상 조직을 정의**할 수 있습니다.
 
-* You can define the target organization using its URL slug (orgslugname), as displayed in the address bar of the browser in the Snyk UI.
-* Alternatively you can define the target organization using its `ORG_ID` in the organization's settings page.
+* Snyk UI에서 브라우저의 주소 표시줄에 표시되는 URL slug(orgslugname)를 사용하여 대상 조직을 정의할 수 있습니다.
+* 또는 조직의 설정 페이지에서 `ORG_ID`를 사용하여 대상 조직을 정의할 수 있습니다.
 
 ![Organization ID](../../../.gitbook/assets/image1.png)
 
-For more information see see the article [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI).
+자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)을 참조하십시오.
 
-### Snyk authentication token
+### Snyk 인증 토큰
 
-To run `snyk test`, you need an authentication token with access to the target organization . While you can use any valid authentication token, using a service account is recommended. For more details, see the [`snyk auth` command help](../../../snyk-cli/commands/auth.md) and [Service accounts](https://docs.snyk.io/integrations/managing-integrations/service-accounts).
+`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](../../snyk-cli/commands/auth.md) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
 
-### Setting up
+### 설정
 
-Snyk supports the following approaches to add tests to a build pipeline:
+Snyk은 빌드 파이프라인에 테스트를 추가하기 위해 다음과 같은 접근 방식을 지원합니다.
 
-* **Snyk integration plugins**: Snyk provides pre-built plugins for several CI servers, including [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) and [Azure Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration).
-* **Snyk CLI:** Teams with more complex workflows, or using a build system without a Snyk pre-built plugin, can use the Snyk CLI tool during CI/CD setups. See [Setting up using Snyk CLI](./#setting-up-using-snyk-cli) for details.
-* **Snyk API**: For teams with complex requirements Snyk provides a REST API, which you can use for functions including initiating scans, onboarding new projects, and testing arbitrary libraries. See the [Snyk API documentation](../../snyk-api-info/) for more details.
+* **Snyk 통합 플러그인**: Snyk은 [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) 및 [Azure Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)를 포함한 여러 CI 서버에 사전 구축된 플러그인을 제공합니다.
+* **Snyk CLI:** 더 복잡한 워크플로우가 존재하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우 CI/CD 설정 중 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하는 설정](./#setting-up-using-snyk-cli)을 참조하십시오.
+* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](../../snyk-api-info/)를 참조하십시오.
 
-### Setting up using Snyk CLI
+### Snyk CLI를 사용하는 설정
 
-Snyk CLI is a NodeJS application that can be scripted directly by developers for easy integration into most CI/CD environments, and is available as an npm application, pre-packaged binary, or container image. For more information see [Install the Snyk CLI](https://docs.snyk.io/snyk-cli/install-the-snyk-cli).
+Snyk CLI는 대부분의 CI/CD 환경에 쉽게 통합할 수 있도록 개발자가 직접 스크립팅할 수 있는 NodeJS 애플리케이션이며, npm 애플리케이션, 사전 패키지된 바이너리 또는 컨테이너 이미지로 사용할 수 있습니다. 자세한 내용은 [Snyk CLI 설치](../../snyk-cli/install-the-snyk-cli/)를 참조하십시오.
 
-Snyk CLI can be configured to:
+Snyk CLI는 다음과 같이 구성할 수 있습니다.
 
-* Return non-zero error codes only when certain criteria are met, for example, exit with an error code only if vulnerabilities of high severity are present.
-* Output all of its data into JSON for more flexibility.
+* 특정 기준이 충족될 때만 0이 아닌 오류 코드를 반환합니다. 예를 들어, 높은 심각도의 취약점이 존재하는 경우에만 오류 코드를 사용하여 종료합니다.
+* 유연성을 높이기 위해 모든 데이터를 JSON으로 출력합니다.
 
 ### **Exit Codes**
 
-The `snyk test` command is synchronous; it ends with an exit code. Your build system can use exit codes to either pass or fail the build based on the test results. See the [CLI reference](../../../snyk-cli/cli-reference/) for the meaning of the exit codes.
+`snyk test`명령은 동기식이며 종료 코드로 끝납니다. 빌드 시스템은 종료 코드를 사용하여 테스트 결과에 따라 빌드를 통과하거나 실패할 수 있습니다. 종료 코드의 의미는 [CLI reference](../../../snyk-cli/cli-reference/)를 참조하십시오.
 
-The `snyk monitor` command posts a snapshot of the dependency tree for your project to your Snyk account and monitors that snapshot for vulnerabilities. It is an asynchronous command that does not end with an exit code based on the vulnerability status. For `snyk monitor`, exit codes signify success or failure in creating the snapshot to monitor.
+`snyk monitor` 명령은 프로젝트에 대한 디펜던시 트리의 스냅샷을 Snyk 계정에 게시하고 해당 스냅샷에 취약점이 있는지 모니터링합니다. 취약점 상태를 기준으로 종료 코드로 끝나지 않는 비동기 명령입니다. `snyk monitor`의 경우 종료 코드는 모니터링할 스냅샷을 생성하는 데 성공했는지 여부를 나타냅니다.
 
-To silence Snyk CLI exit codes for the `snyk test` command to avoid failing the build step, use `|| true` at the end of the command. `|| true` sets the exit code of the scan to 0. This can be used to continue with a CI/CD pipeline even when there are vulnerabilities.
+빌드 단계에 실패하지 않도록 `snyk test` 명령에 대한 snyk CLI 종료 코드를 무시하려면 명령 끝에 `|| true`를 사용합니다. `|| true`는 스캔의 종료 코드를 0으로 설정합니다. 취약점이 존재하는 경우에도 CI/CD 파이프라인을 계속 사용하는 데 사용할 수 있습니다.
 
-Depending on your approach and goals, you may need to use both the `snyk monitor` and `snyk test` commands in your pipeline.
+접근 방식과 목표에 따라 파이프라인에서 `snyk monitor` 명령과 `snyk test` 명령을 모두 사용해야 할 수도 있습니다.
 
-### **CLI examples in a build pipeline**
+### 빌드 파이프라인에서 CLI 예시
 
-Use `snyk monitor` to exposed vulnerabilities and post to the Snyk UI for ongoing monitoring:
+`snyk monitor`를 사용하여 취약점을 노출하고 지속적인 모니터링을 위해 snyk UI에 게시합니다.
 
 ```
 snyk monitor --all-projects --org=snyk-apps
 ```
 
-Use `snyk test` to fail the build on high severity issues:
+심각도가 높은 문제에 대해 `snyk test`를 사용하여 빌드에 실패합니다.
 
 ```
 snyk test --all-projects --org=snyk-apps --severity-threshold=high
 ```
 
-To see the full list of options in the CLI, run the `snyk test --help`, `snyk monitor --help`, and `snyk container --help` commands or see the [help docs](../../../snyk-cli/commands/).
+CLI의 전체 옵션 목록을 확인하려면 `snyk test --help`, `snyk monitor --help` 및 `snyk container --help` commands 명령을 실행하거나 [help docs](../../../snyk-cli/commands/)를 참조하십시오.
 
-### Configuring options for failing builds
+### 빌드 실패에 대한 옵션 구성
 
-You can add options to the `snyk test` command to refine parameters that can result in a failed build:
+`snyk test` 명령에 옵션을 추가하여 빌드에 실패할 수 있는 매개 변수를 세분화할 수 있습니다.
 
-* `--severity-threshold=high`: Fail the build only for high severity issues
-* `--fail-on=upgradable`: fail the build only for issues that are upgradable (can be fixed with Snyk fix advice)
+* `--severity-threshold=high`: 높은 심각도 문제에 대해서만 빌드 실패
+* `--fail-on=upgradable`: 업그레이드 가능한 문제에 대해서만 빌드를 실패함(Snyk 수정 조언으로 수정할 수 있음)
 
-You can also fail the build for any other parameter in the Snyk JSON output (such as CVSS score), using a wrapper like [snyk-filter](https://github.com/snyk-tech-services/snyk-filter), or using additional tooling like [snyk-delta](https://github.com/snyk-tech-services/snyk-delta) to fail the build only for issues found since the last build. For information on using snyk-filter and snyk-delta see [Advanced failing of builds in the Snyk CLI](../../../snyk-cli/test-for-vulnerabilities/advanced-failing-of-builds-in-snyk-cli.md).
+또한 Snyk JSON 출력의 다른 매개 변수(예: CVSS 점수)에 대한 빌드를 실패하거나, [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 래퍼 또는 [snyk-delta](https://github.com/snyk-tech-services/snyk-delta)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 문제에 대해서만 빌드를 실패할 수 있습니다. snyk-filter 및 snyk-delta 사용에 대한 자세한 내용은 [Advanced failing of builds in the Snyk CLI](../../../snyk-cli/test-for-vulnerabilities/advanced-failing-of-builds-in-snyk-cli.md)를 참조하십시오.
 
-### Creating custom build artifacts
+### 사용자 정의 빌드 아티팩트 생성
 
-You can use JSON output from Snyk commands to create custom test reports as build artifacts, using the [snyk-to-html](https://github.com/snyk/snyk-to-html) utility or other custom processing you develop.
+Snyk 명령의 JSON 출력을 사용하여 [snyk-to-html](https://github.com/snyk/snyk-to-html) 유틸리티 또는 사용자가 개발한 기타 사용자 지정 처리를 사용하여 빌드 아티팩트로 사용자 지정 테스트 보고서를 만들 수 있습니다.
 
-### Creating work items for new vulnerabilities
+### 새 취약성에 대한 작업 항목 생성
 
-Snyk allows you to automatically create new work items in JIRA (see [Jira integration](https://docs.snyk.io/integrations/untitled-3/jira) documentation). You can customize this code for your specific requirements, or adapt it to work with other work management systems.
+Snyk를 사용하면 JIRA에서 새 작업 항목을 자동으로 만들 수 있습니다([Jira integration](https://docs.snyk.io/integrations/untitled-3/jira) 참조). 특정 요구 사항에 맞게 이 코드를 사용자 정의하거나 다른 작업 관리 시스템과 함께 작동하도록 조정할 수 있습니다.
 
-See [Jira tickets for new vulns](https://github.com/snyk-tech-services/jira-tickets-for-new-vulns) to get started, or review the [API to create Jira tickets](https://snyk.docs.apiary.io/#reference/projects/project-jira-issues).
+시작하려면 [새로운 취약점에 대한 Jira 티켓](https://github.com/snyk-tech-services/jira-tickets-for-new-vulns)을 참조하거나, [API를 검토하여 Jira 티켓을 생성](https://snyk.docs.apiary.io/#reference/projects/project-jira-issues)하십시오.
 
-### Ignoring issues
+### Issues 무시
 
-By default if issues are not ignored, or if you are not using [snyk-delta](https://github.com/snyk-tech-services/snyk-delta), a `snyk test` in your pipeline fails the build when issues are found. To allow builds to continue without resolving these issues, you can:
+기본적으로 문제가 무시되지 않거나 [snyk-delta](https://github.com/snyk-tech-services/snyk-delta)를 사용하지 않는 경우 문제가 발견되면 파이프라인의 `snyk test`가 빌드에 실패합니다. 이러한 문제를 해결하지 않고 빌드를 계속할 수 있도록 하려면 다음을 수행할 수 있습니다.
 
 * [Ignore issues using a .snyk policy file](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli)
 * [Ignore issues from the Snyk UI](https://support.snyk.io/hc/en-us/articles/360000923498-How-can-I-ignore-a-vulnerability-)
 * [Ignore issues from the Snyk API](https://snyk.docs.apiary.io/#reference/projects/project-ignores-by-issue/add-ignore)
-* Use the Snyk Python API for bulk ignores: see [https://github.com/snyk-labs/pysnyk](https://github.com/snyk-labs/pysnyk) and [https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py](https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py)
+* 대량 무시에는 Snyk Python API를 사용합니다. [https://github.com/snyk-labs/pysnyk](https://github.com/snyk-labs/pysnyk) and [https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py](https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py)를 참조하십시오.
 
-## Snyk Open Source-specific strategies
+## Snyk 오픈 소스별 전략
 
-These strategies are useful to teams using the Snyk SCA ([Software Composition Analysis](https://snyk.io/blog/what-is-software-composition-analysis-sca-and-does-my-company-need-it/)) testing features.
+이러한 전략은 Snyk SCA ([Software Composition Analysis](https://snyk.io/blog/what-is-software-composition-analysis-sca-and-does-my-company-need-it/)) 테스트 기능을 사용하는 팀에 유용합니다.
 
 ### Gradle and Scala
 
-* For "multi-project" configurations, test all sub-projects. Use this option with the `monitor` or `test` command: `--all-sub-projects`.
-* To scan specific configurations, select certain values of configuration attributes to resolve the dependencies. Use this option with the `test` or `monitor` command: `--configuration-attributes=`.
+* 다중 프로젝트 구성의 경우 모든 하위 프로젝트를 테스트합니다. `monitor` 또는 `test` 명령어 `--all-sub-projects`와 함께 이 옵션을 사용합니다.
+* 특정 구성을 검색하려면 구성 특성의 특정 값을 선택하여 종속성을 해결합니다. 이 옵션은 `test`또는 `monitor` 명령 `--configuration-attributes=`와 함께 사용합니다.
 
 ### Python
 
-*   Snyk uses Python to scan and find your dependencies. Snyk needs the Python version to start scanning, and defaults to "python." If you are using multiple Python versions, use this option with the `test` or `monitor` command to specify the correct Python command for execution: `--command=`. Example:
+*   Snyk는 Python을 사용하여 의존성을 검색하고 찾습니다. Snyk은 스캔을 시작하려면 Python 버전이 필요하며, 기본값은 "python"입니다. 여러 Python 버전을 사용하는 경우 `test` 또는 `monitor` 명령과 함께 `--command=`옵션을 사용하여 실행에 올바른 Python 명령을 지정합니다.
 
     ```
     snyk test --command=python3
     ```
-* If you scan a Pip project and use the `--file=` option because your manifest file is not the standard `requirements.txt`, you must use the following option to specify Pip as the package manager `--package-manager=pip.`
+* 매니페스트 파일이 표준 요구 사항이 아니기 때문에 Pip 프로젝트를 검색하고 `--file=` option because your manifest file is not the standard `requirements.txt`, you must use the following option to specify Pip as the package manager `--package-manager=pip.`
 
 ### .Net
 
