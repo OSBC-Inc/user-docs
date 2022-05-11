@@ -253,7 +253,7 @@
     * [Snyk 조직 통합 복제](features/integrations/managing-integrations/clone-an-integration-across-your-snyk-orgs.md)
     * [Git 통합 비활성화](features/integrations/managing-integrations/disable-a-git-integration.md)
   * [Snyk CI/CD 통합](features/integrations/ci-cd-integrations/README.md)
-    * [AWS CodePipeline integration](features/integrations/ci-cd-integrations/aws-codepipeline-integration.md)
+    * [AWS CodePipeline 통합](features/integrations/ci-cd-integrations/aws-codepipeline-integration.md)
     * [Azure Pipelines integration](features/integrations/ci-cd-integrations/azure-pipelines-integration.md)
     * [Bitbucket Pipelines integration](features/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview.md)
     * [CircleCI integration](features/integrations/ci-cd-integrations/circleci-integration.md)
