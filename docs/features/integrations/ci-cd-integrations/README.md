@@ -100,7 +100,7 @@ Snyk은 빌드 파이프라인에 테스트를 추가하기 위해 다음과 같
 
 * **Snyk 통합 플러그인**: Snyk은 [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) 및 [Azure Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)를 포함한 여러 CI 서버에 사전 구축된 플러그인을 제공합니다.
 * **Snyk CLI:** 더 복잡한 워크플로우가 존재하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우 CI/CD 설정 중 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하는 설정](./#setting-up-using-snyk-cli)을 참조하십시오.
-* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](../../snyk-api-info/)를 참조하십시오.
+* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](broken-reference)를 참조하십시오.
 
 ### Snyk CLI를 사용하는 설정
 

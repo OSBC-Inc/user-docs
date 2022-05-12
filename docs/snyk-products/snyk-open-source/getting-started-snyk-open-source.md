@@ -78,4 +78,4 @@ Snyk은 일부 언어의 경우 pull/merge requests를 사용하여 취약점을
 
 ![](../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.46.22.png)
 
-자세한 내용은 [취약점 수정](../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md)을 참조하십시오.
+자세한 내용은 [취약점 수정](broken-reference)을 참조하십시오.

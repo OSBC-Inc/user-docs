@@ -3,7 +3,7 @@
 {% hint style="info" %}
 이 기능은 현재 베타 버전입니다.
 
-[Snyk Preview](../../../features/user-and-group-management/managing-settings/snyk-preview.md)를 활성화하려면 다음과 같이 진행합니다.
+[Snyk Preview](broken-reference)를 활성화하려면 다음과 같이 진행합니다.
 
 1. Snyk에 로그인합니다.
 2. 설정 아이콘을 클릭하여 **Settings**로 이동합니다 .

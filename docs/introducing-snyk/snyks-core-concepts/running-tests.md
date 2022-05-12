@@ -38,7 +38,7 @@ Snyk을 사용하여 여러 방법으로 코드를 테스트할 수 있습니다
 Snyk은 반복되는 테스트와 함께 자동 스캔 기능을 제공하여 새로운 취약점을 자동으로 포착할 수 있도록 합니다. 프로젝트를 가져온 후 Snyk은 주기적으로 테스트를 진행하여 소스 코드가 새로 공개된 취약점의 영향을 받는지 확인합니다.
 
 {% hint style="info" %}
-테스트 빈도는 기본적으로 매일 진행하는 것으로 설정됩니다. 변경하려면 **Usage** 페이지([Usage page details](../../features/user-and-group-management/managing-settings/usage-page-details.md) 참조) 또는 project **Settings** 페이지([프로젝트 설정 보기](../../getting-started/introduction-to-snyk-projects/view-project-settings.md) 참조)로 이동하십시오.
+테스트 빈도는 기본적으로 매일 진행하는 것으로 설정됩니다. 변경하려면 **Usage** 페이지([Usage page details](broken-reference) 참조) 또는 project **Settings** 페이지([프로젝트 설정 보기](../../getting-started/introduction-to-snyk-projects/view-project-settings.md) 참조)로 이동하십시오.
 {% endhint %}
 
 ### Snyk monitor

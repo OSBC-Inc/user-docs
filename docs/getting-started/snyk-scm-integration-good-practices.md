@@ -68,7 +68,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 ![](<../.gitbook/assets/image (58).png>)
 
-자세한 내용은 [알림 관리](../features/user-and-group-management/notifications/notification-management.md)를 참조하십시오.
+자세한 내용은 [알림 관리](broken-reference)를 참조하십시오.
 
 ## 2단계: 프로젝트 가져오기
 

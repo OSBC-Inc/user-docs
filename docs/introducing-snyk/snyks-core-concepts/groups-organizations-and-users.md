@@ -17,7 +17,7 @@ Snyk에는 보고서와 같은 기능에 대한 액세스를 제어할 수 있�
 
 Groups에는 여러 조직이 포함될 수 있어 여러 팀과 공동 작업이 가능합니다.
 
-자세한 내용은 [Snyk group이란?](../../features/user-and-group-management/managing-groups-and-organizations/whats-a-snyk-group.md)을 참조하십시오.
+자세한 내용은 [Snyk group이란?](broken-reference)을 참조하십시오.
 
 ### Snyk organizations
 
@@ -29,7 +29,7 @@ Organizations에는 여러 Projects가 포함될 수 있습니다. 예를 들어
 소셜 로그인을 사용하여 Snyk에 가입하면 기본 Organizations가 존재합니다. 추가하는 모든 프로젝트는 기본적으로 기본 Organizations에 나타납니다.
 {% endhint %}
 
-자세한 내용은 [Snyk organization이란?](../../features/user-and-group-management/managing-groups-and-organizations/whats-a-snyk-organization.md)을 참조하십시오.
+자세한 내용은 [Snyk organization이란?](broken-reference)을 참조하십시오.
 
 ### Snyk projects
 
@@ -51,4 +51,4 @@ Snyk은 네 가지 유형의 사용자를 제공합니다.
 Group administrators와 collaborators는 Business Enterprise 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-자세한 내용은 [사용자 및 그룹 관리](../../features/user-and-group-management/)를 참조하십시오.
+자세한 내용은 [사용자 및 그룹 관리](broken-reference)를 참조하십시오.

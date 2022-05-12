@@ -1,14 +1,14 @@
 # 취약점 수정
 
-Snyk은 취약점에 대한 실행 가능한 수정 가이드를 제공합니다. 자세한 내용은 [취약점 수정](../../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md)을 참조하십시오.
+Snyk은 취약점에 대한 실행 가능한 수정 가이드를 제공합니다. 자세한 내용은 [취약점 수정](broken-reference)을 참조하십시오.
 
 Snyk은 다음을 사용하여 취약점을 수정하는 워크플로우를 지원합니다.
 
 * [자동 pull / merge requests (PR/MR)](fixing-vulnerabilities.md#pull-merge-requests-pr-mr)
 * [수동 pull / merge requests (PR/MR)](fixing-vulnerabilities.md#pull-merge-requests)
 
-{% content-ref url="../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md" %}
-[what-languages-do-we-support-fix-pull-requests-or-merge-requests.md](../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### 자동 **pull / merge requests** (PR/MR)

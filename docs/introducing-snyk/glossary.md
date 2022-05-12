@@ -99,7 +99,7 @@ Docker를 사용하여 컨테이너 이미지를 빌드하는 데 사용되는 �
 
 ### Exploit Maturity
 
-취약점에 대한 공격이 얼마나 실현 가능한지, 취약점이 널리 게시되었는지, 공격자에게 얼마나 유용한지 측정합니다. [Evaluating and prioritizing vulnerabilities](../features/fixing-and-prioritizing-issues/issue-management/evaluating-and-prioritizing-vulnerabilities.md)을 참조하십시오.
+취약점에 대한 공격이 얼마나 실현 가능한지, 취약점이 널리 게시되었는지, 공격자에게 얼마나 유용한지 측정합니다. [Evaluating and prioritizing vulnerabilities](broken-reference)을 참조하십시오.
 
 ## F
 
@@ -197,7 +197,7 @@ Pull Request의 약자로, 사용자가 소스 코드의 변경 사항을 반영
 
 ### Priority Score
 
-Snyk는 Issue(취약점 및 라이선스)를 점수화하여 각각의 Issue 해결의 우선순위를 정하는 데 도움이 됩니다. 점수는 CVSS 점수를 포함한 여러 요소를 기반으로 하며 0(낮음)에서 1000(높음) 사이의 범위를 가집니다. [Snyk 우선순위 점수](../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하십시오.
+Snyk는 Issue(취약점 및 라이선스)를 점수화하여 각각의 Issue 해결의 우선순위를 정하는 데 도움이 됩니다. 점수는 CVSS 점수를 포함한 여러 요소를 기반으로 하며 0(낮음)에서 1000(높음) 사이의 범위를 가집니다. [Snyk 우선순위 점수](broken-reference)를 참조하십시오.
 
 ### Project
 
@@ -207,7 +207,7 @@ Snyk이 스캔하는 외부 항목으로, 해당 스캔을 실행하는 방법�
 
 ### Reachability
 
-실행 중 공격 가능한 취약한 경로의 코드가 애플리케이션에 포함되어 있는지 여부입니다. [Reachable vulnerabilities](../features/fixing-and-prioritizing-issues/prioritizing-issues/reachable-vulnerabilities.md)를 참조하십시오.
+실행 중 공격 가능한 취약한 경로의 코드가 애플리케이션에 포함되어 있는지 여부입니다. [Reachable vulnerabilities](broken-reference)를 참조하십시오.
 
 ### Registry
 
@@ -308,7 +308,7 @@ Snyk의 클라우드 네이티브 애플리케이션 보안 플랫폼을 지원�
 
 ### Social Trends
 
-Snyk는 Twitter에서 활발하게 논의되고 있는 이슈에 대해 트렌드 배너를 보여줍니다. [Prioritize by Social Trends](../features/fixing-and-prioritizing-issues/prioritizing-issues/prioritize-by-social-trends.md) 문서를 참조하십시오.
+Snyk는 Twitter에서 활발하게 논의되고 있는 이슈에 대해 트렌드 배너를 보여줍니다. [Prioritize by Social Trends](broken-reference) 문서를 참조하십시오.
 
 ### SPDX
 

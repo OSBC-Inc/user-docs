@@ -1,6 +1,6 @@
 # Snyk 우선순위 점수와 Kubernetes
 
-Snyk의 모든 이슈에는 [우선순위 점수](../../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)가 있습니다. 이는 문제의 심각도와 기타 다양한 상황별 요인 모두를 고려하여 취약성의 상대적 중요성을 확인하는 데 도움이 됩니다. 주요 우선순위 점수 문서에서 논의된 요인 외에도, Kubernetes 통합에서 가져온 이미지에는 여러 가지 추가 기여 요인이 있습니다.
+Snyk의 모든 이슈에는 [우선순위 점수](broken-reference)가 있습니다. 이는 문제의 심각도와 기타 다양한 상황별 요인 모두를 고려하여 취약성의 상대적 중요성을 확인하는 데 도움이 됩니다. 주요 우선순위 점수 문서에서 논의된 요인 외에도, Kubernetes 통합에서 가져온 이미지에는 여러 가지 추가 기여 요인이 있습니다.
 
 ![](../../../../.gitbook/assets/screenshot\_2020-06-23\_at\_09.09.52.png)
 

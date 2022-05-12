@@ -27,11 +27,11 @@ Snyk은 **Issues**와 **Fixes** 탭의 **Open a fix PR** 섹션에 표시된 대
 ![](../../.gitbook/assets/image26.png)
 
 개요는 [취약점 수정](broken-reference)을 참조하십시오.\
-자세한 내용은 [Fixing and prioritizing issues](../../features/fixing-and-prioritizing-issues/)를 참조하십시오.
+자세한 내용은 [Fixing and prioritizing issues](broken-reference)를 참조하십시오.
 
 #### Issues 세부 정보 보기
 
-각 Issue에 대해 우선순위 점수를 포함한 취약점의 세부 정보를 표시합니다.([Snyk 우선순위 점수](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md) 참조)
+각 Issue에 대해 우선순위 점수를 포함한 취약점의 세부 정보를 표시합니다.([Snyk 우선순위 점수](broken-reference) 참조)
 
 ![](../../.gitbook/assets/image12.png)
 

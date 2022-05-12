@@ -30,7 +30,7 @@ Snyk에서는 [CVSS framework version 3.1](https://www.first.org/cvss/v3-1/)을 
 
 심각도 수준은 [Snyk Exploit Maturity](https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly/) 및 [Reachable Vulnerabilities](https://snyk.io/blog/optimizing-prioritization-with-deep-application-level-context/) 정보와 함께 각 취약점에 대한 Snyk의 우선순위 점수에 적용되는 한 요인입니다. 이 점수는 개발자가 먼저 해결해야 할 취약점을 결정하는데 도움이 됩니다.
 
-Snyk의 우선순위 점수에서 심각도 수준이 사용되는 방식에 대한 자세한 내용은 [Snyk 우선순위 점수](../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score.md)를 참조하십시오.
+Snyk의 우선순위 점수에서 심각도 수준이 사용되는 방식에 대한 자세한 내용은 [Snyk 우선순위 점수](broken-reference)를 참조하십시오.
 
 ## Snyk에서 심각도 수준 확인
 

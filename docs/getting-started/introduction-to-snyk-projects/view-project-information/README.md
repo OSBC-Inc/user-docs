@@ -29,4 +29,4 @@ Snyk은 프로젝트의 파일에 대한 애플리케이션 취약점과 라이�
   * SCM의 프로젝트 파일에 대한 링크.
   * 프로젝트를 Snyk으로 처음 가져온 시간.
   * 파일의 최신 스냅샷을 SCM에서 가져와 테스트한 시간.
-* 사전 정의된 [프로젝트 속성](../../../features/fixing-and-prioritizing-issues/policies/assign-a-policy-to-project-attributes.md) 및 추가적인 [프로젝트 태그](project-tags.md) 메타데이터.
+* 사전 정의된 [프로젝트 속성](broken-reference) 및 추가적인 [프로젝트 태그](project-tags.md) 메타데이터.

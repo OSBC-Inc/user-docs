@@ -12,10 +12,10 @@ Snyk은 CLI 및 애플리케이션 UI(app.snyk.io)를 통해 취약점에 대한
 요금제에 따라서 일부 기능을 사용하지 못할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-| Package managers / Features       | CLI support | Git support | License scanning | Fixing                                                                                                                          | Runtime monitoring |
-| --------------------------------- | ----------- | ----------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| [Maven](https://maven.apache.org) | ✔︎          | ✔︎          | ✔︎               | ✔︎                                                                                                                              | ✔︎                 |
-| [Gradle](https://gradle.org)      | ✔︎          | ✔︎          | ✔︎               | [Fix advice](../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/fix-your-vulnerabilities.md) only |                    |
+| Package managers / Features       | CLI support | Git support | License scanning | Fixing                              | Runtime monitoring |
+| --------------------------------- | ----------- | ----------- | ---------------- | ----------------------------------- | ------------------ |
+| [Maven](https://maven.apache.org) | ✔︎          | ✔︎          | ✔︎               | ✔︎                                  | ✔︎                 |
+| [Gradle](https://gradle.org)      | ✔︎          | ✔︎          | ✔︎               | [Fix advice](broken-reference) only |                    |
 
 ## Java 및 Kotlin 프로젝트(CI/CD)에서 Snyk CLI 사용하기
 

@@ -1,4 +1,4 @@
-# custom rule 만들기
+# Custom Rule 만들기
 
 Snyk IaC는 AWS, Azure, GCP, Kubernetes를 포함하는 포괄적인 보안 규칙 목록을 포함하고 있습니다. 이러한 규칙은 보안 연구, 모범 사례, 공인된 표준 및 벤치마크를 기반으로 합니다. Snyk의 보안 엔지니어링 팀에 의해 적극적으로 유지 관리되고 있으며 새로운 규칙들이 정기적으로 릴리즈됩니다.
 
@@ -29,6 +29,6 @@ Snyk IaC(Infrastructure as Code) SDK를 시작하기 위한 초기 지침은 다
 * Snyk IaC custom rule: Issue 생성
 {% endhint %}
 
-Snyk 플랫폼을 사용하면 [정책](../../../features/fixing-and-prioritizing-issues/policies/)을 직접 만들고 스캔 중 Snyk이 식별한 Issue의 우선순위 지정 및 분류 방법을 관리할 수 있습니다. 예를 들어 Issue에 특정 속성이 있는 경우 Issue의 우선순위를 medium에서 high로 변경하거나 특정 기준을 충족하는 경우 Issue를 대량 무시하도록 정책을 정의할 수 있습니다.
+Snyk 플랫폼을 사용하면 [정책](broken-reference)을 직접 만들고 스캔 중 Snyk이 식별한 Issue의 우선순위 지정 및 분류 방법을 관리할 수 있습니다. 예를 들어 Issue에 특정 속성이 있는 경우 Issue의 우선순위를 medium에서 high로 변경하거나 특정 기준을 충족하는 경우 Issue를 대량 무시하도록 정책을 정의할 수 있습니다.
 
 Snyk IaC custom rule 기능을 사용하면 시행하려는 잘못된 구성 검사에 대한 규칙을 직접 정의할 수 있습니다. 구성 파일에서 custom rule이 실패하면 Issue가 발생합니다.

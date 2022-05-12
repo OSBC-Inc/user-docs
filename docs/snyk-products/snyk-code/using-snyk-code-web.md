@@ -30,7 +30,7 @@
 
 자세한 내용은 [Issue 카드 정보](../../getting-started/introduction-to-snyk-projects/issue-card-information.md)를 참조하십시오.
 
-* 이 취약점을 무시하려면 **Ignore**을 클릭합니다. ([Issue 무시](../../features/fixing-and-prioritizing-issues/issue-management/ignore-issues.md) 참조)
+* 이 취약점을 무시하려면 **Ignore**을 클릭합니다. ([Issue 무시](broken-reference) 참조)
 * 자세한 정보를 보려면 **Full details**를 클릭합니다. ([전체 세부 정보 보기](using-snyk-code-web.md#undefined-2) 참조)
 
 ### 전체 세부 정보 보기
@@ -52,7 +52,7 @@
 
 1.  소스 코드 파일 자체를 열려면 코드 링크를 클릭하십시오 (예: GitHub)
 
-    ![](../../.gitbook/assets/link.png)
+    <img src="../../.gitbook/assets/link.png" alt="" data-size="original">
 2. 파일이 열리고 취약점을 수정할 정확한 위치가 표시됩니다. (in this example, by adding the sanitation required to the input).
 3. 이제 필요에 따라 수정하여 코드의 취약점을 해결할 수 있습니다.
 

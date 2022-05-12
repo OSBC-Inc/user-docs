@@ -119,7 +119,7 @@ Snyk UI에서 Snyk이 빌드 디펜던시를 포함하여 전체 프로젝트를
 
 ## 취약점 수정
 
-Snyk이 프로젝트 내에서 오픈 소스 취약점을 수정하는 데 어떻게 도움이 되는지에 대한 자세한 내용은 [취약점 수정](../../../features/fixing-and-prioritizing-issues/issue-management/remediate-your-vulnerabilities.md)을 참조하십시오.
+Snyk이 프로젝트 내에서 오픈 소스 취약점을 수정하는 데 어떻게 도움이 되는지에 대한 자세한 내용은 [취약점 수정](broken-reference)을 참조하십시오.
 
 {% hint style="info" %}
 PR 수정 기능은 [SCM](../../../getting-started/scm-git-and-ci-cd-integration-deployment-intro.md) 통합 전체에서만 사용할 수 있습니다.
@@ -153,7 +153,7 @@ Snyk CLI와 Github와 같은 소스 코드 관리(SCM) 시스템에서 디펜던
 
 **SCM**
 
-응용 프로그램이 항상 Microsoft의 최신 패치가 설치된 시스템에서 실행하여 발견된 취약점은 더 이상 프로젝트와 관련이 없을 수 있으므로 이를 [무시하도록 선택](../../../features/fixing-and-prioritizing-issues/issue-management/ignore-issues.md)할 수 있습니다.
+응용 프로그램이 항상 Microsoft의 최신 패치가 설치된 시스템에서 실행하여 발견된 취약점은 더 이상 프로젝트와 관련이 없을 수 있으므로 이를 [무시하도록 선택](broken-reference)할 수 있습니다.
 
 **CLI**
 

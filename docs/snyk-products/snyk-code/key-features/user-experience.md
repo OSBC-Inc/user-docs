@@ -46,9 +46,9 @@ Snyk의 Issue 정보를 Jira의 프로젝트로 직접 내보내 Issue를 추적
 왼쪽의 필터링을 통해 무시된 Issue를 포함시킬 수 있으며 무시된 결과를 검토하려는 경우 해당 문제를 포함하고 무시 플래그를 제거하거나 편집할 수 있습니다.
 {% endhint %}
 
-무시 기능 사용에 대한 자세한 내용은 [프로젝트에서 우선순위가 지정되지 않은 Issue 무시](../../../features/fixing-and-prioritizing-issues/issue-management/ignore-issues.md)를 참조하십시오.
+무시 기능 사용에 대한 자세한 내용은 [프로젝트에서 우선순위가 지정되지 않은 Issue 무시](broken-reference)를 참조하십시오.
 
-Snyk Code가 무시 기능을 처리하는 방법에 대한 자세한 내용은 [Snyk Code의 Issue 무시](../../../features/fixing-and-prioritizing-issues/issue-management/ignore-issues.md)를 참조하십시오.
+Snyk Code가 무시 기능을 처리하는 방법에 대한 자세한 내용은 [Snyk Code의 Issue 무시](broken-reference)를 참조하십시오.
 
 #### 파일 제외
 

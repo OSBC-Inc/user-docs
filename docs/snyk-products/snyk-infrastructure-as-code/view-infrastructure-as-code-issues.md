@@ -17,7 +17,7 @@ IaC Issue만 보려면 **Summary filters** 드롭다운에서 **Configuration**�
 
 ![](../../.gitbook/assets/screenshot\_2021-02-17\_at\_14.22.50.png)
 
-Summary 탭에 대한 자세한 내용은 [Summary tab](../../features/general-reports/reports/summary-tab.md) 설명서를 참조하십시오.
+Summary 탭에 대한 자세한 내용은 [Summary tab](broken-reference) 설명서를 참조하십시오.
 
 ### Issues 페이지
 
@@ -33,7 +33,7 @@ IaC Issue만 보려면 **Issue filters** 드롭다운에서 **Configuration**을
 
 ![](<../../.gitbook/assets/image2-3- (1) (2) (2) (2) (3) (4) (4) (3) (1) (1) (1).png>)
 
-Issues 탭에 대한 자세한 내용은 [Issues tab](../../features/general-reports/reports/issues-tab.md) 설명서를 참조하십시오.
+Issues 탭에 대한 자세한 내용은 [Issues tab](broken-reference) 설명서를 참조하십시오.
 
 ### 데이터 내보내기
 
