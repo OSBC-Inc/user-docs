@@ -1,8 +1,8 @@
 # 컨테이너 보안을 위한 Snyk CLI
 
-Snyk Container [CLI](../../../features/snyk-cli/)(Command Line Interface)는 로컬 시스템의 컨테이너 이미지에서 취약점을 찾고 수정하는 데 도움이 됩니다.
+Snyk Container [CLI](broken-reference)(Command Line Interface)는 로컬 시스템의 컨테이너 이미지에서 취약점을 찾고 수정하는 데 도움이 됩니다.
 
-CLI를 사용하려면 먼저 CLI를 [설치](../../../features/snyk-cli/install-the-snyk-cli/)한 다음 [인증](../../../features/snyk-cli/commands/auth.md)해야 합니다.
+CLI를 사용하려면 먼저 CLI를 [설치](broken-reference)한 다음 [인증](broken-reference)해야 합니다.
 
 ## 이미지 테스트
 

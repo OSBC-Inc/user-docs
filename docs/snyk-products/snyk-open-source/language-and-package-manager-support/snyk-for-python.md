@@ -77,7 +77,7 @@ https://github.com/snyk/snyk-python-plugin/blob/master/lib/types.ts
 
 * Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하십시오.
 * 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함하십시오.
-* [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
+* [Snyk CLI](broken-reference)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
 ### 파라미터
 
@@ -122,7 +122,7 @@ CLI와 Git 모두에서 디펜던시를 스캔하기 위해 Snyk에서 사용하
 --command=python3
 ```
 
-`.snyk` [정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)에 다음 옵션을 추가하여 특정 Python 버전을 지정할 수 있습니다.
+`.snyk` [정책 파일](broken-reference)에 다음 옵션을 추가하여 특정 Python 버전을 지정할 수 있습니다.
 
 ```
 language-settings:
@@ -137,7 +137,7 @@ Git에서 가져온 프로젝트를 테스트할 때 Snyk은 Python 2 또는 Pyt
 
 기본적으로 Snyk은 Python 2를 사용하여 테스트합니다.
 
-Snyk이 Git에서 가져온 프로젝트를 테스트 하는 데 사용하는 Python 주 버전을 정의하려면 조직 설정 또는 `.snyk` [정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)을 사용하세요.
+Snyk이 Git에서 가져온 프로젝트를 테스트 하는 데 사용하는 Python 주 버전을 정의하려면 조직 설정 또는 `.snyk` [정책 파일](broken-reference)을 사용하세요.
 
 조직의 모든 프로젝트에 대한 Python 버전을 정의하려면 다음과 같이 진행합니다.
 

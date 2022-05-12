@@ -4,9 +4,9 @@
 조직에 Snyk Code가 활성화되어 있는지 확인하십시오. 자세한 내용은 [Snyk Code 시작하기](../getting-started-with-snyk-code.md)를 참조하십시오.
 {% endhint %}
 
-Snyk Code용 Snyk [CLI](../../../features/snyk-cli/)(Command Line Interface)는 로컬 컴퓨터에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
+Snyk Code용 Snyk [CLI](broken-reference)(Command Line Interface)는 로컬 컴퓨터에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
 
-CLI 를 사용하려면 먼저 CLI를 [설치](../../../features/snyk-cli/install-the-snyk-cli/)한 후 [인증](../../../features/snyk-cli/commands/auth.md)해야 합니다.
+CLI 를 사용하려면 먼저 CLI를 [설치](broken-reference)한 후 [인증](broken-reference)해야 합니다.
 
 ## 프로젝트 또는 폴더 테스트
 

@@ -69,7 +69,7 @@ jobs:
 
 ### Snyk IaC GitHub Action
 
-Rule을 테스트하는 또 다른 방법은 [Snyk IaC Github Action](https://github.com/snyk/actions/tree/master/iac)을 사용하여 [Snyk CLI](../../../features/snyk-cli/)에서 테스트하여 생성된 bundle을 CLI에서 읽을 수 있는지 확인하는 것입니다.
+Rule을 테스트하는 또 다른 방법은 [Snyk IaC Github Action](https://github.com/snyk/actions/tree/master/iac)을 사용하여 [Snyk CLI](broken-reference)에서 테스트하여 생성된 bundle을 CLI에서 읽을 수 있는지 확인하는 것입니다.
 
 이를 실행하려면 Snyk CLI 및 `SNYK_TOKEN` 설치 단계가 필요하며, 이 단계는 Snyk 계정 설정에서 확인할 수 있습니다.
 

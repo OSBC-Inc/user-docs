@@ -36,7 +36,7 @@ Snyk Code는 다양한 언어를 지원합니다. 전체 목록은 [언어 및 �
 
 ### Snyk CLI를 사용하여 CI/CD 테스트
 
-Snyk Code용 [CLI](../../../features/snyk-cli/)(Snyk Command Line Interface)는 로컬 컴퓨터 또는 CI/CD 프로세스에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
+Snyk Code용 [CLI](broken-reference)(Snyk Command Line Interface)는 로컬 컴퓨터 또는 CI/CD 프로세스에서 코드의 보안 결함을 찾고 수정하는 데 도움이 됩니다.
 
 ## API 및 확장성
 

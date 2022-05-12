@@ -34,7 +34,7 @@ Snyk이 디펜던시를 분석하고 구축하는 방식은 프로젝트의 언�
 
 * Snyk CLI를 사용하기 전에 관련 패키지 매니저를 설치하십시오.
 * 테스트 진행 이전에 Snyk에서 지원하는 관련 매니페스트 파일을 포함해야 합니다.
-* [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
+* [Snyk CLI](broken-reference)를 설치하고 인증하여 로컬 환경에서 프로젝트 분석을 시작합니다.
 
 ### Snyk CLI 파라미터
 

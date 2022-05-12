@@ -34,7 +34,7 @@ Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및
 
 #### PackageReference에서 관리하는 디펜던시
 
-우선 `dotnet restore`를 실행하여 .NET 프로젝트의 디펜던시를 복원하고 `snyk test`를 실행하여 **obj/project.assets.json**이 생성되었는지 확인합니다. 빌드 프로젝트에 대한 자세한 내용은 [CLI 시작하기](../../../features/snyk-cli/getting-started-with-the-cli/)를 참조하십시오.
+우선 `dotnet restore`를 실행하여 .NET 프로젝트의 디펜던시를 복원하고 `snyk test`를 실행하여 **obj/project.assets.json**이 생성되었는지 확인합니다. 빌드 프로젝트에 대한 자세한 내용은 [CLI 시작하기](broken-reference)를 참조하십시오.
 
 **project.assets.json**으로 지원되는 프로젝트 파일의 예는 다음과 같습니다.
 
@@ -71,7 +71,7 @@ Snyk이 트리를 분석하고 빌드하는 방법은 프로젝트의 언어 및
 
 #### Paket이 관리하는 디펜던시
 
-Paket을 사용하여 `snyk test`를 실행하려면 **paket.lock** 파일과 **paket.dependencies** 파일이 함께 필요합니다.&#x20;
+Paket을 사용하여 `snyk test`를 실행하려면 **paket.lock** 파일과 **paket.dependencies** 파일이 함께 필요합니다.
 
 기타 지원에는 **project.json**(더 이상 권장하지 않음, [Microsoft 설명서](https://docs.microsoft.com/en-us/nuget/archive/project-json) 참조) 파일이 포함됩니다.
 
@@ -165,7 +165,7 @@ Snyk CLI와 Github와 같은 소스 코드 관리(SCM) 시스템에서 디펜던
 <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
 ```
 
-* 런타임이 포함된 [독립형](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained) 앱을 게시하도록 선택할 수 있습니다. 그런 다음 `RuntimeFrameworkVersion`을 프로젝트 파일의 특정 패치 버전으로 설정하십시오. 더 이상 관련이 없다고 생각되는 취약점을 [무시하도록 선택](../../../features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)할 수 있습니다.
+* 런타임이 포함된 [독립형](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained) 앱을 게시하도록 선택할 수 있습니다. 그런 다음 `RuntimeFrameworkVersion`을 프로젝트 파일의 특정 패치 버전으로 설정하십시오. 더 이상 관련이 없다고 생각되는 취약점을 [무시하도록 선택](broken-reference)할 수 있습니다.
 
 ```
 <PropertyGroup>

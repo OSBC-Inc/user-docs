@@ -100,7 +100,7 @@ policy path를 제공하여 감지된 모든 workspace에 적용할 ignores/patc
 
 * 관련 패키지 매니저가 설치되어 있습니다.
 * Snyk에서 지원하는 관련 매니페스트 파일을 포함합니다.
-* [Snyk CLI](../../../features/snyk-cli/install-the-snyk-cli/)를 설치하고 인증하여 로컬 환경에서 프로젝트를 분석합니다.
+* [Snyk CLI](broken-reference)를 설치하고 인증하여 로컬 환경에서 프로젝트를 분석합니다.
 
 JavaScript 프로젝트에 사용하는 패키지 매니저에 따라서 `npm install` 또는 `yarn install`을 실행합니다.
 

@@ -6,7 +6,7 @@ Snyk Open Source를 이용하여 애플리케이션의 오픈 소스 라이브�
 이 프로세스는 Snyk.io UI 및 SCM(Source Code Management) 시스템을 사용하여 시작하는 방법을 설명합니다.
 
 * [IDE 도구](https://docs.snyk.io/integrations/ide-tools) 또는 [CI/CD 통합](https://docs.snyk.io/integrations/ci-cd-integrations)을 사용할 수도 있습니다. [통합](https://docs.snyk.io/integrations)을 참조하십시오.
-* [Snyk CLI](../../features/snyk-cli/)를 사용할 수도 있습니다. [Snyk CLI 시작하기](../../features/snyk-cli/getting-started-with-the-cli/)를 참조하십시오.
+* [Snyk CLI](broken-reference)를 사용할 수도 있습니다. [Snyk CLI 시작하기](broken-reference)를 참조하십시오.
 {% endhint %}
 
 ### 전제 조건

@@ -14,7 +14,7 @@ Snyk 네이티브 플러그인은 대부분의 일반적인 CI/CD 도구에 사�
 
 ### **npm method**를 사용하여 Snyk CLI 배포
 
-[CLI를 로컬로 설치](../../snyk-cli/install-the-snyk-cli/)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
+[CLI를 로컬로 설치](broken-reference)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
 
 ### Snyk CLI 바이너리 버전 배포
 
@@ -92,7 +92,7 @@ CI/CD 플랫폼에서 Snyk을 실행하는 경우 일반적으로 검토 및 지
 
 ### Snyk 인증 토큰
 
-`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](../../snyk-cli/commands/auth.md) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
+`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](broken-reference) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
 
 ### 설정
 
@@ -104,7 +104,7 @@ Snyk은 빌드 파이프라인에 테스트를 추가하기 위해 다음과 같
 
 ### Snyk CLI를 사용하는 설정
 
-Snyk CLI는 대부분의 CI/CD 환경에 쉽게 통합할 수 있도록 개발자가 직접 스크립팅할 수 있는 NodeJS 애플리케이션이며, npm 애플리케이션, 사전 패키지된 바이너리 또는 컨테이너 이미지로 사용할 수 있습니다. 자세한 내용은 [Snyk CLI 설치](../../snyk-cli/install-the-snyk-cli/)를 참조하십시오.
+Snyk CLI는 대부분의 CI/CD 환경에 쉽게 통합할 수 있도록 개발자가 직접 스크립팅할 수 있는 NodeJS 애플리케이션이며, npm 애플리케이션, 사전 패키지된 바이너리 또는 컨테이너 이미지로 사용할 수 있습니다. 자세한 내용은 [Snyk CLI 설치](broken-reference)를 참조하십시오.
 
 Snyk CLI는 다음과 같이 구성할 수 있습니다.
 

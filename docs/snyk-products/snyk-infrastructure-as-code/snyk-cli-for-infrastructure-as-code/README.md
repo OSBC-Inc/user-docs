@@ -1,6 +1,6 @@
 # Infrastructure as Code용 Snyk CLI
 
-CLI를 사용하려면 먼저 CLI를 [설치](../../../features/snyk-cli/install-the-snyk-cli/)한 다음 [인증](../../../features/snyk-cli/commands/auth.md)해야 합니다.
+CLI를 사용하려면 먼저 CLI를 [설치](broken-reference)한 다음 [인증](broken-reference)해야 합니다.
 
 CLI에서 Snyk Infrastructure as Code를 사용하면 직접 구성 파일을 테스트할 수 있습니다. 자세한 내용은 다음 페이지를 참조하십시오.
 

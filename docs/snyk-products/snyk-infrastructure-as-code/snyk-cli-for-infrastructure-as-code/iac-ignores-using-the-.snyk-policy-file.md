@@ -2,7 +2,7 @@
 
 Snyk CLI에서 Snyk `iac test`를 사용하여 IaC 구성 파일을 스캔할 때 사용자와 관련이 없는 Issue는 무시할 수 있습니다.
 
-[`.snyk` 정책 파일](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)을 사용하여 이 작업을 수행할 수 있습니다. 이 파일은 IaC 구성 파일을 저장할 작업 디렉토리의 root에 저장하거나 버전을 지정하는 것을 권장합니다.
+[`.snyk` 정책 파일](broken-reference)을 사용하여 이 작업을 수행할 수 있습니다. 이 파일은 IaC 구성 파일을 저장할 작업 디렉토리의 root에 저장하거나 버전을 지정하는 것을 권장합니다.
 
 ## 경로 무시
 
@@ -16,7 +16,7 @@ Snyk CLI를 사용한 실행의 경우 `.snyk` 파일에 정의된 Issue만 무�
 ## .snyk 파일
 
 {% hint style="info" %}
-.snyk 파일에는 IaC 프로젝트에 대한 몇 가지 제한이 있습니다. (표준 기능은 [The .snyk file](../../../features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md) 참조)
+.snyk 파일에는 IaC 프로젝트에 대한 몇 가지 제한이 있습니다. (표준 기능은 [The .snyk file](broken-reference) 참조)
 
 * **패치** 섹션이 아직 지원되지 않으므로 무시됩니다.
 * IaC 지원 언어 설정이 없습니다. 이 섹션은 무시됩니다.
@@ -36,7 +36,7 @@ ignore:
         created: 2021-07-27T08:40:35.251Z
 ```
 
-이 파일은 `snyk ignore` 명령문으로 생성할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하여 취약점 무시](../../../features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)를 참조하십시오.
+이 파일은 `snyk ignore` 명령문으로 생성할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하여 취약점 무시](broken-reference)를 참조하십시오.
 
 '\*' 키를 이용하여 CLI가 `SNYK-CC-K8S-1` 취약점의 모든 인스턴스를 무시할 수 있습니다. IaC Issue ID로 표시된 여러 항목을 추가하여 여러 취약점을 무시할 수 있습니다.
 

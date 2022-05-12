@@ -134,7 +134,7 @@ snyk monitor --all-projects --org=snyk-apps
 snyk test --all-projects --org=snyk-apps --severity-threshold=high
 ```
 
-CLI 옵션 전체 목록을 보려면 `snyk test --help`, `snyk monitor --help` 및 `snyk container --help` 명령을 실행하거나 [도움말 문서](../features/snyk-cli/commands/)를 참조하십시오.
+CLI 옵션 전체 목록을 보려면 `snyk test --help`, `snyk monitor --help` 및 `snyk container --help` 명령을 실행하거나 [도움말 문서](broken-reference)를 참조하십시오.
 
 ### 빌드 실패에 대한 옵션 구성
 
@@ -143,7 +143,7 @@ CLI 옵션 전체 목록을 보려면 `snyk test --help`, `snyk monitor --help` 
 * `--severity-threshold=high`: 심각도가 높은 Issue에 대해서만 빌드 실패
 * `--fail-on=upgradable`: 업그레이드 가능한 Issue에 대해서만 빌드 실패(Snyk 수정 조언을 통해 해결 가능)
 
-Snyk JSON 출력의 다른 파라미터(예: CVSS 점수)에 대한 빌드에 실패하거나 [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 wrapper를 사용하거나 [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 Issue에 대해서만 빌드에 실패할 수 있습니다. snyk-delta 사용에 대한 정보는 [Snyk CLI에서 고급 빌드 실패](../features/snyk-cli/advanced-failing-of-builds-in-snyk-cli.md)를 참조하십시오.
+Snyk JSON 출력의 다른 파라미터(예: CVSS 점수)에 대한 빌드에 실패하거나 [snyk-filter](https://github.com/snyk-tech-services/snyk-filter)와 같은 wrapper를 사용하거나 [snyk-delta](https://support.snyk.io/hc/en-us/articles/360019979978)와 같은 추가 도구를 사용하여 마지막 빌드 이후 발견된 Issue에 대해서만 빌드에 실패할 수 있습니다. snyk-delta 사용에 대한 정보는 [Snyk CLI에서 고급 빌드 실패](broken-reference)를 참조하십시오.
 
 ### 사용자 정의 빌드 아티팩트 생성
 
@@ -159,7 +159,7 @@ Snyk을 사용하면 JIRA에서 새 작업 항목을 자동으로 생성할 수 
 
 기본적으로 Issue를 무시하지 않거나 [snyk-delta](https://github.com/snyk-tech-services/snyk-delta)를 사용하지 않는 경우 Issue가 발견되면 파이프라인의 `snyk test`가 빌드에 실패합니다. 이러한 Issue를 해결하지 않고 빌드를 계속하려면 다음 작업을 수행합니다.
 
-* [.snyk 정책 파일을 사용한 Issue 무시](../features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)
+* [.snyk 정책 파일을 사용한 Issue 무시](broken-reference)
 * [Snyk UI에서 Issue 무시](https://support.snyk.io/hc/en-us/articles/360000923498-How-can-I-ignore-a-vulnerability-)
 * [Snyk API에서 Issue 무시](https://snyk.docs.apiary.io/#reference/projects)
 * 대량 무시에는 Snyk Python API 사용[https://github.com/snyk-labs/pysnyk](https://github.com/snyk-labs/pysnyk)와 [https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py](https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py)를 참조하십시오.
@@ -223,7 +223,7 @@ snyk test --yarn-workspaces --policy-path=src/.snyk
 
     각 프로젝트의 디펜던시를 설치한 후 특정 아티팩트(예: `pom.xml`)를 가리키는 비슷한 호출을 수행합니다. 이 방법은 빠르고 효율적이지만 특히 프로젝트가 익숙하지 않은 경우 확장하기 어려울 수 있습니다.
 * `--all-projects` 및 `--detection-depth` 옵션을 사용하는 경우 Snyk CLI 또는 CI/CD 플러그인은 지원되는 파일 유형과 일치하는 매니페스트에 대해 폴더 구조의 `--detection-depth`까지 검색합니다. 각 프로젝트는 스캔되고 자체 결과가 있습니다. 마찬가지로 `snyk-monitor`를 사용하는 경우 각 프로젝트에 대해 별도의 결과가 생성됩니다. 이것은 특히 node, .net, python 등에 걸친 프로젝트가 있는 경우 스캔을 자동화하는 좋은 방법입니다.
-* 대부분의 Gradle 프로젝트에서 `--all-projects`를 사용하면 `--all-projects` 검색의 일부로 빌드 파일을 찾을 때 다음과 같은 형식으로 백그라운드에서 Gradle 고유의 옵션을 호출할 수 있습니다. `snyk test --file=build.gradle --all-sub-projects`&#x20;
+* 대부분의 Gradle 프로젝트에서 `--all-projects`를 사용하면 `--all-projects` 검색의 일부로 빌드 파일을 찾을 때 다음과 같은 형식으로 백그라운드에서 Gradle 고유의 옵션을 호출할 수 있습니다. `snyk test --file=build.gradle --all-sub-projects`
 * Gradle에는 추가 설정 파라미터가 필요할 수 있습니다. 이 경우 다른 언어 및 패키지 매니저의 각 매니페스트에 대해 `--file=`을 사용하여 다른 아티팩트를 대상으로 합니다. 그런 다음 `--all-sub-projects` 및 `--configuration-matching`을 사용하여 복잡한 Gradle 프로젝트를 할 수도 있습니다.
 
 자세한 내용은 [Snyk for Java (Gradle, Maven)](https://support.snyk.io/hc/en-us/articles/360003817357-Java-for-Snyk)를 참조하십시오.
@@ -264,7 +264,7 @@ Snyk은 다음과 같이 도울 수 있습니다.
 ### 모범 사례 권장 사항
 
 * CI 중 컨테이너 이미지와 통합하는 방법에 관계없이 Snyk Open Source(애플리케이션 SCA) 테스트와는 별도의 빌드 단계로 Snyk Container 스캔을 실행합니다. 이를 통해 각각 컨테이너/OS 계층 또는 애플리케이션 계층 내의 취약점에 대한 빌드 실패를 분리할 수 있습니다. 이를 통해 컨테이너 빌드 작업을 보다 쉽게 수행할 수 있습니다.
-* 빌드 작업의 실패 상태를 사용자 지정하려면 `--fail-on` 및 `--severity-threshold`와 같은 CLI 옵션을 사용합니다. 고급 사용을 위해 **`--json`**을 사용하여 전체 취약점 보고서가 포함된 JSON 파일을 생성하고 JSON 데이터 기반의 자체적인 빌드 실패 상태를 설정할 수 있습니다.
+* 빌드 작업의 실패 상태를 사용자 지정하려면 `--fail-on` 및 `--severity-threshold`와 같은 CLI 옵션을 사용합니다. 고급 사용을 위해 \*\*`--json`\*\*을 사용하여 전체 취약점 보고서가 포함된 JSON 파일을 생성하고 JSON 데이터 기반의 자체적인 빌드 실패 상태를 설정할 수 있습니다.
 * 컨테이너의 기본 이미지(Dockerfile의 FROM절에 지정한 이미지)가 아닌 사용자 계층에서 발생한 취약점만 보고하려면 `--exclude-base-image-vulns`를 전달합니다.
 * `snyk container test` 후 `snyk container monitor`를 실행(또는 플러그인 설정에서 **Monitor** 확인란)하여 이 컨테이너의 BOM(Bill of Material) 기록을 Snyk UI 내에 유지하고 매일 새로운 취약점을 사전에 모니터링합니다. 이 기능은 새 릴리스를 프로덕션 환경으로 push할 때 유용합니다. `--project-name`을 사용하여 릴리스의 고유 식별자를 지정하여 프로덕션 컨테이너가 빌드 프로세스에서 다른 컨테이너와 별도로 추적되도록 할 수 있습니다.
 
@@ -287,7 +287,7 @@ Snyk Infrastructure as Code는 다음 항목을 지원합니다.
 
 CLI와 파이프라인이 동일한 엔진을 실행하고 있는 경우 프로젝트를 복제하고 CLI를 사용하여 스캔을 시도합니다.
 
-Snyk CLI 도구를 사용하여 파이프라인에서 실행할 때 알려진 취약점을 찾아 수정합니다. 자세한 내용은 [CLI reference](broken-reference)를 참조하십시오.
+Snyk CLI 도구를 사용하여 파이프라인에서 실행할 때 알려진 취약점을 찾아 수정합니다. 자세한 내용은 [CLI reference](broken-reference/)를 참조하십시오.
 
 #### 2단계: 로그 가져오기
 
@@ -307,7 +307,7 @@ DEBUG=* snyk test
 
 #### 3단계: 플러그인 대신 CLI 사용
 
-CLI를 설치하여 기본 플러그인을 CLI로 교체해 보십시오. 지침은 [Snyk CLI 설치](../features/snyk-cli/install-the-snyk-cli/)를 참조하십시오.
+CLI를 설치하여 기본 플러그인을 CLI로 교체해 보십시오. 지침은 [Snyk CLI 설치](broken-reference)를 참조하십시오.
 
 ### CI/CD 통합의 공통 플래그
 
