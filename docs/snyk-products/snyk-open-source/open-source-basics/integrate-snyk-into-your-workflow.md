@@ -85,7 +85,7 @@ GitHub has received your changes on your **add\_vulns** branch.
 
 Snyk은 merge 프로세스에서 취약점 및 라이선스 검사에 대한 pull request를 자동으로 테스트합니다.
 
-![](../../../.gitbook/assets/snyk\_vuln\_lic\_check.png)
+![](<../../../.gitbook/assets/snyk\_vuln\_lic\_check (1).png>)
 
 PR 워크플로우가 완료되면 Snyk은 프로젝트에 설정된 취약점과 라이선스 정책을 검증했습니다. 정책에 따라 검사를 통과하거나 실패합니다. 해당 내용은 GitHub에 표시됩니다.
 

@@ -43,7 +43,7 @@ SCM이 이미 통합되어 있다면 다음 단계로 이동합니다.
 2. Snyk에게 public 및 private 저장소 모두에 대한 액세스 권한을 부여할지 또는 public 저장소에만 액세스 권한을 부여할지 선택합니다.
 3. Snyk에게 저장소에 대한 액세스 권한을 제공하려면 **Authorize snyk**을 클릭합니다.
 
-![](<../.gitbook/assets/authorize (1) (2) (6) (1) (1).png>)
+![](<../.gitbook/assets/authorize (1) (2) (6) (1) (1) (1).png>)
 
 **저장소에 대한 SCM 사용 권한**
 
@@ -162,11 +162,11 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 
 개발자는 자동 수정 PR에 나타나는 merge advice를 고려해야 합니다.
 
-![](<../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (1) (4).png>)
+![](<../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (1) (1) (3).png>)
 
-![](<../.gitbook/assets/advice-green (1) (2) (2) (4) (3) (1) (4).png>)
+![](<../.gitbook/assets/advice-green (1) (2) (2) (4) (3) (1) (1) (3).png>)
 
-![](<../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (1) (3).png>)
+![](<../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (1) (1) (2).png>)
 
 {% hint style="info" %}
 Snyk 자동 수정 PR은 새로운 Issue에 대해서만 생성됩니다.
@@ -205,7 +205,7 @@ Snyk은 현재 Snyk Broker 사용을 포함하여 GitHub, GitHub Enterprise Serv
 2. **Projects**를 클릭하세요.
 3.  관련 프로젝트로 이동하고 **Settings**(톱니바퀴 아이콘)를 클릭합니다.
 
-    <img src="../.gitbook/assets/image (56) (2) (3) (3) (3) (3) (4) (5) (5) (5) (5) (3) (1) (1).png" alt="" data-size="original">
+    <img src="../.gitbook/assets/image (56) (2) (3) (3) (3) (3) (4) (5) (5) (5) (5) (3) (1) (1) (1).png" alt="" data-size="original">
 4. 설정 영역의 왼쪽 패널 메뉴에서 통합 설정을 클릭하여 해당 프로젝트에 고유한 설정을 적용합니다.
 5. **Automatic dependency upgrade pull requests**로 스크롤하고 Disabled를 클릭합니다.
 6. 표시되는 옵션:

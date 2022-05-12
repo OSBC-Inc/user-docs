@@ -13,7 +13,7 @@ Snyk은 저장소에 있는 해당 태그를 평가하여 Artifactory 컨테이�
 
 * 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
 
-![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (1).gif>)
+![](<../../../../.gitbook/assets/add-artifactory-images (1) (2) (1) (1).gif>)
 
 * **Projects**로 이동하고 **Add Project**를 클릭합니다. 다음과 유사하게 계정에 이미 구성된 통합 목록이 열립니다.
 
@@ -21,7 +21,7 @@ Snyk은 저장소에 있는 해당 태그를 평가하여 Artifactory 컨테이�
 
 * \*\*The Which images do you want to test?\*\*가 나타나고, 연결한 레지스트리에 사용 가능한 모든 이미지가 다음과 유사하게 각 저장소별로 그룹화되어 표시됩니다.
 
-![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (1) (3).png>)
+![](<../../../../.gitbook/assets/uuid-bd9cf629-f5fb-b28b-1fc1-40df2367a7f9-en (1) (1) (2) (4) (2) (1) (1) (2).png>)
 
 * 다음 방법 중 하나 또는 모두 사용하여 단일 또는 여러 이미지를 선택합니다.
   * 필드에 가져올 단일 이미지의 이름을 입력합니다(#1).

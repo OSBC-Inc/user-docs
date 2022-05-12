@@ -87,7 +87,7 @@ Snyk Open Source requires the Snyk CLI, so it downloads in the background.
 
 Snyk Code analysis runs quickly without the CLI, so results may already be available. Otherwise, you see the following screen while Snyk scans your workspace for vulnerabilities:
 
-![Snyk Code scan](<../../../.gitbook/assets/image (80) (1) (1).png>)
+![Snyk Code scan](<../../../.gitbook/assets/image (80) (1) (1) (1).png>)
 
 Snyk analysis runs automatically when you open a folder or workspace.
 
@@ -165,7 +165,7 @@ You can find security vulnerabilities in the npm packages you import and see the
 
 Code inline vulnerability counts are also shown in your `package.json` file:
 
-![package.json file](../../../.gitbook/assets/oss-editor-pjson.png)
+![package.json file](<../../../.gitbook/assets/oss-editor-pjson (1).png>)
 
 Find security vulnerabilities in your JavaScript packages from well-known CDNs. The extension scans any HTML files in your projects and displays vulnerability information about the modules you include from your favorite CDN.
 
@@ -179,7 +179,7 @@ Find security vulnerabilities in your JavaScript packages from well-known CDNs. 
   * yastatic.net
   * ajax.aspnetcdn.com
 
-![Vulnerability from a CDN](../../../.gitbook/assets/oss-editor-html.png)
+![Vulnerability from a CDN](<../../../.gitbook/assets/oss-editor-html (1).png>)
 
 You can navigate to the most severe vulnerability by triggering the provided code actions. This opens a vulnerability window to show more details:
 

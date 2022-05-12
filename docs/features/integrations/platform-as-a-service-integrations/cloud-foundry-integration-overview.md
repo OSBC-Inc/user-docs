@@ -21,7 +21,7 @@ Snyk이 배포된 Cloud Foundry 애플리케이션을 모니터링할 수 있으
 
 다음으로 Cloud Foundry API URL, Username 및 Password를 입력하라는 메시지가 나타나는 페이지로 이동합니다. Snyk 조직에 전용 사용자를 설정하는 것이 좋습니다.
 
-![](../../../.gitbook/assets/uuid-9710041e-427e-d577-ec40-5d3d1c818b5d-en.png)
+![](<../../../.gitbook/assets/uuid-9710041e-427e-d577-ec40-5d3d1c818b5d-en (1).png>)
 
 Cloud Foundry API URL을 찾는 방법은 다음과 같습니다.
 

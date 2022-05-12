@@ -36,13 +36,13 @@ Snyk이 테스트하고 모니터링할 저장소를 선택하여 Snyk으로 테
 
 **Projects**를 선택한 다음 추가한 프로젝트 항목을 클릭하여 발견된 심각도의 수를 포함한 스캔한 파일의 정보를 확인합니다.
 
-![](../../.gitbook/assets/getting-started-snyk-iac-1.png)
+![](../../.gitbook/assets/iac\_-\_issues\_list.png)
 
 (Issue는 Helm, Kubernetes 및 Terraform과 같은 프로젝트 유형으로 분류됩니다.)
 
 프로젝트를 클릭하면 구성 파일의 Issue에 대한 세부 정보를 확인할 수 있습니다.
 
-![](../../.gitbook/assets/getting-started-snyk-iac-2.png)
+![](../../.gitbook/assets/iac\_-\_select\_config\_file.png)
 
 {% hint style="info" %}
 프로젝트 추가 중 오류가 발생하면 [프로젝트 가져오기](https://support.snyk.io/hc/en-us/sections/360000923478-Importing-projects)를 참조하십시오.

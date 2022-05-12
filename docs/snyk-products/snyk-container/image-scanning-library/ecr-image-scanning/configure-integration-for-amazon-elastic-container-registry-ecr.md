@@ -6,7 +6,7 @@
 
 계정간 액세스를 설정하여 Snyk의 Amazon ECR 통합을 원클릭 배포로 활성화할 수 있습니다. 이 옵션은 [AWS Quick Start](https://github.com/aws-quickstart/quickstart-snyk-security)로 제공되며 수동으로 구성할 필요가 없습니다.
 
-![](<../../../../.gitbook/assets/quickstart-snyk-security-ecr (1).png>)
+![](../../../../.gitbook/assets/quickstart-snyk-security-ecr.png)
 
 통합을 완료하려면 Snyk **Organization ID**와 AWS IAM [role ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference\_identifiers.html#identifiers-arns)이 필요합니다. ARN 역할은 AWS CloudFormation Console의 Output 탭에서 제공합니다.
 

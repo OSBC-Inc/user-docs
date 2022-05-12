@@ -53,9 +53,9 @@ Snyk에서 테스트하고 모니터링할 저장소를 선택하여 Snyk으로 
 
 가져온 프로젝트를 확장하면 발견된 Issue 수와 심각도 수준별로 그룹화된 해당 프로젝트의 취약점 정보를 볼 수 있습니다.
 
-![](../../.gitbook/assets/view\_vulns\_\_overview.png)
+![](<../../.gitbook/assets/view\_vulns\_\_overview (1).png>)
 
-![](<../../.gitbook/assets/detailed-vuln-information (3) (4) (4) (4) (6) (7) (5) (1) (1).png>)
+![](<../../.gitbook/assets/detailed-vuln-information (3) (4) (4) (4) (6) (7) (5) (1) (1) (1).png>)
 
 자세한 내용은 [프로젝트 정보 보기](../../getting-started/introduction-to-snyk-projects/view-project-information/)를 참조하십시오.
 
@@ -65,7 +65,7 @@ Snyk은 일부 언어의 경우 pull/merge requests를 사용하여 취약점을
 
 프로젝트의 **Issues**로 이동합니다.
 
-![Screenshot\_2021-04-09\_at\_17.35.25.png](../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.35.25.png)
+![Screenshot\_2021-04-09\_at\_17.35.25.png](<../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.35.25 (1).png>)
 
 취약점을 수정하기 위해 다음과 같이 진행합니다.
 
@@ -76,6 +76,6 @@ Snyk은 일부 언어의 경우 pull/merge requests를 사용하여 취약점을
 5. Snyk이 PR을 실행하면 결과 화면이 나타납니다.
 6. 추가적으로 **Files changed** 탭에서 변경 사항에 대한 세부 정보를 확인합니다.
 
-![](../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.46.22.png)
+![](<../../.gitbook/assets/screenshot\_2021-04-09\_at\_17.46.22 (1).png>)
 
 자세한 내용은 [취약점 수정](broken-reference)을 참조하십시오.
