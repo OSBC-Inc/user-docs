@@ -1,26 +1,26 @@
 # Reports
 
-## Introduction
+## 소개
 
-Snyk reports help security and development teams work together. As your coding projects progress, Snyk's reporting dashboard lets security professionals monitor activity and maintain security insight, without looking over development’s shoulder.&#x20;
+Snyk 보고서는 보안 및 개발 팀이 협력하는 데 도움이 됩니다. 코딩 프로젝트가 진행됨에 따라 Snyk의 Reports 대시보드를 통해 보안 전문가는 개발 과정을 확인하지 않고도 작업을 모니터링하고 보안 통찰력을 유지할 수 있습니다.
 
-Tracking analytics is simple when all your data can be found in a single screen, on Projects, Issues, Dependencies, and Licenses.
+Projects, Issues, Dependencies 및 Licenses에서 모든 데이터를 한 화면에서 찾을 수 있는 경우 쉽게 추적할 수 있습니다.
 
-See the [Reports Overview](reports-overview.md) page for more information on organizing and customizing your reports.
+Reports 구성 및 사용자 정의에 대한 자세한 내용은 [Reports 개요](reports-overview.md) 페이지를 참조하십시오.
 
 {% hint style="info" %}
-**Feature availability**\
-Reports are available with the Business and Enterprise plans. See the [plans and pricing](https://snyk.io/plans/) page for details.
+**기능 지원 여부**\
+Reports는 Business 및 Enterprise 요금제와 함께 사용할 수 있습니다. 자세한 내용은 [요금제 및 가격](https://snyk.io/plans/) 페이지를 참조하십시오.
 {% endhint %}
 
-### Accessing reports
+### 보고서 액세스
 
-1. Navigate to the [Snyk homepage](https://snyk.io) and login to Snyk&#x20;
-2. [Login or create an account](https://app.snyk.io/login)
-3. Select the **Reports** menu option (in the top navigation bar)
+1. [Snyk 홈페이지](https://snyk.io)로 이동하여 Snyk에 로그인합니다.
+2. [로그인 또는 계정을 생성합니다.](https://app.snyk.io/login)
+3. 단 바에서 **Reports** 메뉴 옵션을 선택합니다.
 
-![The report tab is located in the top nav bar as shown here.](<../../.gitbook/assets/Screen Shot 2022-02-22 at 2.58.43 PM.png>)
+![Report 탭은 여기에 표시된 대로 상단 바에 위치합니다.](../../.gitbook/assets/Screen%20Shot%202022-02-22%20at%202.58.43%20PM.png)
 
 {% hint style="warning" %}
-Reports do not support Snyk Code projects.
+보고서는 Snyk Code 프로젝트를 지원하지 않습니다.
 {% endhint %}

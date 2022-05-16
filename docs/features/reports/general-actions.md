@@ -1,48 +1,48 @@
-# General actions
+# 일반적인 작업
 
-This section describes the actions you can perform regardless of the tab you’ve selected.
+이 섹션에서는 선택한 탭에 관계없이 수행할 수 있는 작업에 대해 설명합니다.
 
 ## Filters
 
-At the organization level, from the top of the Reports area, you can search for and filter specific projects, and you can filter projects by severity and type. Once you've filtered, the settings are retained as you navigate between tabs.
+조직 수준에서 Reports 영역의 맨 위에서 특정 프로젝트를 검색 및 필터링할 수 있으며 심각도 및 유형별로 프로젝트를 필터링할 수 있습니다. 필터링을 마치면 탭 사이를 이동할 때 설정이 유지됩니다.
 
 ![](../../.gitbook/assets/uuid-8769c471-9788-dfdf-e3a7-2ffd28ea1011-en.png)
 
-To search for and filter specific projects, open the dropdown from the Projects search field; additionally or alternatively, start typing any part of the project names:
+특정 프로젝트를 검색 및 필터링하려면 프로젝트 검색 필드에서 드롭다운을 열고, 또는 프로젝트 이름의 일부를 입력합니다.
 
 ![](../../.gitbook/assets/uuid-d8df9018-387d-26f4-c735-b50a312b9eb0-en.png)
 
-To filter by vulnerability severities and by project types, open the **Filters** dropdown:
+취약점 심각도 및 프로젝트 유형별로 필터링하려면 **Filters** 드롭다운을 엽니다.
 
 ![](../../.gitbook/assets/mceclip0-29-.png)
 
-## How to navigate and view data for groups and organizations
+## 그룹 및 조직의 데이터를 탐색하고 보는 방법
 
-To view data for a single organization you need to be an administrator for the organization.
+단일 조직의 데이터를 보려면 해당 조직의 관리자여야 합니다.
 
 **Steps:**
 
-1. Select the organization from the dropdown list in the top panel.
-2. Navigate to **Reports**.
-3. Data appears only for the organization you selected.
+1. 상단 패널의 드롭다운 목록에서 organization을 선택합니다.
+2. **Reports**로 이동합니다.
+3. 선택한 조직에 대한 데이터만 나타납니다.
 
-## View data for multiple organizations
+## 여러 조직에 대한 데이터 보기
 
 {% hint style="info" %}
-**Feature availability**\
-This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 지원 여부**\
+이 기능은 Enterprise 요금제에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
-Group administrators can view report data for one, some or all of the organizations in a single group, together.
+그룹 관리자는 단일 그룹의 조직 하나, 일부 또는 모든 조직에 대한 보고서 데이터를 함께 볼 수 있습니다.
 
 **Steps:**
 
-1. Select the group from the dropdown list in the top panel.
-2. Navigate to **Reports**.
-3. Data appears for all organizations in the group and a dynamic dropdown of organizations is available.
-4. Check or uncheck the organizations you wish to view.
-5. To save the selected organizations as a quick filter, assign a unique name and then click **Save**.
+1. 상단 패널의 드롭다운 목록에서 group을 선택합니다.
+2. **Reports**로 이동합니다.
+3. 그룹의 모든 조직에 대한 데이터가 나타나고 조직의 동적 드롭다운을 사용할 수 있습니다.
+4. 보려는 조직을 선택하거나 취소합니다.
+5. 선택한 조직을 빠른 필터로 저장하려면 고유한 이름을 지정한 다음 **Save**를 클릭합니다.
 
-## Sorting
+## 정렬
 
-Columns that allow the data to be sorted have arrows next to their headings. Click the arrows to sort the data in descending order by the relevant category. Click again to switch the order to ascending.
+데이터를 정렬할 수 있는 열에는 머리글 옆에 화살표가 있습니다. 화살표를 클릭하면 관련 카테고리별로 데이터를 내림차순으로 정렬할 수 있습니다. 다시 클릭하면 오름차순으로 전환됩니다.
