@@ -1,24 +1,24 @@
-# Bitbucket Pipelines integration
+# Bitbucket Pipelines 통합
 
-Snyk integrates with Bitbucket Pipelines using a **Snyk pipe**, seamlessly scanning your application dependencies and Docker images for open source security vulnerabilities as part of the continuous integration/continuous delivery (CI/CD) workflow.
+Snyk은 **Snyk pipe**를 사용하여 Bitbucket Pipeline과 통합되어, CI/CD(지속적 통합/지속적 배포) 워크플로우의 일부로 애플리케이션 종속성 및 Docker 이미지에 대한 오픈 소스 보안 취약점을 원활하게 검색합니다.
 
-[Bitbucket Pipes](https://bitbucket.org/blog/meet-bitbucket-pipes-30-ways-to-automate-your-ci-cd-pipeline) enables users to customize and automate a Bitbucket Pipeline CI/CD workflow with a group of ready-to-use tasks that can be added inside of your pipelines by copying and pasting them from the Bitbucket interface.
+사용자는 [Bitbucket Pipes](https://bitbucket.org/blog/meet-bitbucket-pipes-30-ways-to-automate-your-ci-cd-pipeline)를 사용하여 즉시 사용할 수 있는 작업 그룹을 사용하여 비트버킷 파이프라인 CI/CD 워크플로우를 사용자 정의하고 자동화할 수 있습니다.
 
-With the Snyk pipe, you can quickly add Snyk scanning to your pipelines to test and monitor for vulnerabilities at different points of the CI/CD workflow, based on your configurations. Results are then displayed from the Bitbucket Pipelines output view and can also be monitored from the Snyk Web UI ([app.snyk.io](http://app.snyk.io)).
+Snyk pipe를 사용하면 파이프라인에 Snyk 스캔을 신속하게 추가하여 구성에 따라 CI/CD 워크플로우의 여러 지점에서 취약점을 테스트하고 모니터링할 수 있습니다. Bitbucket Pipelines output view에서 결과를 표시하고 Snyk Web UI ([app.snyk.io](http://app.snyk.io))에서도 모니터링할 수 있습니다.
 
-## Snyk pipe information in Bitbucket
+## Bitbucket의 Snyk pipe 정보
 
-From the build directory, Bitbucket Pipelines displays a list of available pipes customized for you, similar to the following image:
+빌드 디렉토리에서 Bitbucket Pipeline은 다음 이미지와 유사하게 사용자 정의된 사용 가능한 파이프의 목록을 표시합니다.
 
 ![Bitbucket Pipelines list of available pipes](../../../.gitbook/assets/uuid-6fff2668-6e2e-22ae-200f-124c8a240b02-en.png)
 
-From this list, find and click **Snyk** to view the pipe, examples, parameters, and values:
+이 목록에서 **Snyk**을 찾아 클릭하여 pipe, examples, 파라미터 및 values을 확인합니다.
 
 ![Snyk Scan pipe information](../../../.gitbook/assets/mceclip0-25-.png)
 
-## Language support
+## 개발 언어 지원
 
-Snyk integration with Bitbucket pipes is supported for the following languages:
+Bitbucket pipes와의 Snyk 통합은 다음 개발 언어를 지원합니다.
 
 * JavaScript (npm)
 * .NET (NuGet)
@@ -27,111 +27,111 @@ Snyk integration with Bitbucket pipes is supported for the following languages:
 * Docker
 
 {% hint style="info" %}
-Bitbucket pipeline implementation for Java (Maven and Gradle) requires the [Snyk CLI](https://docs.snyk.io/snyk-cli).
+Java(Maven and Gradle)를 위한 Bitbucket pipeline 구현에는 [Snyk CLI](https://docs.snyk.io/snyk-cli)가 필요합니다.
 {% endhint %}
 
-## Bitbucket Pipelines integration: how it works
+## Bitbucket Pipelines 통합: 작동 방식
 
-Once you have added the Snyk pipe to the pipeline, each time the pipeline executes (by any trigger type) the Snyk pipe performs the following actions:
+Snyk pipe를 파이프라인에 추가한 후에는 트리거 유형에 따라 파이프라인이 실행될 때마다 Snyk pipe가 다음 작업을 수행합니다.
 
 ### **Scan**
 
-1. Snyk scans app dependencies or container images for vulnerabilities or licensing issues, and lists the vulnerabilities and issues.
-2. If Snyk finds vulnerabilities, it does one of the following (based on your configuration):
-   * Fails the build
-   * Lets the build complete
+1. Snyk은 앱 종속성 또는 컨테이너 이미지에 취약점 또는 라이센싱 문제가 있는지 검색하고 취약점과 이슈를 나열합니다.
+2. Snyk이 취약점을 발견하면(사용자 구성에 따라) 다음 중 하나를 수행합니다.
+   * 빌드에 실패합니다
+   * 빌드를 완료합니다
 
 ### **Monitor**
 
-Optionally, if the build completes successfully and **MONITOR** is set to **True** in the Snyk step, then Snyk saves a snapshot of the project dependencies from the Snyk Web UI, where you can view the dependency tree displaying all of the issues and receive alerts for new issues found in the existing app version.
+선택적으로 빌드가 성공적으로 완료되고 Snyk 단계에서 **MONITOR**가 **True**로 설정된 경우 Snyk은 Snyk Web UI에서 프로젝트 종속성의 스냅샷을 저장합니다. 여기서 모든 문제를 표시하는 디펜던시 트리를 보고 기존 앱 버전에서 발견된 새로운 이슈에 대한 알림을 받을 수 있습니다.
 
-## Configure your Bitbucket Pipelines integration
+## Bitbucket Pipelines 통합 구성
 
-To enable Snyk to test and monitor your code as an integral part of your CI/CD workflow in Bitbucket, add the Snyk pipe into your `bitbucket-pipelines.yml` (YAML) file located in the root of your repository. This file that defines all your build configurations (pipelines for your CI/CD workflow).
+Snyk이 Bitbucket에서 CI/CD 워크플로우의 일부로 코드를 테스트하고 모니터링할 수 있도록 하려면 저장소 루트에 있는 `bitbucket-pipelines.yml` (YAML) 파일에 Snyk pipe를 추가하십시오. 모든 빌드 구성(CI/CD 워크플로우의 파이프라인)을 정의하는 파일입니다.
 
-## Prerequisites
+## 전제 조건
 
-* For your Bitbucket Pipelines, ensure you have build minutes in your account, which are necessary to enable ongoing CI/CD workflows.
-* Create a Snyk account and retrieve the Snyk API token from your **Account settings**.
-* Create a Repository variable from Bitbucket for your Snyk API token. Call the variable SNYK\_TOKEN.
+* Bitbucket Pipeline의 경우 지속적인 CI/CD 워크플로우를 활성화하는 데 필요한 빌드 시간이 계정에 있는지 확인합니다.
+* Snyk 계정을 생성하고 **Account settings**에서 Snyk API 토큰을 검색합니다.
+* Bitbucket에서 Snyk API 토큰에 대한 Repository 변수를 만듭니다. 변수 SNYK\_TOKEN을 호출합니다.
 
-## How to add a Snyk pipe
+## Snyk pipe 추가 방법
 
-1. Add the Snyk pipe while creating your pipeline or while editing an existing pipeline. See the Bitbucket documentation for more information: [pipelines](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html) and [pipes](https://support.atlassian.com/bitbucket-cloud/docs/pipes/). When adding the Snyk pipe, follow the guidelines in the remaining steps.
-2. Use the Bitbucket pipeline editor to update the `.yml` file configuration, select the correct language, and use the Bitbucket Pipes build directory when adding the Snyk pipe.
-3. Paste the Snyk pipe into the Bitbucket editor interface after all build steps. Build steps are commands such as these: `npm install / composer install / bundle install / dotnet restore / docker build`
-4. Ensure you paste the pipe **before** a deployment step, such as **npm publish** or **docker push**.
-5. Configure the **LANGUAGE**, choose whether to fail the pipeline on vulnerabilities found with **DONT\_BREAK\_BUILD** (you can also use **SEVERITY\_THRESHOLD**), and consider enabling **MONITOR** . For more information see the next section of this doc, Snyk pipe parameters and values.
-6. Once Snyk is included in your pipeline commands, it looks for the manifest files in that repository (`package.json`, `package-lock.json`) and performs the scan.
+1. 파이프라인을 만들거나 기존 파이프라인을 편집하는 동안 Snyk pipe를 추가합니다. [pipelines](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html) 및 [pipes](https://support.atlassian.com/bitbucket-cloud/docs/pipes/)에 대한 자세한 내용은 비트버킷 설명서를 참조하십시오. Snyk pipe를 추가할 때는 나머지 단계의 지침을 따르십시오.
+2. Bitbucket pipeline editor를 사용하여 `.yml` 파일 구성을 업데이트하고 올바른 언어를 선택한 다음 Snyk pipe를 추가할 때 Bitbucket Pipes 빌드 디렉토리를 사용합니다.
+3. 모든 빌드 단계 후에 Snyk pipe를 Bitbucket editor 인터페이스에 붙여넣습니다. 빌드 단계는 `npm install / composer install / bundle install / dotnet restore / docker build`와 같은 명령어입니다.
+4. **npm publish** 또는 **docker push**와 같은 배포 단계 **이전**에 pipe를 붙여넣어야 합니다.
+5. **LANGUAGE**를 구성하고 **DONT\_BREAK\_BUILD**에서 발견된 취약점에 대한 파이프라인 실패 여부를 선택하고(**SEVERITY\_THRESHOLD**를 사용할 수도 있음), **MONITOR**를 사용하도록 설정합니다. 자세한 내용은 이 문서의 다음 섹션인 Snyk pipe 파라미터 및 values를 참조하십시오.
+6. 파이프라인 명령에 Snyk이 포함되면 해당 저장소(`package.json`, `package-lock.json`)에서 매니페스트 파일을 찾고 검색을 수행합니다.
 
-Results appear in the Bitbucket Pipelines output interface, similar to the following:
+결과는 다음과 같이 Bitbucket Pipelines output 인터페이스에 나타납니다.
 
 ![Bitbucket Pipelines output interface](../../../.gitbook/assets/uuid-dbbc4153-d3ff-5cbb-9ddd-affa138387b7-en.png)
 
 {% hint style="info" %}
-**Note:** If the build fails, even if **MONITOR** is set to **True**, Snyk does not continue to the monitor stage because no projects are deployed until the build succeeds. To enable monitoring on Snyk.io of projects with vulnerabilities, set **DONT\_BREAK\_BUILD** to **True**. You can use **SEVERITY\_THRESHOLD** to tell the pipe the severity threshold for failing the pipe at the scanning stage. For more information see the next section, Snyk pipe parameters and values.
+**Note:** 빌드가 실패하면 **MONITOR**가 **True**로 설정된 경우에도 Snyk은 빌드가 성공할 때까지 프로젝트가 배포되지 않으므로 monitor 단계로 계속 진행되지 않습니다. Snyk.io에서 취약점이 있는 프로젝트를 모니터링하려면 **DONT\_BREAK\_BUILD**를 **True**로 설정합니다. **SEVERITY\_THRESHOLD**를 사용하여 scanning 단계에서 pipe의 실패에 대한 심각도 임계값을 pipe에 알릴 수 있습니다. 자세한 내용은 다음 섹션인 Snyk pipe 파라미터 및 values를 참조하십시오.
 {% endhint %}
 
-## Snyk pipe parameters and values (Bitbucket Cloud)
+## Snyk pipe 파라미터 및 values (Bitbucket Cloud)
 
-The following is the Snyk pipe that should be configured as part of a pipeline YAML file in order to include vulnerability scanning as part of your CI/CD workflow:
+다음은 CI/CD 워크플로의 일부로 취약점 검색을 포함하려면 파이프라인 YAML 파일의 일부로 구성해야 하는 Snyk pipe입니다.
 
 `- pipe: snyk/snyk-scan:0.4.6`
 
-variables:
+변수:
 
-SNYK\_TOKEN: '' # It is preferable to encrypt this value and enter the string $SNYK\_TOKEN only in the pipeline. See the table that follows for more information.
+SNYK\_TOKEN: '' # 이 값을 암호화하고 $SNYK\_TOKEN 문자열만 파이프라인에 입력하는 것이 좋습니다. 자세한 내용은 다음 표를 참조하십시오.
 
-LANGUAGE: '' # Required unless you use the snyk-cli image
+LANGUAGE: '' # snyk-cli 이미지를 사용하지 않는 경우 필수
 
-\# IMAGE\_NAME: '' # Only required if LANGUAGE set to 'docker'
+\# IMAGE\_NAME: '' # LANGUAGE가 'docker'로 설정된 경우에만 필요
 
-\# CODE\_INSIGHTS\_RESULTS: '' # Optional. Default: false
+\# CODE\_INSIGHTS\_RESULTS: '' # 선택 사항. 기본값: false
 
-\# SNYK\_TEST\_JSON\_INPUT: "" # Optional. Default: false
+\# SNYK\_TEST\_JSON\_INPUT: "" # 선택 사항. 기본값: false
 
-\# DONT\_BREAK\_BUILD: '' # Optional
+\# DONT\_BREAK\_BUILD: '' # 선택 사항
 
-\# MONITOR: '' # Optional
+\# MONITOR: '' # 선택 사항
 
-\# SEVERITY\_THRESHOLD: '' # Optional
+\# SEVERITY\_THRESHOLD: '' # 선택 사항
 
-\# ORGANIZATION: '' # Optional
+\# ORGANIZATION: '' # 선택 사항
 
-\# PROJECT\_FOLDER: '' # Optional
+\# PROJECT\_FOLDER: '' # 선택 사항
 
-\# TARGET\_FILE: '' # Optional
+\# TARGET\_FILE: '' # 선택 사항
 
-\# EXTRA\_ARGS: '' # Optional
+\# EXTRA\_ARGS: '' # 선택 사항
 
-\# DEBUG: '' # Optional
+\# DEBUG: '' # 선택 사항
 
-The following table describes the Snyk pipe parameters.
+다음 표에서는 Snyk pipe 파라미터에 대해 설명합니다.
 
-| **Parameter**           | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SNYK\_TOKEN (\*)        | <p>Enter the Snyk API token, which you can retrieve from your Snyk Account settings.</p><p>We recommend you encrypt the token: you can add it as a predefined variable in a separate part of the Bitbucket pipes directory:</p><ol><li>From the build directory, navigate to add a new Repository value, name the parameter “SNYK_TOKEN” and enter your API token from Snyk as the value.</li><li><p>From the pipeline YAML file that you're building, enter $SNYK_TOKEN as the value for the SNYK_TOKEN parameter in the Snyk pipe.</p><p><img src="../../../.gitbook/assets/uuid-6ce8d058-882c-c810-f303-c59dcaeeeda8-en (3) (3) (3) (3) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (8).png" alt="Snyk_token_in_pipeline.png" data-size="original"></p></li></ol><p>See <a href="https://support.atlassian.com/bitbucket-cloud/resources/">Bitbucket documentation</a> for more information about predefined variables.</p> |
-| LANGUAGE (\*)           | <p>Configure the package manager of the app (for example, npm, maven, rubygems, composer, nuget or docker).</p><p>See <a href="https://hub.docker.com/r/snyk/snyk-cli/tags">Dockerhub</a> for a full list of possible tags.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| IMAGE\_NAME (\*)        | For docker language only, configure the image name for which to perform a docker scan.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| CODE\_INSIGHTS\_RESULTS | Create Code Insight report with Snyk test results. Default: \`false\`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| SNYK\_TEST\_JSON\_INPUT | Use if you want to create only a Code Insights report from a previously generated \`snyk test --json\` output. See the example that follows in the section "Generating the Code Insights report from existing Snyk JSON output".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| DONT\_BREAK\_BUILD      | <p>When set to true, continues the build even when vulnerabilities are discovered.</p><p>Default: false. The build fails.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| MONITOR                 | <p>Records a snapshot of the project for the Snyk UI and then continues monitoring the project after the build is run.</p><p>If the test succeeds, this records a snapshot of the dependencies in the <a href="http://app.snyk.io">Snyk app</a> and allows you to see the state of your deployed code, have it monitored, and receive alerts when new vulnerabilities are found in the code.</p><p>Default: false. The project is not monitored after the initial scan.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| SEVERITY\_THRESHOLD     | <p>Reports issues equal to or higher than the configured level. Possible values: low, med, high, critical</p><p>Default: low. All vulnerabilities are reported.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ORGANIZATION            | <p>Configures the organization from your Snyk account to which to associate the repository.</p><p>Default: none.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| PROJECT\_FOLDER         | <p>The folder in which the project resides.</p><p>Default: ..</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| TARGET\_FILE            | <p>The package file (for example <code>package.json</code>), equivalent to --file= in the CLI.</p><p>For Docker enter the Dockerfile as the value.</p><p>Default: none.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| EXTRA\_ARGS             | <p>Extra arguments to be passed to the Snyk CLI. Use the parameters and arguments as described here.</p><p>Default: none.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| DEBUG                   | <p>Turn on extra debug information.</p><p>Default: false</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Parameter**           | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SNYK\_TOKEN (\*)        | <p>Snyk 계정 설정에서 검색할 수 있는 Snyk API 토큰을 입력합니다. 토큰을 암호화하는 것이 좋습니다. Bitbucket pipes 디렉토리의 별도 부분에 토큰을 미리 정의된 변수로 추가할 수 있습니다.</p><ol><li>빌드 디렉토리에서 새 저장소 값을 추가하고 파라미터 이름을 “SNYK_TOKEN”으로 지정한 다음 Snyk의 API 토큰을 값으로 입력합니다.</li><li><p>작성 중인 파이프라인 YAML 파일에서 Snyk pipe의 SNYK_TOKEN 파라미터의 값으로$SNYK_TOKEN를 입력합니다.</p><p><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-2341036ae94fe4f99f07a25a7adf3cbd627672a6_uuid-9c6a12b4-2c03-2248-ad0e-c7437a35e142-en.png" alt="Snyk_token_in_pipeline.png" data-size="original"></p></li></ol><p>미리 정의된 변수에 대한 자세한 내용은 <a href="https://support.atlassian.com/bitbucket-cloud/resources/">Bitbucket documentation</a>를 참조하십시오.</p> |
+| LANGUAGE (\*)           | <p>앱의 패키지 매니저(npm, maven, rubygems, composer, nuget 또는 docker)를 구성합니다.</p><p>가능한 태그의 전체 목록은 <a href="https://hub.docker.com/r/snyk/snyk-cli/tags">Dockerhub</a>를 참조하십시오.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| IMAGE\_NAME (\*)        | Docker language의 경우에만 docker scan을 수행할 이미지 이름을 구성합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| CODE\_INSIGHTS\_RESULTS | Snyk test 결과를 사용하여 Code Insight 보고서를 만듭니다. 기본값은 'false'입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| SNYK\_TEST\_JSON\_INPUT | 이전에 생성된\`snyk test --json\` output에서 Code Insights 보고서만 작성하려는 경우 사용합니다. "Generating the Code Insights report from existing Snyk JSON output"에 이어지는 예를 참조하십시오.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| DONT\_BREAK\_BUILD      | true로 설정하면 취약점이 검색된 경우에도 빌드를 계속합니다. 기본값은 false입니다. 빌드가 실패합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| MONITOR                 | <p>Snyk UI에 대한 프로젝트의 스냅샷을 기록한 다음 빌드가 실행된 후 프로젝트를 계속 모니터링합니다.</p><p>테스트가 성공하면 <a href="http://app.snyk.io">Snyk app</a>에 종속성의 스냅샷을 기록하고 배포된 코드의 상태를 확인하고 모니터링하며 코드에서 새로운 취약점이 발견되면 알림을 받을 수 있습니다.</p><p>기본값은 false입니다. 초기 검색 후에는 프로젝트가 모니터링되지 않습니다.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| SEVERITY\_THRESHOLD     | <p>구성된 수준 이상의 문제를 보고합니다. 가능한 값은 low, med, high, critical입니다.</p><p>기본값은 low입니다. 모든 취약점이 보고됩니다.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ORGANIZATION            | <p>저장소를 연결할 Snyk 계정에서 조직을 구성합니다.</p><p>기본값: none.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| PROJECT\_FOLDER         | <p>프로젝트가 있는 폴더입니다.</p><p>기본값: ..</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| TARGET\_FILE            | <p>CLI의 --file=과 동일한 패키지 파일(예: <code>package.json</code>).</p><p>Docker에 Dockerfile을 값으로 입력합니다.</p><p>기본값: none.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| EXTRA\_ARGS             | <p>ESnyk CLI에 전달할 추가 인수입니다. 여기에 설명된 매개 변수와 인수를 사용합니다.</p><p>기본값: none.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| DEBUG                   | <p>추가 디버그 정보를 설정합니다.</p><p>기본값: false</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-### **Example of a Snyk pipe for Docker**
+### **Docker**용 **Snyk pipe** 예제
 
-The following is an example of the Snyk pipe set up for a Docker image:
+다음은 Docker 이미지에 대해 설정된 Snyk pipe의 예입니다.
 
 ![Snyk pipe for a Docker image](../../../.gitbook/assets/uuid-ad76fa92-0b15-da5c-bd27-a1cc250a3ae0-en.png)
 
-### **Example of a Snyk pipe for npm**
+### **npm**용 **Snyk pipe** 예제
 
-The following is an example of the Snyk pipe set up for npm:
+다음은 npm에 대해 설정된 Snyk pipe의 예입니다.
 
 ![Snyk pipe set up for npm](../../../.gitbook/assets/uuid-6e06670a-3217-2ff5-bf56-1e06a309d06c-en.png)
