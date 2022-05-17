@@ -1,13 +1,13 @@
-# Revoking and regenerating Snyk API tokens
+# Snyk API 토큰 취소 및 재생성
 
 {% hint style="info" %}
-When an API token is revoked, all integrations using that key will immediately stop working. Proceed with caution!
+API 토큰이 취소되면 해당 키를 사용하는 모든 통합이 즉시 작동을 중지합니다. 조심해서 진행하십시오!
 {% endhint %}
 
-If you suspect an API token has been leaked, it's good practice to revoke it and generate a new one to use in its place.
+API 토큰이 유출된 것으로 의심될 경우 이를 취소하고 대신 사용할 새 토큰을 생성하는 것이 좋습니다.
 
-To revoke your Snyk user API token, navigate to your User Account Settings in the Snyk Web UI, at [app.snyk.io/account](https://app.snyk.io/account).
+Snyk 사용자 API 토큰을 취소하려면 [app.snyk.io/account](https://app.snyk.io/account)에서 Snyk 웹 UI의 User Account Settings로 이동하십시오.
 
-![api token screen; revoke; regenerate; click to show](<../../.gitbook/assets/uuid-8d94edf8-b42b-e5b3-ada1-e157d18ff884-en (1) (2) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (9).png>)
+![api token screen; revoke; regenerate; click to show](../../.gitbook/assets/uuid-8d94edf8-b42b-e5b3-ada1-e157d18ff884-en%20\(1\)%20\(2\)%20\(2\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(9\).png)
 
-Click the **Revoke & Regenerate** button to revoke your API token. A new one will be generated in its place. You can now grab the newly generated API token and update integrations that used the old key.
+API 토큰을 해지하려면 **Revoke & Regenerate** 버튼을 클릭하십시오. 대신 새로운 토큰이 생성됩니다. 이제 새로 생성된 API 토큰을 가져와 이전 키를 사용한 통합을 업데이트할 수 있습니다.

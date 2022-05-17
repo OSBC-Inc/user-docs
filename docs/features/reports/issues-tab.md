@@ -18,12 +18,12 @@
 
 #### 그룹화 및 그룹화 해제된 보기
 
-기본 그룹화 보기를 사용하여 Issue당 영향을 받는 프로젝트 수와 프로젝트에 영향을 미치는 Issue의 종류 및 수를 검사하여 전반적인 조직의 전반적인 상태를 확인할 수 있습니다.
+기본 그룹 보기를 사용하여 Issue당 영향을 받는 프로젝트 수와 프로젝트에 영향을 미치는 Issue의 종류 및 수를 검사하여 전반적인 조직의 전반적인 상태를 확인할 수 있습니다.
 
-또는 **View issues ungrouped**를 클릭하여 데이터 그룹화를 해제하고, Issue가 발생한 각 프로젝트에 대해 별도의 행을 봅니다. 즉, 여러 프로젝트에 영향을 미치는 경우 동일한 Issue가 여러 번 나타날 수 있습니다. 이 그룹화되지 않은 보기는 영향을 받는 프로젝트에 대한 자세한 정보와 권장 수정 사항을 제공합니다.
+~~_또는 **View issues ungrouped**를 클릭하여 데이터 그룹을 해제하고, Issue가 발생한 각 프로젝트에 대해 별도의 줄을 봅니다._~~ 즉, 여러 프로젝트에 영향을 미치는 경우 동일한 Issue가 여러 번 나타날 수 있습니다. 이 그룹화되지 않은 보기는 영향을 받는 프로젝트에 대한 자세한 정보와 권장 수정 사항을 제공합니다.
 
 {% hint style="info" %}
-보기 간에 전환하려면 **View issues ungrouped** 또는 **View issues grouped**를 클릭합니다.
+보기 간에 전환하려면 **View issues ungrouped** 또는 **View issues grouped** 링크를 클릭합니다.
 {% endhint %}
 
 ### Issues 탭 요소
@@ -38,7 +38,7 @@
 | Score            | [Snyk의 우선순위 점수](https://docs.snyk.io/features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score)입니다. Issue를 해결해야 할 순서를 안내하는 데 유용합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Issue            | Issue의 공식 이름과 프로젝트에 포함된 영향을 받는 모든 패키지 목록입니다. Issue는 Package 페이지에 연결되어 있습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Identifiers      | 연결된 모든 CVE 식별자입니다. 각 식별자는 관련성이 있을 경우 전체 공식 CVE 또는 CWE 취약점 세부 정보에 개별적으로 연결됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Projects         | <p></p><p>그룹화되지 않은 Issue를 볼 때 이는 특정 Issue의 영향을 받는 모든 프로젝트의 전체 목록과 프로젝트 소스를 가리킵니다.</p><p>그룹화된 Issue를 보는 경우 이 열에는 해당 Issue의 영향을 받는 프로젝트 수가 표시됩니다.</p><p>해당 그룹의 영향을 받는 모든 프로젝트 목록이 표시되는 패널을 열려면 총 프로젝트 수를 클릭합니다. 이 보기의 세부 정보는 다음과 같습니다.</p><ul><li>Project</li><li>Status</li><li>Introduced - 프로젝트에서 Issue가 발견된 날짜</li><li>Fixable - 업그레이드 또는 패치로 Issue를 제거할 수 있는지 여부</li></ul>                                                                                                                                                                                                                                                                                                                                                                                            |
+| Projects         | <p></p><p>그룹화되지 않은 Issue를 볼 때 이는 특정 Issue의 영향을 받는 모든 프로젝트의 전체 목록과 프로젝트 소스를 가리킵니다.</p><p>그룹화된 Issue를 보는 경우 이 열에는 해당 Issue의 영향을 받는 프로젝트 수가 표시됩니다.</p><p>해당 그룹의 영향을 받는 모든 프로젝트 목록이 표시되는 패널을 열려면 총 프로젝트 수를 클릭합니다. 이 보기의 세부 정보는 다음과 같습니다.</p><ul><li>Project</li><li>Status</li><li>Introduced-프로젝트에서 Issue가 발견된 날짜</li><li>Fixable—업그레이드 또는 패치로 Issue를 제거할 수 있는지 여부</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                |
 | Exploit maturity | <p></p><p>취약점에 대한 공격이 얼마나 실용적인지(<a href="../fixing-and-prioritizing-issues/issue-management/evaluating-and-prioritizing-vulnerabilities.md">취약점 평가 및 우선순위 지정</a> 참조)</p><ul><li><strong>Mature:</strong> 이 취약점에 쉽게 사용할 수 있는 공개된 코드 익스플로잇이 존재합니다.</li><li><strong>Proof of concept:</strong> 이 취약점을 악용하는 방법을 보여주는 공개된 이론적 개념 증명 또는 자세한 설명을 사용할 수 있습니다.</li><li><strong>No known exploit:</strong> 이 취약점에 대한 개념 증명 코드나 공격이 발견되지 않았거나 공개되지 않았습니다.</li><li><p><strong>No data</strong>: 이 값은 다음 중 하나를 나타냅니다.</p><ul><li>이 Issue는 취약점이 아니라 라이선스 문제입니다. - <a href="../../snyk-products/snyk-open-source/licenses/">라이선스선</a> 참고</li><li><del><em>에코시스템은</em></del> 현재 Snyk에서 지원하지 않습니다.</li><li>이 기능이 릴리즈되기 전에 프로젝트를 가져왔습니다. 이 데이터를 스캔하려면 프로젝트를 다시 가져오십시오.</li></ul></li></ul> |
 
 #### Ungrouped view 전용
@@ -59,13 +59,13 @@
 
 ![](../../.gitbook/assets/uuid-ef7a494d-8b10-9b28-dc63-3f9224519070-en.png)
 
-**Issues 검색:** CVE, CWE 또는 식별자 이름(즉, DDoS)을 기준으로 검색할 수 있습니다. CVE 또는 CWE로 검색할 때 정확한 값(예: CVE-1234)를 제공해야 하지만 식별자 이름을 검색할 때 단어의 일부를 입력하면 결과가 반환됩니다.
+**Search issues:** CVE, CWE 또는 식별자 이름(즉, DDoS)을 기준으로 검색할 수 있습니다. CVE 또는 CWE로 검색할 때 정확한 값(예: CVE-1234)를 제공해야 하지만 식별자 이름을 검색할 때 단어의 일부를 입력하면 결과가 반환됩니다.
 
 **Issue filters:** **Issues tab elements**에 설명된 대로 우선순위 점수 범위, 특정 Issue 유형, 악용 성숙도, 상태, 고정 가능한 값 및 도달 가능성을 선택하여 표시할 Issue를 표시합니다.
 
 ![](../../.gitbook/assets/screenshot\_2020-07-30\_at\_11.30.19\_am.png)
 
-**Export** - Issue 데이터를 내보낼 형식을 선택하려면 버튼을 클릭합니다.
+**Export**—Issue 데이터를 내보낼 형식을 선택하려면 버튼을 클릭합니다.
 
 * CSV
 * 로컬 환경의 Print 창에서 미리 보기를 인쇄/생성합니다. 생성하는 데 몇 초 정도 걸릴 수 있습니다.

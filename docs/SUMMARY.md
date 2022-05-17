@@ -206,8 +206,8 @@
 ## FEATURES
 
 * [Snyk API](features/snyk-api-info/README.md)
-  * [Authentication for API](features/snyk-api-info/authentication-for-api.md)
-  * [Revoking and regenerating Snyk API tokens](features/snyk-api-info/revoking-and-regenerating-snyk-api-tokens.md)
+  * [API 인증](features/snyk-api-info/authentication-for-api.md)
+  * [Snyk API 토큰 취소 및 재생성](features/snyk-api-info/revoking-and-regenerating-snyk-api-tokens.md)
 * [Snyk CLI](features/snyk-cli/README.md)
   * [Getting started with the CLI](features/snyk-cli/getting-started-with-the-cli.md)
   * [How to find vulnerabilities using the CLI](features/snyk-cli/how-to-find-vulnerabilities-using-the-cli.md)

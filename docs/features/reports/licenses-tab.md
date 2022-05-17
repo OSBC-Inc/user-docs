@@ -1,28 +1,28 @@
-# Licenses 탭
+# Licenses tab
 
-**Licenses** 영역에는 프로젝트에 현재 사용되는 모든 라이선스와 프로젝트의 모든 디펜던시 요약 및 라이선스를 사용하는 모든 프로젝트에 대한 요약이 표시됩니다.
+The **Licenses** area displays all licenses that are currently used in your project, as well as a summary of all dependencies in your projects and a summary of all of your projects using the license.
 
 ![](../../.gitbook/assets/licenses-tab.png)
 
-## **Licenses** 탭 요소
+## **Licenses tab elements**
 
-다음 표에서는 **License** 영역의 여러 부분에 대해 설명합니다.
+The following table describes the different parts of the **Licenses** area:
 
-| **Element**  | **Description**                                                                                          |
-| ------------ | -------------------------------------------------------------------------------------------------------- |
-| License      | [SPDX](https://spdx.org) 사이트의 추가 세부 정보 및 정보에 연결된 라이선스의 정식 이름입니다.                                         |
-| Dependencies | 프로젝트에서 해당 라이선스가 있는 총 디펜던시 패키지 수이며, **Dependencies** 영역과 동일한 레이아웃에 영향을 받는 디펜던시의 전체 목록을 표시하는 측면 패널에 연결됩니다. |
-| Projects     | **Dependencies** 탭과 동일한 레이아웃으로 영향을 받는 프로젝트의 전체 목록을 표시하는 측면 패널에 연결된 이 라이선스를 사용하는 총 프로젝트 수입니다.             |
+| **Element**  | **Description**                                                                                                                                                                                         |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| License      | The full official name of the license, linked to additional details and information on the [SPDX](https://spdx.org) site.                                                                               |
+| Dependencies | The total number of dependent packages with this license in your projects, linked to a side panel that displays the full list of affected dependencies in the same layout as the **Dependencies** area. |
+| Projects     | The total number of your projects using this license, linked to a side panel that displays the full list of your affected projects, with the same layout as the **Dependencies** tab.                   |
 
-## **Licenses** 탭 작업
+## **Licenses tab actions**
 
-다음 작업은 아래와 같습니다.
+These controls appear at the top of the window:
 
 ![](../../.gitbook/assets/license-tab-controls.png)
 
-* **Licenses 검색** - 입력을 통해 자유롭게 텍스트를 입력하고 처음 입력한 문자로 검색을 시작할 수 있습니다. 또는 필드를 클릭할 때 열리는 드롭다운 목록에서 여러 패키지를 선택합니다. 또한 드롭다운 목록의 오른쪽 상단 모서리에 동적으로 나타나는 Select All 또는 Deselect All을 클릭합니다.
-* **License filters** - 특정 프로젝트 유형을 선택하여 패키지를 표시할 수 있습니다. 선택한 모든 기준과 일치하는 Issue만 표시됩니다.
+* **Search for Licenses**—the dynamic search field enables you to enter free text and begins searching with the first character you type; alternatively, select multiple packages from the dropdown list that opens when you click in the field. In addition, click the Select All or Deselect All links that dynamically appear in the upper right-hand corner of the dropdown list.
+* **License filters**—mark the packages to be displayed by selecting specific project types. Only issues matching all selected criteria are displayed.
 
 ![](../../.gitbook/assets/uuid-53b0da21-ca9b-a04c-354a-97219ae7c05b-en.png)
 
-* **Export as CSV** - Issue 데이터를 CSV 파일 형식으로 내보냅니다.
+* **Export as CSV**—export issue data in CSV file format.
