@@ -1,24 +1,24 @@
-# Terraform Cloud integration
+# Terraform Cloud 통합
 
-## Terraform Cloud overview
+## Terraform Cloud 개요
 
-[Terraform Cloud](https://www.terraform.io/cloud) (TFC) is a SaaS paid platform provided by HashiCorp that provides production-ready state management and continuous delivery for teams using Terraform. It enables teams managing their cloud infrastructure with Terraform to:
+[Terraform Cloud](https://www.terraform.io/cloud) (TFC)는 HashiCorp가 제공하는 SaaS 유료 플랫폼으로, Terraform을 사용하는 팀에게 프로덕션 준비 상태 관리 및 지속적인 제공을 제공합니다. Terraform을 통해 클라우드 인프라를 관리하는 팀은 다음과 같은 이점을 얻을 수 있습니다.
 
-* Have Terraform state management on the cloud with versioning and out of the box
-* Have a centralized place for the team to collaborate on their infrastructure, reviewing and approving changes to infrastructure
-* Have Terraform Cloud manage the remote operations against the cloud providers in an automated way, similar to a CI/CD pipeline, for applying changes to cloud infrastructure using Terraform
+* 바로 사용할 수 있는 버전 관리 기능을 통해 클라우드에서 Terraform 상태를 관리할 수 있습니다.
+* 팀이 인프라에서 협업하고 인프라 변경 사항을 검토 및 승인할 수 있는 중앙 집중식 장소를 확보합니다.
+* Terraform Cloud에서 CI/CD 파이프라인과 유사한 방식으로 클라우드 공급자에 대한 원격 운영을 자동으로 관리하여 Terraform을 사용하여 클라우드 인프라에 변경 사항을 적용합니다.
 
 {% hint style="info" %}
-This feature is available and enabled for users of the Hashicorp **Business tier** plan\*\*.\*\* If you are on a lower Hashicorp plan, you must sign up for access to the private beta feature flag in the [**Terraform Cloud Beta Sign Up form**](http://hashi.co/tfc-beta).
+이 기능은 Hashicorp **Business tier** plan\*\*.\*\*의 사용자에게 제공됩니다. 더 낮은 Hashicorp plan에 있는 경우 [**Terraform Cloud Beta Sign Up form**](http://hashi.co/tfc-beta)의 개인 베타 기능 플래그에 액세스하려면 등록해야 합니다.
 {% endhint %}
 
-## **Snyk integration with Terraform Cloud overview**
+## **Snyk integration**과 **Terraform Cloud**의 통합 개요
 
-Terraform Cloud introduced a new feature called Run Checks. A “Run” in TFC represents a unit of execution in TFC that eventually generates a Terraform plan, to eventually be reviewed, approved, and applied.
+Terraform Cloud는 Run Check라고 불리는 새로운 기능을 도입했습니다. TFC의 “Run”은 TFC의 실행 단위를 나타냅니다. TFC는 최종적으로 검토, 승인 및 적용될 Terraform plan을 생성합니다.
 
-This Run-check beta feature allows external integrations to connect to these “Run” events and interact with them, providing a status to determine if this run should pass or fail.
+Run Check 베타 기능을 사용하면 외부 통합이 “Run” 이벤트에 연결하고 이벤트와 상호 작용하여 이 실행이 성공할지 실패할지 결정하는 상태를 제공할 수 있습니다.
 
-Snyk [introduced support in May 2021](https://snyk.io/blog/prevent-cloud-misconfigurations-hashicorp-terraform-snyk-iac/) for Terraform users to scan their Terraform plan json output against Snyk security policies for all major cloud providers.
+Snyk [introduced support in May 2021](https://snyk.io/blog/prevent-cloud-misconfigurations-hashicorp-terraform-snyk-iac/)에 Terraform 사용자가 모든 주요 클라우드 공급자를 위한 Snyk 보안 정책과 비교하여 Terraform 계획 json 출력을 스캔할 수 있는 지원을 도입했습니다.
 
 The Snyk integration connects the “Run” workflow of Terraform Cloud with Snyk Terraform plan scanning, meaning that for each “Run” generated, Snyk scans the Terraform plan artifact for misconfigurations.
 
