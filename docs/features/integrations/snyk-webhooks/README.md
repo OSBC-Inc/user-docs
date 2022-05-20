@@ -1,59 +1,59 @@
 # Snyk Webhooks
 
-### Snyk Webhooks for Snyk API
+### Snyk API용 Snyk Webhooks
 
-[Visit the Snyk API documentation for Webhooks](https://snyk.docs.apiary.io/#introduction/consuming-webhooks) to get information on consuming, validating, and examples.
+사용, 검증 및 예제에 대한 정보를 얻으려면[ Snyk API documentation for Webhooks](https://snyk.docs.apiary.io/#introduction/consuming-webhooks)를 방문하십시오.
 
 {% embed url="https://snyk.docs.apiary.io/#introduction/consuming-webhooks" %}
 
-Webhooks allow you to be notified of Snyk system events, enabling you to build notifications and react to changes in your projects.
+Webhooks를 사용하면 Snyk 시스템 이벤트에 대한 알림을 받을 수 있으므로 알림을 작성하고 프로젝트의 변경 사항에 대응할 수 있습니다.
 
-When events are triggered, Snyk sends HTTP POST requests to URLs you have configured for those events, with all the information you need.
+이벤트가 트리거되면 Snyk는 HTTP POST 요청을 필요한 모든 정보와 함께 해당 이벤트에 대해 구성한 URL로 보냅니다.
 
-### Example use cases
+### 사용 사례 예시
 
-#### Notifications
+#### 알림
 
-Receive instant notifications/alerts in your organization's business communication/collaboration software. Please refer to our free tutorial on setting this up with [Microsoft Teams](../../../tutorials/microsoft-azure/notifications-in-microsoft-teams/) for step-by-step instructions.
+조직의 비즈니스 커뮤니케이션/협업 소프트웨어에서 즉각적인 알림/경보를 받을 수 있습니다. 단계별 지침은 [Microsoft Teams](../../../tutorials/microsoft-azure/notifications-in-microsoft-teams/)와 함께 이 설정을 위한 무료 튜토리얼을 참조하십시오.
 
-#### Incident Response
+#### 사고 대응
 
-Respond to critical issues before they impact your business. Embrace modern incident management and Snyk to stay ahead of application security. Read more about this use case in the blog ["Shifting left security incident management with the Snyk & Opsgenie integration"](https://snyk.io/blog/security-incident-management-snyk-opsgenie-integration/) as well as our free [Opsgenie](../../../tutorials/atlassian/opsgenie/) guide that guides you on configuring this integration.
+비즈니스에 영향을 미치기 전에 중요한 문제에 대응하십시오. 최신 인시던트 관리 및 Snyk를 채택하여 애플리케이션 보안보다 앞서십시오. 이 사용 사례에 대한 자세한 내용은 블로그 ["Shifting left security incident management with the Snyk & Opsgenie integration"](https://snyk.io/blog/security-incident-management-snyk-opsgenie-integration/) 과 통합 구성에 대한 안내를 제공하는 무료 [Opsgenie](../../../tutorials/atlassian/opsgenie/) 가이드를 참조하십시오.
 
-#### Security Information and Event Management (SIEM)
+#### SIEM(보안 정보 및 이벤트 관리)
 
-Get real-time security alerts aggregated across various sources into a single platform. read more about Snyk's partnership with Rapid7 and how together we help organizations mitigate security risks.
+다양한 소스에 걸쳐 실시간 보안 경고를 단일 플랫폼으로 통합하십시오. Snyk과 Rapid7의 파트너십 및 NAT이 함께 보안 위험을 줄이는 방법에 대해 자세히 알아보십시오.
 
-#### Vulnerability Management and Aggregation
+#### 취약점 관리 및 집계
 
-Browse the various [Snyk Partner integrations](../vulnerability-management-tools/) for a comprehensive list of solutions.
+다양한 [Snyk Partner integrations](../vulnerability-management-tools/)에서 포괄적인 솔루션 목록을 찾아보십시오.
 
-### Webhook headers
+### Webhook 헤더
 
-Event messages are delivered with a ​`Content-Type​` of ​`application/json`,​ with the event payload as JSON in the request body. We also send the following headers:
+이벤트 메시지는 요청 본문에 이벤트 페이로드가 JSON으로 있는 `application/json`의 `Content-Type​`과 함께 전달됩니다. 또한 다음 헤더를 보냅니다.
 
-* `X-Snyk-Event` the name of the event and the version of the payload, such as `ping/v1`
-* `X-Snyk-Transport-ID` a GUID to identify this delivery
-* ​ `X-Snyk-Timestamp`an ISO 8601 timestamp for when the event occurred, e.g. `2020-09-25T15:27:53Z`
-* `X-Hub-Signature` the HMAC hex digest of the request body which is used to secure your webhooks and ensure the request did indeed come from Snyk
-* `User-Agent​` identifies the origin of the request, e.g. ​`Snyk-Webhooks/XXX`
+* `X-Snyk-Event` 이벤트 이름 및 `ping/v1`과 같은 페이로드 버전입니다.
+* `X-Snyk-Transport-ID` delivery를 식별하기 위한 GUID입니다.
+* ​ `X-Snyk-Timestamp`an ISO 8601 타임스탬프 이벤트 발생 시간(예: `2020-09-25T15:27:53Z`)입니다.
+* `X-Hub-Signature` webhooks를 보호하고 실제로 Snyk에서 요청이 전송되었는지 확인하는 데 사용되는 요청 본문의 HMAC 16진수 다이제스트입니다.
+* `User-Agent​` 요청의 출처를 식별합니다(예: ​`Snyk-Webhooks/XXX`).
 
-Each webhook receives all events.
+각 webhook은 모든 이벤트를 수신합니다.
 
-### Security SSL
+### 보안 SSL
 
-Webhooks can only be configured for URLs using the HTTPS protocol. HTTP is not allowed.
+Webhooks는 HTTPS 프로토콜을 사용하는 URL에 대해서만 구성할 수 있습니다. HTTP가 허용되지 않습니다.
 
-### Request signing
+### 서명요청
 
-When creating a webhook, you must provide a ​secret​ - this is a string that only you know that we will use to sign our transports to you so that you can ensure they come from Snyk. Your secret should be:
+webhook을 만들 때 비밀을 제공해야 합니다. 이 문자열은 Snyk에서 전송되도록 사용자에게 서명하는 데 사용할 문자열입니다. 비밀은 다음과 같습니다.
 
-* A random string with high entropy
-* Not be used for anything else
-* Only known to Snyk and your webhook transport consuming code
+* 엔트로피가 높은 임의의 문자열입니다.
+* 다른 용도로는 사용되지 않습니다.
+* Snyk 및 webhook 전송 소비 코드만 알 수 있습니다.
 
-All transports sent to your webhooks will have a ​`X-Hub-Signature` ​header, which contains the hash signature for the transport. The signature is a HMAC hexdigest of the request body, generated using sha256 and your secret as the HMAC key.
+webhooks로 전송되는 모든 전송에는 전송에 대한 해시 서명이 포함된 ​`X-Hub-Signature` ​헤더가 있습니다. 서명은 요청 본문의 HMAC 16진수이며, sha256과 사용자의 암호를 HMAC 키로 사용하여 생성됩니다.
 
 {% hint style="info" %}
-`X-Hub-Signature​`always starts with​ `sha256=`
+`X-Hub-Signature​`는 항상 `sha256=`으로 시작합니다.
 {% endhint %}

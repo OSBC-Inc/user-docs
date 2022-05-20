@@ -1,25 +1,25 @@
-# Merge advice
+# Merge Advice
 
-Merge Advice is a badge we display on pull requests to indicate how confident we are that merging the pull request will not result in any breaking changes.
+는 pull request를 병합해도 주요 변경 사항이 발생하지 않을 것이라는 확신을 나타내기 위해 pull request에 표시하는 배지입니다.
 
-## How it's calculated
+## 계산 방법
 
-We determine this advice based on how well that same change has performed on other Snyk users' pull requests – did their tests on the PR pass or fail? Was the change subsequently rolled back? Did they merge successfully?
+이 조언은 다른 Snyk 사용자의 pull request에 대해 동일한 변경이 얼마나 잘 수행되었는지를 기준으로 결정됩니다. PR에 대한 테스트가 통과했습니까 아니면 실패했습니까? 변경 사항이 이후에 롤백되었습니까? 성공적으로 병합되었습니까?
 
-## How it's shown:
+## 표시 방법
 
-Once we've gathered enough data, we show a badge on the PR - either giving the advice "review recommended", or "high chance of success".
+충분한 데이터가 수집되면 PR에 “Review recommended" 또는 "High chance of success"이라는 조언을 제공하는 배지를 표시합니다.
 
-![](<../../../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (30).png>)
+![](../../../.gitbook/assets/merge-advice-review-recommended%20\(2\)%20\(2\)%20\(2\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(30\).png)
 
-![](<../../../.gitbook/assets/advice-green (1) (2) (2) (4) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (17).png>)
+![](../../../.gitbook/assets/advice-green%20\(1\)%20\(2\)%20\(2\)%20\(4\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(17\).png)
 
-If we haven't yet been able to collect enough data to give trustworthy advice, we show the message "not enough data". Once we've gathered enough data, we update this badge automatically with our recommendation – for that reason, a badge that was displaying "not enough data" might later show advice.
+신뢰할 수 있는 조언을 제공할 만큼 충분한 데이터를 아직 수집하지 못한 경우 "not enough data"라는 메시지가 표시됩니다. 충분한 데이터를 수집하면 이 배지를 권장 사항으로 자동 업데이트합니다.　따라서 "not enough data"를 표시하는 배지에 나중에 조언이 표시될 수 있습니다.
 
-![](<../../../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (24).png>)
+![](../../../.gitbook/assets/merge-advice%20\(2\)%20\(2\)%20\(4\)%20\(2\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(24\).png)
 
-## Availability:
+## 유용성
 
-At the moment, merge advice badges are only available for Yarn and npm, where a single package is being upgraded. More support is coming soon.
+현재 merge advice 배지는 단일 패키지가 업그레이드되는 Yarn 및 npm에만 사용할 수 있습니다. 더 많은 지원이 곧 제공될 예정입니다.
 
-All Snyk-supported source control integrations are supported for merge advice.
+Snyk이 지원하는 모든 소스 제어 통합은 merge advice를 위해 지원됩니다.

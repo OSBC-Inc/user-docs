@@ -1,14 +1,14 @@
-# How Snyk finds out about new vulnerabilities
+# Snyk이 새로운 취약점을 찾는 방법
 
-Snyk’s security team, based in Israel, maintains our [vulnerability database](https://security.snyk.io).
+이스라엘에 위치한 Snyk의 보안 팀은 [취약점 데이터베이스](https://security.snyk.io)를 유지 관리합니다.
 
-This work includes curating vulnerabilities found or reported elsewhere on the web, as well as doing our own research to uncover previously unknown vulnerabilities, which we then responsibly disclose. Snyk Enterprise gets early notifications for issues our research uncovers alongside this responsible disclosure process.
+이 작업에는 웹의 다른 곳에서 발견되거나 보고된 취약점을 선별하고 이전에 알려지지 않은 취약점을 발견하기 위한 자체 연구를 수행한 다음 책임감 있게 공개하는 작업이 포함됩니다. Snyk Enterprise는 이 책임 있는 공개 프로세스와 함께 우리의 연구에서 발견한 Issue에 대한 조기 알림을 받습니다.
 
-Most of the vulnerabilities in our database originate from one of these sources:
+데이터베이스의 대부분의 취약점은 다음 출처 중 하나에서 발생합니다.
 
-1. _Monitoring other vulnerability databases_, such as CVEs from [NVD](https://nvd.nist.gov) and many others.
-2. _Monitoring user activity on GitHub_, including issues, PRs and commit messages that may indicate a vulnerability.
-3. _Bulk research_, using tools that look for repeated security mistakes across open source package code
-4. _Manual research_, investing our researchers time to manually audit more widely used packages for security flaws.
+1. __[NVD](https://nvd.nist.gov) 및 기타 다수의 CVE와 같은 취약점 데이터베이스 모니터링
+2. 취약점을 나타낼 수 있는 Issue, PR 및 commit을 포함하여 GitHub에서 사용자 활동 모니터링
+3. 오픈 소스 패키지 코드에서 반복되는 보안 실수를 찾는 도구를 사용한 대량 조사
+4. 보안 결함에 대해 더 널리 사용되는 패키지를 수동으로 감사하기 위해 연구원의 시간을 투자합니다.
 
-For every issue deemed to be a real vulnerability, we assign the right CVSS (severity) score and package version specification, create an advisory, and make it available in the product.
+실제 취약점으로 간주되는 모든 Issue에 대해 올바른 CVSS(심각도) 점수와 패키지 버전 사양을 할당하고 권장 사항을 만들어 제품에서 사용할 수 있도록 합니다.

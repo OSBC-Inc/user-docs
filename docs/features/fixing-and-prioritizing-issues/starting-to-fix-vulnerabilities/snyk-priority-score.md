@@ -28,49 +28,49 @@ Snyk은 새로운 요소를 포함하도록 우선순위 알고리즘을 지속�
 * [**Social Trends**](https://docs.snyk.io/fixing-and-prioritizing-issues/prioritizing-issues/prioritize-by-social-trends): Snyk은 Twitter의 알려진 취약점에 대한 언급을 모니터링하여 트윗 및 반응의 추세를 계산합니다.
 * Malicious Packages: Snyk은 악성 패키지에서 발생하는 취약점의 우선순위 점수를 높입니다.
 
-## Priority calculation for Kubernetes
+## Kubernetes에 대한 우선순위 계산
 
-Kubernetes configs images imported from the Kubernetes integration have a number of additional contributing factors for priority score calculation. See [Snyk Priority Score and Kubernetes](https://support.snyk.io/hc/en-us/articles/360010906897-Snyk-Priority-Score-and-Kubernetes).
+Kubernetes 통합에서 가져온 Kubernetes 구성 이미지에는 우선순위 점수 계산을 위한 여러 요소가 추가로 있습니다. 자세한 내용은 [Snyk 우선순위 점수 및 Kubernetes](https://support.snyk.io/hc/en-us/articles/360010906897-Snyk-Priority-Score-and-Kubernetes) 참조하십시오.
 
-## Priority calculation for Snyk Code
+## Snyk Code에 대한 우선순위 계산
 
-A number of specific factors contribute to priority calculation for Snyk Code, including:
+Snyk Code의 우선순위 계산에 기여하는 여러 요소들은 다음과 같습니다.
 
-* **Severity levels**
-* **Number of vulnerability occurrences**
-* **Rule tags**: decrease if **beta** tags are found
-* **Open community projects**: if this vulnerability is fixed widely
-* **Hot files**: if the vuln is in the source file, or inside a code flow
-* **Fixability**: If we have fix examples available for this issue
+* **Severity levels**(심각도 수준)
+* **Number of vulnerability occurrences**(취약점 발생 횟수)
+* **Rule tags**: **beta** 태그가 발견되면 감소
+* **Open community projects**: 취약점이 널리 퍼진 경우
+* **Hot files**: 취약점이 소스 파일 또는 코드 흐름 내에 있는 경우
+* **Fixability**: 해당 Issue에 사용할 수 있는 수정 예시가 있는 경우
 
-See [Snyk Code](https://docs.snyk.io/snyk-code) documentation for more details.
+자세한 내용은 [Snyk Code](https://docs.snyk.io/snyk-code) 설명서를 참조하십시오.
 
-## View scores in projects
+## 프로젝트에서 점수 보기
 
-Scores can be seen on each issue in the projects view, with all issues now sorted by the Priority Score, to show you the most pressing issues first.
+프로젝트 보기에서 각 Issue에 대한 점수를 볼 수 있으며, 모든 Issue는 이제 우선순위 점수별로 정렬되어 가장 시급한 Issue를 먼저 보여줍니다.
 
-Issues can be filtered on the left.
+Issue는 왼쪽에서 필터링할 수 있습니다.
 
 ![](../../../.gitbook/assets/screen\_shot\_2021-07-14\_at\_1.41.24\_pm.png)
 
-## View scores in the Reports
+## 보고서에서 점수 보기
 
-The **Issues** tab in the reports includes the Priority Score as it's own sortable column. By default the table is already sorted by the score, to show you the most pressing issues first.
+보고서의 **Issues** 탭에는 자체 정렬 가능한 열로 Priority Score가 포함됩니다. 기본적으로 표는 가장 시급한 Issue를 먼저 표시하기 위해 이미 점수별로 정렬되어 있습니다.
 
-Issues can also be filtered by the score.
+Issue는 점수로 필터링할 수도 있습니다.
 
 ![](../../../.gitbook/assets/screen\_shot\_2021-07-14\_at\_1.43.32\_pm.png)
 
-## View scores in the Snyk API
+## Snyk API에서 점수 보기
 
-Various issue-related API calls now include the scores in the response, and support filtering by the score.
+다양한 Issue 관련 API 호출은 이제 response에 점수를 포함하고 점수를 기준으로 필터링을 지원합니다.
 
-Read more about the relevant API calls:
+관련 API 호출에 대해 자세히 알아보십시오.
 
 * [https://snyk.docs.apiary.io/#reference/reporting-api/latest-issues/get-list-of-latest-issues](https://snyk.docs.apiary.io/#reference/reporting-api/latest-issues/get-list-of-latest-issues)
 * [https://snyk.docs.apiary.io/#reference/reporting-api/get-list-of-issues](https://snyk.docs.apiary.io/#reference/reporting-api/get-list-of-issues)
 * [https://snyk.docs.apiary.io/#reference/projects/all-projects/list-all-issues](https://snyk.docs.apiary.io/#reference/projects/all-projects/list-all-issues)
 
-## Settings
+## 설정
 
-There are no settings related to the Priority Score. They have no active impact, so are just extra metadata, so they cannot be disabled or hidden.
+우선순위 점수와 관련된 설정이 없습니다. 추가 메타데이터일 뿐이므로 비활성화하거나 숨길 수 없습니다.

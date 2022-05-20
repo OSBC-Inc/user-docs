@@ -1,5 +1,5 @@
-# Upgrading package versions to fix vulnerabilities
+# 취약점을 수정하기 위해 패키지 버전 업그레이드
 
-Snyk will always recommend the smallest upgrade of a dependency to resolve the vulnerability. To resolve a vulnerability in a transitive dependency Snyk will calculate the dependency tree for your project and determine the minimum upgrade to the direct dependency which will result in a vulnerability free version of the indirect dependency.
+Snyk은 취약점을 해결하기 위해 항상 최소한의 디펜던시 업그레이드를 권장합니다. 간접 의존성의 취약점을 해결하기 위해 Snyk은 프로젝트에 대한 디펜던시 트리를 계산하고 직접 의존성에 대한 최소 업그레이드를 결정하여 취약점이 없는 간접 의존성 버전을 생성합니다.
 
-Some fixes may require a major upgrade of a dependency. In this situation, we indicate on the Fix PR screen if we suspect a major change causing breakage.
+일부 수정 사항에는 디펜던시를 major 업그레이드해야 할 수 있습니다. 이 경우 손상의 원인이 되는 중대한 변경 사항이 있을 경우 Fix PR 화면에 표시합니다.
