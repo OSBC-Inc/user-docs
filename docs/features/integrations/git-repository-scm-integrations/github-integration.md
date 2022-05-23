@@ -1,166 +1,166 @@
-# GitHub integration
+# GitHub 통합
 
-Snyk's GitHub integration allows you to continuously perform security scanning across all the integrated repositories, detect vulnerabilities in your open source components, and provide automated fixes.
+Snyk의 GitHub 통합을 통해 모든 통합 저장소에서 보안 스캔을 지속적으로 수행하고, 오픈 소스 구성 요소의 취약점을 탐지하고, 자동화된 수정 프로그램을 제공할 수 있습니다.
 
-Please note, **GitHub integrates per user and not per org**. Setting up this integration means it will be used for all organizations associated with your account.
+**GitHub은 조직이 아닌 사용자별로 통합됩니다**. 이 통합을 설정하면 계정과 연결된 모든 조직에서 통합이 사용됩니다.
 
 {% hint style="warning" %}
-Using a **Personal Access Token** in a GitHub integration allows opening of PRs, but not importing projects. In order to setup import of projects using a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), use [GitHub Enterprise integration](github-enterprise-integration.md).
+GitHub 통합에서 **Personal Access Token**을 사용하면 PR을 열 수 있지만 프로젝트를 가져올 수는 없습니다. [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)을 사용하여 프로젝트 가져오기를 설정하려면 [GitHub Enterprise integration](github-enterprise-integration.md)을 사용하십시오.
 {% endhint %}
 
-## Setting up a GitHub Integration
+## GitHub 통합 설정
 
-1. Go to the Integrations page and click on “GitHub”.
-2. Choose whether you'd like to give Snyk access to both public and private repositories or only to public repositories.
-3. When the GitHub authorization screen opens, click on "Authorize snyk" to provide it with an access to your repositories.
-4. Select the repos you'd like to import to Snyk. When done, click on the **Add selected repositories** button, at the top of the page. Once clicked, Snyk will start scanning the selected repos for dependency files (meaning package.json, pom.xml, etc.) in the entire directory tree and import them to Snyk as projects:
-5. The imported projects now appear in your Projects page and are continuously checked for vulnerabilities.
+1. Integrations 페이지로 이동하여 “GitHub”를 클릭합니다.
+2. Snyk에게 공용 및 개인 저장소 모두에 대한 액세스 권한을 부여할지 아니면 공용 저장소에만 액세스할 수 있도록 할지 선택하십시오.
+3. GitHub 인증 화면이 열리면 "Authorize snyk"을 클릭하여 저장소에 대한 액세스를 제공합니다.
+4. Snyk으로 가져올 저장소를 선택하십시오. 완료되면 페이지 상단에 있는 **Add selected repositories** 버튼을 클릭합니다. 클릭하면 Snyk이 선택한 저장소에서 전체 디렉터리 트리의 디펜던시 파일(package.json, pom.xml 등)을 검색하고 프로젝트로 가져옵니다.
+5. 가져온 프로젝트가 Projects 페이지에 나타나고 취약점을 지속적으로 검사합니다.
 
-![](../../../.gitbook/assets/which\_repos%20\(3\)%20\(5\)%20\(9\)%20\(7\)%20\(18\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(27\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(26\).jpg)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-8b3be1cd3d5f4117327c067a1b1c17761b08c9b0\_which\_repos (3) (5) (9) (7) (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (27) (1) (1) (27).jpg>)
 
-## GitHub Integration Features
+## GitHub 통합 기능
 
-Once the integration is in place, you'll be able to enjoy the following capabilities:
+통합이 완료되면 다음과 같은 기능을 이용할 수 있습니다.
 
-### **1. Project level security reports**
+### **1.** Project level 보안 보고서
 
-Snyk will produce advanced security reports, allowing you to explore the vulnerabilities found in your repositories and fix them right away by opening a fix pull request directly to your repository, with the required upgrades or patches.
+Snyk은 고급 보안 보고서를 생성하여 저장소에서 발견된 취약점을 탐색하고 필요한 업그레이드 또는 패치를 사용하여 저장소로 직접 pull request을 열어 즉시 수정할 수 있습니다.
 
-This is an example of a project-level security report:
+다음은 project-level 보안 보고서의 예시입니다.
 
-![](../../../.gitbook/assets/mceclip0-22-%20\(2\)%20\(5\)%20\(6\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(28\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-fc8f10812029577f2ec93a2b199e8159105438a4\_mceclip0-22- (2) (5) (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (31).png>)
 
-### **2. Project monitoring and automatic fix pull requests**
+### **2.** 프로젝트 모니터링 및 자동 수정 **pull requests**
 
-Snyk will frequently scan your projects on either a daily or a weekly basis. When new vulnerabilities are found, it will notify you by email and by opening automated pull requests with fixes to repositories. Here is an example of a fix pull request opened by Snyk:
+Snyk은 매일 또는 매주 프로젝트를 자주 검색합니다. 새 취약점이 발견되면 e메일을 통해 저장소에 대한 수정 사항이 포함된 pull requests를 열어 사용자에게 알립니다. 다음은 Snyk가 연 수정 pull requests의 예시입니다.
 
 ![image7.png](../../../.gitbook/assets/uuid-6cfdaf0b-c349-468d-fe65-4f80bad110ea-en.png)
 
-You can review and adjust the automatic fix pull request settings by navigating to the GitHub Integration Settings page in Snyk (Settings --> Integration --> GitHub):
+Snyk (Settings --> Integration --> GitHub)의 GitHub Integration Settings 이동하여 자동 수정 pull request 설정을 검토하고 조정할 수 있습니다.
 
-![](../../../.gitbook/assets/mceclip4%20\(1\)%20\(2\)%20\(6\)%20\(7\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(40\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-416e8bc0d0657eb9fc7c38c2c869f0577e7b3334\_mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (25).png>)
 
-#### Commit Signing
+#### 서명 커밋
 
-All the commits in Snyk's PRs are done by [snyk-bot@snyk.io](mailto:snyk-bot@snyk.io) - a verified user on GitHub, and signed with a PGP key. Therefore, all Snyk PRs will appear as verified on GitHub, providing your developers confidence that the fix / upgrade PRs are generated by a trusted source.
+Snyk의 PR에 있는 모든 커밋은 GitHub에서 확인된 사용자인 [snyk-bot@snyk.io](mailto:snyk-bot@snyk.io)에 의해 수행되며 PGP 키로 서명됩니다. 따라서 모든 Snyk PR은 GitHub에 검증된 것으로 나타나므로 개발자는 수정/업그레이드 PR이 신뢰할 수 있는 소스에 의해 생성된다는 확신을 가질 수 있습니다.
 
 {% hint style="info" %}
-This feature is _not_ supported for brokered GitHub integrations.
+이 기능은 브로커된 GitHub 통합에서 지원되지 않습니다.
 {% endhint %}
 
-### **3. Pull request testing**
+### **3. Pull request** 테스트
 
-Snyk will test any newly created pull request in your repositories for security vulnerabilities and send a status check to GitHub so you can see whether the pull request introduces new security issues, directly from GitHub.
+Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 테스트하고 GitHub에 상태 점검을 보내 pull request가 GitHub에서 직접 새로운 보안 문제를 발생시키는지 확인합니다.
 
-This is how Snyk pull request checks appear on the Pull Request page on GitHub:
+다음은 GitHub의 Pull Request 페이지에 Snyk pull request가 나타나는 방법입니다.
 
-![](../../../.gitbook/assets/uuid-87113833-be79-dbe2-8860-a3f224d654c4-en%20\(2\)%20\(2\)%20\(6\)%20\(5\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(22\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-d169f3f27aefe4eb86d28051fcdeeb9f9d4d0f84\_uuid-87113833-be79-dbe2-8860-a3f224d654c4-en (2) (2) (6) (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (23).png>)
 
-You can review and adjust the pull request tests settings by navigating to the GitHub Integration **Settings** page in Snyk (Settings --> Integration --> GitHub):
+Snyk (Settings --> Integration --> GitHub)의 GitHub Integration **Settings**로 이동하여 pull request 테스트 설정을 검토하고 조정할 수 있습니다.
 
 ![](<../../../.gitbook/assets/mceclip5 (1) (1).png>)
 
-## Required permissions scope for the GitHub integration
+## GitHub 통합에 필요한 권한 범위
 
-### Non-Brokered GitHub Integrations
+### 브로커되지 않은 GitHub 통합
 
-1. Operations that are triggered via the Snyk UI, for example, opening a Fix PR or retesting a project, are performed on behalf of the acting user. Therefore, a user that wants to perform this operation on GitHub via the Snyk UI, must connect their GitHub account to Snyk and have the required permissions scope for the repositories they would like to perform these operations for. See the **Required permissions scope for repositories** section for more details.
-2. Operations which are not triggered via the UI, such as daily / weekly tests and automatic PRs (fix and upgrade) are performed on behalf of a random Snyk organization members who have connected their GitHub accounts to Snyk and have the required permissions scope for the repository.
-3. Some operations (such as creating the PR) may occasionally be performed by [snyk-bot@snyk.io](mailto:snyk-bot@snyk.io) for public repositories that are non-brokered.
+1. Snyk UI를 통해 트리거되는 작업(예: PR 수정 열기 또는 프로젝트 재 테스트)은 대행 사용자 대신 수행됩니다. 따라서 Snyk UI를 통해 GitHub에서 이 작업을 수행하려는 사용자는 GitHub 계정을 Snyk에 연결하고 이러한 작업을 수행하려는 저장소에 대해 필요한 권한 범위를 가지고 있어야 합니다. 자세한 내용은 **저장소에 필요한 사용 권한 범위** 섹션을 참조하십시오.
+2. GitHub 계정을 Snyk에 연결하고 저장소에 필요한 사용 권한 범위를 가진 임의 Snyk 조직 구성원을 대신하여 일일/주간 테스트 및 자동 PR(수정 및 업그레이드)과 같이 UI를 통해 트리거되지 않는 작업이 수행됩니다.
+3. 일부 작업(예: PR 생성)은 브로커되지 않은 공용 리포지토리에 대해 [snyk-bot@snyk.io](mailto:snyk-bot@snyk.io)에 의해 가끔 수행될 수 있습니다.
 
 {% hint style="info" %}
 **Note**\
-A Snyk organization admin can configure a [specific GitHub account on whose behalf the PRs will be opened](opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md). In this case, Snyk will continue using a random Snyk organization member’s GitHub account to perform all the other operations. Therefore, using this feature does not eliminate the need for connecting users’ GitHub accounts to Snyk.
+Snyk 조직 관리자는 [PR을 대신해서 열 특정 GitHub 계정](opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)을 구성할 수 있습니다. 이 경우 Snyk는 임의의 Snyk 조직 구성원의 GitHub 계정을 사용하여 다른 모든 작업을 계속 수행합니다. 따라서 이 기능을 사용해도 사용자의 GitHub 계정을 Snyk에 연결할 필요가 없습니다.
 {% endhint %}
 
-## Brokered GitHub Integrations
+## 중개된 GitHub 통합
 
-All the operations, both the ones that are triggered via the UI and the automatic ones, are performed on behalf of a GitHub service account that its token is configured with the Broker. This is the breakdown of the required access scopes for the configured token:
+UI를 통해 트리거되는 작업과 자동 작업을 모두 포함하여 모든 작업은 토큰이 브로커로 구성된 GitHub 서비스 계정을 대신하여 수행됩니다. 다음은 구성된 토큰에 필요한 액세스 범위에 대한 분류입니다.
 
-| **Action**                                          | **Why?**                                                                                                                                              | **Required permissions in GitHub** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| Daily / weekly tests                                | For reading manifest files in private repos                                                                                                           | _repo (all)_                       |
-| Manual fix pull requests (triggered by the user)    | For creating fix PRs in the monitored repos                                                                                                           | _repo (all)_                       |
-| Automatic fix and upgrade pull requests             | For creating fix / upgrade PRs in the monitored repos                                                                                                 | _repo (all)_                       |
-| Snyk tests on pull requests                         | For sending pull request status checks whenever a new PR is created / an existing PR is updated                                                       | _repo (all)_                       |
-| Importing new projects to Snyk                      | For presenting a list of all the available repos in the GitHub org in the "Add Projects" screen (import popup)                                        | _admin:read:org, repo (all)_       |
-| Snyk tests on pull requests - initial configuration | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans | _admin:repo\_hooks (read & write)_ |
+| **Action**                                          | **Why?**                                                                                                | **Required permissions in GitHub** |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Daily / weekly tests                                | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                                | _repo (all)_                       |
+| Manual fix pull requests (triggered by the user)    | 모니터링하는 저장소에 수정 PR을 생성합니다.                                                                               | _repo (all)_                       |
+| Automatic fix and upgrade pull requests             | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                         | _repo (all)_                       |
+| Snyk tests on pull requests                         | 새 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 보냅니다.                                                  | _repo (all)_                       |
+| Importing new projects to Snyk                      | 또는 "Add Projects" 화면(가져오기 팝업)에 GitHub 조직에서 사용 가능한 모든 리포지토리 목록을 표시합니다.                                   | _admin:read:org, repo (all)_       |
+| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 가져온 저장소에 Snyk의 webhook을 추가하면 pull request가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _admin:repo\_hooks (read & write)_ |
 
-## Required permissions scope for repositories <a href="#h_01eefvj14p8b3depeffvyvdwzj" id="h_01eefvj14p8b3depeffvyvdwzj"></a>
+## 저장소에 필요한 사용 권한 범위 <a href="#h_01eefvj14p8b3depeffvyvdwzj" id="h_01eefvj14p8b3depeffvyvdwzj"></a>
 
-In order for Snyk to be able to perform the required operation on monitor repositories, meaning reading manifest files on a frequent basis and opening fix or upgrade PRs. The accounts that are connected to Snyk (either directly or via Broker) need to have the following access to the repositories:
+Snyk이 모니터링 중인 저장소에서 필요한 작업을 수행할 수 있도록 하려면 매니페스트 파일을 자주 읽고 PR을 열어야 합니다. Snyk에 직접 또는 Broker를 통해 연결된 계정은 저장소에 대해 다음과 같은 액세스 권한이 있어야 합니다.
 
-| **Action**                                          | **Why?**                                                                                                                                              | **Required permissions on the repository** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Daily / weekly tests                                | For reading manifest files in private repos                                                                                                           | _Write_ or above                           |
-| Snyk tests on pull requests                         | For sending pull request status checks whenever a new PR is created / an existing PR is updated                                                       | _Write_ or above                           |
-| Opening fix and upgrade pull requests               | For creating fix / upgrade PRs in the monitored repos                                                                                                 | _Write_ or above                           |
-| Snyk tests on pull requests - initial configuration | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans | _Admin_                                    |
+| **Action**                                          | **Why?**                                                                                                | **Required permissions on the repository** |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Daily / weekly tests                                | F개인 저장소에서 매니페스트 파일을 읽습니다.                                                                               | _Write_ or above                           |
+| Snyk tests on pull requests                         | 새 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 보냅니다.                                                  | _Write_ or above                           |
+| Opening fix and upgrade pull requests               | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                         | _Write_ or above                           |
+| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 가져온 저장소에 Snyk의 webhook을 추가하면 pull request가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _Admin_                                    |
 
-### **1. Opening fix and upgrade pull requests from a fixed GitHub account**
+### **1.** 고정된 GitHub 계정에서 수정 및 업그레이드 pull request 열기
 
-Snyk allows you to configure a specific GitHub account on whose behalf the fix and upgrade PRs will be opened. Please note that the configured account is only used for opening PRs. All the other operations will still be performed on behalf of a random Snyk organization member who has connected their GitHub accounts to Snyk.
+Snyk을 사용하면 수정 및 업그레이드 PR을 열 특정 GitHub 계정을 구성할 수 있습니다. 구성된 계정은 PR을 여는 데만 사용됩니다. 다른 모든 작업은 여전히 GitHub 계정을 Snyk에 연결한 임의의 Snyk 조직 구성원을 대신하여 수행됩니다.
 
-In order to use this feature, you'll need to do the following:
+해당 기능을 사용하려면 다음 작업을 수행해야 합니다.
 
-1. Open GitHub's Integrations Settings page in the Snyk Web UI, by clicking on _Settings_ → _Integrations_ → _GitHub_
-2. Enable the toggle button under the _Open fix and upgrade pull requests from a fixed GitHub_ _account_ setting:
-3. Follow the instructions for creating a personal access token in GitHub 2. Provide the newly generated token to Snyk so it can be used to perform operations on GitHub (meaning opening Fix PRs and etc)
+1. _Settings_ → _Integrations_ → _GitHub_을 클릭하여 Snyk Web UI에서 GitHub의 통합 설정 페이지를 엽니다.
+2. 고정된 GitHub 계정에서 _Open fix and upgrade pull requests from a fixed GitHub_ _account_ 설정에서 toggle 버튼을 활성화합니다.
+3. GitHub 2에서 개인 액세스 토큰을 만드는 방법에 대한 지침을 따르십시오. 새로 생성된 토큰을 Snyk에 제공하여 GitHub에서 작업을 수행할 수 있도록 합니다(PR 열기 등).
 
 ![](../../../.gitbook/assets/screen-shot-2020-09-29-at-21.27.30.png)
 
-**Important note:**
+**참고 사항**
 
-Make sure that the GitHub account for which the token is provided, has _**write**_ level permissions or above, to the repos you'd like to monitor with Snyk.
+토큰을 제공하는 GitHub 계정이 Snyk로 모니터링할 저장소에 대한 _**write**_ level 이상의 권한을 가지고 있는지 확인하십시오.
 
-Read more about [repository permission levels on GitHub](github-integration.md#required-permissions-scope-for-the-github-integration).
+[repository permission levels on GitHub](github-integration.md#required-permissions-scope-for-the-github-integration)에 대해 자세히 알아보십시오.
 
-### **2. Pull request assignees** <a href="#pr-assignment" id="pr-assignment"></a>
+### **2. Pull request** 지정 <a href="#pr-assignment" id="pr-assignment"></a>
 
-Snyk can automatically assign pull requests it creates to help ensure that they are actioned by the right people.
+Snyk은 작성한 Pull request를 자동으로 할당하여 올바른 사용자에 의해 수행되도록 할 수 있습니다.
 
-This can be enabled for the GitHub integration (and all projects imported via GitHub), or on a per-project basis. This feature is supported only for private repositories.
+이 기능은 GitHub 통합(GitHub을 통해 가져온 모든 프로젝트) 또는 프로젝트별로 사용할 수 있습니다. 이 기능은 개인 저장소에 대해서만 지원합니다.
 
-Users can either be manually specified (and all will be assigned) or automatically selected based on the last commit user account.
+사용자를 수동으로 지정하거나(그리고 모두 할당됨) 마지막 커밋 사용자 계정에 따라 자동으로 선택할 수 있습니다.
 
-**Enabling for all projects within the Github integration**
+**Github 통합 내의 모든 프로젝트를 활성화**
 
-Go to GitHub's Integration _**Settings**_ page in Snyk (Settings --> Integration --> GitHub):
+Snyk의 GitHub Integration _**Settings**_ 페이지로 이동합니다(설정 --> 통합 --> GitHub)
 
 ![](../../../.gitbook/assets/code-assignees-contribs.png)
 
-**Enable for one project**
+**하나의 프로젝트에 대해 사용**
 
-Go to the project's settings, and from the **Integration settings** tab within the project settings:
+프로젝트 설정으로 이동하고 프로젝트 설정 내의 **Integration settings** 탭에서 다음을 수행합니다.
 
 ![](../../../.gitbook/assets/code-assigness-project.png)
 
-## Disconnecting the GitHub integration
+## GitHub 통합 연결 해제
 
-Snyk’s GitHub SCM integration leverages the oAuth app integration. In case you integrated to GitHub without using the Broker, you can simply disconnect it by following these steps:
+Snyk의 GitHub SCM 통합은 oAuth 앱 통합을 활용합니다. 브로커를 사용하지 않고 GitHub에 통합한 경우 다음 단계에 따라 연결을 끊으면 됩니다.
 
-1. Log into the GitHub account that initially created the integration.
-2. Navigate to the account settings and select the **Applications** tab in the right sidebar.
-3. Select the **Authorized OAuth Apps** tab You can also reach the [Authorized OAuth Apps tab directly](https://github.com/settings/applications).
-4. Find the **Snyk** entry, click on the 3 dots on the right, and select **Revoke**.
+1. 처음에 통합을 생성한 GitHub 계정에 로그인합니다.
+2. account settings으로 이동하고 오른쪽 사이드바에서 **Applications** 탭을 선택합니다.
+3. **Authorized OAuth Apps** 탭을 선택합니다. 또한 [Authorized OAuth Apps tab ](https://github.com/settings/applications)탭에도 직접 액세스할 수 있습니다.
+4. **Snyk** 항목을 찾아 오른쪽의 점 3개를 클릭하고 **Revoke**를 선택합니다.
 
-Revoking this access effectively disconnects Snyk’s access to that GitHub account. Existing imported snapshots will persist in Snyk and continue to rescan based on the existing snapshots until deleted. Snyk will no longer be able to import new projects from the GitHub integration and will no longer re-scan on new code merges.
+이 액세스를 취소하면 해당 GitHub 계정에 대한 Snyk의 액세스가 효과적으로 차단됩니다. 가져온 기존 스냅샷은 Snyk에 유지되며 삭제될 때까지 기존 스냅샷을 기반으로 다시 검색됩니다. Snyk은 더 이상 GitHub 통합에서 새 프로젝트를 가져올 수 없으며 더 이상 새 코드 병합을 다시 검색하지 않습니다.
 
-Additionally, it is required to confirm that Snyk is not enabled on any existing "Branch protection rules": GitHub - Repository -> Settings -> Branches -> Branch protection rules -> Status checks found in the last week for this repository.
+또한 GitHub - Repository -> Settings -> Branches -> Branch protection rules -> Status checks의 기존 "Branch protection rules"에서 Snyk이 활성화되어 있지 않은지 확인해야 합니다.
 
 ## GitHub badges
 
-Once you’re vulnerability free, you can put a badge on your README showing your package has no known security holes. This will show your users you care about security, and tell them that they should care too.
+취약점이 해제되면 README에 패키지에 알려진 보안 구멍이 없음을 나타내는 badge를 부착할 수 있습니다. 이렇게 하면 보안에 관심이 있다는 것을 사용자에게 보여주고 사용자도 관심을 가져야 한다는 것을 알려줍니다.
 
-If there are no vulnerabilities, this is indicated by a green badge.
+취약성이 없는 경우 green badge로 표시됩니다.
 
 ![](../../../.gitbook/assets/uuid-cb438aa4-226e-2109-f901-c59ca233732e-en.png)
 
-If vulnerabilities have been found, the red badge will show the number of vulnerabilities.
+취약성이 발견되면 red badge에 취약성 수가 표시됩니다.
 
 ![](../../../.gitbook/assets/uuid-96d6b4d1-afb7-a2bd-093d-eaa96e2ac2c1-en.png)
 
-To show a badge for a given Node.js, Ruby or Java GitHub repository, copy the relevant snippet below and replace “{username}/{repo}” with the GitHub username and repo you want to test.
+지정된 Node.js, Ruby 또는 Java GitHub 저장소에 대한 badge를 표시하려면 아래 관련 스니펫을 복사하고 “{username}/{repo}”를 테스트할 GitHub 사용자 이름 및 저장소로 바꿉니다.
 
 **HTML:**
 
@@ -170,13 +170,13 @@ To show a badge for a given Node.js, Ruby or Java GitHub repository, copy the re
 
 `[![Known Vulnerabilities](https://snyk.io/test/github/{username}/{repo}/badge.svg)](https://snyk.io/test/github/{username}/{repo})`
 
-The badge will reflect the vulnerability state of the latest commit on the master branch. To show the vulnerability state of a specific branch, release or tag, simply add its name after the repo name in the URL.
+Badge는 master branch에 있는 최신 커밋의 취약점 상태를 반영합니다. 특정 분기, 릴리스 또는 태그의 취약점 상태를 표시하려면 URL의 저장소 이름 뒤에 해당 이름을 추가하십시오.
 
-For example, to show a badge for the 4.x branch of the express repo, use the URL [https://snyk.io/test/github/expressjs/express/4.x/badge.svg](https://snyk.io/test/github/expressjs/express/4.x/badge.svg).
+예를 들어 express 저장소의 4.x 분기에 대한 badge를 표시하려면 다음 URL을 사용합니다. [https://snyk.io/test/github/expressjs/express/4.x/badge.svg](https://snyk.io/test/github/expressjs/express/4.x/badge.svg).
 
 **Styles**
 
-To change the style of the badge, you can add the following query parameters after badge.svg:
+badge의 스타일을 변경하려면 badge.svg뒤에 다음 쿼리 파라미터를 추가합니다.
 
 ![](../../../.gitbook/assets/uuid-cb438aa4-226e-2109-f901-c59ca233732e-en.png)
 
@@ -188,7 +188,7 @@ To change the style of the badge, you can add the following query parameters aft
 
 **npm badges**
 
-To show a badge for a given npm package, copy the relevant snippet below, and replace “{name}” with the name of your package.
+지정된 npm 패키지에 대한 badge를 표시하려면 아래 관련 스니펫을 복사하고 “{name}”을 패키지 이름으로 바꿉니다.
 
 **HTML**
 
@@ -198,19 +198,19 @@ To show a badge for a given npm package, copy the relevant snippet below, and re
 
 `[![Known Vulnerabilities](https://snyk.io/test/npm/{name}/badge.svg)](https://snyk.io/test/npm/{name})`
 
-The badge will reflect the vulnerability state of the latest version of this package. To show the vulnerability state of a specific package, you can specify the specific version in the URL.
+Badge는 이 패키지의 최신 버전의 취약점 상태를 반영합니다. 특정 패키지의 취약점 상태를 표시하기 위해 URL에서 특정 버전을 지정할 수 있습니다.
 
-For example, to test version 1.2.3 of package name, use the URL [https://snyk.io/test/npm/name/1.2.3/badge.svg](https://snyk.io/test/npm/name/1.2.3/badge.svg).
+예를 들어 패키지 이름의 버전 1.2.3을 테스트하려면 URL을 사용하십시오. [https://snyk.io/test/npm/name/1.2.3/badge.svg](https://snyk.io/test/npm/name/1.2.3/badge.svg).
 
-**Private packages and repos**
+**개인 패키지 및 저장소**
 
-Badges currently only work for public npm packages and GitHub repositories, and will fail if pointed at a private repository. To continuously watch for vulnerabilities in your GitHub repositories, both public and private, consider integrating them with Snyk.
+Badge는 현재 공용 npm 패키지 및 GitHub 저장소에 대해서만 작동하며 개인 저장소를 가리킬 경우 실패합니다. 공개 및 비공개 GitHub 저장소의 취약점을 지속적으로 확인하려면 GitHub 저장소를 Snyk와 통합하는 것을 고려하십시오.
 
-**Custom manifest file locations**
+**사용자 지정 매니페스트 파일 위치**
 
-By default, the badge will test against the first [valid manifest file](../../../products/snyk-open-source/language-and-package-manager-support/) it detects in the root of your project.
+기본적으로 badge는 프로젝트의 루트에서 탐지된 첫 번째 유효한 [manifest file](../../../products/snyk-open-source/language-and-package-manager-support/)에 대해 테스트합니다.
 
-If your manifest file is in another location other than the root of the repository, or if you have multiple manifest files that you would like to show a badge for, you can pass a targetFile query string parameter to direct the badge to test against another supported manifest file.
+매니페스트 파일이 저장소의 루트가 아닌 다른 위치에 있거나 badge를 표시할 매니페스트 파일이 여러 개 있는 경우 targetFile 쿼리 문자열 파라미터를 전달하여 지원하는 다른 매니페스트 파일에 대해 badge를 테스트하도록 지정할 수 있습니다.
 
 **HTML:**
 
