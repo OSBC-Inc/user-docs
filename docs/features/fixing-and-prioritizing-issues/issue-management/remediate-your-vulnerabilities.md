@@ -36,20 +36,20 @@ Summary 영역은 패키지별로 조언을 그룹화하며 사용 가능한 최
 
 Snyk 앱에서 프로젝트 세부 정보의 수정 조언 영역에 있는 각 탭(업그레이드 및 패치)에 대해 다음과 같은 결과가 표시됩니다.
 
-* the total number of packages that can be fixed is displayed on the tab title
-* in groups of vulnerabilities by package, entitled by the upgrade or fix that’s recommended
-* packages can be expanded in order to view the full list of vulnerabilities affecting the package
-* All the vulnerabilities found in your dependencies are displayed further below, together with contextual information that can help you prioritize the issues and start fixing them if required.
+* 수정할 수 있는 총 패키지 수가 탭 제목에 표시됩니다.
+* 권장되는 업그레이드 또는 수정 사항에 따라 자격이 부여된 패키지별 취약점 그룹
+* 패키지에 영향을 미치는 전체 취약점 목록을 보기 위해 패키지를 확장할 수 있습니다.
+* 디펜던시에서 발견된 모든 취약점은 Issue의 우선순위를 지정하고 필요한 경우 수정을 시작하는 데 도움이 되는 컨텍스트 정보와 함께 아래에 추가로 표시됩니다.
 
-The Fix Advice area appears in the project details page near the top, similar to the following examples:
+Fix Advice 영역은 다음 예와 유사하게 상단 근처의 프로젝트 세부 정보 페이지에 나타납니다.
 
-![Upgrade issues tabs](<../../../.gitbook/assets/Screenshot 2021-10-12 at 14.08.13.png>)
+![Upgrade issues 탭](<../../../.gitbook/assets/Screenshot 2021-10-12 at 14.08.13.png>)
 
-![Patchable issues tabs](<../../../.gitbook/assets/Screenshot 2021-10-12 at 14.10.00.png>)
+![Patchable issues 탭](<../../../.gitbook/assets/Screenshot 2021-10-12 at 14.10.00.png>)
 
-You can also find additional advice and details further down on the Project details page:
+프로젝트 세부 정보 페이지에서도 추가 조언과 세부 정보를 찾을 수 있습니다.
 
-* from the **Issues**, tab, a full description per vulnerability
+* **Issues** 탭에서 취약점별 전체 설명
 * from the **Dependencies** tab, the entire tree of your project dependencies, enabling you to clearly visualize affected paths
 
 ### CLI 도구의 실행 가능한 조언
