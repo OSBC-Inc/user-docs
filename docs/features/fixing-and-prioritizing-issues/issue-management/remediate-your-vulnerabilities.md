@@ -24,17 +24,17 @@ Snyk이 수정을 자동화할 때, 정확한 수정에 대한 기존 브랜치 
 Snyk은 다음 솔루션 중 하나를 제공합니다.
 
 * **upgrade** - 원래 패키지로 업그레이드
-* **Pinning** a package - installing a package as a top-level dependency; that is, a specific version of an indirect dependency. This avoids a direct dependency pulling in a vulnerable version
-* a Snyk precision **patch** - if an upgrade to fix any of the vulnerabilities in the package is not currently available, Snyk offers patches to fix the issues
+* **Pinning** a package - 패키지를 최상위 디펜던시로 설치합니다. 즉, 간접 의존성의 특정 버전입니다. 이렇게 하면 취약한 버전을 끌어오는 직접 의존성을 피할 수 있습니다.
+* a Snyk precision **patch** - 패키지의 취약점을 수정하기 위한 업그레이드가 현재 제공되지 않는 경우 Snyk은 Issue를 수정하기 위한 패치를 제공합니다.
 
-The summary area groups advice per package, and is displayed based on the best available fix. Advice in these summary lists includes these details per package:
+Summary 영역은 패키지별로 조언을 그룹화하며 사용 가능한 최상의 수정 사항을 기준으로 표시됩니다. 이러한 Summary 목록의 조언에는 패키지별로 다음과 같은 상세 내역이 포함됩니다.
 
-* All vulnerability names and severity details affecting that package
-* The recommended fix - a link to the recommended fix for this package and its listed vulnerabilities: either the specific version to which to upgrade or the name of the patch
+* 해당 패키지에 영향을 미치는 모든 취약점 이름 및 심각도 세부 정보
+* 권장 수정 – 이 패키지에 대한 권장 수정 링크 및 나열된 취약점(업그레이드할 특정 버전 또는 패치 이름)
 
 ### 앱에서 실행 가능한 조언
 
-From our app, for each tab (upgrade and patch) in the fix advice area of your project details, results are displayed as follows:
+Snyk 앱에서 프로젝트 세부 정보의 수정 조언 영역에 있는 각 탭(업그레이드 및 패치)에 대해 다음과 같은 결과가 표시됩니다.
 
 * the total number of packages that can be fixed is displayed on the tab title
 * in groups of vulnerabilities by package, entitled by the upgrade or fix that’s recommended
@@ -61,7 +61,7 @@ From the CLI, for each list (upgrade and patch), results are displayed in groups
 
 Upgrade and patch results appear similar to the following:
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17) (1).png>)
 
 ![](<../../../.gitbook/assets/image (49).png>)
 
@@ -69,4 +69,4 @@ Patch recommendations with some and with all paths:
 
 ![](../../../.gitbook/assets/uuid-1afca091-a9a5-d42c-40b6-f48aa0e72584-en.png)
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (1).png>)
