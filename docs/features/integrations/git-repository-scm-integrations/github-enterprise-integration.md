@@ -61,9 +61,11 @@ Snyk은 매일 또는 매주 프로젝트를 자주 스캔합니다. 새 취약�
 
 자동 수정 pull request 설정을 검토하고 조정하려면 다음과 같이 진행하십시오.
 
-Click on settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations**. 2. Select **Edit Settings** for GitHub Enterprise. 3. Navigate to **Automatic fix pull requests**:
+1. settings ![cog\_icon.png](../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-6ec48d5a9af2aa5be97d1691317737ef059c75bd\_cog\_icon.png) > **Integrations**를 클릭합니다.&#x20;
+2. GitHub Enterprise에서 **Edit Settings**를 선택합니다.&#x20;
+3. **Automatic fix pull requests**로 이동합니다.
 
-![](../../../.gitbook/assets/mceclip4%20\(1\)%20\(2\)%20\(6\)%20\(7\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(38\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-416e8bc0d0657eb9fc7c38c2c869f0577e7b3334\_mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (30).png>)
 
 **Pull request testing**
 
@@ -71,7 +73,7 @@ Snyk tests any newly created pull requests in your repositories for security vul
 
 This is how Snyk pull request checks appear in the Pull Request page in GitHub Enterprise:
 
-![](../../../.gitbook/assets/uuid-87113833-be79-dbe2-8860-a3f224d654c4-en%20\(2\)%20\(2\)%20\(6\)%20\(5\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(23\).png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-d169f3f27aefe4eb86d28051fcdeeb9f9d4d0f84\_uuid-87113833-be79-dbe2-8860-a3f224d654c4-en (2) (2) (6) (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (20).png>)
 
 To review and adjust the pull request tests settings:
 
