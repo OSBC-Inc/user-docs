@@ -1,36 +1,36 @@
-# Evaluating and prioritizing vulnerabilities
+# 취약점 평가 및 우선순위 지정
 
-**Prioritize and fix by exploit maturity**
+**익스플로잇 성숙도에 따라 우선수위 지정 및 수정**
 
-You can filter detected vulnerabilities in your projects according to exploit maturity to see whether a specific vulnerability has an exploit in the wild and if so, how mature that exploit is.
+익스플로잇 성숙도에 따라 프로젝트에서 탐지된 취약점을 필터링하여 특정 취약점에 익스플로잇이 있는지, 있다면 해당 익스플로잇이 얼마나 성숙한지 확인할 수 있습니다.
 
-In this way, you can prioritize and attend to the most important and risky vulnerabilities first.
+이러한 방식으로 가장 중요하고 위험한 취약점의 우선순위를 지정하고 주의를 기울일 수 있습니다.
 
-The filter appears as follows:
+필터는 다음과 같이 나타납니다.
 
 ![](<../../../.gitbook/assets/image (53).png>)
 
-These values are available:
+다음 값을 사용할 수 있습니다.
 
-* **Mature:** Snyk has a published code exploit for this vulnerability.
-* **Proof of concept:** Snyk has a proof-of-concept or detailed explanation of how to exploit this vulnerability.
-* **No known exploit:** Snyk did not find a proof-of-concept or a published exploit for this vulnerability.
-* **No data**: this value indicates one of the following:
-  * The issue is not a vulnerability (but rather, a license issue);
-  * The Linux distro is not currently supported by Snyk (only Alpine, Debian, and Ubuntu are supported); or
-  * The project was imported prior to the release of this feature. Re-import the project in order to scan for this data.
+* **Mature:** Snyk에는 이 취약점에 대한 코드 익스플로잇을 게시했습니다.
+* **Proof of concept:** Snyk에는 이 취약점을 악용하는 방법에 대한 개념 증명 또는 자세한 설명이 있습니다.
+* **No known exploit:** Snyk은 이 취약점에 대한 개념 증명 또는 공개된 익스플로잇을 찾지 못했습니다.
+* **No data**: 이 값은 다음 중 하나를 나타냅니다.
+  * 이 Issue는 취약점이 아니라 라이선스 문제입니다.
+  * Linux 배포판은 현재 Snyk에서 지원되지 않습니다.(Alpine, Debian 및 Ubuntu만 지원)
+  * 이 기능이 출시되기 전에 프로젝트를 가져왔습니다. 이 데이터를 스캔하려면 프로젝트를 다시 가져오십시오.
 
-The **Exploit maturity** filter is available from any detailed **Projects** page, from our **Reports,** and from our **Vulnerabilities DB**. Furthermore, an API is now available.
+**Exploit maturity** 필터는 모든 세부 **Projects** 페이지, **Reports** 및 **Vulnerabilities DB**에서 사용할 수 있습니다. 또한, 이제 API를 사용할 수 있습니다.
 
-**Proof of Concept vulnerability patches cannot be disabled** and will appear in fix PRs where they are found.
+**Proof of Concept 취약점 패치는 비활성화할 수 없으며** 이러한 패치가 fix PR에 나타납니다.
 
-**Prerequisites:** Projects imported prior to the implementation of his feature cannot be evaluated for exploit maturity. Reimport the project in order to scan for this data.
+**Prerequisites:** 기능을 구현하기 전에 가져온 프로젝트는 익스플로잇 성숙도를 평가할 수 없습니다. 이 데이터를 스캔하려면 프로젝트를 다시 가져오십시오.
 
 **Steps:**
 
-1. Log in to Snyk.
-2. Go to the detailed **Projects** page for any of your projects 
-3. Work with and fix vulnerabilities from the **Issues** tab of the **Reports** area as well: 
-   1. Filter reports by exploit maturity: 
-   2. View exploit maturity data from the **Issues** list in **Grouped** mode: 
-   3. View exploit maturity data from the **Issues** list in **Ungrouped** mode: 
+1. Snyk 로그인
+2. 프로젝트에 대한 세부 **Projects** 페이지로 이동
+3. **Reports** 영역의 **Issues** 탭에서 취약점 작업 및 수정
+   1. 익스플로잇 성숙도를 기준으로 보고서 필터링
+   2. **Grouped** 모드의 Issues 목록에서 익스플로잇 성숙도 데이터 보기
+   3. **Ungrouped** 모드의 Issues 목록에서 익스플로잇 성숙도 데이터 보기
