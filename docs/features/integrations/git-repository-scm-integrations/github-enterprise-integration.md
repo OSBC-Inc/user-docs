@@ -67,42 +67,42 @@ Snyk은 매일 또는 매주 프로젝트를 자주 스캔합니다. 새 취약�
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-416e8bc0d0657eb9fc7c38c2c869f0577e7b3334\_mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (30).png>)
 
-**Pull request testing**
+**Pull request 테스트**
 
-Snyk tests any newly created pull requests in your repositories for security vulnerabilities and sends a status check to GitHub Enterprise. This allows you to see whether the pull request introduces new security issues, directly from GitHub Enterprise.
+Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 검사하고 GitHub Enterprise로 status check를 보냅니다. 이를 통해 pull request가 GitHub Enterprise에서 직접 새로운 보안 문제를 발생시키는지 여부를 확인할 수 있습니다.
 
-This is how Snyk pull request checks appear in the Pull Request page in GitHub Enterprise:
+다음은 GitHub Enterprise의 Pull Request 페이지에 Snyk pull request checks가 나타나는 방법입니다.
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-d169f3f27aefe4eb86d28051fcdeeb9f9d4d0f84\_uuid-87113833-be79-dbe2-8860-a3f224d654c4-en (2) (2) (6) (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (20).png>)
 
-To review and adjust the pull request tests settings:
+pull request 테스트 설정을 검토하고 조정하려면 다음과 같이 진행하십시오.
 
-1. Click on settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
-2. Select **Edit Settings** for GitHub Enterprise.
-3. Navigate to **Default Snyk test for pull requests**:
+1. settings ![cog\_icon.png](../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-6ec48d5a9af2aa5be97d1691317737ef059c75bd\_cog\_icon.png) > **Integrations**를 클릭합니다.&#x20;
+2. GitHub Enterprise에서 **Edit Settings**를 선택합니다.&#x20;
+3. **pull requests**에 대한 **Default Snyk test**로 이동합니다.
 
 ![](<../../../.gitbook/assets/mceclip5 (1) (1).png>)
 
-## Required permissions scope for the GitHub integration
+## GitHub 통합에 필요한 권한 범위
 
-All the operations, triggered manually or automatically, are performed for a GitHub service account that has its token is configured in the integrations settings. This shows the required access scopes for the configured token:
+수동으로 또는 자동으로 트리거되는 모든 작업은 통합 설정에서 토큰이 구성된 GitHub 서비스 계정에 대해 수행됩니다. 구성된 토큰에 필요한 액세스 범위가 표시됩니다.
 
-| **Action**                                          | **Why?**                                                                                                                                              | **Required permissions in GitHub** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| Daily / weekly tests                                | For reading manifest files in private repos                                                                                                           | _repo (all)_                       |
-| Manual fix pull requests (triggered by the user)    | For creating fix PRs in the monitored repos                                                                                                           | _repo (all)_                       |
-| Automatic fix and upgrade pull requests             | For creating fix/upgrade PRs in the monitored repos                                                                                                   | _repo (all)_                       |
-| Snyk tests on pull requests                         | For sending pull request status checks whenever a new PR is created / an existing PR is updated                                                       | _repo (all)_                       |
-| Importing new projects to Snyk                      | For presenting a list of all the available repos in the GitHub org in the "Add Projects" screen (import popup)                                        | _admin:read:org, repo (all)_       |
-| Snyk tests on pull requests - initial configuration | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans | _admin:repo\_hooks (read & write)_ |
+| **Action**                                          | **Why?**                                                                                       | **Required permissions in GitHub** |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Daily / weekly tests                                | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                       | _repo (all)_                       |
+| Manual fix pull requests (triggered by the user)    | 모니터링하는 저장소에 수정 PR을 생성합니다.                                                                      | _repo (all)_                       |
+| Automatic fix and upgrade pull requests             | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                | _repo (all)_                       |
+| Snyk tests on pull requests                         | 새로운 PR을 생성하거나 기존 PR이 업데이트될 때마다 pull request status check를 보냅니다.                                | _repo (all)_                       |
+| Importing new projects to Snyk                      | For presenting a list of all Github 조직에서 사용 가능한 모든 저장소의 목록을 "Add Projects" 화면(가져오기 팝업)에 표시합니다. | _admin:read:org, repo (all)_       |
+| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 webhook을 추가하면 pull request를 생성하거나 업데이트될 때마다 Snyk이 알림을 받고 스캔을 진행할 수 있습니다.        | _admin:repo\_hooks (read & write)_ |
 
-**Required permissions scope for repositories**
+**저장소에 필요한 사용 권한 범위**
 
-For Snyk to perform the required operation on monitor repositories, such as reading manifest files on a frequent basis, the accounts connected to Snyk (either directly or using Snyk Broker) need the following access on the repositories:
+Snyk이 매니페스트 파일을 자주 읽는 것과 같은 모니터링하는 저장소에서 필요한 작업을 수행하려면 Snyk에 연결된 계정(직접 또는 Snyk Broker 사용)이 저장소에 대해 다음과 같은 액세스 권한이 필요합니다.
 
-| **Action**                                          | **Why?**                                                                                                                                              | **Required permissions on the repository** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Daily / weekly tests                                | For reading manifest files in private repos                                                                                                           | _Write_ or above                           |
-| Snyk tests on pull requests                         | For sending pull request status checks whenever a new PR is created / an existing PR is updated                                                       | _Write_ or above                           |
-| Opening fix and upgrade pull requests               | For creating fix/upgrade PRs in the monitored repos                                                                                                   | _Write_ or above                           |
-| Snyk tests on pull requests - initial configuration | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans | _Admin_                                    |
+| **Action**                                          | **Why?**                                                                                | **Required permissions on the repository** |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Daily / weekly tests                                | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                | _Write_ or above                           |
+| Snyk tests on pull requests                         | 새로운 PR을 생성하거나 기존 PR이 업데이트될 때마다 pull request status check을 보냅니다.                         | _Write_ or above                           |
+| Opening fix and upgrade pull requests               | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                         | _Write_ or above                           |
+| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 webhook을 추가하면 pull request를 생성하거나 업데이트될 대마다 Snyk이 알림을 받고 스캔을 진행할 수 있습니다. | _Admin_                                    |

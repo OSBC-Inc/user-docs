@@ -274,7 +274,7 @@
     * [Snyk SCM 통합: 모범 사례](features/integrations/git-repository-scm-integrations/snyk-scm-integration-good-practices.md)
     * [GitHub 통합](features/integrations/git-repository-scm-integrations/github-integration.md)
     * [GitHub Enterprise 통합](features/integrations/git-repository-scm-integrations/github-enterprise-integration.md)
-    * [Bitbucket Cloud integration](features/integrations/git-repository-scm-integrations/bitbucket-cloud-integration.md)
+    * [Bitbucket Cloud 통합](features/integrations/git-repository-scm-integrations/bitbucket-cloud-integration.md)
     * [Bitbucket Data Center/Server integration](features/integrations/git-repository-scm-integrations/bitbucket-data-center-server-integration.md)
     * [GitLab integration](features/integrations/git-repository-scm-integrations/gitlab-integration.md)
     * [Azure Repos integration](features/integrations/git-repository-scm-integrations/azure-repos-integration.md)

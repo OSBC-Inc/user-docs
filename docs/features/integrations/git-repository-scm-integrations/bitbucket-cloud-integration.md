@@ -1,40 +1,40 @@
-# Bitbucket Cloud integration
+# Bitbucket Cloud 통합
 
-Snyk's Bitbucket Cloud integration allows you to continuously perform security scanning across all the integrated repositories, detect vulnerabilities in your open source components, and use automated fixes.
+Snyk의 Bitbucket Cloud 통합을 통해 모든 통합 저장소에서 보안 스캔을 지속적으로 수행하고, 오픈 소스 구성 요소의 취약점을 탐지하고, 자동화된 수정 프로그램을 사용할 수 있습니다.
 
-> **Feature availability**\
-> This feature is available for all plans. See [pricing plans](https://snyk.io/plans/) for more details.
+> **기능 사용 여부**\
+> 이 기능은 모든 plan에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참고하십시오.
 
-### Setting up a Bitbucket Cloud Integration
+### Bitbucket Cloud 통합 설정
 
-> The newly created user must have **Admin** permissions to all the repositories you need to monitor with Snyk.
+> 새로 생성된 사용자는 Snyk을 사용하여 모니터링해야 하는 모든 저장소에 대한 **Admin** 권한이 있어야 합니다.
 >
-> Admin permissions are required; however, Snyk's access is ultimately limited by the [permissions assigned to the App Password](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/).
+> 관리자 권한이 필요하지만, Snyk의 액세스는 궁극적으로 [App Password에 할당된 권한](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)에 의해 제한됩니다.
 
-1. To give Snyk access to your Bitbucket account
-   1. Set up a dedicated service account in Bitbucket, with admin permissions.
-   2. Visit [Bitbucket documentation ](https://support.atlassian.com/bitbucket-cloud/docs/grant-access-to-a-workspace/)to learn more about creating users.
-2. In Snyk, go to the **Integrations** page and click on **Bitbucket Cloud** card.
-3. Access your Bitbucket Cloud account and create a unique App Password for Snyk with the following permissions:
+1. Snyk에게 Bitbucket 계정에 대한 액세스 권한을 부여하려면 다음과 같이 하십시오.
+   1. 관리자 권한이 있는 Bitbucket에서 전용 서비스 계정을 설정합니다.
+   2. 사용자 작성에 대한 자세한 내용은 [Bitbucket documentation](https://support.atlassian.com/bitbucket-cloud/docs/grant-access-to-a-workspace/)을 참조하십시오.
+2. Snyk에서 **Integrations**페이지로 이동하여 **Bitbucket Cloud** 카드를 클릭합니다.
+3. Bitbucket Cloud 계정에 액세스하여 다음 권한으로 고유한 Snyk용 App Password를 생성하십시오.
    1. **Account: Email & Read**
    2. **Workspace membership: Read**
    3. **Projects: Read**
    4. **Repositories: Read & Write**
    5. **Pull requests: Read & Write**
    6. **Webhooks: Read & Write**
-      1. Follow [Bitbucket documentation](https://confluence.atlassian.com/bitbucket/app-passwords-828781300.html) to see how to do this in detail.
-4. Enter the username, which can be found under BitBucket's Personal settings, and the [App Password for the service account](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) you created:
-5.  Click **Save**.\
-    Snyk connects to your Bitbucket Cloud account. When the connection succeeds, the following indications appear:
+      1. 자세한 방법은 [Bitbucket documentation](https://confluence.atlassian.com/bitbucket/app-passwords-828781300.html)을 참조하십시오.
+4. BitBucket의 개인 설정에서 찾을 수 있는 사용자 이름과 사용자가 만든 [서비스 계정의 App Password](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)를 입력하십시오.
+5.  **Save**를 클릭합니다.\
+    Snyk은 Bitbucket Cloud 계정에 연결합니다. 연결에 성공하면 다음 표시가 나타납니다.
 
     ![](<../../../.gitbook/assets/settings (1).png>)\
-    You can now select the repositories for Snyk to monitor.
-6. Click **Add your Bitbucket Cloud repositories to Snyk** to start importing repositories to Snyk.
-7. Select the repositories to import to Snyk when prompted, then click **Add selected repositories**.
-8. Snyk scans the selected repositories for dependency files (such as package.json and pom.xml) in the entire directory tree, and import them to Snyk as projects:
-9. The imported projects appear in your **Projects** page and are continuously checked for vulnerabilities.
+    Snyk이 모니터링할 저장소를 선택할 수 있습니다.
+6. Import repositories to Snyk을 시작하려면 **Add your Bitbucket Cloud repositories to Snyk**을 클릭합니다.
+7. 메시지가 나타나면 Snyk으로 가져올 저장소를 선택한 다음 **Add selected repositories**를 클릭합니다.
+8. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 디펜던시 파일(package.json 및 pom.xml)을 스캔하고 프로젝트로 가져옵니다.
+9. 가져온 프로젝트가 **Projects** 페이지에 나타나고 취약점을 지속적으로 검사합니다.
 
-![](<../../../.gitbook/assets/444 (2) (4) (4) (4) (5) (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (15).png>)
+![](../../../.gitbook/assets/444%20\(2\)%20\(4\)%20\(4\)%20\(4\)%20\(5\)%20\(4\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(15\).png)
 
 After the integration is done, you can use capabilities as described below.
 
@@ -44,7 +44,7 @@ Snyk produces advanced security reports, allowing you to explore the vulnerabili
 
 This is an example of a project level security report:
 
-![](<../../../.gitbook/assets/mceclip0-22- (2) (5) (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (33).png>)
+![](../../../.gitbook/assets/mceclip0-22-%20\(2\)%20\(5\)%20\(6\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(33\).png)
 
 ### Projects monitoring and automatic fix pull requests
 
@@ -60,7 +60,7 @@ To review and adjust the automatic fix pull request settings:
 2. Select **Edit Settings** for Bitbucket Cloud.
 3. Navigate to **Automatic fix pull requests**:
 
-![](<../../../.gitbook/assets/mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (31).png>)
+![](../../../.gitbook/assets/mceclip4%20\(1\)%20\(2\)%20\(6\)%20\(7\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(31\).png)
 
 ### Pull request tests
 
@@ -76,7 +76,7 @@ To review and adjust the pull request tests settings,
 2. Select **Edit Settings** for Bitbucket Cloud.
 3. Navigate to **Default Snyk test for pull requests > Open Source Security & Licenses**, and edit settings: \*\*\*\*
 
-![](<../../../.gitbook/assets/Screenshot 2022-03-16 at 10.07.50.png>)
+![](../../../.gitbook/assets/Screenshot%202022-03-16%20at%2010.07.50.png)
 
 ### Required permissions scope for the Bitbucket Cloud integration
 

@@ -8,7 +8,7 @@ CLI에서 `snyk monitor`를 사용하여 컨테이너 프로젝트를 Snyk으로
 
 다음 예와 유사하게 모든 컨테이너 프로젝트를 필터링할 수 있습니다.
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 컨테이너 프로젝트를 열면 분석 결과 및 수정 조언이 Snyk UI에 나타납니다.
 
