@@ -49,23 +49,23 @@ Fix Advice 영역은 다음 예와 유사하게 상단 근처의 프로젝트 �
 
 프로젝트 세부 정보 페이지에서도 추가 조언과 세부 정보를 찾을 수 있습니다.
 
-* **Issues** 탭에서 취약점별 전체 설명
-* from the **Dependencies** tab, the entire tree of your project dependencies, enabling you to clearly visualize affected paths
+* **Issues** 탭에서 취약점별 전체 설명을 확인할 수 있습니다.
+* **Dependencies** 탭에서 프로젝트 디펜던시의 전체 트리를 통해 영향을 받는 경로를 명확하게 시각화할 수 있습니다.
 
 ### CLI 도구의 실행 가능한 조언
 
-From the CLI, for each list (upgrade and patch), results are displayed in groups based on the packages we recommend that you fix, and including:
+CLI에서 각 목록(업그레이드 및 패치)에 대해 다음을 포함하여 수정하도록 권장하는 패키지를 기반으로 결과가 그룹별로 표시됩니다.
 
-* details for all vulnerabilities introduced per package; to view all dependency paths affected, use `--show-vulnerable-paths=all` when running `snyk test` or `snyk monitor`
-* links to full descriptions of each vulnerability
+* 패키지당 도입된 모든 취약점에 대한 세부 정보 (영향을 받는 모든 디펜던시 경로를 보려면 `snyk test` 또는 `snyk monitor` 실행 시 `--show-vulnerable-paths=all`을 사용하십시오.)
+* 각 취약점에 대한 전체 설명 링크
 
-Upgrade and patch results appear similar to the following:
+업그레이드 및 패치 결과는 다음과 유사하게 나타납니다.
 
 ![](<../../../.gitbook/assets/image (17) (1).png>)
 
 ![](<../../../.gitbook/assets/image (49).png>)
 
-Patch recommendations with some and with all paths:
+일부 및 모든 경로에 대한 패치 권장 사항:
 
 ![](../../../.gitbook/assets/uuid-1afca091-a9a5-d42c-40b6-f48aa0e72584-en.png)
 
