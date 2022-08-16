@@ -1,5 +1,5 @@
 ---
-description: How to use the consolidateResults command
+description: consolidateResults 명령을 사용하는 방법
 ---
 
 # Consolidate Results
