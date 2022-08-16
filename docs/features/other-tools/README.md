@@ -23,12 +23,10 @@ Snyk은 주요 Snyk 제품 라인에서 해결할 수 없는 특정 문제를 �
 * [snyk-transitive-ignore](https://github.com/snyk-tech-services/snyk-transitive-ignore): 제공된 패키지 목록을 기반으로 Snyk ignore 정책을 동적으로 생성합니다.
 * [snyk-user-sync-tool](https://github.com/snyk-tech-services/snyk-user-sync-tool): 사용자 멤버십을 추가, 제거 및 동기화합니다.
 * [snyk-licenses-texts](https://github.com/snyk-tech-services/snyk-licenses-texts): 사용된 라이선스, 저작권 및 종속성 데이터를 조직 수준에 따라 제공합니다.
-* [snyk-request-manager](https://github.com/snyk-tech-services/snyk-request-manager): Rate controlled and retry enabled request manager to interact with Snyk APIs.
-* [snyk2spdx](https://github.com/snyk-tech-services/snyk2spdx): Convert the Snyk CLI output to SPDX format.
-* [snyk-repo-issue-tracker](https://github.com/snyk-tech-services/snyk-repo-issue-tracker): A python script / module that allows for generating a changeset of issues between runs against the Snyk project issues API.
-*   [snyk-repo-diff:](https://github.com/snyk-tech-services/snyk-repo-diff) Helps answer which repositories aren't monitored by Snyk.
-
-    This works by retrieving a list of all projects in a given Snyk Group (all projects in all orgs belonging to the same Snyk Group) and associating them with a list of repositories found in a given GitHub Organization (see below section on GitLab support),
+* [snyk-request-manager](https://github.com/snyk-tech-services/snyk-request-manager): 속도 제어 및 재시도를 통해 요청 관리자가 Snyk API와 상호 작용할 수 있습니다.
+* [snyk2spdx](https://github.com/snyk-tech-services/snyk2spdx): Snyk CLI 출력을 SPDX 형식으로 변환합니다.
+* [snyk-repo-issue-tracker](https://github.com/snyk-tech-services/snyk-repo-issue-tracker): Snyk 프로젝트 문제 API에 대한 실행 간에 문제 변경 집합을 생성할 수 있는 Python 스크립트/모듈입니다.
+* [snyk-repo-diff:](https://github.com/snyk-tech-services/snyk-repo-diff) Snyk에서 모니터링하지 않는 리포지토리에 대한 답변을 돕습니다. 이것은 주어진 Snyk 그룹의 모든 프로젝트 목록(동일한 Snyk 그룹에 속한 모든 조직의 모든 프로젝트)을 검색하고 이를 주어진 GitHub 조직에서 찾은 리포지토리 목록과 연결하여 작동합니다(GitLab 지원에 대한 아래 섹션 참조).
 * [snyk-issues-to-csv](https://github.com/snyk-tech-services/snyk-issues-to-csv): A python script that uses the PySnyk module along with the Pandas modules to collect all issues from the report API and combine them into a single CSV for an entire group.
 * [snyk-bulk](https://github.com/snyk-tech-services/snyk-bulk): Recursively scan source repositories for open source vulnerabilities with the Snyk CLI, outside of a build environment.
 * [snyk-bulk-action-scripts](https://github.com/snyk-tech-services/snyk-bulk-action-scripts): A collection of scripts to edit integration settings for every organization in a group in Snyk.
