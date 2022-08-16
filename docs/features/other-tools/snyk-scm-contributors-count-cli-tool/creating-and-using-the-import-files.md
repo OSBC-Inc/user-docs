@@ -39,13 +39,13 @@ Import file은 Snyk에서 올바른 조직 및 통합으로 가져오기 위해 
 사용자가 OrgID 및 IntegrationID에 대한 값을 한 번 지정하면 이러한 값이 import file의 모든 항목에 대해 설정됩니다(즉, 가져온 모든 저장소가 Snyk의 동일한 조직 아래에 있음을 의미함).
 {% endhint %}
 
-## snyk-api-import 도구 사
+## snyk-api-import 도구 사용
 
 snyk-api-import 도구는 사용자가 안전하고 강력한 방식으로 Snyk 계정의 새 저장소를 가져올 수 있도록 도와줍니다.
 
 이 도구를 사용하려면 가져올 repos 데이터가 있는 json 파일이 필요합니다. 이 파일은 이전 섹션에서 설명한 대로 **snyk-contributors-count** 도구에 의해 자동 생성될 수 있습니다.
 
-## 추가 정
+## 추가 정보
 
 **snyk-api-import** 도구에 대한 자세한 내용은 다음을 참조하십시오 :
 
