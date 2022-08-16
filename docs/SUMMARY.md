@@ -421,7 +421,7 @@
         * [GitLab - Flow and Tech](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-flow-and-tech.md)
         * [GitLab - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-examples.md)
     * [Consolidate Results](features/other-tools/snyk-scm-contributors-count-cli-tool/consolidate-results.md)
-    * [Creating and using the import file](features/other-tools/snyk-scm-contributors-count-cli-tool/creating-and-using-the-import-files.md)
+    * [Import file 생성 및 사용](features/other-tools/snyk-scm-contributors-count-cli-tool/creating-and-using-the-import-files.md)
     * [API 속도 제한 제어](features/other-tools/snyk-scm-contributors-count-cli-tool/api-rate-limit-control.md)
 
 ## TUTORIALS

@@ -1,8 +1,8 @@
 ---
-description: How to generate the import file and use it with the snyk-api-import tool
+description: "\bImport file을 생성하고 snyk-api-import 도구와 함께 사용하는 방법"
 ---
 
-# Creating and using the import file
+# Import file 생성 및 사용
 
 ## How the import file works
 
