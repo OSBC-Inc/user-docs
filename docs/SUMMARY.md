@@ -213,7 +213,7 @@
   * [How to find vulnerabilities using the CLI](features/snyk-cli/how-to-find-vulnerabilities-using-the-cli.md)
   * [CLI reference](features/snyk-cli/cli-reference.md)
   * [Test for vulnerabilities](features/snyk-cli/test-for-vulnerabilities/README.md)
-    * [The .snyk file](features/snyk-cli/test-for-vulnerabilities/the-.snyk-file.md)
+    * [.snyk 파일](features/snyk-cli/test-for-vulnerabilities/.snyk.md)
     * [How to use the log4shell command](features/snyk-cli/test-for-vulnerabilities/how-to-use-the-log4shell-command.md)
     * [Set severity thresholds for CLI tests](features/snyk-cli/test-for-vulnerabilities/set-severity-thresholds-for-cli-tests.md)
     * [Use Snyk Open Source from the CLI](features/snyk-cli/test-for-vulnerabilities/use-snyk-open-source-from-the-cli.md)
