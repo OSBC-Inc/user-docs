@@ -17,7 +17,7 @@ description: "\bImport file을 생성하고 snyk-api-import 도구와 함께 사
 
 ## The import flags
 
-`importConfDir` - This flag indicates that a query for unmonitored repos should be made and expects a path to a folder (with write privileges) in which to create the json import files, for example :
+`importConfDir` - 이 flag는 모니터링되지 않는 저장소에 대한 쿼리가 작성되어야 하고 json import file을 생성할 폴더(쓰기 권한이 있는) 경로가 필요합니다. 예를 들면 다음과 같습니다 :
 
 ```
 snyk-scm-contributors-count <command> --token TOKEN -- importConfDir /snyk/import/
