@@ -4,9 +4,9 @@ description: "\bImport file을 생성하고 snyk-api-import 도구와 함께 사
 
 # Import file 생성 및 사용
 
-## How the import file works
+## Import file 작동 방식
 
-This feature only works with Bitbucket and Azure.
+이 기능은 Bitbucket 및 Azure에서만 작동합니다.
 
 When the `snyk-scm-contributors-count` tool connects both to your Snyk account and your SCM account, the tools finds out which repos/projects are monitored by Snyk and which are not.
 
