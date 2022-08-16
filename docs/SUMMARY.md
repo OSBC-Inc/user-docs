@@ -216,7 +216,7 @@
     * [.snyk 파일](features/snyk-cli/test-for-vulnerabilities/.snyk.md)
     * [How to use the log4shell command](features/snyk-cli/test-for-vulnerabilities/how-to-use-the-log4shell-command.md)
     * [Set severity thresholds for CLI tests](features/snyk-cli/test-for-vulnerabilities/set-severity-thresholds-for-cli-tests.md)
-    * [Use Snyk Open Source from the CLI](features/snyk-cli/test-for-vulnerabilities/use-snyk-open-source-from-the-cli.md)
+    * [CLI에서 Snyk 오픈 소스 사용](features/snyk-cli/test-for-vulnerabilities/cli-snyk.md)
     * [Use a .snyk policy file in a different directory from the manifest file](features/snyk-cli/test-for-vulnerabilities/use-a-.snyk-policy-file-in-a-different-directory-from-the-manifest-file.md)
     * [Test public repositories before use](features/snyk-cli/test-for-vulnerabilities/test-public-repositories-before-use.md)
     * [Test public npm packages before use](features/snyk-cli/test-for-vulnerabilities/test-public-npm-packages-before-use.md)
