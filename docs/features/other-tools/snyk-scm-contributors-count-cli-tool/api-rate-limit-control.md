@@ -28,7 +28,7 @@ GitHub에서 API 속도 제한은 이 [가이드](https://docs.github.com/en/dev
 
 Github Enterprise에서 API 속도 제한은 이 [가이드](https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps)에 설명된 대로 인증된 사용자에 대해 시간당 15,000회 호출입니다.
 
-snyk-scm-contributors-count 도구는 속도 제한을 처리하기 위해 시간당 10,800개의 호출에 해당하는 초당 최대 3개의 호출이라는 엄격한 제한을 적용하고 429개의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다. ).
+snyk-scm-contributors-count 도구는 속도 제한을 처리하기 위해 시간당 10,800개의 호출에 해당하는 초당 최대 3개의 호출이라는 엄격한 제한을 적용하고 429개의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다.
 
 ## GitLab and GitLab Server
 
