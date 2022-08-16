@@ -2,9 +2,9 @@
 
 ## Azure DevOps
 
-Azure DevOps has a unique way of limiting the API call rate with their own "TSTU" concept as described in this [guide](https://docs.microsoft.com/en-us/azure/devops/integrate/concepts/rate-limits?view=azure-devops).
+Azure DevOps에는 이 [가이드](https://docs.microsoft.com/en-us/azure/devops/integrate/concepts/rate-limits?view=azure-devops)에 설명된 고유한 개념 "TSTU" 로 API 호출 속도를 제한하는 고유한 방법이 있습니다.
 
-The `snyk-scm-contributors-count` tool applies a strict limit of a maximum of two calls per second to deal with the rate limit.
+`snyk-scm-contributors-count` 도구는 속도 제한을 처리하기 위해 초당 최대 2회의 호출이라는 엄격한 제한을 적용합니다.
 
 ## Bitbucket Cloud
 
