@@ -8,9 +8,9 @@ description: "\bImport file을 생성하고 snyk-api-import 도구와 함께 사
 
 이 기능은 Bitbucket 및 Azure에서만 작동합니다.
 
-When the `snyk-scm-contributors-count` tool connects both to your Snyk account and your SCM account, the tools finds out which repos/projects are monitored by Snyk and which are not.
+`snyk-scm-contributors-count` 도구가 Snyk 계정과 SCM 계정에 모두 연결되면 도구는 Snyk에서 모니터링하는 저장소/프로젝트를 찾아냅니다.
 
-When you apply the `importConfDir` and `importFileRepoType` flags to the command, the tool generates an import file populated with the unmonitored repo data, to be used with the [**snyk-api-import** ](creating-and-using-the-import-files.md#using-the-snyk-api-import-tool)tool to import the missing repos to your Snyk account.
+`importConfDir`  `importFileRepoType` 플래그를 명령에 적용하면 도구가 [snyk-api-import ](creating-and-using-the-import-files.md#using-the-snyk-api-import-tool)도구와 함께 사용하여 누락된 리포지토리를 Snyk 계정으로 가져오는 데 사용할 모니터링되지 않는 리포지토리 데이터로 채워진 import file을 생성합니다.
 
 * If the Snyk token was exported and the related Snyk account has an integration set for the specific SCM that is being scanned by the tool, the tool will try to find and match the OrgID and IntegrationID from Snyk as needed by the `snyk-api-import` tool and automatically add it to the import file.
 * If a Snyk token was not exported or the user has no Snyk account yet, this feature can be used to map all repos in the SCM and create the import file to be later used by the `snyk-api-import` tool. In this case or if the tool can not find an OrgID or IntegrationID, the tool prompts the user to supply these IDs (once) and automatically adds them to the import file.
