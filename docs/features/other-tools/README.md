@@ -22,7 +22,7 @@ Snyk은 주요 Snyk 제품 라인에서 해결할 수 없는 특정 문제를 �
 * [snyk-filter](https://github.com/snyk-tech-services/snyk-filter): Snyk CLI에서 JSON 출력을 가져오고 결과에 사용자 지정 필터링을 적용합니다.
 * [snyk-transitive-ignore](https://github.com/snyk-tech-services/snyk-transitive-ignore): 제공된 패키지 목록을 기반으로 Snyk ignore 정책을 동적으로 생성합니다.
 * [snyk-user-sync-tool](https://github.com/snyk-tech-services/snyk-user-sync-tool): 사용자 멤버십을 추가, 제거 및 동기화합니다.
-* [snyk-licenses-texts](https://github.com/snyk-tech-services/snyk-licenses-texts): 사용된 조직 수준 라이선스, 저작권 및 종속성 데이터를 제공합니다.
+* [snyk-licenses-texts](https://github.com/snyk-tech-services/snyk-licenses-texts): 사용된 라이선스, 저작권 및 종속성 데이터를 조직 수준에 따 제공합니다.
 * [snyk-request-manager](https://github.com/snyk-tech-services/snyk-request-manager): Rate controlled and retry enabled request manager to interact with Snyk APIs.
 * [snyk2spdx](https://github.com/snyk-tech-services/snyk2spdx): Convert the Snyk CLI output to SPDX format.
 * [snyk-repo-issue-tracker](https://github.com/snyk-tech-services/snyk-repo-issue-tracker): A python script / module that allows for generating a changeset of issues between runs against the Snyk project issues API.
