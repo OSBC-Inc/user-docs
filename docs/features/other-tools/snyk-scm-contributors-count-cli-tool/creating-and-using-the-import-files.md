@@ -23,7 +23,7 @@ description: "\bImport file을 생성하고 snyk-api-import 도구와 함께 사
 snyk-scm-contributors-count <command> --token TOKEN -- importConfDir /snyk/import/
 ```
 
-기본적으로 이 command SCM을 스캔할 때 발견된 모든 유형의 모니터링되지 않는 저장소로 json import file을 채웁니다.
+기본적으로 이 command는 SCM을 스캔할 때 발견된 모든 유형의 모니터링되지 않는 저장소로 json import file을 채웁니다.
 
 `importFileRepoType` - 이 flag는 `all,` `private`, or `public`(대소문자 구분하지 않음) 값으로 설정하여 지정된 repo 유형의 데이터만 import file을 채울 수 있습니다. 예를 들면 다음과 같습니다 :
 

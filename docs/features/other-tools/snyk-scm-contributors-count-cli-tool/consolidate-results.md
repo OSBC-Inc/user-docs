@@ -6,15 +6,15 @@ description: consolidateResults 명령을 사용하는 방법
 
 ## consolidateResults command
 
-When you work with the SCM-Contributors-Count tool, you may work with more than one source control manager (SCM). You will run a separate command for each SCM to get the contributors count for your repos there.
+SCM-Contributors-Count 도구로 작업할 때 둘 이상의 source control manager (SCM) 로 작업할 수 있습니다.각 SCM에 대해 별도의 명령을 실행하여 해당 저장소에 대한 기여자 를 가져옵니다.
 
-For example: If you have a contributor that commits to both GitHub repos and Bitbucket projects, you'll see that contributor's details in the output for both SCMs.
+For example : GitHub 리포지토리와 Bitbucket 프로젝트 모두에 커밋하는 기여자가 있는 경우 두 SCM의 출력에서 해당 기여자의 세부 정보를 볼 수 있습니다.
 
-If you want to get an overall picture of all your contributors across all the SCMs, use the `consolidateResults` command.
+모든 SCM에서 모든 기여자에 대한 전체적인 그림을 얻으려면 `consolidateResults` command를 사용하십시오.
 
-This command allows you to take multiple (`json`) outputs of `snyk-scm-contributors-count` commands for different SCMs and consolidate them into one file, with a unique contributors count and a total of the repos from all SCMs.
+이 command 사용하면 다양한 SCM에 대한 `snyk-scm-contributors-count` command의 여러(`json`) 출력을 가져와 고유한 기여자 수와 모든 SCM의 총 리포지토리를 하나의 파일로 통합할 수 있습니다.
 
-The following options are available for the `consolidateResults` command:
+`consolidateResults` command에 사용할 수 있는 옵션은 다음과 같습니다 :
 
 ```
   --version                 Show version number                        [boolean]
