@@ -15,11 +15,11 @@ Snyk은 주요 Snyk 제품 라인에서 해결할 수 없는 특정 문제를 �
 * [snyk-delta](https://github.com/snyk-tech-services/snyk-delta): 두 Snyk snapshot 간의 delta를 가져옵니다.
 * [snyk-disallow](https://github.com/snyk-tech-services/snyk-disallow): CI 또는 유사한 시스템에 대한 read|test-only token을 얻기위해 Snyk Group의viewer token을 가져옵니다.
 * [snyk-prevent-gh-commit-status](https://github.com/snyk-tech-services/snyk-prevent-gh-commit-status): CI에서 실행된 snyk-delta의 결과 PR의 POST 커밋 상태입니다.
-* [snyk-scm-contributors-count](https://github.com/snyk-tech-services/snyk-scm-contributors-count): 지난 90일 동안 커밋이 있는 SCM 저장소의 기여자를 계산합니다. [문서](snyk-scm-contributors-count-cli-tool/) 참조하십시오.
-* [snyk-cr-monitor](https://github.com/snyk-tech-services/snyk-cr-monitor): Gather Docker repos to test, then Iterate through results, to run multiple jobs simultaneously.
-* [backstage-plugin-snyk](https://github.com/snyk-tech-services/backstage-plugin-snyk): Plugin to display security details from Snyk.
-* [snyk-api-ts-client](https://github.com/snyk-tech-services/snyk-api-ts-client): Snyk API Typescript client.
-* [snyk-filter](https://github.com/snyk-tech-services/snyk-filter): Takes the JSON output from the Snyk CLI, and applies custom filtering of the results.
+* [snyk-scm-contributors-count](https://github.com/snyk-tech-services/snyk-scm-contributors-count): 지난 90일 동안 커밋이 있는 SCM 저장소의 기여자를 계산합니다. [문서](snyk-scm-contributors-count-cli-tool/)를 참조하십시오.
+* [snyk-cr-monitor](https://github.com/snyk-tech-services/snyk-cr-monitor): 테스트할 Docker 저장소를 수집한 다음 결과를 반복하여 여러 작업을 동시에 실행합니다.
+* [backstage-plugin-snyk](https://github.com/snyk-tech-services/backstage-plugin-snyk): Snyk의 보안 세부 정보를 표시하는 플러그인입니다.
+* [snyk-api-ts-client](https://github.com/snyk-tech-services/snyk-api-ts-client): Snyk API Typescript 클라이언트 입니다.
+* [snyk-filter](https://github.com/snyk-tech-services/snyk-filter): Snyk CLI에서 JSON 출력을 가져오고 결과에 사용자 지정 필터링을 적용합니다.
 * [snyk-transitive-ignore](https://github.com/snyk-tech-services/snyk-transitive-ignore): Generate the Snyk ignore policy dynamically based on a provided list of packages.
 * [snyk-user-sync-tool](https://github.com/snyk-tech-services/snyk-user-sync-tool): Add, remove, and sync user memberships.
 * [snyk-licenses-texts](https://github.com/snyk-tech-services/snyk-licenses-texts): Provides Organization level licenses used, copyrights, and dependencies data.
