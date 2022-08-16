@@ -20,7 +20,7 @@ Snyk CLI를 사용하여 Snyk Code, Container 또는 Infrastructure as Code proj
 * [Snyk CLI for container security](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security)
 * [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
 
-## 프로젝트 스
+## 프로젝트 스캔
 
 설치 및 인증을 마쳤으면 `cd/my/project/`를 사용하여 지원되는 패키지 매니페스트 파일 (예 : `package.json`, `pom.xml`, `composer.lock`)이 들어 있는 폴더로 디렉토리를 변경합니다. 그런 후 Synk 테스트를 실행합니다. 경로 및 수정 지침을 포함하여 식별된 모든 취약성이 나열됩니다.
 
@@ -50,7 +50,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 자세한 내용은 [Monitor your projects at regular intervals](https://docs.snyk.io/snyk-cli/test-for-vulnerabilities/monitor-your-projects-at-regular-intervals)을 참조하십시오.
 
-## 테스트 부
+## 테스트 부족
 
 오픈 소스 프로젝트에서 테스트가 부족한 경우 다음 단계를 수행하십시오.
 
@@ -58,7 +58,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 * Snyk UI를 열고 프로젝트 **설정**으로 이동합니다.
 * **Git remote URI**에 오픈 소스 리포지토리의 URL을 입력하십시오.
 
-## 추가 정
+## 추가 정보
 
 `snyk help`를 실행하거나 [CLI reference](https://docs.snyk.io/snyk-cli/cli-reference)를 참고하십시오.
 
@@ -66,22 +66,26 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 Snyk은 [cheat sheet](https://snyk.io/wp-content/uploads/cheat-sheet-snyk-cli-v3.pdf) ([blog post](https://snyk.io/blog/snyk-cli-cheat-sheet/))와 [video tutorial](https://www.youtube.com/watch?v=xp\_LtchEkT8) 또한 제공합니다.
 
+특히 다음과 같은 유용한 옵션에 대한 정보를 참조하십시오.
 
+* `--severity-threshold=low|medium|high|critical` : 보고서만 지정된 수준 이상의 취약성을 보고합니다.
+* `--json` : 결과를 JSON 형식으로 출력합니다.
+* `--all-projects` : 작업 디렉토리의 모든 프로젝트를 자동으로 검색합니다.
 
-## 지
+## 지원
 
-일반적으로 Snyk CLI 또는 Snyk에 대한 도움이 필요할 때마다 Snyk 지원팀에 티켓을 제출하십시오. Snyk 지원은 Snyk 프로젝트에서 GitHub 문제를 적극적으로 모니터링하지 않습니다.
+일반적으로 Snyk CLI 또는 Snyk에 대한 도움이 필요할 때마다 Snyk 지원팀에 [Submit a ticket](https://support.snyk.io/hc/en-us/requests/new)을 하십시. Snyk 지원은 [Snyk project](https://github.com/snyk) 에서 GitHub 문제를 적극적으로 모니터링하지 않습니다.
 
-## Contributing(기여)
+## 기여
 
 Snyk CLI 프로젝트는 오픈 소스이지만, Snyk는 외부 기여자를 장려하지 않습니다.
 
-Snyk CLI에 대한 설계 결정 사항을 검토할 수 있습니다.
+Snyk CLI에 대한 [design decisions for the Snyk CLI](https://github.com/snyk/snyk/blob/master/help/\_about-this-project/README.md) 검토할 수 있습니다.
 
 Snyk CLI 저장소는 모노레포이며 다른 프로젝트와 툴도 다루고 있습니다.
 
-* [@snyk/protect](https://github.com/snyk/cli/tree/master/packages/snyk-protect) ; [npm package for snyk-protext command](https://www.npmjs.com/package/@snyk/protect)
+* [`@snyk/protect`](https://github.com/snyk/cli/tree/master/packages/snyk-protect);[`npm package for snyk-protext command`](https://www.npmjs.com/package/@snyk/protect)``
 
 ## 보안
 
-보안 문제 또는 관련된 사항 GitHub 저장소의 SECURITY.md 파일을 참조하십시오.
+보안 문제 또는 관련된 사항 GitHub 저장소의 [SECURITY.md](https://github.com/snyk/cli/blob/master/SECURITY.md) 파일을 참조하십시오.
