@@ -14,7 +14,7 @@ For example : GitHub 리포지토리와 Bitbucket 프로젝트 모두에 커밋�
 
 이 command 사용하면 다양한 SCM에 대한 `snyk-scm-contributors-count` command의 여러(`json`) 출력을 가져와 고유한 기여자 수와 모든 SCM의 총 리포지토리를 하나의 파일로 통합할 수 있습니다.
 
-`consolidateResults` command에 사용할 수 있는 옵션은 다음과 같습니다:
+`consolidateResults` command에 사용할 수 있는 옵션은 다음과 같습니다 :
 
 ```
   --version                 Show version number                        [boolean]
@@ -24,7 +24,7 @@ For example : GitHub 리포지토리와 Bitbucket 프로젝트 모두에 커밋�
 
 ## command 실행
 
-* `--json` flag를 사용하여 각 리포지토리에 대해 `snyk-scm-contributors-count` command를 실행하고 출력을 지정된 폴더로 보냅니다. 예를 들면 다음과 같습니다:
+* `--json` flag를 사용하여 각 리포지토리에 대해 `snyk-scm-contributors-count` command를 실행하고 출력을 지정된 폴더로 보냅니다. 예를 들면 다음과 같습니다 :
 
 ```
 snyk-scm-contributors-count github --token TOKEN --json > PathToFolder/FileName
