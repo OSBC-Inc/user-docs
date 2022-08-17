@@ -1,47 +1,47 @@
-# Code
+# 코드
 
-## Usage
+## 사용법
 
 `snyk code [<SUBCOMMAND>] [<OPTIONS>] [<PATH>]`
 
-## Description
+## 설명
 
-The `snyk code` command finds security issues using Static Code Analysis.
+`snyk code` 명령은 정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
-For more information see [CLI for Snyk Code](https://docs.snyk.io/snyk-code/cli-for-snyk-code)
+자세한 내용은 [CLI for Snyk Code](https://docs.snyk.io/snyk-code/cli-for-snyk-code) 참
 
-## Subcommand: `test`
+## 하위 명령: `test`
 
-Test for any known issue.
+알려진 문제가 있는지 테스트합니다.
 
-## Exit codes
+## 종료 코드
 
-Possible exit codes and their meaning:
+가능한 종료 코드와 그 의미는 다음과 같습니다.&#x20;
 
-**0**: success, no vulnerabilities found\
-**1**: action\_needed, vulnerabilities found\
-**2**: failure, try to re-run command\
-**3**: failure, no supported projects detected
+**0**: 성공, 취약점 없음\
+**1**: action\_neded, 취약성 발견\
+**2**: 실패, 명령 재실행 시도\
+**3**: 실패, 지원되는 프로젝트가 검색되지 않음
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and set variables for connecting with the Snyk API; see [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli)
+환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참
 
-## Debug
+## 디버그
 
-Use the `-d` option to output the debug logs.
+`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-## Options for the code test subcommand
+## 코드 테스트 하위 명령 옵션
 
 ### `--org=<ORG_ID>`
 
-Specify the `<ORG_ID>`to run Snyk commands tied to a specific organization. The `<ORG_ID>` influences private test limits.
+특정 조직에 연결된 Snyk 명령을 실행할`<ORG_ID>`를 지정합니다. `<ORG_ID>`는 개인 테스트 제한에 영향을 미칩니다.
 
-If you have multiple organizations, you can set a default from the CLI using:
+조직이 여러 개인 경우 다음을 사용하여 CLI에서 기본 값을 설정할 수 있습니다.
 
 `$ snyk config set org=<ORG_ID>`
 
-Set a default to ensure all newly tested projects are tested under your default organization. If you need to override the default, use the `--org=<ORG_ID>` option.
+새로 테스트한 모든 프로젝트가 기본 조직에서 테스트 되도록 기본 값을 설정합니다. 기본 값을 재 정의해야 하는 경우 `--org=<ORG_ID>`옵션을 사용합니다.
 
 Default: `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
 
