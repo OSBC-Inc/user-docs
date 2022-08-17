@@ -1,7 +1,7 @@
 ---
-description: SCM-Contributors-Count Tool의 Flowchart
+description: SCM-Contributors-Count Tool의 순서도
 ---
 
-# Flowchart
+# 순서도
 
-![SCM-Contributors-Count Tool의 Flowchart](../../../.gitbook/assets/flow-chart%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(3\).png)
+![SCM-Contributors-Count Tool의 순서도](<../../../.gitbook/assets/SCM-Contributors-Count Tool의 Flowchart.png>)
