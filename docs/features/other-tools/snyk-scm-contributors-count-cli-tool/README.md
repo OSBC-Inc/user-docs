@@ -25,12 +25,12 @@
 * **Snyk License Consumption (Bitbucket 및 Azure에만 유효):** license consumption(기여자 수, 이름, 이메일 등)에 대한 일부 명확성과 세부 정보를 원하는 기존 Snyk 계정이 있는 사용자의 경우.\
   이 모드에서 Tool은 Snyk이 모니터링하는 SCM 관련 프로젝트를 가져온 다음 SCM의 저장소와 일치시키고 해당 저장소/프로젝트에 대해서만 기여자를 계산합니다.
 
-## Downloading the tool
+## Tool 다운로드
 
-Run the following:
+다음 command를 실행하세요:
 
 ```
 npm i -g snyk-scm-contributors-count
 ```
 
-You can also get the binaries from the [release page](https://github.com/snyk-tech-services/snyk-scm-contributors-count/releases).
+릴리스 페이지에서 [바이너리](https://github.com/snyk-tech-services/snyk-scm-contributors-count/releases)를 얻을 수도 있습니다.
