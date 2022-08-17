@@ -221,7 +221,7 @@
     * [사용하기 전 public repositories 테스트](features/snyk-cli/test-for-vulnerabilities/public-repositories.md)
     * [사용하기 전 공용 npm 패키지 테스트](features/snyk-cli/test-for-vulnerabilities/npm.md)
     * [Why is my setup.py file failing to scan or finding 0 dependencies?](features/snyk-cli/test-for-vulnerabilities/why-is-my-setup.py-file-failing-to-scan-or-finding-0-dependencies.md)
-    * [관리되지 않는 모든 JAR 파일 검사](features/snyk-cli/test-for-vulnerabilities/jar.md)
+    * [관리되지 않는 모든 JAR 파일 검사](features/snyk-cli/test-for-vulnerabilities/scan-all-unmanaged-jar-files.md)
     * [Advanced failing of builds in Snyk CLI](features/snyk-cli/test-for-vulnerabilities/advanced-failing-of-builds-in-snyk-cli.md)
   * [Fix vulnerabilities from the CLI](features/snyk-cli/fix-vulnerabilities-from-the-cli/README.md)
     * [Automatic fixing with snyk fix](features/snyk-cli/fix-vulnerabilities-from-the-cli/automatic-fixing-with-snyk-fix.md)
