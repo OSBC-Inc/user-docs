@@ -1,41 +1,41 @@
-# API rate limit control
+# API 속도 제한 제어
 
 ## Azure DevOps
 
-Azure DevOps has a unique way of limiting the API call rate with their own "TSTU" concept as described in this [guide](https://docs.microsoft.com/en-us/azure/devops/integrate/concepts/rate-limits?view=azure-devops).
+Azure DevOps에는 이 [가이드](https://docs.microsoft.com/en-us/azure/devops/integrate/concepts/rate-limits?view=azure-devops)에 설명된 "TSTU" 라는 고유한 방법으로 API 호출 속도를 제한하고 있습니다.
 
-The `snyk-scm-contributors-count` tool applies a strict limit of a maximum of two calls per second to deal with the rate limit.
+`snyk-scm-contributors-count` 도는 속도 제한을 처리하기 위해 초당 최대 2회의 호출이라는 엄격한 제한을 적용합니다.
 
 ## Bitbucket Cloud
 
-On Bitbucket Cloud, the API rate limit is 1,000 calls per hour for authenticated users as described in this [guide](https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/).
+Bitbucket Cloud에서 API 속도 제한은 이 [가이드](https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/)에 설명된 대로 인증된 사용자에 대해 시간당 1,000회 호출입니다.
 
-The `snyk-scm-contributors-count` tool applies a strict limit of a maximum of 1,000 calls per hour to deal with the rate limit and an additional regulating mechanism to deal with 429 responses ("too many calls").
+`snyk-scm-contributors-count` 도구는 속도 제한을 처리하기 위해 시간당 최대 1,000회 호출이라는 엄격한 제한을 적용하고 429회의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다.
 
 ## Bitbucket Server
 
-On Bitbucket Server, the system admin has full control of the API rate limiting as described in this [guide](https://confluence.atlassian.com/bitbucketserver/improving-instance-stability-with-rate-limiting-976171954.html).
+Bitbucket Server에서 시스템 관리자는 이 [가이드](https://confluence.atlassian.com/bitbucketserver/improving-instance-stability-with-rate-limiting-976171954.html)에 설명된 대로 API 속도 제한을 완전히 제어할 수 있습니다.
 
-The `snyk-scm-contributors-count` tool applies a moderate limit of a max 1000 calls per hour and additional regulating mechanism to deal with 429 responses ("too many calls")
+`snyk-scm-contributors-count` 도구는 시간당 최대 1000회 호출에 대한 적당한 제한과 429회의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다.
 
 ## GitHub
 
-On GithHub, the API rate limit is 5,000 calls per hour for authenticated users as described in this [guide](https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps).
+GitHub에서 API 속도 제한은 이 [가이드](https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps)에 설명된 대로 인증된 사용자에 대해 시간당 5,000회 호출입니다.
 
-The `snyk-scm-contributors-count` tool applies a strict limit of a maximum of 4,500 calls per hour to deal with the rate limit and an additional regulating mechanism to deal with 429 responses ("too many calls").
+`snyk-scm-contributors-count` 도구는 속도 제한을 처리하기 위해 시간당 최대 4,500회 호출이라는 엄격한 제한을 적용하고 429회의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다.
 
 ## GitHub Enterprise
 
-On Github Enterprise, the API rate limit is 15,000 calls per hour for authenticated users as described in this [guide](https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps).
+Github Enterprise에서 API 속도 제한은 이 [가이드](https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps)에 설명된 대로 인증된 사용자에 대해 시간당 15,000회 호출입니다.
 
-The `snyk-scm-contributors-count` tool applies a strict limit of a maximum of 3 calls per second which amounts to 10,800 calls per hour, to deal with the rate limit and an additional regulating mechanism to deal with 429 responses ("too many calls").
+snyk-scm-contributors-count 도구는 속도 제한을 처리하기 위해 시간당 10,800회 호출에 해당하는 초당 최대 3회 호출이라는 엄격한 제한을 적용하고 429회의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다.
 
-## GitLab and GitLab Server
+## GitLab 과 GitLab Server
 
-On GitLab, the API rate limit is 300 calls per minute for authenticated users as described in this [guide](https://docs.gitlab.com/ee/user/gitlab\_com/index.html#gitlabcom-specific-rate-limits) and this [guide](https://docs.gitlab.com/ee/user/admin\_area/settings/rate\_limits\_on\_raw\_endpoints.html) for GitLab Server.
+GitLab에서 API 속도 제한은 이 [가이드](https://docs.gitlab.com/ee/user/gitlab\_com/index.html#gitlabcom-specific-rate-limits)와 GitLab Server에 대한 이 [가이드](https://docs.gitlab.com/ee/user/admin\_area/settings/rate\_limits\_on\_raw\_endpoints.html)에 설명된 대로 인증된 사용자에 대한 분당 300회 호출입니다.
 
-The `snyk-scm-contributors-count` tool applies a strict limit of a maximum of 120 calls per minute to deal with the rate limit and an additional regulating mechanism to deal with 429 responses ("too many calls").
+`snyk-scm-contributors-count` 도구는 속도 제한을 처리하기 위해 분당 최대 120회 호출이라는 엄격한 제한을 적용하고 429회의 응답("너무 많은 호출")을 처리하기 위한 추가 규제 메커니즘을 적용합니다.
 
 {% hint style="info" %}
-On GitLab Server, the API rate control is configurable by the admin, as described in the [guide](https://docs.gitlab.com/ee/user/admin\_area/settings/rate\_limits\_on\_raw\_endpoints.html).
+GitLab Server에서 API 속도 제어는 [가이드](https://docs.gitlab.com/ee/user/admin\_area/settings/rate\_limits\_on\_raw\_endpoints.html)에 설명된 대로 관리자가 구성할 수 있습니다.
 {% endhint %}
