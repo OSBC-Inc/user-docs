@@ -1,8 +1,8 @@
 # Tool: Snyk-SCM- Contributors-Count
 
-## What does this tool do?
+## 이 Tool은 무엇을 합니까?
 
-This tool counts and prints a summary of the contributors count for the last 90 days for any of the following SCMs:
+이 Tool은 다음 SCM에 대해 지난 90일 동안의 기여자 수 요약을 계산하고 출합니다:
 
 * Azure Devops
 * Bitbucket Cloud
@@ -13,7 +13,7 @@ This tool counts and prints a summary of the contributors count for the last 90 
 * GitLab Server
 
 {% hint style="info" %}
-There are some minor differences between the SCMs as to the naming convention. For example: "Orgs" in GitHub can be "Projects" in Azure and "Workspaces" in Bitbucket. These differences are reflected in the commands that the tool accepts for each SCM.
+명명 규칙과 관련하여 SCM 간에 약간의 차이가 있습니다. 예를 들어 GitHub의 "Orgs"는 Azure의 "Projects"이고 Bitbucket의 "Workspaces"일 수 있습니다. 이러한 차이점은 Tool이 각 SCM에 대해 허용하는 command에 반영됩니다.
 {% endhint %}
 
 ## **How the SCM-Contributors-Count tool works**
