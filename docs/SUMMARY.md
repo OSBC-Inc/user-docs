@@ -219,7 +219,7 @@
     * [CLI에서 Snyk 오픈 소스 사용](features/snyk-cli/test-for-vulnerabilities/cli-snyk.md)
     * [Use a .snyk policy file in a different directory from the manifest file](features/snyk-cli/test-for-vulnerabilities/use-a-.snyk-policy-file-in-a-different-directory-from-the-manifest-file.md)
     * [사용하기 전 public repositories 테스트](features/snyk-cli/test-for-vulnerabilities/public-repositories.md)
-    * [Test public npm packages before use](features/snyk-cli/test-for-vulnerabilities/test-public-npm-packages-before-use.md)
+    * [사용하기 전 공용 npm 패키지 테스트](features/snyk-cli/test-for-vulnerabilities/npm.md)
     * [Why is my setup.py file failing to scan or finding 0 dependencies?](features/snyk-cli/test-for-vulnerabilities/why-is-my-setup.py-file-failing-to-scan-or-finding-0-dependencies.md)
     * [Scan all unmanaged JAR files](features/snyk-cli/test-for-vulnerabilities/scan-all-unmanaged-jar-files.md)
     * [Advanced failing of builds in Snyk CLI](features/snyk-cli/test-for-vulnerabilities/advanced-failing-of-builds-in-snyk-cli.md)

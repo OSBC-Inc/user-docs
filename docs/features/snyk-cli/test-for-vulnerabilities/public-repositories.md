@@ -16,8 +16,8 @@
 
 참고 항목
 
-* [Getting started with the CLI](broken-reference)
-* [CLI reference](broken-reference)
-* [Use Snyk Open Source from the CLI](broken-reference)
-* [Set severity thresholds for CLI tests](broken-reference)
-* [Test public npm packages before use](broken-reference)
+* [Getting started with the CLI](../cli.md)
+* [CLI reference](https://docs.snyk.io/snyk-cli/cli-reference)
+* [Use Snyk Open Source from the CLI](cli-snyk.md)
+* [Set severity thresholds for CLI tests](https://docs.snyk.io/snyk-cli/test-for-vulnerabilities/set-severity-thresholds-for-cli-tests)
+* [Test public npm packages before use](npm.md)
