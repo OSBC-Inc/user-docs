@@ -8,12 +8,12 @@
 `snyk test` 명령은 모든 로컬 종속성을 식별하고 알려진 취약성에 대해 Snyk 서비스를 쿼리합니다. `synk test`는 발견된 문제를 추가 정보와 함께 표시합니다.
 
 {% hint style="info" %}
-For Node.js, Ruby, and Java projects, `snyk test` also suggests steps to fix.
+Node.js, Ruby 및 Java 프로젝트의 경우 `synk test`에서 수정할 단계도 제안합니다.
 {% endhint %}
 
 ### How it works
 
-Snyk Open Source는 매니페스트 파일을 검색합니다. 스캔을 기반으로, Snyk는 매니페스트 파일에 표현된 구조의 계층 트리를 만듭니다. 즉, 직접 및 간접(과도적) 종속성 및 다른 패키지가 도입된 지점입니다.
+Snyk Open Source는 매니페스트 파일을 검색합니다. 스캔을 기반으로, Snyk 매니페스트 파일에 표현된 구조의 계층 트리를 만듭니다. 즉, 직접 및 간접(과도적) 종속성 및 다른 패키지가 도입된 지점입니다.
 
 이 트리를 만든 후 Snyk은 취약성 데이터베이스를 사용하여 종속성 트리의 모든 패키지에서 취약성을 찾습니다. Snyk 사용하면 프로젝트를 원본에서 수정하는 것보다 쉽게 분석할 수 있습니다. 지정된 취약한 패키지가 도입된 지점을 빠르게 식별할 수 있습니다.
 
@@ -40,10 +40,10 @@ Snyk가 프로젝트 유형을 자동 검색하는 데 사용하는 파일에는
 * build.gradle.kts
 * go.mod
 
-Snyk가 파일을 분석하고 트리를 만드는 방법은 다음과 같습니다.
+Snyk 파일을 분석하고 트리를 만드는 방법은 다음과 같습니다.
 
 * 사용하는 [language and package manager](broken-reference)(매니페스트 파일 유형에 따라 결정됨)
-* 검색 방법([Snyk CLI](broken-reference)를 사용하거나 Snyk  [Git repository integration](broken-reference)에서 가져오기)
+* 검색 방법([Snyk CLI](broken-reference)를 사용하거나 Snyk [Git repository integration](broken-reference)에서 가져오기)
 
 ### Scan multiple manifest files
 
