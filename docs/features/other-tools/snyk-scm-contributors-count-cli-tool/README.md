@@ -2,7 +2,7 @@
 
 ## 이 Tool은 무엇을 합니까?
 
-이 Tool은 다음 SCM에 대해 지난 90일 동안의 기여자 수 요약을 계산하고 출합니다:
+이 Tool은 다음 SCM에 대해 지난 90일 동안의 기여자 수 요약을 계산하고 출력합니다:
 
 * Azure Devops
 * Bitbucket Cloud
@@ -33,4 +33,4 @@
 npm i -g snyk-scm-contributors-count
 ```
 
-릴리스 페이지에서 [바이너리](https://github.com/snyk-tech-services/snyk-scm-contributors-count/releases)파일 얻을 수도 있습니다.
+릴리스 페이지에서 [바이너리 파일](https://github.com/snyk-tech-services/snyk-scm-contributors-count/releases)을 얻을 수도 있습니다.

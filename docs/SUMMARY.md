@@ -232,7 +232,7 @@
     * [Monitor your projects at regular intervals](features/snyk-cli/secure-your-projects-in-the-long-term/monitor-your-projects-at-regular-intervals.md)
     * [Separating projects by branch or version](features/snyk-cli/secure-your-projects-in-the-long-term/separating-projects-by-branch-or-version.md)
   * [CLI commands help](features/snyk-cli/cli-commands-help/README.md)
-    * [Auth](features/snyk-cli/cli-commands-help/auth.md)
+    * [인증](features/snyk-cli/cli-commands-help/undefined.md)
     * [Code](features/snyk-cli/cli-commands-help/code.md)
     * [Config](features/snyk-cli/cli-commands-help/config.md)
     * [Container](features/snyk-cli/cli-commands-help/container.md)
