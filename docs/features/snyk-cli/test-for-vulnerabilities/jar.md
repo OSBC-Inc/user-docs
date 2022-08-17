@@ -67,4 +67,4 @@ for /R %workspace% %%f in (*.jar) do cmd /c snyk monitor --scan-unmanaged --remo
 
 The following shows the end result in the Snyk UI for an app with the --**remote-repo-url=econnect**
 
-![](<../../../.gitbook/assets/untitled (2).png>)
+![](../../../.gitbook/assets/untitled.png)
