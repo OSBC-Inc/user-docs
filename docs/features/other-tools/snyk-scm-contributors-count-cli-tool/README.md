@@ -33,4 +33,4 @@
 npm i -g snyk-scm-contributors-count
 ```
 
-릴리스 페이지에서 [바이너리](https://github.com/snyk-tech-services/snyk-scm-contributors-count/releases)를 얻을 수도 있습니다.
+릴리스 페이지에서 [바이너리](https://github.com/snyk-tech-services/snyk-scm-contributors-count/releases)파일 얻을 수도 있습니다.
