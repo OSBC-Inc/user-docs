@@ -1,2 +1,111 @@
 # Advanced failing of builds in Snyk CLI
 
+The Snyk CLI provides the following options when failing your builds:
+
+```
+--severity-threshold=low|medium|high
+```
+
+Only report vulnerabilities of provided level or higher.
+
+```
+--fail-on=all|upgradable|patchable
+```
+
+Only fail when there are vulnerabilities that can be fixed.
+
+```
+--fail-on=all
+```
+
+Fail when there is at least one vulnerability that can be either upgraded or patched.
+
+```
+--fail-on=upgradable
+```
+
+Fail when there is at least one vulnerability that can be upgraded.
+
+```
+--fail-on=patchable
+```
+
+Fail when there is at least one vulnerability that can be patched. If vulnerabilities do not have a fix and this option is being used, tests pass.
+
+The Snyk CLI on its own does not have the capability natively to fail tests on more complex use cases. Here are some ways to achieve more complex pass/fail criteria.
+
+### Combining security policies with --severity-threshold
+
+[Security policies](https://docs.snyk.io/fixing-and-prioritizing-issues/policies) provide the capability to change the severity of a vulnerability if the severity matches specific criteria when a project is tested against an organization using that policy. You could, for example, change the severity of a vulnerability from high to low, and if you run `snyk test` with the CLI with
+
+```
+ --severity-threshold=medium|high
+```
+
+this previously high severity vulnerability no longer fails the build.
+
+\{% hint style="info" %\} Security policies do not have all attributes available for criteria matching. Refer to the security policy configuration to see what is available as it is added to over time. \{% endhint %\}
+
+Here is an example of `snyk test` using `--severity-threshold=high` running against a default organization with no policy applied to it.
+
+![](https://camo.githubusercontent.com/de965fce454134d8cadaaf22fe093c4fdf1722a7349e99f1d2d8bc4cf9726836/68747470733a2f2f67626c6f627363646e2e676974626f6f6b2e636f6d2f6173736574732532462d4d56584b6472682d6a59334b44475073386c512532462d4d5a545f57334f316f46794d417a46396733732532462d4d5a5472633044364e6a5436566c53316a6d55253246696d6167652e706e673f616c743d6d6564696126746f6b656e3d32376530656538632d313437662d343934322d616461342d303864653037663637633430)
+
+Here is an example `snyk test` using `--severity-threshold=high` running against an organization with a policy that downgrades this particular vulnerability severity to `low`. There are no vulnerabilities found.
+
+![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/test-organization-with-policy-applied.png)
+
+### Companion tools
+
+The following discusses use of snyk-delta or snyk-filter, open source companion tools for the Snyk CLI.
+
+snyk-delta finds the delta of vulnerabilities between the current test and a previously monitored snapshot.
+
+snyk-delta is available from npmjs.org, and may be pulled into your CI/CD pipeline using
+
+```
+npm install -g snyk-delta
+```
+
+snyk-filter provides for user-defined pass/fail criteria based on any available data in the `snyk test` JSON output.
+
+snyk-filter is available from npmjs.org and may be pulled into your CI/CD pipeline using npm install
+
+```
+npm install -g snyk-filter
+```
+
+#### Fail current build only if new vulnerabilities are being introduced
+
+**Inline mode**
+
+```
+snyk test --json --print-deps | snyk-delta
+```
+
+Possibly point to a specific snapshot by specifying org + project coordinates
+
+```
+snyk test --json --print-deps | snyk-delta --baselineOrg xxx --baselineProject xxx
+```
+
+**Standalone**
+
+```
+snyk-delta --baselineOrg xxx --baselineProject xxx --currentOrg xxx --currentProject xxx
+```
+
+Refer to the [snyk-delta project on GitHub](https://github.com/snyk-tech-services/snyk-delta) for more information.
+
+#### Fail build for CVSS score higher than ...
+
+```
+snyk test --json | snyk-filter -f /path/to/example-cvss-9-or-above.yml
+```
+
+#### Custom criteria and filtering
+
+snyk-filter can utilize any combination of criteria available in the `snyk test` JSON output.
+
+You may also have different criteria for display from what will fail the build. This allows you to do things like display all vulnerabilities in the test output, while failing only on some specific criteria.
+
+Refer to the [snyk-filter project on GitHub](https://github.com/snyk-tech-services/snyk-filter) for examples and more information.
