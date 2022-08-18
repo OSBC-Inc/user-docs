@@ -24,11 +24,11 @@ snyk-scm-contributors-count <command> <command-options>
 
 ## 모드
 
-### Scoping usage prior to onboarding
+### Onboarding전 사용범위 지
 
-This mode works only with Bitbucket and Azure.
+이 모드는 Bitbucket 및 Azure에서만 작동합니다.
 
-Apply the `skipSnykMonitoredRepos` flag, for example:
+다음과 같이 `skipSnykMonitoredRepos` flag를 적용합니다:
 
 ```
 snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password PASSWORD --skipSnykMonitoredRepos
@@ -36,9 +36,9 @@ snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password PASSWORD 
 
 ### Snyk license consumption
 
-This mode works only with Bitbucket and Azure.
+이 모드는 Bitbucket 및 Azure에서만 작동합니다.
 
-Make sure to export your `SNYK_TOKEN`, for example:
+다음과 같이 `SNYK_TOKEN` 을 내보내야 합니다:
 
 ```
 export SNYK_TOKEN=<YOUR-SNYK-TOKEN>
