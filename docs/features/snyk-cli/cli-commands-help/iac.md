@@ -1,23 +1,21 @@
 # IaC
 
-
-
-## Usage
+## 사용법
 
 `snyk iac <COMMAND> [<OPTIONS>] [<PATH>]`
 
-## Description
+## 설명
 
-The `snyk iac` commands find and report security issues in Infrastructure as Code files; detect, track, and alert on infrastructure drift and unmanaged resources; and create a .driftigore file.
+`snyk iac` 명령은 인프라에서 보안 문제를 코드 파일로 찾아 보고하고, 인프라 드리프트 및 관리되지 않는 리소스에 대해 탐지, 추적 및 경고를 하며, .driftigore 파일을 생성합니다.
 
-For more information see [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
+자세한 내용은 [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)를 참조하십시오.
 
-## `snyk iac` commands and the help docs
+## `snyk iac` 명령 및 도움말 문서
 
-All the `snyk iac` commands are listed here with the help options:
+모든 `snyk iac` 명령은 도움말과 함께 여기에 나열됩니다.
 
-* [iac test](broken-reference); `iac test --help`: tests for any known security issue
-* [iac update-exclude-policy](broken-reference); `iac update-exclude-policy --help`: auto-generates `.snyk` exclusions for cloud resources\
+* [iac test](broken-reference); `iac test --help`: 알려진 모든 보안 문제에 대한 테스트
+* [iac update-exclude-policy](broken-reference); `iac update-exclude-policy --help`: 클라우드 리소스를 제외 `.synk` 제자동 생성\
   Example: `snyk iac describe --json --all | snyk iac update-exclude-policy`
 * [iac describe](broken-reference); `iac describe --help`: detects infrastructure drift and unmanaged cloud resources\
   Example: `snyk iac describe --only-unmanaged`
