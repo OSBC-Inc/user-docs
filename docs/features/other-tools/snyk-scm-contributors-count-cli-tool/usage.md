@@ -1,5 +1,5 @@
 ---
-description: SCM-Contributors-Count 모드 및 수준
+description: SCM-Contributors-Count Modes 및 Levels
 ---
 
 # 사용법
@@ -22,11 +22,11 @@ snyk-scm-contributors-count <command> <command-options>
 
 **`<command-options>`**: [스크립트 섹션](the-scripts/)의 SCM 관련 페이지(예 페이지)를 참조하십시오.
 
-## 모드
+## Modes
 
 ### Onboarding전 사용범위 지정
 
-이 모드는 Bitbucket 및 Azure에서만 작동합니다.
+이 Mode는 Bitbucket 및 Azure에서만 작동합니다.
 
 다음과 같이 `skipSnykMonitoredRepos` flag를 적용합니다:
 
@@ -36,7 +36,7 @@ snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password PASSWORD 
 
 ### Snyk license consumption
 
-이 모드는 Bitbucket 및 Azure에서만 작동합니다.
+이 Mode는 Bitbucket 및 Azure에서만 작동합니다.
 
 다음과 같이 `SNYK_TOKEN` 을 내보내야 합니다:
 
@@ -45,19 +45,19 @@ export SNYK_TOKEN=<YOUR-SNYK-TOKEN>
 snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password PASSWORD
 ```
 
-## 수준
+## Levels
 
-### Top level
+### Top Level
 
-In this level of usage, the tool starts from the top of the SCM to get the Orgs/Groups, then goes down to the repo level to get all the repos, then counts the commits for the past 90 days.
+이 사용 Level에서 Tool은 SCM의 상단에서 시작하여 Orgs/Groups를 가져온 다음 Repo Level로 내려가 모든 Repos를 가져온 다음 지난 90일 동안의 커밋을 카운트합니다.
 
-To use this level, provide the credentials (and host/url where applicable), and the tool will get the contributors count for all your orgs/groups and all their repos, for example:
+이 Level을 사용하기위해 자격 증명(및 해당되는 경우 호스트/URL)을 제공하면 Tool은 다음과 같이 모든 Org/Group 및 해당 Repos에 대한 기여자 수를 가져옵니다:
 
 ```
 snyk-scm-contributors-count github --token TOKEN
 ```
 
-### Mid level
+### Mid Level
 
 In this level of usage, the tool starts from the Orgs/Groups that the user provides, then goes down to the repo level to get all the repos, then count the commits for the past 90 days.
 
@@ -67,7 +67,7 @@ To use this level, provide the credentials and a comma-separated list of groups 
 snyk-scm-contributors-count gitlab --token TOKEN --groups GROUP1,GROUP2
 ```
 
-### Low level
+### Low Level
 
 In this level of usage, the tool focuses on only one repo for which to get the contributors count.
 
