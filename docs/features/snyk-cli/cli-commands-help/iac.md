@@ -15,7 +15,7 @@
 모든 `snyk iac` 명령은 도움말과 함께 여기에 나열됩니다.
 
 * [iac test](broken-reference); `iac test --help`: 알려진 모든 보안 문제에 대한 테스트
-* [iac update-exclude-policy](broken-reference); `iac update-exclude-policy --help`: 클라우드 리소스를 제외 `.synk` 제자동 생성\
-  Example: `snyk iac describe --json --all | snyk iac update-exclude-policy`
-* [iac describe](broken-reference); `iac describe --help`: detects infrastructure drift and unmanaged cloud resources\
-  Example: `snyk iac describe --only-unmanaged`
+* [iac update-exclude-policy](broken-reference); `iac update-exclude-policy --help`: 클라우드 리소스를 제외 `.synk` 자동 생성\
+  예: `snyk iac describe --json --all | snyk iac update-exclude-policy`
+* [iac describe](broken-reference); `iac describe --help`: 인프라 이동 및 관리되지 않는 클라우드 리소스 감지\
+  예: `snyk iac describe --only-unmanaged`
