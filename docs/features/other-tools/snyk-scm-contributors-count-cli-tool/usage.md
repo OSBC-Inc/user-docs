@@ -49,9 +49,9 @@ snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password PASSWORD
 
 ### Top Level
 
-이 사용 Level에서 Tool은 SCM의 상단에서 시작하여 Orgs/Groups를 가져온 다음 Repo Level로 내려가 모든 리포지토리를 가져온 다음 지난 90일 동안의 커밋을 카운트합니다.
+이 사용 Level에서 Tool은 SCM의 상단에서 시작하여 조직/그룹 가져온 다음 Repo Level로 내려가 모든 리포지토리를 가져온 다음 지난 90일 동안의 커밋을 카운트합니다.
 
-이 Level을 사용하기위해 자격 증명(및 해당되는 경우 호스트/URL)을 제공하면 Tool은 다음과 같이 모든 Org/Group 및 해당 리포지토리에 대한 기여자 수를 가져옵니다:
+이 Level을 사용하기위해 자격 증명(및 해당되는 경우 호스트/url)을 제공하면 Tool은 다음과 같이 모든 조직/그룹 및 해당 리포지토리에 대한 기여자 수를 가져옵니다:
 
 ```
 snyk-scm-contributors-count github --token TOKEN
@@ -59,7 +59,7 @@ snyk-scm-contributors-count github --token TOKEN
 
 ### Mid Level
 
-이 사용 Level에서 Tool은 사용자가 제공하는 Orgs/Groups에서 시작하여 Repo Level로 내려가 모든 리포지토리를 가져온 다음 지난 90일 동안의 커밋을 계산합니다.
+이 사용 Level에서 Tool은 사용자가 제공하는 조직/그룹에서 시작하여 Repo Level로 내려가 모든 리포지토리를 가져온 다음 지난 90일 동안의 커밋을 계산합니다.
 
 이 Level을 사용하려면 다음과 같이 자격 증명과 리포지토리와 해당 기여자 수를 가져올 그룹 또는 조직의 comma-separated 목록을 제공하십시오:
 
@@ -69,9 +69,9 @@ snyk-scm-contributors-count gitlab --token TOKEN --groups GROUP1,GROUP2
 
 ### Low Level
 
-In this level of usage, the tool focuses on only one repo for which to get the contributors count.
+이 사용 Leve에서 Tool은 기여자 수를 얻기 위해 하나의 리포지토리에만 초점을 맞춥니다.
 
-To use this level, provide the credentials (host/url where applicable), one org/group, and one repo, for example:
+이 Level을 사용하려면 다음과 같이 자격 증명(해당되는 경우 호스트/url), 조직/그룹 및 리포지토리를 하나씩 제공하십시오:
 
 ```
 snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG --repo REPO
