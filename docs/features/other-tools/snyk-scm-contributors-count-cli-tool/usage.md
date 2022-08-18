@@ -79,7 +79,7 @@ snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --org
 
 ## Debug mode
 
-Add `DEBUG=snyk*` to the beginning of the command, for example:
+다음과 같이 command 시작 부분에 `DEBUG=snyk*` 을 추가합니다:
 
 ```
 DEBUG=snyk* snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1 --exclusionFilePath PATH_TO_FILE --skipSnykMonitoredRepos --json
