@@ -24,7 +24,7 @@ snyk-scm-contributors-count <command> <command-options>
 
 ## 모드
 
-### Onboarding전 사용범위 지
+### Onboarding전 사용범위 지정
 
 이 모드는 Bitbucket 및 Azure에서만 작동합니다.
 

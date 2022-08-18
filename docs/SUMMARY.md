@@ -234,7 +234,7 @@
   * [CLI commands help](features/snyk-cli/cli-commands-help/README.md)
     * [인증](features/snyk-cli/cli-commands-help/auth.md)
     * [코드](features/snyk-cli/cli-commands-help/code.md)
-    * [Config](features/snyk-cli/cli-commands-help/config.md)
+    * [구성](features/snyk-cli/cli-commands-help/undefined-2.md)
     * [Container](features/snyk-cli/cli-commands-help/container.md)
     * [IaC](features/snyk-cli/cli-commands-help/iac.md)
     * [IaC describe](features/snyk-cli/cli-commands-help/iac-describe.md)
