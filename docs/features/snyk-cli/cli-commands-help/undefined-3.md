@@ -57,55 +57,53 @@
 
 기본값: `<ORG_ID>` 는 사용자의 [Account settings](https://app.snyk.io/account)에서 현재 선호되는 조직입니다.
 
+`--org=<orgslugname>`도 사용할 수 있습니다. `ORG_ID` 는 CLI 와 API 모두 작동합니다. The organization slug name 은 CLI에서는 작동하지만 API에서는 작동하지 않습니다.
 
-
-Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
-
-For more information see the article [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)
+자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 참조하십시오.
 
 ### `--file=<FILE_PATH>`
 
-For more detailed advice, include the path to the Dockerfile for the image.
+자세한 내용을 보려면 이미지에 대한 Docker 파일의 경로를 포함하십시오.
 
 ### `--project-name=<PROJECT_NAME>`
 
-Specify a custom Snyk project name.
+사용자 지정 Snyk 프로젝트 이름을 지정하십시오.
 
 ### `--policy-path=<PATH_TO_POLICY_FILE>`
 
-Manually pass a path to a `.snyk` policy file.
+경로를 수동으로 `.synk` 정책 파일에 전달합니다.
 
 ### `--json`
 
-Print results in JSON format, useful for integrating with other tools
+결과를 JSON 형식으로 출력하여 다른 도구와의 통합에 유용합니다.
 
 Example: `$ snyk container test --json`
 
 ### `--json-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in JSON format directly to the specified file, regardless of whether or not you use the `--json` option.
+`--json` 옵션을 사용하는지 여부에 관계없이 JSON 형식의 테스트 출력을 지정된 파일에 직접 저장합니다.
 
-This is especially useful if you want to display the human-readable test output using stdout and at the same time save the JSON format output to a file.
+이 기능은 stdout을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하고 동시에 JSON 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 Example: `$ snyk container test --json-file-output=vuln.json`
 
 ### `--sarif`
 
-Return results in SARIF format. Note this requires the test to be run with `--file` as well.
+결과를 SARIF 형식으로 반환합니다. 이렇게 하려면 `--file`로도 테스트를 실행해야 합니다.
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in SARIF format directly to the `<OUTPUT_FILE_PATH>` file, regardless of whether or not you use the `--sarif` option.
+`--sarif` 옵션 사용 여부에 관계없이 SARIF 형식의 테스트 출력을 직접 `<OUTPUT_FILE_PATH>` 파일에 저장합니다.
 
-This is especially useful if you want to display the human-readable test output using stdout and at the same time save the SARIF format output to a file.
+이 기능은 stdout을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하고 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 ### `--project-environment=<ENVIRONMENT>[,<ENVIRONMENT>]...>`
 
-Set the project environment to one or more values (comma-separated). To clear the project environment set `--project-environment=`
+프로젝트 환경을 하나 이상의 값(쉼표로 구분)으로 설정합니다. 프로젝트 환경 집합을 지우려면 `--project-environment=` 을 설정하십시오.
 
-Allowed values: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`
+허용 값: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 참조하십시오.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE]...>`
 
