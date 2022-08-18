@@ -13,7 +13,7 @@
 
 ## 사용된 GitLab API endpoints <a href="#bitbucket-cloud-api-endpoints-used" id="bitbucket-cloud-api-endpoints-used"></a>
 
-* To get the groups paths from GitLab if a group/s names were provided: `api/v4/groups?all_available=true&search={groupName}`
-* To get the projects from GitLab if a host url was **not** provided: `/api/v4/projects?membership=true`
-* To get the projects from GitLab Server if a host url **was** provided: `/api/v4/projects`
-* To get the commits for the fetched/provided project/s list: `/api/v4/projects/{ProjectPath}/repository/commits?since=${threeMonthsDate}`
+* 그룹 이름이 제공된 경우 GitLab에서 그룹 경로를 가져오려면 다음과 같이 하십시오: `api/v4/groups?all_available=true&search={groupName}`
+* 호스트 URL이 **제공되지 않은 경우** GitLab에서 프로젝트를 가져오려면 다음과 같이 하십시오: `/api/v4/projects?membership=true`
+* 호스트 URL이 **제공된 경우** GitLab 서버에서 프로젝트를 가져오려면 다음과 같이 하십시오: `/api/v4/projects`
+* 가져온/제공된 프로젝트 목록에 대한 커밋을 가져오려면 다음과 같이 하십시오: `/api/v4/projects/{ProjectPath}/repository/commits?since=${threeMonthsDate}`
