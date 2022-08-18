@@ -85,9 +85,9 @@ snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --org
 DEBUG=snyk* snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1 --exclusionFilePath PATH_TO_FILE --skipSnykMonitoredRepos --json
 ```
 
-## Additional optional flags
+## 추가 옵션 Flags
 
-Additional flags can be set for the command:
+Command에 대해 추가 Flag를 설정할 수 있습니다:
 
 * Create an **import file** with unmonitored repos data to use with the s`nyk-api-import` tool and import the repos to `my Snyk account`. Works only with Bitbucket and Azure. Apply the `importConfDir` flag with a path to a valid and writable folder where you will save the import files. This flag correlates with the `importFileRepoType` flag.
 * Choose which **types of repos to add to the import file**. Works only with Bitbucket and Azure. Apply the `importFileRepoType` flag with one of these options: `all,` `private`, or `public`**.**
