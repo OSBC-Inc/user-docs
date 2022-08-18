@@ -25,11 +25,11 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
 
 **주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
 
-## Running the command
+## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
-### Usage levels
+### 사용 Level
 
 *   To get commits for all groups and their projects in GitLab, provide the GitLab token (and server url for GitLab Enterprise):
 
@@ -52,7 +52,7 @@ Note that for nested groups, you need to provide the lowest level group name, fo
     snyk-scm-contributors-count gitlab --token TOKEN --groups GROUP --project PROJECT
     ```
 
-### Options
+### 옵션
 
 * To exclude some contributors from being counted in the commits, add an exclusion file with the emails to ignore(separated by commas) and apply the `--exclusionFilePath` with the path to that file:
 
