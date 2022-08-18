@@ -2,7 +2,7 @@
 
 ## 진행순서 <a href="#flow" id="flow"></a>
 
-1. Set GitLab or GitLab Server mode (if a host was provided or not through the `url` flag).
+1. GitLab 또는 GitLab Server mode를 설정합니다(url flag를 통해 호스트가 제공되었는지 여부).
 2. Fetch `one`/`some`/`all` the groups that the credentials have access to from the SCM and create a groups list.
 3. Fetch `one`/`all` projects under the fetched/provided groups.
 4. Create an import file for unmonitored repos to use for easily importing repos into your Snyk account (if the `importConfDir` flag was set)
