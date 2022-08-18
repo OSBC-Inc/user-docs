@@ -16,7 +16,7 @@
 
 자세한 정보 및 예제를 보려면 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 
-관련 명령 목록은 synk [iac help](broken-reference)를 참조하십시오. `iac --help`
+관련 명령 목록은 synk [iac help](https://docs.snyk.io/snyk-cli/commands/iac)를 참조하십시오. `iac --help`
 
 ## 종료 코드
 
@@ -24,7 +24,7 @@
 
 **0**: 성공, drift를 찾을 수 없음\
 **1**: drifts 또는 관리되지 않는 리소스 발견\
-**2**: 실
+**2**: 실패
 
 ## Snyk CLI 구성
 
@@ -40,19 +40,19 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 ## 필수 옵션
 
-**Note:** To use the `describe` command, you **must use one of these options**:
+**참고:** `describe` 명령어를 사용한다면 다음 옵션 중 하나를 사용해야 합니다.&#x20;
 
 ### `--only-unmanaged`
 
-Report resources not found in any Terraform states.
+Terraform 상태에서 보고서 리소스를 찾을 수 없습니다.
 
 ### `--only-managed` or `--drift`
 
-Scan managed resources found in Terraform states for changes.
+Terraform 상태에 있는 관리되는 리소스에서 변경 사항을 검색합니다.
 
 ### `--all`
 
-Scan both managed and unmanaged resources.
+관리되는 리소스와 관리되지 않는 리소스를 모두 검색합니다.
 
 ## 옵션 인자
 
@@ -68,13 +68,13 @@ For more information see the article [How to select the organization to use in t
 
 Specify multiple Terraform state files to be read. Glob patterns are supported.
 
-For more information including **a list of supported IaC sources** and how to use them, see [IAC Sources usage](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-sources-usage)
+지원되는 IaC 소스 목록 및 사용 방법을 포함한 자세한 내용을 보려면 [IAC Sources usage](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-sources-usage)를 참조하십시오.
 
 ### `--to=<PROVIDER+TYPE>`
 
-Specify the cloud provider to scan (default: AWS with Terraform).
+스캔할 클라우드 공급자를 지정합니다(기본값: AWS with Terraform).
 
-Supported providers:
+지원되는 제공업체:
 
 * `github+tf` (GitHub with Terraform)
 * `aws+tf` (Amazon Web Services with Terraform)
@@ -83,7 +83,7 @@ Supported providers:
 
 ### `--tf-provider-version`
 
-Specify a Terraform provider version to use. If none is specified, default versions are used as follows:
+사용할 Terraform 공급자 버전을 지정합니다. 아무 것도 지정하지 않으면 기본 버전이 다음과 같이 사용됩니다.
 
 * aws@3.19.0
 * github@4.4.0
@@ -92,23 +92,23 @@ Specify a Terraform provider version to use. If none is specified, default versi
 
 ### `--tf-lockfile`
 
-Read the Terraform lock file (`.terraform.lock.hcl`) from a custom path (default: current directory).
+사용자 지정 경로(기본값: 현재 디렉터리)에서 Terraform 잠금 파일(.terraform.lock.hcl)을 읽습니다.
 
-If parsing the lockfile fails, errors are logged and scan continues.
+잠금 파일을 구문 분석하는 데 실패하면 오류가 기록되고 검색이 계속됩니다.
 
-**Note**: When you are using both the `--tf-lockfile` and `--tf-provider-version` options together, `--tf-provider-version` takes precedence.
+**참고**: `--tf-lockfile` 옵과 `--tf-provider-version` 옵션을 함께 사용할 경우, `--tf-provider-version` 이 우선시됩니다.
 
 ### `--fetch-tfstate-headers`
 
-Use a specific HTTP header or headers for the HTTP backend when fetching Terraform state.
+Terraform 상태를 가져올 때 HTTP 백엔드에 특정 HTTP 헤더를 사용합니다.
 
 ### `--tfc-token`
 
-Specify an API token to authenticate to the Terraform Cloud or Enterprise API.
+Terraform Cloud 또는 Enterprise API를 인증할 API 토큰을 지정합니다.
 
 ### `--tfc-endpoint`
 
-Read the current state for a given workspace from Terraform Enterprise by passing the `tfc-endpoint` value that is specific to your org's Terraform Enterprise installation.
+조직의 Terraform Enterprise 설치와 관련된 `tfc-endpoint` 값을 전달하여 Terraform Enterprise에서 지정된 워크스페이스의 현재 상태를 읽습니다.
 
 ### `--config-dir`
 
@@ -122,7 +122,7 @@ Specify the services whose resources are inspected for drift or unmanaged resour
 
 This option cannot be used with a `.snyk` drift ignore rule; the content in `.snyk` will be ignored.
 
-Supported services: `aws_s3`, `aws_ec2`, `aws_lambda`, `aws_rds`, `aws_route53`, `aws_iam` , `aws_vpc`, `aws_api_gateway`, `aws_apigatewayv2`, `aws_sqs`, `aws_sns`, `aws_ecr`, `aws_cloudfront`, `aws_kms`, `aws_dynamodb`, `azure_base`, `azure_compute`, `azure_storage`, `azure_network`, `azure_container`, `azure_database`, `azure_loadbalancer`, `azure_private_dns`, `google_cloud_platform`, `google_cloud_storage`, `google_compute_engine`, `google_cloud_dns`, `google_cloud_bigtable`, `google_cloud_bigquery`, `google_cloud_functions`, `google_cloud_sql`, `google_cloud_run`
+지원되는 서비스: `aws_s3`, `aws_ec2`, `aws_lambda`, `aws_rds`, `aws_route53`, `aws_iam` , `aws_vpc`, `aws_api_gateway`, `aws_apigatewayv2`, `aws_sqs`, `aws_sns`, `aws_ecr`, `aws_cloudfront`, `aws_kms`, `aws_dynamodb`, `azure_base`, `azure_compute`, `azure_storage`, `azure_network`, `azure_container`, `azure_database`, `azure_loadbalancer`, `azure_private_dns`, `google_cloud_platform`, `google_cloud_storage`, `google_compute_engine`, `google_cloud_dns`, `google_cloud_bigtable`, `google_cloud_bigquery`, `google_cloud_functions`, `google_cloud_sql`, `google_cloud_run`
 
 ### `--filter`
 

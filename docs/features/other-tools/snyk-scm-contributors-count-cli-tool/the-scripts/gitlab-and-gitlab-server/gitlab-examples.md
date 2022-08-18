@@ -23,7 +23,7 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
 
 이 [가이드](https://docs.gitlab.com/ee/user/profile/personal\_access\_tokens.html)를 사용하여 GitLab 토큰을 가져오거나 새 토큰을 만드십시오.
 
-**주:** M토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
+**주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
 
 ## Running the command
 
