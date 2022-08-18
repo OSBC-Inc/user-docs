@@ -59,7 +59,7 @@
 
 `--org=<orgslugname>`도 사용할 수 있습니다. `ORG_ID` 는 CLI 와 API 모두 작동합니다. The organization slug name 은 CLI에서는 작동하지만 API에서는 작동하지 않습니다.
 
-자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 참조하십시오.
+자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)를 참조하십시오.
 
 ### `--file=<FILE_PATH>`
 
@@ -103,23 +103,23 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 허용 값: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`
 
-자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 참조하십시오.
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)를 참조하십시오.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE]...>`
 
-Set the project lifecycle to one or more values (comma-separated). To clear the project lifecycle set `--project-lifecycle=`
+프로젝트 수명 주기를 하나 이상의 값(쉼표로 구분)으로 설정합니다. 프로젝트 수명 주기 집합을 지우려면 `--project-lifecycle=` 을 설정하십시오.
 
-Allowed values: `production, development, sandbox`
+허용 값: `production, development, sandbox`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 를 참조하십시오.
 
 ### `--project-business-criticality=<BUSINESS_CRITICALITY>[,<BUSINESS_CRITICALITY>]...>`
 
-Set the project business criticality to one or more values (comma-separated). To clear the project business criticality set `--project-business-criticality=`
+프로젝트 비즈니스 중요도를 하나 이상의 값(쉼표로 구분)으로 설정합니다. 프로젝트 비즈니스 중요도 집합을 지우려면 `--project-business-criticality=` 을 설정하십시오.
 
-Allowed values: `critical`, `high`, `medium`, `low`
+허용 값: `critical`, `high`, `medium`, `low`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 를 참조하십시오.
 
 ### `--project-tags=<TAG>[,<TAG>]...>`
 
@@ -176,22 +176,22 @@ Specify a username to use when connecting to a container registry. This is ignor
 
 Specify a password to use when connecting to a container registry. This is ignored in favor of local Docker binary credentials when Docker is present.
 
-## Examples for the container test command
+## 컨테이너 테스트 명령의 예
 
-### Scan and monitor Docker images
+### Docker 이미지 스캔 및 모니터링
 
 `$ snyk container test <image>`
 
 `$ snyk container monitor <image>`
 
-### Option to get more information including base image remediation
+### 기본 이미지 수정을 포함한 추가 정보를 얻는 옵션
 
 `--file=path/to/Dockerfile`
 
-### Scan a Docker image created using the given Dockerfile and with a specified policy path
+### 지정된 정책 경로를 사용하여 지정된 Docker 파일을 사용하여 생성된 Docker 이미지 검색
 
 `$ snyk container test app:latest --file=Dockerfile`
 
 `$ snyk container test app:latest --file=Dockerfile --policy-path=path/to/.snyk`
 
-For more information and examples see [Advanced Snyk Container CLI usage](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage)
+자세한 내용과 예시는 [Advanced Snyk Container CLI usage](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage)를 참조하십시오.
