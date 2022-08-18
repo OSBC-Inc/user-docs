@@ -1,46 +1,44 @@
-# IaC describe
+# IaC 설명
 
+## 사용법
 
-
-## Usage
-
-**Note:** This feature is available in Snyk CLI version v1.876.0 or greater.
+**참고**: 이 기능은 Snyk CLI 버전 v1.876.0 이상에서 사용할 수 있습니다.
 
 `snyk iac describe [<OPTIONS>]`
 
-## Description
+## 설명
 
-The `snyk iac describe` command detects infrastructure drift and unmanaged resources. It compares resources in your Terraform state file against actual resources in your cloud provider and outputs a report.
+`snyk iac describe` 명령은  infrastructure drift 및 관리되지 않는 리소스를 감지합니다. Terraform 상태 파일의 리소스를 클라우드 공급자의 실제 리소스와 비교하고 보고서를 출력합니다.
 
-* Resources in your Terraform state files are **managed resources**.
-* Changes to managed resources not reflected in the Terraform state file are **drifts**.
-* Resources that exist but are not in your Terraform state file are **unmanaged resources**.
+* Terraform 상태 파일의 리소스는 **관리되는 리소스**입니다.
+* Terraform 상태 파일에 반영되지 않은 관리 리소스의 변경 내용은 **drifts** 입니다.
+* 재하지만 Terraform 상태 파일에 없는 리소스는 **관리되지 않는 리소스**입니다.
 
-For detailed information and examples, see [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)
+자세한 정보 및 예제를 보려면 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 
-For a list of related commands see the snyk [iac help](broken-reference); `iac --help`
+관련 명령 목록은 synk [iac help](broken-reference)를 참조하십시오. `iac --help`
 
-## Exit codes
+## 종료 코드
 
-Possible exit codes and their meaning:
+가능한 종료 코드와 그 의미는 다음과 같습니다.
 
-**0**: success, no drift found\
-**1**: drifts or unmanaged resources found\
-**2**: failure
+**0**: 성공, drift를 찾을 수 없음\
+**1**: drifts 또는 관리되지 않는 리소스 발견\
+**2**: 실
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables and set variables for connecting with the Snyk API; see [Configure the Snyk CLI](https://docs.snyk.io/snyk-cli/configure-the-snyk-cli)
+Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/snyk-cli/configure-the-snyk-cli)를 참조하십시오.
 
-## Configure the Terraform provider
+## Terraform 공급자 구성
 
-You can set environment variables to configure the Terraform provider used by the `describe` command; see [Configure cloud providers](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/configure-cloud-providers)
+`describe` 명령에 사용되는 Terraform 공급자를 구성하도록 환경 변수를 설정할 수 있습니다. [Configure cloud providers](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/configure-cloud-providers)를 참조하십시오.
 
-## Debug
+## 디버그
 
-Use the `-d` option to output the debug logs.
+`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-## Required options
+## 필수 옵션
 
 **Note:** To use the `describe` command, you **must use one of these options**:
 
@@ -56,7 +54,7 @@ Scan managed resources found in Terraform states for changes.
 
 Scan both managed and unmanaged resources.
 
-## Optional arguments
+## 옵션 인자
 
 ### `--org=<ORG_ID>`
 

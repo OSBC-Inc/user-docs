@@ -1,6 +1,6 @@
-# GitLab - Flow and Tech
+# GitLab - 진행순서 및 기술
 
-## Flow <a href="#flow" id="flow"></a>
+## 진행순서 <a href="#flow" id="flow"></a>
 
 1. Set GitLab or GitLab Server mode (if a host was provided or not through the `url` flag).
 2. Fetch `one`/`some`/`all` the groups that the credentials have access to from the SCM and create a groups list.
@@ -11,7 +11,7 @@
 7. Remove the contributors that were specified in the exclusion file (if `the exclusionFilePath` flag was set and a valid path to a text file was provided).
 8. Print the results.
 
-## GitLab API endpoints used <a href="#bitbucket-cloud-api-endpoints-used" id="bitbucket-cloud-api-endpoints-used"></a>
+## 사용된 GitLab API endpoints <a href="#bitbucket-cloud-api-endpoints-used" id="bitbucket-cloud-api-endpoints-used"></a>
 
 * To get the groups paths from GitLab if a group/s names were provided: `api/v4/groups?all_available=true&search={groupName}`
 * To get the projects from GitLab if a host url was **not** provided: `/api/v4/projects?membership=true`
