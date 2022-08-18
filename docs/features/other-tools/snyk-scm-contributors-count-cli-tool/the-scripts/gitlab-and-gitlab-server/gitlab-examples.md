@@ -1,8 +1,8 @@
 ---
-description: The list of options and some examples for GitLab
+description: GitLab에 대한 옵션 목록 및 몇 가지 예
 ---
 
-# GitLab - Examples
+# GitLab - 몇 가지 예
 
 The following options are available for the `snyk-scm-contributors-count gitlab` command:
 

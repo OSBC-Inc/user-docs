@@ -419,7 +419,7 @@
         * [Github Enterprise - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/github-enterprise-examples.md)
       * [GitLab 과 GitLab Server](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/README.md)
         * [GitLab - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-flow-and-tech.md)
-        * [GitLab - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-examples.md)
+        * [GitLab - 몇 가지 예](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-examples.md)
     * [Consolidate Results](features/other-tools/snyk-scm-contributors-count-cli-tool/consolidate-results.md)
     * [Import file 생성 및 사용](features/other-tools/snyk-scm-contributors-count-cli-tool/creating-and-using-the-import-files.md)
     * [API 속도 제한 제어](features/other-tools/snyk-scm-contributors-count-cli-tool/api-rate-limit-control.md)
