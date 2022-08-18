@@ -1,10 +1,10 @@
 ---
-description: A detailed guide to the specific SCM-Contributor-Count scripts
+description: 특정 SCM-Contributor-Count 스크립트에 대한 상세 가이드
 ---
 
-# The Scripts
+# 스크립트
 
-The following scripts are provided:
+다음 스크립트가 제공됩니다:
 
 * [Azure Devops](azure-devops/)
 * [Bitbucket Cloud](bitbucket-cloud/)

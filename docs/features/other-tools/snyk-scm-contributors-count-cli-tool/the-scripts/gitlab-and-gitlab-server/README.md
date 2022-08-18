@@ -1,8 +1,8 @@
 ---
-description: Flow and tech for GitLab and GitLab Server
+description: GitLab 및 GitLab Server의 진행순서 및 기술
 ---
 
-# GitLab and GitLab Server
+# GitLab 과 GitLab Server
 
-* [Flow and Tech](gitlab-flow-and-tech.md)
+* [진행순서 및 기술](gitlab-flow-and-tech.md)
 * [Examples](gitlab-examples.md)
