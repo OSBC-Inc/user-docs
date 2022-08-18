@@ -399,7 +399,7 @@
   * [Tool: Snyk-SCM- Contributors-Count](features/other-tools/snyk-scm-contributors-count-cli-tool/README.md)
     * [순서도](features/other-tools/snyk-scm-contributors-count-cli-tool/flowchart.md)
     * [사용법](features/other-tools/snyk-scm-contributors-count-cli-tool/usage.md)
-    * [Output](features/other-tools/snyk-scm-contributors-count-cli-tool/output.md)
+    * [출력](features/other-tools/snyk-scm-contributors-count-cli-tool/output.md)
     * [Flags](features/other-tools/snyk-scm-contributors-count-cli-tool/flags.md)
     * [The Scripts](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/README.md)
       * [Azure DevOps](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/README.md)

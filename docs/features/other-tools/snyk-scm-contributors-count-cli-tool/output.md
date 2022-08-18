@@ -1,12 +1,12 @@
 ---
-description: The output result of running the SCM-Contributors-Count tool
+description: SCM-Contributors-Count tool을 실행한 결과
 ---
 
-# Output
+# 출력
 
 ## Summary
 
-The Summary section appears at both the beginning and end of the output, for example:
+Summary 섹션은 다음과 같이 출력의 시작과 끝에 모두 표시됩니다:
 
 ```
 #### Summary
@@ -19,15 +19,15 @@ Total Repository Count: 2
 Exclusion Count: 1
 ```
 
-* `Private Repos Contributors Count` - The number of unique contributors for the private repos that were found or provided.
-* `Public Repos Contributors Count` - The number of unique contributors for the public repos that were found or provided.
-* `Total Unique Contributors Count for Private and Public repositories`- The total number of unique contributors across all probed repositories.
-* `Private Repository Count` - Number of private repos that were scanned.
-* `Public Repository Count` - Number of public repos that were scanned.
-* `Total Repository Count` - The number of the total repos that were scanned (public and private).
-* `Exclusion Count` - The number of contributors that were not counted according to the exclusion file that was provided.
+* `Private Repos Contributors Count` - Private 리포지토리를 찾거나 제공한 고유 기여자의 수 입니다.
+* `Public Repos Contributors Count` - Public 리포지토리를 찾거나 제공한 고유 기여자의 수 입니다.
+* `Total Unique Contributors Count for Private and Public repositories`- 조사된 모든 리포지토리의 총 고유 기여자 수입니다.
+* `Private Repository Count` - 검색된 Private 리포지토리의 수 입니다.
+* `Public Repository Count` - 검색된 Public 리포지토리의 수 입니다.
+* `Total Repository Count` - 검색된 총 리포지토리의 수 입니다. (public 및 private).
+* `Exclusion Count` - 제공된 제외 파일에 따라 계산되지 않은 기여자 수입니다.
 
-## Details
+## 세부사항
 
 ```
 ### Details:
@@ -40,11 +40,11 @@ someOrganization/someRepository(Private)
 anotherOrganization/anotherRepository(Public)
 ```
 
-* `Private Repositories` - A list of the private repositories that were scanned.
-* `Public Repositories` - A list of the public repositories that were scanned.
+* `Private Repositories` - 검색된 Private 리포지토리 목록입니다.
+* `Public Repositories` - 검색된 Public 리포지토리 목록입니다.
 
 {% hint style="info" %}
-Next to each repository name, there is an indication of its visibility, either (Private) or (Public).
+각 리포지토리 이름 옆에 표시 여부, (Private) 또는 (Public)가 표시됩니다.
 {% endhint %}
 
 ## Contributors details
