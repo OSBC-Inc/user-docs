@@ -10,7 +10,7 @@ description: SCM-Contributors-Count 모드 및 수준
 snyk-scm-contributors-count <command> <command-options>
 ```
 
-**`<command>`** is one of:
+**`<command>`** 는 다음 중 하나 입니다:
 
 * `azure-devops`
 * `bitbucket-cloud`
@@ -20,7 +20,7 @@ snyk-scm-contributors-count <command> <command-options>
 * `gitlab`
 * `consolidateResults`
 
-**`<command-options>`**: see SCM-specific pages (example pages) in the [scripts](the-scripts/) section.
+**`<command-options>`**: [스크립트 섹션](the-scripts/)의 SCM 관련 페이지(예 페이지)를 참조하십시오.
 
 ## 모드
 
