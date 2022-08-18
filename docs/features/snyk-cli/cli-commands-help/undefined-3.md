@@ -1,61 +1,59 @@
-# Container
+# 컨테이너
 
-## Usage
+## 사용법
 
 `snyk container <SUBCOMMAND> [<OPTIONS>] [<IMAGE>]`
 
-## Description
+## 설명
 
-The `snyk container` command tests container images for vulnerabilities.
+`snyk container` 명령은 컨테이너 이미지의 취약성을 테스트합니다.`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-For more information see [Snyk CLI for container security](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security)
-
-## Subcommands
+## 하위 명령
 
 ### `test`
 
-Test for any known vulnerabilities.
+알려진 취약성을 테스트합니다.
 
 ### `monitor`
 
-Capture the container image layers and dependencies and monitor for vulnerabilities on [snyk.io](https://snyk.io)
+컨테이너 이미지 레이어 및 종속성을 캡처하고 [snyk.io](https://snyk.io) 에 대한 취약점을 모니터링 합니다.&#x20;
 
 ## Exit codes
 
-Possible exit codes and their meaning:
+가능한 종료 코드와 그 의미는 다음과 같습니다.
 
-**0**: success, no vulnerabilities found\
-**1**: action\_needed, vulnerabilities found\
-**2**: failure, try to re-run command\
-**3**: failure, no supported projects detected
+**0**: 성공, 취약점 없음\
+**1**: 작업 필요, 취약성 발견\
+**2**: 실패, 명령 재실행 시도\
+**3**: 실패, 지원되는 프로젝트가 검색되지 않음
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and set variables for connecting with the Snyk API.
+환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다.
 
-There are environment variables that apply to the container command; see [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli)
+컨테이너 명령에 적용되는 환경 변수가 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참
 
-## Debug
+## 디버그
 
 Use the `-d` option to output the debug logs.
 
-## Options for the container test and container monitor subcommands
+### 컨테이너 테스트 및 컨테이너 모니터 하위 명령 옵션
 
 ### `--print-deps`
 
-Print the dependency tree before sending it for analysis.
+분석을 위해 보내기 전에 종속성 트리를 출하십시오.
 
 ### `--org=<ORG_ID>`
 
-Specify the `<ORG_ID>` to run Snyk commands tied to a specific organization. The `<ORG_ID>` influences some features availability and private test limits.
+`<ORG_ID>`를 지정하여 특정 조직에 연결된 Snyk 명령을 실행합니다. `<ORG_ID>`는 일부 기능 가용성 및 개인 테스트 제한에 영향을 미칩니다.
 
-If you have multiple organizations, you can set a default from the CLI using:
+조직이 여러 개인 경우 다음을 사용하여 CLI에서 기본값을 설정할 수 있습니다.
 
 `$ snyk config set org=<ORG_ID>`
 
-Set a default to ensure all newly tested and monitored projects are tested and monitored under your default organization. If you need to override the default, use the `--org=<ORG_ID>` option.
+새로 테스트되고 모니터링되는 모든 프로젝트가 기본 조직에서 테스트 되고 모니터링 되도록 하려면 기본 값을 설정합니다. 기본 값을 재정의해야 하는 경우 `--org=<ORG_ID>` 옵션을 사용하십시오.
 
-Default: `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
+기본값: `<ORG_ID>` 는 사용자의 [Account settings](https://app.snyk.io/account)ㅁ
 
 Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
 
