@@ -1,5 +1,5 @@
 ---
-description: SCM-Contributors-Count 모드 법및 수준
+description: SCM-Contributors-Count 모드 및 수준
 ---
 
 # 사용법
