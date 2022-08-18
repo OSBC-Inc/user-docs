@@ -16,7 +16,7 @@
 
 자세한 정보 및 예제를 보려면 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 
-관련 명령 목록은 synk [iac help](broken-reference)를 참조하십시오. `iac --help`
+관련 명령 목록은 synk [iac help](https://docs.snyk.io/snyk-cli/commands/iac)를 참조하십시오. `iac --help`
 
 ## 종료 코드
 
@@ -24,7 +24,7 @@
 
 **0**: 성공, drift를 찾을 수 없음\
 **1**: drifts 또는 관리되지 않는 리소스 발견\
-**2**: 실
+**2**: 실패
 
 ## Snyk CLI 구성
 
@@ -40,7 +40,7 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 ## 필수 옵션
 
-**Note:** To use the `describe` command, you **must use one of these options**:
+**참:** T`escribe` c명령어를 사용한다면 y다다음중 옵션 중 하나의를 사용해야 합니다.&#x20;
 
 ### `--only-unmanaged`
 
