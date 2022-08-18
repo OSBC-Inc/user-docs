@@ -119,62 +119,62 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 허용 값: `critical`, `high`, `medium`, `low`
 
-자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 를 참조하십시오.
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)를 참조하십시오.
 
 ### `--project-tags=<TAG>[,<TAG>]...>`
 
-Set the project tags to one or more values (comma-separated key values pairs with an "=" separator).
+프로젝트 태그를 하나 이상의 값으로 설정합니다("=" 구분 기호가 있는 쉼표로 구분된 키-값 쌍).
 
 Example: `--project-tags=department=finance,team=alpha`
 
-To clear the project tags set `--project-tags=`
+project tags set 를 지우려면 `--project-tags=` 를 수정하십시오.
 
 ### `--tags=<TAG>[,<TAG>]...>`
 
-This is an alias for `--project tags`
+이건 `--project tags` 에 대한 별칭입니다.
 
 ### `--severity-threshold=<low|medium|high|critical>`
 
-Report only vulnerabilities at the specified level or higher.
+지정된 수준 이상의 취약성만 보고합니다.
 
 ### &#x20;--fail-on=\<all|upgradable>
 
-Fail only when there are vulnerabilities that can be fixed.
+수정할 수 있는 취약성이 있는 경우에만 실패합니다.
 
-* `all`: fail when there is at least one vulnerability that can be either upgraded or patched.
-* `upgradable`: fail when there is at least one vulnerability that can be upgraded.
+* `all`: 업그레이드하거나 패치를 적용할 수 있는 취약성이 하나 이상 있는 경우 실패합니다.
+* `upgradable`: 업그레이드할 수 있는 취약성이 하나 이상 있는 경우 실패합니다.
 
-To fail on any vulnerability (the default behavior), do not use the `--fail-on` option. If vulnerabilities do not have a fix and this option is being used, tests pass.
+취약점(기본 동작)에서 실패하려면 `--fail-on` 옵션을 사용하지 마십시오. 취약성에 수정 사항이 없고 이 옵션을 사용하는 경우 테스트가 통과됩니다.
 
 ### `--app-vulns`
 
-Allow detection of vulnerabilities in your application dependencies from container images, as well as from the operating system, all in one single scan.
+컨테이너 이미지 뿐만 아니라 운영 체제에서도 애플리케이션 종속성의 취약성을 한 번의 검색으로 모두 탐지할 수 있습니다.
 
-In CLI version 1.962.0 and higher, use the `--app-vulns` option with the the `--json` option to see the operating system as well as application vulnerabilities in JSON format in the results.
+CLI 버전 1.962.0 이상에서는 `--app-vuls` 옵션과 `--json` 옵션을 함께 사용하여 운영 체제와 JSON 형식의 응용 프로그램 취약성을 결과에서 확인합니다.
 
-For more information see [Detecting application vulnerabilities in container images](https://docs.snyk.io/products/snyk-container/getting-around-the-snyk-container-ui/detecting-application-vulnerabilities-in-container-images)
+자세한 내용은 [Detecting application vulnerabilities in container images](https://docs.snyk.io/products/snyk-container/getting-around-the-snyk-container-ui/detecting-application-vulnerabilities-in-container-images)를 참조하세요.
 
 ### `--nested-jars-depth`
 
-When using `--app-vulns` use the `--nested-jars-depth` option to set how many levels of nested jars Snyk is to unpack. Depth must be a number.
+`--app-vulns`를 사용하는 경우 u`-nested-jars-depth` 옵션을 사용하여 Snyk이 풀 중첩된 jars의 수준을 설정합니다. 깊이는 숫자여야 합니다.
 
 ### `--exclude-base-image-vulns`
 
-Do not show vulnerabilities introduced only by the base image. Available when using `snyk container test` only.
+기본 이미지에 의해 도입된 취약점만 표시하지 않습니다. `snyk container test`를 사용할 때만 표할 수 있습니다.
 
 ### `--platform=<PLATFORM>`
 
-For multi-architecture images, specify the platform to test.
+다중 아키텍처 이미지의 경우 테스트할 플랫폼을 지정합니다.
 
-Supported platforms are: `linux/amd64`, `linux/arm64`, `linux/riscv64`, `linux/ppc64le`, `linux/s390x`, `linux/386`, `linux/arm/v7`, or `linux/arm/v6`
+지원되는 플랫폼: `linux/amd64`, `linux/arm64`, `linux/riscv64`, `linux/ppc64le`, `linux/s390x`, `linux/386`, `linux/arm/v7`, or `linux/arm/v6`
 
 ### `--username=<CONTAINER_REGISTRY_USERNAME>`
 
-Specify a username to use when connecting to a container registry. This is ignored in favor of local Docker binary credentials when Docker is present.
+컨테이너 레지스트리에 연결할 때 사용할 사용자 이름을 지정합니다. 이는 Docker가 있을 때 로컬 Docker 이진 자격 증명을 위해 무시됩니다.
 
 ### `--password=<CONTAINER_REGISTRY_PASSWORD>`
 
-Specify a password to use when connecting to a container registry. This is ignored in favor of local Docker binary credentials when Docker is present.
+컨테이너 레지스트리에 연결할 때 사용할 암호를 지정하십시오. 이는 Docker가 있을 때 로컬 Docker 이진 자격 증명을 위해 무시됩니다.
 
 ## 컨테이너 테스트 명령의 예
 
