@@ -1,12 +1,12 @@
 ---
-description: SCM-Contributors-Count tool을 실행한 결과
+description: The output result of running the SCM-Contributors-Count tool
 ---
 
-# 출력
+# Output
 
 ## Summary
 
-Summary 섹션은 다음과 같이 출력의 시작과 끝에 모두 표시됩니다:
+The Summary section appears at both the beginning and end of the output, for example:
 
 ```
 #### Summary
@@ -19,15 +19,15 @@ Total Repository Count: 2
 Exclusion Count: 1
 ```
 
-* `Private Repos Contributors Count` - Private 리포지토리를 찾거나 제공한 고유 기여자의 수 입니다.
-* `Public Repos Contributors Count` - Public 리포지토리를 찾거나 제공한 고유 기여자의 수 입니다.
-* `Total Unique Contributors Count for Private and Public repositories`- 조사된 모든 리포지토리의 총 고유 기여자 수입니다.
-* `Private Repository Count` - 검색된 Private 리포지토리의 수 입니다.
-* `Public Repository Count` - 검색된 Public 리포지토리의 수 입니다.
-* `Total Repository Count` - 검색된 총 리포지토리의 수 입니다. (public 및 private).
-* `Exclusion Count` - 제공된 제외 파일에 따라 계산되지 않은 기여자 수 입니다.
+* `Private Repos Contributors Count` - The number of unique contributors for the private repos that were found or provided.
+* `Public Repos Contributors Count` - The number of unique contributors for the public repos that were found or provided.
+* `Total Unique Contributors Count for Private and Public repositories`- The total number of unique contributors across all probed repositories.
+* `Private Repository Count` - Number of private repos that were scanned.
+* `Public Repository Count` - Number of public repos that were scanned.
+* `Total Repository Count` - The number of the total repos that were scanned (public and private).
+* `Exclusion Count` - The number of contributors that were not counted according to the exclusion file that was provided.
 
-## 세부사항
+## Details
 
 ```
 ### Details:
@@ -40,14 +40,14 @@ someOrganization/someRepository(Private)
 anotherOrganization/anotherRepository(Public)
 ```
 
-* `Private Repositories` - 검색된 Private 리포지토리 목록입니다.
-* `Public Repositories` - 검색된 Public 리포지토리 목록입니다.
+* `Private Repositories` - A list of the private repositories that were scanned.
+* `Public Repositories` - A list of the public repositories that were scanned.
 
 {% hint style="info" %}
-각 리포지토리 이름 옆에 표시 여부, (Private) 또는 (Public) 이 표시됩니다.
+Next to each repository name, there is an indication of its visibility, either (Private) or (Public).
 {% endhint %}
 
-## 기여자 세부사항
+## Contributors details
 
 ```
 ## Contributors details
@@ -86,11 +86,11 @@ anotherOrganization/anotherRepository(Public)
 ]
 ```
 
-* `email` - 기여자의 이메일 입니다.
-* `contributionsCount` - 이 기여자가 리포지토리에 기여한 횟수입니다.
-* `repoContributedTo` - 이 기여자가 기여한 리포지토리 목록입니다.
-* `(duplicate)` - 동일한 사용자가 다른 전자 메일 주소에서 탐지되었음을 나타냅니다. **서로 다른 커밋**으로 간주됩니다.
+* `email` - The email of the contributor
+* `contributionsCount` - The number of the times this contributor has contributed to the repo/s.
+* `repoContributedTo` - A list of the repo/repos to which this contributor has contributed.
+* `(duplicate)` - Indicator that the same user has been detected from different email addresses; note that they will be counted as **different committers**.
 
 {% hint style="info" %}
-출력이 길 수 있으므로 더 나은 검토 및 구문 분석 옵션을 위해 출력을 파일로 보낼 것을 권장합니다.
+As the output can be long, Snyk recommends sending the output to a file for better review and parsing options.
 {% endhint %}

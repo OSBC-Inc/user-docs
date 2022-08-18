@@ -1,5 +1,5 @@
 ---
-description: The flags for each SCM script
+description: "각 SCM 스크립트의 \bFlag"
 ---
 
 # Flags
@@ -15,16 +15,15 @@ description: The flags for each SCM script
 | **GitLab Ent.** | `"token"`           | `"groups"`      | `"project"` | `"exclusionFilePath"` | `"json"` |                            |                         |                           | `"url" [required]`                              |
 
 {% hint style="info" %}
-The flag names correspond to their names in the SCM.\
-The "private" SCMs, like Bitbucket server, GitHub Enterprise, and GitLab Enterprise, need a host url to be set as a flag in the command.
+Flag 이름은 SCM에 있는 flag 이름과 일치한다. Bitbucket 서버, GitHub Enterprise 및 GitLab Enterprise와 같은 "Private" SCM은 명령에서 flag로 설정될 호스트 URL이 필요합니다.
 {% endhint %}
 
 {% hint style="info" %}
-The `"fetchAllOrgs"` flag is unique to GitHub Enterprise and distinguishes between two levels of access to the Orgs in the GHE:\
-1\. With the flag - Fetches all the orgs that the provided token has access to.\
-2\. Without the flag - Fetches only the orgs to which the **User** whose token was provided has some operation rights, for example, read permissions and so on.
+"`fetch AllOrgs`" flag는 깃허브 엔터프라이즈에 고유하며 GHE에서 Orgs에 대한 두 가지 접근 level을 구분한다.\
+1\. With the flag - 제공된 토큰이 액세스할 수 있는 모든 Orgs를 가져옵니다.\
+2\. Without the flag - 토큰이 제공된 **사용자**에게 일부 작업 권한(예: 읽기 권한 등)이 있는 Orgs만 가져옵니다.
 {% endhint %}
 
 {% hint style="info" %}
-For further details on how to use the generated import file with the snyk-api-import tool, see [Creating and using the import files](creating-and-using-the-import-files.md).
+생성된 import file을 synk-api-import tool로 사용하는 방법에 대한 자세한 내용은 [import file 생성 및 사용](creating-and-using-the-import-files.md)을 참조하십시오.
 {% endhint %}
