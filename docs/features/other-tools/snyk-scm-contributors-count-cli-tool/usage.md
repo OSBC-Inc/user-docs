@@ -89,10 +89,10 @@ DEBUG=snyk* snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN
 
 Command에 대해 추가 Flag를 설정할 수 있습니다:
 
-* Create an **import file** with unmonitored repos data to use with the s`nyk-api-import` tool and import the repos to `my Snyk account`. Works only with Bitbucket and Azure. Apply the `importConfDir` flag with a path to a valid and writable folder where you will save the import files. This flag correlates with the `importFileRepoType` flag.
-* Choose which **types of repos to add to the import file**. Works only with Bitbucket and Azure. Apply the `importFileRepoType` flag with one of these options: `all,` `private`, or `public`**.**
-* **Exclude committers from being counted**. Apply the `exclusionFilePath` flag to the command with a path to a text file that contains the emails of the committers that you would like to be excluded from the count.
-* Output the summary and results in a json format. Apply the `json` flag to the command.
+* `snyk-api-import` tool과 함께 사용할 모니터링되지 않은 리포지토리 데이터로 **Import file**을 만들고 리포지토리를 `my Snyk account`로 가져옵니다. Bitbucket 및 Azure에서만 작동합니다. Import file을 저장할 유효한 쓰기 가능한 폴더에 경로를 지정하여 `importConfDir` flag를 적용합니다. 이 flag는 `importFileRepoType` flag와 관련이 있습니다.
+* **Import file에 추가할 리포지토리 유형**을 선택합니다. Bitbucket 및 Azure에서만 작동합니다. `importFileRepoType` flag를 `all`, `private` 또는 `public` 옵션 중 하나와 함께 적용합니다.
+* **Committer를 카운트 대상에서 제외합니다**. 카운트에서 제외할 커밋의 이메일이 포함된 텍스트 파일의 경로가 있는 명령에 `exclusionFilePath` flag를 적용합니다.
+* 요약 및 결과를 json 형식으로 출력합니다. command에 `json` flag를 적용합니다.
 
 ## The consolidateResults command
 
