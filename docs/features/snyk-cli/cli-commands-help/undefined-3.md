@@ -6,7 +6,9 @@
 
 ## 설명
 
-`snyk container` 명령은 컨테이너 이미지의 취약성을 테스트합니다.`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
+`snyk container` 명령은 컨테이너 이미지의 취약성을 테스트합니다.
+
+자세한 내용은  [Snyk CLI for container security](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security) 참조하십시오.
 
 ## 하위 명령
 
@@ -31,13 +33,13 @@
 
 환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다.
 
-컨테이너 명령에 적용되는 환경 변수가 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참
+컨테이너 명령에 적용되는 환경 변수가 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참조
 
 ## 디버그
 
-Use the `-d` option to output the debug logs.
+`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-### 컨테이너 테스트 및 컨테이너 모니터 하위 명령 옵션
+## 컨테이너 테스트 및 컨테이너 모니터 하위 명령 옵션
 
 ### `--print-deps`
 
@@ -53,7 +55,9 @@ Use the `-d` option to output the debug logs.
 
 새로 테스트되고 모니터링되는 모든 프로젝트가 기본 조직에서 테스트 되고 모니터링 되도록 하려면 기본 값을 설정합니다. 기본 값을 재정의해야 하는 경우 `--org=<ORG_ID>` 옵션을 사용하십시오.
 
-기본값: `<ORG_ID>` 는 사용자의 [Account settings](https://app.snyk.io/account)ㅁ
+기본값: `<ORG_ID>` 는 사용자의 [Account settings](https://app.snyk.io/account)에서 현재 선호되는 조직입니다.
+
+
 
 Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
 
