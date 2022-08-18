@@ -4,7 +4,7 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
 
 # GitLab - 몇 가지 예
 
-The following options are available for the `snyk-scm-contributors-count gitlab` command:
+`snyk-scm-contributors-count gitlab` command에는 다음 옵션을 사용할 수 있습니다:
 
 ```
   --version                 Show version number                        [boolean]
@@ -19,11 +19,11 @@ The following options are available for the `snyk-scm-contributors-count gitlab`
   --json                    [Optional] JSON output, required when using the "consolidateResults" command
 ```
 
-## **Before running the command**
+## **Command를 실행하기 전에**
 
-Get your GitLab token or create a new one with this [guide](https://docs.gitlab.com/ee/user/profile/personal\_access\_tokens.html).
+이 [가이드](https://docs.gitlab.com/ee/user/profile/personal\_access\_tokens.html)를 사용하여 GitLab 토큰을 가져오거나 새 토큰을 만드십시오.
 
-**Note:** Make sure your token has read access to the repos.
+**주:** M토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
 
 ## Running the command
 
