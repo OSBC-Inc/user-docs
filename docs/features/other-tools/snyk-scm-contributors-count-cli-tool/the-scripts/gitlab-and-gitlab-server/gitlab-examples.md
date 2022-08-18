@@ -31,12 +31,12 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
 
 ### 사용 Level
 
-*   To get commits for all groups and their projects in GitLab, provide the GitLab token (and server url for GitLab Enterprise):
+*   GitLab에서 모든 그룹 및 해당 프로젝트에 대한 커밋을 가져오려면 GitLab 토큰(및 GitLab Enterprise의 서버 URL)을 제공하십시오:
 
     ```
     snyk-scm-contributors-count gitlab --token TOKEN --url URL
     ```
-*   To get commits for some groups and their projects in GitLab, provide the GitLab token and the group names, separated by a comma:
+*   GitLab에서 일부 그룹 및 해당 프로젝트에 대한 커밋을 가져오려면 GitLab 토큰과 그룹 이름을 쉼표로 구분하여 제공하십시오:
 
     ```
     snyk-scm-contributors-count gitlab --token TOKEN --groups GROUP1,GROUP2
