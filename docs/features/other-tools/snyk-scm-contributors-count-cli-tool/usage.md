@@ -96,4 +96,4 @@ Command에 대해 추가 Flag를 설정할 수 있습니다:
 
 ## The consolidateResults command
 
-Used for consolidating results from several commands across different SCMs, into a single file with unique contributors count. Refer to the [command page](consolidate-results.md).
+여러 SCM에 걸쳐 여러 command의 결과를 고유한 기여자 수가 있는 단일 파일로 통합하는 데 사용됩니다. [command 페이지](consolidate-results.md)를 참조하십시오.
