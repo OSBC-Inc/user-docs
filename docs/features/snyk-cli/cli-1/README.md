@@ -17,47 +17,47 @@ Snyk CLI는 프로젝트를 검색하여 보안 취약성 및 라이센스 문�
 각 Snyk CLI 명령에 대해 자세히 알아보려면 `--help` 옵션을 사용하십시오. \
 예: `snyk auth --help` or `snyk container --help`
 
-**참:** T문서  사이트의  도움말은  CLI의  `-help` i와 동일합니다.
+**참고:** 문서 사이트의 도움말은 CLI의 `-help`와 동일합니다.
 
-### [`snyk auth`](broken-reference)
+### [auth.md](../cli-commands-help/auth.md "mention")
 
-Authenticate Snyk CLI with a Snyk account.
+Snyk 계정을 사용하여 Snyk CLI를 인증합니다.
 
-### [`snyk test`](broken-reference)
+### `snyk test`
 
 Test a project for open source vulnerabilities and license issues.
 
 **Note**: Use `snyk test --unmanaged` to scan all files for known open source dependencies (C/C++ only).
 
-### [`snyk monitor`](broken-reference)
+### `snyk monitor`
 
 Snapshot and continuously monitor a project for open source vulnerabilities and license issues.
 
-### [`snyk container`](broken-reference)
+### `snyk container`
 
 Test container images for vulnerabilities.
 
-### [`snyk iac`](broken-reference)
+### `snyk iac`
 
 Commands to find and manage security issues in Infrastructure as Code files.
 
-### [`snyk code`](broken-reference)
+### `snyk code`
 
 Find security issues using static code analysis.
 
-### [`snyk log4shell`](broken-reference)
+### `snyk log4shell`
 
 Find Log4Shell vulnerability.
 
-### [`snyk config`](broken-reference)
+### `snyk config`
 
 Manage Snyk CLI configuration.
 
-### [`snyk policy`](broken-reference)
+### `snyk policy`
 
 Display the `.snyk` policy for a package.
 
-### [`snyk ignore`](broken-reference)
+### `snyk ignore`
 
 Modify the `.snyk` policy to ignore stated issues.
 
