@@ -1,6 +1,6 @@
-# GitHub - Flow and Tech
+# GitHub - 진행순서 및 기술
 
-## Flow <a href="#flow" id="flow"></a>
+## 진행순서 <a href="#flow" id="flow"></a>
 
 1. Fetch `one`/`some`/`all` the orgs that the credentials have access to from SCM and create an orgs list.
 2. Fetch `one`/`all` repos under the fetched/provided orgs.
@@ -9,7 +9,7 @@
 5. Remove the contributors that were specified in the exclusion file (if `the exclusionFilePath` flag was set and a valid path to a text file was provided).
 6. Print the results.
 
-## GitHub API endpoints used <a href="#azure-api-endpoints-used" id="azure-api-endpoints-used"></a>
+## 사용된 GitHub API endpoints <a href="#azure-api-endpoints-used" id="azure-api-endpoints-used"></a>
 
 * To get the orgs from GitHub: `/user/orgs`
 * To get the list of the repo/s that correlate with the fetched/provided orgs list: `/orgs/{Org}/repos`
