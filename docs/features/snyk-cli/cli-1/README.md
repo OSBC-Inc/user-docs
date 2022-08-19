@@ -19,52 +19,52 @@ Snyk CLI는 프로젝트를 검색하여 보안 취약성 및 라이센스 문�
 
 **참고:** 문서 사이트의 도움말은 CLI의 `-help`와 동일합니다.
 
-### [auth.md](../cli-commands-help/auth.md "mention")
+### `snyk auth`
 
 Snyk 계정을 사용하여 Snyk CLI를 인증합니다.
 
 ### `snyk test`
 
-Test a project for open source vulnerabilities and license issues.
+프로젝트를 테스트하여 오픈 소스 취약성 및 라이센스 문제를 확인합니다.
 
-**Note**: Use `snyk test --unmanaged` to scan all files for known open source dependencies (C/C++ only).
+**참고**: 모든 파일에서 알려진 오픈 소스 종속성을 검색하려면 `snyk test --unmanaged`를 사용합니다(C/C++만 해당).
 
 ### `snyk monitor`
 
-Snapshot and continuously monitor a project for open source vulnerabilities and license issues.
+프로젝트를 스냅샷으로 만들고 지속적으로 모니터링하여 오픈 소스 취약성 및 라이센스 문제를 해결합니다.
 
 ### `snyk container`
 
-Test container images for vulnerabilities.
+컨테이너 이미지에서 취약성을 테스트합니다.
 
 ### `snyk iac`
 
-Commands to find and manage security issues in Infrastructure as Code files.
+Infrastructure as Code 파일에서 보안 문제를 찾고 관리하는 명령입니다.
 
 ### `snyk code`
 
-Find security issues using static code analysis.
+정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
 ### `snyk log4shell`
 
-Find Log4Shell vulnerability.
+Log4Shell 취약성을 찾습니다.
 
 ### `snyk config`
 
-Manage Snyk CLI configuration.
+Snyk CLI 구성을 관리합니다.
 
 ### `snyk policy`
 
-Display the `.snyk` policy for a package.
+패키지에 대한 `.synk` 정책을 표시합니다.
 
 ### `snyk ignore`
 
-Modify the `.snyk` policy to ignore stated issues.
+.synk 정책을 수정하여 명시된 문제를 무시합니다.
 
-## Debug
+## 디버그
 
-Use `-d` option to output the debug logs.
+`-d`옵션을 사용하여 디버그 로그를 출력합니다.
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and also set variables to configure the Snyk CLI to connect with the Snyk API. See [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli)
+환경 변수를 사용하여 Snyk CLI를 구성하고 변수를 설정하여 Snyk API에 연결할 수 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli)을 참조하십시오.
