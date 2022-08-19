@@ -11,6 +11,6 @@
 
 ## 사용된 GitHub Enterprise API endpoints <a href="#azure-api-endpoints-used" id="azure-api-endpoints-used"></a>
 
-* To get the orgs from GitHub Enterprise: `api/v3/organizations` (if the `fetchAllOrgs` flag **was** set) or `api/v3/user/orgs` (if the `fetchAllOrgs` flag was **not** set)
-* To get the list of the repo/s that correlate with the fetched/provided orgs list: `api/v3/orgs/{Org}/repos`
-* To get the commits for the fetched/provided repo/s list: `api/v3/repos/{Org}/{Repo}/commits`
+* GitHub Enterprise에서 조직을 가져오려면: `api/v3/organizations` (`fetchAllOrgs` flag가 **설정된** 경우) 또는`api/v3/user/orgs` (`fetchAllOrgs` flag가 **설정되지 않은** 경우)
+* 가져온/제공된 조직 목록과 상관관계가 있는 리포지토리 목록을 가져오려면:`api/v3/orgs/{Org}/repos`
+* 가져온/제공된 리포지토리 목록의 커밋을 가져오려면: `api/v3/repos/{Org}/{Repo}/commits`
