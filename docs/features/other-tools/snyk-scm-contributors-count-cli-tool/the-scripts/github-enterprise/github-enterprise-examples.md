@@ -48,23 +48,23 @@ description: 옵션 목록 및 몇 가지 예
 
 ### 옵션
 
-* To map all the orgs in GitHub Enterprise and not just the ones you have operate rights to, add the `--fetchAllOrgs` flag:
+* GitHub Enterprise의 모든 org를 매핑하고 운영 권한을 가진 org만 매핑하려면 `--fetchAllOrgs` flag를 추가하십시오:
 
 ```
 snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --fetchAllOrgs
 ```
 
-*   To exclude some contributors from being counted in the commits, add an exclusion file with the emails to ignore(separated by commas) and apply the `--exclusionFilePath` with the path to that file:
+*   일부 기여자가 커밋에서 계산되지 않도록 하려면 무시할 이메일이 포함된 제외 파일(쉼표로 구분)을 추가하고 해당 파일에 대한 경로와 함께 `--exclusionFilePath`를 적용합니다:
 
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG_ONE,ORG_TWO --exclusionFilePath PATH_TO_FILE
     ```
-*   To set the output to json format, dd the `--json` flag:
+*   출력을 json 형식으로 설정하려면 `--json` flag를 추가하십시오:
 
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --json
     ```
-* To run in debug mode for verbose output, prefix with `DEBUG=snyk*` :
+* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 접두사를 사용합니다:
 
 ```
 DEBUG=snyk* snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG --repo REPO --exclusionFilePath PATH_TO_FILE --json
