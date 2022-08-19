@@ -1,22 +1,23 @@
-# CLI 명령어 도움말
+# CLI 명령 도움말
 
 Snyk CLI는 프로젝트를 검색하여 보안 취약성 및 라이센스 문제를 모니터링합니다.
 
 자세한 내용은 [Snyk website](https://snyk.io)를 참조하십시오.
 
-자세한내용내용 [CLI documentation](https://docs.snyk.io/features/snyk-cli)를 참조하십시오.
+자세한 내용은 [CLI documentation](https://docs.snyk.io/features/snyk-cli)를 참조하십시오.
 
-## How to get started
+## 시작하는 방법
 
-1. Authenticate by running `snyk auth`
-2. Test your local project with `snyk test`
-3. Get alerted for new vulnerabilities with `snyk monitor`
+1. `synk auth`를 실행하여 인증
+2. `synk test`로 로컬 프로젝트 테스트
+3. `snyk monitor`를 통해 새로운 취약성에 대한 경고 받기
 
-## Available commands
+## 사용 가능한 명령
 
-To learn more about each Snyk CLI command, use the `--help` option, for example, `snyk auth --help` or `snyk container --help`
+각 Snyk CLI 명령에 대해 자세히 알아보려면 `--help` 옵션을 사용하십시오. \
+예: `snyk auth --help` or `snyk container --help`
 
-**Note:** The help on the docs site is the same as the `--help` in the CLI.
+**참:** T문서  사이트의  도움말은  CLI의  `-help` i와 동일합니다.
 
 ### [`snyk auth`](broken-reference)
 
