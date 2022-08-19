@@ -1,10 +1,10 @@
 ---
-description: 옵션 목록 및 몇 가지 예
+description: The list of options and some examples
 ---
 
-# Github Enterprise - 몇 가지 예
+# Github Enterprise - Examples
 
-`snyk-scm-contributors-count github-enterprise` command에는 다음 옵션을 사용할 수 있습니다:
+The following options are available for the `snyk-scm-contributors-count github-enterprise` command:
 
 ```
   --version                 Show version number                        [boolean]
@@ -21,32 +21,35 @@ description: 옵션 목록 및 몇 가지 예
   --json                    [Optional] JSON output, required when using the "consolidateResults" command
 ```
 
-## **Command를 실행하기 전에**
+## **Before running the command**
 
-이 [가이드](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)를 사용하여 GitHub Enterprise 토큰을 가져오거나 새 토큰을 만드십시오.
+Get your GitHub Enterprise token or create a new one with this [guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-**주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
+**Note:** Make sure your token has read access to the repos.
 
-## Command 실행
+## Running the command
 
-다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
+Consider the following levels of usage and options:
 
-### 사용 Level
+### Usage levels
 
-* GitHub Enterprise의 모든 조직에 있는 모든 리포지토리에 대한 커밋을 가져오려면 GitHub Enterprise 토큰을 제공하십시오:\
-  `snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL`
-*   GitHub Enterprise에서 일부 orgs 해당 리포지토리에 대한 커밋을 가져오려면 GitHub Enterprise 토큰과 org 이름을 쉼표로 구분하여 제공하십시오:
+*   To get commits for all repos in all your orgs in GitHub Enterprise, provide the GitHub Enterprise token:
+
+    ```
+    snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL
+    ```
+*   To get commits for some orgs and their repos in GitHub Enterprise, provide the GitHub Enterprise token and the org names, separated by a comma:
 
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG_ONE,ORG_TWO,ORG_THREE
     ```
-*   GitHub Enterprise에서 하나의 리포지토리만 커밋하려면 GitHub Enterprise 토큰, 하나의 org 이름 및 하나의 repo 이름을 제공하십시오:
+*   To get commits for only one repo in GitHub Enterprise, provide the GitHub Enterprise token, one org name, and one repo name:
 
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG --repo REPO
     ```
 
-### 옵션
+### Options
 
 * To map all the orgs in GitHub Enterprise and not just the ones you have operate rights to, add the `--fetchAllOrgs` flag:
 
