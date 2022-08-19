@@ -17,15 +17,13 @@ description: 옵션 목록 및 몇 가지 예
   --json                    [Optional] JSON output, requiered when using the "consolidateResults" command
 ```
 
-### Before running the command:
-
-**Before running the command:**
+## **Command를 실행하기 전에**:
 
 Get your Github token or create a new one with this [guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 **Note:** make sure your token has read access to the repos.
 
-### Running the command
+## Command 실행
 
 Consider the following levels of usage and options:
 
@@ -47,7 +45,7 @@ Consider the following levels of usage and options:
     snyk-scm-contributors-count github --token TOKEN --orgs ORG --repo REPO
     ```
 
-### Options:
+### 옵션:
 
 * To exclude some contributors from being counted in the commits => add an exclusion file with the emails to ignore(separated by commas) and apply the `--exclusionFilePath` with the path to that file:
 
