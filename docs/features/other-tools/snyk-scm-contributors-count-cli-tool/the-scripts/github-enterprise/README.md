@@ -1,8 +1,8 @@
 ---
-description: Flow and Tech for GitHub Enterprise
+description: GitHub Enterprise의 진행순서 및 기술
 ---
 
 # GitHub Enterprise
 
-* [Flow and Tech](github-enterprise-flow-and-tech.md)
-* [Examples](github-enterprise-examples.md)
+* [진행순서 및 기술](github-enterprise-flow-and-tech.md)
+* [몇 가지 예](github-enterprise-examples.md)
