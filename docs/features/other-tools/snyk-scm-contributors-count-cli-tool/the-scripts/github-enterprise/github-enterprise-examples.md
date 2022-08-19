@@ -35,12 +35,12 @@ description: 옵션 목록 및 몇 가지 예
 
 * GitHub Enterprise의 모든 조직에 있는 모든 리포지토리에 대한 커밋을 가져오려면 GitHub Enterprise 토큰을 제공하십시오:\
   `snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL`
-*   To get commits for some orgs and their repos in GitHub Enterprise, provide the GitHub Enterprise token and the org names, separated by a comma:
+*   GitHub Enterprise에서 일부 orgs 해당 리포지토리에 대한 커밋을 가져오려면 GitHub Enterprise 토큰과 org 이름을 쉼표로 구분하여 제공하십시오:
 
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG_ONE,ORG_TWO,ORG_THREE
     ```
-*   To get commits for only one repo in GitHub Enterprise, provide the GitHub Enterprise token, one org name, and one repo name:
+*   GitHub Enterprise에서 하나의 리포지토리만 커밋하려면 GitHub Enterprise 토큰, 하나의 org 이름 및 하나의 repo 이름을 제공하십시오:
 
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG --repo REPO
