@@ -2,7 +2,7 @@
 
 ## 진행순서 <a href="#flow" id="flow"></a>
 
-1. Fetch `one`/`some`/`all` the orgs that the credentials have access to from SCM and create an orgs list.
+1. SCM에서 자격 증명이 액세스할 수 있는 `one`/`some`/`all` org를 가져오고 org 목록을 만듭니다.
 2. Fetch `one`/`all` repos under the fetched/provided orgs.
 3. Fetch the commits for the fetched/provided repo/s and create a Contributors list.
 4. Count the commits for the repo/s by the contributors.
