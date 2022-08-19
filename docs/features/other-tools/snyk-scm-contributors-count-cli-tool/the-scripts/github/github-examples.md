@@ -1,10 +1,10 @@
 ---
-description: The list of options and some examples
+description: 옵션 목록 및 몇 가지 예
 ---
 
-# Github - Examples
+# GitHub - 몇 가지 예
 
-Available options:
+사용 가능한 옵션:
 
 ```
   --version                 Show version number                        [boolean]

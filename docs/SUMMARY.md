@@ -413,7 +413,7 @@
         * [Bitbucket Server - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/bitbucket-server-examples.md)
       * [GitHub](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/README.md)
         * [GitHub - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/github-flow-and-tech.md)
-        * [GitHub - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/github-examples.md)
+        * [GitHub - 몇 가지 예](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/github-examples.md)
       * [GitHub Enterprise](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/README.md)
         * [GitHub Enterprise - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/github-enterprise-flow-and-tech.md)
         * [Github Enterprise - 몇 가지 예](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/github-enterprise-examples.md)
