@@ -1,10 +1,10 @@
-# CLI commands help
+# CLI 명령어 도움말
 
-Snyk CLI scans and monitors your projects for security vulnerabilities and license issues.
+Snyk CLI는 프로젝트를 검색하여 보안 취약성 및 라이센스 문제를 모니터링합니다.
 
-For more information visit the [Snyk website](https://snyk.io)
+자세한 내용은 [Snyk website](https://snyk.io)를 참조하십시오.
 
-For details see the [CLI documentation](https://docs.snyk.io/features/snyk-cli)
+자세한내용내용 [CLI documentation](https://docs.snyk.io/features/snyk-cli)를 참조하십시오.
 
 ## How to get started
 
