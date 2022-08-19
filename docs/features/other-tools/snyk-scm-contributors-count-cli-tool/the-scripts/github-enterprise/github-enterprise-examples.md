@@ -1,10 +1,10 @@
 ---
-description: The list of options and some examples
+description: 옵션 목록 및 몇 가지 예
 ---
 
-# Github Enterprise - Examples
+# Github Enterprise - 몇 가지 예
 
-The following options are available for the `snyk-scm-contributors-count github-enterprise` command:
+`snyk-scm-contributors-count github-enterprise` command에는 다음 옵션을 사용할 수 있습니다:
 
 ```
   --version                 Show version number                        [boolean]
@@ -21,23 +21,20 @@ The following options are available for the `snyk-scm-contributors-count github-
   --json                    [Optional] JSON output, required when using the "consolidateResults" command
 ```
 
-## **Before running the command**
+## **Command를 실행하기 전에**
 
-Get your GitHub Enterprise token or create a new one with this [guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+이 [가이드](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)를 사용하여 GitHub Enterprise 토큰을 가져오거나 새 토큰을 만드십시오.
 
-**Note:** Make sure your token has read access to the repos.
+**주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
 
-## Running the command
+## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
-### Usage levels
+### 사용 Level
 
-*   To get commits for all repos in all your orgs in GitHub Enterprise, provide the GitHub Enterprise token:
-
-    ```
-    snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL
-    ```
+* GitHub Enterprise의 모든 조직에 있는 모든 리포지토리에 대한 커밋을 가져오려면 GitHub Enterprise 토큰을 제공하십시오:\
+  `snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL`
 *   To get commits for some orgs and their repos in GitHub Enterprise, provide the GitHub Enterprise token and the org names, separated by a comma:
 
     ```
@@ -49,7 +46,7 @@ Consider the following levels of usage and options:
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG --repo REPO
     ```
 
-### Options
+### 옵션
 
 * To map all the orgs in GitHub Enterprise and not just the ones you have operate rights to, add the `--fetchAllOrgs` flag:
 
