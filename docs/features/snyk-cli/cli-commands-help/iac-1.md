@@ -60,9 +60,9 @@ Terraform 상태에 있는 관리되는 리소스에서 변경 사항을 검색�
 
 Specify the `<ORG_ID>` to run Snyk commands tied to a specific organization. Overrides the default `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
 
-Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
+`--org=<orgslugname>`을 사용할 수도 있습니다 . `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬래그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
-For more information see the article [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)
+자세한 내용은 문서 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)를 참조하십시오.
 
 ### `--from=<STATE>[,<STATE>...]`
 
@@ -112,35 +112,35 @@ Terraform Cloud 또는 Enterprise API를 인증할 API 토큰을 지정합니다
 
 ### `--config-dir`
 
-Change the directory path used for `iac describe` configuration (default `$HOME`). This can be useful, for example, if you want to invoke this command in an AWS Lambda function where you can only use the `/tmp` folder.
+`iac describe` 구성에 사용되는 디렉토리 경로(기본값 $HOME)를 변경합니다. 예로 /`tmp` 폴더만 사용할 수 있는 AWS Lambda 함수에서 이 명령을 호출하려는 경우에 유용합니다.
 
-## Options for including and excluding resources
+## 리소스 포함 및 제외 옵션
 
 ### `--service=<SERVICE>[,<SERVICE>...]`
 
-Specify the services whose resources are inspected for drift or unmanaged resources.
+리소스가 드리프트 또는 관리되지 않는 리소스에 대해 검사되는 서비스를 지정합니다.
 
-This option cannot be used with a `.snyk` drift ignore rule; the content in `.snyk` will be ignored.
+이 옵션은 `.snyk` drift 무시 규칙과 함께 사용할 수 없습니다. `.snyk`의 내용은 무시됩니다.
 
 지원되는 서비스: `aws_s3`, `aws_ec2`, `aws_lambda`, `aws_rds`, `aws_route53`, `aws_iam` , `aws_vpc`, `aws_api_gateway`, `aws_apigatewayv2`, `aws_sqs`, `aws_sns`, `aws_ecr`, `aws_cloudfront`, `aws_kms`, `aws_dynamodb`, `azure_base`, `azure_compute`, `azure_storage`, `azure_network`, `azure_container`, `azure_database`, `azure_loadbalancer`, `azure_private_dns`, `google_cloud_platform`, `google_cloud_storage`, `google_compute_engine`, `google_cloud_dns`, `google_cloud_bigtable`, `google_cloud_bigquery`, `google_cloud_functions`, `google_cloud_sql`, `google_cloud_run`
 
 ### `--filter`
 
-Use filter rules.
+필터 규칙을 사용합니다.
 
-Filter rules allow you to build a JMESPath expression to include or exclude a set of resources from the report.
+필터 규칙을 사용하여 리소스 집합을 리포트에서 포함하거나 제외하는 JMESPath 식을 작성할 수 있습니다.
 
-To filter on resource attributes, deep mode must be enabled. Deep mode is enabled by default for `--all` and `--only-managed`. To enable deep mode while using `--only-unmanaged`, use the `--deep` option.
+리소스 특성을 기준으로 필터링하려면 심층 모드를 사용하도록 설정해야 합니다. 딥 모드는 `--all` 및 `--only-managed`에 대해 기본적으로 사용 가능합니다. `--only-unmanaged`를 사용하는 동안 딥 모드를 사용하려면 `--deep` 옵션을 사용하십시오.
 
-For more information see [Filter results](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/filter-results)
+자세한 내용은 [Filter results](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/filter-results)를 참조하십시오.
 
 ### `--deep`
 
-Enable deep mode. Deep mode enables you to use the `--filter` option to include or exclude resources in the report based on their attributes.
+딥 모드를 활성화합니다. 심층 모드를 사용하면 `--filter` 옵션을 사용하여 속성에 따라 리포트에 리소스를 포함하거나 제외할 수 있습니다.
 
-Deep mode is enabled by default for `--all` and `--only-managed`. Use `--deep` if you want to filter on attributes while using `--only-unmanaged`.
+딥 모드는 `--all` 및 `--only-managed`에 대해 기본적으로 사용 가능합니다.
 
-For more information see [Filter results](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/filter-results)
+자세한 내용은 [Filter results](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/filter-results)를 참조하십시오.
 
 ### `--strict`
 
