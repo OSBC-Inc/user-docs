@@ -416,7 +416,7 @@
         * [GitHub - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/github-examples.md)
       * [GitHub Enterprise](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/README.md)
         * [GitHub Enterprise - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/github-enterprise-flow-and-tech.md)
-        * [Github Enterprise - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/github-enterprise-examples.md)
+        * [Github Enterprise - 몇 가지 예](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github-enterprise/github-enterprise-examples.md)
       * [GitLab 과 GitLab Server](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/README.md)
         * [GitLab - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-flow-and-tech.md)
         * [GitLab - 몇 가지 예](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-examples.md)
