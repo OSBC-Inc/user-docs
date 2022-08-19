@@ -43,14 +43,14 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
     ```
 
 {% hint style="info" %}
-Note that for nested groups, you need to provide the lowest level group name, for example, for `TopLevelGroup/MidLevelGroup/LowLevelGroup` provide only "LowLevelGroup" with the `--groups` flag
+중첩된 그룹의 경우 가장 낮은 level의 그룹 이름을 제공해야 합니다. 예를 들어 TopLevelGroup/MidLevelGroup/LowLevelGroup은 `--groups` flag가 있는 "LowLevelGroup"만 제공합니다.
 {% endhint %}
 
-*   To get commits for a specific project in GitLab, provide the GitLab token and **one** group name and **one** project name:
+* GitLab에서 특정 프로젝트에 대한 커밋을 가져오려면 GitLab 토큰과 **하나**의 그룹 이름 및 **하나**의 프로젝트 이름을 제공하십시오:
 
-    ```
-    snyk-scm-contributors-count gitlab --token TOKEN --groups GROUP --project PROJECT
-    ```
+```
+snyk-scm-contributors-count gitlab --token TOKEN --groups GROUP --project PROJECT
+```
 
 ### 옵션
 
