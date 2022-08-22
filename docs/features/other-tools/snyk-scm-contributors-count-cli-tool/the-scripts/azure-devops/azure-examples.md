@@ -35,25 +35,25 @@ description: Azure에 대한 옵션 목록 및 몇 가지 예
    *   토큰이 없는 경우 이 [가이드](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops\&tabs=Windows)를 참조하여 토큰을 만듭니다.
 
        **주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
-   * Azure DevOps 사이트의 왼쪽 창에 나열된 Azure에서 Org 이름을 찾습니다.
+   * [Azure DevOps 사이트](https://azure.microsoft.com/en-us/services/devops/?nav=min)의 왼쪽 창에 나열된 Azure에서 Org 이름을 찾습니다.
 
 ## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
 ### 사용 Level:
 
-*   To get commits for all projects and their repos under my Org in Azure , only provide the Azure token and Azure Org:
+*   Azure의 내 Org 아래에 있는 모든 프로젝트 및 해당 리포지토리에 대한 커밋을 가져오려면 Azure 토큰과 Azure Org만 제공하십시오:
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG
     ```
-*   To get commits for some projects and their repos under my Org in Azure , provide the Azure token, Azure Org and the project key/s separated by a comma:
+*   Azure의 내 조직 아래에 있는 일부 프로젝트 및 해당 리포지토리에 대한 커밋을 가져오려면 Azure 토큰, Azure Org 및 프로젝트 키를 쉼표로 구분하여 제공하십시오:
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --projectKeys Key1,Key2...
     ```
-*   To get commits for a specific repo under my Org in Azure , provide the Azure token, Azure Org, a project key and a repo name:
+*   Azure의 내 Org 아래에 있는 특정 리포지토리에 대한 커밋을 가져오려면 Azure 토큰, Azure Org, 프로젝트 키 및 리포지토리 이름을 제공하십시오:
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --projectKeys Key1 --repo Repo1
