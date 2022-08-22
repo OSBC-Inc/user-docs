@@ -2,7 +2,7 @@
 description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
 ---
 
-# Bitbucket Cloud - Examples
+# Bitbucket Cloud - 몇 가지 예
 
 `snyk-scm-contributors-count bitbucket-cloud` command에는 다음 옵션을 사용할 수 있습니다:
 
@@ -50,7 +50,7 @@ description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1,Workspace2...
     ```
-*   Bitbucket Cloud에서 특정 리포지토리에 대한 커밋을 얻으려면 Bitbucket Cloud 사용자, Bitbucket Cloud 앱 비밀번, 워크스페이스 및 리포지토 이름을 입력하십시오.
+*   Bitbucket Cloud에서 특정 리포지토리에 대한 커밋을 얻으려면 Bitbucket Cloud 사용자, Bitbucket Cloud 앱 비밀번, 워크스페이스 및 리포지토리 이름을 입력하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1 --repo Repo1
@@ -58,8 +58,8 @@ description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
 
 ### 옵션
 
-*   To get all the commits from Bitbucket Cloud regardless of the repos that are already monitored by Snyk, add the `--skipSnykMonitoredRepos` flag.\
-    You might have repos in Bitbucket Cloud that are not monitored in Snyk; use this flag to skip checking for Snyk monitored repos and go directly to Bitbucket Cloud to fetch the commits.
+*   Snyk에서 이미 모니터링한 리포지토리에 관계없이 Bitbucket Cloud에서 모든 커밋을 가져오려면 `--skipSnykMonitoredRepos` flag를 추가하십시오.\
+    Snyk에서 모니터링되지 않는 리포지토리가 Bitbucket Cloud에 있을 수 있습니다. 이 flag를 사용하여 Snyk에서  모니터링 하는 리포지토리 확인을 건너뛰고 Bitbucket Cloud로 직접 이동하여 커밋을 가져옵니다.
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --skipSnykMonitoredRepos

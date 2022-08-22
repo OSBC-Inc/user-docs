@@ -1,10 +1,10 @@
 ---
-description: The list of options and some examples for Bitbucket Server
+description: Bitbucket Server에 대한 옵션 목록 및 몇 가지 예
 ---
 
-# Bitbucket Server - Examples
+# Bitbucket Server - 몇 가지 예
 
-The following options are available for the `snyk-scm-contributors-count bitbucket-server` command:
+`snyk-scm-contributors-count bitbucket-server` command에는 다음 옵션을 사용할 수 있습니다:
 
 ```
   --version                 Show version number                        [boolean]
@@ -20,70 +20,71 @@ The following options are available for the `snyk-scm-contributors-count bitbuck
   --importFileRepoType      [Optional] To be used with the importConfDir flag: Specify the type of repos to be added to the import file. Options: all/private/public. Default: all
 ```
 
-## Before running the command
+## **Command를 실행하기 전에**
 
-1. Export SNYK\_TOKEN (if you want to get the contributors ONLY for repos that are already monitored by Snyk):
-   * Make sure that your token has Group level access or use a service account's token that has Group level access. To learn more on how to create a service account, refer to [How to set up a service account](https://docs.snyk.io/features/integrations/managing-integrations/service-accounts#how-to-set-up-a-service-account).
-   * Copy the token value.
-   *   Export the token in your environment:
+1. SNYK\_TOKEN 내보내기(Snyk에서 이미 모니터링한 리포지토에 대한 기여자만 가져오려는 경우):
+   * 토큰에 그룹 level 액세스 권한이 있는지 확인하거나 그룹 level 액세스 권한이 있는 서비스 계정의 토큰을 사용하십시오. 서비스 계정을 만드는 방법에 대한 자세한 내용은 [서비스 계정 설정 방법](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#how-to-set-up-a-service-account)을 참조하십시오.
+   * 토큰 값을 복사합니다.
+   *   사용자 환경에서 토큰 내보내기:
 
        ```
        export SNYK_TOKEN=<YOUR-SNYK-TOKEN>
        ```
-2. Get your Bitbucket Server token and URL:
-   *   Create a Token if one does not exist, using this [guide](https://www.jetbrains.com/help/youtrack/standalone/integration-with-bitbucket-server.html#enable-youtrack-integration-bbserver).
+2. Bitbucket Server 토큰 및 URL 가져오기:
+   *   토큰이 없는 경우 이 [가이드](https://www.jetbrains.com/help/youtrack/server/integration-with-bitbucket-server.html#enable-youtrack-integration-bbserver)를 참조하여 토큰을 만듭니다.
 
-       **Note**: Make sure your token has read access to the repos.
-   * The URL is the actual URL of your Bitbucket Server instance, for example http://bitbucket-server.mycompany.com.
+       **주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
+   * 이 URL은 Bitbucket Server 인스턴스의 실제 URL입니다\
+     (예: http://bitbucket-server.mycompany.com).
 
-## Running the command
+## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
-### Usage levels
+### 사용 Level:
 
-*   To get commits for all projects and their repos in Bitbucket Server, provide the Bitbucket Server token and url:
+*   Bitbucket Server에서 모든 프로젝트와 해당 리포지토리에 대한 커밋을 가져오려면 Bitbucket Server 토큰 및 URL을 제공하십시오:
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL
     ```
-*   To get commits for some projects and their repos in Bitbucket Server, provide the Bitbucket Server token, Bitbucket Server url ,and the projects, separated by a comma:
+*   Bitbucket Server에서 일부 프로젝트와 해당 리포지토리에 대한 커밋을 가져오려면 Bitbucket Server 토큰, Bitbucket Server URL 및 프로젝트를 쉼표로 구분하여 제공하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1,Key2...
     ```
-*   To get commits for a specific repo in Bitbucket Serve, provide your Bitbucket Server token, Bitbucket Server url, a project, and a repo name:
+*   Bitbucket Server에서 특정 리포지토에 대한 커밋을 가져오려면 Bitbucket Server 토큰, Bitbucket Server URL, 프로젝트 및 리포지토리 이름을 입력하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1
     ```
 
-### Options
+### 옵션
 
-*   To get all the commits from Bitbucket Server regardless of the repos that are already monitored by Snyk, add the `--skipSnykMonitoredRepos` flag.\
-    You might have repos in Bitbucket Server that are not monitored in Snyk,. Use this flag to skip checking for Snyk monitored repos and go directly to Bitbucket Server to fetch the commits.
+*   Snyk에서 이미 모니터링한 리포지토리에 관계없이 Bitbucket Server에서 모든 커밋을 가져오려면 `--skipSnykMonitoredRepos` flag를 추가하십시오.\
+    Snyk에서 모니터링되지 않는 리포지토리가 Bitbucket Server에 있을 수 있습니다. 이 flag를 사용하여 Snyk에서  모니터링 하는 리포지토리 확인을 건너뛰고 Bitbucket Server로 직접 이동하여 커밋을 가져옵니다.
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --skipSnykMonitoredRepos
     ```
-*   To exclude some contributors from being counted in the commits, add an exclusion file with the emails to ignore(separated by commas) and apply the `--exclusionFilePath` with the path to that file:
+*   일부 기여자가 커밋에서 계산되지 않도록 하려면 무시할 이메일이 포함된 제외 파일(쉼표로 구분)을 추가하고 해당 파일의 경로와 함께 `--exclusionFilePath`를 적용합니다:
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1,Key2 --exclusionFilePath PATH_TO_FILE
     ```
-*   To set the output to json format: add the `--json` flag:
+*   출력을 json 형식으로 설정하려면 `--json` flag를 추가하십시오:
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1 --json
     ```
-*   To create an import file for me with my unmonitored repos, add the `--importConfDir` flag with a valid (writable) path to a folder in which the import files will be stored and add the `--importFileRepoType` flag (optional) with the repo types to add to the file (`all`/`private`/`public`, defaults to `all`). Note that these flags **can not** be set with the `--repo` flag.
+*   모니터링되지 않는 리포지토리로 import file을 생성하려면 import file이 저장될 폴더에 대한 유효한(쓰기 가능) 경로와 함께 `--importConfDir` flag를 추가하고 파일에 추가할 리포지토리 유형을 가진 `--importFileRepoType` flag(선택 사항)를 추가합니다(`all`/`private`/`public`, 기본값은 `all`). 이러한 flag는 `--repo` flag로 설정할 수 없습니다.
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --importConfDir ValidPathToFolder --importFileRepoType private/public/all
     ```
 
-    For more information about these flag, refer to [Creating and using the import file](../../creating-and-using-the-import-files.md).
-*   To run in debug mode for verbose output, add `DEBUG=snyk*` to the beginning of the command:
+    이러한 flag에 대한 자세한 내용은 [import file 생성 및 사용](../../creating-and-using-the-import-files.md)을 참조하십시오.
+*   상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오.
 
     ```
     DEBUG=snyk* snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1 --exclusionFilePath PATH_TO_FILE --skipSnykMonitoredRepos --json
