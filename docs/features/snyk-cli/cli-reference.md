@@ -1,14 +1,14 @@
 # CLI reference
 
-### Usage
+### 사용법
 
 `snyk [COMMAND] [SUBCOMMAND] [OPTIONS] [PACKAGE] [CONTEXT`-SPECIFIC\_OPTIONS`]`
 
-### Description
+### 설명
 
 The Snyk CLI is a build-time tool to find and fix known vulnerabilities in your projects. For a more detailed description of the Snyk CLI and Snyk, see [Snyk CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli). For an introduction on how to use the Snyk CLI, see [Getting started with the CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/getting-started-with-the-cli).
 
-### Available CLI commands
+### 사용 가능한 CLI Command
 
 To learn more about each Snyk CLI command, use the `--help` option, for example, `snyk auth --help` or `snyk container --help`. You can also use the help command: `snyk help [<COMMAND>]`.
 
@@ -54,7 +54,7 @@ Display the `.snyk` policy for a package.
 
 Modify the `.snyk` policy to ignore stated issues.
 
-### New CLI commands
+### 새로운 CLI Command
 
 #### ``[`snyk fix`](../fix-vulnerabilities-from-the-cli/automatic-remediation-with-snyk-fix.md)``
 
@@ -64,7 +64,7 @@ Apply the recommended updates for supported ecosystems automatically.
 
 Create a Snyk App using the Snyk CLI.
 
-### Sub-commands of CLI commands
+### CLI commands의 Sub-commands
 
 The following is a list of the sub-commands for Snyk CLI commands. Each sub-command is followed by the command(s) to which the sub-command applies. The commands are linked to their help docs. For details concerning each sub-command, see the help docs.
 
@@ -80,7 +80,7 @@ The following is a list of the sub-commands for Snyk CLI commands. Each sub-comm
 
 `clear`: sub-command of [config](https://docs.snyk.io/features/snyk-cli/commands/config)
 
-### Exit codes
+### 종료 코드
 
 Possible exit codes and their meaning:
 
@@ -89,14 +89,14 @@ Possible exit codes and their meaning:
 **2**: failure, try to re-run command\
 **3**: failure, no supported projects
 
-### Configure the Snyk CLI
+### Snyk CLI 구성
 
 You can use environment variables to configure the Snyk CLI and also set variables to configure the Snyk CLI to connect with the Snyk API. See [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli).
 
-### Debug
+### 디버그
 
 Use `-d` option to output the debug logs.
 
-### Options
+### 옵션
 
 A list of all the options for Snyk CLI commands and the commands to which they apply is being developed.
