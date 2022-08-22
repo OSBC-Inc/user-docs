@@ -61,31 +61,31 @@ description: Azure에 대한 옵션 목록 및 몇 가지 예
 
 ### 옵션
 
-*   To get all the commits from Azure regardless of the repos that are already monitored by Snyk, add the `--skipSnykMonitoredRepos` flag.
+*   Snyk에서 이미 모니터링한 리포지토리에 관계없이 Bitbucket Server에서 모든 커밋을 가져오려면 `--skipSnykMonitoredRepos` flag를 추가하십시오.
 
-    You might have repos in Azure that are not monitored in Snyk; use this flag to skip checking for Snyk monitored repos and go directly to Azure to fetch the commits.
+    Azure에 Snyk에서 모니터링되지 않는 리포지토리가 있을 수 있습니다. 이 플래그를 사용하여 Snyk에서 모니터링되는 리포지토리 확인을 건너뛰고 Azure로 직접 이동하여 커밋을 가져옵니다.
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --skipSnykMonitoredRepos
     ```
-*   To exclude some contributors from being counted in the commits, add an exclusion file with the emails to ignore (separated by commas) and apply the `--exclusionFilePath` with the path to that file:
+*   일부 기여자가 커밋에서 계산되지 않도록 하려면 무시할 이메일이 포함된 제외 파일(쉼표로 구분)을 추가하고 해당 파일의 경로와 함께 `--exclusionFilePath`를 적용합니다:
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --projectKeys Key1,Key2 --exclusionFilePath PATH_TO_FILE
     ```
-*   To set the output to json format: add the `--json` flag:
+*   출력을 json 형식으로 설정하려면 `--json` flag를 추가하십시오:
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --projectKeys Key1 --repo Repo1 --json
     ```
-*   To create an import file for your unmonitored repos: add the `--importConfDir` flag with a valid (writable) path to a folder in which the import files will be stored and add the `--importFileRepoType` flag (optional) with the repo types to add to the file (`all`/`private`/`public`, defaults to `all`). Note that these flags **can not** be set with the `--repo flag.`
+*   모니터링되지 않는 리포지토리로 import file을 생성하려면 import file이 저장될 폴더에 대한 유효한(쓰기 가능) 경로와 함께 `--importConfDir` flag를 추가하고 파일에 추가할 리포지토리 유형을 가진 `--importFileRepoType` flag(선택 사항)를 추가합니다(`all`/`private`/`public`, 기본값은 `all`). 이러한 flag는 `--repo` flag로 **설정할 수 없습니다**.
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --importConfDir ValidPathToWritableFolder --importFileRepoType private/public/all
     ```
 
     For more details about these flags, refer to the [Creating and using the import page](../../creating-and-using-the-import-files.md).
-*   To run in debug mode for verbose output, prefix the command with`DEBUG=snyk*`:
+*   상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오:
 
     ```
     DEBUG=snyk* snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --projectKeys Key1 --repo Repo1 --exclusionFilePath PATH_TO_FILE --skipSnykMonitoredRepos --json

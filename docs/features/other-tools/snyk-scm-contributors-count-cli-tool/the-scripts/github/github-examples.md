@@ -58,7 +58,7 @@ snyk-scm-contributors-count github --token TOKEN --orgs ORG_ONE,ORG_TWO --exclus
     ```
     snyk-scm-contributors-count github --token TOKEN --json
     ```
-* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오.
+* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오:
 
 ```
 DEBUG=snyk* snyk-scm-contributors-count github --token TOKEN --orgs ORG --repo REPO --exclusionFilePath PATH_TO_FILE --json

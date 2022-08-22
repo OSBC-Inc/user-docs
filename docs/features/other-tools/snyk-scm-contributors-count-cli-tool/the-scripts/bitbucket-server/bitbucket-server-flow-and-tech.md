@@ -14,7 +14,7 @@
 
 ## 사용된 Bitbucket Server API endpoints <a href="#bitbucket-cloud-api-endpoints-used" id="bitbucket-cloud-api-endpoints-used"></a>
 
-* 워크스페이스가 **제공되지 않은 경우** BB Cloud에서 리포지토리를 가져오려면 다음과 같이 하십시오:\
+* 작업영역이 **제공되지 않은 경우** BB Cloud에서 리포지토리를 가져오려면:\
   &#x20;`/rest/api/1.0/repos`
-* 워크스페이스가 **제공된 경우** BB Cloud에서 리포지토를 가져오려면 다음과 같이 하십시오: `/rest/api/1.0/projects/{Project}/repos`
-* 가져온/제공된 리포지토리 목록에 대한 커밋을 가져오려면 다음과 같이 하십시오: `/rest/api/1.0/projects/{Project}/repos/{Repo}/commits`
+* 작업 공간이 **제공된 경우** BB Cloud에서 리포지토를 가져오려면: `/rest/api/1.0/projects/{Project}/repos`
+* 가져온/제공된 리포지토리 목록에 대한 커밋을 가져오려면: `/rest/api/1.0/projects/{Project}/repos/{Repo}/commits`

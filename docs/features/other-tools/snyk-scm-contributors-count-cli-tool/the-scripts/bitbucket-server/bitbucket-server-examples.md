@@ -84,7 +84,7 @@ description: Bitbucket Server에 대한 옵션 목록 및 몇 가지 예
     ```
 
     이러한 flag에 대한 자세한 내용은 [import file 생성 및 사용](../../creating-and-using-the-import-files.md)을 참조하십시오.
-*   상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오.
+*   상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오:
 
     ```
     DEBUG=snyk* snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1 --exclusionFilePath PATH_TO_FILE --skipSnykMonitoredRepos --json
