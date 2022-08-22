@@ -11,6 +11,8 @@
 
 ## 사용된 GitHub API endpoints <a href="#azure-api-endpoints-used" id="azure-api-endpoints-used"></a>
 
-* GitHub에서 org를 가져오려면: `/user/orgs`
+* GitHub에서 org를 가져오려면:\
+  `/user/orgs`
 * 가져온/제공된 Org 목록과 상관관계가 있는 리포지토리 목록을 가져오려면 다음과 같이 하십시오: `/orgs/{Org}/repos`
-* 가져온/제공된 리포지토리 목록에 대한 커밋을 가져오려면: `repos/{Org}/{Repo}/commits?since={threeMonthsDate}`
+* 가져온/제공된 리포지토리 목록에 대한 커밋을 가져오려면: \
+  `repos/{Org}/{Repo}/commits?since={threeMonthsDate}`
