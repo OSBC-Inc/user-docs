@@ -91,7 +91,7 @@ Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 ### Snyk CLI 구성
 
-환경 변수를 사용하여 Snyk CLI를 구성하고 변수를 설정하여 Snyk API에 연결할 수 있습니다. [Snyk CLI 구성](configure-the-snyk-cli.md)을 참조하십시오.
+환경 변수를 사용하여 Snyk CLI를 구성하고 변수를 설정하여 Snyk API에 연결할 수 있습니다. [Snyk CLI 구성](snyk-cli.md)을 참조하십시오.
 
 ### 디버그
 
