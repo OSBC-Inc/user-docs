@@ -16,9 +16,9 @@ Snyk CLI를 사용하여 프로젝트의 취약성을 테스트하기 전에 제
 
 Snyk CLI를 사용하여 Snyk Code, Container 또는 Infrastructure as Code projects의 문제를 검색하는 경우 각 제품에 관련된 CLI 사용 지침을 참조하십시오:
 
-* [Using Snyk Code via the CLI](broken-reference)
-* [Snyk CLI for container security](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security)
-* [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
+* [CLI를 통한 Snyk Code 사용](../../snyk-products/snyk-code/cli-for-snyk-code/)
+* [컨테이너 보안을 위한 Snyk CLI](../../snyk-products/snyk-container/snyk-cli-for-container-security/)
+* [Infrastructure as Code용 Snyk CLI](../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)
 
 ## 프로젝트 스캔
 
