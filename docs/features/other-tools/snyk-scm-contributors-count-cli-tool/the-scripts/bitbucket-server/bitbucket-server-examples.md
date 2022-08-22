@@ -1,8 +1,8 @@
 ---
-description: The list of options and some examples for Bitbucket Server
+description: Bitbucket Server에 대한 옵션 목록 및 몇 가지 예
 ---
 
-# Bitbucket Server - Examples
+# Bitbucket Server - 몇 가지 예
 
 The following options are available for the `snyk-scm-contributors-count bitbucket-server` command:
 
