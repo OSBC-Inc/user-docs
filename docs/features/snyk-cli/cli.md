@@ -48,7 +48,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 ![스냅샷 및 검색 결과 모니터링](../../.gitbook/assets/a.png)
 
-자세한 내용은 [Monitor your projects at regular intervals](https://docs.snyk.io/snyk-cli/test-for-vulnerabilities/monitor-your-projects-at-regular-intervals)을 참조하십시오.
+자세한 내용은 [Monitor your projects at regular intervals](secure-your-projects-in-the-long-term/monitor-your-projects-at-regular-intervals.md)을 참조하십시오.
 
 ## 테스트 부족
 
@@ -60,7 +60,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 ## 추가 정보
 
-`snyk help`를 실행하거나 [CLI reference](https://docs.snyk.io/snyk-cli/cli-reference)를 참고하십시오.
+`snyk help`를 실행하거나 [CLI reference](cli-reference.md)를 참고하십시오.
 
 간단한 비디오 교육 세션은 [Introduction to the Snyk CLI](https://training.snyk.io/courses/intro-cli)를 참조하십시오.
 
