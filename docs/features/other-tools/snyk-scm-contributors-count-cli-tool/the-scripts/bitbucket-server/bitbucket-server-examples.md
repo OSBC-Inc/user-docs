@@ -41,19 +41,19 @@ description: Bitbucket Server에 대한 옵션 목록 및 몇 가지 예
 
 다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
-### Usage levels
+### 사용 Level:
 
-*   To get commits for all projects and their repos in Bitbucket Server, provide the Bitbucket Server token and url:
+*   Bitbucket Server에서 모든 프로젝트와 해당 리포지토리에 대한 커밋을 가져오려면 Bitbucket Server 토큰 및 URL을 제공하십시오:
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL
     ```
-*   To get commits for some projects and their repos in Bitbucket Server, provide the Bitbucket Server token, Bitbucket Server url ,and the projects, separated by a comma:
+*   Bitbucket Server에서 일부 프로젝트와 해당 리포지토리에 대한 커밋을 가져오려면 Bitbucket Server 토큰, Bitbucket Server URL 및 프로젝트를 쉼표로 구분하여 제공하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1,Key2...
     ```
-*   To get commits for a specific repo in Bitbucket Serve, provide your Bitbucket Server token, Bitbucket Server url, a project, and a repo name:
+*   Bitbucket Server에서 특정 리포지토에 대한 커밋을 가져오려면 Bitbucket Server 토큰, Bitbucket Server URL, 프로젝트 및 리포지토리 이름을 입력하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1
