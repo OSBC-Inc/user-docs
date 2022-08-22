@@ -29,17 +29,17 @@ description: 옵션 목록 및 몇 가지 예
 
 ### 사용 Level:
 
-*   To get commits for all repos in all my orgs in Github: provide the Github token:
+*   Github에서 내 모든 Org의 모든 레포지토리에 대한 커밋을 가져오려면, Github 토큰을 제공하십시오:
 
     ```
     snyk-scm-contributors-count github --token TOKEN
     ```
-*   To get commits for some Orgs and their repos in Github: Provide the Github token and the org names, separated by a comma:
+*   Github에 있는 일부 Org와 해당 리포지토리에 대한 커밋을 가져오려면, Github 토큰과 조직 이름을 쉼표로 구분하여 제공하십시오:
 
     ```
     snyk-scm-contributors-count github --token TOKEN --orgs ORG_ONE,ORG_TWO,ORG_THREE
     ```
-*   To get commits for only one repo in Github: Provide the Github token, one org name and one repo name:
+*   Github에서 하나의 리포지토리에 대한 커밋만 가져오려면: Github 토큰, 하나의 Org 이름 및 하나의 리포지토리 이름을 제공합니다:
 
     ```
     snyk-scm-contributors-count github --token TOKEN --orgs ORG --repo REPO
