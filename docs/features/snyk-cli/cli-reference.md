@@ -6,7 +6,7 @@
 
 ### 설명
 
-The Snyk CLI is a build-time tool to find and fix known vulnerabilities in your projects. For a more detailed description of the Snyk CLI and Snyk, see [Snyk CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli). For an introduction on how to use the Snyk CLI, see [Getting started with the CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/getting-started-with-the-cli).
+Snyk CLI는 프로젝트에서 알려진 취약성을 찾아 수정하는 빌드 타임 도구입니다. Snyk CLI 및 Snyk에 대한 자세한 설명은 [Snyk CLI](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli)를 참조하십시오. Snyk CLI 사용 방법에 대한 자세한 내용은 [CLI 시작](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/getting-started-with-the-cli)을 참조하십시오.
 
 ### 사용 가능한 CLI Command
 
