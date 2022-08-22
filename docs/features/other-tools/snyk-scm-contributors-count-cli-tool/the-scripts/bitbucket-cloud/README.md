@@ -1,8 +1,8 @@
 ---
-description: Flow and Tech for Bitbucket Cloud
+description: Bitbucket Cloud의 진행순서 및 기술
 ---
 
 # Bitbucket Cloud
 
-* [Flow and Tech](bitbucket-cloud-flow-and-tech.md)
-* [Examples](bitbucket-cloud-examples.md)
+* [진행순서 및 기술](bitbucket-cloud-flow-and-tech.md)
+* [몇 가지 예](bitbucket-cloud-examples.md)
