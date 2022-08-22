@@ -1,5 +1,5 @@
 ---
-description: Flow and Tech for Azure DevOps
+description: Azure DevOps의 진행순서 및 기술
 ---
 
 # Azure DevOps
