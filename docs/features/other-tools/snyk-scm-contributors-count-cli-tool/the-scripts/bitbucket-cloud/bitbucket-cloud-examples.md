@@ -64,24 +64,24 @@ description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --skipSnykMonitoredRepos
     ```
-*   To exclude some contributors from being counted in the commits , add an exclusion file with the emails to ignore (separated by commas),and apply the `--exclusionFilePath` with the path to that file:
+*   일부 기여자를 커밋에서 제외하려면 무시할 이메일이 포함된 제외 파일(쉼표로 구분)을 추가하고 해당 파일의 경로와 함께 `--exclusionFilePath`를 적용합니다:
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1,Workspace2 --exclusionFilePath PATH_TO_FILE
     ```
-*   To set the output to json format: add the `--json` flag:
+*   출력을 json 형식으로 설정하려면 `--json` flag를 추가하십시오:
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1 --repo Repo1 --json
     ```
-*   To create an import file for your unmonitored repos, add the `--importConfDir` flag with a valid (writable) path to a folder in which the import files will be stored, and add the `--importFileRepoType` flag (optional) with the repo types to add to the file (`all`/`private`/`public`, defaults to `all`). Note that these flags **can not** be set with the `--repo` flag.
+*   모니터링되지 않는 리포지토리로 import file을 생성하려면 import file이 저장될 폴더에 대한 유효한(쓰기 가능) 경로와 함께 `--importConfDir` flag를 추가하고 파일에 추가할 리포지토리 유형을 가진 `--importFileRepoType` flag(선택 사항)를 추가합니다(`all`/`private`/`public`, 기본값은 `all`). 이러한 flag는 `--repo` flag로 **설정할 수 없습니다**.
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --importConfDir ValidPathToFolder --importFileRepoType private/public/all
     ```
 
-    For more information about these flags, refer to this [Creating and using the import page](../../creating-and-using-the-import-files.md).
-*   To run in debug mode for verbose output, prefix with `DEBUG=snyk*`:
+    이러한 flag에 대한 자세한 내용은 [import file 생성 및 사용](../../creating-and-using-the-import-files.md)을 참조하십시오.
+*   상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오.
 
     ```
     DEBUG=snyk* snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1 --repo Repo1 --exclusionFilePath PATH_TO_FILE --skipSnykMonitoredRepos --jsonTo learn more about how to create a service account, refer to 
