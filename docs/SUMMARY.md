@@ -409,7 +409,7 @@
         * [Bitbucket Cloud - Flow and Tech](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/bitbucket-cloud-flow-and-tech.md)
         * [Bitbucket Cloud - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/bitbucket-cloud-examples.md)
       * [Bitbucket Server](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/README.md)
-        * [Bitbucket Server - Flow and Tech](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/bitbucket-server-flow-and-tech.md)
+        * [Bitbucket Server - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/bitbucket-server-flow-and-tech.md)
         * [Bitbucket Server - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/bitbucket-server-examples.md)
       * [GitHub](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/README.md)
         * [GitHub - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/github/github-flow-and-tech.md)
