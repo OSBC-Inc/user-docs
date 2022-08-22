@@ -15,11 +15,11 @@ description: "각 SCM 스크립트의 \bFlag"
 | **GitLab Ent.** | `"token"`           | `"groups"`      | `"project"` | `"exclusionFilePath"` | `"json"` |                            |                         |                           | `"url" [required]`                              |
 
 {% hint style="info" %}
-Flag 이름은 SCM에 있는 flag 이름과 일치한다. Bitbucket 서버, GitHub Enterprise 및 GitLab Enterprise와 같은 "Private" SCM은 명령에서 flag로 설정될 호스트 URL이 필요합니다.
+Flag 이름은 SCM에 있는 flag 이름과 일치합니다. Bitbucket 서버, GitHub Enterprise 및 GitLab Enterprise와 같은 "Private" SCM은 명령에서 flag로 설정될 호스트 URL이 필요합니다.
 {% endhint %}
 
 {% hint style="info" %}
-"`fetch AllOrgs`" flag는 깃허브 엔터프라이즈에 고유하며 GHE에서 Orgs에 대한 두 가지 접근 level을 구분한다.\
+"`fetch AllOrgs`" flag는 깃허브 엔터프라이즈에 고유하며 GHE에서 Orgs에 대한 두 가지 접근 level을 구분합니다.\
 1\. With the flag - 제공된 토큰이 액세스할 수 있는 모든 Orgs를 가져옵니다.\
 2\. Without the flag - 토큰이 제공된 **사용자**에게 일부 작업 권한(예: 읽기 권한 등)이 있는 Orgs만 가져옵니다.
 {% endhint %}
