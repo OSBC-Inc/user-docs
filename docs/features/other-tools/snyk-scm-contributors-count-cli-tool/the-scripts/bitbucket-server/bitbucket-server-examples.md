@@ -22,23 +22,24 @@ description: Bitbucket Server에 대한 옵션 목록 및 몇 가지 예
 
 ## **Command를 실행하기 전에**
 
-1. Export SNYK\_TOKEN (if you want to get the contributors ONLY for repos that are already monitored by Snyk):
-   * Make sure that your token has Group level access or use a service account's token that has Group level access. To learn more on how to create a service account, refer to [How to set up a service account](https://docs.snyk.io/features/integrations/managing-integrations/service-accounts#how-to-set-up-a-service-account).
-   * Copy the token value.
-   *   Export the token in your environment:
+1. SNYK\_TOKEN 내보내기(Snyk에서 이미 모니터링한 리포지토에 대한 기여자만 가져오려는 경우):
+   * 토큰에 그룹 level 액세스 권한이 있는지 확인하거나 그룹 level 액세스 권한이 있는 서비스 계정의 토큰을 사용하십시오. 서비스 계정을 만드는 방법에 대한 자세한 내용은 [서비스 계정 설정 방법](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#how-to-set-up-a-service-account)을 참조하십시오.
+   * 토큰 값을 복사합니다.
+   *   사용자 환경에서 토큰 내보내기:
 
        ```
        export SNYK_TOKEN=<YOUR-SNYK-TOKEN>
        ```
-2. Get your Bitbucket Server token and URL:
-   *   Create a Token if one does not exist, using this [guide](https://www.jetbrains.com/help/youtrack/standalone/integration-with-bitbucket-server.html#enable-youtrack-integration-bbserver).
+2. Bitbucket Server 토큰 및 URL 가져오기:
+   *   토큰이 없는 경우 이 [가이드](https://www.jetbrains.com/help/youtrack/server/integration-with-bitbucket-server.html#enable-youtrack-integration-bbserver)를 참조하여 토큰을 만듭니다.
 
-       **Note**: Make sure your token has read access to the repos.
-   * The URL is the actual URL of your Bitbucket Server instance, for example http://bitbucket-server.mycompany.com.
+       **주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
+   * 이 URL은 Bitbucket Server 인스턴스의 실제 URL입니다\
+     (예: http://bitbucket-server.mycompany.com).
 
 ## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
 ### Usage levels
 
