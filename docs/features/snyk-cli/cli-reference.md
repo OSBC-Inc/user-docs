@@ -82,21 +82,21 @@ Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 ### 종료 코드
 
-Possible exit codes and their meaning:
+종료가 가능한 코드와 그 의미는 다음과 같습니다:
 
-**0**: success, no vulnerabilities found\
-**1**: action\_needed, vulnerabilities found\
-**2**: failure, try to re-run command\
-**3**: failure, no supported projects
+**0**: 성공, 취약점 없음\
+**1**: action\_neded, 취약점 발견\
+**2**: 실패, command 재실행 시도\
+**3**: 실패, 지원되는 프로젝트 없음
 
 ### Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and also set variables to configure the Snyk CLI to connect with the Snyk API. See [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli).
+환경 변수를 사용하여 Snyk CLI를 구성하고 변수를 설정하여 Snyk API에 연결할 수 있습니다. [Snyk CLI 구성](configure-the-snyk-cli.md)을 참조하십시오.
 
 ### 디버그
 
-Use `-d` option to output the debug logs.
+`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
 ### 옵션
 
-A list of all the options for Snyk CLI commands and the commands to which they apply is being developed.
+Snyk CLI command에 대한 모든 옵션 목록과 해당 옵션이 적용되는 command 목록이 개발되고 있습니다.
