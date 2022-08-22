@@ -65,7 +65,7 @@ snyk-scm-contributors-count gitlab --token TOKEN --projectKeys ID1,ID2,Path1/Nam
     ```
     snyk-scm-contributors-count gitlab --token TOKEN --json
     ```
-* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오:
+* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오.
 
 ```
 DEBUG=snyk* snyk-scm-contributors-count gitlab --token TOKEN --url URL --exclusionFilePath PATH_TO_FILE --json

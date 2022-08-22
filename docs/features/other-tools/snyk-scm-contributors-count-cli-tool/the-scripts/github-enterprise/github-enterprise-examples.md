@@ -64,7 +64,7 @@ snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --fet
     ```
     snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --json
     ```
-* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오:
+* 상세 출력에 대해 디버그 모드로 실행하려면 `DEBUG=synk*` 을 command의 시작 부분에 추가하십시오.
 
 ```
 DEBUG=snyk* snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL --orgs ORG --repo REPO --exclusionFilePath PATH_TO_FILE --json

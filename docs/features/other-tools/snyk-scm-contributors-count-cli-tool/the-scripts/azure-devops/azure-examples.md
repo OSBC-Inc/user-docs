@@ -63,7 +63,7 @@ description: Azure에 대한 옵션 목록 및 몇 가지 예
 
 *   Snyk에서 이미 모니터링한 리포지토리에 관계없이 Bitbucket Server에서 모든 커밋을 가져오려면 `--skipSnykMonitoredRepos` flag를 추가하십시오.
 
-    Azure에 Snyk에서 모니터링되지 않는 리포지토리가 있을 수 있습니다. 이 플래그를 사용하여 Snyk에서 모니터링되는 리포지토리 확인을 건너뛰고 Azure로 직접 이동하여 커밋을 가져옵니다.
+    Snyk에서 모니터링되지 않는 리포지토리가 Azure에 있을 수 있습니다. 이 플래그를 사용하여 Snyk에서 모니터링되는 리포지토리 확인을 건너뛰고 Azure로 직접 이동하여 커밋을 가져옵니다.
 
     ```
     snyk-scm-contributors-count azure-devops --token AZURE-TOKEN --org AZURE-ORG --skipSnykMonitoredRepos
