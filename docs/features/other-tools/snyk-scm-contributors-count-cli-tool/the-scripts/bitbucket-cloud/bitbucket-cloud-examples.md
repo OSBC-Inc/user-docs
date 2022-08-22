@@ -36,21 +36,21 @@ description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
 
 ## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
 ### 사용 Level:
 
-*   To get commits for all workspaces and their repos in Bitbucket Cloud, provide the Bitbucket Cloud user and app password:
+*   Bitbucket Cloud에서 모든 워크스페이스와 해당 리포지토리에 대한 커밋을 가져오려면 Bitbucket Cloud 사용자 및 앱 비밀번호를 입력하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD
     ```
-*   To get commits for some workspaces and their repos in Bitbucket Cloud, provide the Bitbucket Cloud user, Bitbucket Cloud app password, and a comma-separated list of workspaces:
+*   Bitbucket Cloud에서 일부 워크스페이스와 해당 리포지토에 대한 커밋을 가져오려면 Bitbucket Cloud 사용자, Bitbucket Cloud 앱 비밀번호 및 쉼표로 구분된 워크스페이스 목록을 제공하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1,Workspace2...
     ```
-*   To get commits for a specific repo in Bitbucket Cloud, provide the Bitbucket Cloud user, Bitbucket Cloud app password, a workspace, and a repo name:
+*   Bitbucket Cloud에서 특정 리포지토리에 대한 커밋을 얻으려면 Bitbucket Cloud 사용자, Bitbucket Cloud 앱 비밀번, 워크스페이스 및 리포지토 이름을 입력하십시오.
 
     ```
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1 --repo Repo1
