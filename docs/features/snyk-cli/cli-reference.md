@@ -58,15 +58,15 @@ Snyk CLI 구성을 관리합니다.
 
 #### ``[`snyk fix`](../fix-vulnerabilities-from-the-cli/automatic-remediation-with-snyk-fix.md)``
 
-Apply the recommended updates for supported ecosystems automatically.
+지원되는 에코시스템에 대한 권장 업데이트를 자동으로 적용합니다.
 
 #### ``[`snyk apps`](https://docs.snyk.io/features/snyk-cli/create-a-snyk-app-using-the-snyk-cli)``
 
-Create a Snyk App using the Snyk CLI.
+Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 ### CLI commands의 Sub-commands
 
-The following is a list of the sub-commands for Snyk CLI commands. Each sub-command is followed by the command(s) to which the sub-command applies. The commands are linked to their help docs. For details concerning each sub-command, see the help docs.
+다음은 Snyk CLI command에 대한 sub-command 목록입니다. 각 sub-command 뒤에는 sub-command가 적용되는 command가 뒤따릅니다. command는 도움말 문서에 연결됩니다. 각 sub-command에 대한 자세한 내용은 도움말 문서를 참조하십시오.
 
 `test`: sub-command of [`code`](https://docs.snyk.io/features/snyk-cli/commands/code), [`container`](https://docs.snyk.io/features/snyk-cli/commands/container), and [`iac`](https://docs.snyk.io/features/snyk-cli/commands/iac)
 
