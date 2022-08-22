@@ -1,10 +1,10 @@
 ---
-description: The list of options and some examples for Bitbucket Cloud
+description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
 ---
 
 # Bitbucket Cloud - Examples
 
-The following options are available for the `snyk-scm-contributors-count bitbucket-cloud` command:
+`snyk-scm-contributors-count bitbucket-cloud` command에는 다음 옵션을 사용할 수 있습니다:
 
 ```
   --version                 Show version number                        [boolean]
@@ -20,7 +20,7 @@ The following options are available for the `snyk-scm-contributors-count bitbuck
   --importFileRepoType      [Optional] To be used with the importConfDir flag: Specify the type of repos to be added to the import file. Options: all/private/public. Default: all
 ```
 
-## Before running the command
+## **Command를 실행하기 전에**
 
 1. Export SNYK\_TOKEN (if you want to get the contributors only for repos that are already monitored by Snyk):
    * Make sure that your token has Group level access or use a service account's token that has Group level access. To learn more about how to create a service account, refer to [How to set up a service account](https://docs.snyk.io/features/integrations/managing-integrations/service-accounts#how-to-set-up-a-service-account).
@@ -34,11 +34,11 @@ The following options are available for the `snyk-scm-contributors-count bitbuck
 
     **Note**: Make sure your credentials have read access to the repos.
 
-## Running the command
+## Command 실행
 
 Consider the following levels of usage and options:
 
-### Usage levels
+### 사용 Level:
 
 *   To get commits for all workspaces and their repos in Bitbucket Cloud, provide the Bitbucket Cloud user and app password:
 
@@ -56,7 +56,7 @@ Consider the following levels of usage and options:
     snyk-scm-contributors-count bitbucket-cloud --user USERNAME --password APP_PASSWORD --workspaces Workspace1 --repo Repo1
     ```
 
-### Options
+### 옵션
 
 *   To get all the commits from Bitbucket Cloud regardless of the repos that are already monitored by Snyk, add the `--skipSnykMonitoredRepos` flag.\
     You might have repos in Bitbucket Cloud that are not monitored in Snyk; use this flag to skip checking for Snyk monitored repos and go directly to Bitbucket Cloud to fetch the commits.
