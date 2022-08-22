@@ -19,15 +19,15 @@ description: 옵션 목록 및 몇 가지 예
 
 ## **Command를 실행하기 전에**:
 
-Get your Github token or create a new one with this [guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+이 [가이드](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)를 사용하여 GitHub Enterprise 토큰을 가져오거나 새 토큰을 만드십시오.
 
-**Note:** make sure your token has read access to the repos.
+**주의:** 토큰에 리포지토리에 대한 읽기 권한이 있는지 확인하십시오.
 
 ## Command 실행
 
-Consider the following levels of usage and options:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
-#### Usage levels:
+### 사용 Level:
 
 *   To get commits for all repos in all my orgs in Github: provide the Github token:
 
