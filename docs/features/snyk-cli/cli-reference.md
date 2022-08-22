@@ -10,49 +10,49 @@ Snyk CLI는 프로젝트에서 알려진 취약성을 찾아 수정하는 빌드
 
 ### 사용 가능한 CLI Command
 
-To learn more about each Snyk CLI command, use the `--help` option, for example, `snyk auth --help` or `snyk container --help`. You can also use the help command: `snyk help [<COMMAND>]`.
+각 Snyk CLI 명령에 대해 자세히 알아보려면 `--help` 옵션 (예: `snyk auth --help` 또는 `snyk container --help` ) 을 사용하십시오. 도움말 명령인 `snyk help [<COMMAND>]` 를 사용할 수도 있습니다.
 
-Each command in this list is linked to the corresponding help page in these docs. A list of all the [options](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/cli-reference/#options) for Snyk CLI commands is at the end of this page. The options are explained in detail in the help for each command.
+이 목록의 각 명령은 이러한 문서의 해당 도움말 페이지에 연결됩니다. Snyk CLI command에 대한 모든 [옵션 목록](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/cli-reference#options)은 이 페이지 끝에 있습니다. 각 Command의 도움말에서 옵션에 대해 자세히 설명합니다.
 
 #### [`snyk auth`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/auth.md)
 
-Authenticate Snyk CLI with a Snyk account.
+Snyk 계정을 사용하여 Snyk CLI를 인증합니다.
 
 #### [`snyk test`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/test.md)
 
-Test a project for open source vulnerabilities and license issues.
+프로젝트를 테스트하여 오픈 소스 취약성 및 라이센스 문제를 확인합니다.
 
 #### [`snyk monitor`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/monitor.md)
 
-Snapshot and continuously monitor a project for open source vulnerabilities and license issues.
+프로젝트를 스냅샷으로 만들고 지속적으로 모니터링하여 오픈 소스 취약성 및 라이센스 문제를 해결합니다.
 
 #### [`snyk container`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/container.md)
 
-Test container images for vulnerabilities.
+컨테이너 이미지에서 취약성을 테스트합니다.
 
 #### [`snyk iac`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/iac.md)
 
-Find security issues in Infrastructure as Code files.
+Infrastructure as Code 파일에서 보안 문제를 찾습니다.
 
 #### [`snyk code`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/code.md)
 
-Find security issues using static code analysis.
+정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
 #### [`snyk log4shell`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/log4shell.md)
 
-Find Log4Shell vulnerability.
+Log4Shell 취약성을 찾습니다.
 
 #### [`snyk config`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/config.md)
 
-Manage Snyk CLI configuration.
+Snyk CLI 구성을 관리합니다.
 
 #### [`snyk policy`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/policy.md)
 
-Display the `.snyk` policy for a package.
+패키지에 대한 `.synk` 정책을 표시합니다.
 
 #### [`snyk ignore`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/ignore.md)
 
-Modify the `.snyk` policy to ignore stated issues.
+`.synk` 정책을 수정하여 명시된 문제를 무시합니다.
 
 ### 새로운 CLI Command
 
