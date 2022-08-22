@@ -1,5 +1,5 @@
 ---
-description: GitHub에 대한 옵션 목록 및 몇 가지 예
+description: 옵션 목록 및 몇 가지 예
 ---
 
 # GitHub - 몇 가지 예

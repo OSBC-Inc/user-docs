@@ -4,7 +4,7 @@ description: Bitbucket Server에 대한 옵션 목록 및 몇 가지 예
 
 # Bitbucket Server - 몇 가지 예
 
-The following options are available for the `snyk-scm-contributors-count bitbucket-server` command:
+`snyk-scm-contributors-count bitbucket-server` command에는 다음 옵션을 사용할 수 있습니다:
 
 ```
   --version                 Show version number                        [boolean]
@@ -20,10 +20,10 @@ The following options are available for the `snyk-scm-contributors-count bitbuck
   --importFileRepoType      [Optional] To be used with the importConfDir flag: Specify the type of repos to be added to the import file. Options: all/private/public. Default: all
 ```
 
-## Before running the command
+## **Command를 실행하기 전에**
 
-1. Export SNYK\_TOKEN (if you want to get the contributors ONLY for repos that are already monitored by Snyk):
-   * Make sure that your token has Group level access or use a service account's token that has Group level access. To learn more on how to create a service account, refer to [How to set up a service account](https://docs.snyk.io/features/integrations/managing-integrations/service-accounts#how-to-set-up-a-service-account).
+1. SNYK\_TOKEN 내보내기(Snyk에서 이미 모니터링한 리포지토에 대한 기여자만 가져오려는 경우):
+   * 토큰에 그룹 level 액세스 권한이 있는지 확인하거나 그룹 level 액세스 권한이 있는 서비스 계정의 토큰을 사용하십시오. 서비스 계정을 만드는 방법에 대한 자세한 내용은 [서비스 계정 설정 방법](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#how-to-set-up-a-service-account)을 참조하십시오.
    * Copy the token value.
    *   Export the token in your environment:
 
@@ -36,7 +36,7 @@ The following options are available for the `snyk-scm-contributors-count bitbuck
        **Note**: Make sure your token has read access to the repos.
    * The URL is the actual URL of your Bitbucket Server instance, for example http://bitbucket-server.mycompany.com.
 
-## Running the command
+## Command 실행
 
 Consider the following levels of usage and options:
 
@@ -58,7 +58,7 @@ Consider the following levels of usage and options:
     snyk-scm-contributors-count bitbucket-server --token BITBUCKET-TOKEN --url BITBUCKET-URL --projectKeys Key1 --repo Repo1
     ```
 
-### Options
+### 옵션
 
 *   To get all the commits from Bitbucket Server regardless of the repos that are already monitored by Snyk, add the `--skipSnykMonitoredRepos` flag.\
     You might have repos in Bitbucket Server that are not monitored in Snyk,. Use this flag to skip checking for Snyk monitored repos and go directly to Bitbucket Server to fetch the commits.
