@@ -403,7 +403,7 @@
     * [Flags](features/other-tools/snyk-scm-contributors-count-cli-tool/flags.md)
     * [스크립트](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/README.md)
       * [Azure DevOps](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/README.md)
-        * [Azure - Flow and Tech](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/azure-flow-and-tech.md)
+        * [Azure - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/azure-flow-and-tech.md)
         * [Azure - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/azure-examples.md)
       * [Bitbucket Cloud](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/README.md)
         * [Bitbucket Cloud - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/bitbucket-cloud-flow-and-tech.md)
