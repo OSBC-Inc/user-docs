@@ -14,6 +14,7 @@
 
 ## 사용된 Azure API endpoints
 
-* To get the Projects from Azure: `{Org}/_apis/projects`
-* To get the list of the repo/s that correlate with the fetched/provided project list: `{Project}/_apis/git/repositories`
-* To get the commits for the fetched/provided repo/s list:`{Project}/_apis/git/repositories/{Repo}/commits?$searchCriteria.fromDate={ThreeMonthsDate}`
+* Azure에서 프로젝트를 가져오려면 다음과 같이 하십시오: \
+  `{Org}/_apis/projects`
+* 가져온/제공된 프로젝트 목록과 상관관계가 있는 리포지토리 목록을 가져오려면 다음과 같이 하십시오:`{Project}/_apis/git/repositories`
+* 가져온/제공된 리포지토리 목록에 대한 커밋을 가져오려면 다음과 같이 하십시오:`{Project}/_apis/git/repositories/{Repo}/commits?$searchCriteria.fromDate={ThreeMonthsDate}`

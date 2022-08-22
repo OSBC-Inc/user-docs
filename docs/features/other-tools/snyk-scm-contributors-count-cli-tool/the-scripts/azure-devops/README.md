@@ -1,8 +1,8 @@
 ---
-description: Azure DevOps의 진행순서 및 기술
+description: Flow and Tech for Azure DevOps
 ---
 
 # Azure DevOps
 
-* [진행 순서  및 기술](azure-flow-and-tech.md)
-* [몇 가지 예](azure-examples.md)
+* [Flow and Tech](azure-flow-and-tech.md)
+* [Examples](azure-examples.md)

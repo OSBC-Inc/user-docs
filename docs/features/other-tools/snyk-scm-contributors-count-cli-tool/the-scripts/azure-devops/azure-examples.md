@@ -1,10 +1,10 @@
 ---
-description: The list of options and some examples for Azure
+description: Azure에 대한 옵션 목록 및 몇 가지 예
 ---
 
-# Azure - Examples
+# Azure - 몇 가지 예
 
-The following options are available for the `snyk-scm-contributors-count azure devops` command:
+`snyk-scm-contributors-count azure devops` command에는 다음 옵션을 사용할 수 있습니다:
 
 ```
   --version                 Show version number                        [boolean]
@@ -35,7 +35,7 @@ The following options are available for the `snyk-scm-contributors-count azure d
    *   Create a Token if one does not exist, using this [guide](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops\&tabs=preview-page).
 
        **Note**: Make sure your token has read access to the repos.
-   * Find your Org name in Azure  listed on the left pane on the [Azure DevOps site](https://dev.azure.com).
+   * Find your Org name in Azure listed on the left pane on the [Azure DevOps site](https://dev.azure.com).
 
 ## Running the command
 
