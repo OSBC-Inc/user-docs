@@ -406,7 +406,7 @@
         * [Azure - Flow and Tech](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/azure-flow-and-tech.md)
         * [Azure - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/azure-examples.md)
       * [Bitbucket Cloud](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/README.md)
-        * [Bitbucket Cloud - Flow and Tech](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/bitbucket-cloud-flow-and-tech.md)
+        * [Bitbucket Cloud - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/bitbucket-cloud-flow-and-tech.md)
         * [Bitbucket Cloud - Examples](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-cloud/bitbucket-cloud-examples.md)
       * [Bitbucket Server](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/README.md)
         * [Bitbucket Server - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/bitbucket-server/bitbucket-server-flow-and-tech.md)

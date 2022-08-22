@@ -1,6 +1,6 @@
-# Bitbucket Cloud - Flow and Tech
+# Bitbucket Cloud - 진행순서 및 기술
 
-## Flow
+## 진행순서 <a href="#flow" id="flow"></a>
 
 1. Fetch the monitored projects from Snyk (if the `skipSnykMonitoredRepos` flag was **not set** and the `SNYK_TOKEN` was exported).
 2. Fetch `one`/`some`/`all` the workspaces that the credentials have access to from SCM and create a workspaces list.
@@ -12,7 +12,7 @@
 8. Remove the contributors that were specified in the exclusion file (if `the exclusionFilePath` flag was set and a valid path to a text file was provided).
 9. Print the results.
 
-## Bitbucket Cloud API endpoints used
+## 사용된 Bitbucket Cloud API endpoints
 
 * To get the repositories from BB Cloud, if a workspace was **not** provided: `/api/2.0/repositories`
 * To get the repositories from BB Cloud, if a workspace/s **was** provided: `/api/2.0/repositories/{Workspace}`
