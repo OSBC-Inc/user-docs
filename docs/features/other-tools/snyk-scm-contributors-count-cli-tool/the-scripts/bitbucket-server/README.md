@@ -1,8 +1,8 @@
 ---
-description: Flow and Tech for Bitbucket Server
+description: Bitbucket Server의 진행순서 및 기술
 ---
 
 # Bitbucket Server
 
-* [Flow and Tech](bitbucket-server-flow-and-tech.md)
-* [Examples](bitbucket-server-examples.md)
+* [진행순서 및 기술](bitbucket-server-flow-and-tech.md)
+* [몇 가지 예](bitbucket-server-examples.md)
