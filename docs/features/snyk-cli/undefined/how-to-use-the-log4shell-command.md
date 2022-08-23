@@ -19,17 +19,17 @@
 
 ### 실행 방법
 
-1. 최신 버전의 Snyk CLI 설치 - [Snyk CLI 설치](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/install-the-snyk-cli)를 참조하십시오.
+1. 최신 버전의 Snyk CLI를 설치합니 - [Snyk CLI 설치](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/install-the-snyk-cli)를 참조하십시오.
 2. 프로젝트를 구축했는지 확인합니다.
 3. 검색할 프로젝트 디렉토리로 이동합니다.
 4. `snyk log4shell` 을 입력합니다.\
-   **주의**: 이 명령에는 추가 인수가 필요하거나 지원되지 않습니다.
+   **주의**: 이 command에는 추가 인수가 필요하거나 지원되지 않습니다.
 
 ### 스캔 결과
 
-Results appear after the scan finishes.
+스캔 완료 후 결과가 나타납니다.
 
-For example:
+예는 다음과 같습니:
 
 ```
 $ snyk log4shell
@@ -46,7 +46,7 @@ A vulnerable version of log4j was detected:
         - https://snyk.io/blog/log4shell-remediation-cheat-sheet/
 ```
 
-If no traces of a vulnerable log4j library are found, the results show this:
+취약한 log4j 라이브러리의 흔적을 찾을 수 없는 경우 결과에 다음과 같이 표시됩니다.
 
 ```
 $ snyk log4shell
@@ -58,9 +58,9 @@ No known vulnerable version of log4j was detected
 
 ### Fix advice
 
-For more details about fixing the affected packages, see the Snyk [Log4Shell fix cheatsheet](https://snyk.io/blog/log4shell-remediation-cheat-sheet).
+영향을 받는 패키지를 수정하는 방법에 대한 자세한 내용은  [Log4Shell fix cheatsheet](https://snyk.io/blog/log4shell-remediation-cheat-sheet)를 참조하십시오.
 
 ### 제한 사항
 
-* The Snyk CLI compares file signatures to a database of known files. If the Log4Shell vulnerability is fixed in a different way from updating the log4j library, the library is still reported in the results.
-* If the source code of the log4j library has been modified, it is detected.
+* Snyk CLI는 파일 서명을 알려진 파일의 데이터베이스와 비교합니다. Log4Shell 취약성이 log4j 라이브러리 업데이트와 다른 방식으로 해결된 경우에도 라이브러리는 결과에 계속 보고됩니다.
+* log4j 라이브러리의 소스 코드가 수정된 경우 해당 코드가 감지됩니다.
