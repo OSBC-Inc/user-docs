@@ -2,9 +2,9 @@
 
 ### 소개
 
-`snyk log4shell` 은 **log4Shell** 취약성([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228))의 영향을 받는 **log4j** 라이브러리가 매니페스트 파일(예: pom.xml 또는 build.gradle)에 선언되지 않았더라도 이 라이브러리의 추적을 찾는 데 도움이 되는 Snyk CLI 명령입니다.
+`snyk log4shell` 은 **log4Shell** 취약성([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228))의 영향을 받는 **log4j** 라이브러리가 매니페스트 파일(예: pom.xml 또는 build.gradle)에 선언되지 않았더라도 이 라이브러리의 추적을 찾는 데 도움이 되는 Snyk CLI command입니다.
 
-This command tests your built project and third-party applications, and it is complementary to the `snyk test` and `snyk test --scan-all-unmanaged` commands.
+이 command는 빌드된 프로젝트 및 타사 응용 프로그램을 테스트하며 `snyk test` 및 `snyk test --scan-all-unmanaged` command 보완합니다.
 
 \{% hint style="info" %\} Read more about the Log4Shell vulnerability in the Snyk [VulnDB entry](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720). \{% endhint %\}
 
