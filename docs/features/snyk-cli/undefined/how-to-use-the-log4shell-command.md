@@ -1,10 +1,8 @@
-# How to use the log4shell command
+# log4shell command 사용 방법
 
+### 소개
 
-
-### Introduction
-
-`snyk log4shell` is a Snyk CLI command, that helps find traces of the **log4j** library that are affected by the **Log4Shell** vulnerability ([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228)), even if this library is not declared in the manifest files (such as pom.xml or build.gradle).
+`snyk log4shell` 은 **log4Shell** 취약성([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228))의 영향을 받는 **log4j** 라이브러리가 매니페스트 파일(예: pom.xml 또는 build.gradle)에 선언되지 않았더라도 이 라이브러리의 추적을 찾는 데 도움이 되는 Snyk CLI 명령입니다.
 
 This command tests your built project and third-party applications, and it is complementary to the `snyk test` and `snyk test --scan-all-unmanaged` commands.
 
