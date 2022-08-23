@@ -8,16 +8,16 @@
 
 \{% hint style="info" %\} [Snyk VulnDB ](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720)항목의 Log4Shell 취약성에 대해 자세히 알아보십시오. \{% endhint %\}
 
-패키지 관리자 매니페스트 파일을 사용하여 Java 프로젝트를 테스트하려면 [Java용 Snyk(Gradle, Maven)](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)를 참조하십시오. `snyk test --scan-all-unmanaged` 에 대한 자세한 내용은 [CLI 참조의 메이븐 옵션 섹션](https://docs.snyk.io/snyk-cli/cli-reference#maven-options)을 참조하십시오.
+패키지 관리자 매니페스트 파일을 사용하여 Java 프로젝트를 테스트하려면 [Snyk for java(Gradle, Maven)](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)를 참조하십시오. `snyk test --scan-all-unmanaged` 에 대한 자세한 내용은 [CLI reference의 메이븐 옵션 섹션](https://docs.snyk.io/snyk-cli/cli-reference#maven-options)을 참조하십시오.
 
-### Usage
+### 사용법
 
-Use `snyk log4shell` to scan a Java project, to see if the project includes:
+`synk log4shell` 을 사용하여 Java 프로젝트를 스캔하고 프로젝트에 다음이 포함되어 있는지 확인합니다.
 
-* Any `.jar` or `.war` files with a vulnerable version of log4j.
-* Any files that are known to be present in a vulnerable version of the log4j library. Such a finding indicates that it is possible the whole log4j is included.
+* 취약한 버전의 log4j가 있는 `.jar` 또는 `.war` 파일입니다.
+* log4j 라이브러리의 취약한 버전에 있는 것으로 알려진 모든 파일. 이러한 결과는 전체 log4j가 포함될 수 있음을 나타냅니다.
 
-### How to run
+### 실행 방법
 
 1. Install the latest version of the Snyk CLI - see [Install the Snyk CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/install-the-snyk-cli).
 2. Make sure you have built the project.
@@ -25,7 +25,7 @@ Use `snyk log4shell` to scan a Java project, to see if the project includes:
 4. Enter `snyk log4shell`.\
    **Note**: this command does not require (nor support) any additional arguments.
 
-### Scan results
+### 스캔 결과
 
 Results appear after the scan finishes.
 
@@ -60,7 +60,7 @@ No known vulnerable version of log4j was detected
 
 For more details about fixing the affected packages, see the Snyk [Log4Shell fix cheatsheet](https://snyk.io/blog/log4shell-remediation-cheat-sheet).
 
-### Limitations
+### 제한 사항
 
 * The Snyk CLI compares file signatures to a database of known files. If the Log4Shell vulnerability is fixed in a different way from updating the log4j library, the library is still reported in the results.
 * If the source code of the log4j library has been modified, it is detected.
