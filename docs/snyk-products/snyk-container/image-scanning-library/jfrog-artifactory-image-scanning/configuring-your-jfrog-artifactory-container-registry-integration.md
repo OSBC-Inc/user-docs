@@ -13,7 +13,7 @@
 1. Snyk 계정으로 [로그인](https://app.snyk.io)합니다.
 2.  상단의 메뉴 모음에서 **Integrations**로 이동하여 Artifactory 옵션을 찾아 클릭합니다.
 
-    ![](<../../../../.gitbook/assets/image (57).png>)
+    <img src="../../../../.gitbook/assets/image (57).png" alt="" data-size="original">
 3. **Settings** 영역의 구성 페이지가 나타납니다.
 4. 다음과 같이 인증 정보를 입력합니다.
    1. **Username과 Password -** Artifactory 로그인 인증 정보를 사용합니다.
