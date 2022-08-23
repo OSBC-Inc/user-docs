@@ -1,8 +1,8 @@
-# Test for vulnerabilities
+# 취약성 테스트
 
 
 
-This group of pages includes information about scanning projects for vulnerabilities and license issues.
+이 페이지 그룹에는 취약성 및 라이센스 문제를 검색한 프로젝트 대한 정보가 포함되어 있습니다.
 
 * [Use Snyk Open Source from the CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/use-snyk-open-source-from-the-cli.md)
 * [Test public repositories before use](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/test-public-repositories-before-use.md)
