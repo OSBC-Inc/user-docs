@@ -19,11 +19,11 @@
 
 ### 실행 방법
 
-1. Install the latest version of the Snyk CLI - see [Install the Snyk CLI](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/install-the-snyk-cli).
-2. Make sure you have built the project.
-3. Navigate to the project directory to scan.
-4. Enter `snyk log4shell`.\
-   **Note**: this command does not require (nor support) any additional arguments.
+1. 최신 버전의 Snyk CLI 설치 - [Snyk CLI 설치](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/install-the-snyk-cli)를 참조하십시오.
+2. 프로젝트를 구축했는지 확인합니다.
+3. 검색할 프로젝트 디렉토리로 이동합니다.
+4. `snyk log4shell` 을 입력합니다.\
+   **주의**: 이 명령에는 추가 인수가 필요하거나 지원되지 않습니다.
 
 ### 스캔 결과
 
