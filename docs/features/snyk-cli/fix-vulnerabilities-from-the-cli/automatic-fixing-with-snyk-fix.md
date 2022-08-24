@@ -58,13 +58,13 @@ Licenses:               enabled
 * `--dry-run` - 거의 모든 로직을 실행하고 출력을 표시하되, 관련 파일을 최종 변경하지 마십시오. 변경 사항의 미리 보기를 표시합니다.
 * `--sequential` - 각 디펜던시 업데이트를 한 번에 하나씩 별도로 설치합니다(기본값은 한 번에 모두 설치). 기본값은 훨씬 느리지만 일부 업데이트가 실패해 프로세스가 계속 진행되도록 허용하여 성공적인 업데이트 수를 늘리는 데 도움이 됩니다.
 
-### Python support
+### 파이썬 지원
 
 * `requirements.txt` 파일(또는 사용자 지정 파일(예: `prod.txt`))이 포함된 Pip 프로젝트
 * `Pipfile` \*\*\*\* 및 \*\*\*\* `Pipfile.lock` 파일이 포함된 Pipenv 프로젝트
 * `pyproject.toml` \*\*\*\* and `Poetry.lock` 파일을 사용한 Poetry 프로젝트
 
-#### Usage examples
+#### 사용 예
 
 `snyk fix --file=requirements.txt`
 
@@ -72,9 +72,9 @@ Licenses:               enabled
 
 `snyk fix --all-projects`
 
-#### Requirements with `-r` directives
+#### `-r` 지시가 있는 요구 사항
 
-Where the `requirements.txt` looks like this, both `base.txt` and `requirements.txt` are updated if needed:
+`requirements.txt` 가 이렇게 표시되는 경우, 필요한 경우 `base.txt` 와 `requirements.txt` 가 모두 업데이트됩니다:
 
 ```
 -r base.txt # this means grab all the dependencies from here
