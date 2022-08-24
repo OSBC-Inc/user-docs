@@ -1,14 +1,10 @@
 # Advanced failing of builds in Snyk CLI
 
-The Snyk CLI provides the following options when failing your builds:
-
 Snyk CLI는 빌드 실패 시 다음 옵션을 제공합니다.
 
 ```
 --severity-threshold=low|medium|high
 ```
-
-Only report vulnerabilities of provided level or higher.
 
 제공된 수준 이상의 취약점만 보고합니다.
 
@@ -16,15 +12,11 @@ Only report vulnerabilities of provided level or higher.
 --fail-on=all|upgradable|patchable
 ```
 
-Only fail when there are vulnerabilities that can be fixed.
-
 수정할 수 있는 취약점이 있는 경우에만 실패합니다.
 
 ```
 --fail-on=all
 ```
-
-Fail when there is at least one vulnerability that can be either upgraded or patched.
 
 업그레이드하거나 패치할 수 있는 취약점이 하나 이상 있으면 실패합니다.
 
@@ -32,19 +24,13 @@ Fail when there is at least one vulnerability that can be either upgraded or pat
 --fail-on=upgradable
 ```
 
-Fail when there is at least one vulnerability that can be upgraded.
-
 업그레이드할 수 있는 취약점이 하나 이상 있으면 실패합니다.
 
 ```
 --fail-on=patchable
 ```
 
-Fail when there is at least one vulnerability that can be patched. If vulnerabilities do not have a fix and this option is being used, tests pass.
-
 패치할 수 있는 취약점이 하나 이상 있으면 실패합니다. 취약점에 수정 사항이 없고 이 옵션을 사용 중인 경우 테스트를 통과합니다.
-
-The Snyk CLI on its own does not have the capability natively to fail tests on more complex use cases. Here are some ways to achieve more complex pass/fail criteria.
 
 Snyk CLI 자체에는 기본적으로 더 복잡한 사용 사례에 대한 테스트를 실패할 수 있는 기능이 없습니다. 다음은 보다 복잡한 합격/불합격 기준을 달성하는 몇 가지 방법입니다.
 

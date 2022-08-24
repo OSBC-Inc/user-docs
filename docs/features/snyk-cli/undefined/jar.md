@@ -4,7 +4,7 @@ Snyk CLI는 [Java applications](https://docs.snyk.io/products/snyk-open-source/l
 
 Java 앱은 일반적으로 애플리케이션 내의 여러 위치에 JAR 파일을 가지고 있습니다. 동일한 폴더에 있는 여러 JAR 파일을 검색하는 데 문제가 발생하지 않도록 하려면 개별 JAR 파일을 검색하십시오. 특히 Ant를 사용하는 이전 Java 앱의 경우 더욱 그렇습니다.
 
-**WAR 파일 지원**: 메이븐 센트럴에 게시된 개별 WAR 파일을 검색할 수 있습니다. 오픈 소스 종속성 JAR을 직접 검색하려면 다른 모든 WAR 파일 또는 다른 JAR이 포함된 JAR 파일을 추출(압축)해야 합니다.
+**WAR 파일 지원**: 메이븐 센트럴에 게시된 개별 WAR 파일을 검색할 수 있습니다. 오픈 소스 종속성 JAR을 직접 검색하려면 다른 모든 WAR 파일 또는 다른 JAR이 포함된 JAR 파일을 추출(압축 해제)해야 합니다.
 
 **필수 구성 요소**: 개별 파일을 검색하려면 **Maven 3.1.0** 이상을 Snyk CLI와 함께 설치해야 하므로 **Maven-dependency-plugin 2.2** 이상이 필요합니다.
 
