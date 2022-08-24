@@ -60,9 +60,9 @@ Licenses:               enabled
 
 ### Python support
 
-* Pip projects with `requirements.txt` files (or custom named files, for example `prod.txt`)
-* Pipenv projects with `Pipfile` \*\*\*\* and \*\*\*\* `Pipfile.lock` files
-* Poetry projects with `pyproject.toml` \*\*\*\* and `Poetry.lock` files
+* `requirements.txt` 파일(또는 사용자 지정 파일(예: `prod.txt`))이 포함된 Pip 프로젝트
+* `Pipfile` \*\*\*\* 및 \*\*\*\* `Pipfile.lock` 파일이 포함된 Pipenv 프로젝트
+* `pyproject.toml` \*\*\*\* and `Poetry.lock` 파일을 사용한 Poetry 프로젝트
 
 #### Usage examples
 
