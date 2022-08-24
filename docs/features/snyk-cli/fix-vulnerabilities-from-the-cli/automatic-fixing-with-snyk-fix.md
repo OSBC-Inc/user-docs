@@ -81,21 +81,21 @@ Licenses:               enabled
 django===1.6.1
 ```
 
-**Direct dependency upgrades (dependencies stated in the manifest)**
+**Direct dependency 업그레이드 (매니페스트에 명시된 디펜던시)**
 
-Direct dependency upgrades are applied in the relevant files. All files referenced are found and updated.
+Direct dependency 업그레이드는 관련 파일에 적용됩니다. 참조된 모든 파일이 발견되고 업데이트됩니다.
 
-**Pins (transitive dependencies that are pulled in via direct dependencies)**
+**Pins (Direct dependency  통해 가져온 Transitive dependency)**
 
-Pins are applied in the manifest file that was tested.
+Pins  테스트된 매니페스트 파일에 적용됩니다.
 
-If multiple files are tested but are related (for example one requires the other), Snyk starts to apply changes to the files higher up in the directory structure.
+여러 파일이 테스트되었지만 관련성이 있는 경우(예: 한 파일이 다른 파일을 필요로 함), Snyk은 디렉터리 구조에서 더 높은 위치에 있는 파일에 변경 사항을 적용하기 시작합니다.
 
-Snyk detects previously fixed files and skips applying fixes to them again.
+Snyk은 이전에 수정된 파일을 감지하고 수정 사항을 적용하는 것을 다시 건너뜁니다.
 
-#### Projects which use `constraints.txt`
+#### `constraints.txt`를 사용하는 프로젝트
 
-Constraints files are requirements files that control only which version of a dependency is installed, not whether it is installed or not. Their syntax and contents are nearly identical to requirements files. There is one key difference: including a package in a constraints file does not trigger installation of the package. For more information, see [User Guide - pip documentation v21.0.1](https://pip.pypa.io/en/stable/user\_guide/#constraints-files).
+제약 조건 파일은 설치 여부가 아니라 설치된 종속성의 버전만 제어하는 요구 사항 파일입니다. 구문과 내용은 요구 사항 파일과 거의 동일합니다. 한 가지 중요한 차이점이 있습니다. 제약 조건 파일에 패키지를 포함해도 패키지 설치가 트리거되지 않습니다. 자세한 내용은 사용 설명서 - [pip documentation v21.0.1.](https://pip.pypa.io/en/stable/user\_guide/#constraints-files)을 참조하세요.
 
 **Direct dependency upgrades (dependencies stated in the manifest)**
 
