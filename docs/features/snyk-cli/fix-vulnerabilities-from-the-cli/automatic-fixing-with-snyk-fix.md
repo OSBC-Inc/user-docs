@@ -64,7 +64,7 @@ Licenses:               enabled
 * `Pipfile` \*\*\*\* 및 \*\*\*\* `Pipfile.lock` 파일이 포함된 Pipenv 프로젝트
 * `pyproject.toml` \*\*\*\* and `Poetry.lock` 파일을 사용한 Poetry 프로젝트
 
-#### 사용 예
+### 사용 예
 
 `snyk fix --file=requirements.txt`
 
@@ -72,7 +72,7 @@ Licenses:               enabled
 
 `snyk fix --all-projects`
 
-#### `-r` 지시가 있는 요구 사항
+### `-r` 지시문이 있는 요구 사항
 
 `requirements.txt` 가 이렇게 표시되는 경우, 필요한 경우 `base.txt` 와 `requirements.txt` 가 모두 업데이트됩니다:
 
@@ -93,32 +93,32 @@ Pins  테스트된 매니페스트 파일에 적용됩니다.
 
 Snyk은 이전에 수정된 파일을 감지하고 수정 사항을 적용하는 것을 다시 건너뜁니다.
 
-#### `constraints.txt`를 사용하는 프로젝트
+### `constraints.txt`를 사용하는 프로젝트
 
 제약 조건 파일은 설치 여부가 아니라 설치된 종속성의 버전만 제어하는 요구 사항 파일입니다. 구문과 내용은 요구 사항 파일과 거의 동일합니다. 한 가지 중요한 차이점이 있습니다. 제약 조건 파일에 패키지를 포함해도 패키지 설치가 트리거되지 않습니다. 자세한 내용은 사용 설명서 - [pip documentation v21.0.1.](https://pip.pypa.io/en/stable/user\_guide/#constraints-files)을 참조하세요.
 
-**Direct dependency upgrades (dependencies stated in the manifest)**
+**Direct dependency 업그레이드 (매니페스트에 명시된 디펜던시)**
 
-Direct dependency upgrades are applied in the relevant files. All files referenced are found and updated.
+Direct dependency 업그레이드는 관련 파일에 적용됩니다. 참조된 모든 파일이 발견되고 업데이트됩니다.
 
-**Pins (transitive dependencies that are pulled in via direct dependencies)**
+**Pins (Direct dependency  통해 가져온 Transitive dependency)**
 
-All transitive dependencies are pinned in the `constraints.txt` file if referenced with the `-c` directive in the requirements manifest file.
+모든 Transitive dependency은 요구 사항 매니페스트 파일에서 `-c` 지시문과 함께 참조되는 경우 `constraints.txt` 파일에 고정됩니다.
 
 #### Python (`pipenv`)
 
-Snyk delegates to `pipenv` directly to update dependencies to the specified recommended versions. All `pipenv` environment variables and behaviors are preserved as much as possible.
+Snyk은 지정된 권장 버전에 대한 디펜던시를 업데이트하기 위해 직접 `pipenv`에 위임합니다. 모든 `pipenv` 환경 변수와 동작은 최대한 보존됩니다.
 
 #### Python (`poetry`)
 
-Snyk delegates to `poetry` directly to update dependencies to the specified recommended versions. All `poetry` environment variables and behaviors are preserved as much as possible.
+Snyk은 지정된 권장 버전에 대한 디펜던시를 업데이트하기 위해 `poetry`에 직접 위임합니다. 모든 `poetry` 환경 변수와 동작은 최대한 보존됩니다.
 
-### Troubleshooting
+### 문제 해결
 
-Run in debug mode to get more information on any errors.
+디버그 모드에서 실행하여 오류에 대한 자세한 정보를 얻으십시오.
 
 ```
 DEBUG=*snyk* snyk fix
 ```
 
-This provides a very verbose output that can help diagnose issues or can be sent to Snyk for debugging.
+이것은 문제 진단에 도움이 되거나 디버깅을 위해 Snyk으로 보낼 수 있는 매우 자세한 출력을 제공합니다.
