@@ -12,7 +12,7 @@ Java 앱은 일반적으로 애플리케이션 내의 여러 위치에 JAR 파�
 
 ![mvn-v의 출력 스크린샷](https://3099555661-files.gitbook.io/\~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fuploads%2Fgit-blob-1b7ab8f556892a95d02d5578c9385cfe2fd0d1ec%2Funtitled\_\_1\_.png?alt=media\&token=0dfb49a6-b684-4f70-8218-85bb65f805bc)
 
-`snyk test --scan-all-unmanaged` 명령을 사용하여 단일 폴더의 모든 JAR 파일을 검색하여 Maven central에서 호스팅되는 모든 종속성과 일치시킵니다. Gradle 또는 Maven과 같은 패키지 관리자를 사용하여 응용 프로그램을 만들지 않은 경우 관리되지 않는 모든 파일을 검색하면 종속성 충돌이 발생할 수 있습니다. 이는 특히 Ant를 사용하여 빌드된 응용 프로그램의 경우에 해당됩니다. \
+`snyk test --scan-all-unmanaged` command을 사용하여 단일 폴더의 모든 JAR 파일을 검색하여 Maven central에서 호스팅되는 모든 종속성과 일치시킵니다. Gradle 또는 Maven과 같은 패키지 관리자를 사용하여 응용 프로그램을 만들지 않은 경우 관리되지 않는 모든 파일을 검색하면 종속성 충돌이 발생할 수 있습니다. 이는 특히 Ant를 사용하여 빌드된 응용 프로그램의 경우에 해당됩니다. \
 따라서 다음 명령을 사용하여 각 JAR 파일을 개별적으로 테스트합니다:\
 `snyk test --scan-unmanaged --file=/path/to/file`
 
@@ -38,13 +38,13 @@ for /R %workspace% %%f in (*.jar) do cmd /c snyk monitor --scan-unmanaged --remo
 
 Snyk CLI는 Java 응용프로그램에서 관리되지 않는 JAR 파일을 검색할 수 있습니다. CLI는 로컬 JAR 파일 해시가 Maven Central JAR 파일 해시와 일치하는 경우에만 패키지 이름, 버전 및 취약성을 식별합니다.
 
-Java apps typically have JAR files in a number of locations within an application. To avoid problems from scanning multiple JAR files in the same folder, scan individual JAR files, especially for old Java apps that use Ant.
+Java 앱은 일반적으로 애플리케이션 내의 여러 위치에 JAR 파일을 가지고 있습니다. 동일한 폴더에 있는 여러 JAR 파일을 검색하는 데 문제가 발생하지 않도록 하려면 개별 JAR 파일을 검색하십시오. 특히 Ant를 사용하는 이전 Java 앱의 경우 더욱 그렇습니다.
 
-**WAR file support**: You can scan individual WAR files that are published in Maven Central. To scan open-source dependency JARs directly, you must extract (unzip) all other WAR files or JAR files containing other JARs.
+**WAR 파일 지원**: Maven Central에 게시된 개별 WAR 파일을 검색할 수 있습니다. 오픈 소스 종속성 JAR을 직접 검색하려면 다른 모든 WAR 파일 또는 다른 JAR이 포함된 JAR 파일을 추출(압축 해제)해야 합니다.
 
-**Prerequisite:** Scanning individual files requires **Maven 3.1.0** or newer to be installed alongside the Snyk CLI, which requires **maven-dependency-plugin 2.2** or higher.
+**전제 조건:** 개별 파일을 검색하려면 **Maven 3.1.0** 이상을 Snyk CLI와 함께 설치해야 하므로 **Maven-dependency-plugin 2.2** 또는 **** 그 이상이 필요합니다.
 
-To view the versions of Maven and the maven-dependency-plugin run `mvn -v`.
+메이븐 및 메이븐 디펜던시 플러그인의 버전을 보려면 `mvn-v` 을 실행하십시오.
 
 ![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/untitled\_\_1\_.png)
 
