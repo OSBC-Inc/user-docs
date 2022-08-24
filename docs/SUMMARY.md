@@ -222,7 +222,7 @@
     * [사용하기 전 공용 npm 패키지 테스트](features/snyk-cli/undefined/npm.md)
     * [setup.py 파일이 스캔에 실패하거나 디펜던시를 찾지 못하는이유](features/snyk-cli/undefined/why-is-my-setup.py-file-failing-to-scan-or-finding-0-dependencies.md)
     * [관리되지 않는 모든 JAR 파일 검사](features/snyk-cli/undefined/jar.md)
-    * [Advanced failing of builds in Snyk CLI](features/snyk-cli/undefined/advanced-failing-of-builds-in-snyk-cli.md)
+    * [향상된 Snyk CLI 빌드의 장애](features/snyk-cli/undefined/snyk-cli.md)
   * [Fix vulnerabilities from the CLI](features/snyk-cli/fix-vulnerabilities-from-the-cli/README.md)
     * [Automatic fixing with snyk fix](features/snyk-cli/fix-vulnerabilities-from-the-cli/automatic-fixing-with-snyk-fix.md)
     * [View CLI test results](features/snyk-cli/fix-vulnerabilities-from-the-cli/view-cli-test-results.md)

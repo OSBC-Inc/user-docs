@@ -1,4 +1,4 @@
-# Advanced failing of builds in Snyk CLI
+# 향상된 Snyk CLI 빌드의 장애
 
 Snyk CLI는 빌드 실패 시 다음 옵션을 제공합니다.
 
@@ -54,7 +54,7 @@ Here is an example `snyk test` using `--severity-threshold=high` running against
 
 ![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/test-organization-with-policy-applied.png)
 
-### Companion tools
+### 지원 Tool
 
 The following discusses use of snyk-delta or snyk-filter, open source companion tools for the Snyk CLI.
 
@@ -74,7 +74,7 @@ snyk-filter is available from npmjs.org and may be pulled into your CI/CD pipeli
 npm install -g snyk-filter
 ```
 
-#### Fail current build only if new vulnerabilities are being introduced
+#### 새 취약점이 도입된 경우에만 현재 빌드에 실패합니다.
 
 **Inline mode**
 
@@ -96,13 +96,13 @@ snyk-delta --baselineOrg xxx --baselineProject xxx --currentOrg xxx --currentPro
 
 Refer to the [snyk-delta project on GitHub](https://github.com/snyk-tech-services/snyk-delta) for more information.
 
-#### Fail build for CVSS score higher than ...
+#### CVSS 점수가 다음보다 높은 경우 빌드 실패...
 
 ```
 snyk test --json | snyk-filter -f /path/to/example-cvss-9-or-above.yml
 ```
 
-#### Custom criteria and filtering
+#### 사용자 정의 기준 및 필터링
 
 snyk-filter can utilize any combination of criteria available in the `snyk test` JSON output.
 
