@@ -27,9 +27,9 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
 
 ## Command 실행
 
-다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
+다음과 같은 수준의 사용 및 옵션을 고려할 수 있습니다:
 
-### 사용 Level
+### 사용 수준:
 
 *   GitLab에서 모든 그룹 및 해당 프로젝트에 대한 커밋을 가져오려면 GitLab 토큰(및 GitLab Enterprise의 서버 URL)을 제공하십시오:
 
@@ -43,7 +43,7 @@ description: GitLab에 대한 옵션 목록 및 몇 가지 예
     ```
 
 {% hint style="info" %}
-중첩된 그룹의 경우 가장 낮은 level의 그룹 이름을 제공해야 합니다. 예를 들어 TopLevelGroup/MidLevelGroup/LowLevelGroup은 `--groups` flag가 있는 "LowLevelGroup"만 제공합니다.
+중첩된 그룹의 경우 가장 낮은 수준의 그룹 이름을 제공해야 합니다. 예를 들어 TopLevelGroup/MidLevelGroup/LowLevelGroup은 `--groups` flag가 있는 "LowLevelGroup"만 제공합니다.
 {% endhint %}
 
 * GitLab에서 특정 프로젝트에 대한 커밋을 가져오려면 GitLab 토큰과 **하나**의 그룹 이름 및 **하나**의 프로젝트 이름을 제공하십시오:
