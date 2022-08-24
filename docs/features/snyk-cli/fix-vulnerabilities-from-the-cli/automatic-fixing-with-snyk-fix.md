@@ -1,8 +1,12 @@
 # Automatic fixing with snyk fix
 
-\{% hint style="info" %\} This feature is currently in beta. We would appreciate any feedback you might have - contact us at [snyk-fix-feedback@snyk.io](mailto:snyk-fix-feedback@snyk.io). \{% endhint %\}
+{% hint style="info" %}
+이 기능은 현재 베타 버전입니다. 피드백을 주시면 감사하겠습니다.  [snyk-fix-feedback@snyk.io](mailto:snyk-fix-feedback@snyk.io) 으로 문의하십시오.
+{% endhint %}
 
-\{% hint style="info" %\} Ensure you use the latest version of CLI ([v1.715.0](https://github.com/snyk/snyk/releases/tag/v1.715.0) or later) to use `snyk fix`. \{% endhint %\}
+{% hint style="info" %}
+최신 버전의 CLI([v1.715.0](https://github.com/snyk/cli/releases/tag/v1.715.0) 이상)에 `snyk fix` 를 사용해야 합니다.
+{% endhint %}
 
 The `snyk fix` command is a new CLI command to apply the recommended updates for supported ecosystems automatically.
 
