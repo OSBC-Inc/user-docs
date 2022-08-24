@@ -48,9 +48,9 @@ Licenses:               enabled
 
 ### snyk fix 실행
 
-베타 기간 동안 snyk fix를 활성화하려면 **Settings** [![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png)](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png) > **Snyk Preview** 를 클릭합니다. **synk 수정 기능**을 실행하고 **변경 사항 저장**을 클릭합니다.
+베타 기간 동안 snyk fix를 활성화하려면 **Settings** [![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png)](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png) > **Snyk Preview** 를 클릭합니다. **synk fix 기능**을 **Enabled**하고 **Save changes를** 클릭합니다.
 
-![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cleanshot\_2021-07-02\_at\_11.39.43\_2x.png)
+![Snyk Preview settings에서 Snyk fix Enabled](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cleanshot\_2021-07-02\_at\_11.39.43\_2x.png)
 
 The `snyk fix` command supports all the `snyk test` command options and has the following additional options:
 
