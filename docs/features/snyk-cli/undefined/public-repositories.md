@@ -16,8 +16,8 @@
 
 참고 항목
 
-* [Getting started with the CLI](../cli.md)
-* [CLI reference](https://docs.snyk.io/snyk-cli/cli-reference)
-* [Use Snyk Open Source from the CLI](cli-snyk.md)
-* [Set severity thresholds for CLI tests](https://docs.snyk.io/snyk-cli/test-for-vulnerabilities/set-severity-thresholds-for-cli-tests)
-* [Test public npm packages before use](npm.md)
+* [CLI 시작하기](../cli.md)
+* [CLI reference](../cli-reference.md)
+* [CLI에서 Snyk 오픈 소스 사용](cli-snyk.md)
+* [CLI 테스트에 대한 severity threshold 설](set-severity-thresholds-for-cli-tests.md)정
+* [사용하기 전 공용 npm 패키지 테스트](npm.md)
