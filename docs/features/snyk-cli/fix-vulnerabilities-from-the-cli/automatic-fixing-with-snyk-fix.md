@@ -50,13 +50,13 @@ Licenses:               enabled
 
 베타 기간 동안 snyk fix를 활성화하려면 **Settings** [![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png)](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png) > **Snyk Preview** 를 클릭합니다. **synk fix 기능**을 **Enabled**하고 **Save changes를** 클릭합니다.
 
-![Snyk Preview settings에서 Snyk fix Enabled](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cleanshot\_2021-07-02\_at\_11.39.43\_2x.png)
+![Snyk Preview settings에서 Snyk fix를 Enabled](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cleanshot\_2021-07-02\_at\_11.39.43\_2x.png)
 
-The `snyk fix` command supports all the `snyk test` command options and has the following additional options:
+`snyk fix` command는 모든 `snyk test` command 옵션을 지원하며 다음과 같은 추가 옵션이 있습니다:
 
-* **`--`**`quiet` \*\*\*\* - Suppress all output to the command line.
-* `--dry-run` - Run almost all the logic and display output, but do not make the final changes to the relevant files. Show a preview of the changes.
-* `--sequential` - Install each dependency update separately one at a time (the default is to install all at once). The default is much slower, but helps increase the number of successful updates by allowing some updates to fail and the process to continue.
+* **`--`**`quiet` \*\*\*\* - command line에 대한 모든 출력을 억제합니다.
+* `--dry-run` - 거의 모든 로직을 실행하고 출력을 표시하되, 관련 파일을 최종 변경하지 마십시오. 변경 사항의 미리 보기를 표시합니다.
+* `--sequential` - 각 디펜던시 업데이트를 한 번에 하나씩 별도로 설치합니다(기본값은 한 번에 모두 설치). 기본값은 훨씬 느리지만 일부 업데이트가 실패해 프로세스가 계속 진행되도록 허용하여 성공적인 업데이트 수를 늘리는 데 도움이 됩니다.
 
 ### Python support
 
