@@ -1,4 +1,4 @@
-# 향상된 Snyk CLI 빌드의 장애
+# Snyk CLI 빌드의 향상된 장애
 
 Snyk CLI는 빌드 실패 시 다음 옵션을 제공합니다.
 
@@ -58,19 +58,19 @@ Snyk CLI 자체에는 기본적으로 더 복잡한 사용 사례에 대한 테�
 
 ### 지원 Tool
 
-The following discusses use of snyk-delta or snyk-filter, open source companion tools for the Snyk CLI.
+다음은 Snyk CLI를 위한 snyk-delta 또는 snyk-filter 오픈 소스 지원 도구 사용에 대해 설명합니다.
 
-snyk-delta finds the delta of vulnerabilities between the current test and a previously monitored snapshot.
+snyk-delt는 현재 테스트와 이전에 모니터링한 스냅샷 사이의 취약점 델타를 찾습니다.
 
-snyk-delta is available from npmjs.org, and may be pulled into your CI/CD pipeline using
+snyk-messages는 npmjs.org에서 사용할 수 있으며 다음을 사용하여 CI/CD 파이프라인으로 가져올 수 있습니다.
 
 ```
 npm install -g snyk-delta
 ```
 
-snyk-filter provides for user-defined pass/fail criteria based on any available data in the `snyk test` JSON output.
+synk-filter는 `synk test` 를 JSON 형식으로 출력한 사용 가능한 데이터를 기반으로 사용자 정의 통과/실패 기준을 제공합니다.
 
-snyk-filter is available from npmjs.org and may be pulled into your CI/CD pipeline using npm install
+snyk-filter는 npmjs.org에서 사용할 수 있으며 npm 설치를 사용하여 CI/CD 파이프라인으로 가져올 수 있습니다.
 
 ```
 npm install -g snyk-filter
@@ -84,7 +84,7 @@ npm install -g snyk-filter
 snyk test --json --print-deps | snyk-delta
 ```
 
-Possibly point to a specific snapshot by specifying org + project coordinates
+Org + 프로젝트 좌표를 지정하여 특정 스냅샷을 가리킬 수 있습니다.
 
 ```
 snyk test --json --print-deps | snyk-delta --baselineOrg xxx --baselineProject xxx
@@ -96,7 +96,7 @@ snyk test --json --print-deps | snyk-delta --baselineOrg xxx --baselineProject x
 snyk-delta --baselineOrg xxx --baselineProject xxx --currentOrg xxx --currentProject xxx
 ```
 
-Refer to the [snyk-delta project on GitHub](https://github.com/snyk-tech-services/snyk-delta) for more information.
+자세한 내용은 [GitHub의 synk-delta 프로젝트](https://github.com/snyk-tech-services/snyk-delta)를 참조하십시오.
 
 #### CVSS 점수가 다음보다 높은 경우 빌드 실패...
 
@@ -106,8 +106,8 @@ snyk test --json | snyk-filter -f /path/to/example-cvss-9-or-above.yml
 
 #### 사용자 정의 기준 및 필터링
 
-snyk-filter can utilize any combination of criteria available in the `snyk test` JSON output.
+synk-filter는 `synk test` 를 JSON 형식으로 출력하여 사용 가능한 모든 기준의 조합을 사용할 수 있습니다.
 
-You may also have different criteria for display from what will fail the build. This allows you to do things like display all vulnerabilities in the test output, while failing only on some specific criteria.
+빌드에 실패하는 것과 표시 기준이 다를 수도 있습니다. 이렇게 하면 일부 특정 기준에서만 실패하면서 테스트 출력에 모든 취약점을 표시하는 등의 작업을 수행할 수 있습니다.
 
-Refer to the [snyk-filter project on GitHub](https://github.com/snyk-tech-services/snyk-filter) for examples and more information.
+예제와 자세한 내용은 [GitHub의 synk-filter 프로젝트](https://github.com/snyk-tech-services/snyk-filter)를 참조하십시오.

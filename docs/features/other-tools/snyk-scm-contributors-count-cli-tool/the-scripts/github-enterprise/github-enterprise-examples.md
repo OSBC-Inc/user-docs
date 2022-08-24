@@ -29,9 +29,9 @@ description: Github Enterprise에 대한 옵션 목록 및 몇 가지 예
 
 ## Command 실행
 
-다음과 같은 수준의 사용 및 옵션을 고려할 수 있습니다:
+다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
 
-### 사용 수준:
+### 사용 Level:
 
 * GitHub Enterprise의 모든 조직에 있는 모든 리포지토리에 대한 커밋을 가져오려면 GitHub Enterprise 토큰을 제공하십시오:\
   `snyk-scm-contributors-count github-enterprise --token TOKEN --url HOST_URL`
