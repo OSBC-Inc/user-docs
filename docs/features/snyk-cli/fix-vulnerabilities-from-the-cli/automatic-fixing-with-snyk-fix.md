@@ -8,9 +8,9 @@
 최신 버전의 CLI([v1.715.0](https://github.com/snyk/cli/releases/tag/v1.715.0) 이상)에 `snyk fix` 를 사용해야 합니다.
 {% endhint %}
 
-The `snyk fix` command is a new CLI command to apply the recommended updates for supported ecosystems automatically.
+`synk fix` command는 지원되는 에코시스템에 대한 권장 업데이트를 자동으로 적용하는 새로운 CLI command입니다.
 
-When you use the `snyk test` command, actionable fixes for supported ecosystems appear in the scan results as shown in the example that follows.
+`snyk test` command를 사용하면 지원되는 에코시스템에 대한 실행 가능한 수정 사항이 다음 예와 같이 검색 결과에 나타납니다.
 
 ```
 Tested 78 dependencies for known issues, found 34 issues, 145 vulnerable paths.Issues to fix by upgrading dependencies:  Upgrade django@2.2.13 to django@2.2.22 to fix
@@ -30,7 +30,7 @@ Project path:           lib
 Licenses:               enabled
 ```
 
-The following example shows the output of running `snyk fix`.
+다음은 `snyk fix` 실행의 출력 예를 보여 줍니다.
 
 ```
 ► Running `snyk test` for /Users/lili/www/snyk/python-fix/packages/poetry/test/system/workspaces/with-pins✔ Looking for supported Python items
@@ -44,9 +44,9 @@ The following example shows the output of running `snyk fix`.
   10 issues were successfully fixed
 ```
 
-Note that only successful test results are forwarded to `snyk fix`. In addition, all unsupported ecosystem test results are skipped.
+**주의**: 성공적인 테스트 결과만 `synk fix` 로 전달됩니다. 또한 지원되지 않는 모든 에코시스템 테스트 결과는 건너뜁니다.
 
-### Enabling snyk fix
+### snyk fix 실행
 
 To enable snyk fix during the beta period, click on **Settings** [![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png)](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/cog\_icon.png) > **Snyk Preview**. Enable the **snyk fix feature** and click **Save changes**.
 
