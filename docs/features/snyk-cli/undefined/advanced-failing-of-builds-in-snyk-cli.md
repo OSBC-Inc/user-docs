@@ -36,23 +36,25 @@ Snyk CLI 자체에는 기본적으로 더 복잡한 사용 사례에 대한 테�
 
 ## --severity-threshold 와 보안 정책 결합
 
-[Security policies](https://docs.snyk.io/fixing-and-prioritizing-issues/policies) provide the capability to change the severity of a vulnerability if the severity matches specific criteria when a project is tested against an organization using that policy. You could, for example, change the severity of a vulnerability from high to low, and if you run `snyk test` with the CLI with
+[보안 정책](../../fixing-and-prioritizing-issues/policies/)은 해당 정책을 사용하는 조직에 대해 프로젝트를 테스트할 때 심각도가 특정 기준에 일치하는 경우 취약점의 심각도를 변경할 수 있는 기능을 제공합니다. 예를 들어 다음과 같은 CLI를 사용하여 `synk test` 를 실행하는 경우 취약점의 심각도를 높음에서 낮음으로 변경할 수 있습니다.
 
 ```
  --severity-threshold=medium|high
 ```
 
-this previously high severity vulnerability no longer fails the build.
+이전에 심각도가 높았던 이 취약점은 더 이상 빌드에 실패하지 않습니다.
 
-\{% hint style="info" %\} Security policies do not have all attributes available for criteria matching. Refer to the security policy configuration to see what is available as it is added to over time. \{% endhint %\}
+{% hint style="info" %}
+보안 정책에는 기준 일치에 사용할 수 있는 일부 속성이 없습니다. 시간이 지남에 따라 에 추가될 때 사용할 수 있는 항목을 보려면 보안 정책 구성을 참조하십시오.
+{% endhint %}
 
-Here is an example of `snyk test` using `--severity-threshold=high` running against a default organization with no policy applied to it.
+다음은 정책이 적용되지 않은 기본 조직에 대해 실행되는 `--severity-threshold=high` 를 사용한 `snyk test` 의 예입니다.
 
-![](https://camo.githubusercontent.com/de965fce454134d8cadaaf22fe093c4fdf1722a7349e99f1d2d8bc4cf9726836/68747470733a2f2f67626c6f627363646e2e676974626f6f6b2e636f6d2f6173736574732532462d4d56584b6472682d6a59334b44475073386c512532462d4d5a545f57334f316f46794d417a46396733732532462d4d5a5472633044364e6a5436566c53316a6d55253246696d6167652e706e673f616c743d6d6564696126746f6b656e3d32376530656538632d313437662d343934322d616461342d303864653037663637633430)
+![정책이 적용되지 않은 기본 조직에 대 테스트](https://camo.githubusercontent.com/de965fce454134d8cadaaf22fe093c4fdf1722a7349e99f1d2d8bc4cf9726836/68747470733a2f2f67626c6f627363646e2e676974626f6f6b2e636f6d2f6173736574732532462d4d56584b6472682d6a59334b44475073386c512532462d4d5a545f57334f316f46794d417a46396733732532462d4d5a5472633044364e6a5436566c53316a6d55253246696d6167652e706e673f616c743d6d6564696126746f6b656e3d32376530656538632d313437662d343934322d616461342d303864653037663637633430)
 
-Here is an example `snyk test` using `--severity-threshold=high` running against an organization with a policy that downgrades this particular vulnerability severity to `low`. There are no vulnerabilities found.
+다음은 이 특정 취약점 심각도를 낮은 수준으로 다운그레이드하는 정책을 가진 조직에 대해 실행되는 `--severity-threshold=high` 를 사용한 `snyk test` 의 예입니다. 취약점이 없습니다.
 
-![](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/test-organization-with-policy-applied.png)
+![정책이 적용된 조직에 대 테스트](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/test-organization-with-policy-applied.png)
 
 ### 지원 Tool
 
