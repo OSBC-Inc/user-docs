@@ -34,7 +34,7 @@ Snyk CLI는 빌드 실패 시 다음 옵션을 제공합니다.
 
 Snyk CLI 자체에는 기본적으로 더 복잡한 사용 사례에 대한 테스트를 실패할 수 있는 기능이 없습니다. 다음은 보다 복잡한 합격/불합격 기준을 달성하는 몇 가지 방법입니다.
 
-### Combining security policies with --severity-threshold
+## --severity-threshold 와 보안 정책 결합
 
 [Security policies](https://docs.snyk.io/fixing-and-prioritizing-issues/policies) provide the capability to change the severity of a vulnerability if the severity matches specific criteria when a project is tested against an organization using that policy. You could, for example, change the severity of a vulnerability from high to low, and if you run `snyk test` with the CLI with
 
