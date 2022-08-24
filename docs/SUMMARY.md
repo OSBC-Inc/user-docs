@@ -224,7 +224,7 @@
     * [관리되지 않는 모든 JAR 파일 검사](features/snyk-cli/undefined/jar.md)
     * [Snyk CLI 빌드의 향상된 장애](features/snyk-cli/undefined/advanced-failing-of-builds-in-snyk-cli.md)
   * [CLI의 취약점 수정](features/snyk-cli/fix-vulnerabilities-from-the-cli/README.md)
-    * [Snyk fix를 사용한 자동 수정](features/snyk-cli/cli-2/snyk-fix.md)
+    * [Snyk fix를 사용한 자동 수정](features/snyk-cli/fix-vulnerabilities-from-the-cli/automatic-fixing-with-snyk-fix.md)
     * [View CLI test results](features/snyk-cli/fix-vulnerabilities-from-the-cli/view-cli-test-results.md)
     * [Ignore vulnerabilities using Snyk CLI](features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)
   * [Secure your projects in the long term](features/snyk-cli/secure-your-projects-in-the-long-term/README.md)
