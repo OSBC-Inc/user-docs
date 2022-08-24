@@ -1,8 +1,8 @@
 ---
-description: "각 SCM 스크립트의 \bFlag"
+description: "그각 SCM 스크립트의 \b플래그"
 ---
 
-# Flags
+# 플래그
 
 | SCM             | Credentials         | Orgs            | Repo        | Exclusion File Path   | Json     | Skip Snyk monitored repos  | Import file folder path | Repo type for import file | Additional flags                                |
 | --------------- | ------------------- | --------------- | ----------- | --------------------- | -------- | -------------------------- | ----------------------- | ------------------------- | ----------------------------------------------- |
@@ -19,7 +19,7 @@ description: "각 SCM 스크립트의 \bFlag"
 {% endhint %}
 
 {% hint style="info" %}
-"`fetch AllOrgs`" flag는 깃허브 엔터프라이즈에 고유하며 GHE에서 Orgs에 대한 두 가지 접근 level을 구분합니다.\
+"`fetch AllOrgs`" flag는 깃허브 엔터프라이즈에 고유하며 GHE에서 Orgs에 대한 두 가지 접근 수준을 구분합니다.\
 1\. With the flag - 제공된 토큰이 액세스할 수 있는 모든 Orgs를 가져옵니다.\
 2\. Without the flag - 토큰이 제공된 **사용자**에게 일부 작업 권한(예: 읽기 권한 등)이 있는 Orgs만 가져옵니다.
 {% endhint %}

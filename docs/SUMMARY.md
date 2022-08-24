@@ -400,7 +400,7 @@
     * [순서도](features/other-tools/snyk-scm-contributors-count-cli-tool/flowchart.md)
     * [사용법](features/other-tools/snyk-scm-contributors-count-cli-tool/usage.md)
     * [출력](features/other-tools/snyk-scm-contributors-count-cli-tool/output.md)
-    * [Flags](features/other-tools/snyk-scm-contributors-count-cli-tool/flags.md)
+    * [플래그](features/other-tools/snyk-scm-contributors-count-cli-tool/flags.md)
     * [스크립트](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/README.md)
       * [Azure DevOps](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/README.md)
         * [Azure - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/azure-devops/azure-flow-and-tech.md)
