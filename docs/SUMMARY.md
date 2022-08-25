@@ -226,7 +226,7 @@
   * [CLI의 취약점 수정](features/snyk-cli/fix-vulnerabilities-from-the-cli/README.md)
     * [Snyk fix를 사용한 자동 수정](features/snyk-cli/fix-vulnerabilities-from-the-cli/automatic-fixing-with-snyk-fix.md)
     * [CLI 테스트 결과 보기](features/snyk-cli/fix-vulnerabilities-from-the-cli/view-cli-test-results.md)
-    * [Snyk CLI를 사용하여 취약점 무시](features/snyk-cli/cli-2/snyk-cli.md)
+    * [Snyk CLI를 사용하여 취약점 무시](features/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)
   * [Secure your projects in the long term](features/snyk-cli/secure-your-projects-in-the-long-term/README.md)
     * [Protect your code with patches](features/snyk-cli/secure-your-projects-in-the-long-term/protect-your-code-with-patches.md)
     * [Monitor your projects at regular intervals](features/snyk-cli/secure-your-projects-in-the-long-term/monitor-your-projects-at-regular-intervals.md)

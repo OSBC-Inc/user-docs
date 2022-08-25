@@ -1,4 +1,8 @@
-# Ignore vulnerabilities using Snyk CLI
+# Snyk CLI를 사용하여 취약점 무시
+
+{% hint style="info" %}
+
+{% endhint %}
 
 \{% hint style="info" %\} For [Snyk Open Source, ](https://docs.snyk.io/snyk-open-source)these option work by default.\
 For [Snyk Container](https://docs.snyk.io/snyk-container), these options also work, but after registering an ignore, when you call `snyk test` or `snyk monitor`, you must use the `--policy-path=` option, for example: `snyk container test node --policy-path=.snyk.`\
