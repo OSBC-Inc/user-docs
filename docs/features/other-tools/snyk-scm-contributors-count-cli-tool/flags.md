@@ -25,5 +25,5 @@ description: "그각 SCM 스크립트의 \b플래그"
 {% endhint %}
 
 {% hint style="info" %}
-생성된 import file을 synk-api-import tool로 사용하는 방법에 대한 자세한 내용은 [import file 생성 및 사용](creating-and-using-the-import-files.md)을 참조하십시오.
+생성된 import file을 synk-api-import 도구로 사용하는 방법에 대한 자세한 내용은 [import file 생성 및 사용](creating-and-using-the-import-files.md)을 참조하십시오.
 {% endhint %}
