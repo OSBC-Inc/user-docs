@@ -1,6 +1,4 @@
-# IaC test
-
-
+# IaC 테스트
 
 ## Usage
 

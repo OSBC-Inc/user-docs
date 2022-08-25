@@ -1,4 +1,4 @@
-# Policy
+# 정책
 
 ## Usage
 

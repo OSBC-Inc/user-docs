@@ -29,11 +29,11 @@ Snyk 계정을 사용하여 Snyk CLI를 인증합니다.
 
 **참고**: 모든 파일에서 알려진 오픈 소스 종속성을 검색하려면 `snyk test --unmanaged`를 사용합니다(C/C++만 해당).
 
-### `snyk monitor`
+### ``[`snyk monitor`](monitor.md)``
 
 프로젝트를 스냅샷으로 만들고 지속적으로 모니터링하여 오픈 소스 취약성 및 라이센스 문제를 해결합니다.
 
-### ``[`snyk container`](https://docs.snyk.io/snyk-cli/commands/container)``
+### `snyk container`
 
 컨테이너 이미지에서 취약성을 테스트합니다.
 
