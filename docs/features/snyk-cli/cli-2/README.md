@@ -33,31 +33,31 @@ Snyk 계정을 사용하여 Snyk CLI를 인증합니다.
 
 프로젝트를 스냅샷으로 만들고 지속적으로 모니터링하여 오픈 소스 취약성 및 라이센스 문제를 해결합니다.
 
-### `snyk container`
+### ``[`snyk container`](undefined-3.md)``
 
 컨테이너 이미지에서 취약성을 테스트합니다.
 
-### ``[`snyk iac`](https://docs.snyk.io/snyk-cli/commands/iac)``
+### ``[`snyk iac`](iac.md)``
 
 Infrastructure as Code 파일에서 보안 문제를 찾고 관리하는 명령입니다.
 
-### ``[`snyk code`](https://docs.snyk.io/snyk-cli/commands/code)``
+### ``[`snyk code`](undefined-1.md)``
 
 정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
-### ``[`snyk log4shell`](https://docs.snyk.io/snyk-cli/commands/log4shell)``
+### ``[`snyk log4shell`](log4shell.md)``
 
 Log4Shell 취약성을 찾습니다.
 
-### ``[`snyk config`](https://docs.snyk.io/snyk-cli/commands/config)``
+### ``[`snyk config`](undefined-2.md)``
 
 Snyk CLI 구성을 관리합니다.
 
-### ``[`snyk policy`](https://docs.snyk.io/snyk-cli/commands/policy)``
+### ``[`snyk policy`](policy.md)``
 
 패키지에 대한 `.synk` 정책을 표시합니다.
 
-### ``[`snyk ignore`](https://docs.snyk.io/snyk-cli/commands/ignore)``
+### ``[`snyk ignore`](ignore.md)``
 
 .synk 정책을 수정하여 명시된 문제를 무시합니다.
 
