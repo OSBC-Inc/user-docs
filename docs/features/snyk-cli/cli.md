@@ -48,7 +48,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 ![스냅샷 및 검색 결과 모니터링](../../.gitbook/assets/a.png)
 
-자세한 내용은 [Monitor your projects at regular intervals](undefined-1/monitor-your-projects-at-regular-intervals.md)을 참조하십시오.
+자세한 내용은 [Monitor your projects at regular intervals](undefined-1/undefined-1.md)을 참조하십시오.
 
 ## 테스트 부족
 
