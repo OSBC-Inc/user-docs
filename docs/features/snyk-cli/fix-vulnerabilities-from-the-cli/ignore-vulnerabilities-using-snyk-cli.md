@@ -1,13 +1,11 @@
 # Snyk CLI를 사용하여 취약점 무시
 
 {% hint style="info" %}
-
+[Snyk Open Source](../../../snyk-products/snyk-open-source/)의 경우 이 옵션이 기본적으로 작동합니다.\
+[Snyk Container](../../../snyk-products/snyk-container/)의 경우 이러한 옵션도 작동하지만 무시를 등록한 후 `snyk test` 또는 `snyk monitor`를 호출할 때 `--policy-path=` 옵션을 사용해야 합니다(예: `snyk container test node --policy-path=.snyk.`). \
+[Infrastructure as Code용 Snyk CLI](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)의 경우 [.snyk 정책 파일을 이용한 무시](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md)를 참조하십시오. \
+[Snyk Code](../../../snyk-products/snyk-code/)의 경우 이러한 옵션이 아직 구현되지 않았습니다.
 {% endhint %}
-
-\{% hint style="info" %\} For [Snyk Open Source, ](https://docs.snyk.io/snyk-open-source)these option work by default.\
-For [Snyk Container](https://docs.snyk.io/snyk-container), these options also work, but after registering an ignore, when you call `snyk test` or `snyk monitor`, you must use the `--policy-path=` option, for example: `snyk container test node --policy-path=.snyk.`\
-For [Snyk Infrastructure as Code](https://support.snyk.io/hc/en-us/categories/360001342678-Infrastructure-as-code), see [IaC ignores using the snyk policy file](https://docs.snyk.io/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file).\
-For [Snyk Code](https://docs.snyk.io/snyk-code), these options are not yet implemented. \{% endhint %\}
 
 Sometimes, Snyk alerts you to a vulnerability that has no update or Snyk patch available, or that you do not believe to be currently exploitable in your application. When this happens you may want to tell Snyk to ignore the vulnerability for a certain period of time.
 
