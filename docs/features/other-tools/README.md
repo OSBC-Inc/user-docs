@@ -1,14 +1,14 @@
-# 더 많은 Snyk Tool
+# 더 많은 Snyk 도구
 
 ## 소개
 
-Snyk은 주요 Snyk 제품 라인에서 해결할 수 없는 특정 문제를 해결하는 데 도움이 되는 Tool을 제공합니다.
+Snyk은 주요 Snyk 제품 라인에서 해결할 수 없는 특정 문제를 해결하는 데 도움이 되는 도구을 제공합니다.
 
 {% hint style="info" %}
-이러한 Tool을 사용하려면 채워진 프로젝트가 있는 기존 Snyk 계정이 필요합니다.
+이러한 도구를 사용하려면 채워진 프로젝트가 있는 기존 Snyk 계정이 필요합니다.
 {% endhint %}
 
-## 사용 가능한 Tool
+## 사용 가능한 도구
 
 * [snyk-api-import](https://github.com/snyk-tech-services/snyk-api-import): 강력하고 빠른 방식으로 프로젝트를 Snyk으로 대량 가져옵니다.
 * [jira-tickets-for-new-vulns](https://github.com/snyk-tech-services/jira-tickets-for-new-vulns): Snyk 모니터링 프로젝트를 동기화하고 문제에 대한 JIRA 티켓을 auto-open 합니다.
@@ -32,6 +32,6 @@ Snyk은 주요 Snyk 제품 라인에서 해결할 수 없는 특정 문제를 �
 * [snyk-bulk-action-scripts](https://github.com/snyk-tech-services/snyk-bulk-action-scripts): Snyk에서 그룹의 모든 조직에 대한 통합 설정을 편집하기 위한 스크립트 모음입니다.
 * [snyk-deps-to-csv](https://github.com/snyk-tech-services/snyk-deps-to-csv): 그룹의 모든 조직에서 모든 종속성을 수집하고 CSV 파일로 출력합니다.
 
-## Tool 아이디어
+## 도구 아이디어
 
-Tool에 대한 아이디어가 있습니까? 그렇다면 특정 요구 사항에 맞게 Snyk 경험을 형성할 수 있는 기회를 제공하는 [Snyk Apps](../integrations/snyk-apps/)를 확인하십시오. 질문이 있는 경우 [Snyk 지원](https://support.snyk.io/hc/en-us/)에 문의할 수도 있습니다.
+도구에 대한 아이디어가 있습니까? 그렇다면 특정 요구 사항에 맞게 Snyk 경험을 형성할 수 있는 기회를 제공하는 [Snyk Apps](../integrations/snyk-apps/)를 확인하십시오. 질문이 있는 경우 [Snyk 지원](https://support.snyk.io/hc/en-us/)에 문의할 수도 있습니다.
