@@ -1,5 +1,5 @@
 ---
-description: SCM-Contributors-Count 도구를 실행한 결과
+description: SCM-Contributors-Count tool을 실행한 결과
 ---
 
 # 출력

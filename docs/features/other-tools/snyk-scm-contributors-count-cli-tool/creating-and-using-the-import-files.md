@@ -1,5 +1,5 @@
 ---
-description: "\bImport file을 생성하고 snyk-api-import Tool과 함께 사용하는 방법"
+description: "\bImport file을 생성하고 snyk-api-import 도구와 함께 사용하는 방법"
 ---
 
 # Import file 생성 및 사용
@@ -8,12 +8,12 @@ description: "\bImport file을 생성하고 snyk-api-import Tool과 함께 사�
 
 이 기능은 Bitbucket 및 Azure에서만 작동합니다.
 
-`snyk-scm-contributors-count` Tool이 Snyk 계정과 SCM 계정에 모두 연결되면 Tool은 Snyk에서 모니터링하는 저장소/프로젝트를 찾아냅니다.
+`snyk-scm-contributors-count` 도구가 Snyk 계정과 SCM 계정에 모두 연결되면 도구는 Snyk에서 모니터링하는 저장소/프로젝트를 찾아냅니다.
 
-`importConfDir` 와 `importFileRepoType` flags를 command에 적용하면 Tool이 [snyk-api-import ](creating-and-using-the-import-files.md#using-the-snyk-api-import-tool)Tool과 함께 사용하여 누락된 리포지토리를 Snyk 계정으로 가져오는 데 사용할 모니터링되지 않는 리포지토리 데이터로 채워진 import file을 생성합니다.
+`importConfDir` 와 `importFileRepoType` flags를 command에 적용하면 도구가 [snyk-api-import ](creating-and-using-the-import-files.md#using-the-snyk-api-import-tool)도구와 함께 사용하여 누락된 리포지토리를 Snyk 계정으로 가져오는 데 사용할 모니터링되지 않는 리포지토리 데이터로 채워진 import file을 생성합니다.
 
-* Snyk token을 내보냈고 관련 Snyk 계정에 Tool이 스캔하는 특정 SCM에 대한 통합 세트가 있는 경우 Tool은 `snyk-api-import` Tool에서 필요에 따라 Snyk에서 OrgID 및 IntegrationID를 찾아 일치시키고 Tool을 가져와 자동으로 import file에 추가합니다.
-* Snyk token을 내보내지 않았거나 사용자에게 아직 Snyk 계정이 없는 경우 이 기능을 사용하여 SCM의 모든 저장소를 매핑하고 나중에 `snyk-api-import` Tool에서 사용할 import file을 생성할 수 있습니다. 이 경우 또는 Tool이 OrgID 또는 IntegrationID를 찾을 수 없는 경우 Tool은 사용자에게 이러한 ID를 제공하라는 메시지를 표시하고(한 번) 자동으로 import file에 추가합니다.
+* Snyk token을 내보냈고 관련 Snyk 계정에 도구가 스캔하는 특정 SCM에 대한 통합 세트가 있는 경우 도구은 `snyk-api-import` 도구에서 필요에 따라 Snyk에서 OrgID 및 IntegrationID를 찾아 일치시키고 도구를 가져와 자동으로 import file에 추가합니다.
+* Snyk token을 내보내지 않았거나 사용자에게 아직 Snyk 계정이 없는 경우 이 기능을 사용하여 SCM의 모든 저장소를 매핑하고 나중에 `snyk-api-import` 도에서 사용할 import file을 생성할 수 있습니다. 이 경우 또는 도구가 OrgID 또는 IntegrationID를 찾을 수 없는 경우 도구은 사용자에게 이러한 ID를 제공하라는 메시지를 표시하고(한 번) 자동으로 import file에 추가합니다.
 
 ## The import flags
 
