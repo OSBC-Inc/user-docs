@@ -23,7 +23,7 @@ description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
 ## **Command를 실행하기 전에**
 
 1. SNYK\_TOKEN 내보내기(Snyk에서 이미 모니터링한 리포지토에 대한 기여자만 가져오려는 경우):
-   * 토큰에 그룹 level 액세스 권한이 있는지 확인하거나 그룹 level 액세스 권한이 있는 서비스 계정의 토큰을 사용하십시오. 서비스 계정을 만드는 방법에 대한 자세한 내용은 [서비스 계정 설정 방법](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#how-to-set-up-a-service-account)을 참조하십시오.
+   * 토큰에 그룹 수준 액세스 권한이 있는지 확인하거나 그룹 수준 액세스 권한이 있는 서비스 계정의 토큰을 사용하십시오. 서비스 계정을 만드는 방법에 대한 자세한 내용은 [서비스 계정 설정 방법](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#how-to-set-up-a-service-account)을 참조하십시오.
    * 토큰 값을 복사합니다.
    *   사용자 환경에서 토큰 내보내기:
 
@@ -36,9 +36,9 @@ description: Bitbucket Cloud에 대한 옵션 목록 및 몇 가지 예
 
 ## Command 실행
 
-다음과 같은 level의 사용 및 옵션을 고려할 수 있습니다:
+다음과 같은 수준의 사용 및 옵션을 고려할 수 있습니다:
 
-### 사용 Level:
+### 사용 수준:
 
 *   Bitbucket Cloud에서 모든 워크스페이스와 해당 리포지토리에 대한 커밋을 가져오려면 Bitbucket Cloud 사용자 및 앱 비밀번호를 입력하십시오.
 
