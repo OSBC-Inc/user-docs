@@ -395,7 +395,7 @@
   * [Issues 탭](features/reports/issues-tab.md)
   * [Dependencies 탭](features/reports/dependencies-tab.md)
   * [Licenses 탭](features/reports/licenses-tab.md)
-* [더 많은 Snyk Tool](features/other-tools/README.md)
+* [더 많은 Snyk 도구](features/other-tools/README.md)
   * [Tool: Snyk-SCM- Contributors-Count](features/other-tools/snyk-scm-contributors-count-cli-tool/README.md)
     * [순서도](features/other-tools/snyk-scm-contributors-count-cli-tool/flowchart.md)
     * [사용법](features/other-tools/snyk-scm-contributors-count-cli-tool/usage.md)
