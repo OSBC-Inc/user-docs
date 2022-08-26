@@ -1,7 +1,3 @@
----
-description: 성
----
-
 # Snyk CLI 구성
 
 You can use [environment variables](snyk-cli.md#environment-variables) to configure the Snyk CLI. You can also set variables to configure the Snyk CLI to [connect to the Snyk API](snyk-cli.md#configuration-to-connect-to-the-snyk-api).
