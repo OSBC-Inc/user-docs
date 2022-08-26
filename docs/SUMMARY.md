@@ -246,7 +246,7 @@
     * [정책](features/snyk-cli/cli-2/policy.md)
     * [테스트](features/snyk-cli/cli-2/test.md)
   * [Install or update the Snyk CLI](features/snyk-cli/install-or-update-the-snyk-cli.md)
-  * [Authenticate the CLI with your account](features/snyk-cli/authenticate-the-cli-with-your-account.md)
+  * [계정으로 CLI 인증](features/snyk-cli/authenticate-the-cli-with-your-account.md)
   * [Snyk CLI 구성](features/snyk-cli/snyk-cli.md)
   * [Create a Snyk App using the Snyk CLI](features/snyk-cli/create-a-snyk-app-using-the-snyk-cli.md)
 * [Snyk Integrations](features/integrations/README.md)

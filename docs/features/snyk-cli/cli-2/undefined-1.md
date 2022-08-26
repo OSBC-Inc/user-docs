@@ -8,7 +8,7 @@
 
 `snyk code` 명령은 정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
-자세한 내용은 [CLI for Snyk Code](https://docs.snyk.io/snyk-code/cli-for-snyk-code) 참
+자세한 내용은 [CLI for Snyk Code](https://docs.snyk.io/snyk-code/cli-for-snyk-code) 참조.
 
 ## 하위 명령: `test`
 
@@ -25,7 +25,7 @@
 
 ## Snyk CLI 구성
 
-환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참
+환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조.
 
 ## 디버그
 
@@ -43,11 +43,11 @@
 
 새로 테스트한 모든 프로젝트가 기본 조직에서 테스트 되도록 기본 값을 설정합니다. 기본 값을 재 정의해야 하는 경우 `--org=<ORG_ID>`옵션을 사용합니다.
 
-Default: `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
+기본값: [Account settings](https://app.snyk.io/account)에서 현재 선호하는 조직인 \<ORG\_ID>
 
-Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
+`--org=<orgslugname>`을 사용할 수도 있습니다. `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
-For more information see the article [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)
+자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 문서를 참조하십시오.
 
 ### `--json`
 

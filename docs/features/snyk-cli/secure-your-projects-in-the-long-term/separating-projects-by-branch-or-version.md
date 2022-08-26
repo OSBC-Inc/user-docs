@@ -25,4 +25,4 @@ snyk monitor --target-reference="$(git describe --tags --abbrev=0)"
 
 `--target-reference` 를 사용하면 프로젝트 페이지에서 하위 그룹을 만들 수 있습니다.
 
-![하위 그룹이 있는 프로젝트 페이지](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/Screenshot%202021-10-21%20at%2013-08-58%20Projects.png)
+![하위 그룹이 있는 프로젝트 페이지.](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/Screenshot%202021-10-21%20at%2013-08-58%20Projects.png)
