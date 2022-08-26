@@ -51,30 +51,30 @@
 
 ### `--json`
 
-Print results in JSON format.
+결과를 JSON 형식으로 인쇄합니다.
 
-Example: `$ snyk code test --json`
+예: `$ snyk code test --json`
 
 ### `--json-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in JSON format directly to the specified file, regardless of whether or not you use the `--json` option.
+`--json` 옵션 사용 여부에 관계없이 테스트 출력을 JSON 형식으로 지정된 파일에 직접 저장합니다.
 
-This is useful if you want to display the human-readable test output using stdout and at the same time save the JSON format output to a file.
+이것은 stdout을 사용하여 human-readable 테스트 출력을 표시하고 동시에 JSON 형식 출력을 파일에 저장하려는 경우에 유용합니다.
 
-Example: `$ snyk code test --json-file-output=vuln.json`
+예: `$ snyk code test --json-file-output=vuln.json`
 
 ### `--sarif`
 
-Return results in SARIF format.
+결과를 SARIF 형식으로 반환합니다.
 
-Example: $snyk code
+Example:  `$snyk code`
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in SARIF format directly to the \<OUTPUT\_FILE\_PATH> file, regardless of whether or not you use the `--sarif` option.
+`--sarif` 옵션을 사용하는지 여부에 관계없이 테스트 출력을 SARIF 형식으로 \<OUTPUT\_FILE\_PATH> 파일에 직접 저장합니다.
 
-This is especially useful if you want to display the human-readable test output using stdout and at the same time save the SARIF format output to a file.
+이것은 stdout을 사용하여 human-readable 테스트 출력을 표시하는 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 ### `--severity-threshold=<low|medium|high|critical>`
 
-Report only vulnerabilities at the specified level or higher. Note that the Snyk Code configuration issues do not currently use the `critical` severity level.
+지정된 수준 이상의 취약점만 보고합니다. Snyk 코드 구성 문제는 현재 `critical` 심각도 수준을 사용하지 않습니다.
