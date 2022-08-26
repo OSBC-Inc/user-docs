@@ -14,11 +14,11 @@
 
 ## 값
 
-일부 환경 및 구성에서는 `<API_TOKEN>`을 사용해야 합니다. 계정으로 CLI 인증 참조
+일부 환경 및 구성에서는 `<API_TOKEN>`을 사용해야 합니다. [계정으로 CLI 인증](../authenticate-the-cli-with-your-account.md) 참조
 
 값은 사용자 토큰 또는 서비스 계정일 수 있습니다. [Service accounts](https://docs.snyk.io/features/integrations/managing-integrations/service-accounts) 참조
 
-CI/CD 환경에서는 `SNYK_TOKEN` 환경 변수를 사용합니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참조
+CI/CD 환경에서는 `SNYK_TOKEN` 환경 변수를 사용합니다. [Snyk CLI 구성](../snyk-cli.md) 참조
 
 이 환경 변수를 설정한 후 CLI 명령을 사용할 수 있습니다.
 
