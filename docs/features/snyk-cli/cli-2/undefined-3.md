@@ -8,7 +8,7 @@
 
 `snyk container` 명령은 컨테이너 이미지의 취약성을 테스트합니다.
 
-자세한 내용은  [Snyk CLI for container security](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security) 참조하십시오.
+자세한 내용은  [컨테이너 보안을 위한 Snyk CLI](../../../snyk-products/snyk-container/snyk-cli-for-container-security/) 참조하십시오.
 
 ## 하위 명령
 
@@ -33,7 +33,7 @@
 
 환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다.
 
-컨테이너 명령에 적용되는 환경 변수가 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli) 참조
+컨테이너 명령에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조
 
 ## 디버그
 
@@ -152,7 +152,7 @@ project tags set 를 지우려면 `--project-tags=` 를 수정하십시오.
 
 CLI 버전 1.962.0 이상에서는 `--app-vuls` 옵션과 `--json` 옵션을 함께 사용하여 운영 체제와 JSON 형식의 응용 프로그램 취약성을 결과에서 확인합니다.
 
-자세한 내용은 [Detecting application vulnerabilities in container images](https://docs.snyk.io/products/snyk-container/getting-around-the-snyk-container-ui/detecting-application-vulnerabilities-in-container-images)를 참조하세요.
+자세한 내용은 [컨테이너 이미지에서 애플리케이션 취약점 탐지](../../../snyk-products/snyk-container/getting-around-the-snyk-container-ui/detecting-application-vulnerabilities-in-container-images.md)를 참조하세요.
 
 ### `--nested-jars-depth`
 
@@ -194,4 +194,4 @@ CLI 버전 1.962.0 이상에서는 `--app-vuls` 옵션과 `--json` 옵션을 함
 
 `$ snyk container test app:latest --file=Dockerfile --policy-path=path/to/.snyk`
 
-자세한 내용과 예시는 [Advanced Snyk Container CLI usage](https://docs.snyk.io/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage)를 참조하십시오.
+자세한 내용과 예시는 [고급 Snyk Container CLI 사용](../../../snyk-products/snyk-container/snyk-cli-for-container-security/advanced-snyk-container-cli-usage.md)을 참조하십시오.
