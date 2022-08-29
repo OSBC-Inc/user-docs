@@ -24,7 +24,7 @@ Snyk Infrastructure as Code의 경우 Infrastructure as Code용 Snyk CLI에서 "
 
 ## Snyk CLI 구성
 
-Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Snyk CLI 구성](../snyk-cli.md)을 참조하십시오.
+Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Snyk CLI 구성을](../snyk-cli.md) 참조하십시오.
 
 ## Debug
 
