@@ -10,17 +10,17 @@
 
 Snyk 컨테이너는 [`snyk 컨테이너` 도움말](undefined-3.md)을 참조하세요.
 
-The `monitor` command is not supported for Snyk Code.
+`monitor` command는 Snyk 코드에 대해 지원되지 않습니다.
 
-For Snyk Infrastructure as Code follow the instructions in "Regularly testing IaC files" on [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
+Snyk Infrastructure as Code의 경우 Infrastructure as Code용 Snyk CLI에서 "IaC 파일을 정기적으로 테스트" 의 지침을 따르십시오.
 
 ## 종료 코드
 
 사용 가능한 종료 코드 및 그 의미:
 
-**0**: success, snapshot created\
-**2**: failure, try to re-run command\
-**3**: failure, no supported projects detected
+**0**: 성공, 스냅샷 생성됨\
+**2**: 실패, 명령을 다시 실행하십시오.\
+**3**: 실패, 지원되는 프로젝트가 감지되지 않음
 
 ## Snyk CLI 구성
 
@@ -32,23 +32,23 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 ## 옵션
 
-See also subsequent sections for options for specific build environments, package managers, languages and `[<CONTEXT-SPECIFIC OPTIONS>]` which you specify last.
+마지막으로 지정하는 특정 빌드 환경, 패키지 관리자, 언어 및 `[<CONTEXT-SPECIFIC OPTIONS>]` 옵션에 대한 후속 섹션도 참조하십시오.
 
 ### `--all-projects`
 
-Auto-detect all projects in the working directory (including Yarn workspaces).
+작업 디렉토리(Yarn 작업 공간 포함)의 모든 프로젝트를 자동 감지합니다.
 
-For more information see the article [Does the Snyk CLI support monorepos or multiple manifest files?](https://support.snyk.io/hc/en-us/articles/360000910577-Does-the-Snyk-CLI-support-monorepos-or-multiple-manifest-files-)
+자세한 내용은 [Does the Snyk CLI support monorepos or multiple manifest files?](https://support.snyk.io/hc/en-us/articles/360000910577-Does-the-Snyk-CLI-support-monorepos-or-multiple-manifest-files-) 문서를 참조하십시오.
 
 ### `--fail-fast`
 
-Use with `--all-projects` to cause scans to be interrupted when errors occur and to report these errors back to the user.
+`--all-projects`와 함께 사용하면 오류가 발생할 때 스캔이 중단되고 이러한 오류를 사용자에게 다시 보고합니다.
 
-The exit code is 2 and the scan ends. No vulnerability information is reported for projects that did not produce errors.
+종료 코드는 2이고 스캔이 종료됩니다. 오류가 발생하지 않은 프로젝트에 대한 취약점 정보는 보고되지 않습니다.
 
-To perform the scan, resolve the error and scan again.
+스캔을 수행하려면 오류를 해결하고 다시 스캔하십시오.
 
-Note: If you do not use `--fail-fast`, Snyk scans all the projects but does not report any vulnerabilities for projects it could not scan due to misconfiguration or another error.
+주: `--fail-fast`를 사용하지 않으면 Snyk 모든 프로젝트를 스캔하지만 잘못된 구성이나 다른 오류로 인해 스캔할 수 없는 프로젝트에 대한 취약점은 보고하지 않습니다.
 
 ### `--detection-depth=<DEPTH>`
 
