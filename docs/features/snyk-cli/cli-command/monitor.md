@@ -10,17 +10,17 @@
 
 Snyk 컨테이너는 [`snyk 컨테이너` 도움말](undefined-3.md)을 참조하세요.
 
-`monitor` command는 Snyk 코드에 대해 지원되지 않습니다.
+The `monitor` command is not supported for Snyk Code.
 
-Snyk Infrastructure as Code의 경우 Infrastructure as Code용 Snyk CLI에서 "IaC 파일을 정기적으로 테스트" 의 지침을 따르십시오.
+For Snyk Infrastructure as Code follow the instructions in "Regularly testing IaC files" on [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
 
 ## 종료 코드
 
 사용 가능한 종료 코드 및 그 의미:
 
-**0**: 성공, 스냅샷 생성됨\
-**2**: 실패, 명령을 다시 실행하십시오.\
-**3**: 실패, 지원되는 프로젝트가 감지되지 않음
+**0**: success, snapshot created\
+**2**: failure, try to re-run command\
+**3**: failure, no supported projects detected
 
 ## Snyk CLI 구성
 
@@ -32,53 +32,53 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 ## 옵션
 
-마지막으로 지정하는 특정 빌드 환경, 패키지 관리자, 언어 및 `[<CONTEXT-SPECIFIC OPTIONS>]` 옵션에 대한 후속 섹션도 참조하십시오.
+See also subsequent sections for options for specific build environments, package managers, languages and `[<CONTEXT-SPECIFIC OPTIONS>]` which you specify last.
 
 ### `--all-projects`
 
-작업 디렉토리(Yarn 작업 공간 포함)의 모든 프로젝트를 자동 감지합니다.
+Auto-detect all projects in the working directory (including Yarn workspaces).
 
-자세한 내용은 [Does the Snyk CLI support monorepos or multiple manifest files?](https://support.snyk.io/hc/en-us/articles/360000910577-Does-the-Snyk-CLI-support-monorepos-or-multiple-manifest-files-) 문서를 참조하십시오.
+For more information see the article [Does the Snyk CLI support monorepos or multiple manifest files?](https://support.snyk.io/hc/en-us/articles/360000910577-Does-the-Snyk-CLI-support-monorepos-or-multiple-manifest-files-)
 
 ### `--fail-fast`
 
-`--all-projects`와 함께 사용하면 오류가 발생할 때 스캔이 중단되고 이러한 오류를 사용자에게 다시 보고합니다.
+Use with `--all-projects` to cause scans to be interrupted when errors occur and to report these errors back to the user.
 
-종료 코드는 2이고 스캔이 종료됩니다. 오류가 발생하지 않은 프로젝트에 대한 취약점 정보는 보고되지 않습니다.
+The exit code is 2 and the scan ends. No vulnerability information is reported for projects that did not produce errors.
 
-스캔을 수행하려면 오류를 해결하고 다시 스캔하십시오.
+To perform the scan, resolve the error and scan again.
 
-주: `--fail-fast`를 사용하지 않으면 Snyk 모든 프로젝트를 스캔하지만 잘못된 구성이나 다른 오류로 인해 스캔할 수 없는 프로젝트에 대한 취약점은 보고하지 않습니다.
+Note: If you do not use `--fail-fast`, Snyk scans all the projects but does not report any vulnerabilities for projects it could not scan due to misconfiguration or another error.
 
 ### `--detection-depth=<DEPTH>`
 
-`--all-projects` 또는 `--yarn-workspaces`와 함께 사용하여 검색할 하위 디렉터리 수를 나타냅니다. DEPTH는 `1` 이상의 숫자여야 합니다. 영(0)은 현재 디렉토리입니다.
+Use with `--all-projects` or `--yarn-workspaces` to indicate how many subdirectories to search. `DEPTH` must be a number, `1` or greater; zero (0) is the current directory.
 
-기본값: 4, 현재 작업 디렉토리(0) 및 4개의 하위 디렉토리.
+Default: 4, the current working directory (0) and 4 subdirectories.
 
-예: `--detection-depth=3`은 지정된 디렉터리(또는 `<PATH>` 가 지정되지 않은 경우 현재 디렉터리)와 세 가지 수준의 하위 디렉터리로 검색을 제한합니다. 영(0)은 현재 디렉토리입니다.
+Example: `--detection-depth=3` limits search to the specified directory (or the current directory if no `<PATH>` is specified) plus three levels of subdirectories; zero (0) is the current directory.
 
 ### `--exclude=<NAME>[,<NAME>]...>`
 
-`--all-projects` 및 `--yarn-workspaces`와 함께 사용하여 제외할 디렉터리 이름 및 파일 이름을 나타낼 수 있습니다. 쉼표로 구분해야 합니다.
+Can be used with `--all-projects` and `--yarn-workspaces` to indicate directory names and file names to exclude. Must be comma separated.
 
-예: `$ snyk test --all-projects --exclude=dir1,file2`
+Example: `$ snyk test --all-projects --exclude=dir1,file2`
 
-이렇게 하면 프로젝트 매니페스트 파일을 검색할 때 "dir1" 및 "file2"라는 이름의 디렉터리 및 파일이 제외됩니다. 예: "./dir1", "./src/dir1", "./file2", "./src/file2" 등.
+This will exclude any directories and files named "dir1" and "file2" when scanning for project manifest files. Such as: "./dir1", "./src/dir1", "./file2", "./src/file2", and so on.
 
 ### `--prune-repeated-subdependencies`, `-p`
 
-종속성 트리를 정리하여 중복 하위 종속성을 제거합니다.
+Prune dependency trees, removing duplicate sub-dependencies.
 
-계속해서 모든 취약성을 찾지만 취약한 경로를 모두 찾지 못할 수 있습니다.
+Continues to find all vulnerabilities, but may not find all of the vulnerable paths.
 
 ### `--print-deps`
 
-분석을 위해 보내기 전에 종속성 트리를 인쇄합니다.
+Print the dependency tree before sending it for analysis.
 
 ### `--remote-repo-url=<URL>`
 
-모니터링하려는 리포지토리의 원격 URL을 설정하거나 재정의합니다.
+Set or override the remote URL for the repository that you would like to monitor.
 
 ### `--dev`
 
