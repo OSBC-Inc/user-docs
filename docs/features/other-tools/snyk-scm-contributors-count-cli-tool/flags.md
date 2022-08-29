@@ -1,5 +1,5 @@
 ---
-description: "그각 SCM 스크립트의 \b플래그"
+description: 그각 SCM 스크립트의 플래그
 ---
 
 # 플래그
@@ -15,7 +15,7 @@ description: "그각 SCM 스크립트의 \b플래그"
 | **GitLab Ent.** | `"token"`           | `"groups"`      | `"project"` | `"exclusionFilePath"` | `"json"` |                            |                         |                           | `"url" [required]`                              |
 
 {% hint style="info" %}
-플래그 이름은 SCM에 있는 플래그 이름과 일치합니다. Bitbucket 서버, GitHub Enterprise 및 GitLab Enterprise와 같은 "Private" SCM은 command에서 플래그로 설정될 호스트 URL이 필요합니다.
+플래그 이름은 SCM에 있는 플래그 이름과 일치합니다. Bitbucket 서버, GitHub Enterprise 및 GitLab Enterprise와 같은 "Private" SCM은 command에서 플래그로 설정될 호스트 URL이 필요합니다.
 {% endhint %}
 
 {% hint style="info" %}
