@@ -144,19 +144,19 @@ C++의 경우에만 모든 파일에서 알려진 오픈 소스 종속성을 검
 
 ### `--policy-path=<PATH_TO_POLICY_FILE>`
 
-Manually pass a path to a `.snyk` policy file.
+`.snyk` 정책 파일에 대한 경로를 수동으로 전달합니다.
 
 ### `--json`
 
-Print results in JSON format.
+결과를 JSON 형식으로 인쇄합니다.
 
 ### `--project-environment=<ENVIRONMENT>[,<ENVIRONMENT>]...>`
 
-Set the project environment project attribute to one or more values (comma-separated). To clear the project environment set `--project-environment=`
+프로젝트 환경 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정하십시오. 프로젝트 환경을 지우려면 `--project-environment=` 를 설정합니다.
 
 Allowed values: `frontend, backend, internal, external, mobile, saas, onprem, hosted, distributed`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은  [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하세요.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE>]...>`
 
