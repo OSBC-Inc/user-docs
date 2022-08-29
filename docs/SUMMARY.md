@@ -240,11 +240,11 @@
     * [IaC 설명](features/snyk-cli/cli-2/iac-1.md)
     * [IaC update-exclude-policy](features/snyk-cli/cli-2/iac-update-exclude-policy.md)
     * [IaC 테스트](features/snyk-cli/cli-2/iac-test.md)
-    * [무시](features/snyk-cli/cli-3/undefined-4.md)
+    * [무시](features/snyk-cli/cli-2/ignore.md)
     * [Log4shell](features/snyk-cli/cli-2/log4shell.md)
     * [Monitor](features/snyk-cli/cli-2/monitor.md)
-    * [정책](features/snyk-cli/cli-3/undefined-5.md)
-    * [테스트](features/snyk-cli/cli-3/undefined-6.md)
+    * [정책](features/snyk-cli/cli-2/policy.md)
+    * [테스트](features/snyk-cli/cli-2/test.md)
   * [Install or update the Snyk CLI](features/snyk-cli/install-or-update-the-snyk-cli.md)
   * [계정으로 CLI 인증](features/snyk-cli/authenticate-the-cli-with-your-account.md)
   * [Snyk CLI 구성](features/snyk-cli/snyk-cli.md)
@@ -421,7 +421,7 @@
         * [GitLab - 진행순서 및 기술](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-flow-and-tech.md)
         * [GitLab - 몇 가지 예](features/other-tools/snyk-scm-contributors-count-cli-tool/the-scripts/gitlab-and-gitlab-server/gitlab-examples.md)
     * [Consolidate Results](features/other-tools/snyk-scm-contributors-count-cli-tool/consolidate-results.md)
-    * [Import file 생성 및 사용](features/other-tools/snyk-scm-contributors-count-cli-tool/creating-and-using-the-import-files.md)
+    * [Import file 생성 및 사용](features/other-tools/snyk-scm-contributors-count-cli-tool/creating-and-using-the-import-files.md)
     * [API 속도 제한 제어](features/other-tools/snyk-scm-contributors-count-cli-tool/api-rate-limit-control.md)
 
 ## TUTORIALS

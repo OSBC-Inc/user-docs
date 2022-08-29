@@ -53,11 +53,11 @@ Log4Shell 취약성을 찾습니다.
 
 Snyk CLI 구성을 관리합니다.
 
-### ``[`snyk policy`](../cli-3/undefined-5.md)``
+### ``[`snyk policy`](policy.md)``
 
 패키지에 대한 `.synk` 정책을 표시합니다.
 
-### ``[`snyk ignore`](../cli-3/undefined-4.md)``
+### ``[`snyk ignore`](ignore.md)``
 
 .synk 정책을 수정하여 명시된 문제를 무시합니다.
 
