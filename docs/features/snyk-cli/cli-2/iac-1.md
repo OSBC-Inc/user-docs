@@ -16,7 +16,7 @@
 
 자세한 정보 및 예제를 보려면 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 
-관련 명령 목록은 synk [iac help](https://docs.snyk.io/snyk-cli/commands/iac)를 참조하십시오. `iac --help`
+관련 명령 목록은 Synk [IaC](iac.md)를 참조하십시오. `iac --help`
 
 ## 종료 코드
 
@@ -28,7 +28,7 @@
 
 ## Snyk CLI 구성
 
-Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Configure the Snyk CLI](https://docs.snyk.io/snyk-cli/configure-the-snyk-cli)를 참조하십시오.
+Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Snyk CLI 구성을](../snyk-cli.md) 참조하십시오.
 
 ## Terraform 공급자 구성
 
