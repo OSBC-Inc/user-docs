@@ -174,41 +174,41 @@ Terraform Cloud 또는 Enterprise API를 인증할 API 토큰을 지정합니다
 
 보고서를 파일에 html형식으로 출력합니다.
 
-## Examples for snyk iac describe command
+## snyk iac 설명 command의 예
 
-For more examples, see [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)
+더 많은 예는 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 
-### Detect drift and unmanaged resources on AWS with a single local Terraform state
+### 단일 로컬 Terraform 상태로 AWS에서 드리프트 및 관리되지 않는 리소스 감지
 
 ```
 $ snyk iac describe --all --from="tfstate://terraform.tfstate"
 ```
 
-### Specify AWS credentials
+### AWS 자격 증명 지정
 
 ```
 $ AWS_ACCESS_KEY_ID=XXX AWS_SECRET_ACCESS_KEY=XXX snyk iac describe --all
 ```
 
-### Use an AWS named profile
+### AWS 명명된 프로필 사용
 
 ```
 $ AWS_PROFILE=profile_name snyk iac describe --all
 ```
 
-### Use a single Terraform state stored on an S3 backend
+### S3 백엔드에 저장된 단일 Terraform 상태 사용
 
 ```
 $ snyk iac describe --from="tfstate+s3://my-bucket/path/to/state.tfstate"
 ```
 
-### Aggregate multiple Terraform states
+### 여러 Terraform 상태 집계
 
 ```
 $ snyk iac describe --all --from="tfstate://terraform_S3.tfstate,tfstate://terraform_VPC.tfstate"
 ```
 
-### Aggregate many Terraform states, using glob pattern
+### glob 패턴을 사용하여 많은 Terraform 상태 집계
 
 ```
 $ snyk iac describe --all --from="tfstate://path/to/**/*.tfstate"
