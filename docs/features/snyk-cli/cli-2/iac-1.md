@@ -58,7 +58,7 @@ Terraform 상태에 있는 관리되는 리소스에서 변경 사항을 검색�
 
 ### `--org=<ORG_ID>`
 
-특정 조직에 연결된 Snyk command를 실행하려면 `<ORG_ID>`를 지정하십시오. [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 기본 `<ORG_ID>`를 무시합니다.
+Specify the `<ORG_ID>` to run Snyk commands tied to a specific organization. Overrides the default `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
 
 `--org=<orgslugname>`을 사용할 수도 있습니다 . `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬래그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
@@ -66,7 +66,7 @@ Terraform 상태에 있는 관리되는 리소스에서 변경 사항을 검색�
 
 ### `--from=<STATE>[,<STATE>...]`
 
-읽을 여러 Terraform 상태 파일을 지정합니다. Glob 패턴이 지원됩니다.
+Specify multiple Terraform state files to be read. Glob patterns are supported.
 
 지원되는 IaC 소스 목록 및 사용 방법을 포함한 자세한 내용을 보려면 [IAC Sources usage](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-sources-usage)를 참조하십시오.
 
@@ -144,71 +144,73 @@ Terraform Cloud 또는 Enterprise API를 인증할 API 토큰을 지정합니다
 
 ### `--strict`
 
-엄격모드를 활성화합니다.
+Enable strict mode.
 
-`iac describe` 명령은 기본적으로 서비스 연결 리소스(예: 서비스 연결 AWS IAM 역할, 해당 정책 및 정책 연결)를 무시합니다. 보고서에 이러한 리소스를 포함하려면 엄격 모드를 활성화할 수 있습니다. AWS 계정과 함께 사용하면 소음이 발생할 수 있습니다.
+The `iac describe` command ignores service-linked resources by default (like service-linked AWS IAM roles, their policies and policy attachments). To include those resources in the report you can enable **strict mode**. Note that this can create noise when used with an AWS account.
+
+## Options for policies
 
 ### `--ignore-policy`
 
-설정된 모든 정책, `.snyk` 파일의 현재 정책, 조직 수준 무시 및 Snyk 웹 UI의 프로젝트 정책을 무시합니다.
+Ignore all set policies, the current policy in the `.snyk` file, org level ignores, and the project policy in the Snyk Web UI.
 
 ### `--policy-path=<PATH_TO_POLICY_FILE>`
 
-`.snyk` 정책 파일에 대한 경로를 수동으로 전달합니다.
+Manually pass a path to a `.snyk` policy file.
 
 ## Options for output
 
 ### `--quiet`
 
-스캔 결과만 표준 출력합니다.
+Output only the scan result to stdout.
 
 ### `--json`
 
-보고서를 JSON형식으로 표준 출력합니다.
+Output the report as JSON to stdout.
 
 ### `--html`
 
-보고서를 html형식으로 표준 출력합니다.
+Output the report as html to stdout.
 
 ### `--html-file-output=<OUTPUT_FILE_PATH>`
 
-보고서를 파일에 html형식으로 출력합니다.
+Output the report as html into a file.
 
-## snyk iac 설명 command의 예
+## Examples for snyk iac describe command
 
-더 많은 예는 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
+For more examples, see [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)
 
-### 단일 로컬 Terraform 상태로 AWS에서 드리프트 및 관리되지 않는 리소스 감지
+### Detect drift and unmanaged resources on AWS with a single local Terraform state
 
 ```
 $ snyk iac describe --all --from="tfstate://terraform.tfstate"
 ```
 
-### AWS 자격 증명 지정
+### Specify AWS credentials
 
 ```
 $ AWS_ACCESS_KEY_ID=XXX AWS_SECRET_ACCESS_KEY=XXX snyk iac describe --all
 ```
 
-### AWS 명명된 프로필 사용
+### Use an AWS named profile
 
 ```
 $ AWS_PROFILE=profile_name snyk iac describe --all
 ```
 
-### S3 백엔드에 저장된 단일 Terraform 상태 사용
+### Use a single Terraform state stored on an S3 backend
 
 ```
 $ snyk iac describe --from="tfstate+s3://my-bucket/path/to/state.tfstate"
 ```
 
-### 여러 Terraform 상태 집계
+### Aggregate multiple Terraform states
 
 ```
 $ snyk iac describe --all --from="tfstate://terraform_S3.tfstate,tfstate://terraform_VPC.tfstate"
 ```
 
-### glob 패턴을 사용하여 많은 Terraform 상태 집계
+### Aggregate many Terraform states, using glob pattern
 
 ```
 $ snyk iac describe --all --from="tfstate://path/to/**/*.tfstate"
