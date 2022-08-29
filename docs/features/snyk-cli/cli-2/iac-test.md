@@ -83,143 +83,145 @@ Example: `$ snyk iac test --json-file-output=vuln.json`
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in SARIF format directly to the \<OUTPUT\_FILE\_PATH> file, regardless of whether or not you use the `--sarif` option.
+`--sarif` 옵션을 사용하는지 여부에 관계없이 테스트 출력을 SARIF 형식으로 \<OUTPUT\_FILE\_PATH> 파일에 직접 저장합니다.
 
-This is especially useful if you want to display the human-readable test output using stdout and at the same time save the SARIF format output to a file.
+이것은 stdout을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하는 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 ### `--project-business-criticality=<BUSINESS_CRITICALITY>[,<BUSINESS_CRITICALITY>]...>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Set the project business criticality project attribute to one or more values (comma-separated). To clear the project business criticality set `--project-business-criticality=`
+프로젝트 비즈니스의 중요도는 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정하십시오. 프로젝트 비즈니스 중요도 설정을 지우려면`--project-business-criticality=`를 설정합니다.
 
-Allowed values: `critical, high, medium, low`
+허용되는 값: `critical, high, medium, low`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 참조하세요.
 
 ### `--project-environment=<ENVIRONMENT>[,<ENVIRONMENT>]...>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Set the project environment project attribute to one or more values (comma-separated). To clear the project environment set `--project-environment=`
+프로젝트 환경 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정하십시오. 프로젝트 환경을 지우려면 `--project-environment=`
 
-Allowed values: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`
+허용되는 값: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`를 설정합니다.
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 참조하세요.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE>]...>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Set the project lifecycle project attribute to one or more values (comma-separated). To clear the project lifecycle set `--project-lifecycle=`
+프로젝트 수명 주기의 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정합니다. 프로젝트 수명 주기를 지우려면 `--project-lifecycle=` 를 설정합니다.
 
-Allowed values: `production`, `development`, `sandbox`
+허용되는 값: `production`, `development`, `sandbox`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 참조하세요.
 
 ### `--project-tags=<TAG>[,<TAG>]...>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Set the project tags to one or more values (comma-separated key value pairs with an "=" separator).
+프로젝트 태그를 하나 이상의 값("=" 구분 기호가 있는 쉼표로 구분된 키 값 쌍)으로 설정합니다.
 
-Example: `--project-tags=department=finance,team=alpha`
+예: `--project-tags=department=finance,team=alpha`
 
-To clear the project tags set `--project-tags=`
+프로젝트 태그 세트를 지우려면 `--project-tags=`를 설정합니다.
 
 ### `--remote-repo-url=<URL>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Set or override the remote URL for the repository.&#x20;
+리포지토리에 대한 원격 URL을 설정하거나 재정의합니다.
 
 ### `--report`
 
-**NEW** option: Share results with the Snyk Web UI.
+**새로운** 옵션: Snyk Web UI와 결과를 공유합니다.
 
-This creates a project in your Snyk account with a snapshot of the current configuration issues. After using this option, log in to the Snyk website and view your projects to see the monitor.
+이렇게 하면 현재 구성 문제의 스냅샷이 있는 Snyk 계정에 프로젝트가 생성됩니다. 이 옵션을 사용한 후 Snyk 웹사이트에 로그인하고 프로젝트를 보고 모니터를 봅니다.
 
 Example: `$ snyk iac test --report`
 
-Note: This option cannot be used in combination with the `--rules` option.
+주의: 이 옵션은 `--rules` 옵션과 함께 사용할 수 없습니다.
 
 ### `--rules=<PATH_TO_CUSTOM_RULES_BUNDLE>`
 
-Use this dedicated option for Custom Rules scanning to enable the IaC scans to use a custom rules bundle generated with the `snyk-iac-rules` SDK. See [`snyk-iac-rules` SDK](https://github.com/snyk/snyk-iac-rules#readme)
+IaC 스캔이 `snyk-iac-rules` SDK로 생성된 사용자 정의 규칙 번들을 사용하도록 하려면 사용자 정의 규칙 스캔에 이 전용 옵션을 사용하십시오. [snyk-iac-rules](https://github.com/snyk/snyk-iac-rules#readme) SDK 참조
 
-This option cannot be used if the custom rules settings were configured with the Snyk UI. Default: If the `--rules` flag is not specified, scan the configuration files using the internal Snyk rules only.
+사용자 정의 규칙 설정이 Snyk UI로 구성된 경우 이 옵션을 사용할 수 없습니다.\
+기본값: --rules 플래그가 지정되지 않은 경우 내부 Snyk 규칙만 사용하여 구성 파일을 스캔합니다.
 
-Example: Scan the configuration files using custom rules and internal Snyk rules.
+예: 사용자 정의 규칙 및 내부 Snyk 규칙을 사용하여 구성 파일을 스캔합니다.
 
 `--rules=bundle.tar.gz`
 
-Note: This option can not be used in combination with the `--report` option.
+주의: 이 옵션은 `--report` 옵션과 함께 사용할 수 없습니다.
 
 ### `--severity-threshold=<low|medium|high|critical>`
 
-Report only vulnerabilities at the specified level or higher.
+지정된 수준 이상의 취약점만 보고합니다.
 
 ### `--scan=<TERRAFORM_PLAN_SCAN_MODE>`
 
-Use this dedicated option for Terraform plan scanning modes to control whether the scan analyzes the full final state (for example, `planned-values`), or the proposed changes only (for example, `resource-changes`).
+Terraform plan scanning modes에 대해 이 전용 옵션을 사용하여 스캔이 전체 최종 상태(예: `planned-values`)를 분석할지 아니면 제안된 변경만(예: `resource-changes`) 분석할지 여부를 제어합니다.
 
-Default: If the `--scan` option is not specified, scan the proposed changes only by default. Example 1: `--scan=planned-values` (full state scan)\
-Example 2: `--scan=resource-changes` (proposed changes scan)
+기본값: `--scan` 옵션이 지정되지 않은 경우 기본적으로 제안된 변경 사항만 검색합니다.\
+예 1: `--scan=planned-values` (전체 상태 스캔)\
+예 2: `--scan=resource-changes` (제안된 변경 사항 스캔)
 
 ### `--target-name=<TARGET_NAME>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Set or override the project name for the repository.&#x20;
+리포지토리의 프로젝트 이름을 설정하거나 재정의합니다.
 
-Note: This flag will supersede the `--remote-repo-url`, if used together.
+주의: 이 플래그는 함께 사용되는 경우 --remote-repo-url을 대체합니다.
 
 ### `--target-reference=<TARGET_REFERENCE>`
 
-This can be used in combination with the `--report` option.
+`--report` 옵션과 함께 사용할 수 있습니다.
 
-Specify a reference which differentiates this project, for example, a branch name or version. Projects having the same reference can be grouped based on that reference.
+이 프로젝트를 구별하는 참조를 지정하십시오(예: 분기 이름 또는 버전). 참조가 동일한 프로젝트는 해당 참조를 기반으로 그룹화할 수 있습니다.
 
-Example, setting to the current Git branch:
+예, 현재 Git branch분기로 설정:
 
 `snyk iac test myproject/ --report --target-reference="$(git branch --show-current)"`
 
 \
-Example, setting to the latest Git tag:
+예, 최신 Git 태그로 설정:
 
 `snyk iac test myproject/ --report --target-reference="$(git describe --tags --abbrev=0)"`
 
 ### `--var-file=<PATH_TO_VARIABLE_FILE>`
 
-Use this option to load a terraform variable definitions file that is located in a different directory from the scanned one.
+스캔한 디렉토리와 다른 디렉토리에 있는 terraform 변수 정의 파일을 로드하려면 이 옵션을 사용하십시오.
 
-Example:
+예:
 
 `$ snyk iac test myproject/staging/networking --var-file=myproject/vars.tf`
 
-## Examples for snyk iac test command
+## snyk iac 테스트 명령의 예
 
-For more information see [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
+자세한 내용은 [Infrastructure as Code용 Snyk CLI](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)를 참조하십시오.
 
-### Test a CloudFormation file
+### CloudFormation 파일 테스트
 
 ```
 $ snyk iac test /path/to/cloudformation_file.yaml
 ```
 
-### Test a Kubernetes file
+### Kubernetes 파일 테스트
 
 ```
 $ snyk iac test /path/to/kubernetes_file.yaml
 ```
 
-### Test a Terraform file
+### Terraform 파일 테스트
 
 ```
 $ snyk iac test /path/to/terraform_file.tf
 ```
 
-### Test a Terraform plan file
+### Terraform plan 파일 테스트
 
 ```
 $ terraform plan -out=tfplan.binary
@@ -227,19 +229,19 @@ $ terraform show -json tfplan.binary > tf-plan.json
 $ snyk iac test tf-plan.json
 ```
 
-### Test an ARM file
+### ARM 파일 테스트
 
 ```
 $ snyk iac test /path/to/arm_file.json
 ```
 
-### Test matching files in a directory
+### 디렉토리에서 일치하는 파일 테스트
 
 ```
 $ snyk iac test /path/to/directory
 ```
 
-### Test matching files in a directory using a local custom rules bundle
+### 로컬 사용자 정의 규칙 번들을 사용하여 디렉토리에서 일치하는 파일 테스트
 
 ```
 $ snyk iac test /path/to/directory --rules=bundle.tar.gz
