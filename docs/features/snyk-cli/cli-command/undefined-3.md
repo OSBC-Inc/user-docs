@@ -111,7 +111,7 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 허용 값: `production, development, sandbox`
 
-자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes) 를 참조하십시오.
+자세한 내용은 [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하십시오.
 
 ### `--project-business-criticality=<BUSINESS_CRITICALITY>[,<BUSINESS_CRITICALITY>]...>`
 
@@ -119,7 +119,7 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 허용 값: `critical`, `high`, `medium`, `low`
 
-자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)를 참조하십시오.
+자세한 내용은 [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하십시오.
 
 ### `--project-tags=<TAG>[,<TAG>]...>`
 
@@ -176,7 +176,7 @@ CLI 버전 1.962.0 이상에서는 `--app-vuls` 옵션과 `--json` 옵션을 함
 
 컨테이너 레지스트리에 연결할 때 사용할 암호를 지정하십시오. 이는 Docker가 있을 때 로컬 Docker 이진 자격 증명을 위해 무시됩니다.
 
-## 컨테이너 테스트 명령의 예
+## 컨테이너 테스트 command의 예
 
 ### Docker 이미지 스캔 및 모니터링
 
