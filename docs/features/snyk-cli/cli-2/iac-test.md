@@ -33,53 +33,53 @@
 
 ### `--detection-depth=<DEPTH>`
 
-Use to indicate how many subdirectories to search. `DEPTH` must be a number, 1 or greater; zero (0) is the current directory.
+검색할 하위 디렉터리 수를 나타내는 데 사용합니다. `DEPTH`는 1 이상의 숫자여야 합니다. 영(0)은 현재 디렉토리입니다.
 
-Default: no limit.
+기본값: 제한 없음.
 
-Example: `--detection-depth=3` limits search to the specified directory (or the current directory if no `<PATH>` is specified) plus three levels of subdirectories; zero (0) is the current directory.
+예: `--detection-depth=3`은 검색을 지정된 디렉터리(또는 `<PATH>` 가 지정되지 않은 경우 현재 디렉터리)와 세 가지 수준의 하위 디렉터리로 제한합니다. 영(0)은 현재 디렉토리입니다.
 
 ### `--org=<ORG_ID>`
 
-Specify the `<ORG_ID>` to run Snyk commands tied to a specific organization. The `<ORG_ID>` influences private test limits.
+특정 조직에 연결된 Snyk 명령을 실행하려면 `<ORG_ID>`를 지정하십시오. `<ORG_ID>`는 비공개 테스트 제한에 영향을 줍니다.
 
-If you have multiple organizations, you can set a default from the CLI using:
+여러 조직이 있는 경우 다음을 사용하여 CLI에서 기본값을 설정할 수 있습니다:
 
 `$ snyk config set org=<ORG_ID>`
 
-Set a default to ensure all newly tested projects are tested under your default organization. If you need to override the default, use the `--org=<ORG_ID>` option.
+새로 테스트된 모든 프로젝트가 기본 조직에서 테스트 되도록 기본값을 설정합니다. 기본값을 재정의해야 하는 경우 `--org=<ORG_ID>` 옵션을 사용합니다.
 
-Default: `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
+기본값: [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 \<ORG\_ID>
 
-Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
+주의: --org=을 사용할 수도 있습니다. ORG\_ID는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
-For more information see the article [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)
+자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 문서를 참조하십시오.
 
 ### `--ignore-policy`
 
-Ignore all set policies, the current policy in the `.snyk` file, org level ignores, and the project policy on snyk.io.
+설정된 모든 정책, `.snyk` 파일의 현재 정책, 조직 수준 무시 및 snyk.io의 프로젝트 정책을 무시합니다.
 
 ### `--policy-path=<PATH_TO_POLICY_FILE>`
 
-Manually pass a path to a `.snyk` policy file.
+`.snyk` 정책 파일에 대한 경로를 수동으로 전달합니다.
 
 ### `--json`
 
-Print results in JSON format.
+결과를 JSON 형식으로 인쇄합니다.
 
 Example: `$ snyk iac test --json`
 
 ### `--json-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in JSON format directly to the specified file, regardless of whether or not you use the `--json` option.
+`--json` 옵션 사용 여부에 관계없이 테스트 출력을 JSON 형식으로 지정된 파일에 직접 저장합니다.
 
-This is especially useful if you want to display the human-readable test output using stdout and at the same time save the JSON format output to a file.
+이것은 표준 출을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하고 동시에 JSON 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 Example: `$ snyk iac test --json-file-output=vuln.json`
 
 ### `--sarif`
 
-Return results in SARIF format.
+결과를 SARIF 형식으로 반환합니다.
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 
