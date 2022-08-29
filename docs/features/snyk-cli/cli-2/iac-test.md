@@ -1,35 +1,35 @@
 # IaC 테스트
 
-## Usage
+## 사용법
 
 `snyk iac test [<OPTIONS>] [<PATH>]`
 
-## Description
+## 설명
 
-The `snyk iac test` command tests for any known security issue.
+`snyk iac test` command는 알려진 보안 문제에 대해 테스트합니다.
 
-For a list of related commands see the [snyk iac](broken-reference) help; `iac --help`
+관련 명령 목록은 [snyk iac](iac.md) 도움말을 참조하십시오; `iac --help`
 
-For more information see [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
+자세한 내용은 [Infrastructure as Code용 Snyk CLI](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)를 참조하십시오.
 
-## Exit codes
+## 종료 코드
 
-Possible exit codes and their meaning:
+사용 가능한 종료 코드 및 그 의미:
 
-**0**: success, no vulnerabilities found\
-**1**: action\_needed, vulnerabilities found\
-**2**: failure, try to re-run command\
-**3**: failure, no supported projects detected
+**0**: 성공, 발견된 취약점 없음\
+**1**: action\_needed, 취약점 발견\
+**2**: 실패, command 다시 실행하십시오.\
+**3**: 실패, 지원되는 프로젝트가 감지되지 않음
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and set variables for connecting with the Snyk API. See [Configure the Snyk CLI](https://docs.snyk.io/snyk-cli/configure-the-snyk-cli)
+환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API와 연결하기 위한 변수를 설정할 수 있습니다. [Snyk CLI 구성](../snyk-cli.md)을 참조하십시오.
 
 ## Debug
 
-Use the `-d` option to output the debug logs.
+`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-## Options
+## 옵션
 
 ### `--detection-depth=<DEPTH>`
 
