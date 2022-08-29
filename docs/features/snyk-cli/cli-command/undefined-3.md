@@ -6,7 +6,7 @@
 
 ## 설명
 
-`snyk container` 명령은 컨테이너 이미지의 취약성을 테스트합니다.
+`snyk container` command는 컨테이너 이미지의 취약성을 테스트합니다.
 
 자세한 내용은  [컨테이너 보안을 위한 Snyk CLI](../../../snyk-products/snyk-container/snyk-cli-for-container-security/) 참조하십시오.
 
@@ -26,20 +26,20 @@
 
 **0**: 성공, 취약점 없음\
 **1**: 작업 필요, 취약성 발견\
-**2**: 실패, 명령 재실행 시도\
+**2**: 실패, command 재실행 시도\
 **3**: 실패, 지원되는 프로젝트가 검색되지 않음
 
 ## Snyk CLI 구성
 
 환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다.
 
-컨테이너 명령에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조
+컨테이너 command에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조
 
 ## 디버그
 
 `-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-## 컨테이너 테스트 및 컨테이너 모니터 하위 명령 옵션
+## 컨테이너 테스트 및 컨테이너 모니터 하위 command 옵션
 
 ### `--print-deps`
 
@@ -103,7 +103,7 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 허용 값: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`
 
-자세한 내용은 [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)를 참조하십시오.
+자세한 내용은 [플로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하십시오.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE]...>`
 
