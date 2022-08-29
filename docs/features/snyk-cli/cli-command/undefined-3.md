@@ -47,7 +47,7 @@
 
 ### `--org=<ORG_ID>`
 
-`<ORG_ID>`를 지정하여 특정 조직에 연결된 Snyk 명령을 실행합니다. `<ORG_ID>`는 일부 기능 가용성 및 개인 테스트 제한에 영향을 미칩니다.
+`<ORG_ID>`를 지정하여 특정 조직에 연결된 Snyk command를 실행합니다. `<ORG_ID>`는 일부 기능 가용성 및 개인 테스트 제한에 영향을 미칩니다.
 
 조직이 여러 개인 경우 다음을 사용하여 CLI에서 기본값을 설정할 수 있습니다.
 
@@ -103,7 +103,7 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 허용 값: `frontend`, `backend`, `internal`, `external`, `mobile`, `saas`, `onprem`, `hosted`, `distributed`
 
-자세한 내용은 [플로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하십시오.
+자세한 내용은 [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하십시오.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE]...>`
 
