@@ -1,6 +1,6 @@
 # 분기 또는 버전별로 프로젝트 분리
 
-{% hint style="info" %}
+{% hint style="warning" %}
 이 기능은 현재 오픈 베타 버전입니다. 완전히 지원되지 않는 영역이 있습니다. 현재 [Snyk Open Source](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/products/snyk-open-source)가 지원됩니다.
 {% endhint %}
 

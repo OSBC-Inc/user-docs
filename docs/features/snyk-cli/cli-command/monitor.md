@@ -116,31 +116,31 @@ Example: `$ snyk monitor --file=req.txt --package-manager=pip`
 
 ### `--unmanaged`
 
-For C++ only, scan all files for known open source dependencies.
+C++의 경우에만 모든 파일에서 알려진 오픈 소스 종속성을 검색합니다.
 
-For options you can use with `--unmanaged` see [Options for scanning using `--unmanaged`](https://docs.snyk.io/snyk-cli/commands/monitor#options-for-scanning-using-unmanaged)
+`--unmanaged`와 함께 사용할 수 있는 옵션은 [`--unmanaged`를 사용한 검사 옵션](monitor.md#options-for-scanning-using-unmanaged)을 참조하세요.
 
-For more information see [Snyk for C/C++](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support/snyk-for-c-c++)\`\`
+자세한 내용은 [C/C++용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-c-c++.md)를 참조하세요.
 
 ### `--ignore-policy`
 
-Ignore all set policies, the current policy in the `.snyk` file, org level ignores, and the project policy on snyk.io.
+설정된 모든 정책, `.snyk` 파일의 현재 정책, 조직 수준 무시 및 snyk.io의 프로젝트 정책을 무시합니다.
 
 ### `--trust-policies`
 
-Apply and use ignore rules from the Snyk policies your dependencies; otherwise ignore rules in the dependencies are only shown as a suggestion.
+종속성 Snyk 정책의 무시 규칙을 적용하고 사용합니다. 그렇지 않으면 종속성의 무시 규칙은 제안으로만 표시됩니다.
 
 ### `--project-name=<PROJECT_NAME>`
 
-Specify a custom Snyk project name.
+사용자 정의 Snyk 프로젝트 이름을 지정하십시오.
 
-Example: `$ snyk monitor --project-name=my-project`
+예: `$ snyk monitor --project-name=my-project`
 
 ### `--target-reference=<TARGET_REFERENCE>`
 
-Specify a reference which differentiates this project, for example, a branch name or version. Projects having the same reference can be grouped based on that reference. Supported for Snyk Open Source and use with `--unmanaged`.
+이 프로젝트를 구별하는 참조를 지정하십시오(예: 분기 이름 또는 버전). 참조가 동일한 프로젝트는 해당 참조를 기반으로 그룹화할 수 있습니다. Snyk 오픈 소스에 대해 지원되며 `--unmanaged`와 함께 사용합니다.
 
-For more information see [Separating projects by branch or version](https://docs.snyk.io/snyk-cli/secure-your-projects-in-the-long-term/grouping-projects-by-branch-or-version)
+자세한 내용은 [분기 또는 버전별로 프로젝트 분리](../secure-your-projects-in-the-long-term/separating-projects-by-branch-or-version.md)를 참조하세요.
 
 ### `--policy-path=<PATH_TO_POLICY_FILE>`
 
