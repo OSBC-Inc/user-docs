@@ -52,33 +52,33 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 ### `--detection-depth=<DEPTH>`
 
-Use with `--all-projects` or `--yarn-workspaces` to indicate how many subdirectories to search. `DEPTH` must be a number, `1` or greater; zero (0) is the current directory.
+`--all-projects` 또는 `--yarn-workspaces`와 함께 사용하여 검색할 하위 디렉터리 수를 나타냅니다. DEPTH는 `1` 이상의 숫자여야 합니다. 영(0)은 현재 디렉토리입니다.
 
-Default: 4, the current working directory (0) and 4 subdirectories.
+기본값: 4, 현재 작업 디렉토리(0) 및 4개의 하위 디렉토리.
 
-Example: `--detection-depth=3` limits search to the specified directory (or the current directory if no `<PATH>` is specified) plus three levels of subdirectories; zero (0) is the current directory.
+예: `--detection-depth=3`은 지정된 디렉터리(또는 `<PATH>` 가 지정되지 않은 경우 현재 디렉터리)와 세 가지 수준의 하위 디렉터리로 검색을 제한합니다. 영(0)은 현재 디렉토리입니다.
 
 ### `--exclude=<NAME>[,<NAME>]...>`
 
-Can be used with `--all-projects` and `--yarn-workspaces` to indicate directory names and file names to exclude. Must be comma separated.
+`--all-projects` 및 `--yarn-workspaces`와 함께 사용하여 제외할 디렉터리 이름 및 파일 이름을 나타낼 수 있습니다. 쉼표로 구분해야 합니다.
 
-Example: `$ snyk test --all-projects --exclude=dir1,file2`
+예: `$ snyk test --all-projects --exclude=dir1,file2`
 
-This will exclude any directories and files named "dir1" and "file2" when scanning for project manifest files. Such as: "./dir1", "./src/dir1", "./file2", "./src/file2", and so on.
+이렇게 하면 프로젝트 매니페스트 파일을 검색할 때 "dir1" 및 "file2"라는 이름의 디렉터리 및 파일이 제외됩니다. 예: "./dir1", "./src/dir1", "./file2", "./src/file2" 등.
 
 ### `--prune-repeated-subdependencies`, `-p`
 
-Prune dependency trees, removing duplicate sub-dependencies.
+종속성 트리를 정리하여 중복 하위 종속성을 제거합니다.
 
-Continues to find all vulnerabilities, but may not find all of the vulnerable paths.
+계속해서 모든 취약성을 찾지만 취약한 경로를 모두 찾지 못할 수 있습니다.
 
 ### `--print-deps`
 
-Print the dependency tree before sending it for analysis.
+분석을 위해 보내기 전에 종속성 트리를 인쇄합니다.
 
 ### `--remote-repo-url=<URL>`
 
-Set or override the remote URL for the repository that you would like to monitor.
+모니터링하려는 리포지토리의 원격 URL을 설정하거나 재정의합니다.
 
 ### `--dev`
 
