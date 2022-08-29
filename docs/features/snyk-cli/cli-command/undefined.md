@@ -14,7 +14,7 @@
 
 ## 값
 
-일부 환경 및 구성에서는 `<API_TOKEN>`을 사용해야 합니다. [계정으로 CLI 인증](../authenticate-the-cli-with-your-account.md) 참조
+일부 환경 및 구성에서는 `<API_TOKEN>`을 사용해야 합니다. [계정으로 CLI 인증](../cli-3.md) 참조
 
 값은 사용자 토큰 또는 서비스 계정일 수 있습니다. [Service accounts](https://docs.snyk.io/features/integrations/managing-integrations/service-accounts) 참조
 

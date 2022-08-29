@@ -1,4 +1,4 @@
-# CLI 명령 도움말
+# CLI command 도움말
 
 Snyk CLI는 프로젝트를 검색하여 보안 취약성 및 라이센스 문제를 모니터링합니다.
 
@@ -53,11 +53,11 @@ Log4Shell 취약성을 찾습니다.
 
 Snyk CLI 구성을 관리합니다.
 
-### ``[`snyk policy`](policy.md)``
+### ``[`snyk policy`](undefined-5.md)``
 
 패키지에 대한 `.synk` 정책을 표시합니다.
 
-### ``[`snyk ignore`](ignore.md)``
+### ``[`snyk ignore`](undefined-4.md)``
 
 .synk 정책을 수정하여 명시된 문제를 무시합니다.
 

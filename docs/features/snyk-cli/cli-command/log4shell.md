@@ -12,11 +12,11 @@ snyk log4shell 명령은 Log4Shell 취약점 [CVE-2021-44228](https://security.s
 
 ## 관리되는 프로젝트
 
-패키지 관리자 매니페스트 파일을 사용하여 Java 프로젝트의 Log4Shell 취약성을 테스트하려면 `snyk test` command를 사용하십시오. [테스트 command 도움말](test.md)(`snyk test --help`) 및 [Java 및 Kotlin용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)을 참조하세요.
+패키지 관리자 매니페스트 파일을 사용하여 Java 프로젝트의 Log4Shell 취약성을 테스트하려면 `snyk test` command를 사용하십시오. [테스트 command 도움말](undefined-6.md)(`snyk test --help`) 및 [Java 및 Kotlin용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)을 참조하세요.
 
 관리되지 않는 파일을 테스트하려면 `snyk test --scan-all-unmanaged`를 사용하십시오.
 
-&#x20;[테스트 command 도움말](test.md)의 Maven 옵션 섹션을 참조하십시오.; `snyk test --help`
+&#x20;[테스트 command 도움말](undefined-6.md)의 Maven 옵션 섹션을 참조하십시오.; `snyk test --help`
 
 ## 종료 코드
 

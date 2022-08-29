@@ -1,36 +1,36 @@
 # Monitor
 
-## Usage
+## 사용법
 
 `snyk monitor [<OPTIONS>]`
 
-## Description
+## 설명
 
-The `snyk monitor` command creates a project in your Snyk account to be continuously monitored for open source vulnerabilities and license issues. After running this command, log in to the Snyk website and view your projects to see the monitor.
+`snyk monitor` command는 Snyk 계정에 프로젝트를 생성하여 오픈 소스 취약성 및 라이선스 문제를 지속적으로 모니터링합니다. 이 명령을 실행한 후 Snyk 웹사이트에 로그인하고 프로젝트를 확인하여 모니터를 확인합니다.
 
-For Snyk Container see [`snyk container` help](https://docs.snyk.io/snyk-cli/commands/container)
+Snyk 컨테이너는 [`snyk 컨테이너` 도움말](undefined-3.md)을 참조하세요.
 
 The `monitor` command is not supported for Snyk Code.
 
 For Snyk Infrastructure as Code follow the instructions in "Regularly testing IaC files" on [Snyk CLI for Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code)
 
-## Exit codes
+## 종료 코드
 
-Possible exit codes and their meaning:
+사용 가능한 종료 코드 및 그 의미:
 
 **0**: success, snapshot created\
 **2**: failure, try to re-run command\
 **3**: failure, no supported projects detected
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and and set variables for connecting with the Snyk API. See [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli)
+Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Snyk CLI 구성을](../snyk-cli.md) 참조하십시오.
 
 ## Debug
 
-Use the `-d` option to output the debug logs.
+`-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-## Options
+## 옵션
 
 See also subsequent sections for options for specific build environments, package managers, languages and `[<CONTEXT-SPECIFIC OPTIONS>]` which you specify last.
 

@@ -14,7 +14,7 @@
 
 모든 `snyk iac` 명령은 도움말과 함께 여기에 나열됩니다.
 
-* [iac 테스트](iac-test.md); `iac test --help`: 알려진 모든 보안 문제에 대한 테스트
+* [iac 테스트](iac-2.md); `iac test --help`: 알려진 모든 보안 문제에 대한 테스트
 * [iac update-exclude-policy](iac-update-exclude-policy.md); `iac update-exclude-policy --help`: 클라우드 리소스를 제외한 `.synk` 자동 생성\
   예: `snyk iac describe --json --all | snyk iac update-exclude-policy`
 * [iac 설명](iac-1.md); `iac describe --help`: 인프라 이동 및 관리되지 않는 클라우드 리소스 감지\
