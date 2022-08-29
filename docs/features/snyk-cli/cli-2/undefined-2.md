@@ -10,7 +10,7 @@
 
 Example: `~/.config/configstore/snyk.json`
 
-이 명령은 프로젝트의 일부인 `.synk` 파일을 관리하지 않습니다.  [`snyk policy`](broken-reference) 및 [`snyk ignore`](broken-reference) 명령을 참조하십시.
+이 명령은 프로젝트의 일부인 `.synk` 파일을 관리하지 않습니다.  [`snyk policy`](../cli-3/undefined-5.md) 및 [`snyk ignore`](../cli-3/undefined-4.md) 명령을 참조하십시.
 
 ## 디버그
 
