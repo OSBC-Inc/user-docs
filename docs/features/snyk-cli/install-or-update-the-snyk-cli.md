@@ -8,25 +8,27 @@ Snyk CLI를 설치한 후 [인증](cli-command/undefined.md)해야 합니다. �
 
 npm을 사용하여 Snyk CLI를 설치하기 전에 **필수 구성 요소**를 설치했는지 확인하십시오.
 
-* Install the latest version of npm in your local environment, using Node version 12 or later. See [What version of Node is required for Snyk?](https://support.snyk.io/hc/en-us/articles/360004183317-What-version-of-Node-is-required-for-Snyk-) for the steps to update Node.
-* To run Snyk on Alpine Linux, first install libstdc++. See [How can I use CLI on an Alpine operating system?](https://support.snyk.io/hc/en-us/articles/360001929038) for more information.
+* Node 버전 12 이상을 사용하여 로컬 환경에 최신 버전의 npm을 설치합니다.\
+  Node를 업데이트하는 단계는[ What version of Node is required for Snyk?](https://support.snyk.io/hc/en-us/articles/360004183317-What-version-of-Node-is-required-for-Snyk-) 를 참조하십시오.
+* Alpine Linux에서 Snyk를 실행하려면 먼저 libstdc++를 설치하십시오.\
+  자세한 내용은 [How can I use CLI on an Alpine operating system?](https://support.snyk.io/hc/en-us/articles/360001929038) 를 참조하십시오.
 
-Then follow these **steps to install with npm or Yarn**:
+그런 다음 **다음 단계에 따라 npm 또는 Yarn으로 설치**합니다:
 
-[Snyk CLI is available as an npm package](https://www.npmjs.com/package/snyk). If you have Node.js installed locally, you can **install** the npm package by running `npm install snyk -g`.
+[Snyk CLI는 npm 패키지로 사용할 수 있습니다](https://www.npmjs.com/package/snyk). Node.js가 로컬에 설치된 경우 npm install `snyk -g`를 실행하여 npm 패키지를 설치할 수 있습니다.
 
-If you are using Yarn, **install** by running `yarn global add snyk`.
+Yarn을 사용하는 경우 `yarn global add snyk`를 실행하여 **설치**합니다.
 
-## Install with standalone executables
+## 독립 실행형 실행 파일로 설치
 
-Use [GitHub Releases](https://github.com/snyk/snyk/releases) to download a standalone executable (macOS, Linux, Windows) of Snyk CLI for your platform.
+[GitHub Releases](https://github.com/snyk/snyk/releases) 를 사용하여 플랫폼용 Snyk CLI의 독립 실행형 실행 파일(macOS, Linux, Windows)을 다운로드합니다.
 
-Snyk also provides these standalone executables on the Snyk Content Delivery Network (CDN). See [https://static.snyk.io/cli/latest/release.json](https://static.snyk.io/cli/latest/release.json) for the download links. Examples for a specific version or platform follow:
+Snyk는 또한 Snyk CDN(Content Delivery Network)에서 이러한 독립 실행형 실행 파일을 제공합니다. 다운로드 링크는 [https://static.snyk.io/cli/latest/release.json](https://static.snyk.io/cli/latest/release.json)을 참조하십시오. 특정 버전 또는 플랫폼의 예는 다음과 같습니다.
 
 * [https://static.snyk.io/cli/v1.666.0/release.json](https://static.snyk.io/cli/v1.666.0/release.json)
 * [https://static.snyk.io/cli/latest/snyk-macos](https://static.snyk.io/cli/latest/snyk-macos)
 
-For example, to download and run the latest Snyk CLI on macOS, you could run:
+예를 들어 macOS에서 최신 Snyk CLI를 다운로드하여 실행하려면 다음을 실행할 수 있습니다:
 
 ```bash
 curl https://static.snyk.io/cli/latest/snyk-macos -o snyk
@@ -34,7 +36,7 @@ chmod +x ./snyk
 mv ./snyk /usr/local/bin/
 ```
 
-You can also use these direct links to download the executables:
+또한 직접 링크를 사용하여 실행 파일을 다운로드할 수도 있습니다.
 
 * **macOS**: [https://static.snyk.io/cli/latest/snyk-macos](https://static.snyk.io/cli/latest/snyk-macos)
 * **Windows**: [https://static.snyk.io/cli/latest/snyk-win.exe](https://static.snyk.io/cli/latest/snyk-win.exe)
@@ -43,14 +45,14 @@ You can also use these direct links to download the executables:
 * **Alpine**: [https://static.snyk.io/cli/latest/snyk-alpine](https://static.snyk.io/cli/latest/snyk-alpine)
 
 {% hint style="warning" %}
-For Apple M1 (darwin/arm64), see: [How do I run Snyk CLI on an Apple M1 machine?](https://support.snyk.io/hc/en-us/articles/5022278090397)
+Apple M1(darwin/arm64)의 경우 다음을 참조하십시오: [How do I run Snyk CLI on an Apple M1 machine?](https://support.snyk.io/hc/en-us/articles/5022278090397)
 {% endhint %}
 
 {% hint style="warning" %}
-**Note:** The drawback of this method is that you must keep the Snyk CLI up to date manually.
+주의: 이 방법의 단점은 Snyk CLI를 수동으로 최신 상태로 유지해야 한다는 것입니다.
 {% endhint %}
 
-## Install with Homebrew (macOS, Linux)
+## Homebrew로 설치(macOS, Linux)
 
 Install Snyk CLI from [Snyk's tap](https://github.com/snyk/homebrew-tap) with [Homebrew](https://brew.sh) by running the following. The tap is updated daily with the latest Snyk CLI release.
 
