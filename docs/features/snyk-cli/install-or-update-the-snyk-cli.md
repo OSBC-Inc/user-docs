@@ -54,7 +54,7 @@ Apple M1(darwin/arm64)의 경우 다음을 참조하십시오: [How do I run Sny
 
 ## Homebrew로 설치(macOS, Linux)
 
-Install Snyk CLI from [Snyk's tap](https://github.com/snyk/homebrew-tap) with [Homebrew](https://brew.sh) by running the following. The tap is updated daily with the latest Snyk CLI release.
+다음을 실행하여 [Homebrew](https://brew.sh/)로 [Snyk의 탭](https://github.com/snyk/homebrew-tap)에서 Snyk CLI를 설치합니다. 탭은 최신 Snyk CLI 릴리스로 매일 업데이트됩니다.
 
 ```bash
 brew tap snyk/tap
@@ -62,23 +62,23 @@ brew install snyk
 ```
 
 {% hint style="warning" %}
-For Apple M1 (darwin/arm64), see: [How do I run Snyk CLI on an Apple M1 machine?](https://support.snyk.io/hc/en-us/articles/5022278090397)
+Apple M1(darwin/arm64)의 경우 다음을 참조하십시오: [How do I run Snyk CLI on an Apple M1 machine?](https://support.snyk.io/hc/en-us/articles/5022278090397)
 {% endhint %}
 
-## Install with Scoop (Windows)
+## Scoop을 사용하여 설치 (Windows)
 
-Install Snyk CLI from [Snyk's bucket](https://github.com/snyk/scoop-snyk) with [Scoop](https://scoop.sh) by running the following. The bucket is updated daily with the latest Snyk CLI release.
+다음과 같이 [Scoop](https://scoop.sh/)을 사용하여 [Snyk의 버킷](https://github.com/snyk/scoop-snyk)에서 Snyk CLI를 설치합니다. 버킷은 최신 Snyk CLI 릴리스로 매일 업데이트됩니다.
 
 ```
 scoop bucket add snyk https://github.com/snyk/scoop-snyk
 scoop install snyk
 ```
 
-## Snyk CLI in a Docker image
+## Docker 이미지의 Snyk CLI
 
-Snyk CLI can also be run from a Docker image. Snyk offers multiple Docker images under [snyk/snyk-cli](https://hub.docker.com/r/snyk/snyk-cli) and [snyk/snyk](https://hub.docker.com/r/snyk/snyk) (see [snyk/snyk-images on GitHub](https://github.com/snyk/snyk-images) for more details).
+Snyk CLI는 Docker 이미지에서도 실행할 수 있습니다. Snyk는 [snyk/snyk-cli](https://hub.docker.com/r/snyk/snyk-cli) 및 [snyk/snyk](https://hub.docker.com/r/snyk/snyk)에서 여러 Docker 이미지를 제공합니다(자세한 내용은 [GitHub의 snyk/snyk-images](https://github.com/snyk/snyk-images) 참조).
 
-These images wrap the Snyk CLI and depending on the Tag come with relevant tooling for different projects, for example, for scanning a Gradle project with snyk/snyk-cli:
+이러한 이미지는 Snyk CLI를 래핑하고 태그에 따라 다양한 프로젝트에 대한 관련 도구가 함께 제공됩니다(예: snyk/snyk-cli를 사용하여 Gradle 프로젝트 스캔):
 
 ```bash
 docker run -it \
@@ -88,9 +88,9 @@ docker run -it \
   snyk/snyk-cli:gradle-5.4 test --org=my-org-name
 ```
 
-## Install as a part of a Snyk integration
+## Snyk 통합의 일부 설치
 
-Snyk also offers many [integrations](broken-reference) into developer tooling. These integrations install and manage the Snyk CLI for you. Integrations include the following:
+Snyk은 또한 개발자 도구에 대한 많은 통합을 제공합니다. 이러한 통합은 Snyk CLI를 설치하고 관리합니다. 통합에는 다음이 포함됩니다:
 
 * [Snyk Jenkins plugin](https://github.com/jenkinsci/snyk-security-scanner-plugin)
 * [CircleCI Orb](https://github.com/snyk/snyk-orb)
@@ -101,4 +101,4 @@ Snyk also offers many [integrations](broken-reference) into developer tooling. T
 * [Eclipse IDE Extension](https://github.com/snyk/snyk-eclipse-plugin)
 * [Maven plugin](https://github.com/snyk/snyk-maven-plugin)
 
-See the [integrations](broken-reference) docs for more details.
+자세한 내용은 [통합](../integrations/) 문서를 참조하세요.
