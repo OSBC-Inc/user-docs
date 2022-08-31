@@ -6,11 +6,11 @@
 
 ## 설명
 
-`snyk config` 명령은 로컬 Snyk CLI 구성 파일, `$XDG_CONFIG_HOME` 또는 `~/.config` 에 있는 JSON 파일, `configstore/snyk.json`을 관리합니다.
+`snyk config`  command는 로컬 Snyk CLI 구성 파일, `$XDG_CONFIG_HOME` 또는 `~/.config` 에 있는 JSON 파일, `configstore/snyk.json`을 관리합니다.
 
 Example: `~/.config/configstore/snyk.json`
 
-이 명령은 프로젝트의 일부인 `.synk` 파일을 관리하지 않습니다.  [`snyk policy`](undefined-5.md) 및 [`snyk ignore`](undefined-4.md) 명령을 참조하십시.
+이 명령은 프로젝트의 일부인 `.synk` 파일을 관리하지 않습니다.  [`snyk policy`](undefined-5.md) 및 [`snyk ignore`](undefined-4.md) command를 참조하십시오.
 
 ## 디버그
 

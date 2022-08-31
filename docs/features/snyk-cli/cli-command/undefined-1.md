@@ -8,7 +8,7 @@
 
 `snyk code` 명령은 정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
-자세한 내용은 [CLI for Snyk Code](https://docs.snyk.io/snyk-code/cli-for-snyk-code) 참조.
+자세한 내용은 [CLI for Snyk Code](../../../snyk-products/snyk-code/cli-for-snyk-code/) 참조.
 
 ## 하위 명령: `test`
 
@@ -25,7 +25,7 @@
 
 ## Snyk CLI 구성
 
-환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조.
+환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다. [Snyk CLI 구성](../snyk-cli-1.md) 참조.
 
 ## 디버그
 

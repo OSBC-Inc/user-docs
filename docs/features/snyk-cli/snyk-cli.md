@@ -1,53 +1,102 @@
-# Snyk CLI 구성
+# Snyk CLI 설치 또는 업데이트
 
-You can use [environment variables](snyk-cli.md#environment-variables) to configure the Snyk CLI. You can also set variables to configure the Snyk CLI to [connect to the Snyk API](snyk-cli.md#configuration-to-connect-to-the-snyk-api).
+이 페이지에 설명된 방법을 사용하여 [Snyk CLI](./)를 설치할 수 있습니다.
 
-## Environment variables
+After you install the Snyk CLI, you must [authenticate](broken-reference). Then you can [get started](broken-reference) testing and fixing your vulnerabilities, beginning with testing your installation.
 
-You can set the following environment variables to change CLI settings.
+## Install the Snyk CLI with npm or Yarn
 
-`SNYK_TOKEN`
+Before installing the Snyk CLI using npm, be sure you have installed the **prerequisites**:
 
-Allows you to override the token that may be available in your Snyk configuration settings (`~/.config/configstore/snyk.json`). Use `SNYK_TOKEN` in a CI/CD environment. After setting `SNYK_TOKEN` you can [get started](broken-reference) using the CLI..
+* Install the latest version of npm in your local environment, using Node version 12 or later. See [What version of Node is required for Snyk?](https://support.snyk.io/hc/en-us/articles/360004183317-What-version-of-Node-is-required-for-Snyk-) for the steps to update Node.
+* To run Snyk on Alpine Linux, first install libstdc++. See [How can I use CLI on an Alpine operating system?](https://support.snyk.io/hc/en-us/articles/360001929038) for more information.
 
-For information on how to get your account token see [Authenticate the CLI with your account](broken-reference). You can also use a service account to authenticate; for more information see [Service accounts](broken-reference). For additional information, see [Authentication for third-party tools](broken-reference).
+Then follow these **steps to install with npm or Yarn**:
 
-`SNYK_CFG_<KEY>`
+[Snyk CLI is available as an npm package](https://www.npmjs.com/package/snyk). If you have Node.js installed locally, you can **install** the npm package by running `npm install snyk -g`.
 
-Allows you to override any key that is also available as a `snyk config` option.
+If you are using Yarn, **install** by running `yarn global add snyk`.
 
-For example, `SNYK_CFG_ORG=myorg` overrides the default org option in `config` with "myorg".
+## Install with standalone executables
 
-`SNYK_REGISTRY_USERNAME`
+Use [GitHub Releases](https://github.com/snyk/snyk/releases) to download a standalone executable (macOS, Linux, Windows) of Snyk CLI for your platform.
 
-For the container command, specify a username to use when connecting to a container registry. Note that using the `--username` flag overrides this value. This is ignored in favor of local Docker binary credentials when Docker is present.
+Snyk also provides these standalone executables on the Snyk Content Delivery Network (CDN). See [https://static.snyk.io/cli/latest/release.json](https://static.snyk.io/cli/latest/release.json) for the download links. Examples for a specific version or platform follow:
 
-`SNYK_REGISTRY_PASSWORD`
+* [https://static.snyk.io/cli/v1.666.0/release.json](https://static.snyk.io/cli/v1.666.0/release.json)
+* [https://static.snyk.io/cli/latest/snyk-macos](https://static.snyk.io/cli/latest/snyk-macos)
 
-For the container command, specify a password to use when connecting to a container registry. Note that using the `--password` flag overrides this value. This is ignored in favor of local Docker binary credentials when Docker is present.
+For example, to download and run the latest Snyk CLI on macOS, you could run:
 
-## Configuration to connect to the Snyk API
+```bash
+curl https://static.snyk.io/cli/latest/snyk-macos -o snyk
+chmod +x ./snyk
+mv ./snyk /usr/local/bin/
+```
 
-By default the Snyk CLI connects to `https://snyk.io/api/v1`.
+You can also use these direct links to download the executables:
 
-`SNYK_API`
+* **macOS**: [https://static.snyk.io/cli/latest/snyk-macos](https://static.snyk.io/cli/latest/snyk-macos)
+* **Windows**: [https://static.snyk.io/cli/latest/snyk-win.exe](https://static.snyk.io/cli/latest/snyk-win.exe)
+* **Linux**: [https://static.snyk.io/cli/latest/snyk-linux](https://static.snyk.io/cli/latest/snyk-linux)
+* **Linux/arm64**: [https://static.snyk.io/cli/latest/snyk-linux-arm64](https://static.snyk.io/cli/latest/snyk-linux-arm64)
+* **Alpine**: [https://static.snyk.io/cli/latest/snyk-alpine](https://static.snyk.io/cli/latest/snyk-alpine)
 
-Sets the API host to use for Snyk requests. Useful for on-premise instances or when using a proxy server. If set with the `http` protocol the CLI upgrades the requests to `https`, unless `SNYK_HTTP_PROTOCOL_UPGRADE` is set to `0`.
+{% hint style="warning" %}
+For Apple M1 (darwin/arm64), see: [How do I run Snyk CLI on an Apple M1 machine?](https://support.snyk.io/hc/en-us/articles/5022278090397)
+{% endhint %}
 
-`SNYK_HTTP_PROTOCOL_UPGRADE=0`
+{% hint style="warning" %}
+**Note:** The drawback of this method is that you must keep the Snyk CLI up to date manually.
+{% endhint %}
 
-If set to the value of `0`, API (and CLI) requests aimed at `http` URLs are not upgraded to `https`. If the protocol is not set, the default behavior is to upgrade these requests from `http` to `https`. This is useful, for example, for reverse proxies.
+## Install with Homebrew (macOS, Linux)
 
-`HTTPS_PROXY` and `HTTP_PROXY`
+Install Snyk CLI from [Snyk's tap](https://github.com/snyk/homebrew-tap) with [Homebrew](https://brew.sh) by running the following. The tap is updated daily with the latest Snyk CLI release.
 
-Allows you to specify a proxy to use for `https` and `http` calls. The `https` in the `HTTPS_PROXY` means that _requests using `https` protocol_ use this proxy. The proxy itself doesn't need to use `https`.
+```bash
+brew tap snyk/tap
+brew install snyk
+```
 
-`SNYK_DISABLE_ANALYTICS=1`
+{% hint style="warning" %}
+For Apple M1 (darwin/arm64), see: [How do I run Snyk CLI on an Apple M1 machine?](https://support.snyk.io/hc/en-us/articles/5022278090397)
+{% endhint %}
 
-Disables all Snyk CLI analytics.
+## Install with Scoop (Windows)
 
-`SNYK_OAUTH_TOKEN=<OAuth token>`
+Install Snyk CLI from [Snyk's bucket](https://github.com/snyk/scoop-snyk) with [Scoop](https://scoop.sh) by running the following. The bucket is updated daily with the latest Snyk CLI release.
 
-Specifies the OAuth token if required for verification.
+```
+scoop bucket add snyk https://github.com/snyk/scoop-snyk
+scoop install snyk
+```
 
-For more information see [How can I use Snyk behind a proxy?](https://support.snyk.io/hc/en-us/articles/360000925358-How-can-I-use-Snyk-behind-a-proxy-)
+## Snyk CLI in a Docker image
+
+Snyk CLI can also be run from a Docker image. Snyk offers multiple Docker images under [snyk/snyk-cli](https://hub.docker.com/r/snyk/snyk-cli) and [snyk/snyk](https://hub.docker.com/r/snyk/snyk) (see [snyk/snyk-images on GitHub](https://github.com/snyk/snyk-images) for more details).
+
+These images wrap the Snyk CLI and depending on the Tag come with relevant tooling for different projects, for example, for scanning a Gradle project with snyk/snyk-cli:
+
+```bash
+docker run -it \
+    -e "SNYK_TOKEN=<TOKEN>" \
+    -v "<PROJECT_DIRECTORY>:/project" \
+    -v "/home/user/.gradle:/home/node/.gradle" \
+  snyk/snyk-cli:gradle-5.4 test --org=my-org-name
+```
+
+## Install as a part of a Snyk integration
+
+Snyk also offers many [integrations](broken-reference) into developer tooling. These integrations install and manage the Snyk CLI for you. Integrations include the following:
+
+* [Snyk Jenkins plugin](https://github.com/jenkinsci/snyk-security-scanner-plugin)
+* [CircleCI Orb](https://github.com/snyk/snyk-orb)
+* [Azure Pipelines Task](https://github.com/snyk/snyk-azure-pipelines-task)
+* [GitHub Actions](https://github.com/snyk/actions)
+* [IntelliJ IDE Plugin](https://github.com/snyk/snyk-intellij-plugin)
+* [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)
+* [Eclipse IDE Extension](https://github.com/snyk/snyk-eclipse-plugin)
+* [Maven plugin](https://github.com/snyk/snyk-maven-plugin)
+
+See the [integrations](broken-reference) docs for more details.
