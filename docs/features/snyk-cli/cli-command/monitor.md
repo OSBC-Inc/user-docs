@@ -24,7 +24,7 @@ Snyk Infrastructure as Code의 경우 Infrastructure as Code용 Snyk CLI에서 "
 
 ## Snyk CLI 구성
 
-Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Snyk CLI 구성을](../snyk-cli.md) 참조하십시오.
+Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정할 수 있습니다. [Snyk CLI 구성](../snyk-cli.md)을 참조하십시오.
 
 ## Debug
 
@@ -152,39 +152,39 @@ C++의 경우에만 모든 파일에서 알려진 오픈 소스 종속성을 검
 
 ### `--project-environment=<ENVIRONMENT>[,<ENVIRONMENT>]...>`
 
-프로젝트 환경 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정하십시오. 프로젝트 환경을 지우려면 `--project-environment=` 를 설정합니다.
+프로젝트 환경 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정하십시오. 프로젝트 환경을 지우려면 `--project-environment=` 로 설정합니다.
 
-Allowed values: `frontend, backend, internal, external, mobile, saas, onprem, hosted, distributed`
+허용되는 값: `frontend, backend, internal, external, mobile, saas, onprem, hosted, distributed`
 
 자세한 내용은  [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하세요.
 
 ### `--project-lifecycle=<LIFECYCLE>[,<LIFECYCLE>]...>`
 
-Set the project lifecycle project attribute to one or more values (comma-separated). To clear the project lifecycle set `--project-lifecycle=`
+프로젝트 수명 주기 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정합니다. 프로젝트 수명 주기를 지우려면 `--project-lifecycle=` 로 설정합니다.
 
-Allowed values: `production, development, sandbox`
+허용되는 값: `production, development, sandbox`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은  [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하세요.
 
 ### `--project-business-criticality=<BUSINESS_CRITICALITY>[,<BUSINESS_CRITICALITY>]...>`
 
-Set the project business criticality project attribute to one or more values (comma-separated). To clear the project business criticality set `--project-business-criticality=`
+프로젝트의 비즈니스 중요도 프로젝트 속성을 하나 이상의 값(쉼표로 구분)으로 설정하십시오. 프로젝트 비즈니스 중요도 설정을 지우려면 `--project-business-criticality=` 로 설정합니다.
 
-Allowed values: `critical, high, medium, low`
+허용되는 값: `critical, high, medium, low`
 
-For more information see [Project attributes](https://docs.snyk.io/getting-started/introduction-to-snyk-projects/view-project-information/project-attributes)
+자세한 내용은  [프로젝트 속성](../../../getting-started/introduction-to-snyk-projects/view-project-information/project-attributes.md)을 참조하세요.
 
 ### `--project-tags=<TAG>[,<TAG>]...>`
 
-Set the project tags to one or more values (comma-separated key value pairs with an "=" separator), for example, `--project-tags=department=finance,team=alpha` To clear the project tags set `--project-tags=`
+프로젝트 태그를 하나 이상의 값("=" 구분 기호가 있는 쉼표로 구분된 키 값 쌍)으로 설정합니다(예: `--project-tags=department=finance,team=alpha`). 프로젝트 태그를 지우려면 `--project-tags=`로 설정합니다.
 
 ### `--tags=<TAG>[,<TAG>]...>`
 
-This is an alias for `--project-tags`
+이것은 `--project-tags`의 별칭입니다.
 
-## Options for Maven projects
+## Maven 프로젝트를 위한 옵션
 
-For more information about Maven CLI options see [Snyk for Java and Kotlin](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven)
+Maven CLI 옵션에 대한 자세한 내용은 [Java 및 Kotlin용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)을 참조하세요.
 
 ### `--maven-aggregate-project`
 
