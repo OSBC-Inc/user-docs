@@ -1,39 +1,39 @@
 # 테스트
 
-## Usage
+## 사용법
 
 `snyk test [<OPTIONS>]`
 
-## Description
+## 설명
 
-The `snyk test` command checks projects for open source vulnerabilities and license issues. The test command tries to auto-detect supported manifest files with dependencies and test those.
+`snyk test` 명령은 프로젝트에서 오픈 소스 취약성 및 라이선스 문제를 확인합니다. test 명령은 종속성이 있는 지원되는 매니페스트 파일을 자동 감지하고 테스트합니다.
 
-## Exit codes
+## 종료 코드
 
-Possible exit codes and their meaning:
+사용 가능한 종료 코드 및 그 의미:
 
-**0**: success, no vulnerabilities found\
-**1**: action\_needed, vulnerabilities found\
-**2**: failure, try to re-run command\
-**3**: failure, no supported projects detected
+**0**: 성공, 발견된 취약점 없음\
+**1**: action\_needed, 취약점 발견\
+**2**: 실패, 명령을 다시 실행하십시오.\
+**3**: 실패, 지원되는 프로젝트가 감지되지 않음
 
-## Configure the Snyk CLI
+## Snyk CLI 구성
 
-You can use environment variables to configure the Snyk CLI and set variables for connecting with the Snyk API. See [Configure the Snyk CLI](https://docs.snyk.io/features/snyk-cli/configure-the-snyk-cli)
+환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API와 연결하기 위한 변수를 설정할 수 있습니다.  [Snyk CLI 구성](../snyk-cli.md)을 참조하십오.
 
 ## Debug
 
-Use the `-d` option to output the debug logs.
+`-d`옵션을 사용하여 디버그 로그를 출력합니다.
 
-## Options
+## 옵션
 
-See also subsequent sections for options for specific build environments, package managers, languages, and `[<CONTEXT-SPECIFIC OPTIONS>]` which you specify last.
+마지막으로 지정하는 특정 빌드 환경, 패키지 관리자, 언어 및 `[<CONTEXT-SPECIFIC OPTIONS>]` 에 대한 옵션에 대한 후속 섹션도 참조하십시오.
 
 ### `--all-projects`
 
-Auto-detect all projects in the working directory (including Yarn workspaces).
+작업 디렉토리(Yarn 작업 공간 포함)의 모든 프로젝트를 자동 감지합니다.
 
-For more information see the article [Does the Snyk CLI support monorepos or multiple manifest files?](https://support.snyk.io/hc/en-us/articles/360000910577-Does-the-Snyk-CLI-support-monorepos-or-multiple-manifest-files-)
+자세한 내용은 [Does the Snyk CLI support monorepos or multiple manifest files?](https://support.snyk.io/hc/en-us/articles/360000910577-Does-the-Snyk-CLI-support-monorepos-or-multiple-manifest-files-) 문서를 참조하십시오.
 
 ### `--fail-fast`
 
