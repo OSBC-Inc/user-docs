@@ -1,4 +1,4 @@
-# Create a Snyk App using the Snyk CLI
+# Snyk CLI를 사용하여 Snyk 앱 생성
 
 \{% hint style="warning" %\} All `apps` sub-commands are only accessible behind the `--experimental` flag and the behavior can change at any time, without prior notice. Use all the commands with caution \{% endhint %\}
 

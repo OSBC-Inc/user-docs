@@ -33,7 +33,7 @@
 
 환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다.
 
-컨테이너 command에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli-1.md) 참조
+컨테이너 command에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조
 
 ## 디버그
 

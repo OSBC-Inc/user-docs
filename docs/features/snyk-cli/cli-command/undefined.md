@@ -18,7 +18,7 @@
 
 값은 사용자 토큰 또는 서비스 계정일 수 있습니다. [서비스 계정](../../integrations/managing-integrations/service-accounts.md) 참조
 
-CI/CD 환경에서는 `SNYK_TOKEN` 환경 변수를 사용합니다. [Snyk CLI 구성](../snyk-cli-1.md) 참조
+CI/CD 환경에서는 `SNYK_TOKEN` 환경 변수를 사용합니다. [Snyk CLI 구성](../snyk-cli.md) 참조
 
 이 환경 변수를 설정한 후 CLI 명령을 사용할 수 있습니다.
 
