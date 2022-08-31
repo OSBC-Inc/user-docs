@@ -84,7 +84,7 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 개발 전용 종속성을 포함합니다. 일부 패키지 관리자(예: npm의 `devDependencies` 또는 Gemfile의 :`development` dependencies) 에만 적용할 수 있습니다.
 
-Default: scan only production dependencies.
+기본값: 프로덕션 종속성만 스캔합니다.
 
 ### `--org=<ORG_ID>`
 
@@ -112,7 +112,7 @@ Default: scan only production dependencies.
 
 `--file=<FILE>` 옵션으로 지정한 파일 이름이 표준이 아닌 경우 패키지 관리자의 이름을 지정합니다. 이렇게 하면 Snyk이 파일을 찾을 수 있습니다.
 
-Example: `$ snyk monitor --file=req.txt --package-manager=pip`
+예: `$ snyk monitor --file=req.txt --package-manager=pip`
 
 ### `--unmanaged`
 
@@ -188,109 +188,109 @@ Maven CLI 옵션에 대한 자세한 내용은 [Java 및 Kotlin용 Snyk](../../.
 
 ### `--maven-aggregate-project`
 
-Use `--maven-aggregate-project` instead of `--all-projects` when scanning Maven aggregate projects, that is, ones that use modules and inheritance.
+Maven 집계 프로젝트, 즉 모듈 및 상속을 사용하는 프로젝트를 스캔할 때 `--all-projects` 대신 `--maven-aggregate-project`를 사용합니다.
 
-When scanning these types of projects, Snyk performs a compile to ensure all modules are resolvable by the Maven reactor.&#x20;
+이러한 유형의 프로젝트를 스캔할 때 Snyk는 컴파일을 수행하여 Maven 리액터에서 모든 모듈을 확인할 수 있는지 확인합니다.
 
-Be sure to run the scan in the same directory as the root pom.xml file.&#x20;
+루트 pom.xml 파일과 동일한 디렉토리에서 스캔을 실행해야 합니다.
 
-Snyk reports test results per pom.xml file.
+Snyk은 pom.xml 파일별로 테스트 결과를 보고합니다.
 
 ### `--scan-all-unmanaged`
 
-Auto-detect maven jars, aars, and wars in given directory. To monitor individually use `--file=<JAR_FILE_NAME>`
+지정된 디렉토리에서 maven jar, aars 및 wars를 자동 감지합니다. 개별적으로 모니터링하려면 `--file=<JAR_FILE_NAME>`을 사용하십시오.
 
-**Note**: Custom-built jar files, even with open source dependencies, are out of scope.
+**주의**: 사용자 정의 빌드된 jar 파일은 오픈 소스 종속성이 있더라도 범위를 벗어납니다.
 
-## Options for Gradle projects
+## Gradle 프로젝트를 위한 옵션
 
-For more information about Gradle CLI options see [Snyk for Java and Kotlin](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven)
+Gradle CLI 옵션에 대한 자세한 내용은 [Java 및 Kotlin용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)을 참조하세요.
 
 ### `--sub-project=<NAME>`, `--gradle-sub-project=<NAME>`
 
-For Gradle "multi project" configurations, monitor a specific sub-project.
+Gradle "다중 프로젝트" 구성의 경우 특정 하위 프로젝트를 모니터링합니다.
 
 ### `--all-sub-projects`
 
-For "multi project" configurations, monitor all sub-projects.
+"다중 프로젝트" 구성의 경우 모든 하위 프로젝트를 모니터링합니다.
 
 ### `--configuration-matching=<CONFIGURATION_REGEX>`
 
-Resolve dependencies using only configuration(s) that match the specified Java regular expression.
+지정된 Java 정규식과 일치하는 구성만 사용하여 종속성을 해결합니다.
 
-Example: `^releaseRuntimeClasspath$`
+예: `^releaseRuntimeClasspath$`
 
 ### `--configuration-attributes=<ATTRIBUTE>[,<ATTRIBUTE>]...`
 
-Select certain values of configuration attributes to install dependencies and perform dependency resolution.
+종속성을 설치하고 종속성 해결을 수행하려면 구성 속성의 특정 값을 선택하십시오.
 
-Example: `buildtype:release,usage:java-runtime`
+예: `buildtype:release,usage:java-runtime`
 
 ### `--init-script=<FILE`
 
-Use for projects that contain a Gradle initialization script.
+Gradle 초기화 스크립트가 포함된 프로젝트에 사용합니다.
 
-## Options for NuGet projects
+## NuGet 프로젝트에 대한 옵션
 
 ### `--assets-project-name`
 
-When monitoring a .NET project using NuGet `PackageReference` use the project name in `project.assets.json`, if found.
+NuGet `PackageReference`를 사용하여 .NET 프로젝트를 모니터링할 때 `project.assets.json`이 있는 경우 프로젝트 이름을 사용합니다.
 
 ### `--packages-folder`
 
-Specify a custom path to the packages folder.
+패키지 폴더에 대한 사용자 정의 경로를 지정하십시오.
 
 ### `--project-name-prefix=<PREFIX_STRING>`
 
-When monitoring a .NET project, use this option to add a custom prefix to the name of files inside a project along with any desired separators.
+.NET 프로젝트를 모니터링할 때 이 옵션을 사용하여 원하는 구분 기호와 함께 프로젝트 내부의 파일 이름에 사용자 지정 접두사를 추가합니다.
 
-Example: `snyk monitor --file=my-project.sln --project-name-prefix=my-group/`
+예: `snyk monitor --file=my-project.sln --project-name-prefix=my-group/`
 
-This is useful when you have multiple projects with the same name in other `.sln` files.
+이는 다른 `.sln` 파일에 동일한 이름을 가진 여러 프로젝트가 있는 경우에 유용합니다.
 
-## Option for npm projects
-
-### `--strict-out-of-sync=true|false`
-
-Control monitoring out-of-sync lockfiles.
-
-Default: true
-
-## Options for Yarn projects
+## npm 프로젝트를 위한 옵션
 
 ### `--strict-out-of-sync=true|false`
 
-Control monitoring out-of-sync lockfiles.
+동기화되지 않은 잠금 파일 모니터링을 제어합니다.
 
-Default: true
+기본값: true
+
+## Yarn 프로젝트에 대한 옵션
+
+### `--strict-out-of-sync=true|false`
+
+동기화되지 않은 잠금 파일 모니터링을 제어합니다.
+
+기본값: true
 
 ### `--yarn-workspaces`
 
-Detect and scan Yarn workspaces. You can specify how many sub-directories to search using `--detection-depth` and exclude directories and files using `--exclude`. Alternatively scan Yarn workspaces with other projects using `--all-projects`
+Yarn 작업 공간을 감지하고 스캔합니다. `--detection-depth`를 사용하여 검색할 하위 디렉터리 수를 지정하고 `--exclude`를 사용하여 디렉터리와 파일을 제외할 수 있습니다. 또는 `--all-projects`를 사용하여 다른 프로젝트와 함께 Yarn 작업 공간을 스캔합니다.
 
-## Option for CocoaPods projects
+## CocoaPods 프로젝트를 위한 옵션
 
 ### `--strict-out-of-sync=true|false`
 
-Control monitoring out-of-sync lockfiles.
+동기화되지 않은 잠금 파일 모니터링을 제어합니다.
 
-Default: false
+기본값: false
 
-## Options for Python projects
+## Python 프로젝트를 위한 옵션
 
 ### `--command=<COMMAND>`
 
-Indicate which specific Python commands to use based on Python version. The default is `python` which executes your default python version. Run 'python -V' to find out what version it is. If you are using multiple Python versions, use this parameter to specify the correct Python command for execution.
+Python 버전에 따라 사용할 특정 Python 명령을 지정합니다. 기본값은 기본 파이썬 버전을 실행하는 파이썬입니다. 'python -V'를 실행하여 버전을 확인합니다. 여러 Python 버전을 사용하는 경우 이 매개변수를 사용하여 실행할 올바른 Python 명령을 지정하십시오.
 
-Default: `python` Example: `--command=python3`
+기본값: `python` 예: `--command=python3`
 
 ### `--skip-unresolved=true|false`
 
-Allow skipping packages that are not found in the environment.
+환경에서 찾을 수 없는 패키지 건너뛰기를 허용합니다.
 
-## Options for scanning using `--unmanaged`
+## `--unmanaged`를 사용한 스캔 옵션
 
-The following `snyk monitor` options can be used with `--unmanaged` as documented in this help.
+다음 snyk 모니터 옵션은 이 도움말에 설명된 대로 `--unmanaged`와 함께 사용할 수 있습니다.
 
 `--org=<ORG_ID>`
 
@@ -300,42 +300,42 @@ The following `snyk monitor` options can be used with `--unmanaged` as documente
 
 `--target-reference=<TARGET_REFERENCE>`
 
-There are also special options.
+특별한 옵션도 있습니다.
 
 ### `--target-dir`
 
-Scan the path specified in the argument instead of the current directory.
+현재 디렉토리 대신 인수에 지정된 경로를 스캔하십시오.
 
-Alternatively, run `snyk test --unmanaged`
+또는 `snyk test --unmanaged`를 실행합니다.
 
 ### `--max-depth`
 
-Specify the maximum level of archive extraction.
+아카이브 추출의 최대 레벨을 지정하십시오.
 
-Usage: `--max-depth=1`&#x20;
+사용법: `--max-depth=1`&#x20;
 
-Use 0 to disable archive extraction completely.
+아카이브 추출을 완전히 비활성화하려면 0을 사용하십시오.
 
 ### `--print-dep-paths`
 
-Display dependencies.
+종속성을 표시합니다.
 
-Use use this option to see what files contributed to each dependency identified.
+식별된 각 종속성에 기여한 파일을 보려면 이 옵션을 사용하십시오.
 
-To see how confident Snyk is about the identified dependency and its version, use the `--print-deps` or `--print-dep-paths` option.
+Snyk이 식별된 종속성과 해당 버전에 대해 얼마나 확신하는지 확인하려면 `--print-deps` 또는 `--print-dep-paths` 옵션을 사용하십시오.
 
-For more information on uses of CLI options for C/C++ projects see [Snyk for C / C++](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support/snyk-for-c-c++)
+C/C++ 프로젝트용 CLI 옵션 사용에 대한 자세한 내용은 [C/C++용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-c-c++.md)를 참조하십시오.
 
 ### `--project-name=c-project`
 
-Use with the `snyk monitor --unmanaged` command to override the default name Snyk gives your snapshots by entering the desired name.
+snyk monitor `--unmanaged` command와 함께 사용하여 Snyk가 원하는 이름을 입력하여 스냅샷에 제공하는 기본 이름을 재정의합니다.
 
-## Options for build tools
+## 빌드 도구 옵션
 
 ### `-- [<CONTEXT-SPECIFIC_OPTIONS>]`
 
-Use a double dash (`--`) after the complete Snyk command to pass options (arguments, flags) that follow directly to the build tool, for example Gradle or Maven.
+전체 Snyk 명령 뒤에 이중 대시(`--`)를 사용하여 빌드 도구(예: Gradle 또는 Maven)에 직접 이어지는 옵션(인수, 플래그)을 전달합니다.
 
-The format is `snyk <command> -- [<context-specific_options>]`
+형식은 `snyk <command> -- [<context-specific_options>]`
 
-Example: `snyk monitor -- --build-cache`
+예: `snyk monitor -- --build-cache`
