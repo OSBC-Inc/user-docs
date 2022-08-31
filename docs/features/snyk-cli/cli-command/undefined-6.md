@@ -37,71 +37,71 @@
 
 ### `--fail-fast`
 
-Use with `--all-projects` to cause scans to be interrupted when errors occur and to report these errors back to the user.
+`--all-projects`와 함께 사용하면 오류가 발생할 때 스캔이 중단되고 이러한 오류를 사용자에게 다시 보고합니다.
 
-The exit code is 2 and the scan ends. No vulnerability information is reported for projects that did not produce errors.
+종료 코드는 2이고 스캔이 종료됩니다. 오류가 발생하지 않은 프로젝트에 대한 취약점 정보는 보고되지 않습니다.
 
-To perform the scan, resolve the error and scan again.
+스캔을 수행하려면 오류를 해결하고 다시 스캔하십시오.
 
-Note: If you do not use `--fail-fast`, Snyk scans all the projects but does not report any vulnerabilities for projects it could not scan due to misconfiguration or another error.
+**주의**: `--fail-fast`를 사용하지 않으면 Snyk는 모든 프로젝트를 스캔하지만 잘못된 구성이나 다른 오류로 인해 스캔할 수 없는 프로젝트에 대한 취약점은 보고하지 않습니다.
 
 ### `--detection-depth=<DEPTH>`
 
-Use with `--all-projects` or `--yarn-workspaces` to indicate how many subdirectories to search. `DEPTH` must be a number, 1 or greater; zero (0) is the current directory.
+`--all-projects` 또는 `--yarn-workspaces`와 함께 사용하여 검색할 하위 디렉터리 수를 나타냅니다. `DEPTH`는 1 이상의 숫자여야 합니다. 영(0)은 현재 디렉토리입니다.
 
-Default: 4 , the current working directory (0) and 4 subdirectories.
+기본값: 4 , 현재 작업 디렉토리(0) 및 4개의 하위 디렉토리.
 
-Example: `--detection-depth=3` limits search to the specified directory (or the current directory if no `<PATH>` is specified) plus three levels of subdirectories; zero (0) is the current directory.
+예: `--detection-depth=3`은 검색을 지정된 디렉터리(또는 `<PATH>` 가 지정되지 않은 경우 현재 디렉터리)와 세 가지 수준의 하위 디렉터리로 제한합니다. 영(0)은 현재 디렉토리입니다.
 
 ### `--exclude=<NAME>[,<NAME>]...>`
 
-Can be used with `--all-projects` and `--yarn-workspaces` to indicate directory names and file names to exclude. Must be comma separated.
+`--all-projects` 및 `--yarn-workspaces`와 함께 사용하여 제외할 디렉터리 이름 및 파일 이름을 나타낼 수 있습니다. 쉼표로 구분해야 합니다.
 
-Example: `$ snyk test --all-projects --exclude=dir1,file2`
+예: `$ snyk test --all-projects --exclude=dir1,file2`
 
-This will exclude any directories and files named "dir1" and "file2" when scanning for project manifest files. Such as: "./dir1", "./src/dir1", "./file2", "./src/file2", and so on.
+이렇게 하면 프로젝트 매니페스트 파일을 검색할 때 "dir1" 및 "file2"라는 이름의 디렉터리 및 파일이 제외됩니다. 예: "./dir1", "./src/dir1", "./file2", "./src/file2" 등.
 
 ### `--prune-repeated-subdependencies`, `-p`
 
-Prune dependency trees, removing duplicate sub-dependencies.
+종속성 트리를 정리하여 중복 하위 종속성을 제거합니다.
 
-Continues to find all vulnerabilities, but may not find all of the vulnerable paths.
+계속해서 모든 취약성을 찾지만 취약한 경로를 모두 찾지 못할 수 있습니다.
 
 ### `--print-deps`
 
-Print the dependency tree before sending it for analysis.
+분석을 위해 보내기 전에 종속성 트리를 인쇄합니다.
 
 ### `--remote-repo-url=<URL>`
 
-Set or override the remote URL for the repository that you would like to monitor.
+모니터링하려는 리포지토리의 원격 URL을 설정하거나 재정의합니다.
 
 ### `--dev`
 
-Include development-only dependencies. Applicable only for some package managers, for example, `devDependencies` in npm or `:development` dependencies in Gemfile.
+개발 전용 종속성을 포함합니다. 일부 패키지 관리자(예: npm의 `devDependencies` 또는 Gemfile의 `:development` 종속성)에만 적용할 수 있습니다.
 
-Default: scan only production dependencies.
+기본값: 프로덕션 종속성만 스캔합니다.
 
 ### `--org=<ORG_ID>`
 
-Specify the `<ORG_ID>` to run Snyk commands tied to a specific organization. The `<ORG_ID>` influences some features availability and private test limits.
+특정 조직에 연결된 Snyk 명령을 실행하려면 `<ORG_ID>`를 지정하십시오. `<ORG_ID>`는 일부 기능 가용성 및 비공개 테스트 제한에 영향을 줍니다.
 
-If you have multiple organizations, you can set a default from the CLI using:
+여러 조직이 있는 경우 다음을 사용하여 CLI에서 기본값을 설정할 수 있습니다:
 
 `$ snyk config set org=<ORG_ID>`
 
-Set a default to ensure all newly tested projects are tested under your default organization. If you need to override the default, use the `--org=<ORG_ID>` option.
+새로 테스트된 모든 프로젝트가 기본 조직에서 테스트되도록 기본값을 설정합니다. 기본값을 재정의해야 하는 경우 `--org=<ORG_ID>` 옵션을 사용합니다.
 
-Default: `<ORG_ID>` that is the current preferred organization in your [Account settings](https://app.snyk.io/account)
+기본값: [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 \<ORG\_ID>
 
-Note that you can also use `--org=<orgslugname>.` The `ORG_ID` works in both the CLI and the API. The organization slug name works in the CLI, but not in the API.
+`--org=<orgslugname>`를 사용할 수도 있습니다. `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
-For more information see the article [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)
+자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 문서를 참조하십시오.
 
 ### `--file=<FILE>`
 
-Specify a package file.
+패키지 파일을 지정합니다.
 
-When testing locally or monitoring a project, you can specify the file that Snyk should inspect for package information. When the file is not specified, Snyk tries to detect the appropriate file for your project.
+로컬에서 테스트하거나 프로젝트를 모니터링할 때 Snyk가 패키지 정보를 검사해야 하는 파일을 지정할 수 있습니다. 파일이 지정되지 않은 경우 Snyk는 프로젝트에 적합한 파일을 감지하려고 시도합니다.
 
 ### `--package-manager=<PACKAGE_MANAGER_NAME>`
 
