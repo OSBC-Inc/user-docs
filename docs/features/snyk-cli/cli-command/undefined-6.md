@@ -105,89 +105,89 @@
 
 ### `--package-manager=<PACKAGE_MANAGER_NAME>`
 
-Specify the name of the package manager when the filename specified with the `--file=<FILE>` option is not standard. This allows Snyk to find the file.
+`--file=<FILE>` 옵션으로 지정한 파일 이름이 표준이 아닌 경우 패키지 관리자의 이름을 지정합니다. 이렇게 하면 Snyk가 파일을 찾을 수 있습니다.
 
-Example: `$ snyk test --file=req.txt --package-manager=pip`
+예: `$ snyk test --file=req.txt --package-manager=pip`
 
 ### `--unmanaged`
 
-For C++ only, scan all files for known open source dependencies.
+C++의 경우에만 모든 파일에서 알려진 오픈 소스 종속성을 검색합니다.
 
-For options you can use with `--unmanaged` see [Options for scanning using `--unmanaged`](https://docs.snyk.io/snyk-cli/commands/test#options-for-scanning-using-unmanaged)
+`--unmanaged`와 함께 사용할 수 있는 옵션은 [`--unmanaged`를 사용한 검사 옵션](undefined-6.md#options-for-scanning-using-unmanaged)을 참조하세요.
 
-For more information see [Snyk for C/C++](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support/snyk-for-c-c++)
+자세한 내용은 [C/C++용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-c-c++.md)를 참조하세요.
 
 ### `--ignore-policy`
 
-Ignore all set policies, the current policy in the `.snyk` file, org level ignores, and the project policy on snyk.io.
+설정된 모든 정책, `.snyk` 파일의 현재 정책, 조직 수준 무시 및 snyk.io의 프로젝트 정책을 무시합니다.
 
 ### `--trust-policies`
 
-Apply and use ignore rules from the Snyk policies your dependencies; otherwise ignore rules in the dependencies are only shown as a suggestion.
+종속성 Snyk 정책의 무시 규칙을 적용하고 사용합니다. 그렇지 않으면 종속성의 무시 규칙은 제안으로만 표시됩니다.
 
 ### `--show-vulnerable-paths=<none|some|all>`
 
-Display the dependency paths from the top level dependencies down to the vulnerable packages. Not supported with `--json-file-output`.
+최상위 종속성에서 취약한 패키지까지 종속성 경로를 표시합니다. `--json-file-output`에서는 지원되지 않습니다.
 
-Default: `some` (a few example paths shown). `false` is an alias for `none`
+기본값: `some`(몇 가지 예시 경로가 표시됨). `false`는 `none`의 별칭입니다.
 
-Example: `--show-vulnerable-paths=none`
+예: `--show-vulnerable-paths=none`
 
 ### `--project-name=<PROJECT_NAME>`
 
-Specify a custom Snyk project name.
+사용자 정의 Snyk 프로젝트 이름을 지정하십시오.
 
 ### `--target-reference=<TARGET_REFERENCE>`
 
-Specify a reference which differentiates this project, for example, a branch name or version. Projects having the same reference can be grouped based on that reference. Only supported for Snyk Open Source.
+이 프로젝트를 구별하는 참조를 지정하십시오(예: 분기 이름 또는 버전). 참조가 동일한 프로젝트는 해당 참조를 기반으로 그룹화할 수 있습니다. Snyk 오픈 소스에서만 지원됩니다.
 
-For more information see [Separating projects by branch or version](https://docs.snyk.io/snyk-cli/secure-your-projects-in-the-long-term/grouping-projects-by-branch-or-version)
+자세한 내용은 [분기 또는 버전별로 프로젝트 분리](../secure-your-projects-in-the-long-term/separating-projects-by-branch-or-version.md)를 참조하세요.
 
 ### `--policy-path=<PATH_TO_POLICY_FILE>`
 
-Manually pass a path to a `.snyk` policy file.
+`.snyk` 정책 파일에 대한 경로를 수동으로 전달합니다.
 
 ### `--json`
 
-Print results in JSON format.
+결과를 JSON 형식으로 인쇄합니다.
 
-Example: `$ snyk test --json`
+예: `$ snyk test --json`
 
 ### `--json-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in JSON format directly to the specified file, regardless of whether or not you use the `--json` option.
+`--json` 옵션 사용 여부에 관계없이 테스트 출력을 JSON 형식으로 지정된 파일에 직접 저장합니다.
 
-This is useful if you want to display the human-readable test output using stdout and at the same time save the JSON format output to a file.
+이것은 표준 출력을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하고 동시에 JSON 형식 출력을 파일에 저장하려는 경우에 유용합니다.
 
-Example: `$ snyk test --json-file-output=vuln.json`
+예: `$ snyk test --json-file-output=vuln.json`
 
 ### `--sarif`
 
-Return results in SARIF format.
+결과를 SARIF 형식으로 반환합니다.
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 
-Save test output in SARIF format directly to the \<OUTPUT\_FILE\_PATH> file, regardless of whether or not you use the `--sarif` option.
+`--sarif` 옵션을 사용하는지 여부에 관계없이 테스트 출력을 SARIF 형식으로 \<OUTPUT\_FILE\_PATH> 파일에 직접 저장합니다.
 
-This is especially useful if you want to display the human-readable test output using stdout and at the same time save the SARIF format output to a file.
+이것은 표준 출력을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하는 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 ### `--severity-threshold=<low|medium|high|critical>`
 
-Report only vulnerabilities at the specified level or higher.
+지정된 수준 이상의 취약점만 보고합니다.
 
 ### `--fail-on=<all|upgradable|patchable>`
 
-Fail only when there are vulnerabilities that can be fixed.
+수정할 수 있는 취약점이 있는 경우에만 실패합니다.
 
-* `all`: fail when there is at least one vulnerability that can be either upgraded or patched.
-* `upgradable`: fail when there is at least one vulnerability that can be upgraded.
-* `patchable`: fail when there is at least one vulnerability that can be patched.
+* `all`: 업그레이드하거나 패치할 수 있는 취약점이 하나 이상 있으면 실패합니다.
+* `upgradable`: 업그레이드할 수 있는 취약점이 하나 이상 있으면 실패합니다.
+* `patchable`: 패치할 수 있는 취약점이 하나 이상 있으면 실패합니다.
 
-To fail on any vulnerability (the default behavior), do not use the `--fail-on` option. If vulnerabilities do not have a fix and this option is being used, tests pass.
+취약점(기본 동작)에서 실패하려면 `--fail-on` 옵션을 사용하지 마십시오. 취약점에 수정 사항이 없고 이 옵션을 사용 중인 경우 테스트를 통과합니다.
 
-## Options for Maven projects
+## Maven 프로젝트를 위한 옵션
 
-For more information about Maven CLI options see [Snyk for Java and Kotlin](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven)
+Maven CLI 옵션에 대한 자세한 내용은 [Java 및 Kotlin용 Snyk](../../../snyk-products/snyk-open-source/language-and-package-manager-support/snyk-for-java-gradle-maven.md)을 참조하세요.
 
 ### `--maven-aggregate-project`
 
