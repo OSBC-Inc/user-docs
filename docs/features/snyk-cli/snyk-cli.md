@@ -1,10 +1,10 @@
 # Snyk CLI 구성
 
-You can use [environment variables](snyk-cli.md#environment-variables) to configure the Snyk CLI. You can also set variables to configure the Snyk CLI to [connect to the Snyk API](snyk-cli.md#configuration-to-connect-to-the-snyk-api).
+[환경 변수](snyk-cli.md#undefined)를 사용하여 Snyk CLI를 구성할 수 있습니다. 변수를 설정하여 [Snyk API에 연결하도록 Snyk CLI를 구성](snyk-cli.md#snyk-api)할 수도 있습니다.
 
-## Environment variables
+## 환경 변수
 
-You can set the following environment variables to change CLI settings.
+다음 환경 변수를 설정하여 CLI 설정을 변경할 수 있습니다.
 
 `SNYK_TOKEN`
 
@@ -26,7 +26,7 @@ For the container command, specify a username to use when connecting to a contai
 
 For the container command, specify a password to use when connecting to a container registry. Note that using the `--password` flag overrides this value. This is ignored in favor of local Docker binary credentials when Docker is present.
 
-## Configuration to connect to the Snyk API
+## Snyk API에 연결하기 위한 구성
 
 By default the Snyk CLI connects to `https://snyk.io/api/v1`.
 
