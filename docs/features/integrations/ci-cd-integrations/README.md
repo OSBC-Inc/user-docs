@@ -14,7 +14,7 @@ Snyk 네이티브 플러그인은 대부분의 일반적인 CI/CD 도구에 사�
 
 ### **npm method**를 사용하여 Snyk CLI 배포
 
-[CLI를 로컬로 설치](../../snyk-cli/install-or-update-the-snyk-cli.md#npm-yarn-snyk-cli)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
+[CLI를 로컬로 설치](broken-reference)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
 
 ### Snyk CLI 바이너리 버전 배포
 
@@ -36,9 +36,9 @@ Snyk은 Linux, Windows 및 다른 버전을 가지고 있습니다.
 
 개발 팀은 일반적으로 다음과 같은 단계에서 Snyk을 채택합니다.
 
-1. [취약점 노출](./#1-snyk-monitor) (`snyk monitor`)
-2. [Snyk을 게이트 키퍼로 사용](./#2-snyk-snyk-test) (`snyk test`)
-3. [지속적인 모니터링](./#3-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
+1. [취약점 노출](./#stage-1-expose-vulnerabilities-snyk-monitor) (`snyk monitor`)
+2. [Snyk을 게이트 키퍼로 사용](./#stage-2-use-snyk-as-a-gatekeeper-snyk-test) (`snyk test`)
+3. [지속적인 모니터링](./#stage-3-continuous-monitoring-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
 
 ### **1** 단계**:** 취약점 노출 **(snyk monitor)**
 
@@ -92,15 +92,15 @@ CI/CD 플랫폼에서 Snyk을 실행하는 경우 일반적으로 검토 및 지
 
 ### Snyk 인증 토큰
 
-`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](../../snyk-cli/cli-command/undefined.md) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
+`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](broken-reference) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
 
 ### 설정
 
 Snyk은 빌드 파이프라인에 테스트를 추가하기 위해 다음과 같은 접근 방식을 지원합니다.
 
-* **Snyk 통합 플러그인**: Snyk은 [Jenkins](jenkins-integration-overview.md), [Team City](teamcity-integration-overview/), [Bitbucket Pipelines](bitbucket-pipelines-integration-overview.md) 및 Azure Pipelines를 포함한 여러 CI 서버에 사전 구축된 플러그인을 제공합니다.
-* **Snyk CLI:** 더 복잡한 워크플로우가 존재하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우 CI/CD 설정 중 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하는 설정](./#snyk-cli-1)을 참조하십시오.
-* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](../../snyk-api-info/)를 참조하십시오.
+* **Snyk 통합 플러그인**: Snyk은 [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) 및 [Azure Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)를 포함한 여러 CI 서버에 사전 구축된 플러그인을 제공합니다.
+* **Snyk CLI:** 더 복잡한 워크플로우가 존재하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우 CI/CD 설정 중 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하는 설정](./#setting-up-using-snyk-cli)을 참조하십시오.
+* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](broken-reference)를 참조하십시오.
 
 ### Snyk CLI를 사용하는 설정
 
