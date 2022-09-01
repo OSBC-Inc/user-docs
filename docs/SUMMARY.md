@@ -249,7 +249,7 @@
   * [계정으로 CLI 인증](features/snyk-cli/cli-3.md)
   * [Snyk CLI 구성](features/snyk-cli/snyk-cli.md)
   * [Snyk CLI를 사용하여 Snyk 앱 생성](features/snyk-cli/create-a-snyk-app-using-the-snyk-cli.md)
-* [Snyk Integrations](features/integrations/README.md)
+* [Snyk 통합](features/integrations/README.md)
   * [통합 관리](features/integrations/managing-integrations/README.md)
     * [SCM(Git) 및 CI/CD 통합 배포](features/integrations/managing-integrations/scm-git-and-ci-cd-integration-deployment-intro.md)
     * [서비스 계정](features/integrations/managing-integrations/service-accounts.md)
