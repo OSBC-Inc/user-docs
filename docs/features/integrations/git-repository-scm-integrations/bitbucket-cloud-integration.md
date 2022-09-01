@@ -15,14 +15,16 @@ Snyk의 Bitbucket Cloud 통합을 통해 모든 통합 저장소에서 보안 �
    1. 관리자 권한이 있는 Bitbucket에서 전용 서비스 계정을 설정합니다.
    2. 사용자 작성에 대한 자세한 내용은 [Bitbucket documentation](https://support.atlassian.com/bitbucket-cloud/docs/grant-access-to-a-workspace/)을 참조하십시오.
 2. Snyk에서 **Integrations**페이지로 이동하여 **Bitbucket Cloud** 카드를 클릭합니다.
-3. Bitbucket Cloud 계정에 액세스하여 다음 권한으로 고유한 Snyk용 App Password를 생성하십시오.
-   1. **Account: Email & Read**
-   2. **Workspace membership: Read**
-   3. **Projects: Read**
-   4. **Repositories: Read & Write**
-   5. **Pull requests: Read & Write**
-   6. **Webhooks: Read & Write**
-      1. 자세한 방법은 [Bitbucket documentation](https://confluence.atlassian.com/bitbucket/app-passwords-828781300.html)을 참조하십시오.
+3.  Bitbucket Cloud 계정에 액세스하여 다음 권한으로 고유한 Snyk용 App Password를 생성하십시오.
+
+    1. **Account: Email & Read**
+    2. **Workspace membership: Read**
+    3. **Projects: Read**
+    4. **Repositories: Read & Write**
+    5. **Pull requests: Read & Write**
+    6. **Webhooks: Read & Write**
+
+    자세한 방법은 [Bitbucket documentation](https://confluence.atlassian.com/bitbucket/app-passwords-828781300.html)을 참조하십시오.
 4. BitBucket의 개인 설정에서 찾을 수 있는 사용자 이름과 사용자가 만든 [서비스 계정의 App Password](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)를 입력하십시오.
 5.  **Save**를 클릭합니다.\
     Snyk은 Bitbucket Cloud 계정에 연결합니다. 연결에 성공하면 다음 표시가 나타납니다.
@@ -36,17 +38,17 @@ Snyk의 Bitbucket Cloud 통합을 통해 모든 통합 저장소에서 보안 �
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-41b0e6025361da5ff79cfe594401899bf4377de3\_444 (2) (4) (4) (4) (5) (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (10).png>)
 
-After the integration is done, you can use capabilities as described below.
+통합이 완료되면 아래에 설명된 대로 기능을 사용할 수 있습니다.
 
-### Project level security reports
+### 프로젝트 수준 보안 보고서
 
-Snyk produces advanced security reports, allowing you to explore the vulnerabilities found in your repositories, and fix them immediately by opening a fix pull request directly to your repository, with the required upgrades or patches.
+Snyk는 고급 보안 보고서를 생성하여 리포지토리에서 발견된 취약점을 탐색하고 필요한 업그레이드 또는 패치와 함께 리포지토리에 직접 수정 pull request를 열어 즉시 수정할 수 있습니다.
 
-This is an example of a project level security report:
+다음은 프로젝트 수준 보안 보고서의 예입니다:
 
-![](../../../.gitbook/assets/mceclip0-22-%20\(2\)%20\(5\)%20\(6\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(33\).png)
+<figure><img src="../../../.gitbook/assets/project_lvl_security_rpt-18july2022.png" alt=""><figcaption></figcaption></figure>
 
-### Projects monitoring and automatic fix pull requests
+### 프로젝트 모니터링 및 자동 수정 pull requests
 
 Snyk frequently scans your projects on either a daily or a weekly basis. When new vulnerabilities are found, it notifies you by email and by opening an automated pull requests with fixes to repositories.
 
@@ -62,7 +64,7 @@ To review and adjust the automatic fix pull request settings:
 
 ![](../../../.gitbook/assets/mceclip4%20\(1\)%20\(2\)%20\(6\)%20\(7\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(31\).png)
 
-### Pull request tests
+### Pull request 테스트
 
 Snyk tests any newly created pull request in your repositories for security vulnerabilities, and sends a build check to Bitbucket Cloud. You can to see whether the pull request introduces new security issues, directly from Bitbucket Cloud.
 
@@ -76,9 +78,9 @@ To review and adjust the pull request tests settings,
 2. Select **Edit Settings** for Bitbucket Cloud.
 3. Navigate to **Default Snyk test for pull requests > Open Source Security & Licenses**, and edit settings: \*\*\*\*
 
-![](../../../.gitbook/assets/Screenshot%202022-03-16%20at%2010.07.50.png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-51630c7bb2dd83e96a8d498d9ff806e45fa4ecb7_Screenshot 2022-03-16 at 10.07.50.png" alt=""><figcaption></figcaption></figure>
 
-### Required permissions scope for the Bitbucket Cloud integration
+### Bitbucket Cloud 통합에 필요한 권한 범위
 
 All the operations, triggered manually or automatically, are performed for a Bitbucket Cloud service account that has its token (App Password) configured in the integrations settings.
 
@@ -93,7 +95,7 @@ This shows the required access scopes for the configured token:
 | Importing new projects to Snyk                      | For presenting a list of all the available repos in the Bitbucket in the "Add Projects" screen (import popup)                                          | _Account (read)_ _Workspace membership (read)_ _Projects (read)_ |
 | Snyk tests on pull requests - initial configuration | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans. | _webhooks (read & write)_                                        |
 
-### Required permissions scope for repositories <a href="#h_01eefvj14p8b3depeffvyvdwzj" id="h_01eefvj14p8b3depeffvyvdwzj"></a>
+### 리포지토리에 필요한 권한 범위
 
 For Snyk to perform the required operations on monitored repositories (such as reading manifest files on a frequent basis and opening fix or upgrade PRs), the integrated Bitbucket Cloud service account needs **Admin** permissions on the imported repositories:
 
@@ -104,7 +106,7 @@ For Snyk to perform the required operations on monitored repositories (such as r
 | Opening fix and upgrade pull requests               | To create fix PRs in monitored repositories.                                                                                        |                                            |
 | Snyk tests on pull requests - initial configuration | To add Snyk's webhooks to the imported repos, so Snyk is informed when pull requests are created or updated, and can trigger scans. | **Admin**                                  |
 
-## 1st Party Integration (Connect App)
+## 1st Party 통합 (Connect App)
 
 The Connect App integration is a layer on top of the regular App Password integration, which allows your developers to consume Snyk from the Bitbucket interface.
 
@@ -114,13 +116,13 @@ By adding the Connect App to your Bitbucket workspaces, your workspaces members 
 
 ![](../../../.gitbook/assets/mceclip1-13-.png)
 
-### Installing the Connect App
+### Connect App 설치하기
 
 To install the app, navigate to the **Security** tab in one of your workspace's repos in Bitbucket Cloud, then click **Try now**:
 
 ![](../../../.gitbook/assets/mceclip2-3-.png)
 
-### Uninstalling the Connect App
+### Connect App 제거
 
 To remove the Connect App from your workspace in Bitbucket Cloud:
 
@@ -128,7 +130,7 @@ To remove the Connect App from your workspace in Bitbucket Cloud:
 2. Find **Snyk Security for Bitbucket Cloud** in the installed applications list.
 3. Click **remove**.
 
-### Associating the Connect App to a different Snyk account / organization
+### Connect App을 다른 Snyk 계정/조직에 연결
 
 The Connect App is associated to a specific Snyk account and organization, as defined during the app onboarding process.
 
@@ -136,7 +138,7 @@ To change these settings later, navigate to the workspace settings and select **
 
 ![](../../../.gitbook/assets/mceclip0-23-.png)
 
-### Disabling the Bitbucket Cloud integration
+### Bitbucket Cloud 통합 비활성화
 
 To disable this integration:
 

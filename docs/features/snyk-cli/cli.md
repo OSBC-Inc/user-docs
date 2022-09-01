@@ -4,7 +4,7 @@ coverY: 0
 
 # CLI 시작하기
 
-CLI를 사용하려면 CLI를 설치하고 인증해야 합니다. [Snyk CLI 설치](https://docs.snyk.io/snyk-cli/install-the-snyk-cli) 및 [Auth](https://docs.snyk.io/snyk-cli/commands/auth) 명령 도움말을 참조하십시오. 각 릴리스의 변경 사항에 대한 요약은 [release notes](https://github.com/snyk/cli/releases)를 참조하십시오.
+CLI를 사용하려면 CLI를 설치하고 인증해야 합니다.[ Snyk CLI 설치](install-or-update-the-snyk-cli.md) 및 [인증](cli-command/undefined.md) 명령 도움말을 참조하십시오. 각 릴리스의 변경 사항에 대한 요약은 [release notes](https://github.com/snyk/cli/releases)를 참조하십시오.
 
 인증 후 **설치를** **테스트**할 수 있습니다. 디렉토리를 package.json, pom.xml 또는 composer.lock (`cd/my/project/`)과 같은 지원되는 패키지 매니페스트 파일이 들어 있는 폴더로 변경하고 `snyk test`를 실행합니다.
 
@@ -12,7 +12,7 @@ CLI를 사용하려면 CLI를 설치하고 인증해야 합니다. [Snyk CLI 설
 
 터미널에 있는 `test` 명령 **보고서**를 보십시오. 이 보고서는 Snyk이 패키지에서 발견한 취약성을 보여줍니다. 발견된 각 문제에 대해 Snyk은 문제의 심각도를 보고하고, 자세한 설명에 대한 링크를 제공하며, 취약한 모듈이 시스템에 진입한 경로를 보고하고, 문제를 해결하는 방법에 대한 지침을 제공합니다.
 
-Snyk CLI를 사용하여 프로젝트의 취약성을 테스트하기 전에 제한된 예외를 제외하고 **프로젝트를 빌드해야** 합니다(자세한 내용은 [Which projects must be built before testing with CLI?](https://support.snyk.io/hc/en-us/articles/360015552617-Which-projects-must-be-built-before-testing-with-CLI-) 참조). 프로젝트의 언어에 따라 Snyk CLI를 사용하기 전에 **언어 환경을 설정**해야 할 수 있습니다. 자세한 내용은 [Open Source language and package manager support](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support)를 참조하십시오.
+Snyk CLI를 사용하여 프로젝트의 취약성을 테스트하기 전에 제한된 예외를 제외하고 **프로젝트를 빌드해야** 합니다(자세한 내용은 [Which projects must be built before testing with CLI?](https://support.snyk.io/hc/en-us/articles/360015552617-Which-projects-must-be-built-before-testing-with-CLI-) 참조). 프로젝트의 언어에 따라 Snyk CLI를 사용하기 전에 **언어 환경을 설정**해야 할 수 있습니다. 자세한 내용은 [개발 언어 및 패키지 매니저 지원](../../snyk-products/snyk-open-source/language-and-package-manager-support/)을 참조하십시오.
 
 Snyk CLI를 사용하여 Snyk Code, Container 또는 Infrastructure as Code projects의 문제를 검색하는 경우 각 제품에 관련된 CLI 사용 지침을 참조하십시오:
 
@@ -48,7 +48,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 ![스냅샷 및 검색 결과 모니터링](../../.gitbook/assets/a.png)
 
-자세한 내용은 [Monitor your projects at regular intervals](secure-your-projects-in-the-long-term/monitor-your-projects-at-regular-intervals.md)을 참조하십시오.
+자세한 내용은 [정기적으로 프로젝트 모니터링](secure-your-projects-in-the-long-term/monitor-your-projects-at-regular-intervals.md)을 참조하십시오.
 
 ## 테스트 부족
 

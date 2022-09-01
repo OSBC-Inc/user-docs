@@ -1,15 +1,16 @@
-# Authenticate the CLI with your account
+# 계정으로 CLI 인증
 
-To associate the Snyk CLI for use with your Snyk account, you must first authenticate your machine. No repository permissions are needed at this stage, only your email address. When you have authenticated, you can [get started](https://docs.snyk.io/snyk-cli/getting-started-with-the-cli) using the CLI.You can authenticate:
+Snyk 계정에 사용할 Snyk CLI를 연결하려면 먼저 시스템을 인증해야 합니다. 이 단계에서는 저장소 권한이 필요하지 않으며 이메일 주소만 있으면 됩니다. 인증을 마치면 CLI를 사용하여 [시작](cli.md)할 수 있습니다. \
+다음을 인증할 수 있습니다:
 
-* Through your browser by running `snyk auth` from the CLI; see the [Auth command help](https://docs.snyk.io/snyk-cli/commands/auth).
-* Using your API token
-* Using the `SNYK_TOKEN` environment variable; see [Configure the Snyk CLI](https://docs.snyk.io/snyk-cli/configure-the-snyk-cli). Use `SNYK_TOKEN` in a CI/CD environment.
+* CLI에서 `snyk auth`를 실행하여 브라우저를 통해 [인증 command 도움말](cli-command/undefined.md)을 참조하십시오.
+* API 토큰 사용
+* `SNYK_TOKEN` 환경 변수 사용은 [Snyk CLI 구성](snyk-cli.md)을 참조하십시오. CI/CD 환경에서 SNYK\_TOKEN을 사용합니다.
 
-To authenticate using your API token:
+API 토큰을 사용하여 인증하려면:
 
-1. 1.Go to [your Snyk account](https://app.snyk.io/account) (**Account Settings > API Token** section).
-2. 2.In the **KEY** field, click **click to show**; then select and copy your API token. A screenshot follows.
-3. 3.In the CLI, run `snyk auth [<API_TOKEN>]` or `snyk config set api=<token>`. The `<API_TOKEN>`is validated by the Snyk API.
+1. [Snyk 계정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)으로 이동합니다(**계정 설정** > **API 토큰** 섹션).
+2. **KEY** 필드에서 **클릭하여 표시**합니다. 그런 다음 API 토큰을 선택하고 복사합니다. 스크린샷이 나옵니다.
+3. CLI에서 `snyk auth [<API_TOKEN>]` 또는 `snyk config set api=<token>`을 실행합니다. `<API_TOKEN>`은 Snyk API에 의해 검증됩니다.
 
-![Snyk Account Settings, API Token](../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0b8b145c9440bf28748591963d82d378b069290d\_API-token-CLI-auth-details-22-01.png)
+![Snyk 계정 설정, API 토큰](../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0b8b145c9440bf28748591963d82d378b069290d\_API-token-CLI-auth-details-22-01.png)

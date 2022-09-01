@@ -6,7 +6,7 @@
 
 ### 설명
 
-Snyk CLI는 프로젝트에서 알려진 취약성을 찾아 수정하는 빌드 타임 도구입니다. Snyk CLI 및 Snyk에 대한 자세한 설명은 [Snyk CLI](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli)를 참조하십시오. Snyk CLI 사용 방법에 대한 자세한 내용은 [CLI 시작](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/getting-started-with-the-cli)을 참조하십시오.
+Snyk CLI는 프로젝트에서 알려진 취약성을 찾아 수정하는 빌드 타임 도구입니다. Snyk CLI 및 Snyk에 대한 자세한 설명은 [Snyk CLI](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli)를 참조하십시오. Snyk CLI 사용 방법에 대한 자세한 내용은 [Getting started with the CLI](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/getting-started-with-the-cli)을 참조하십시오.
 
 ### 사용 가능한 CLI Command
 
@@ -68,17 +68,17 @@ Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 다음은 Snyk CLI command에 대한 sub-command 목록입니다. 각 sub-command 뒤에는 sub-command가 적용되는 command가 뒤따릅니다. command는 도움말 문서에 연결됩니다. 각 sub-command에 대한 자세한 내용은 도움말 문서를 참조하십시오.
 
-`test`: sub-command of [`code`](https://docs.snyk.io/features/snyk-cli/commands/code), [`container`](https://docs.snyk.io/features/snyk-cli/commands/container), and [`iac`](https://docs.snyk.io/features/snyk-cli/commands/iac)
+`test`: [`code`](cli-command/undefined-1.md), [`container`](cli-command/undefined-3.md)및 [`iac`](cli-command/iac.md)의 하위 명령
 
-`monitor`: sub-command of [`container`](https://docs.snyk.io/features/snyk-cli/commands/container)
+`monitor`: [`container`](cli-command/undefined-3.md) 의 하위 명령
 
-`get <KEY>`: sub-command of [config](https://docs.snyk.io/features/snyk-cli/commands/config)
+`get <KEY>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
-`set <KEY>=<VALUE>`: sub-command of [config](https://docs.snyk.io/features/snyk-cli/commands/config)
+`set <KEY>=<VALUE>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
-`unset <KEY>`: sub-command of [config](https://docs.snyk.io/features/snyk-cli/commands/config)
+`unset <KEY>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
-`clear`: sub-command of [config](https://docs.snyk.io/features/snyk-cli/commands/config)
+`clear`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
 ### 종료 코드
 

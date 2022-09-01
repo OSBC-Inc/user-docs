@@ -8,7 +8,7 @@
 
 `snyk code` 명령은 정적 코드 분석을 사용하여 보안 문제를 찾습니다.
 
-자세한 내용은 [CLI for Snyk Code](https://docs.snyk.io/snyk-code/cli-for-snyk-code) 참조.
+자세한 내용은 [CLI for Snyk Code](../../../snyk-products/snyk-code/cli-for-snyk-code/) 참조.
 
 ## 하위 명령: `test`
 
