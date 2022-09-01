@@ -50,19 +50,23 @@ Snyk는 고급 보안 보고서를 생성하여 리포지토리에서 발견된 
 
 ### 프로젝트 모니터링 및 자동 수정 pull requests
 
-Snyk frequently scans your projects on either a daily or a weekly basis. When new vulnerabilities are found, it notifies you by email and by opening an automated pull requests with fixes to repositories.
+Snyk는 매일 또는 매주 프로젝트를 자주 스캔합니다. 새로운 취약점이 발견되면 이메일로 통지하고 리포지토리에 대한 수정 사항이 포함된 자동화된 pull request를 엽니다.
 
-Here is an example of a fix pull request opened by Snyk:
+다음은 Snyk에서 열린 수정 pull request의 예입니다:
 
 ![](../../../.gitbook/assets/666.png)
 
-To review and adjust the automatic fix pull request settings:
+자동 수정 pull request 설정을 검토하고 조정하려면:
 
-1. Click on settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
-2. Select **Edit Settings** for Bitbucket Cloud.
-3. Navigate to **Automatic fix pull requests**:
+1. settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+2. Bitbucket Cloud에 대한 **Edit Settings**을 선택합니다.
+3. **Automatic fix pull requests으로 이동합니다**:
 
-![](../../../.gitbook/assets/mceclip4%20\(1\)%20\(2\)%20\(6\)%20\(7\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(31\).png)
+<figure><img src="../../../.gitbook/assets/bitbucket_cloud-auto_fix_prs_30june2022.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Bitbucket 인터페이스에서 열리는 수동 pull request와 달리 Snyk pull 요청은 Bitbucket Cloud 또는 Bitbucket Server 계정에 설정된 기본 검토자에게 자동으로 할당되지 않습니다. Snyk 자동 풀pull request대한 추가 정보.
+{% endhint %}
 
 ### Pull request 테스트
 
