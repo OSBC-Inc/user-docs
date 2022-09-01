@@ -14,7 +14,7 @@ Snyk 네이티브 플러그인은 대부분의 일반적인 CI/CD 도구에 사�
 
 ### **npm method**를 사용하여 Snyk CLI 배포
 
-[CLI를 로컬로 설치](broken-reference)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
+[CLI를 로컬로 설치](../../snyk-cli/install-or-update-the-snyk-cli.md#npm-yarn-snyk-cli)할 때와 유사한 단계를 수행하십시오. 파이프라인 스크립트에서 npm 명령을 실행할 수 있어야 합니다. 이 방법은 CLI 경험과 완전히 일치하므로 문제를 쉽게 해결하고 구성할 수 있다는 장점이 있습니다.
 
 ### Snyk CLI 바이너리 버전 배포
 
@@ -36,9 +36,9 @@ Snyk은 Linux, Windows 및 다른 버전을 가지고 있습니다.
 
 개발 팀은 일반적으로 다음과 같은 단계에서 Snyk을 채택합니다.
 
-1. [취약점 노출](./#stage-1-expose-vulnerabilities-snyk-monitor) (`snyk monitor`)
-2. [Snyk을 게이트 키퍼로 사용](./#stage-2-use-snyk-as-a-gatekeeper-snyk-test) (`snyk test`)
-3. [지속적인 모니터링](./#stage-3-continuous-monitoring-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
+1. [취약점 노출](./#1-snyk-monitor) (`snyk monitor`)
+2. [Snyk을 게이트 키퍼로 사용](./#2-snyk-snyk-test) (`snyk test`)
+3. [지속적인 모니터링](./#3-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
 
 ### **1** 단계**:** 취약점 노출 **(snyk monitor)**
 
@@ -62,7 +62,7 @@ Snyk을 게이트 키퍼로 사용하면 새로운 취약점(때로는"stopping 
 
 `snyk test`에 대한 자세한 내용은 [`test` command help](../../../snyk-cli/commands/test.md)를 참조하십시오.
 
-### **3** 단계**:** 지속적인 모니터링 **(snyk test** and **snyk monitor)**
+### **3** 단계**:** 지속적인 모니터링 **(snyk test** 및 **snyk monitor)**
 
 취약점이 감지될 때 빌드에 실패하도록 Snyk을 구성한 후 지속적인 모니터링을 위해 프로젝트의 성공적인 빌드의 스냅샷을 Snyk으로 보내도록 Snyk을 구성할 수 있습니다.
 
@@ -86,25 +86,25 @@ CI/CD 플랫폼에서 Snyk을 실행하는 경우 일반적으로 검토 및 지
 * Snyk UI에서 브라우저의 주소 표시줄에 표시되는 URL slug(orgslugname)를 사용하여 대상 조직을 정의할 수 있습니다.
 * 또는 조직의 설정 페이지에서 `ORG_ID`를 사용하여 대상 조직을 정의할 수 있습니다.
 
-![Organization ID](../../../.gitbook/assets/image1.png)
+![조직 ID](../../../.gitbook/assets/image1.png)
 
 자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI)을 참조하십시오.
 
 ### Snyk 인증 토큰
 
-`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](broken-reference) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
+`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](../../snyk-cli/cli-command/undefined.md) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
 
 ### 설정
 
 Snyk은 빌드 파이프라인에 테스트를 추가하기 위해 다음과 같은 접근 방식을 지원합니다.
 
-* **Snyk 통합 플러그인**: Snyk은 [Jenkins](https://docs.snyk.io/integrations/ci-cd-integrations/jenkins-integration-overview), [Team City](https://docs.snyk.io/integrations/ci-cd-integrations/teamcity-integration-overview)[, Bitbucket Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview) 및 [Azure Pipelines](https://docs.snyk.io/integrations/ci-cd-integrations/azure-pipelines-integration)를 포함한 여러 CI 서버에 사전 구축된 플러그인을 제공합니다.
-* **Snyk CLI:** 더 복잡한 워크플로우가 존재하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우 CI/CD 설정 중 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하는 설정](./#setting-up-using-snyk-cli)을 참조하십시오.
-* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](broken-reference)를 참조하십시오.
+* **Snyk 통합 플러그인**: Snyk은 [Jenkins](jenkins-integration-overview.md), [Team City](teamcity-integration-overview/), [Bitbucket Pipelines](bitbucket-pipelines-integration-overview.md) 및 Azure Pipelines를 포함한 여러 CI 서버에 사전 구축된 플러그인을 제공합니다.
+* **Snyk CLI:** 더 복잡한 워크플로우가 존재하거나 Snyk 사전 빌드 플러그인이 없는 빌드 시스템을 사용하는 경우 CI/CD 설정 중 Snyk CLI 도구를 사용할 수 있습니다. 자세한 내용은 [Snyk CLI를 사용하는 설정](./#snyk-cli-1)을 참조하십시오.
+* **Snyk API**: 복잡한 요구 사항이 있는 경우 Snyk은 REST API를 제공하며, 이 API는 검색, 새 프로젝트 onboarding, 임의 라이브러리 테스트 등의 기능을 사용할 수 있습니다. 자세한 내용은 [Snyk API](../../snyk-api-info/)를 참조하십시오.
 
 ### Snyk CLI를 사용하는 설정
 
-Snyk CLI는 대부분의 CI/CD 환경에 쉽게 통합할 수 있도록 개발자가 직접 스크립팅할 수 있는 NodeJS 애플리케이션이며, npm 애플리케이션, 사전 패키지된 바이너리 또는 컨테이너 이미지로 사용할 수 있습니다. 자세한 내용은 [Snyk CLI 설치](broken-reference)를 참조하십시오.
+Snyk CLI는 대부분의 CI/CD 환경에 쉽게 통합할 수 있도록 개발자가 직접 스크립팅할 수 있는 NodeJS 애플리케이션이며, npm 애플리케이션, 사전 패키지된 바이너리 또는 컨테이너 이미지로 사용할 수 있습니다. 자세한 내용은 [Snyk CLI 설치](../../snyk-cli/install-or-update-the-snyk-cli.md)를 참조하십시오.
 
 Snyk CLI는 다음과 같이 구성할 수 있습니다.
 
@@ -152,7 +152,7 @@ Snyk 명령의 JSON 출력을 사용하여 [snyk-to-html](https://github.com/sny
 
 ### 새 취약성에 대한 작업 항목 생성
 
-Snyk를 사용하면 JIRA에서 새 작업 항목을 자동으로 만들 수 있습니다([Jira integration](https://docs.snyk.io/integrations/untitled-3/jira) 참조). 특정 요구 사항에 맞게 이 코드를 사용자 정의하거나 다른 작업 관리 시스템과 함께 작동하도록 조정할 수 있습니다.
+Snyk를 사용하면 JIRA에서 새 작업 항목을 자동으로 만들 수 있습니다([Jira integration](../notifications-ticketing-system-integrations/jira.md) 참조). 특정 요구 사항에 맞게 이 코드를 사용자 정의하거나 다른 작업 관리 시스템과 함께 작동하도록 조정할 수 있습니다.
 
 시작하려면 [새로운 취약점에 대한 Jira 티켓](https://github.com/snyk-tech-services/jira-tickets-for-new-vulns)을 참조하거나, [API를 검토하여 Jira 티켓을 생성](https://snyk.docs.apiary.io/#reference/projects/project-jira-issues)하십시오.
 
@@ -160,7 +160,7 @@ Snyk를 사용하면 JIRA에서 새 작업 항목을 자동으로 만들 수 있
 
 기본적으로 문제가 무시되지 않거나 [snyk-delta](https://github.com/snyk-tech-services/snyk-delta)를 사용하지 않는 경우 문제가 발견되면 파이프라인의 `snyk test`가 빌드에 실패합니다. 이러한 문제를 해결하지 않고 빌드를 계속할 수 있도록 하려면 다음을 수행할 수 있습니다.
 
-* [Ignore issues using a .snyk policy file](https://docs.snyk.io/snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli)
+* [`.snyk` 정책 파일을 사용하여 문제 무시](../../snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)
 * [Ignore issues from the Snyk UI](https://support.snyk.io/hc/en-us/articles/360000923498-How-can-I-ignore-a-vulnerability-)
 * [Ignore issues from the Snyk API](https://snyk.docs.apiary.io/#reference/projects/project-ignores-by-issue/add-ignore)
 * 대량 무시에는 Snyk Python API를 사용합니다. [https://github.com/snyk-labs/pysnyk](https://github.com/snyk-labs/pysnyk) and [https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py](https://github.com/snyk-labs/pysnyk/blob/master/examples/api-demo-9c-bulk-ignore-vulns-by-issueIdList.py)를 참조하십시오.
@@ -278,7 +278,7 @@ Snyk Infrastructure as Code는 다음을 지원합니다.
 * Deployments, Pods 및 Services.
 * CronJobs, Jobs, StatefulSet, ReplicaSet, DaemonSet 및 ReplicationController.
 
-자세한 내용은 [Test your Kubernetes files with Snyk CLI](https://docs.snyk.io/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool)를 참조하십시오.
+자세한 내용은 [CLI를 사용하여 Kubernetes 파일 테스트](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/test-your-kubernetes-files-with-our-cli-tool.md)를 참조하십시오.
 
 ## CI/CD 문제 해결 및 고급 팁
 
