@@ -5,7 +5,7 @@ Snyk의 GitHub 통합을 통해 모든 통합 저장소에서 보안 스캔을 �
 **GitHub은 조직이 아닌 사용자별로 통합됩니다**. 이 통합을 설정하면 계정과 연결된 모든 조직에서 통합이 사용됩니다.
 
 {% hint style="warning" %}
-GitHub 통합에서 **Personal Access Token**을 사용하면 PR을 열 수 있지만 프로젝트를 가져올 수는 없습니다. [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)을 사용하여 프로젝트 가져오기를 설정하려면 [GitHub Enterprise 통합](github-enterprise-integration.md)을 사용하십시오.
+GitHub 통합에서 **Personal Access Token**을 사용하면 PR을 열 수 있지만 프로젝트를 가져올 수는 없습니다. [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)을 사용하여 프로젝트 가져오기를 설정하려면 [GitHub Enterprise integration](github-enterprise-integration.md)을 사용하십시오.
 {% endhint %}
 
 ## GitHub 통합 설정
@@ -113,7 +113,7 @@ Snyk을 사용하면 수정 및 업그레이드 PR을 열 특정 GitHub 계정�
 
 토큰을 제공하는 GitHub 계정이 Snyk로 모니터링할 저장소에 대한 _**write**_ level 이상의 권한을 가지고 있는지 확인하십시오.
 
-[GitHub 통합에 필요한 권한 범위](github-integration.md#github-2)에 대해 자세히 알아보십시오.
+[repository permission levels on GitHub](github-integration.md#required-permissions-scope-for-the-github-integration)에 대해 자세히 알아보십시오.
 
 ### **2. Pull request** 지정 <a href="#pr-assignment" id="pr-assignment"></a>
 

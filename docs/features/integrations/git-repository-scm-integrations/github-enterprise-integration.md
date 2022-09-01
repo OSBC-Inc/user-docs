@@ -12,7 +12,7 @@ Snyk의 GitHub Enterprise 통합을 통해 다음과 같은 이점을 얻을 수
 
 ## GitHub Enterprise 통합 설정
 
-1. GitHub Enterprise에서 Snyk 권한으로 모니터링할 저장소에 _**write**_ level 이상의 권한을 가진 전용 서비스 계정을 만듭니다. 자세한 내용은 [Required permissions scope for the GitHub integration](github-enterprise-integration.md#required-permissions-scope-for-the-github-integration)을 참조하십시오.
+1. GitHub Enterprise에서 Snyk 권한으로 모니터링할 저장소에 _**write**_ level 이상의 권한을 가진 전용 서비스 계정을 만듭니다. 자세한 내용은 [GitHub 통합에 필요한 권한 범위](github-enterprise-integration.md#github)를 참조하십시오.
 2. **repo (all)**, **admin:read:org**, 및 **admin:repo\_hooks (read & write)** 한 범위를 사용하여 해당 계정에 대한 개인 액세스 토큰을 생성합니다. 자세한 내용은 [GitHub Enterprise documentation](https://docs.github.com/en/enterprise-server@2.22/github/authenticating-to-github/creating-a-personal-access-token)을 참조하십시오.
 3. 개인 액세스 토큰을 **인증**하고 SSO를 활성화합니다.
 4. Snyk의 **Integrations** 페이지로 이동하여 **GitHub Enterprise**를 클릭합니다.

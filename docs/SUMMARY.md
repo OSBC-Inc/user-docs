@@ -279,7 +279,7 @@
     * [GitLab 통합](features/integrations/git-repository-scm-integrations/gitlab-integration.md)
     * [Azure Repos 통합](features/integrations/git-repository-scm-integrations/azure-repos-integration.md)
     * [GitHub 읽기 전용 프로젝트](features/integrations/git-repository-scm-integrations/github-read-only-projects.md)
-    * [고정된 GitHub 계정에서 수정 및 업그레이드 pull 요청 열기](features/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)
+    * [고정된 GitHub 계정에서 수정 및 업그레이드 pull request 열기](features/integrations/git-repository-scm-integrations/opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)
     * [병합하기 전 PR의 취약성을 테스트](features/integrations/git-repository-scm-integrations/test-your-prs-for-vulnerabilities-before-merging.md)
     * [Snyk의 pull 요청 확인](features/integrations/git-repository-scm-integrations/snyk-checks-on-pull-requests.md)
     * [Snyk 업그레이드 pull 요청 보기 및 이해](features/integrations/git-repository-scm-integrations/view-and-understand-snyk-upgrade-pull-requests.md)
