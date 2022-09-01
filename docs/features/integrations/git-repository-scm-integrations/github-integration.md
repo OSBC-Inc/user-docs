@@ -5,7 +5,7 @@ Snyk의 GitHub 통합을 통해 모든 통합 저장소에서 보안 스캔을 �
 **GitHub은 조직이 아닌 사용자별로 통합됩니다**. 이 통합을 설정하면 계정과 연결된 모든 조직에서 통합이 사용됩니다.
 
 {% hint style="warning" %}
-GitHub 통합에서 **Personal Access Token**을 사용하면 PR을 열 수 있지만 프로젝트를 가져올 수는 없습니다. [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)을 사용하여 프로젝트 가져오기를 설정하려면 [GitHub Enterprise integration](github-enterprise-integration.md)을 사용하십시오.
+GitHub 통합에서 **Personal Access Token**을 사용하면 PR을 열 수 있지만 프로젝트를 가져올 수는 없습니다. [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)을 사용하여 프로젝트 가져오기를 설정하려면 [GitHub Enterprise 통합](github-enterprise-integration.md)을 사용하십시오.
 {% endhint %}
 
 ## GitHub 통합 설정
