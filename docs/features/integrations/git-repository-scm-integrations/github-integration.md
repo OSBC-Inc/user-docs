@@ -113,7 +113,7 @@ Snyk을 사용하면 수정 및 업그레이드 PR을 열 특정 GitHub 계정�
 
 토큰을 제공하는 GitHub 계정이 Snyk로 모니터링할 저장소에 대한 _**write**_ level 이상의 권한을 가지고 있는지 확인하십시오.
 
-[repository permission levels on GitHub](github-integration.md#required-permissions-scope-for-the-github-integration)에 대해 자세히 알아보십시오.
+[GitHub 통합에 필요한 권한 범위](github-integration.md#github-2)에 대해 자세히 알아보십시오.
 
 ### **2. Pull request** 지정 <a href="#pr-assignment" id="pr-assignment"></a>
 
