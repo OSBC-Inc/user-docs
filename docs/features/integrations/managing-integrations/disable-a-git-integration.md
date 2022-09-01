@@ -10,4 +10,4 @@
 
 언제든지 이 통합을 다시 사용하도록 선택한 경우 인증 정보를 다시 입력하고 프로젝트를 활성화해야 합니다.위의 내용은 GitHub 통합에는 적용되지 않습니다. GitHub 연결을 해제하려면 GitHub 통합 페이지를 참조하십시오.
 
-위의 내용은 **GitHub 통합에는 적용되지 않습니다**. GitHub 연결을 해제하려면 [GitHub Integration page](../git-repository-scm-integrations/github-integration.md#disconnecting-the-github-integration)를 참조하십시오.
+위의 내용은 **GitHub 통합에는 적용되지 않습니다**. GitHub 연결을 해제하려면 [GitHub 통합 페이지](../git-repository-scm-integrations/github-integration.md#github-4)를 참조하십시오.
