@@ -4,10 +4,10 @@
 
 비활성화할 특정 통합을 통합 목록에서 찾고 설정 편집을 클릭해야 합니다. 아래 예와 같이 통합의 현재 상태, 각 통합(인증서, API 키, Service Principle 또는 연결 세부 정보)에 대한 자격 증명을 업데이트하는 위치, 이 통합의 연결을 끊는 빨간색 상자가 표시됩니다.
 
-![통합 연결 끊기](<../../../.gitbook/assets/uuid-b3a98f2c-4cc8-7753-8efa-396e9ec1e717-en-2- (3) (1) (1).png>)
+![](<../../../.gitbook/assets/uuid-b3a98f2c-4cc8-7753-8efa-396e9ec1e717-en-2- (3) (1) (1).png>)
 
 연결을 끊도록 선택하면 Snyk에서 인증 정보가 제거되고 모니터링하던 모든 통합 관련 프로젝트가 Snyk에서 비활성화됩니다.
 
 언제든지 이 통합을 다시 사용하도록 선택한 경우 인증 정보를 다시 입력하고 프로젝트를 활성화해야 합니다.위의 내용은 GitHub 통합에는 적용되지 않습니다. GitHub 연결을 해제하려면 GitHub 통합 페이지를 참조하십시오.
 
-위의 내용은 **GitHub 통합에는 적용되지 않습니다**. GitHub 연결을 해제하려면 [GitHub 통합 페이지](../git-repository-scm-integrations/github-integration.md#github-4)를 참조하십시오.
+위의 내용은 **GitHub 통합에는 적용되지 않습니다**. GitHub 연결을 해제하려면 [GitHub Integration page](../git-repository-scm-integrations/github-integration.md#disconnecting-the-github-integration)를 참조하십시오.
