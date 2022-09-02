@@ -112,7 +112,7 @@ Snyk이 모니터링되는 리포지토리에서 필요한 작업(예: 자주 �
 
 ## 1st Party 통합 (Connect App)
 
-The Connect App integration is a layer on top of the regular App Password integration, which allows your developers to consume Snyk from the Bitbucket interface.
+Connect App 통합은 개발자가 Bitbucket 인터페이스에서 Snyk를 사용할 수 있도록 하는 일반 App Password 통합의 상위 계층입니다.
 
 > The Connect App currently supports [Snyk Open Source](../../../products/snyk-open-source/) and [Snyk Container](../../../products/snyk-container/) products only.
 
