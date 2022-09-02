@@ -128,30 +128,30 @@ Bitbucket 작업 영역에 Connect 앱을 추가하면 작업 영역 구성원�
 
 ### Connect App 제거
 
-To remove the Connect App from your workspace in Bitbucket Cloud:
+Bitbucket Cloud의 작업 공간에서 Connect App을 제거하려면:
 
-1. Navigate to the **workspace settings** page > **Installed apps**.
-2. Find **Snyk Security for Bitbucket Cloud** in the installed applications list.
-3. Click **remove**.
+1. **workspace settings** 페이지 > **Installed apps**으로 이동합니다.
+2. 설치된 애플리케이션 목록에서 **Snyk Security for Bitbucket Cloud**를 찾으십시오.
+3. **remove**를 클릭합니다.
 
 ### Connect App을 다른 Snyk 계정/조직에 연결
 
-The Connect App is associated to a specific Snyk account and organization, as defined during the app onboarding process.
+Connect App은 앱 온보딩 프로세스 중에 정의된 대로 특정 Snyk 계정 및 조직에 연결됩니다.
 
-To change these settings later, navigate to the workspace settings and select **Security for Bitbucket Cloud Integration Settings**:
+나중에 이러한 설정을 변경하려면 작업 공간 설정으로 이동하여 **Security for Bitbucket Cloud Integration Settings**을 선택합니다:
 
 ![](../../../.gitbook/assets/mceclip0-23-.png)
 
 ### Bitbucket Cloud 통합 비활성화
 
-To disable this integration:
+이 통합을 비활성화하려면:
 
-1. Click on settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations** in Snyk.
-2. Find the specific integration to deactivate in your list of integrations, and click Edit settings.
-3. A page appears showing the current status of your integration and a place to update your credentials, specific to each integration (credentials, API key, Service Principal, or connection details):
-4. Click **Disconnect**.
+1. settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) 클릭 > Snyk의 **Integrations**.
+2. 통합 목록에서 비활성화할 특정 통합을 찾고 설정 편집을 클릭합니다.
+3. 통합의 현재 상태와 각 통합(자격 증명, API 키, 서비스 주체 또는 연결 세부 정보)과 관련된 자격 증명을 업데이트할 수 있는 위치를 보여주는 페이지가 나타납니다.
+4. **Disconnect**를 클릭합니다.
 
 ![](../../../.gitbook/assets/mceclip2-4-.png)
 
-> Your credentials are removed from Snyk and any integration-specific projects Snyk is monitoring are deactivated on Snyk.\
-> If you then choose to re-enable this integration at any time, you will need to re-enter your credentials and activate your projects.
+> 귀하의 자격 증명이 Snyk에서 제거되고 Snyk가 모니터링하는 통합 관련 프로젝트는 Snyk에서 비활성화됩니다.\
+> 그런 다음 이 통합을 언제든지 다시 활성화하도록 선택하는 경우 자격 증명을 다시 입력하고 프로젝트를 활성화해야 합니다.
