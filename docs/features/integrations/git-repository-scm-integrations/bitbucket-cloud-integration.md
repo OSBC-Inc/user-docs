@@ -90,25 +90,25 @@ pull request 테스트 설정을 검토하고 조정하려면:
 
 구성된 토큰에 필요한 액세스 범위를 보여줍니다:
 
-| **동작**                                 | **목적**                                                                                      | **Bitbucket에 필요한 권한**                                                                                            |
-| -------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 일일/주간 테스트                              | 개인 리포지토의 매니페스트 파일 읽기용                                                                       | 리포지토리 읽기                                                                                                         |
-| <p>수동 수정 pull 요청<br>(사용자에 의해 트리거됨)</p> | 모니터링되는 리포지토리에서 수정 PR 생성용                                                                    | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
-| 자동 수정 및 업그레이드 pull requests            | 모니터링되는 리포지토리에서 수정/업그레이드 PR 생성용                                                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
-| pull requests에 대한 Snyk 테스트             | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
-| Snyk로 새 프로젝트 가져오기                      | "Add Projects" 화면(가져오기 팝업)에서 Bitbucket의 사용 가능한 모든 저장소 목록을 표시하기 위해                           | <p><em>계정 (</em>읽기<em>)</em> <br><em>Workspace membership (</em>읽기<em>)</em> <br><em>프로젝트 (</em>읽기<em>)</em></p> |
-| 풀 요청에 대한 Snyk 테스트 - 초기 구성              | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | _webhooks (_읽기 및 쓰기_)_                                                                                           |
+| **동작**                                       | **목적**                                                                                      | **Bitbucket에 필요한 권한**                                                                                            |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 일일/주간 테스트                                    | 개인 리포지토의 매니페스트 파일 읽기용                                                                       | 리포지토리 읽기                                                                                                         |
+| <p>수동 수정 pull requests<br>(사용자에 의해 트리거됨)</p> | 모니터링되는 리포지토리에서 수정 PR 생성용                                                                    | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
+| 자동 수정 및 업그레이드 pull requests                  | 모니터링되는 리포지토리에서 수정/업그레이드 PR 생성용                                                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
+| pull requests에 대한 Snyk 테스트                   | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
+| Snyk로 새 프로젝트 가져오기                            | "Add Projects" 화면(가져오기 팝업)에서 Bitbucket의 사용 가능한 모든 저장소 목록을 표시하기 위해                           | <p><em>계정 (</em>읽기<em>)</em> <br><em>Workspace membership (</em>읽기<em>)</em> <br><em>프로젝트 (</em>읽기<em>)</em></p> |
+| 풀 요청에 대한 Snyk 테스트 - 초기 구성                    | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | _webhooks (_읽기 및 쓰기_)_                                                                                           |
 
 ### 리포지토리에 필요한 권한 범위
 
 Snyk이 모니터링되는 리포지토리에서 필요한 작업(예: 자주 매니페스트 파일 읽기 및 수정 사항 열기 또는 PR 업그레이드)을 수행하려면 통합 Bitbucket Cloud 서비스 계정에 가져온 리포지토리에 대한 **관리자** 권한이 필요합니다.
 
-| **동작**                                              | **목적**                                                                                                                              | **리포지토리에 대한 필수 권한** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| Daily / weekly tests                                | To read manifest files in private repositories.                                                                                     | **Write** or above  |
-| Snyk tests on pull requests                         | To send pull request status checks when a new PR is created, or an existing PR is updated.                                          |                     |
-| Opening fix and upgrade pull requests               | To create fix PRs in monitored repositories.                                                                                        |                     |
-| Snyk tests on pull requests - initial configuration | To add Snyk's webhooks to the imported repos, so Snyk is informed when pull requests are created or updated, and can trigger scans. | **Admin**           |
+| **동작**                            | **목적**                                                                                      | **리포지토리에 대한 필수 권한** |
+| --------------------------------- | ------------------------------------------------------------------------------------------- | ------------------- |
+| 일일/주간 테스트                         | 개인 리포지토의 매니페스트 파일 읽기용                                                                       | **쓰기** 또는 그 이상      |
+| pull request에 대한 Snyk 테스트         | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                              |                     |
+| 수정 및 업그레이드 pull request 열기        | 모니터링되는 리포지토리에서 수정 PR을 생성합니다.                                                                |                     |
+| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | **관리자**             |
 
 ## 1st Party 통합 (Connect App)
 
