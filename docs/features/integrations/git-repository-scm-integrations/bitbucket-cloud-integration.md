@@ -114,15 +114,15 @@ Snyk이 모니터링되는 리포지토리에서 필요한 작업(예: 자주 �
 
 Connect App 통합은 개발자가 Bitbucket 인터페이스에서 Snyk를 사용할 수 있도록 하는 일반 App Password 통합의 상위 계층입니다.
 
-> The Connect App currently supports [Snyk Open Source](../../../products/snyk-open-source/) and [Snyk Container](../../../products/snyk-container/) products only.
+> Connect 앱은 현재 Snyk 오픈 소스 및 Snyk 컨테이너 제품만 지원합니다.
 
-By adding the Connect App to your Bitbucket workspaces, your workspaces members can import repos and see the security data in a dedicated Snyk tab in Bitbucket Cloud:
+Bitbucket 작업 영역에 Connect 앱을 추가하면 작업 영역 구성원이 저장소를 가져오고 Bitbucket Cloud의 전용 Snyk 탭에서 보안 데이터를 볼 수 있습니다:
 
 ![](../../../.gitbook/assets/mceclip1-13-.png)
 
 ### Connect App 설치하기
 
-To install the app, navigate to the **Security** tab in one of your workspace's repos in Bitbucket Cloud, then click **Try now**:
+앱을 설치하려면 Bitbucket Cloud의 작업 영역 리포지토리 중 하나에서 보안 탭으로 이동한 다음 **Try now**를 클릭합니다.
 
 ![](../../../.gitbook/assets/mceclip2-3-.png)
 
