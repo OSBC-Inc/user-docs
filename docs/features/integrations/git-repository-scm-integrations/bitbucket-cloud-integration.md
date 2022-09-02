@@ -65,50 +65,50 @@ Snyk는 매일 또는 매주 프로젝트를 자주 스캔합니다. 새로운 �
 <figure><img src="../../../.gitbook/assets/bitbucket_cloud-auto_fix_prs_30june2022.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Bitbucket 인터페이스에서 열리는 수동 pull request와 달리 Snyk pull 요청은 Bitbucket Cloud 또는 Bitbucket Server 계정에 설정된 기본 검토자에게 자동으로 할당되지 않습니다. Snyk 자동 풀pull request대한 추가 정보.
+Bitbucket 인터페이스에서 열리는 수동 pull request와 달리 Snyk pull 요청은 Bitbucket Cloud 또는 Bitbucket Server 계정에 설정된 기본 검토자에게 자동으로 할당되지 않습니다. Snyk 자동 pull request대한 추가 정보.
 {% endhint %}
 
 ### Pull request 테스트
 
-Snyk tests any newly created pull request in your repositories for security vulnerabilities, and sends a build check to Bitbucket Cloud. You can to see whether the pull request introduces new security issues, directly from Bitbucket Cloud.
+Snyk은 리포지토리에서 보안 취약성에 대해 새로 생성된 pull request를 테스트하고 Bitbucket Cloud에 빌드 확인을 보냅니다. pull request로 인해 새로운 보안 문제가 발생하는지 Bitbucket Cloud에서 직접 확인할 수 있습니다.
 
-This is how Snyk pull request build check appears in the **Pull Request** page in Bitbucket Cloud:
+Bitbucket Cloud의 **Pull Request** 페이지에 Snyk pull request 빌드 확인이 표시되는 방식은 다음과 같습니다:
 
 ![](../../../.gitbook/assets/888.png)
 
-To review and adjust the pull request tests settings,
+pull request 테스트 설정을 검토하고 조정하려면:
 
-1. Click on settings ![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
-2. Select **Edit Settings** for Bitbucket Cloud.
-3. Navigate to **Default Snyk test for pull requests > Open Source Security & Licenses**, and edit settings: \*\*\*\*
+1. settings ![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+2. Bitbucket Cloud에 대한 **Edit Settings**을 선택합니다.
+3. **Default Snyk test for pull requests > Open Source Security & Licenses**로 이동하여 설정을 편집합니다: \*\*\*\*
 
 <figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-51630c7bb2dd83e96a8d498d9ff806e45fa4ecb7_Screenshot 2022-03-16 at 10.07.50.png" alt=""><figcaption></figcaption></figure>
 
 ### Bitbucket Cloud 통합에 필요한 권한 범위
 
-All the operations, triggered manually or automatically, are performed for a Bitbucket Cloud service account that has its token (App Password) configured in the integrations settings.
+수동 또는 자동으로 트리거되는 모든 작업은 통합 설정에 구성된 토큰(APP 비밀번호)이 있는 Bitbucket Cloud 서비스 계정에 대해 수행됩니다.
 
-This shows the required access scopes for the configured token:
+구성된 토큰에 필요한 액세스 범위를 보여줍니다:
 
-| **Action**                                          | **Why?**                                                                                                                                               | **Required permissions in Bitbucket**                            |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| Daily / weekly tests                                | For reading manifest files in private repos                                                                                                            | _Repositories read_                                              |
-| Manual fix pull requests (triggered by the user)    | For creating fix PRs in the monitored repos                                                                                                            | _Repositories (read & write)_ _pull requests (read & write)_     |
-| Automatic fix and upgrade pull requests             | For creating fix / upgrade PRs in the monitored repos                                                                                                  | _Repositories (read & write)_ _pull requests (read & write)_     |
-| Snyk tests on pull requests                         | For sending pull request status checks whenever a new PR is created / an existing PR is updated                                                        | _Repositories (read & write)_ _pull requests (read & write)_     |
-| Importing new projects to Snyk                      | For presenting a list of all the available repos in the Bitbucket in the "Add Projects" screen (import popup)                                          | _Account (read)_ _Workspace membership (read)_ _Projects (read)_ |
-| Snyk tests on pull requests - initial configuration | For adding Snyk's webhooks to the imported repos, so Snyk will be informed whenever pull requests are created or updated and be able to trigger scans. | _webhooks (read & write)_                                        |
+| **동작**                                 | **목적**                                                                                      | **Bitbucket에 필요한 권한**                                                                                            |
+| -------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 일일/주간 테스트                              | 개인 리포지토의 매니페스트 파일 읽기용                                                                       | 리포지토리 읽기                                                                                                         |
+| <p>수동 수정 pull 요청<br>(사용자에 의해 트리거됨)</p> | 모니터링되는 리포지토리에서 수정 PR 생성용                                                                    | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
+| 자동 수정 및 업그레이드 pull requests            | 모니터링되는 리포지토리에서 수정/업그레이드 PR 생성용                                                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
+| pull requests에 대한 Snyk 테스트             | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
+| Snyk로 새 프로젝트 가져오기                      | "Add Projects" 화면(가져오기 팝업)에서 Bitbucket의 사용 가능한 모든 저장소 목록을 표시하기 위해                           | <p><em>계정 (</em>읽기<em>)</em> <br><em>Workspace membership (</em>읽기<em>)</em> <br><em>프로젝트 (</em>읽기<em>)</em></p> |
+| 풀 요청에 대한 Snyk 테스트 - 초기 구성              | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | _webhooks (_읽기 및 쓰기_)_                                                                                           |
 
 ### 리포지토리에 필요한 권한 범위
 
-For Snyk to perform the required operations on monitored repositories (such as reading manifest files on a frequent basis and opening fix or upgrade PRs), the integrated Bitbucket Cloud service account needs **Admin** permissions on the imported repositories:
+Snyk이 모니터링되는 리포지토리에서 필요한 작업(예: 자주 매니페스트 파일 읽기 및 수정 사항 열기 또는 PR 업그레이드)을 수행하려면 통합 Bitbucket Cloud 서비스 계정에 가져온 리포지토리에 대한 **관리자** 권한이 필요합니다.
 
-| **Action**                                          | **Why?**                                                                                                                            | **Required permissions on the repository** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Daily / weekly tests                                | To read manifest files in private repositories.                                                                                     | **Write** or above                         |
-| Snyk tests on pull requests                         | To send pull request status checks when a new PR is created, or an existing PR is updated.                                          |                                            |
-| Opening fix and upgrade pull requests               | To create fix PRs in monitored repositories.                                                                                        |                                            |
-| Snyk tests on pull requests - initial configuration | To add Snyk's webhooks to the imported repos, so Snyk is informed when pull requests are created or updated, and can trigger scans. | **Admin**                                  |
+| **동작**                                              | **목적**                                                                                                                              | **리포지토리에 대한 필수 권한** |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| Daily / weekly tests                                | To read manifest files in private repositories.                                                                                     | **Write** or above  |
+| Snyk tests on pull requests                         | To send pull request status checks when a new PR is created, or an existing PR is updated.                                          |                     |
+| Opening fix and upgrade pull requests               | To create fix PRs in monitored repositories.                                                                                        |                     |
+| Snyk tests on pull requests - initial configuration | To add Snyk's webhooks to the imported repos, so Snyk is informed when pull requests are created or updated, and can trigger scans. | **Admin**           |
 
 ## 1st Party 통합 (Connect App)
 
