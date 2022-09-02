@@ -1,14 +1,14 @@
-# Bitbucket Data Center/Server integration
+# Bitbucket Data Center/Server 통합
 
-Snyk's Bitbucket Data Center / Server integration allows you to continuously perform security scanning across all the integrated repositories, detect vulnerabilities in your open source components, and use automated fixing. This integration supports Bitbucket Data Center / Server versions 4.0 and above.
+Snyk의 Bitbucket 데이터 센터/서버 통합을 통해 모든 통합 리포지토리에서 지속적으로 보안 검색을 수행하고, 오픈 소스 구성 요소의 취약성을 감지하고, 자동 수정을 사용할 수 있습니다. 이 통합은 Bitbucket Data Center/Server 버전 4.0 이상을 지원합니다.
 
-> **Feature availability**\
-> This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
+> **기능 가용성**\
+> 이 기능은 엔터프라이즈 플랜에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/) 를 참조하세요.
 
-## Setting up a Bitbucket DC/Server Integration
+## Bitbucket DC/Server 통합 설정
 
-> **Important**\
-> Make sure the newly created user has **Admin** permissions to all the repositories you need to monitor with Snyk.
+> **주의**\
+> 새로 생성된 사용자에게 Snyk로 모니터링해야 하는 모든 리포지토리에 대한 **관리자** 권한이 있는지 확인하십시오.
 
 1. To give Snyk access to your Bitbucket DC/Server account, set up up a dedicated service account in Bitbucket DC/Server, with admin permissions. Visit [Bitbucket Server documentation ](https://confluence.atlassian.com/bitbucketserver/users-and-groups-776640439.html#Usersandgroups-Creatingauser)to learn more about creating users.
 2. In Snyk, go to the **Integrations** page and click on **Bitbucket Server** card.
@@ -24,7 +24,7 @@ You can now select the repositories for Snyk to monitor.
 3. Snyk scans the selected repositories for dependency files (such as package.json and pom.xml) in the entire directory tree, and import them to Snyk as projects:
 4. The imported projects appear in your **Projects** page and are continuously checked for vulnerabilities.
 
-![](<../../../.gitbook/assets/444 (2) (4) (4) (4) (5) (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (17).png>)
+![](../../../.gitbook/assets/444%20\(2\)%20\(4\)%20\(4\)%20\(4\)%20\(5\)%20\(4\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(17\).png)
 
 ## Bitbucket DC/Server Integration Features
 
@@ -36,7 +36,7 @@ Snyk produces advanced security reports, allowing you to explore the vulnerabili
 
 This is an example of a project level security report:
 
-![](<../../../.gitbook/assets/mceclip0-22- (2) (5) (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (34).png>)
+![](../../../.gitbook/assets/mceclip0-22-%20\(2\)%20\(5\)%20\(6\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(34\).png)
 
 ## **Projects monitoring and automatic fix pull requests**
 
@@ -50,7 +50,7 @@ To review and adjust the automatic fix pull request settings:
 
 Click on settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations**. 2. Select **Edit Settings** for Bitbucket Server 3. Navigate to **Automatic fix pull requests**:
 
-![](<../../../.gitbook/assets/mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (29).png>)
+![](../../../.gitbook/assets/mceclip4%20\(1\)%20\(2\)%20\(6\)%20\(7\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(29\).png)
 
 ## **Pull request tests**
 
