@@ -1,58 +1,58 @@
-# Test your PRs for vulnerabilities before merging
+# 병합하기 전 PR의 취약성을 테스트
 
-Snyk integrates with your preferred Git repository to scan your manifest files for any new code and potential vulnerabilities whenever you submit a pull request (PR), protecting the security of your code before you ever merge it with the main branch.
+Snyk은 선호하는 Git 리포지토리와 통합하여 pull request(PR)를 제출할 때마다 매니페스트 파일에서 새로운 코드와 잠재적인 취약점을 스캔하여 메인 브랜치와 병합하기 전에 코드의 보안을 보호합니다.
 
-By default, Snyk scans every pull request submitted on your monitored repositories, displaying the results and recommendations grouped together in a single security check and a single license check. The following statuses can appear on your Snyk checks:
+기본적으로 Snyk는 모니터링되는 리포지토리에 제출된 모든 풀 요청을 검색하여 단일 보안 검사와 단일 라이선스 검사로 그룹화된 결과와 권장 사항을 표시합니다. Snyk 점검에 다음 상태가 나타날 수 있습니다:
 
-* Success - no issues are identified and all checks pass
-* Processing - this status appears until the Snyk test ends
-* Failure - when issues are identified that must be fixed in order for the check to pass
-* Error - an error occurs when your manifest file is out of sync, Snyk couldn't read the manifest file, or Snyk couldn't find the manifest file
-* Canceled - Snyk test can't run because you've reached your monthly test limit
+* 성공 - 문제가 식별되지 않고 모든 검사를 통과합니다.
+* 처리 중 - 이 상태는 Snyk 테스트가 끝날 때까지 나타납니다.
+* 실패 - 확인을 통과하기 위해 수정해야 하는 문제가 식별된 경우
+* 오류 - 매니페스트 파일이 동기화되지 않았거나 Snyk가 매니페스트 파일을 읽을 수 없거나 Snyk가 매니페스트 파일을 찾을 수 없는 경우 오류가 발생합니다.
+* 취소됨 - 월별 테스트 한도에 도달했기 때문에 Snyk 테스트를 실행할 수 없습니다.
 
-Administrators can manage settings for Snyk PR tests from our app on both the organization and the project levels, configuring whether the feature is on (enabled by default) and under what conditions Snyk should fail your PR checks.
+관리자는 조직 및 프로젝트 수준의 앱에서 Snyk PR 테스트에 대한 설정을 관리하여 기능이 켜져 있는지(기본적으로 활성화되어 있음) 및 Snyk가 PR 검사에 실패해야 하는 조건을 구성할 수 있습니다.
 
-### **Prerequisites**
+### 전제 조건
 
-* You must already have a Snyk account, you must be the owner or administrator of the specific organization and you must already have set up the integration for the Git repository with which you'd like to work.
-
-{% hint style="info" %}
-Settings on the project level override the settings on the organization level. Currently, we support all languages supported by the Git repositories that we integrate with: GitHub, GitLab, Bitbucket and Azure repos.
-{% endhint %}
-
-## Configure the pull request test settings for your organization
-
-1. Log in to your account and navigate to the relevant group and organization that you want to manage.
-2. Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
-3. Click **Edit Settings** for integration required.
-4. Navigate to the **Default Snyk test for pull requests** section:
-5. Choose settings from the dropdown list as follows:
-   1. **Only fail when the PR is adding a dependency with issues** - only fail the license or security check on the pull request if the pull request aims to add a new dependency that contains issues
-   2. **Fail if the repo has any issues** - fail the license or security check on the pull request if there are any issues at all in the repository
-6. Check mark any relevant settings from the dropdown list as follows:
-   1. **Only fail for high severity issues** - only fail the check for high severity issues, based on the option you chose from the dropdown list above
-   2. **Only fail when the issues found have a fix available** - only fail the check for issues if there is also a fix for those issues, based on the option you chose from the dropdown list above
-7. Click **Update settings** to update settings and apply them to all future projects and to all existing projects currently using your default settings. Click **Update settings & apply to existing projects** to update settings and apply them to all existing and new projects, including those projects that had been customized.
-8. Settings are saved. Every time any of your collaborators submit pull requests, checks are run based on these settings, combined with the settings you've configured on the side of your Git repository.
+* 이미 Snyk 계정이 있어야 하고 특정 조직의 소유자 또는 관리자여야 하며 작업하려는 Git 리포지토리에 대한 통합을 이미 설정해야 합니다.
 
 {% hint style="info" %}
-We recommend that you set Snyk status checks to be mandatory for merging pull requests from the relevant repository. See your Git repository documentation for additional help with this.
+프로젝트 수준의 설정이 조직 수준의 설정보다 우선합니다. 현재 GitHub, GitLab, Bitbucket 및 Azure 리포지토리와 통합하는 Git 리포지토리에서 지원하는 모든 언어를 지원합니다.
 {% endhint %}
 
-### Configure pull request test settings for a project
+## 조직에 대한 pull request 테스트 설정 구성
 
-1. Log in to your account and navigate to the relevant group and organization that you want to manage.
-2. Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations**,
-3. Click **Edit Settings** for integration required.
-4. Navigate to the **Default Snyk test for pull requests** section:
-5. Choose:
-   1. Inherit from **Integration** settings for the project to use the settings set at the Organization level
-   2. **Custom** and then click the slider to enable the functionality.
-6. From the options that appear, choose settings from the dropdown list as follows:
-   1. **Only fail when the PR is adding a dependency with issues** - only fail the license or security check on the pull request if the pull request aims to add a new dependency that contains issues
-   2. **Fail if the repo has any issues** - fail the license or security check on the pull request if there are any issues at all in the repository
-7. Check mark any relevant settings from the dropdown list as follows:
-   1. **Only fail for high or critical severity issues** - only fail the check for high or critical severity issues, based on the option you chose from the dropdown list above
-   2. **Only fail when the issues found have a fix available** - only fail the check for issues if there is also a fix for those issues, based on the option you chose from the dropdown list above
-8. Click **Update settings** to update settings and apply them to all future projects.
-9. Settings are saved. Every time any of your collaborators submit pull requests for this specific manifest file, checks are run based on these settings, combined with the settings you've configured on the side of your Git repository.
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2. settings ![](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+3. 통합이 필요한 경우 **Edit Settings**를 클릭합니다.
+4. **Default Snyk test for pull requests** 섹션으로 이동합니다.
+5. 다음과 같이 드롭다운 목록에서 설정을 선택합니다:
+   1. **PR이 문제가 있는 종속성을 추가하는 경우에만 실패합니다** - 풀 요청이 문제가 포함된 새 종속성을 추가하는 것을 목표로 하는 경우에만 pull request에 대한 라이센스 또는 보안 검사에 실패합니다.
+   2. **리포지토리에 문제가 있으면 실패합니다** - 리포지토리에 문제가 있는 경우 pull request에 대한 라이선스 또는 보안 검사에 실패합니다.
+6. 다음과 같이 드롭다운 목록에서 관련 설정을 확인 표시합니다:
+   1. **심각도가 높은 문제에 대해서만 실패** - 위의 드롭다운 목록에서 선택한 옵션에 따라 심각도가 높은 문제에 대해서만 검사에 실패합니다.
+   2. **발견된 문제에 수정 사항이 있는 경우에만 실패** - 위의 드롭다운 목록에서 선택한 옵션에 따라 해당 문제에 대한 수정 사항이 있는 경우에만 문제 확인에 실패합니다.
+7. **Update settings**를 클릭하여 설정을 업데이트하고 모든 향후 프로젝트와 현재 기본 설정을 사용 중인 모든 기존 프로젝트에 적용합니다. **Update settings & apply to existing projects**를 클릭하여 설정을 업데이트하고 사용자 지정된 프로젝트를 포함하여 모든 기존 및 새 프로젝트에 적용합니다.
+8. 설정이 저장됩니다. 공동 작업자가 pull request를 제출할 때마다 Git 리포지토리 측면에서 구성한 설정과 결합된 이러한 설정을 기반으로 검사가 실행됩니다.
+
+{% hint style="info" %}
+관련 리포지토리의 pull 요청을 병합하려면 Snyk 상태 확인을 필수로 설정하는 것이 좋습니다. 이에 대한 추가 도움말은 Git 리포지토리 설명서를 참조하십시오.
+{% endhint %}
+
+### 프로젝트에 대한 pull request 테스트 설정 구성
+
+1. 계정에 로그인하고 관리하려는 관련 그룹 및 조직으로 이동합니다.
+2. settings ![](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**,
+3. 통합이 필요한 경우 **Edit Settings**를 클릭합니다.
+4. **Default Snyk test for pull requests** 섹션으로 이동합니다.
+5. 선택:
+   1. 조직 수준에서 설정된 설정을 사용하려면 프로젝트에 대한 **통합** 설정에서 상속
+   2. **사용자 지정**을 클릭한 다음 슬라이더를 클릭하여 기능을 활성화합니다.
+6. 표시되는 옵션에서 다음과 같이 드롭다운 목록에서 설정을 선택합니다:
+   1. **PR이 문제가 있는 종속성을 추가하는 경우에만 실패합니다** - pull request가 문제가 포함된 새 종속성을 추가하는 것을 목표로 하는 경우에만 pull request에 대한 라이센스 또는 보안 검사에 실패합니다.
+   2. **리포지토리에 문제가 있으면 실패합니다** - 리포지토리에 문제가 있는 경우 pull request에 대한 라이선스 또는 보안 검사에 실패합니다.
+7. 다음과 같이 드롭다운 목록에서 관련 설정을 확인 표시합니다:
+   1. **심각도가 높은 문제에 대해서만 실패** - 위의 드롭다운 목록에서 선택한 옵션에 따라 심각도가 높은 문제에 대해서만 검사에 실패합니다.
+   2. **발견된 문제에 수정 사항이 있는 경우에만 실패** - 위의 드롭다운 목록에서 선택한 옵션에 따라 해당 문제에 대한 수정 사항이 있는 경우에만 문제 확인에 실패합니다.
+8. **Update settings**를 클릭하여 설정을 업데이트하고 향후 모든 프로젝트에 적용합니다.
+9. 설정이 저장됩니다. 공동 작업자가 이 특정 매니페스트 파일에 대한 풀 요청을 제출할 때마다 Git 리포지토리 측면에서 구성한 설정과 결합된 이러한 설정을 기반으로 검사가 실행됩니다.
