@@ -34,48 +34,48 @@ Snyk은 루트 폴더 및 사용자 지정 파일 위치를 평가하여 지원�
 이 필드는 대소문자를 구분하며 패턴은 모든 저장소에 적용됩니다.
 {% endhint %}
 
-**Next steps**
+**다음 단계**
 
-Once repositories are imported, a confirmation appears in green at the top of the screen. The selected files are indicated with a unique icon, they are named by organization/repo, and you can now also filter to view only those projects, as seen in the example below:
+리포지토리를 가져오면 화면 상단에 확인 메시지가 녹색으로 나타납니다. 선택한 파일은 고유한 아이콘으로 표시되며 조직/리포지토리별로 이름이 지정되며 이제 아래 예와 같이 해당 프로젝트만 보도록 필터링할 수도 있습니다.
 
 ![](../../../.gitbook/assets/screen-shot-2021-09-16-at-9.12.12-am.png)
 
-This integration works similar to our other integrations. To continue to monitor, fix and manage your projects, see the relevant pages in our Docs.
+이 통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 문서에서 관련 페이지를 참조하세요.
 
-## Configure your integration for Azure Repos
-
-{% hint style="info" %}
-**Feature availability**\
-Integration with Azure Repos Cloud is available for all of our pricing plans. Integration with Azure DevOps Server 2020 and above (also known as TFS) is available with Enterprise and Business plans. See [pricing plans](https://snyk.io/plans/) for more details.
-{% endhint %}
-
-Snyk integrates with Microsoft Azure Repos to enable you to import your projects and monitor the source code for your repositories. Snyk tests the projects you’ve imported for any known security vulnerabilities found in the application’s dependencies, testing at a frequency you control.
-
-## How to configure your integration
-
-Enable integration between Azure Repos and Snyk, and start managing your vulnerabilities.
-
-**Prerequisites**
-
-Ensure you have set up your Azure Repos account and your Snyk account.
+## Azure Repos에 대한 통합 구성 기능 가용성
 
 {% hint style="info" %}
-**Note**: it is important that a Snyk admin user configure the integration within the UI. Collaborator users cannot complete this task.
+**기능 가용성**\
+Azure Repos Cloud와의 통합은 모든 요금제에 사용할 수 있습니다. Azure DevOps Server 2020 이상(TFS라고도 함)과의 통합은 엔터프라이즈 및 비즈니스 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
 {% endhint %}
 
-**Steps**
+Snyk는 Microsoft Azure Repos와 통합되어 프로젝트를 가져오고 리포지토리의 소스 코드를 모니터링할 수 있습니다. Snyk는 가져온 프로젝트에서 애플리케이션의 종속성에서 발견된 알려진 보안 취약성을 테스트하고 사용자가 제어하는 빈도로 테스트합니다.
 
-1. The account creating the Personal Access Token must be a member of the Project Administrators group to allow Git repositories to see the [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/set-git-repository-permissions).
-2. Access your Azure Repos account and retrieve a unique Personal Access Token for use by Snyk. For help doing this, see the [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops).
-3. When prompted in Azure, enable the following permissions for Snyk access as follows:
-   * Expiry—We recommend choosing an expiration date for this token that is far in the future to avoid breaking integration.
-   * Scopes—Custom defined
-   * Code—Read and write (enable Project Administrators group permissions if user creating the Personal Access Token is not an admin of the Repositories)
-4. [Log in](https://app.snyk.io) to your Snyk account.
-5. Navigate to **Integrations** from the menu bar at the top.
-6. From the **Integrations** page under the Azure Repos logo, click the **Connect to Azure Repos button.**
-7. From the **Settings** page in the **Integrations** area, enter the Azure DevOps organization that you want to integrate with (i.e. [https://dev.azure.com/{org-name}\\](https://dev.azure.com/%7Borg-name%7D\)/) and the personal access token that you just generated. \* Enterprise customers can also provide a custom URL for Azure Repos Server private instance which is publicly reachable.
-8. Click **Save**.
-9. Snyk tests the connection values and the page reloads, now displaying Azure Repos integration information. A confirmation message that the details were saved also appears in green at the top of the screen. In addition, if the connection to Azure failed, a notification appears under the Connected to Azure Repos section.
+## 통합을 구성하는 방법
+
+Azure Repos와 Snyk 간의 통합을 활성화하고 취약성 관리를 시작하세요.
+
+전제 조건
+
+Azure Repos 계정과 Snyk 계정을 설정했는지 확인합니다.
+
+{% hint style="info" %}
+**주의**: it is important that a Snyk admin user configure the integration within the UI. Collaborator users cannot complete this task.
+{% endhint %}
+
+**단계**
+
+1. Git 리포지토리가 [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/set-git-repository-permissions)를 볼 수 있도록 하려면 개인 액세스 토큰을 만드는 계정이 Project Administrators 그룹의 구성원이어야 합니다. .
+2. Azure Repos 계정에 액세스하고 Snyk에서 사용자 한 개인 액세스를 검색합니다. 이 작업에 대한 도움말은 [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/set-git-repository-permissions)를  참조하세요.
+3. Azure에서 메시지가 표시되면 다음과 같이 Snyk 액세스 권한을 활성화합니다.
+   * 만료 - 통합 중단을 방지하기 위해 이 토큰의 만료 날짜를 훨씬 먼 미래로 선택하는 것이 좋습니다.
+   * 범위 - 사용자 정의
+   * 코드 - 읽기 및 쓰기(개인 액세스 토큰을 생성하는 사용자가 리포지토리의 관리자가 아닌 경우 프로젝트 관리자 그룹 권한 활성화)
+4. Snyk 계정에 [로그인](https://app.snyk.io/login)합니다.
+5. 상단의 메뉴 모음에서 **Integrations**로 이동합니다.
+6. Azure Repos 로고 아래의 **Integrations** 페이지에서 **Connect to Azure Repos** 버튼을 클릭합니다.
+7. 통합 영역의 **설정** 페이지에서 **통합**하려는 Azure DevOps 조직(예: [https://dev.azure.com/{org-name}\\](https://dev.azure.com/%7Borg-name%7D\)/) 및 방금 생성한 개인 액세스 토큰)을 입력합니다. \* Enterprise 고객은 공개적으로 연결할 수 있는 Azure Repos Server 프라이빗 인스턴스에 대한 사용자 지정 URL을 제공할 수도 있습니다.
+8. **Save**를 클릭합니다.
+9. Snyk은 연결 값을 테스트하고 페이지를 다시 로드하여 이제 Azure Repos 통합 정보를 표시합니다. 세부 정보가 저장되었다는 확인 메시지도 화면 상단에 녹색으로 나타납니다. 또한 Azure에 대한 연결이 실패한 경우 Azure Repos에 연결됨 섹션 아래에 알림이 나타납니다.
 
 ![](../../../.gitbook/assets/screen\_shot\_2020-05-19\_at\_17.16.24.png)
