@@ -1,42 +1,37 @@
-# Azure Repos integration
+# Azure Repos 통합
 
-The user generates a unique Azure DevOps personal access token (PAT) generated for Snyk specifically. Together the username and password constitute a token that Snyk uses. The token authorizes Snyk to access the user’s repos for only the specific permissions that the user indicates to Azure Repos when generating it.
+사용자는 특히 Snyk용으로 생성된 고유한 Azure DevOps PAT(개인 액세스 토큰)를 생성합니다. 사용자 이름과 비밀번호는 함께 Snyk이 사용하는 토큰을 구성합니다. 토큰은 Snyk이 생성할 때 사용자가 Azure Repos에 나타내는 특정 권한에 대해서만 사용자의 리포지토리에 액세스할 수 있는 권한을 부여합니다.
 
-1. The user selects projects and repositories for import to Snyk (for testing and monitoring). The user can also enter custom file locations for any manifest files that are not located in the root folders of their repositories.
-2. Snyk evaluates the items that the user selected and imports any that have relevant manifest files in their root folder and all the subfolders at any level.
-3. Snyk communicates directly with your repository for each test it runs to determine exactly what code is currently pushed and what dependencies are being used. Each dependency is tested against Snyk’s vulnerability database to see if it contains any known vulnerabilities.
-4. Based on your configurations, if vulnerabilities are found, Snyk notifies you via email or Slack so that you can take immediate action to fix.
+1. 사용자는 Snyk으로 가져올 프로젝트와 저장소를 선택합니다(테스트 및 모니터링용). 사용자는 저장소의 루트 폴더에 없는 매니페스트 파일에 대한 사용자 지정 파일 위치를 입력할 수도 있습니다.
+2. Snyk은 사용자가 선택한 항목을 평가하고 루트 폴더와 모든 수준의 모든 하위 폴더에 관련 매니페스트 파일이 있는 항목을 가져옵니다.
+3. Snyk는 실행되는 각 테스트에 대해 리포지토리와 직접 통신하여 현재 푸시된 코드와 사용 중인 종속성을 정확히 결정합니다. 각 종속성은 Snyk의 취약성 데이터베이스에 대해 테스트되어 알려진 취약성이 있는지 확인합니다.
+4. 구성을 기반으로 취약점이 발견되면 Snyk는 이메일이나 Slack을 통해 알려 즉시 수정 조치를 취할 수 있습니다.
 
-## Add projects to Snyk for Azure Repos
+## Azure Repos용 Snyk에 프로젝트 추가
 
-Snyk tests and monitors Azure Repos that are in any of our supported languages by evaluating root folders and custom file locations.
+Snyk은 루트 폴더 및 사용자 지정 파일 위치를 평가하여 지원되는 언어로 된 Azure Repos를 테스트하고 모니터링합니다.
 
-**Adding projects to Snyk**
+**Snyk에 프로젝트 추가**
 
-1. Go to **Projects** and click **Add projects**. Choose the tool from which to import your projects:
-2. A popup screen opens with all the available repositories under the selected integration:
-3. Select the repos that you would like to import to Snyk to monitor them for security/license issues. To import all repos for a specific organization, checkmark the organization.
-4. Click **Add selected repositories**. Snyk will now scan the entire file tree for dependency files and import them to Snyk as Projects.
+1. **Projects**로 이동하여 **Add projects**를 클릭합니다. 프로젝트를 가져올 도구를 선택하십시오.
+2. 선택한 통합에서 사용 가능한 모든 리포지토리가 포함된 팝업 화면이 열립니다.
+3. 보안/라이센스 문제를 모니터링하기 위해 Snyk로 가져올 저장소를 선택하십시오. 특정 조직의 모든 저장소를 가져오려면 조직에 체크 표시를 합니다.
+4. 선택한 리포지토리 추가를 클릭합니다. 이제 Snyk는 전체 파일 트리에서 종속성 파일을 검색하고 이를 프로젝트로 Snyk에 가져옵니다.
 
 ![](<../../../.gitbook/assets/uuid-cae3b5b8-6971-406c-3c00-91c9d1a570a2-en (1).png>)
 
-## Adding custom file location
+## 사용자 지정 파일 위치 추가
 
-1. From the Add custom file location dropdown list, select the relevant repo for which you would like to configure a custom path. The repo must first be selected from the Add Projects view, as described in the previous step.
-2. In the text field, enter the relative path in which the manifest file is located, as demonstrated in the image above.
+1. 사용자 지정 파일 위치 추가 드롭다운 목록에서 사용자 지정 경로를 구성하려는 관련 리포지토리를 선택합니다. 리포지토리는 이전 단계에서 설명한 대로 프로젝트 추가 보기에서 먼저 선택해야 합니다.
+2. 텍스트 필드에 위 이미지와 같이 매니페스트 파일이 있는 상대 경로를 입력합니다.
 
-{% hint style="info" %}
-**Note**\
-This field is case-sensitive.
-{% endhint %}
+## 가져오기에서 폴더 제외
 
-## Excluding folders from import
-
-This integration works similar to our other integrations. To continue to monitor, fix and manage your projects, see the relevant pages in our Docs.
+이 통합은 다른 통합과 유사하게 작동합니다. 프로젝트를 계속 모니터링, 수정 및 관리하려면 문서에서 관련 페이지를 참조하세요.
 
 {% hint style="info" %}
-**Note**\
-This field is case-sensitive and the pattern applies for all repos.
+**주의**\
+이 필드는 대소문자를 구분하며 패턴은 모든 저장소에 적용됩니다.
 {% endhint %}
 
 **Next steps**
