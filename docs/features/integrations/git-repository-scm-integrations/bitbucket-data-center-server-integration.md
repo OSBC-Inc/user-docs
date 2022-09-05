@@ -32,7 +32,7 @@ Snyk의 Bitbucket 데이터 센터/서버 통합을 통해 모든 통합 리포�
 
 ## 프로젝트 수준 보안 보고서
 
-Snyk는 고급 보안 보고서를 생성하여 리포지토리에서 발견된 취약점을 탐색하고 필요한 업그레이드 또는 패치와 함께 리포지토리에 직접 수정 풀 요청을 열어 즉시 수정할 수 있습니다.
+Snyk는 고급 보안 보고서를 생성하여 리포지토리에서 발견된 취약점을 탐색하고 필요한 업그레이드 또는 패치와 함께 리포지토리에 직접 수정 pull request를 열어 즉시 수정할 수 있습니다.
 
 다음은 프로젝트 수준 보안 보고서의 예입니다:
 
@@ -40,9 +40,9 @@ Snyk는 고급 보안 보고서를 생성하여 리포지토리에서 발견된 
 
 ## 프로젝트 모니터링 및 자동 수정 pull requests
 
-Snyk는 매일 또는 매주 프로젝트를 자주 스캔합니다. 새로운 취약점이 발견되면 이메일과 리포지토리에 대한 수정 사항이 포함된 자동화된 풀 요청을 열어 알림이 전송됩니다.
+Snyk는 매일 또는 매주 프로젝트를 자주 스캔합니다. 새로운 취약점이 발견되면 이메일과 리포지토리에 대한 수정 사항이 포함된 자동화된 pull request를 열어 알림이 전송됩니다.
 
-다음은 Snyk에서 열린 수정 풀 요청의 예입니다.
+다음은 Snyk에서 열린 수정 pull request의 예입니다.
 
 ![](../../../.gitbook/assets/666.png)
 
@@ -56,32 +56,32 @@ Snyk는 매일 또는 매주 프로젝트를 자주 스캔합니다. 새로운 �
 
 ## **Pull request 테스트**
 
-Snyk tests any newly created pull request in your repositories for security vulnerabilities, and sends a build check to Bitbucket DC/Server. You can to see whether the pull request introduces new security issues, directly from Bitbucket DC/Server.
+Snyk는 보안 취약점에 대해 저장소에서 새로 생성된 pull request를 테스트하고 Bitbucket DC/Server에 빌드 확인을 보냅니다. pull request가 새로운 보안 문제를 야기하는지 Bitbucket DC/Server에서 직접 확인할 수 있습니다.
 
-This is how Snyk pull request build check appears in the **Pull Request** page in Bitbucket DC/Server:
+Bitbucket DC/Server의 Pull Request 페이지에 Snyk pull request 빌드 확인이 표시되는 방식은 다음과 같습니다.
 
 ![](../../../.gitbook/assets/888.png)
 
-To review and adjust the pull request tests settings:
+pull request 테스트 설정을 검토하고 조정하려면:
 
-1. Click on settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
-2. Select **Edit Settings** for Bitbucket Server.
-3. Navigate to **Default Snyk test for pull requests**:
+1. settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+2. Bitbucket Server에 대한 **Edit Settings**를 선택합니다.
+3. **Default Snyk test for pull requests**로 이동합니다.
 
 ![](../../../.gitbook/assets/999.png)
 
 ## Bitbucket DC/Server 통합에 필요한 권한 범위
 
-Snyk performs all the operations in Bitbucket DC/Server on behalf of the integrated service account.
+Snyk는 통합 서비스 계정을 대신하여 Bitbucket DC/Server에서 모든 작업을 수행합니다.
 
-For Snyk to perform the required operations on monitored repositories (such as reading manifest files on a frequent basis and opening fix or upgrade PRs), the integrated Bitbucket DC/Server service account needs **Admin** permissions on the imported repositories:
+Snyk가 모니터링되는 리포지토리에서 필요한 작업(예: 자주 매니페스트 파일 읽기 및 수정 사항 열기 또는 PR 업그레이드)을 수행하려면 통합 Bitbucket DC/Server 서비스 계정에 가져온 리포지토리에 대한 **관리자** 권한이 필요합니다.
 
-| **Action**                                          | **Why?**                                                                                                                            | **Required permissions on the repository** |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Daily / weekly tests                                | To read manifest files in private repositories.                                                                                     | **Write** or above                         |
-| Snyk tests on pull requests                         | To send pull request status checks when a new PR is created, or an existing PR is updated.                                          |                                            |
-| Opening fix and upgrade pull requests               | To create fix PRs in monitored repositories.                                                                                        |                                            |
-| Snyk tests on pull requests - initial configuration | To add Snyk's webhooks to the imported repos, so Snyk is informed when pull requests are created or updated, and can trigger scans. | **Admin**                                  |
+| **동작**                    | **목적**                                                                            | **리파지토에 대한 필수 권한** |
+| ------------------------- | --------------------------------------------------------------------------------- | ------------------ |
+| 일일/주간 테스트                 | 개인 저장소의 매니페스트 파일을 읽기                                                              | 쓰거나 그 이상           |
+| pull request에 대한 Snyk 테스트 | 새 PR이 생성되거나 기존 PR이 업데이트될 때 pull 요청 상태 확인을 보내기위해                                   |                    |
+| 수정 및 업그레이드 pull request열기 | 모니터링되는 리포지토리에서 수정 PR을 생성                                                          |                    |
+| 풀 요청에 대한 Snyk 테스트 - 초기 구성 | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 Snyk는 pull 요청이 생성되거나 업데이트될 때 알림을 받고 스캔을 트리거할 수 있습니다. | **Admin**          |
 
 ## Bitbucket DC/서버 통합 비활성화
 
