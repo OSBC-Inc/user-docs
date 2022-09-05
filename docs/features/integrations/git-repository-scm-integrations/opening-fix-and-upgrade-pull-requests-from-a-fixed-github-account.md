@@ -1,21 +1,21 @@
-# Opening fix and upgrade pull requests from a fixed GitHub account
+# 고정된 GitHub 계정에서 수정 및 업그레이드 pull request 열기
 
-You can set a specific GitHub account to open fix and upgrade PRs, rather than use a GitHub user account picked randomly by Snyk.
-
-{% hint style="info" %}
-Other operations not performed by the UI, such as daily / weekly tests, are still performed by Snyk organization members who have connected their GitHub accounts to Snyk, picked randomly.
-{% endhint %}
-
-To use this feature:
-
-1. Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations**.
-2. For the GitHub entry, click **Edit Settings**.
-3. Enable the toggle button under the **Open fix and upgrade pull requests from a fixed GitHub account** setting
-4. Follow the in-page instructions for creating a personal access token in GitHub.
-5. Provide the newly generated token to Snyk so it can be used to perform operations in GitHub (such as opening Fix PRs).
+Snyk에서 임의로 선택한 GitHub 사용자 계정을 사용하는 대신 특정 GitHub 계정을 설정하여 수정 사항을 열고 PR을 업그레이드할 수 있습니다.
 
 {% hint style="info" %}
-Ensure that the GitHub account for which the token is provided, has **write** level permissions or above, to the repos you'd like to monitor with Snyk.
+일일/주간 테스트와 같이 UI에서 수행하지 않는 다른 작업은 여전히 무작위로 선택된 Snyk에 GitHub 계정을 연결한 Snyk 조직 구성원이 수행합니다.
 {% endhint %}
 
-[Read more](https://docs.snyk.io/integrations/git-repository-scm-integrations/github-integration) about repository permission levels in GitHub.
+이 기능을 사용하려면:
+
+1. settings ![](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+2. GitHub 항목의 경우 **Edit Settings**를 클릭합니다.
+3. **Open fix and upgrade pull requests from a fixed GitHub account** 아래에서 토글 버튼을 활성화합니다.
+4. GitHub에서 개인 액세스 토큰을 생성하기 위한 페이지 내 지침을 따르십시오.
+5. 새로 생성된 토큰을 Snyk에 제공하여 GitHub에서 작업(예: Fix PR 열기)을 수행하는 데 사용할 수 있습니다.
+
+{% hint style="info" %}
+토큰이 제공되는 GitHub 계정에 Snyk로 모니터링하려는 저장소에 대한 쓰기 수준 이상의 권한이 있는지 확인하십시오.
+{% endhint %}
+
+GitHub의 리포지토리 권한 수준에 대해 [자세히](github-integration.md) 알아보세요.
