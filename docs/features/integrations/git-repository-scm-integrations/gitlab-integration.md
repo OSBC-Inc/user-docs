@@ -1,21 +1,21 @@
-# GitLab integration
+# GitLab 통합
 
-Snyk's GitLab integration supports GitLab versions 9.5 and above (API v4).
+Snyk의 GitLab 통합은 GitLab 버전 9.5 이상(API v4)을 지원합니다.
 
-## Integration features
+## 통합 기능
 
-The integration allows you to:
+통합을 통해 다음을 수행할 수 있습니다:
 
-1. See Snyk tests in your pull requests that check for vulnerabilities.
-2. Get email alerts and a Snyk pull request with fixes when new vulnerabilities that affect your repo are disclosed.
-3. Get email alerts and a Snyk pull request if a new upgrade or patch is available for a vulnerability that affects you.
-4. Trigger a Snyk pull request with fixes yourself from the test report page or the project page for your repo on snyk.io.
+1. 취약점을 확인하는 pull request의 Snyk 테스트를 참조하십시오.
+2. 리포지토리에 영향을 미치는 새로운 취약점이 공개될 때 수정 사항이 포함된 이메일 알림 및 Snyk pull request를 받으십시오.
+3. 귀하에게 영향을 미치는 취약점에 대해 새로운 업그레이드 또는 패치를 사용할 수 있는 경우 이메일 알림 및 Snyk pull request를 받으십시오.
+4. 테스트 보고서 페이지 또는 snyk.io의 리포지토리에 대한 프로젝트 페이지에서 직접 수정하여 Snyk pull request를 트리거합니다.
 
 {% hint style="info" %}
-**GitLab webhooks** send out an event to Snyk when merge requests occur. This event then starts a series of other events like pulling project files, running the test process, and posting the results to GitLab--all of which takes place on Snyk's side.
+**GitLab 웹훅**은 병합 요청이 발생하면 Snyk에 이벤트를 보냅니다. 그런 다음 이 이벤트는 프로젝트 파일 가져오기, 테스트 프로세스 실행, GitLab에 결과 게시와 같은 일련의 다른 이벤트를 시작합니다. 이 모든 작업은 Snyk 측에서 발생합니다.
 {% endhint %}
 
-## Set up GitLab integration
+## GitLab 통합 설정
 
 This integration only works with GitLab instances that are publicly reachable (not on a private network). A [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker/set-up-snyk-broker) environment is required for private network instances.
 
