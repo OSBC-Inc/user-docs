@@ -12,80 +12,80 @@ Snyk의 GitLab 통합은 GitLab 버전 9.5 이상(API v4)을 지원합니다.
 4. 테스트 보고서 페이지 또는 snyk.io의 리포지토리에 대한 프로젝트 페이지에서 직접 수정하여 Snyk pull request를 트리거합니다.
 
 {% hint style="info" %}
-**GitLab 웹훅**은 병합 요청이 발생하면 Snyk에 이벤트를 보냅니다. 그런 다음 이 이벤트는 프로젝트 파일 가져오기, 테스트 프로세스 실행, GitLab에 결과 게시와 같은 일련의 다른 이벤트를 시작합니다. 이 모든 작업은 Snyk 측에서 발생합니다.
+**GitLab Wenhooks**는 병합 요청이 발생하면 Snyk에 이벤트를 보냅니다. 그런 다음 이 이벤트는 프로젝트 파일 가져오기, 테스트 프로세스 실행, GitLab에 결과 게시와 같은 일련의 다른 이벤트를 시작합니다. 이 모든 작업은 Snyk 측에서 발생합니다.
 {% endhint %}
 
 ## GitLab 통합 설정
 
-This integration only works with GitLab instances that are publicly reachable (not on a private network). A [Snyk Broker](https://docs.snyk.io/integrations/snyk-broker/set-up-snyk-broker) environment is required for private network instances.
+이 통합은 공개적으로 연결할 수 있는(사설 네트워크가 아님) GitLab 인스턴스에서만 작동합니다. 사설 네트워크 인스턴스에는 [Snyk Broker](https://docs.snyk.io/features/snyk-broker/set-up-snyk-broker) 환경이 필요합니다.
 
-**Steps:**
+**단계:**
 
-1. Generate a Personal Access Token in your GitLab. You’ll find this option in your user account settings area, in the **Access Tokens** section. Alternatively, a [Group Access Token](https://docs.gitlab.com/ee/user/group/settings/group\_access\_tokens.html) can be used to grant access to all projects within a GitLab group or subgroup, without contributing to GitLab's licensed user count.
-2. Go to Snyk’s [integrations](https://app.snyk.io/integrations) page and click “Connect to GitLab”.
-3. Add your account credentials and the token you just generated to the GitLab integration settings area in Snyk.
+1. GitLab에서 개인 액세스 토큰을 생성하십시오. **액세스 토큰** 섹션의 사용자 계정 설정 영역에서 이 옵션을 찾을 수 있습니다. 또는 [Group Access Token](https://docs.gitlab.com/ee/user/group/settings/group\_access\_tokens.html)을 사용하여 GitLab의 라이선스 사용자 수에 기여하지 않고 GitLab 그룹 또는 하위 그룹 내의 모든 프로젝트에 대한 액세스 권한을 부여할 수 있습니다.
+2. Snyk의 [통합](https://app.snyk.io/login?redirectUri=L2ludGVncmF0aW9ucw%3D%3D\&from=snyk\_auth\_link) 페이지로 이동하여 "Connect to GitLab"을 클릭합니다.
+3. 계정 자격 증명과 방금 생성한 토큰을 Snyk의 GitLab 통합 설정 영역에 추가합니다.
 
 ![](../../../.gitbook/assets/uuid-aa58b5a9-dd17-3219-6067-4ee6e3f4b384-en.png)
 
-## Required permissions and roles
+## 필요한 권한 및 역할
 
-There are two ways to integrate Snyk with GitLab, either via our Broker or directly. Our Broker enables organizations to integrate from within their private network. This article describes the permissions needed for direct integration (when Broker is not implemented).
+브로커를 통하거나 직접 Snyk을 GitLab과 통합하는 두 가지 방법이 있습니다. 당사 브로커를 사용하면 조직이 사설 네트워크 내에서 통합할 수 있습니다. 이 문서에서는 직접 통합(브로커가 구현되지 않은 경우)에 필요한 권한에 대해 설명합니다.
 
-To integrate with GitLab, as a Snyk admin user or as a member of the organization:
+Snyk 관리자 또는 조직 구성원으로 GitLab과 통합하려면:
 
-### User with Personal Access Token
+### Personal Access Token이 있는 사용자
 
-1. Generate a [personal access token](https://gitlab.com/-/profile/personal\_access\_tokens) enabling the **api** scope for access.
-2. Ensure that the GitLab user that you've just generated the access token from, is either the **Owner** of the projects (repos) you'd like to monitor with Snyk or has **Maintainer** permissions to them.
+1. 액세스를 위한 **API** 범위를 활성화하는 [Personal Access Token](https://gitlab.com/-/profile/personal\_access\_tokens)을 생성합니다.
+2. 방금 액세스 토큰을 생성한 GitLab 사용자가 Snyk로 모니터링하려는 프로젝트(리포지토리)의 **소유자**이거나 해당 프로젝트에 대한 **관리자** 권한이 있는지 확인합니다.
 
 ![](../../../.gitbook/assets/gitlab\_token.png)
 
 ### Group Access Token
 
-1. Locate your group in GitLab, and select **Settings > Access Tokens**.
-2. Enter a descriptive token name (such as 'Snyk token'), select the **Maintainer** role, and check the **api** scope.
+1. GitLab에서 그룹을 찾고 **Settings > Access Tokens**을 선택합니다.
+2. 설명이 포함된 토큰 이름(예: 'Snyk 토큰')을 입력하고 유지 **관리자** 역할을 선택하고 **API** 범위를 확인합니다.
 
-![](../../../.gitbook/assets/gitlab\_group\_token.png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-9fef0e3b491eb046d2f7ec35cfc3647c7ea72508_gitlab_group_token.png" alt=""><figcaption></figcaption></figure>
 
-**The 'api' scope with a Maintainer role enables:**
+**관리자 역할이 있는 'api' 범위는 다음을 가능하게 합니다.**
 
-* Snyk to authenticate user accounts and to create webhooks, which are necessary for automating fix pull requests and Snyk test on your pull requests
-* Continuous write access to enable the Snyk organization users to manually trigger the creation of fix pull requests
-* Continuous read access enabling Snyk to monitor your projects and enabling you and the organization’s other members to manually re-trigger tests.
+* 사용자 계정을 인증하고  pull request에 대한 수정 pull request 및 Snyk 테스트를 자동화하는 데 필요한 웹훅을 생성하기 위한 Snyk
+* Snyk 조직 사용자가 수정 풀 요청 생성을 수동으로 트리거할 수 있도록 하는 지속적인 쓰기 액세스
+* Snyk이 프로젝트를 모니터링하고 귀하와 조직의 다른 구성원이 테스트를 수동으로 다시 트리거할 수 있도록 하는 지속적인 읽기 액세스.
 
-When the first user in a Snyk organization (a Snyk admin account user) sets up an integration with a GitLab personal access token or group access token, the token is authenticated with GitLab, enabling Snyk access to the repositories in that account. Thereafter, all users in that Snyk organization can add and work with any related projects, while the merge requests themselves will appear in GitLab as having been opened by the original GitLab user (the Snyk admin who set up the configuration)
+Snyk 조직의 첫 번째 사용자(Snyk 관리자 계정 사용자)가 GitLab 개인 액세스 토큰 또는 그룹 액세스 토큰과의 통합을 설정하면 토큰이 GitLab에서 인증되어 해당 계정의 리포지토리에 대한 Snyk 액세스가 가능합니다. 그 후, 해당 Snyk 조직의 모든 사용자는 관련 프로젝트를 추가하고 작업할 수 있지만 병합 요청 자체는 원래 GitLab 사용자(구성을 설정한 Snyk 관리자)가 연 것으로 GitLab에 표시됩니다.
 
-## **Fix vulnerabilities with Snyk merge requests in GitLab**
+## GitLab에서 Snyk 병합 요청으로 취약점 수정
 
-When viewing a Snyk test report for a project that you own, or when looking at a project that you are watching with Snyk, you’ll see two options for fixing a vulnerability:
+소유한 프로젝트에 대한 Snyk 테스트 보고서를 보거나 Snyk로 보고 있는 프로젝트를 볼 때 취약점을 수정하기 위한 두 가지 옵션이 표시됩니다.
 
-* **Open a fix Merge Request:** generate a Snyk merge request with the minimal changes needed to fix the vulnerabilities affecting the project.
-* **Fix this vulnerability:** generate a Snyk merge request that fixes only this vulnerability.
+* **수정 Merge Request 열:** g프로젝트에 영향을 미치는 취약점을 수정하는 데 필요한 최소한의 변경으로 Snyk 병합 요청 생성.
+* **취약점 수정:** 취약점만 수정하는 Snyk 병합 요청을 생성합니다.
 
-You can review the vulnerabilities that will be fixed, change your selection, and choose to ignore any vulnerabilities that can’t be fixed right now before opening the merge request on the **Open a fix Merge Request** page.
+수정될 취약점을 검토하고, 선택 사항을 변경하고, **Open a fix Merge Request** 페이지에서 병합 요청을 열기 전에 지금 수정할 수 없는 모든 취약점을 무시하도록 선택할 수 있습니다.
 
 ![](../../../.gitbook/assets/uuid-8d2ef9cb-cd32-bf48-a827-32bb358a10ab-en.png)
 
-When you open a merge request via snyk.io, we will give you a heads-up when this is the case.
+snyk.io를 통해 병합 요청을 열면 이러한 경우에 대해 알려드립니다.
 
-Here’s an example for the merge request:
+다음은 병합 요청의 예입니다:
 
 ![](../../../.gitbook/assets/uuid-5e9a4b58-4d87-06fb-0479-a308515d4b12-en.png)
 
-## Get a Snyk merge request for newly disclosed vulnerabilities that affect you
+## 귀하에게 영향을 미치는 새로 공개된 취약점에 대한 Snyk 병합 요청 받기
 
-Whenever a vulnerability is disclosed that affects a project you’re watching, Snyk will not only email you about it but also generate a Snyk merge request that addresses the vulnerabilities. You’ll receive a merge request similar to the example above.
+보고 있는 프로젝트에 영향을 미치는 취약점이 공개될 때마다 Snyk은 이에 대해 이메일을 보낼 뿐만 아니라 취약점을 해결하는 Snyk 병합 요청도 생성합니다. 위의 예와 유사한 병합 요청을 받게 됩니다.
 
-## Get a Snyk merge request when new upgrades or patches are available
+## 새로운 업그레이드나 패치가 있을 때 Snyk 병합 요청 받기
 
-When no upgrade is available, you can ignore or patch the vulnerability (patching is only available for Node.js projects). When a better fix option has become available, for example, an upgrade for a vulnerability you previously ignored, Snyk notifies you about this via email and also generates a merge request with the new fix.
+사용 가능한 업그레이드가 없는 경우 취약점을 무시하거나 패치할 수 있습니다(패치는 Node.js 프로젝트에만 사용 가능). 예를 들어 이전에 무시했던 취약점에 대한 업그레이드와 같이 더 나은 수정 옵션을 사용할 수 있게 되면 Snyk은 이메일을 통해 이에 대해 알리고 새 수정으로 병합 요청을 생성합니다.
 
-## Disable the GitLab integration
+## GitLab 통합 비활성화
 
 {% hint style="warning" %}
-Disabling a GitLab integration effectively removes all Snyk integrations, webhooks, as well as removal of the Snyk credentials and deactivation of the GitLab projects in the Snyk Web UI.
+GitLab 통합을 비활성화하면 Snyk 웹 UI에서 Snyk 자격 증명 제거 및 GitLab 프로젝트 비활성화는 물론 모든 Snyk 통합, webhook이 효과적으로 제거됩니다.
 {% endhint %}
 
-The project will be set to inactive and you’ll no longer get alerts, pull requests or Snyk tests on your pull requests. Again, the webhook that enables the integration for this repo will be removed.
+프로젝트는 비활성으로 설정되며 더 이상 pull 요청에 대한 경고, pull 요청 또는 Snyk 테스트를 받지 않습니다. 다시 말하지만, 이 리포지토리에 대한 통합을 가능하게 하는 webhook이 제거됩니다.
 
-You can restart watching at any time; however, re-initiating GitLab projects for monitoring would require setting up the integration again.
+언제든지 시청을 다시 시작할 수 있습니다. 그러나 모니터링을 위해 GitLab 프로젝트를 다시 시작하려면 통합을 다시 설정해야 합니다.
