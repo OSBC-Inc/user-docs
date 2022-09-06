@@ -11,7 +11,7 @@
 * 매니페스트 파일과 다른 디렉터리에서 .synk 정책 파일 사용: \
   [Use a .snyk policy file in a different directory from the manifest file](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/using-a-.snyk-file-in-a-separate-directory-than-the-manifest-file.md)
 * log4shell 명령 사용 방법: [How to use the log4shell command](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/how-to-use-the-log4shell-command.md)
-* CLI 테스트에 대한 severity threshold 설정: [Set severity thresholds for CLI tests](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/set-severity-thresholds-for-cli-tests.md)
+* CLI 테스트에 대한 severity threshold 설정: [Set severity thresholds for CLI tests](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/set-severity-thresholds-for-cli-tests.md)
 * 관리되지 않는 모든 jar 파일 검색: [Scan all unmanaged jar files](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/scan-all-unmanaged-jar-files.md)
 * setup.py 파일이 스캔에 실패하거나 디펜던시를 찾지 못하는이유: \
   [Why is my setup.py file failing to scan or finding 0 dependencies?](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/test-for-vulnerabilities/why-is-my-setup.py-file-failing-to-scan-or-finding-0-dependencies.md)
