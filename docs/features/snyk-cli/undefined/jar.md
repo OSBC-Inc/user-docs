@@ -12,7 +12,7 @@ Java 앱은 일반적으로 애플리케이션 내의 여러 위치에 JAR 파�
 
 ![mvn-v의 출력 스크린샷](https://3099555661-files.gitbook.io/\~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fuploads%2Fgit-blob-1b7ab8f556892a95d02d5578c9385cfe2fd0d1ec%2Funtitled\_\_1\_.png?alt=media\&token=0dfb49a6-b684-4f70-8218-85bb65f805bc)
 
-`snyk test --scan-all-unmanaged` 명령을 사용하여 단일 폴더의 모든 JAR 파일을 검색하여 Maven central에서 호스팅되는 모든 종속성과 일치시킵니다. Gradle 또는 Maven과 같은 패키지 관리자를 사용하여 응용 프로그램을 만들지 않은 경우 관리되지 않는 모든 파일을 검색하면 종속성 충돌이 발생할 수 있습니다. 이는 특히 Ant를 사용하여 빌드된 응용 프로그램의 경우에 해당됩니다. \
+`snyk test --scan-all-unmanaged` command을 사용하여 단일 폴더의 모든 JAR 파일을 검색하여 Maven central에서 호스팅되는 모든 종속성과 일치시킵니다. Gradle 또는 Maven과 같은 패키지 관리자를 사용하여 응용 프로그램을 만들지 않은 경우 관리되지 않는 모든 파일을 검색하면 종속성 충돌이 발생할 수 있습니다. 이는 특히 Ant를 사용하여 빌드된 응용 프로그램의 경우에 해당됩니다. \
 따라서 다음 명령을 사용하여 각 JAR 파일을 개별적으로 테스트합니다:\
 `snyk test --scan-unmanaged --file=/path/to/file`
 

@@ -56,7 +56,7 @@ Snyk CLI 자체에는 기본적으로 더 복잡한 사용 사례에 대한 테�
 
 ![정책이 적용된 조직에 대 테스트](https://github.com/snyk/user-docs/raw/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/.gitbook/assets/test-organization-with-policy-applied.png)
 
-### 지원 도구
+### 지원 Tool
 
 다음은 Snyk CLI를 위한 snyk-delta 또는 snyk-filter 오픈 소스 지원 도구 사용에 대해 설명합니다.
 

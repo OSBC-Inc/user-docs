@@ -1,10 +1,10 @@
-# log4shell 명령 사용 방법
+# log4shell command 사용 방법
 
 ### 소개
 
-`snyk log4shell` 은 **log4Shell** 취약성([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228))의 영향을 받는 **log4j** 라이브러리가 매니페스트 파일(예: pom.xml 또는 build.gradle)에 선언되지 않았더라도 이 라이브러리의 추적을 찾는 데 도움이 되는 Snyk CLI 명령입니다.
+`snyk log4shell` 은 **log4Shell** 취약성([CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228))의 영향을 받는 **log4j** 라이브러리가 매니페스트 파일(예: pom.xml 또는 build.gradle)에 선언되지 않았더라도 이 라이브러리의 추적을 찾는 데 도움이 되는 Snyk CLI command입니다.
 
-이 명령은 빌드된 프로젝트 및 타사 응용 프로그램을 테스트하며 `snyk test` 및 `snyk test --scan-all-unmanaged` 명령을 보완합니다.
+이 command는 빌드된 프로젝트 및 타사 응용 프로그램을 테스트하며 `snyk test` 및 `snyk test --scan-all-unmanaged` command 보완합니다.
 
 \{% hint style="info" %\} [Snyk VulnDB ](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720)항목의 Log4Shell 취약성에 대해 자세히 알아보십시오. \{% endhint %\}
 
@@ -23,13 +23,13 @@
 2. 프로젝트를 구축했는지 확인합니다.
 3. 검색할 프로젝트 디렉토리로 이동합니다.
 4. `snyk log4shell` 을 입력합니다.\
-   **NOTE**: 이 명령에는 추가 인수가 필요하거나 지원되지 않습니다.
+   **주의**: 이 command에는 추가 인수가 필요하거나 지원되지 않습니다.
 
 ### 스캔 결과
 
 스캔 완료 후 결과가 나타납니다.
 
-예는 다음과 같습니다:
+예는 다음과 같습니:
 
 ```
 $ snyk log4shell
