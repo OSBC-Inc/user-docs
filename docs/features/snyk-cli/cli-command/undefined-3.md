@@ -6,7 +6,7 @@
 
 ## 설명
 
-`snyk container` 명령은는 컨테이너 이미지의 취약성을 테스트합니다.
+`snyk container` command는 컨테이너 이미지의 취약성을 테스트합니다.
 
 자세한 내용은  [컨테이너 보안을 위한 Snyk CLI](../../../snyk-products/snyk-container/snyk-cli-for-container-security/) 참조하십시오.
 
@@ -26,28 +26,28 @@
 
 **0**: 성공, 취약점 없음\
 **1**: 작업 필요, 취약성 발견\
-**2**: 실패, 명령 재실행 시도\
+**2**: 실패, command 재실행 시도\
 **3**: 실패, 지원되는 프로젝트가 검색되지 않음
 
 ## Snyk CLI 구성
 
 환경 변수를 사용하여 Snyk CLI를 구성하고 Snyk API로 연결하기 위한 변수를 설정할 수 있습니다.
 
-컨테이너 명령에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조
+컨테이너 command에 적용되는 환경 변수가 있습니다. [Snyk CLI 구성](../snyk-cli.md) 참조
 
 ## 디버그
 
 `-d` 옵션을 사용하여 디버그 로그를 출력합니다.
 
-## 컨테이너 테스트 및 컨테이너 모니터 하위 명령 옵션
+## 컨테이너 테스트 및 컨테이너 모니터 하위 command 옵션
 
 ### `--print-deps`
 
-분석을 위해 보내기 전에 종속성 트리를 호출하십시오.
+분석을 위해 보내기 전에 종속성 트리를 출하십시오.
 
 ### `--org=<ORG_ID>`
 
-`<ORG_ID>`를 지정하여 특정 조직에 연결된 Snyk 명령을를 실행합니다. `<ORG_ID>`는 일부 기능 가용성 및 개인 테스트 제한에 영향을 미칩니다.
+`<ORG_ID>`를 지정하여 특정 조직에 연결된 Snyk command를 실행합니다. `<ORG_ID>`는 일부 기능 가용성 및 개인 테스트 제한에 영향을 미칩니다.
 
 조직이 여러 개인 경우 다음을 사용하여 CLI에서 기본값을 설정할 수 있습니다.
 
@@ -77,7 +77,7 @@
 
 결과를 JSON 형식으로 출력하여 다른 도구와의 통합에 유용합니다.
 
-예                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  : `$ snyk container test --json`
+Example: `$ snyk container test --json`
 
 ### `--json-file-output=<OUTPUT_FILE_PATH>`
 
@@ -95,7 +95,7 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 `--sarif` 옵션 사용 여부에 관계없이 SARIF 형식의 테스트 출력을 직접 `<OUTPUT_FILE_PATH>` 파일에 저장합니다.
 
-이 기능은 표준 출력을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하고 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
+이 기능은 stdout을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하고 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 ### `--project-environment=<ENVIRONMENT>[,<ENVIRONMENT>]...>`
 
@@ -125,7 +125,7 @@ Example: `$ snyk container test --json-file-output=vuln.json`
 
 프로젝트 태그를 하나 이상의 값으로 설정합니다("=" 구분 기호가 있는 쉼표로 구분된 키-값 쌍).
 
-예: `--project-tags=department=finance,team=alpha`
+Example: `--project-tags=department=finance,team=alpha`
 
 project tags set 를 지우려면 `--project-tags=` 를 수정하십시오.
 
@@ -176,7 +176,7 @@ CLI 버전 1.962.0 이상에서는 `--app-vuls` 옵션과 `--json` 옵션을 함
 
 컨테이너 레지스트리에 연결할 때 사용할 암호를 지정하십시오. 이는 Docker가 있을 때 로컬 Docker 이진 자격 증명을 위해 무시됩니다.
 
-## 컨테이너 테스트 명령의 예
+## 컨테이너 테스트 command의 예
 
 ### Docker 이미지 스캔 및 모니터링
 

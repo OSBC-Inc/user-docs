@@ -67,7 +67,7 @@
 
 결과를 SARIF 형식으로 반환합니다.
 
-예:  `$snyk code`
+Example:  `$snyk code`
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 
