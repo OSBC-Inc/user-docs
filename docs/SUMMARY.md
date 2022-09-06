@@ -283,7 +283,7 @@
     * [병합하기 전 PR의 취약성을 테스트](features/integrations/git-repository-scm-integrations/test-your-prs-for-vulnerabilities-before-merging.md)
     * [Snyk의 pull 요청 확인](features/integrations/git-repository-scm-integrations/snyk-checks-on-pull-requests.md)
     * [Snyk 업그레이드 pull 요청 보기 및 이해](features/integrations/git-repository-scm-integrations/view-and-understand-snyk-upgrade-pull-requests.md)
-  * [IDE tools](features/integrations/ide-tools/README.md)
+  * [IDE 도구](features/integrations/ide-tools/README.md)
     * [Eclipse plugin](features/integrations/ide-tools/eclipse-plugin.md)
     * [JetBrains plugins](features/integrations/ide-tools/jetbrains-plugins.md)
     * [Visual Studio extension](features/integrations/ide-tools/visual-studio-extension.md)

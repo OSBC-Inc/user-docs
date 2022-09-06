@@ -1,17 +1,17 @@
-# IDE tools
+# IDE 도구
 
-IDE integrations allow you to use the functionality of Snyk, all in your standard IDEs (such as Visual Studio).
+IDE 통합을 통해 Snyk의 기능을 모두 표준 IDE(예: Visual Studio)에서 사용할 수 있습니다.
 
-You can use Snyk with the following pre-built IDEs:
+다음과 같은 사전 구축 IDE와 함께 Snyk을 사용할 수 있습니다.
 
 * [eclipse-plugin.md](eclipse-plugin.md "mention")
 * [jetbrains-plugins.md](jetbrains-plugins.md "mention")
 * [visual-studio-extension.md](visual-studio-extension.md "mention")
 * [visual-studio-code-extension-for-snyk-code.md](visual-studio-code-extension-for-snyk-code.md "mention")
 
-You can also build your own IDE integration; see [snyk-ide-plugins](snyk-ide-plugins/ "mention") for details.
+자체 IDE 통합을 구축할 수도 있습니다.\
+자세한 내용은[snyk-ide-plugins](snyk-ide-plugins/ "mention") 를 참조하십시오.
 
-#### Training information
+**교육 정보**
 
-See [Introduction to using Snyk in an IDE](https://training.snyk.io/courses/introduction-to-using-snyk-in-an-ide).
-
+[Introduction to using Snyk in an IDE](https://training.snyk.io/courses/introduction-to-using-snyk-in-an-ide)를 참조하세요.
