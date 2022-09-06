@@ -2,7 +2,7 @@
 
 이 페이지에 설명된 방법을 사용하여 [Snyk CLI](./)를 설치할 수 있습니다.
 
-Snyk CLI를 설치한 후 [인증](cli-3/undefined.md)해야 합니다. 그런 다음 설치 테스트부터 [시작](cli.md)하여 취약점 테스트 및 수정을 시작할 수 있습니다.
+Snyk CLI를 설치한 후 [인증](cli-command/undefined.md)해야 합니다. 그런 다음 설치 테스트부터 [시작](cli.md)하여 취약점 테스트 및 수정을 시작할 수 있습니다.
 
 ## npm 또는 Yarn을 사용하여 Snyk CLI 설치
 

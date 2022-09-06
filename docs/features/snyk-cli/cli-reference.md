@@ -8,11 +8,11 @@
 
 Snyk CLI는 프로젝트에서 알려진 취약성을 찾아 수정하는 빌드 타임 도구입니다. Snyk CLI 및 Snyk에 대한 자세한 설명은 [Snyk CLI](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli)를 참조하십시오. Snyk CLI 사용 방법에 대한 자세한 내용은 [Getting started with the CLI](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/getting-started-with-the-cli)을 참조하십시오.
 
-### 사용 가능한 CLI Command
+### 사용 가능한 CLI 명령
 
 각 Snyk CLI 명령에 대해 자세히 알아보려면 `--help` 옵션 (예: `snyk auth --help` 또는 `snyk container --help` ) 을 사용하십시오. 도움말 명령인 `snyk help [<COMMAND>]` 를 사용할 수도 있습니다.
 
-이 목록의 각 명령은 이러한 문서의 해당 도움말 페이지에 연결됩니다. Snyk CLI command에 대한 모든 [옵션 목록](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/cli-reference#options)은 이 페이지 끝에 있습니다. 각 Command의 도움말에서 옵션에 대해 자세히 설명합니다.
+이 목록의 각 명령은 이러한 문서의 해당 도움말 페이지에 연결됩니다. Snyk CLI 명령에 대한 모든 [옵션 목록](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/cli-reference#options)은 이 페이지 끝에 있습니다. 각 명령의 도움말에서 옵션에 대해 자세히 설명합니다.
 
 #### [`snyk auth`](https://github.com/snyk/user-docs/blob/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/snyk-cli/commands/auth.md)
 
@@ -54,7 +54,7 @@ Snyk CLI 구성을 관리합니다.
 
 `.synk` 정책을 수정하여 명시된 문제를 무시합니다.
 
-### 새로운 CLI Command
+### 새로운 CLI 명령
 
 #### ``[`snyk fix`](../fix-vulnerabilities-from-the-cli/automatic-remediation-with-snyk-fix.md)``
 
@@ -64,21 +64,21 @@ Snyk CLI 구성을 관리합니다.
 
 Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
-### CLI commands의 Sub-commands
+### CLI 명령의 Sub-commands
 
-다음은 Snyk CLI command에 대한 sub-command 목록입니다. 각 sub-command 뒤에는 sub-command가 적용되는 command가 뒤따릅니다. command는 도움말 문서에 연결됩니다. 각 sub-command에 대한 자세한 내용은 도움말 문서를 참조하십시오.
+다음은 Snyk CLI 명령에 대한 sub-command 목록입니다. 각 sub-command 뒤에는 sub-command가 적용되는 명령이 뒤따릅니다. 명령은 도움말 문서에 연결됩니다. 각 sub-command에 대한 자세한 내용은 도움말 문서를 참조하십시오.
 
-`test`: [`code`](cli-3/undefined-1.md), [`container`](cli-3/undefined-3.md)및 [`iac`](cli-3/iac.md)의 하위 명령
+`test`: [`code`](cli-command/undefined-1.md), [`container`](cli-command/undefined-3.md)및 [`iac`](cli-command/iac.md)의 하위 명령
 
-`monitor`: [`container`](cli-3/undefined-3.md) 의 하위 명령
+`monitor`: [`container`](cli-command/undefined-3.md) 의 하위 명령
 
-`get <KEY>`: [`config`](cli-3/undefined-2.md) 의 하위 명령
+`get <KEY>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
-`set <KEY>=<VALUE>`: [`config`](cli-3/undefined-2.md) 의 하위 명령
+`set <KEY>=<VALUE>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
-`unset <KEY>`: [`config`](cli-3/undefined-2.md) 의 하위 명령
+`unset <KEY>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
-`clear`: [`config`](cli-3/undefined-2.md) 의 하위 명령
+`clear`: [`config`](cli-command/undefined-2.md) 의 하위 명령
 
 ### 종료 코드
 
@@ -86,7 +86,7 @@ Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 **0**: 성공, 취약점 없음\
 **1**: action\_neded, 취약점 발견\
-**2**: 실패, command 재실행 시도\
+**2**: 실패, 명령 재실행 시도\
 **3**: 실패, 지원되는 프로젝트 없음
 
 ### Snyk CLI 구성
@@ -99,4 +99,4 @@ Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 ### 옵션
 
-Snyk CLI command에 대한 모든 옵션 목록과 해당 옵션이 적용되는 command 목록이 개발되고 있습니다.
+Snyk CLI 명령에 대한 모든 옵션 목록과 해당 옵션이 적용되는 명령 목록이 개발되고 있습니다.

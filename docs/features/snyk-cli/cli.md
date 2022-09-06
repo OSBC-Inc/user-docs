@@ -4,7 +4,7 @@ coverY: 0
 
 # CLI 시작하기
 
-CLI를 사용하려면 CLI를 설치하고 인증해야 합니다.[ Snyk CLI 설치](install-or-update-the-snyk-cli.md) 및 [인증](cli-3/undefined.md) 명령 도움말을 참조하십시오. 각 릴리스의 변경 사항에 대한 요약은 [release notes](https://github.com/snyk/cli/releases)를 참조하십시오.
+CLI를 사용하려면 CLI를 설치하고 인증해야 합니다.[ Snyk CLI 설치](install-or-update-the-snyk-cli.md) 및 [인증](cli-command/undefined.md) 명령 도움말을 참조하십시오. 각 릴리스의 변경 사항에 대한 요약은 [release notes](https://github.com/snyk/cli/releases)를 참조하십시오.
 
 인증 후 **설치를** **테스트**할 수 있습니다. 디렉토리를 package.json, pom.xml 또는 composer.lock (`cd/my/project/`)과 같은 지원되는 패키지 매니페스트 파일이 들어 있는 폴더로 변경하고 `snyk test`를 실행합니다.
 

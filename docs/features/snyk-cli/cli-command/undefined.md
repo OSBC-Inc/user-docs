@@ -14,7 +14,7 @@
 
 ## 값
 
-일부 환경 및 구성에서는 `<API_TOKEN>`을 사용해야 합니다. [계정으로 CLI 인증](../cli-4.md) 참조
+일부 환경 및 구성에서는 `<API_TOKEN>`을 사용해야 합니다. [계정으로 CLI 인증](../cli-3.md) 참조
 
 값은 사용자 토큰 또는 서비스 계정일 수 있습니다. [서비스 계정](../../integrations/managing-integrations/service-accounts.md) 참조
 
