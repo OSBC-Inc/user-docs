@@ -56,7 +56,7 @@ Snyk Web UI에 로그인하고 [Projects page](https://app.snyk.io/projects)로 
 
 * `snyk monitor` 실행합니다.
 * Snyk UI를 열고 프로젝트 **설정**으로 이동합니다.
-* **Git remote URI**에 오픈 소스 리포지토리의 URL을 입력하십시오.
+* **Git remote URI**에 오픈 소스 저장소의 URL을 입력하십시오.
 
 ## 추가 정보
 

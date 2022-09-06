@@ -7,7 +7,7 @@
 {% endhint %}
 
 {% hint style="warning" %}
-현재 Snyk의 pull 요청 검사는 **Dockerfile**과 호환되지 않습니다.
+현재 Snyk의 pull request 검사는 **Dockerfile**과 호환되지 않습니다.
 {% endhint %}
 
 ## 수표 세부정보 보기
