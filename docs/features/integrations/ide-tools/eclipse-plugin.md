@@ -4,60 +4,60 @@ description: Use this documentation to get started with the Eclipse plugin.
 
 # Eclipse plugin
 
-Install the **Snyk Security - Code and Open Source Dependencies** extension in your Eclipse workflow to expose vulnerabilities and license issues directly from within your IDE (integrated development environment), before they are merged into your codebase.
+Eclipse 워크플로에 **Snyk Security - Code and Open Source Dependencies**를 설치하여 코드베이스에 병합되기 전에 IDE(통합 개발 환경) 내에서 직접 취약점 및 라이선스 문제를 노출합니다.
 
-After you have installed and configured the Eclipse plugin, every time you run it Snyk scans the manifest files in your project and takes the following action:
+Eclipse 플러그인을 설치 및 구성한 후 실행할 때마다 Snyk은 프로젝트의 매니페스트 파일을 스캔하고 다음 작업을 수행합니다.
 
-* analyzes and delivers actionable vulnerability and license issue details
-* records results per package
-* displays results directly from the Eclipse UI
+* 실행 가능한 취약점 및 라이선스 issue 세부 정보를 분석하고 제공합니다.
+* 패키지당 결과 기록
+* Eclipse UI에서 직접 결과 표시
 
-The Snyk Eclipse plugin enables you to track and identify issues that are risks to the security of your application and avoid ever adding those issues to your shared repo.
+Snyk Eclipse 플러그인을 사용하면 애플리케이션 보안에 위협이 되는 문제를 추적 및 식별할 수 있으며 이러한 문제가 공유 리포지토리에 추가되는 것을 방지할 수 있습니다.
 
 {% hint style="info" %}
-The Snyk Eclipse plugin is available for installation on the [Eclipse Marketplace](https://marketplace.eclipse.org/content/snyk-security-scanner).
+Snyk Eclipse 플러그인은 [Eclipse Marketplace](https://marketplace.eclipse.org/content/snyk-security-scanner)에서 설치할 수 있습니다.
 {% endhint %}
 
-## Supported languages and repos
+## 지원되는 언어 및 리포지토리
 
-Snyk supports all languages that are supported by both Eclipse and Snyk. Additionally, the Snyk plugin can be implemented with the Snyk Broker and on-prem solutions.
+Snyk은 Eclipse와 Snyk에서 모두 지원하는 모든 언어를 지원합니다. 또한 Snyk 플러그인은 Snyk Broker 및 온프레미스 솔루션으로 구현할 수 있습니다.
 
-## Installing the Snyk Eclipse plugin
+## Snyk Eclipse 플러그인 설치
 
-1. Navigate to the Marketplace from within your running Eclipse instance.
-2. Search for Snyk and click **Install**.
-3. When prompted accept the license agreement add the **Snyk Security** certificate to complete the installation.
-4. Restart the Eclipse instance and navigate to **Eclipse Preferences** to ensure **Snyk Security - Code and Open Source Dependencies** now appears in the list:
+1. 실행 중인 Eclipse 인스턴스 내에서 Marketplace로 이동합니다.
+2. Snyk를 검색하고 Install을 클릭합니다.
+3. 라이센스 계약에 동의하라는 메시지가 표시되면 Snyk Security 인증서를 추가하여 설치를 완료합니다.
+4. Eclipse 인스턴스를 다시 시작하고 **Eclipse Preferences**로 이동하여 이제 **Snyk Security - Code and Open Source Dependencies**가 목록에 나타나는지 확인합니다.
 
-![Eclipse Marketplace search showing Snyk plugin and Install button](../../../.gitbook/assets/uuid-01198b42-f020-2cc5-c20f-93817eeb44a4-en.png)
+![Snyk 플러그인 및 설치 버튼을 보여주는 Eclipse Marketplace 검색](../../../.gitbook/assets/uuid-01198b42-f020-2cc5-c20f-93817eeb44a4-en.png)
 
-## Configuration
+## 구성
 
-To use Snyk, you must supply the plugin with environment variables and the Snyk Token.
+Snyk를 사용하려면 환경 변수와 Snyk 토큰을 플러그인에 제공해야 합니다.
 
-### API token
+### API 토큰
 
-To provide your API token, copy it from your [account settings](https://app.snyk.io/account) and paste it into the Eclipse preferences Snyk API Token field. Click **Apply and Close** to start analyzing.
+API 토큰을 제공하려면 [account settings](https://app.snyk.io/account)에서 복사하여 Eclipse 기본 설정 Snyk API 토큰 필드에 붙여넣습니다. **적용 및 닫기**를 클릭하여 분석을 시작합니다.
 
 ![Eclipse preferences with Snyk API Token filed and Apply and Close button](../../../.gitbook/assets/uuid-928012b7-8e49-fe6f-4965-77c5db026784-en.png)
 
-### Environment variables
+### 환경 변수
 
-To analyze projects, the plugin uses the Snyk CLI. The CLI needs the following environment variables:
+프로젝트를 분석하기 위해 플러그인은 Snyk CLI를 사용합니다. CLI에는 다음 환경 변수가 필요합니다:
 
-* `PATH`: the path to needed binaries, for example, to Maven. The `PATH` variable can also be manually adjusted using the `Path` field in the settings dialog
-* `JAVA_HOME`: the path to the JDK you want to use to analyze Java dependencies
-* `http_proxy` and `https_proxy`: set using the value in the format `http://username:password@proxyhost:proxyport`.\
-  **Note:** the leading `http://` in the value does not change to `https://` for `https_proxy`.
+* `PATH`: 필요한 바이너리(예: 메이븐)로 가는 경로입니다. `PATH` 변수는 설정 대화 상자의 `Path` 필드를 사용하여 수동으로 조정할 수도 있습니다.
+* `JAVA_HOME`: Java 종속성을 분석하는 데 사용하려는 JDK의 경로
+* `http_proxy`  `https_proxy`: 형식의 값을 사용하여 설정`http://username:password@proxyhost:proxyport`.\
+  **Note:** 값의 선행 `http://`는 `https_proxy`의 경우 `https://`로 변경되지 않습니다.
 
-Setting these variables only in a shell environment (for example, using **\~/.bashrc**) is not enough, if you do not start Eclipse from the command line or create a script file that starts Eclipse using a shell environment.
+명령행에서 Eclipse를 시작하지 않거나 쉘 환경을 사용하여 Eclipse를 시작하는 스크립트 파일을 작성하지 않는 경우 쉘 환경에서만 이러한 변수를 설정하는 것(예: **\~/.bashrc** 사용)으로는 충분하지 않습니다.
 
-* On **Windows**, set the variables using the GUI, or on the command line using the [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) tool.
-* On **macOS**, the process `launchd` needs to know the environment variables to launch Eclipse directly from Finder. Set these environment variables using the `launchctl setenv` command (for example, on start up or using a script you launch at user login).\
-  **Note:** Provision of environment variables to the macOS UI may change between operating system releases, so it can be easier to create a small shell script that launches the Eclipse app to leverage the shell environment, that can be defined via `~/.bashrc`.
-* On **Linux**, updating the file `/etc/environment` can be used to propagate the environment variables to the windows manager and UI.
+* **Windows**에서는 GUI를 사용하여 변수를 설정하거나 [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) 도구를 사용하여 명령줄에서 변수를 설정합니다.
+* **macOS**에서 launchd 프로세스는 Finder에서 직접 Eclipse를 시작하기 위해 환경 변수를 알아야 합니다. `launchctl setenv` 명령을 사용하여 이러한 환경 변수를 설정합니다(예: 시작 시 또는 사용자 로그인 시 실행하는 스크립트 사용).\
+  **Note:** macOS UI에 대한 환경 변수 제공은 운영 체제 릴리스 간에 변경될 수 있으므로 `~/.bashrc`를 통해 정의할 수 있는 셸 환경을 활용하기 위해 Eclipse 앱을 시작하는 작은 셸 스크립트를 만드는 것이 더 쉬울 수 있습니다.
+* **Linux**에서는 `/etc/environment` 파일을 업데이트하여 환경 변수를 Windows 관리자 및 UI로 전파할 수 있습니다.
 
-## Use the Snyk plugin to secure your Eclipse projects
+## Snyk 플러그인을 사용하여 Eclipse 프로젝트 보호
 
 From the Snyk results click the green arrow (![](../../../.gitbook/assets/uuid-aa090aa8-d4fe-eb5d-2505-54a0b1555be9-en.png)) whenever you are ready to scan your projects. Results appear in a short time, and your continue to work as usual in the meantime.
 
