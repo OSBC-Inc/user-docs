@@ -19,7 +19,7 @@ Snyk의 GitHub Enterprise 통합을 통해 다음과 같은 이점을 얻을 수
 5. Github Enterprise URL과 작성한 서비스 계정의 개인 액세스 토큰을 입력하십시오. **Note**: 다음 URL을 제공하여 이 통합을 사용하여 GitHub Enterprise Cloud에 통합할 수 있습니다. [https://api.github.com](https://api.github.com)
 6. **Save**을 클릭합니다. Snyk는 GitHub Enterprise 인스턴스에 연결합니다. 연결에 성공하면 다음 표시가 나타납니다.
 7. Snyk으로 가져올 저장소를 선택한 다음 **Add selected repositories**를 클릭합니다.
-8. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 디펜던시 파일(예: package.json)을 검색하고 프로젝트로 가져옵니다.
+8. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 의존성 파일(예: package.json)을 검색하고 프로젝트로 가져옵니다.
 9. 가져온 프로젝트는 **Projects** 페이지에 나타나고 취약점을 지속적으로 검사합니다.
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-8b3be1cd3d5f4117327c067a1b1c17761b08c9b0\_which\_repos (3) (5) (9) (7) (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (27) (1) (1) (26).jpg>)
@@ -53,7 +53,7 @@ Snyk은 고급 보안 보고서를 생성하여 저장소에서 발견된 취약
 
 **프로젝트 모니터링 및 자동 수정 pull requests**
 
-Snyk은 매일 또는 매주 프로젝트를 자주 스캔합니다. 새 취약점이 발견되면 e메일을 통해 저장소에 대한 수정 사항이 포함된 자동 pull request를 열어 사용자에게 알립니다.
+Snyk은 매일 또는 매주 프로젝트를 자주 스캔합니다. 새 취약점이 발견되면 이메일을 통해 저장소에 대한 수정 사항이 포함된 자동 pull request를 열어 사용자에게 알립니다.
 
 다음은 Snyk이 연 수정 pull request의 예입니다.
 
@@ -69,7 +69,7 @@ Snyk은 매일 또는 매주 프로젝트를 자주 스캔합니다. 새 취약�
 
 **Pull request 테스트**
 
-Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 검사하고 GitHub Enterprise로 status check를 보냅니다. 이를 통해 pull request가 GitHub Enterprise에서 직접 새로운 보안 문제를 발생시키는지 여부를 확인할 수 있습니다.
+Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 검사하고 GitHub Enterprise로 status check를 보냅니다. 이를 통해 pull request가 GitHub Enterprise에서 직접 새로운 보안 Issue를 발생시키는지 여부를 확인할 수 있습니다.
 
 다음은 GitHub Enterprise의 Pull Request 페이지에 Snyk pull request checks가 나타나는 방법입니다.
 
@@ -87,22 +87,22 @@ pull request 테스트 설정을 검토하고 조정하려면 다음과 같이 �
 
 수동으로 또는 자동으로 트리거되는 모든 작업은 통합 설정에서 토큰이 구성된 GitHub 서비스 계정에 대해 수행됩니다. 구성된 토큰에 필요한 액세스 범위가 표시됩니다.
 
-| **Action**                                          | **Why?**                                                                                       | **Required permissions in GitHub** |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------- |
-| Daily / weekly tests                                | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                       | _repo (all)_                       |
-| Manual fix pull requests (triggered by the user)    | 모니터링하는 저장소에 수정 PR을 생성합니다.                                                                      | _repo (all)_                       |
-| Automatic fix and upgrade pull requests             | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                | _repo (all)_                       |
-| Snyk tests on pull requests                         | 새로운 PR을 생성하거나 기존 PR이 업데이트될 때마다 pull request status check를 보냅니다.                                | _repo (all)_                       |
-| Importing new projects to Snyk                      | For presenting a list of all Github 조직에서 사용 가능한 모든 저장소의 목록을 "Add Projects" 화면(가져오기 팝업)에 표시합니다. | _admin:read:org, repo (all)_       |
-| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 webhook을 추가하면 pull request를 생성하거나 업데이트될 때마다 Snyk이 알림을 받고 스캔을 진행할 수 있습니다.        | _admin:repo\_hooks (read & write)_ |
+| **동작**                            | **목**                                                                                          | **GitHub에서 필요한 권한**                |
+| --------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------- |
+| 일일/주간 테스트                         | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                       | _repo (all)_                       |
+| 수동 수정 pull request(사용자에 의해 트리거됨)  | 모니터링하는 저장소에 수정 PR을 생성합니다.                                                                      | _repo (all)_                       |
+| 자동 수정 및 업그레이드 pull requests       | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                | _repo (all)_                       |
+| pull request에 대한 Snyk 테스트         | 새로운 PR을 생성하거나 기존 PR이 업데이트될 때마다 pull request status check를 보냅니다.                                | _repo (all)_                       |
+| Snyk로 새 프로젝트 가져오기                 | For presenting a list of all Github 조직에서 사용 가능한 모든 저장소의 목록을 "Add Projects" 화면(가져오기 팝업)에 표시합니다. | _admin:read:org, repo (all)_       |
+| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 webhook을 추가하면 pull request를 생성하거나 업데이트될 때마다 Snyk이 알림을 받고 스캔을 진행할 수 있습니다.        | _admin:repo\_hooks (read & write)_ |
 
 **저장소에 필요한 사용 권한 범위**
 
 Snyk이 매니페스트 파일을 자주 읽는 것과 같은 모니터링하는 저장소에서 필요한 작업을 수행하려면 Snyk에 연결된 계정(직접 또는 Snyk Broker 사용)이 저장소에 대해 다음과 같은 액세스 권한이 필요합니다.
 
-| **Action**                                          | **Why?**                                                                                | **Required permissions on the repository** |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Daily / weekly tests                                | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                | _Write_ or above                           |
-| Snyk tests on pull requests                         | 새로운 PR을 생성하거나 기존 PR이 업데이트될 때마다 pull request status check을 보냅니다.                         | _Write_ or above                           |
-| Opening fix and upgrade pull requests               | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                         | _Write_ or above                           |
-| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 webhook을 추가하면 pull request를 생성하거나 업데이트될 대마다 Snyk이 알림을 받고 스캔을 진행할 수 있습니다. | _Admin_                                    |
+| **동**                             | **목적**                                                                                  | **저장소에 대한 필수 권한** |
+| --------------------------------- | --------------------------------------------------------------------------------------- | ----------------- |
+| 일일/주간 테스트                         | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                | _Write_ or above  |
+| pull request에 대한 Snyk 테스트         | 새로운 PR을 생성하거나 기존 PR이 업데이트될 때마다 pull request status check을 보냅니다.                         | _Write_ or above  |
+| 수정 및 업그레이드 pull request 열기        | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                         | _Write_ or above  |
+| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 webhook을 추가하면 pull request를 생성하거나 업데이트될 대마다 Snyk이 알림을 받고 스캔을 진행할 수 있습니다. | _Admin_           |

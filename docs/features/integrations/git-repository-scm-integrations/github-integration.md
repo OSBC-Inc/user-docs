@@ -13,7 +13,7 @@ GitHub 통합에서 **Personal Access Token**을 사용하면 PR을 열 수 있�
 1. Integrations 페이지로 이동하여 “GitHub”를 클릭합니다.
 2. Snyk에게 공용 및 개인 저장소 모두에 대한 액세스 권한을 부여할지 아니면 공용 저장소에만 액세스할 수 있도록 할지 선택하십시오.
 3. GitHub 인증 화면이 열리면 "Authorize snyk"을 클릭하여 저장소에 대한 액세스를 제공합니다.
-4. Snyk으로 가져올 저장소를 선택하십시오. 완료되면 페이지 상단에 있는 **Add selected repositories** 버튼을 클릭합니다. 클릭하면 Snyk이 선택한 저장소에서 전체 디렉터리 트리의 의존성 파일(package.json, pom.xml 등)을 검색하고 프로젝트로 가져옵니다.
+4. Snyk으로 가져올 저장소를 선택하십시오. 완료되면 페이지 상단에 있는 **Add selected repositories** 버튼을 클릭합니다. 클릭하면 Snyk이 선택한 저장소에서 전체 디렉터리 트리의 디펜던시 파일(package.json, pom.xml 등)을 검색하고 프로젝트로 가져옵니다.
 5. 가져온 프로젝트가 Projects 페이지에 나타나고 취약점을 지속적으로 검사합니다.
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-8b3be1cd3d5f4117327c067a1b1c17761b08c9b0\_which\_repos (3) (5) (9) (7) (18) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (27) (1) (1) (27).jpg>)
@@ -32,11 +32,11 @@ Snyk은 고급 보안 보고서를 생성하여 저장소에서 발견된 취약
 
 ### **2.** 프로젝트 모니터링 및 자동 수정 **pull requests**
 
-Snyk은 매일 또는 매주 프로젝트를 자주 검색합니다. 새 취약점이 발견되면 e메일을 통해 저장소에 대한 수정 사항이 포함된 pull requests를 열어 사용자에게 알립니다. 다음은 Snyk이 연 수정 pull request의 예시입니다.
+Snyk은 매일 또는 매주 프로젝트를 자주 검색합니다. 새 취약점이 발견되면 e메일을 통해 저장소에 대한 수정 사항이 포함된 pull requests를 열어 사용자에게 알립니다. 다음은 Snyk가 연 수정 pull requests의 예시입니다.
 
 ![image7.png](../../../.gitbook/assets/uuid-6cfdaf0b-c349-468d-fe65-4f80bad110ea-en.png)
 
-Snyk (Settings --> Integration --> GitHub)의 GitHub Integration Settings로 이동하여 자동 수정 pull request 설정을 검토하고 조정할 수 있습니다.
+Snyk (Settings --> Integration --> GitHub)의 GitHub Integration Settings 이동하여 자동 수정 pull request 설정을 검토하고 조정할 수 있습니다.
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-416e8bc0d0657eb9fc7c38c2c869f0577e7b3334\_mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (25).png>)
 
@@ -50,7 +50,7 @@ Snyk의 PR에 있는 모든 커밋은 GitHub에서 확인된 사용자인 [snyk-
 
 ### **3. Pull request** 테스트
 
-Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 테스트하고 GitHub에 상태 점검을 보내 pull request가 GitHub에서 직접 새로운 보안 Issue를 발생시키는지 확인합니다.
+Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 테스트하고 GitHub에 상태 점검을 보내 pull request가 GitHub에서 직접 새로운 보안 문제를 발생시키는지 확인합니다.
 
 다음은 GitHub의 Pull Request 페이지에 Snyk pull request가 나타나는 방법입니다.
 
@@ -66,7 +66,7 @@ Snyk (Settings --> Integration --> GitHub)의 GitHub Integration **Settings**로
 
 1. Snyk UI를 통해 트리거되는 작업(예: PR 수정 열기 또는 프로젝트 재 테스트)은 대행 사용자 대신 수행됩니다. 따라서 Snyk UI를 통해 GitHub에서 이 작업을 수행하려는 사용자는 GitHub 계정을 Snyk에 연결하고 이러한 작업을 수행하려는 저장소에 대해 필요한 권한 범위를 가지고 있어야 합니다. 자세한 내용은 **저장소에 필요한 사용 권한 범위** 섹션을 참조하십시오.
 2. GitHub 계정을 Snyk에 연결하고 저장소에 필요한 사용 권한 범위를 가진 임의 Snyk 조직 구성원을 대신하여 일일/주간 테스트 및 자동 PR(수정 및 업그레이드)과 같이 UI를 통해 트리거되지 않는 작업이 수행됩니다.
-3. 일부 작업(예: PR 생성)은 브로커되지 않은 공용 저장소에 대해 [snyk-bot@snyk.io](mailto:snyk-bot@snyk.io)에 의해 가끔 수행될 수 있습니다.
+3. 일부 작업(예: PR 생성)은 브로커되지 않은 공용 리포지토리에 대해 [snyk-bot@snyk.io](mailto:snyk-bot@snyk.io)에 의해 가끔 수행될 수 있습니다.
 
 {% hint style="info" %}
 **Note**\
@@ -77,25 +77,25 @@ Snyk 조직 관리자는 [PR을 대신해서 열 특정 GitHub 계정](opening-f
 
 UI를 통해 트리거되는 작업과 자동 작업을 모두 포함하여 모든 작업은 토큰이 브로커로 구성된 GitHub 서비스 계정을 대신하여 수행됩니다. 다음은 구성된 토큰에 필요한 액세스 범위에 대한 분류입니다.
 
-| **동작**                            | **목**                                                                                                   | **GitHub에서 필요한 권한**                |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| 일일/주간 테스트                         | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                                | _repo (all)_                       |
-| 수동 수정 pull request(사용자에 의해 트리거됨)  | 모니터링하는 저장소에 수정 PR을 생성합니다.                                                                               | _repo (all)_                       |
-| 자동 수정 및 업그레이드 pull request        | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                         | _repo (all)_                       |
-| pull request에 대한 Snyk 테스트         | 새 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 보냅니다.                                                  | _repo (all)_                       |
-| Snyk로 새 프로젝트 가져오기                 | 또는 "Add Projects" 화면(가져오기 팝업)에 GitHub 조직에서 사용 가능한 모든 리포지토리 목록을 표시합니다.                                   | _admin:read:org, repo (all)_       |
-| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 가져온 저장소에 Snyk의 webhook을 추가하면 pull request가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _admin:repo\_hooks (read & write)_ |
+| **Action**                                          | **Why?**                                                                                                | **Required permissions in GitHub** |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Daily / weekly tests                                | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                                | _repo (all)_                       |
+| Manual fix pull requests (triggered by the user)    | 모니터링하는 저장소에 수정 PR을 생성합니다.                                                                               | _repo (all)_                       |
+| Automatic fix and upgrade pull requests             | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                         | _repo (all)_                       |
+| Snyk tests on pull requests                         | 새 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 보냅니다.                                                  | _repo (all)_                       |
+| Importing new projects to Snyk                      | 또는 "Add Projects" 화면(가져오기 팝업)에 GitHub 조직에서 사용 가능한 모든 리포지토리 목록을 표시합니다.                                   | _admin:read:org, repo (all)_       |
+| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 가져온 저장소에 Snyk의 webhook을 추가하면 pull request가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _admin:repo\_hooks (read & write)_ |
 
 ## 저장소에 필요한 사용 권한 범위 <a href="#h_01eefvj14p8b3depeffvyvdwzj" id="h_01eefvj14p8b3depeffvyvdwzj"></a>
 
 Snyk이 모니터링 중인 저장소에서 필요한 작업을 수행할 수 있도록 하려면 매니페스트 파일을 자주 읽고 PR을 열어야 합니다. Snyk에 직접 또는 Broker를 통해 연결된 계정은 저장소에 대해 다음과 같은 액세스 권한이 있어야 합니다.
 
-| **동**                             | **목**                                                                                                   | **저장소에 대한 필수 권한** |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------- |
-| 일일/주간 테스트                         | 개인 저장소에서 매니페스트 파일을 읽습니다.                                                                                | _Write_ or above  |
-| pull request에 대한 Snyk 테스트         | 새 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 보냅니다.                                                  | _Write_ or above  |
-| 수정 및 업그레이드 pull request 열기        | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                         | _Write_ or above  |
-| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 가져온 저장소에 Snyk의 webhook을 추가하면 pull request가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _Admin_           |
+| **Action**                                          | **Why?**                                                                                                | **Required permissions on the repository** |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Daily / weekly tests                                | F개인 저장소에서 매니페스트 파일을 읽습니다.                                                                               | _Write_ or above                           |
+| Snyk tests on pull requests                         | 새 PR이 생성되거나 기존 PR이 업데이트될 때마다 pull request 상태 확인을 보냅니다.                                                  | _Write_ or above                           |
+| Opening fix and upgrade pull requests               | 모니터링하는 저장소에 수정/업그레이드 PR을 생성합니다.                                                                         | _Write_ or above                           |
+| Snyk tests on pull requests - initial configuration | 가져온 저장소에 Snyk의 가져온 저장소에 Snyk의 webhook을 추가하면 pull request가 생성되거나 업데이트될 때마다 Snyk이 알림을 받고 검색을 트리거할 수 있습니다. | _Admin_                                    |
 
 ### **1.** 고정된 GitHub 계정에서 수정 및 업그레이드 pull request 열기
 
@@ -111,7 +111,7 @@ Snyk을 사용하면 수정 및 업그레이드 PR을 열 특정 GitHub 계정�
 
 **참고 사항**
 
-토큰을 제공하는 GitHub 계정이 Snyk로 모니터링할 저장소에 대한 _**write**_ 수준 이상의 권한을 가지고 있는지 확인하십시오.
+토큰을 제공하는 GitHub 계정이 Snyk로 모니터링할 저장소에 대한 _**write**_ level 이상의 권한을 가지고 있는지 확인하십시오.
 
 [GitHub 통합에 필요한 권한 범위](github-integration.md#github-2)에 대해 자세히 알아보십시오.
 
@@ -121,7 +121,7 @@ Snyk은 작성한 Pull request를 자동으로 할당하여 올바른 사용자�
 
 이 기능은 GitHub 통합(GitHub을 통해 가져온 모든 프로젝트) 또는 프로젝트별로 사용할 수 있습니다. 이 기능은 개인 저장소에 대해서만 지원합니다.
 
-사용자를 수동으로 지정하거나(그리고 모두 할당됨) 마지막 commit 사용자 계정에 따라 자동으로 선택할 수 있습니다.
+사용자를 수동으로 지정하거나(그리고 모두 할당됨) 마지막 커밋 사용자 계정에 따라 자동으로 선택할 수 있습니다.
 
 **Github 통합 내의 모든 프로젝트를 활성화**
 
