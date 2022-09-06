@@ -1,3 +1,3 @@
-# Atlassian Integrations
+# Atlassian 통합
 
-This section contains the different integrations for Atlassian tooling with Snyk workshops.
+이 섹션에서는 Atlassian 도구와 Snyk 워크샵에 대한 다양한 통합이 포함되어 있습니다.

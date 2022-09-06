@@ -1,11 +1,11 @@
 ---
-description: Common setup requirements explained
+description: 일반적인 설정 요구사항이 설명되었습니다.
 ---
 
-# Setting up your workshops
+# 시작하기
 
-The Snyk Partner workshops utilize several different tools that include repository, pipeline, and cloud operations.  While each workshop contains tools and technologies to its use cases, there tools common to the entire collection of workshops.  This section collects those setups into a single place.  As we expand our library of workshops, we recognize the need to consolidate setup operations into common pages.  New workshops will utilize the common pages, and existing workshops will continue to embed setup until they are revised.
+Snyk Partner 워크샵에서는 저장소, 파이프라인 및 클라우드 운영을 포함하는 여러가지 툴을 활용합니다. 각 워크샵에는 사용 사례에 대한 도구와 기술이 포함되어 있지만 전체 워크샵 컬렉션에 공통적인 도구가 있습니다. 이 섹션에서는 이러한 설정을 한 곳에 수집합니다. 워크샵 라이브러리를 확장하면서 설정 작업을 공통 페이지로 통합해야 할 필요성을 인식하고 있습니다. 새로운 워크샵은 공통 페이지를 활용하고 기존 워크샵은 수정될 때까지 계속해서 설정을 포함할 것입니다.
 
-The guidance here start with the context for how Snyk uses the tool, and then how to configure or integrate specifically with Snyk tooling in mind.  Where possible, we will augment existing documentation as provided by the original authors to reduce duplication of instructions.
+여기에서는 Snyk이 툴을 사용하는 방법에 대한 내용으로 시작하여 Snyk 도구를 염두에 두고 구체적으로 구성하거나 통합하는 방법에 대해 설명합니다. 가능한 경우, 지침의 중복을 줄이기 위해 원본 저자가 제공한 기존 문서를 보완할 것입니다.
 
-The subpages in this section cover common setup operations for repositories, CI/CD pipeline environments, Cloud providers, and other tooling utilized in Snyk workshops.  As we onboard more examples with new integrations, our list will expand.  The presence of a tool is not meant as an endorsement but instead driven by their use in a recent workshop.
+이 섹션의 하위 페이지에서는 저장소, CI/CD 파이프라인 환경, 클라우드 공급자 및 Snyk 워크샵에서 사용되는 기타 툴에 대한 일반적인 설정 작업에 대해 설명합니다. 새로운 통합과 함께 더 많은 예제를 포함하면 목록이 확장될 것입니다. 도구의 존재는 보증을 의미하는 것이 아니라 최근 워크샵에서 도구를 사용함으로써 발생합니다.

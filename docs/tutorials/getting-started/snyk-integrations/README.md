@@ -1,3 +1,3 @@
-# Snyk Integrations
+# Snyk 통합
 
-This section contains descriptions for how to use Snyk tooling in your workshop.
+이 섹션에는 워크샵에서 Snyk 도구를 사용하는 방법에 대한 설명이 포함되어 있습니다.

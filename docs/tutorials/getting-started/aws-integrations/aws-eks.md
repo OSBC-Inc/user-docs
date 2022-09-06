@@ -1,5 +1,5 @@
 # AWS EKS
 
-## Installing eksctl, the official CLI for Amazon EKS
+## Amazon EKS용 공식 CLI인 eksctl 설치
 
-Amazon provides [installation instructions for EKS](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html) for Linux/MacOS/Windows.  Please follow the instructions for your environment to install the EKS CLI.
+Amazon은 Linux/MacOS/Windows용 [EKS 설치 지침](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)을 제공합니다. EKS CLI를 설치하려면 환경에 맞는 지침을 따르십시오.

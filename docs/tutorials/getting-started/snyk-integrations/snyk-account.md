@@ -1,13 +1,13 @@
-# Snyk Account
+# Snyk 계정
 
-## Setting up your Snyk account
+## Snyk 계정 설정
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-signup.png)
 
-### I do not have a Snyk account
+### Snyk 계정이 없는 경우
 
-You can register for a **FREE** account [here](https://app.snyk.io/signup/).
+[여기](https://app.snyk.io/signup/)에서 **FREE** 계정을 등록할 수 있습니다.
 
-### I already have a Snyk account
+### 이미 Snyk 계정이 없는 경우
 
-Log in to your account [here](https://app.snyk.io/login).
+[여기](https://app.snyk.io/login)에서 귀하의 계정에 로그인하십시오.

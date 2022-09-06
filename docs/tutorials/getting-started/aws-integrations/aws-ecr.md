@@ -1,6 +1,5 @@
 # AWS ECR
 
-## Creating an Amazon ECR repository
+## Amazon ECR 저장소 생성
 
-Before you can push your Docker images to Amazon ECR, you must create the repository.  Please follow the directions to [create a private ECR ](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html)repository for your workshop.
-
+Docker 이미지를 Amazon ECR로 푸시하려면 먼저 저장소를 만들어야 합니다. 워크샵을 위한 [개인 ECR 저장소를 만드려면 ](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html)지침을 따르십시오.
