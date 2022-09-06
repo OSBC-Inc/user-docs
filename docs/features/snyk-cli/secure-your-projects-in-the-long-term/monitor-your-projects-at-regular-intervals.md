@@ -1,6 +1,6 @@
 # 정기적으로 프로젝트 모니터링
 
-`test` command와 `@snyk/protect` [package](https://github.com/snyk/snyk/tree/master/packages/snyk-protect)(snyk `protect` command 대체)를 사용하면 알려진 취약점을 해결할 수 있습니다. 지속적으로 공개되는 새로운 취약점을 해결하려면 snyk 모니터를 사용하십시오.
+`test` 명령과와 `@snyk/protect` [package](https://github.com/snyk/snyk/tree/master/packages/snyk-protect)(snyk `protect` command 대체)를 사용하면 알려진 취약점을 해결할 수 있습니다. 지속적으로 공개되는 새로운 취약점을 해결하려면 snyk 모니터를 사용하십시오.
 
 배포하기 직전에 프로젝트 디렉토리에서 `snyk monitor`를 실행하십시오:
 
