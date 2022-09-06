@@ -10,7 +10,7 @@
 
 Snyk 구성 설정(`~/.config/configstore/snyk.json`)에서 사용할 수 있는 토큰을 재정의할 수 있습니다. CI/CD 환경에서 `SNYK_TOKEN`을 사용합니다. `SNYK_TOKEN`을 설정한 후 CLI를 사용하여 [시작](cli.md)할 수 있습니다..
 
-계정 토큰을 가져오는 방법에 대한 정보는 [계정으로 CLI 인증](cli-3.md)을 참조하십시오. 서비스 계정을 사용하여 인증할 수도 있습니다. 자세한 내용은 [서비스 계정](../integrations/managing-integrations/service-accounts.md)을 참조하세요. 추가 정보는 [타사 도구에 대한 인증](../user-and-group-management/authentication/authentication-for-third-party-tools.md)을 참조하십시오.
+계정 토큰을 가져오는 방법에 대한 정보는 [계정으로 CLI 인증](cli-4.md)을 참조하십시오. 서비스 계정을 사용하여 인증할 수도 있습니다. 자세한 내용은 [서비스 계정](../integrations/managing-integrations/service-accounts.md)을 참조하세요. 추가 정보는 [타사 도구에 대한 인증](../user-and-group-management/authentication/authentication-for-third-party-tools.md)을 참조하십시오.
 
 `SNYK_CFG_<KEY>`
 

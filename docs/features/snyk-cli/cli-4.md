@@ -3,7 +3,7 @@
 Snyk 계정에 사용할 Snyk CLI를 연결하려면 먼저 시스템을 인증해야 합니다. 이 단계에서는 저장소 권한이 필요하지 않으며 이메일 주소만 있으면 됩니다. 인증을 마치면 CLI를 사용하여 [시작](cli.md)할 수 있습니다. \
 다음을 인증할 수 있습니다:
 
-* CLI에서 `snyk auth`를 실행하여 브라우저를 통해 [인증 command 도움말](cli-command/undefined.md)을 참조하십시오.
+* CLI에서 `snyk auth`를 실행하여 브라우저를 통해 [인증 command 도움말](cli-3/undefined.md)을 참조하십시오.
 * API 토큰 사용
 * `SNYK_TOKEN` 환경 변수 사용은 [Snyk CLI 구성](snyk-cli.md)을 참조하십시오. CI/CD 환경에서 SNYK\_TOKEN을 사용합니다.
 

@@ -92,7 +92,7 @@ CI/CD 플랫폼에서 Snyk을 실행하는 경우 일반적으로 검토 및 지
 
 ### Snyk 인증 토큰
 
-`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](../../snyk-cli/cli-command/undefined.md) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
+`snyk test`를 실행하려면 대상 조직에 대한 액세스 권한이 있는 인증 토큰이 필요합니다. 유효한 인증 토큰을 사용할 수 있지만 서비스 계정을 사용하는 것이 좋습니다. 자세한 내용은 [snyk auth commands 도움말](../../snyk-cli/cli-3/undefined.md) 및 [서비스 계정](../managing-integrations/service-accounts.md)을 참조하십시오.
 
 ### 설정
 

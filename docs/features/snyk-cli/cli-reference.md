@@ -68,17 +68,17 @@ Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
 다음은 Snyk CLI command에 대한 sub-command 목록입니다. 각 sub-command 뒤에는 sub-command가 적용되는 command가 뒤따릅니다. command는 도움말 문서에 연결됩니다. 각 sub-command에 대한 자세한 내용은 도움말 문서를 참조하십시오.
 
-`test`: [`code`](cli-command/undefined-1.md), [`container`](cli-command/undefined-3.md)및 [`iac`](cli-command/iac.md)의 하위 명령
+`test`: [`code`](cli-3/undefined-1.md), [`container`](cli-3/undefined-3.md)및 [`iac`](cli-3/iac.md)의 하위 명령
 
-`monitor`: [`container`](cli-command/undefined-3.md) 의 하위 명령
+`monitor`: [`container`](cli-3/undefined-3.md) 의 하위 명령
 
-`get <KEY>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
+`get <KEY>`: [`config`](cli-3/undefined-2.md) 의 하위 명령
 
-`set <KEY>=<VALUE>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
+`set <KEY>=<VALUE>`: [`config`](cli-3/undefined-2.md) 의 하위 명령
 
-`unset <KEY>`: [`config`](cli-command/undefined-2.md) 의 하위 명령
+`unset <KEY>`: [`config`](cli-3/undefined-2.md) 의 하위 명령
 
-`clear`: [`config`](cli-command/undefined-2.md) 의 하위 명령
+`clear`: [`config`](cli-3/undefined-2.md) 의 하위 명령
 
 ### 종료 코드
 
