@@ -33,7 +33,7 @@ Snyk의 Bitbucket Cloud 통합을 통해 모든 통합 저장소에서 보안 �
     Snyk이 모니터링할 저장소를 선택할 수 있습니다.
 6. Import repositories to Snyk을 시작하려면 **Add your Bitbucket Cloud repositories to Snyk**을 클릭합니다.
 7. 메시지가 나타나면 Snyk으로 가져올 저장소를 선택한 다음 **Add selected repositories**를 클릭합니다.
-8. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 디펜던시 파일(package.json 및 pom.xml)을 스캔하고 프로젝트로 가져옵니다.
+8. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 의존성 파일(package.json 및 pom.xml)을 스캔하고 프로젝트로 가져옵니다.
 9. 가져온 프로젝트가 **Projects** 페이지에 나타나고 취약점을 지속적으로 검사합니다.
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-41b0e6025361da5ff79cfe594401899bf4377de3\_444 (2) (4) (4) (4) (5) (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (10).png>)
@@ -42,7 +42,7 @@ Snyk의 Bitbucket Cloud 통합을 통해 모든 통합 저장소에서 보안 �
 
 ### 프로젝트 수준 보안 보고서
 
-Snyk는 고급 보안 보고서를 생성하여 리포지토리에서 발견된 취약점을 탐색하고 필요한 업그레이드 또는 패치와 함께 리포지토리에 직접 수정 pull request를 열어 즉시 수정할 수 있습니다.
+Snyk는 고급 보안 보고서를 생성하여 저장소에서 발견된 취약점을 탐색하고 필요한 업그레이드 또는 패치와 함께 저장소에 직접 수정 pull request를 열어 즉시 수정할 수 있습니다.
 
 다음은 프로젝트 수준 보안 보고서의 예입니다:
 
@@ -58,7 +58,7 @@ Snyk는 매일 또는 매주 프로젝트를 자주 스캔합니다. 새로운 �
 
 자동 수정 pull request 설정을 검토하고 조정하려면:
 
-1. settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+1. settings![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations** 클릭.
 2. Bitbucket Cloud에 대한 **Edit Settings**을 선택합니다.
 3. **Automatic fix pull requests으로 이동합니다**:
 
@@ -70,7 +70,7 @@ Bitbucket 인터페이스에서 열리는 수동 pull request와 달리 Snyk pul
 
 ### Pull request 테스트
 
-Snyk은 리포지토리에서 보안 취약성에 대해 새로 생성된 pull request를 테스트하고 Bitbucket Cloud에 빌드 확인을 보냅니다. pull request로 인해 새로운 보안 문제가 발생하는지 Bitbucket Cloud에서 직접 확인할 수 있습니다.
+Snyk은 저장소에서 보안 취약성에 대해 새로 생성된 pull request를 테스트하고 Bitbucket Cloud에 빌드 확인을 보냅니다. pull request로 인해 새로운 보안 문제가 발생하는지 Bitbucket Cloud에서 직접 확인할 수 있습니다.
 
 Bitbucket Cloud의 **Pull Request** 페이지에 Snyk pull request 빌드 확인이 표시되는 방식은 다음과 같습니다:
 
@@ -78,7 +78,7 @@ Bitbucket Cloud의 **Pull Request** 페이지에 Snyk pull request 빌드 확인
 
 pull request 테스트 설정을 검토하고 조정하려면:
 
-1. settings ![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
+1. settings ![cog\_icon.png](../../../.gitbook/assets/cog\_icon.png) > **Integrations** 클릭.
 2. Bitbucket Cloud에 대한 **Edit Settings**을 선택합니다.
 3. **Default Snyk test for pull requests > Open Source Security & Licenses**로 이동하여 설정을 편집합니다: \*\*\*\*
 
@@ -90,25 +90,25 @@ pull request 테스트 설정을 검토하고 조정하려면:
 
 구성된 토큰에 필요한 액세스 범위를 보여줍니다:
 
-| **동작**                                       | **목적**                                                                                      | **Bitbucket에 필요한 권한**                                                                                            |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 일일/주간 테스트                                    | 개인 리포지토의 매니페스트 파일 읽기용                                                                       | 리포지토리 읽기                                                                                                         |
-| <p>수동 수정 pull requests<br>(사용자에 의해 트리거됨)</p> | 모니터링되는 리포지토리에서 수정 PR 생성용                                                                    | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
-| 자동 수정 및 업그레이드 pull requests                  | 모니터링되는 리포지토리에서 수정/업그레이드 PR 생성용                                                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
-| pull requests에 대한 Snyk 테스트                   | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                              | <p>리포지토리(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                               |
-| Snyk로 새 프로젝트 가져오기                            | "Add Projects" 화면(가져오기 팝업)에서 Bitbucket의 사용 가능한 모든 저장소 목록을 표시하기 위해                           | <p><em>계정 (</em>읽기<em>)</em> <br><em>Workspace membership (</em>읽기<em>)</em> <br><em>프로젝트 (</em>읽기<em>)</em></p> |
-| 풀 요청에 대한 Snyk 테스트 - 초기 구성                    | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | _webhooks (_읽기 및 쓰기_)_                                                                                           |
+| **동작**                                       | **목적**                                                                                    | **Bitbucket에 필요한 권한**                                                                                            |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 일일/주간 테스트                                    | 개인 저장소 매니페스트 파일 읽기용                                                                       | 저장소 읽기                                                                                                           |
+| <p>수동 수정 pull requests<br>(사용자에 의해 트리거됨)</p> | 모니터링되는 저장소에서 수정 PR 생성용                                                                    | <p>저장소(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                                 |
+| 자동 수정 및 업그레이드 pull requests                  | 모니터링되는 저장소에서 수정/업그레이드 PR 생성용                                                              | <p>저장소(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                                 |
+| pull requests에 대한 Snyk 테스트                   | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                            | <p>저장소(읽기 및 쓰기)<br><em>pull requests (</em>읽기 및 쓰기<em>)</em></p>                                                 |
+| Snyk로 새 프로젝트 가져오기                            | "Add Projects" 화면(가져오기 팝업)에서 Bitbucket의 사용 가능한 모든 저장소 목록을 표시하기 위해                         | <p><em>계정 (</em>읽기<em>)</em> <br><em>Workspace membership (</em>읽기<em>)</em> <br><em>프로젝트 (</em>읽기<em>)</em></p> |
+| 풀 요청에 대한 Snyk 테스트 - 초기 구성                    | 가져온 저장소에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | _webhooks (_읽기 및 쓰기_)_                                                                                           |
 
-### 리포지토리에 필요한 권한 범위
+### 저장소에 필요한 권한 범위
 
-Snyk이 모니터링되는 리포지토리에서 필요한 작업(예: 자주 매니페스트 파일 읽기 및 수정 사항 열기 또는 PR 업그레이드)을 수행하려면 통합 Bitbucket Cloud 서비스 계정에 가져온 리포지토리에 대한 **관리자** 권한이 필요합니다.
+Snyk이 모니터링되는 저장소에서 필요한 작업(예: 자주 매니페스트 파일 읽기 및 수정 사항 열기 또는 PR 업그레이드)을 수행하려면 통합 Bitbucket Cloud 서비스 계정에 가져온 저장소에 대한 **관리자** 권한이 필요합니다.
 
-| **동작**                            | **목적**                                                                                      | **리포지토리에 대한 필수 권한** |
-| --------------------------------- | ------------------------------------------------------------------------------------------- | ------------------- |
-| 일일/주간 테스트                         | 개인 리포지토의 매니페스트 파일 읽기용                                                                       | **쓰기** 또는 그 이상      |
-| pull request에 대한 Snyk 테스트         | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                              |                     |
-| 수정 및 업그레이드 pull request 열기        | 모니터링되는 리포지토리에서 수정 PR을 생성합니다.                                                                |                     |
-| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 리포지토리에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | **관리자**             |
+| **동작**                            | **목적**                                                                                    | 저장소**에 대한 필수 권한** |
+| --------------------------------- | ----------------------------------------------------------------------------------------- | ----------------- |
+| 일일/주간 테스트                         | 개인 저장소의 매니페스트 파일 읽기용                                                                      | **쓰기** 또는 그 이상    |
+| pull request에 대한 Snyk 테스트         | 새로운 PR이 생성될 때마다 / 기존 PR이 업데이트될 때마다 pull requests 상태 확인을 보내기 위해                            |                   |
+| 수정 및 업그레이드 pull request 열기        | 모니터링되는 저장소에서 수정 PR을 생성합니다.                                                                |                   |
+| pull request에 대한 Snyk 테스트 - 초기 구성 | 가져온 저장소에 Snyk의 웹훅을 추가하기 위해 pull requests가 생성되거나 업데이트될 때마다 Snyk에 알림이 전송되고 스캔을 트리거할 수 있습니다. | **관리자**           |
 
 ## 1st Party 통합 (Connect App)
 
@@ -122,7 +122,7 @@ Bitbucket 작업 영역에 Connect 앱을 추가하면 작업 영역 구성원�
 
 ### Connect App 설치하기
 
-앱을 설치하려면 Bitbucket Cloud의 작업 영역 리포지토리 중 하나에서 보안 탭으로 이동한 다음 **Try now**를 클릭합니다.
+앱을 설치하려면 Bitbucket Cloud의 작업 영역 저장소 중 하나에서 보안 탭으로 이동한 다음 **Try now**를 클릭합니다.
 
 ![](../../../.gitbook/assets/mceclip2-3-.png)
 
