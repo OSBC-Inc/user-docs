@@ -214,7 +214,7 @@
   * [CLI reference](features/snyk-cli/cli-reference.md)
   * [취약성 테스트](features/snyk-cli/undefined/README.md)
     * [.snyk 파일](features/snyk-cli/undefined/.snyk.md)
-    * [log4shell 명령 사용 방법](features/snyk-cli/undefined/log4shell.md)
+    * [log4shell 명령 사용 방법](features/snyk-cli/undefined/how-to-use-the-log4shell-command.md)
     * [CLI 테스트에 대한 severity threshold 설정](features/snyk-cli/undefined/set-severity-thresholds-for-cli-tests.md)
     * [CLI에서 Snyk 오픈 소스 사용](features/snyk-cli/undefined/cli-snyk.md)
     * [매니패스트 파일과 다른 디렉터리에서 .snyk 정책 파일 사용](features/snyk-cli/undefined/.snyk-1.md)
