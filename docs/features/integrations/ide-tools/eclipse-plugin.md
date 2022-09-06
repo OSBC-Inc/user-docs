@@ -12,13 +12,13 @@ Eclipse 플러그인을 설치 및 구성한 후 실행할 때마다 Snyk은 프
 * 패키지당 결과 기록
 * Eclipse UI에서 직접 결과 표시
 
-Snyk Eclipse 플러그인을 사용하면 애플리케이션 보안에 위협이 되는 문제를 추적 및 식별할 수 있으며 이러한 문제가 공유 리포지토리에 추가되는 것을 방지할 수 있습니다.
+Snyk Eclipse 플러그인을 사용하면 애플리케이션 보안에 위협이 되는 문제를 추적 및 식별할 수 있으며 이러한 문제가 공유 저장소에 추가되는 것을 방지할 수 있습니다.
 
 {% hint style="info" %}
 Snyk Eclipse 플러그인은 [Eclipse Marketplace](https://marketplace.eclipse.org/content/snyk-security-scanner)에서 설치할 수 있습니다.
 {% endhint %}
 
-## 지원되는 언어 및 리포지토리
+## 지원되는 언어 및 저장소
 
 Snyk은 Eclipse와 Snyk에서 모두 지원하는 모든 언어를 지원합니다. 또한 Snyk 플러그인은 Snyk Broker 및 온프레미스 솔루션으로 구현할 수 있습니다.
 

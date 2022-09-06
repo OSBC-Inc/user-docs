@@ -26,7 +26,7 @@ CircleCI에 프로젝트를 추가하고 구성 파일에 Snyk Orb를 추가하�
 
 ### **Monitor** <a href="#monitor" id="monitor"></a>
 
-선택적으로 빌드가 성공적으로 완료되고 Snyk 단계에서 MONITOR가 True로 설정된 경우 Snyk은 Snyk Web UI에서 프로젝트 종속성의 스냅샷을 저장합니다. 여기서 모든 이슈를 표시하는 디펜던시 트리를 확인할 수 있고 기존 앱 버전에서 발견된 새 이슈에 대한 알림을 받을 수 있습니다.
+선택적으로 빌드가 성공적으로 완료되고 Snyk 단계에서 MONITOR가 True로 설정된 경우 Snyk은 Snyk Web UI에서 프로젝트 종속성의 스냅샷을 저장합니다. 여기서 모든 이슈를 표시하는 의존성 트리를 확인할 수 있고 기존 앱 버전에서 발견된 새 이슈에 대한 알림을 받을 수 있습니다.
 
 ## 전제 조건 <a href="#prerequisites" id="prerequisites"></a>
 
