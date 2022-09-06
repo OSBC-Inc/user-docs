@@ -6,11 +6,11 @@
 
 ## 설명
 
-`snyk monitor` command는 Snyk 계정에 프로젝트를 생성하여 오픈 소스 취약성 및 라이선스 문제를 지속적으로 모니터링합니다. 이 명령을 실행한 후 Snyk 웹사이트에 로그인하고 프로젝트를 확인하여 모니터를 확인합니다.
+`snyk monitor` 명령은 Snyk 계정에 프로젝트를 생성하여 오픈 소스 취약성 및 라이선스 문제를 지속적으로 모니터링합니다. 이 명령을 실행한 후 Snyk 웹사이트에 로그인하고 프로젝트를 확인하여 모니터를 확인합니다.
 
 Snyk 컨테이너는 [`snyk 컨테이너` 도움말](undefined-3.md)을 참조하세요.
 
-`monitor` command는 Snyk 코드에 대해 지원되지 않습니다.
+`monitor` 명령은 Snyk 코드에 대해 지원되지 않습니다.
 
 Snyk Infrastructure as Code의 경우 Infrastructure as Code용 Snyk CLI에서 "IaC 파일을 정기적으로 테스트" 의 지침을 따르십시오.
 
@@ -88,7 +88,7 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 ### `--org=<ORG_ID>`
 
-특정 조직에 연결된 Snyk command를 실행하려면 `<ORG_ID>`를 지정하십시오. `<ORG_ID>`는 일부 기능 가용성 및 비공개 테스트 제한에 영향을 줍니다.
+특정 조직에 연결된 Snyk 명령을 실행하려면 `<ORG_ID>`를 지정하십시오. `<ORG_ID>`는 일부 기능 가용성 및 비공개 테스트 제한에 영향을 줍니다.
 
 여러 조직이 있는 경우 다음을 사용하여 CLI에서 기본값을 설정할 수 있습니다:
 
@@ -98,7 +98,7 @@ Snyk API로 연결하기 위해 환경 변수를 사용하고 변수를 설정�
 
 기본값: [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 `<ORG_ID>`
 
-주의: `--org=<orgslugname>`를 사용할 수도 있습니다. `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
+**Note**: `--org=<orgslugname>`를 사용할 수도 있습니다. `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
 자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 문서를 참조하십시오.
 

@@ -1,16 +1,18 @@
 # 무시
 
+
+
 ## 사용법
 
 `snyk ignore --id=<ISSUE_ID> [--expiry=] [--reason=] [--policy-path=<PATH_TO_POLICY_FILE>] [--path=<PATH_TO_RESOURCE>] [OPTIONS]`
 
-또는
+OR
 
 `snyk ignore [--expiry=] [--reason=] [--policy-path=<PATH_TO_POLICY_FILE>] --file-path=<PATH_TO_RESOURCE>] [OPTIONS]`
 
 ## 설명
 
-`snyk ignore` 명령은는 모든 snyk ID에 따라 명시된 issue를 무시하거나 파일 시스템의 경로를 무시하도록 `.snyk` 정책 파일을 수정합니다.
+`snyk ignore` command는 모든 snyk ID에 따라 명시된 issue를 무시하거나 파일 시스템의 경로를 무시하도록 `.snyk` 정책 파일을 수정합니다.
 
 그러면 다음과 유사한 블록이 포함되도록 로컬 `.snyk` 파일이 업데이트됩니다.:
 
@@ -52,7 +54,7 @@ exclude:
 
 ### `--id=<ISSUE_ID>`
 
-무시할 Issue의 Snyk ID, --file-path와 함께 사용되는 경우 생략됩니다. 다른 사용 사례에서 필요합니다.
+무시할 issue의 Snyk ID, --file-path와 함께 사용되는 경우 생략됩니다. 다른 사용 사례에서 필요합니다.
 
 ### `--expiry=<EXPIRY>`
 
@@ -68,7 +70,7 @@ exclude:
 
 ### `--reason=<REASON>`
 
-이 Issue를 무시하려면 Human-readable `<REASON>` 이여야 합니다.
+이 issue를 무시하려면 Human-readable `<REASON>` 이여야 합니다.
 
 기본값: 없음
 
@@ -80,7 +82,7 @@ exclude:
 
 ### `--path=<PATH_TO_RESOURCE>`
 
-Issue를 무시할 depgraph 내의 리소스 경로입니다.
+issue를 무시할 depgraph 내의 리소스 경로입니다.
 
 무시 규칙의 범위를 좁힐 때 사용합니다. 리소스 경로를 지정하지 않으면 모든 리소스가 무시됩니다.
 
@@ -90,9 +92,9 @@ Issue를 무시할 depgraph 내의 리소스 경로입니다.
 
 ### `--file-path=<PATH_TO_RESOURCE>`
 
-Issue를 무시할 파일 시스템입니다. `snyk code` 및 `snyk test --unmanaged` 에서 사용
+issue를 무시할 파일 시스템입니다. `snyk code` 및 `snyk test --unmanaged` 에서 사용
 
-기본값: none
+Default: none
 
 ### `--file-path-group=[global|code|iac-drift]`
 

@@ -1,7 +1,7 @@
 # Snyk CLI를 사용하여 Snyk 앱 생성
 
 {% hint style="warning" %}
-모든 `apps`의 하위 command는 `--experimental` 플래그 뒤에서만 액세스할 수 있으며 동작은 사전 통지 없이 언제든지 변경될 수 있습니다. 모든 command를 주의해서 사용하십시오
+모든 `apps`의 하위 명령은는 `--experimental` 플래그 뒤에서만 액세스할 수 있으며 동작은 사전 통지 없이 언제든지 변경될 수 있습니다. 모든명령을d를 주의해서 사용하십시오
 {% endhint %}
 
 Snyk CLI를 사용하여 `snyk apps create`를 실행하여 [Snyk Apps](https://github.com/snyk/user-docs/tree/5e52535b78618f57eda40eb08fc8fbf91e16f1f0/docs/features/integrations/snyk-apps)를 생성할 수 있습니다.
