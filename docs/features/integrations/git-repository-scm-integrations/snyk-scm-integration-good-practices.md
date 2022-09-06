@@ -14,14 +14,14 @@ Snyk을 SCM(Source Control Manager)과 통합하여 모든 프로젝트를 빠�
 
 모든 SCM 통합 기능을 동시에 구현하려고 할 경우 [SDLC](https://snyk.io/learn/secure-sdlc/)에서 마찰을 일으킬 위험이 있으며, 이로 인해 개발자 환경이 저하될 수 있습니다.
 
-| **Deployment Stages**                                                                                                            | **Configurations**                                                                                                                                          | **Outcome**                                     |
-| -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| <p><a href="snyk-scm-integration-good-practices.md#1-scm">Stage 1</a></p><p>SCM 통합 설정</p>                                        | [SCM 통합](./)에 대한 구성 문서를 참조하십시오.                                                                                                                             | 구성된 통합, 프로젝트를 가져올 준비가 됨                         |
-| <p><a href="snyk-scm-integration-good-practices.md#2">Stage 2</a></p><p>SCM에서 모든 프로젝트를 가져오기</p>                                  | <p>- 공용 및 개인 저장소 모두 테스트</p><p>- 모든 사용자 알림 사용 안 함</p><p>- Snyk PR 검사 사용 안 함</p><p>- 자동 수정 PR 사용 안 함</p><p>- 실패한 PR 검사 사용 안 함</p><p>- 자동 의존성 업그레이드 사용 안 함</p> | 애플리케이션 전반에 걸쳐 위험을 평가할 수 있는 자료입니다.               |
-| <p><a href="snyk-scm-integration-good-practices.md#3-pr-snyk">Stage 3</a></p><p>개발자 및 보안 팀은 Snyk 우선 순위 보고 기능을 사용하여 수정 계획을 수립</p> | 자세한 내용을 확인하려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                                                   | 수정할 내용과 수정 프로세스를 간소화할 시기에 대한 개발자와 보안 간의 조정      |
-| <p><a href="snyk-scm-integration-good-practices.md#4-pr">Stage 4</a></p><p>개발자에게 실시간으로 문제를 알리고 사용 가능한 수정 사항을 교육</p>              | - Snyk PR 검사를 사용하도록 설정하고 사용 가능한 수정과 함께 심각도가 높은 Issue가 포함된 경우 PR을 실패시킵니다.  - 자동 수정 PR을 사용합니다.                                                                | 조직의 평균 수정 시간(MTTF)을 개선합니다.                      |
-| <p><a href="snyk-scm-integration-good-practices.md#5-pr">Stage 5</a></p><p>개발자가 새로운 취약점을 도입하지 못하도록 방지</p>                        | - 실패한 PR 검사를 사용하도록 설정합니다. 심각도가 높은 Issue(수정 또는 수정 없음)입니다.                                                                                                    | ‘Secure by Design’ 방법론 달성                       |
-| <p><a href="snyk-scm-integration-good-practices.md#6-pr">Stage 6</a></p><p>기술 보안 부채 감소</p>                                       | - [자동 디펜던시 업그레이드](../../../snyk-products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)를 사용하도록 설정합니다.                 | 연구 및 해결에 많은 시간이 소요될 수 있는 미래의 설계 문제 및 핫픽스를 줄입니다. |
+| **Deployment Stages**                                                                                                            | **Configurations**                                                                                                                                             | **Outcome**                                     |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| <p><a href="snyk-scm-integration-good-practices.md#1-scm">Stage 1</a></p><p>SCM 통합 설정</p>                                        | [SCM 통합](./)에 대한 구성 문서를 참조하십시오.                                                                                                                                | 구성된 통합, 프로젝트를 가져올 준비가 됨                         |
+| <p><a href="snyk-scm-integration-good-practices.md#2">Stage 2</a></p><p>SCM에서 모든 프로젝트를 가져오기</p>                                  | <p>- 공용 및 개인 리포지토리 모두 테스트</p><p>- 모든 사용자 알림 사용 안 함</p><p>- Snyk PR 검사 사용 안 함</p><p>- 자동 수정 PR 사용 안 함</p><p>- 실패한 PR 검사 사용 안 함</p><p>- 자동 디펜던시 업그레이드 사용 안 함</p> | 애플리케이션 전반에 걸쳐 위험을 평가할 수 있는 자료입니다.               |
+| <p><a href="snyk-scm-integration-good-practices.md#3-pr-snyk">Stage 3</a></p><p>개발자 및 보안 팀은 Snyk 우선 순위 보고 기능을 사용하여 수정 계획을 수립</p> | 자세한 내용을 확인하려면 [여기](https://www.youtube.com/watch?v=\_kAY94JwQHY)를 클릭하십시오.                                                                                      | 수정할 내용과 수정 프로세스를 간소화할 시기에 대한 개발자와 보안 간의 조정      |
+| <p><a href="snyk-scm-integration-good-practices.md#4-pr">Stage 4</a></p><p>개발자에게 실시간으로 문제를 알리고 사용 가능한 수정 사항을 교육</p>              | - Snyk PR 검사를 사용하도록 설정하고 사용 가능한 수정과 함께 심각도가 높은 문제가 포함된 경우 PR을 실패시킵니다.  - 자동 수정 PR을 사용합니다.                                                                      | 조직의 평균 수정 시간(MTTF)을 개선합니다.                      |
+| <p><a href="snyk-scm-integration-good-practices.md#5-pr">Stage 5</a></p><p>개발자가 새로운 취약점을 도입하지 못하도록 방지</p>                        | - 실패한 PR 검사를 사용하도록 설정합니다. 심각도가 높은 문제(수정 또는 수정 없음)입니다.                                                                                                          | ‘Secure by Design’ 방법론 달성                       |
+| <p><a href="snyk-scm-integration-good-practices.md#6-pr">Stage 6</a></p><p>기술 보안 부채 감소</p>                                       | - [자동 디펜던시 업그레이드](../../../snyk-products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)를 사용하도록 설정합니다.                    | 연구 및 해결에 많은 시간이 소요될 수 있는 미래의 설계 문제 및 핫픽스를 줄입니다. |
 
 ## 1단계 : SCM 통합 설정
 
@@ -60,7 +60,7 @@ Snyk UI를 사용하여 트리거된 작업(Fix PR 열기 또는 프로젝트 �
 
 ### 알림 설정 변경
 
-기본적으로 Snyk은 프로젝트의 디펜던시에서 새로운 Issue 또는 수정 사항이 발견되면 모든 조직 사용자에게 이메일을 보내 조직 전체의 보안 상태에 대한 매주 업데이트를 제공합니다. 많은 프로젝트를 조직으로 가져오려는 경우 사용자에게 너무 많은 이메일 알림이 전송되지 않도록 해당 조직에 대한 모든 알림을 비활성화하십시오.
+기본적으로 Snyk은 프로젝트의 디펜던시에서 새로운 이슈 또는 수정 사항이 발견되면 모든 조직 사용자에게 이메일을 보내 조직 전체의 보안 상태에 대한 매주 업데이트를 제공합니다. 많은 프로젝트를 조직으로 가져오려는 경우 사용자에게 너무 많은 이메일 알림이 전송되지 않도록 해당 조직에 대한 모든 알림을 비활성화하십시오.
 
 조직 사용자가 수신하는 이메일을 사용자 정의하려면 조직의 settings ![](../../../.gitbook/assets/cog\_icon.png) > **Notifications**으로 이동하십시오. 여기서 변경한 내용은 조직의 모든 구성원에 영향을 미치지만, 조직 사용자는 사용자 수준 계정 설정에서 이러한 기본 설정을 무시할 수 있습니다.
 
@@ -73,7 +73,7 @@ Snyk UI를 사용하여 트리거된 작업(Fix PR 열기 또는 프로젝트 �
 ## 2단계: 프로젝트 가져오기
 
 1. Snyk UI에서 **Projects** 페이지로 이동하여 **Add projects**를 선택하고 Snyk으로 가져올 저장소를 선택한 다음 **Add selected repositories**를 클릭합니다.
-2. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 의존성 파일(예: **package.json**)을 검색하고 이러한 파일을 프로젝트로 가져옵니다.
+2. Snyk은 전체 디렉토리 트리에서 선택한 저장소에서 디펜던시 파일(예: **package.json**)을 검색하고 이러한 파일을 프로젝트로 가져옵니다.
 3. Snyk은 루트 폴더와 정의된 사용자 지정 파일 위치를 평가합니다. 매니페스트 또는 구성 파일을 찾을 수 없으면 파일을 가져올 수 없다는 알림 메시지가 표시됩니다.
 4. Snyk은 매니페스트 파일(프로젝트)을 탐지하고 테스트한 다음 결과를 표시합니다. 가져온 프로젝트는 저장소 이름 아래에 나타납니다.
 
@@ -130,16 +130,16 @@ Snyk UI를 사용하여 트리거된 작업(Fix PR 열기 또는 프로젝트 �
 
 1. 조직 수준 또는 특정 프로젝트에 이 옵션을 적용하기로 결정합니다.
 2. 위의 설명에 따라 조건을 설정합니다.
-   * **PR이 Issue에 대한 디펜던시를 추가하는 경우**에만 **실패**합니다.
-   * **심각도가 높은 Issue에 대해서만 실패** 및 발견된 Issue에 대해 **사용 가능한 수정 사항이 있는 경우에만 실패 확인**란을 선택합니다.
+   * **PR이 이슈에 대한 디펜던시를 추가하는 경우**에만 **실패**합니다.
+   * **심각도가 높은 문제에 대해서만 실패** 및 발견된 문제에 대해 **사용 가능한 수정 사항이 있는 경우에만 실패 확인**란을 선택합니다.
 
 ## 4단계: PR 차단 활성화
 
 SDLC에 Snyk을 내장하고 좋은 개발자 인식을 구축한 후에는 보다 엄격한 정책을 적용하여 전반적인 보안 상태를 개선할 수 있습니다.
 
 * **Low priority projects**: 수정 가능한 높은 새 심각도에 대해서만 PR을 실패할 수 있습니다.
-* **Medium priority projects**: 심각도가 높은 Issue에 대해서만 PR에 실패합니다.
-* **High priority projects (PCI/GDPR compliance)**: 모든 Issue에 대해 PR 실패
+* **Medium priority projects**: 심각도가 높은 문제에 대해서만 PR에 실패합니다.
+* **High priority projects (PCI/GDPR compliance)**: 모든 문제에 대해 PR 실패
 
 {% hint style="info" %}
 취약점 심각도를 내부 정책과 일치시키려면 보안 정책을 사용하여 문제의 심각도를 변경하고 관련 프로젝트 특성에 연결합니다. 자세한 내용은 [보안 정책](../../fixing-and-prioritizing-issues/security-policies/)를 참조하십시오.
@@ -168,12 +168,12 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새로운 취약�
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0f8580a273102ad122374c855d6db17b7c33a7a3\_merge-advice (2) (2) (4) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (20).png>)
 
 {% hint style="info" %}
-Snyk 자동 수정 PR은 새 Issue에 대해서만 생성됩니다.
+Snyk 자동 수정 PR은 새 이슈에 대해서만 생성됩니다.
 {% endhint %}
 
 SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Snyk은 모든 조직 사용자의 인증 정보를 교체하여 자동 수정 PR을 엽니다. 필요한 경우 이를 변경할 수 있으며 사용자 인증 정보를 설정하여 자동 수정 PR을 열 수 있습니다. 자세한 내용은 [고정된 GitHub 계정에서 수정 및 업그레이드 pull request 열기](opening-fix-and-upgrade-pull-requests-from-a-fixed-github-account.md)를 참조하십시오.
 
-## 6단계: 의존성 업그레이드 PR
+## 6단계: 디펜던시 업그레이드 PR
 
 그룹이 보안 기술 채무 해결을 시작할 준비가 되면 디펜던시를 업그레이드하기 위해 사용자 대신 PR(Pull Request)을 자동으로 생성하도록 Snyk을 구성할 수 있습니다.
 
@@ -183,10 +183,10 @@ SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Sn
 
 1. 통합이 구성되고 사용자가 자동 업그레이드 PR을 활성화합니다.
 2. Snyk은 프로젝트를 가져올 때 프로젝트를 검사하고 정기적으로 검사하면서 프로젝트를 계속 모니터링합니다.
-3. 각 스캔에 대해 Snyk이 의존성에 대한 새 버전을 식별할 때 다음을 수행합니다.
+3. 각 스캔에 대해 Snyk이 디펜던시에 대한 새 버전을 식별할 때 다음을 수행합니다.
    * Snyk은 자동 업그레이드 PR을 생성합니다(Snyk 프로젝트 설정에 따른 빈도).
-   * 다른 열린 Snyk PR에서 이미 변경(업그레이드 또는 패치 적용)된 의존성에 대해 Snyk은 새 업그레이드 PR을 열지 않습니다.
-   * Snyk은 각 의존성에 대해 별도의 PR을 엽니다.
+   * 다른 열린 Snyk PR에서 이미 변경(업그레이드 또는 패치 적용)된 디펜던시에 대해 Snyk은 새 업그레이드 PR을 열지 않습니다.
+   * Snyk은 각 디펜던시에 대해 별도의 PR을 엽니다.
    * Snyk은 5개 이상의 Snyk PR이 열려 있는 저장소에 대해 업그레이드 PR을 만들지 않습니다. 열린 PR의 제한에 도달하면 새 PR이 생성되지 않습니다. 이 숫자는 설정에서 1-10 사이로 설정할 수 있습니다. 이 제한은 업그레이드 PR을 생성할 때만 적용되지만 수정 PR은 카운트됩니다. 수정 PR은 이러한 방식으로 제한되지 않습니다.
    * 기본적으로 Snyk은 패치 및 minor 업그레이드만 권장하지만 major 버전 업그레이드는 이 기능이 활성화된 설정에서 활성화할 수 있습니다.
    * 해당 최신 버전에 프로젝트에 아직 발견되지 않은 취약점이 있는 경우 Snyk는 업그레이드를 권장하지 않습니다.
@@ -196,7 +196,7 @@ SCM이 Github이고 Snyk Broker를 사용하지 않는 경우 기본적으로 Sn
 
 Snyk은 현재 GitHub, GitHub Enterprise Server 및 BitBucket Cloud를 통해 npm, Yarn 및 Maven-Central 프로젝트에 해당 기능을 지원합니다. 브로커와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다.
 
-**특정 프로젝트에 대한 자동 의존성 업그레이드 PR 실행**
+**특정 프로젝트에 대한 자동 디펜던시 업그레이드 PR 실행**
 
 프로젝트 수준에서 PR을 설정하려면 조직 수준에서 PR 설정을 재정의합니다.
 
@@ -208,8 +208,8 @@ Snyk은 현재 GitHub, GitHub Enterprise Server 및 BitBucket Cloud를 통해 np
 4. Settings 영역의 왼쪽 패널 메뉴에서 integration settings를 클릭하여 해당 프로젝트에 고유한 설정을 적용합니다.
 5. 나타나는 설정에서 **Automatic dependency upgrade pull requests**로 이동하고 Disabled를 클릭합니다.
 6. 표시되는 옵션에서 다음 작업을 수행합니다.
-   1. Snyk은 저장소당 최대 10개의 PR을 동시에 생성합니다. PR을 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 자세한 내용은 [자동 PR을 사용하여 의존성 업그레이드](../../../snyk-products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)를 참조하십시오.
-   2. 무시할 의존성 필드에 자동 기능으로 처리해서는 안 되는 의존성의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
+   1. Snyk은 저장소당 최대 10개의 PR을 동시에 생성합니다. PR을 추가로 제한하려면 드롭다운 목록에서 최대 PR 수를 선택합니다. 자세한 내용은 [자동 PR을 사용하여 디펜던시 업그레이드](../../../snyk-products/snyk-open-source/dependency-management/upgrading-dependencies-with-automatic-prs.md)를 참조하십시오.
+   2. 무시할 디펜던시 필드에 자동 기능으로 처리해서는 안 되는 디펜던시의 정확한 이름을 입력합니다. 이 필드에는 소문자만 사용할 수 있습니다.
    3. Snyk에서 이 프로젝트를 검색할 때마다 ‘Upgrade dependency settings’를 클릭하면 결과에 따라 업그레이드 PR이 자동으로 제출됩니다. 기존 Snyk 업그레이드 PR 또는 기존 수정 PR에 대해 최신 버전이 릴리스된 경우 기존 PR을 닫거나 병합해야 Snyk가 새 PR을 올릴 수 있습니다.
 
 ![](../../../.gitbook/assets/general-github\_integration.png)
