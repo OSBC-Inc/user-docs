@@ -22,17 +22,17 @@
 
 이 보기에서 다음과 같은 추가 정보를 보려면 링크를 클릭하십시오.:
 
-* Git 리포지토리로 돌아가려면 리포지토리 링크(1)를 클릭합니다.
-* 이 Snyk 조직의 모든 프로젝트를 보려면 조직 링크(2)를 클릭하십시오.
-* 매니페스트 파일 링크(3)를 클릭하여 이 프로젝트에 영향을 미치는 모든 취약점에 대한 전체 세부 정보가 있는 프로젝트 세부 정보 페이지를 봅니다.
-* 테스트 페이지 보기 링크(4)를 클릭하여 이 풀 요청에 대한 전체 세부 정보와 검사 통과를 방해하는 문제를 봅니다.
+* Click the repository link (1) to go back to the Git repository
+* Click the Organization link (2) to view all projects in this Snyk organization
+* Click the manifest file link (3) to view the Project details page with full details for all vulnerabilities affecting this project
+* Click the View test page link (4) to view full details regarding this pull request and the issues preventing the check from passing
 
 ![](../../../.gitbook/assets/uuid-617d6ed9-3571-1913-ca32-f30d2f0b3138-en.jpg)
 
-Snyk이 pull request를 테스트할 때 이 페이지의 결과 필드에 표시할 수 있는 가능한 상태는 다음과 같습니다.
+When Snyk tests your pull requests, the following are the possible statuses that can be displayed from this page, in the Results field:
 
-* **성공** - 문제가 식별되지 않고 모든 검사를 통과합니다.
-* **처리 중** - 이 상태는 Snyk 테스트가 끝날 때까지 나타납니다.
-* **실패** - 확인을 통과하기 위해 수정해야 하는 문제가 식별된 경우
-* **오류** - 매니페스트 파일이 동기화되지 않았거나 Snyk가 매니페스트 파일을 읽을 수 없거나 Snyk가 매니페스트 파일을 찾을 수 없는 경우 오류가 발생합니다.
-* **취소됨** - 월별 테스트 한도에 도달했기 때문에 Snyk 테스트를 실행할 수 없습니다.
+* **Success** - no issues are identified and all checks pass
+* **Processing** - this status appears until the Snyk test ends
+* **Failure** - when issues are identified that must be fixed in order for the check to pass
+* **Error** - an error occurs when your manifest file is out of sync, Snyk couldn't read the manifest file, or Snyk couldn't find the manifest file
+* **Canceled** - Snyk test can't run because you've reached your monthly test limit
