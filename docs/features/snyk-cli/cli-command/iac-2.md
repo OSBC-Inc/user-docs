@@ -6,7 +6,7 @@
 
 ## 설명
 
-`snyk iac test` command는 알려진 보안 문제에 대해 테스트합니다.
+`snyk iac test` 명령은는 알려진 보안 문제에 대해 테스트합니다.
 
 관련 명령 목록은 [snyk iac](iac.md) 도움말을 참조하십시오; `iac --help`
 
@@ -18,7 +18,7 @@
 
 **0**: 성공, 발견된 취약점 없음\
 **1**: action\_needed, 취약점 발견\
-**2**: 실패, command 다시 실행하십시오.\
+**2**: 실패, 명령을 다시 실행하십시오.\
 **3**: 실패, 지원되는 프로젝트가 감지되지 않음
 
 ## Snyk CLI 구성
@@ -51,7 +51,7 @@
 
 기본값: [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 \<ORG\_ID>
 
-주의: --org=을 사용할 수도 있습니다. ORG\_ID는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
+**Note**: --org=을 사용할 수도 있습니다. ORG\_ID는 CLI와 API 모두에서 작동합니다. 조직 슬러그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
 자세한 내용은 [How to select the organization to use in the CLI](https://support.snyk.io/hc/en-us/articles/360000920738-How-to-select-the-organization-to-use-in-the-CLI) 문서를 참조하십시오.
 
@@ -67,7 +67,7 @@
 
 결과를 JSON 형식으로 인쇄합니다.
 
-Example: `$ snyk iac test --json`
+: `$ snyk iac test --json`
 
 ### `--json-file-output=<OUTPUT_FILE_PATH>`
 
@@ -85,7 +85,7 @@ Example: `$ snyk iac test --json-file-output=vuln.json`
 
 `--sarif` 옵션을 사용하는지 여부에 관계없이 테스트 출력을 SARIF 형식으로 \<OUTPUT\_FILE\_PATH> 파일에 직접 저장합니다.
 
-이것은 stdout을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하는 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
+이것은 표준 출력을 사용하여 사람이 읽을 수 있는 테스트 출력을 표시하는 동시에 SARIF 형식 출력을 파일에 저장하려는 경우에 특히 유용합니다.
 
 ### `--project-business-criticality=<BUSINESS_CRITICALITY>[,<BUSINESS_CRITICALITY>]...>`
 
@@ -131,7 +131,7 @@ Example: `$ snyk iac test --json-file-output=vuln.json`
 
 `--report` 옵션과 함께 사용할 수 있습니다.
 
-리포지토리에 대한 원격 URL을 설정하거나 재정의합니다.
+저장소에 대한 원격 URL을 설정하거나 재정의합니다.
 
 ### `--report`
 
@@ -139,9 +139,9 @@ Example: `$ snyk iac test --json-file-output=vuln.json`
 
 이렇게 하면 현재 구성 문제의 스냅샷이 있는 Snyk 계정에 프로젝트가 생성됩니다. 이 옵션을 사용한 후 Snyk 웹사이트에 로그인하고 프로젝트를 보고 모니터를 봅니다.
 
-Example: `$ snyk iac test --report`
+예: `$ snyk iac test --report`
 
-주의: 이 옵션은 `--rules` 옵션과 함께 사용할 수 없습니다.
+**Note**: 이 옵션은 `--rules` 옵션과 함께 사용할 수 없습니다.
 
 ### `--rules=<PATH_TO_CUSTOM_RULES_BUNDLE>`
 
@@ -154,7 +154,7 @@ IaC 스캔이 `snyk-iac-rules` SDK로 생성된 사용자 정의 규칙 번들�
 
 `--rules=bundle.tar.gz`
 
-주의: 이 옵션은 `--report` 옵션과 함께 사용할 수 없습니다.
+**Note**: 이 옵션은 `--report` 옵션과 함께 사용할 수 없습니다.
 
 ### `--severity-threshold=<low|medium|high|critical>`
 
@@ -172,9 +172,9 @@ Terraform plan scanning modes에 대해 이 전용 옵션을 사용하여 스캔
 
 `--report` 옵션과 함께 사용할 수 있습니다.
 
-리포지토리의 프로젝트 이름을 설정하거나 재정의합니다.
+저장소의 프로젝트 이름을 설정하거나 재정의합니다.
 
-주의: 이 플래그는 함께 사용되는 경우 --remote-repo-url을 대체합니다.
+**Note**: 이 플래그는 함께 사용되는 경우 --remote-repo-url을 대체합니다.
 
 ### `--target-reference=<TARGET_REFERENCE>`
 

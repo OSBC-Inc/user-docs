@@ -14,7 +14,7 @@
 * Terraform 상태 파일에 반영되지 않은 관리 리소스의 변경 내용은 **drifts** 입니다.
 * 재하지만 Terraform 상태 파일에 없는 리소스는 **관리되지 않는 리소스**입니다.
 
-자세한 정보 및 예제를 보려면 IaC describe command examples를 참조하십시오.
+자세한 정보 및 예제를 보려면 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 
 관련 명령 목록은 Synk [IaC](iac.md)를 참조하십시오. `iac --help`
 
@@ -58,7 +58,7 @@ Terraform 상태에 있는 관리되는 리소스에서 변경 사항을 검색�
 
 ### `--org=<ORG_ID>`
 
-특정 조직에 연결된 Snyk command를 실행하려면 `<ORG_ID>`를 지정하십시오. [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 기본 `<ORG_ID>`를 무시합니다.
+특정 조직에 연결된 Snyk 명령을 실행하려면 `<ORG_ID>`를 지정하십시오. [계정 설정](https://app.snyk.io/login?redirectUri=L2FjY291bnQ%3D\&from=snyk\_auth\_link)에서 현재 선호하는 조직인 기본 `<ORG_ID>`를 무시합니다.
 
 `--org=<orgslugname>`을 사용할 수도 있습니다 . `ORG_ID`는 CLI와 API 모두에서 작동합니다. 조직 슬래그 이름은 CLI에서 작동하지만 API에서는 작동하지 않습니다.
 
@@ -96,7 +96,7 @@ Terraform 상태에 있는 관리되는 리소스에서 변경 사항을 검색�
 
 잠금 파일을 구문 분석하는 데 실패하면 오류가 기록되고 검색이 계속됩니다.
 
-**참고**: `--tf-lockfile` 옵과 `--tf-provider-version` 옵션을 함께 사용할 경우, `--tf-provider-version` 이 우선시됩니다.
+**Note**: `--tf-lockfile` 옵과 `--tf-provider-version` 옵션을 함께 사용할 경우, `--tf-provider-version` 이 우선시됩니다.
 
 ### `--fetch-tfstate-headers`
 
@@ -174,7 +174,7 @@ Terraform Cloud 또는 Enterprise API를 인증할 API 토큰을 지정합니다
 
 보고서를 파일에 html형식으로 출력합니다.
 
-## snyk iac 설명 command의 예
+## snyk iac 설명 명령의 예
 
 더 많은 예는 [IaC describe command examples](https://docs.snyk.io/products/snyk-infrastructure-as-code/detect-drift-and-manually-created-resources/iac-describe-command-examples)를 참조하십시오.
 

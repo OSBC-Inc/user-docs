@@ -8,7 +8,7 @@
 최신 버전의 CLI([v1.715.0](https://github.com/snyk/cli/releases/tag/v1.715.0) 이상)에 `snyk fix` 를 사용해야 합니다.
 {% endhint %}
 
-`synk fix` 명령은는 지원되는 에코시스템에 대한 권장 업데이트를 자동으로 적용하는 새로운 CLI command입니다.
+`synk fix` 명령은는 지원되는 에코시스템에 대한 권장 업데이트를 자동으로 적용하는 새로운 CLI 명령입니다.
 
 `snyk test` 명령을 사용하면 지원되는 에코시스템에 대한 실행 가능한 수정 사항이 다음 예와 같이 검색 결과에 나타납니다.
 
