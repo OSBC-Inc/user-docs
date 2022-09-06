@@ -59,33 +59,33 @@ API 토큰을 제공하려면 [account settings](https://app.snyk.io/account)에
 
 ## Snyk 플러그인을 사용하여 Eclipse 프로젝트 보호
 
-From the Snyk results click the green arrow (![](../../../.gitbook/assets/uuid-aa090aa8-d4fe-eb5d-2505-54a0b1555be9-en.png)) whenever you are ready to scan your projects. Results appear in a short time, and your continue to work as usual in the meantime.
+Snyk 결과에서 프로젝트를 스캔할 준비가 되면 녹색 화살표(![](../../../.gitbook/assets/uuid-aa090aa8-d4fe-eb5d-2505-54a0b1555be9-en.png))를 클릭합니다. 결과는 짧은 시간에 나타나고 그동안 평소와 같이 계속 작동합니다.
 
-If for any reason you need to stop the scan before the build ends, click the red square(![](../../../.gitbook/assets/uuid-29be01e6-6913-25f8-15ed-a8cf47230fa0-en.png)). If you want to scan only a single project in your workspace, navigate to the Package Explorer panel, right click the root of the project you want to test, and then choose **Snyk test**.
+어떤 이유로든 빌드가 끝나기 전에 스캔을 중지해야 하는 경우 빨간색 사각형(![](../../../.gitbook/assets/uuid-29be01e6-6913-25f8-15ed-a8cf47230fa0-en.png))을 클릭합니다. 작업 공간에서 단일 프로젝트만 스캔하려면 패키지 탐색기 패널로 이동하여 테스트하려는 프로젝트의 루트를 마우스 오른쪽 버튼으로 클릭한 다음 **Snyk test**를 선택합니다.
 
-When the scan ends, results and any relevant error messages are displayed from the **Snyk results**, grouped by project similar to the following:
+스캔이 끝나면 Snyk 결과에서 결과 및 관련 오류 메시지가 다음과 유사한 프로젝트별로 그룹화되어 표시됩니다.
 
-![Results screen for scan with Eclipse plugin](../../../.gitbook/assets/uuid-e868f739-eb55-9bd6-be33-acbb230ec1fa-en.png)
+![Eclipse 플러그인으로 스캔한 결과 화면](../../../.gitbook/assets/uuid-e868f739-eb55-9bd6-be33-acbb230ec1fa-en.png)
 
-## Work with Snyk results for Eclipse projects
+## Eclipse 프로젝트에 대한 Snyk 결과 작업
 
-### **Context menu**
+### 상황에 맞는 메뉴
 
-Right click menu
+오른쪽 클릭 메뉴
 
-Options include:
+옵션에는 다음이 포함됩니다:
 
-**Ignore issue**—Hover over the specific issue that you want to ignore for the next 30 days and then access the context menu.
+**Ignore issue**—다음 30일 동안 무시할 특정 문제 위로 마우스를 가져간 다음 상황에 맞는 메뉴에 액세스합니다.
 
-**Snyk test**—Run the Snyk test for the entire workspace.
+**Snyk test**—전체 작업 공간에 대해 Snyk 테스트를 실행합니다.
 
-**Preferences**—Access and update Snyk Vuln Scanner preferences directly from the right click menu.
+**Preferences**—오른쪽 클릭 메뉴에서 직접 Snyk Vuln 스캐너 기본 설정에 액세스하고 업데이트합니다.
 
 ### **When collapsed**
 
-**Title:** The name of the project.
+**Title:** 프로젝트의 이름입니다.
 
-**Dependency:** A summary of vulnerabilities and the number of affected paths found for each project.
+**Dependency:** 취약점 요약 및 각 프로젝트에 대해 발견된 영향을 받는 경로 수.
 
 ### When expanded
 
