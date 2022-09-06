@@ -8,7 +8,7 @@ Snyk에서 임의로 선택한 GitHub 사용자 계정을 사용하는 대신 �
 
 이 기능을 사용하려면:
 
-1. settings ![](../../../.gitbook/assets/cog\_icon.png) > **Integrations** 클릭.
+1. settings ![](../../../.gitbook/assets/cog\_icon.png) 클릭 > **Integrations**.
 2. GitHub 항목의 경우 **Edit Settings**를 클릭합니다.
 3. **Open fix and upgrade pull requests from a fixed GitHub account** 아래에서 토글 버튼을 활성화합니다.
 4. GitHub에서 개인 액세스 토큰을 생성하기 위한 페이지 내 지침을 따르십시오.
@@ -18,4 +18,4 @@ Snyk에서 임의로 선택한 GitHub 사용자 계정을 사용하는 대신 �
 토큰이 제공되는 GitHub 계정에 Snyk로 모니터링하려는 저장소에 대한 쓰기 수준 이상의 권한이 있는지 확인하십시오.
 {% endhint %}
 
-GitHub의 저장소 권한 수준에 대해 [자세히](github-integration.md) 알아보세요.
+GitHub의 리포지토리 권한 수준에 대해 [자세히](github-integration.md) 알아보세요.
