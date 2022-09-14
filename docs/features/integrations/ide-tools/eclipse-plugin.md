@@ -81,69 +81,69 @@ Snyk 결과에서 프로젝트를 스캔할 준비가 되면 녹색 화살표(![
 
 **Preferences**—오른쪽 클릭 메뉴에서 직접 Snyk Vuln 스캐너 기본 설정에 액세스하고 업데이트합니다.
 
-### **When collapsed**
+### 축소 시
 
 **Title:** 프로젝트의 이름입니다.
 
 **Dependency:** 취약점 요약 및 각 프로젝트에 대해 발견된 영향을 받는 경로 수.
 
-### When expanded
+### 확장 시
 
-**Title:** The full name of the vulnerability affecting your project, linked to a description and complete details of the vulnerability in the Snyk database, to assist you in resolving the issue.
+**Title:** 프로젝트에 영향을 미치는 취약점의 전체 이름으로, Snyk 데이터베이스의 취약점에 대한 설명 및 전체 세부 정보와 연결되어 문제 해결을 지원합니다.
 
-**Dependency:** The name of the direct dependency package in your project (the package you explicitly installed) that is affected by the vulnerability, either directly or indirectly.
+**Dependency:** 직접 또는 간접적으로 취약점의 영향을 받는 프로젝트의 직접 종속성 패키지(명시적으로 설치한 패키지)의 이름입니다.
 
-All details appear on a single row and the Dependency (the name of the package explicitly used in the code) and Package (the name of the package that actually contains the vulnerability) columns both display the name of the same package:
+모든 세부 정보는 단일 행에 표시되며 종속성(코드에서 명시적으로 사용된 패키지 이름) 및 패키지(실제로 취약점이 포함된 패키지 이름) 열은 모두 동일한 패키지의 이름을 표시합니다.
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fuploads%2Fgit-blob-4cdd086d6be47b598fc1a9a52c63023d59cff825%2Fuuid-e7accdc1-7495-e7a5-7a64-2403b066cb03-en.png?alt=media&token=e3bf024a-ba92-4b76-87be-b728d7edf092" %}
-Eclipse results details
+Eclipse 결과 세부정보
 {% endembed %}
 
-An arrow appears on the row, grouping together all relevant details, similar to the following examples:
+다음 예와 유사하게 모든 관련 세부 정보를 그룹화하는 화살표가 행에 나타납니다.
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fuploads%2Fgit-blob-85e429be9a965c2dc534817a648773176a724531%2Fuuid-c71f67d1-80a3-7485-b33b-e602a1a5050e-en.png?alt=media&token=99e95293-bb37-4fed-8388-d9cb56a73092" %}
-Eclipse results arrow on row grouping details
+행 그룹화 세부 정보의 Eclipse 결과 화살표
 {% endembed %}
 
-**Dependency when your project is affected by an indirect vulnerability, collapsed mode:**
+**프로젝트가 간접 취약점의 영향을 받는 경우의 종속성, 축소 모드:**
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fuploads%2Fgit-blob-85e429be9a965c2dc534817a648773176a724531%2Fuuid-c71f67d1-80a3-7485-b33b-e602a1a5050e-en.png?alt=media&token=99e95293-bb37-4fed-8388-d9cb56a73092" %}
-Collapsed mode, indirect vulnerability
+축소 모드, 간접 취약성
 {% endembed %}
 
-Example:
+예:
 
-Package X uses Package Y, which in turn uses Package Z.
+패키지 X는 패키지 Y를 사용하고 차례로 패키지 Z를 사용합니다.
 
-Package Z contains a Cross-Site Scripting (XSS) vulnerability, indirectly affecting your project.
+패키지 Z에는 프로젝트에 간접적으로 영향을 미치는 XSS(교차 사이트 스크립팅) 취약점이 포함되어 있습니다.
 
-The Dependency (the name of the package explicitly used in the code) is Package X; the Package field displays Package Z (the name of the package that actually contains the vulnerability).
+종속성(코드에서 명시적으로 사용된 패키지의 이름)은 패키지 X입니다. 패키지 필드에는 패키지 Z(실제로 취약점이 포함된 패키지 이름)가 표시됩니다.
 
-**Dependency when your project is affected by an indirect vulnerability, expanded mode:**
+**프로젝트가 간접 취약점의 영향을 받는 경우의 종속성, 확장 모드:**
 
-Click the arrow on the row to expand and view the full path from the direct dependency to the vulnerable package.
+행의 화살표를 클릭하여 직접 종속성에서 취약한 패키지까지의 전체 경로를 확장하고 봅니다.
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fuploads%2Fgit-blob-992b169b89e7f3c45782fdeb47b205e3c0a95af8%2Fuuid-35658aaf-3359-80c2-c094-41a34c7863cc-en.png?alt=media&token=53c91ccc-f9bc-4ba7-a55f-8def3aa50d86" %}
 Expanded mode, indierct vulnerability
 {% endembed %}
 
-On the preceding screen the full path would appear as:
+이전 화면에서 전체 경로는 다음과 같이 표시됩니다:
 
-\[Name of Package X]-->\[Name of Package Y]-->\[Name of Package Z]
+\[패키지 X의 이름]-->\[패키지 Y의 이름]-->\[패키지 Z의 이름]
 
-**Package:** The name of the package in your project that is directly affected by the vulnerability. On the preceding screen:
+**Package:** 취약점의 직접적인 영향을 받는 프로젝트의 패키지 이름입니다. 이전 화면에서:
 
-* The Dependency is indicated as Package X—this is the package the developer explicitly uses in the code
-* the Package field displays Package Z, which is the package that contains the vulnerability.
+* 종속성은 패키지 X로 표시됩니다. 이는 개발자가 코드에서 명시적으로 사용하는 패키지입니다.
+* 패키지 필드에는 취약점이 포함된 패키지인 패키지 Z가 표시됩니다.
 
-**Fix:** The name of the package if any and the version that it can be upgraded to in order to resolve the issue.
+**Fix:** 패키지 이름(있는 경우) 및 문제를 해결하기 위해 업그레이드할 수 있는 버전입니다.
 
-## Support / Contact
+## 지원 / 연락처
 
 {% hint style="info" %}
-If you need help, submit a [request](https://support.snyk.io/hc/en-us/requests/new) to Snyk Support.
+도움이 필요하면 Snyk 지원에 요청을 [제출](https://support.snyk.io/hc/en-us/requests/new)하십시오.
 {% endhint %}
 
-## Share your experience
+## 경험을 공유하십시
 
-Snyk continuously strives to improve the Snyk plugins experience. If you would you like to share your feedback about the Snyk Eclipse plugin, [schedule a meeting](https://calendly.com/snyk-georgi/45min?month=2022-01).
+Snyk는 Snyk 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk Eclipse 플러그인에 대한 피드백을 공유하려면 [회의를 예약](https://calendly.com/snyk-georgi/45min?month=2022-09)하십시오.
