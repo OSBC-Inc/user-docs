@@ -1,18 +1,19 @@
 ---
-description: Use this documentation to get started with the JetBrains plugin.
+description: 이 문서를 사용하여 JetBrains 플러그인을 시작하십시오.
 ---
 
-# JetBrains plugins
+# JetBrains 플러그인
 
-Snyk has a plugin for JetBrains IDEs, which support all Snyk products: [Snyk Open Source](https://docs.snyk.io/snyk-open-source), [Snyk Code](https://docs.snyk.io/snyk-code), [Snyk Container](https://docs.snyk.io/products/snyk-container) and [Snyk Infrastructure as Code](https://docs.snyk.io/products/snyk-infrastructure-as-code). The Snyk JetBrains plugin touches on all aspects of securing your application including:
+Snyk에는 모든 Snyk 제품을 지원하는 JetBrains IDE용 플러그인이 있습니다: [Snyk Open Source](../../../snyk-products/snyk-open-source/), [Snyk Code](../../../snyk-products/snyk-code/), [Snyk Container](../../../snyk-products/snyk-container/) 및 [Snyk Infrastructure as Code](../../../snyk-products/snyk-infrastructure-as-code/). \
+Snyk JetBrains 플러그인은 다음을 포함하여 애플리케이션 보안의 모든 측면을 다룹니다:
 
-* Security vulnerabilities in open source dependencies (Snyk Open Source).
-* Security vulnerabilities and code quality issues in first party code (Snyk Code).
-* Configuration issues in your Infrastructure as Code such as Terraform, AWS CloudFormation, Kubernetes, and Azure Resource Manager (ARM) (Snyk IaC)
-* Security vulnerabilities in your container images found in Kubernetes workload files (Snyk Container)
+* 오픈 소스 종속성의 보안 취약성 (Snyk Open Source).
+* 자사 코드의 보안 취약점 및 코드 품질 문제 (Snyk Code).
+* Terraform, AWS CloudFormation, Kubernetes 및 Azure Resource Manager와 같은 코드형 인프라의 구성 문제 (ARM) (Snyk IaC)
+* Kubernetes 워크로드 파일에서 발견된 컨테이너 이미지의 보안 취약점 (Snyk Container)
 
 {% hint style="info" %}
-The Snyk JetBrains plugin is available for installation on the JetBrains marketplace: [https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner](https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner).
+Snyk JetBrains 플러그인은 JetBrains 마켓플레이스에 설치할 수 있습니다. [https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner](https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner).
 {% endhint %}
 
 ## Supported JetBrains IDEs
@@ -47,7 +48,7 @@ Install using the IDE plugins library:
 5. Click on the **Install** button.
 6. When the installation is complete, restart the IDE.
 
-![Select the Snyk vulnerability scanning plugin](<../../../.gitbook/assets/Screen Shot 2022-03-09 at 5.06.13 PM (1) (1) (1) (1) (1) (1) (1) (1) (2).png>)
+![Select the Snyk vulnerability scanning plugin](../../../.gitbook/assets/Screen%20Shot%202022-03-09%20at%205.06.13%20PM%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(2\).png)
 
 ## Configuration
 
@@ -75,7 +76,7 @@ The first time the CLI is needed, the plugin automatically downloads it in the b
 
 After the plugin is installed, you are prompted to authenticate and connect the IDE plugin to Snyk.
 
-![Prompt to authenticate and start testing your code.](<../../../.gitbook/assets/Screenshot 2022-02-10 at 17.07.52.png>)
+![Prompt to authenticate and start testing your code.](../../../.gitbook/assets/Screenshot%202022-02-10%20at%2017.07.52.png)
 
 Click **Test code now**. The plugin relies on the Snyk CLI, which authenticates your machine against the Snyk Web UI.
 
@@ -93,7 +94,7 @@ You can now close the browser window and return to the IDE.
 
 The analysis starts automatically:
 
-![Analysis by JetBrains plugin](<../../../.gitbook/assets/Screenshot 2022-02-10 at 17.26.44.png>)
+![Analysis by JetBrains plugin](../../../.gitbook/assets/Screenshot%202022-02-10%20at%2017.26.44.png)
 
 ### Add token manually
 
@@ -211,7 +212,7 @@ After the plugin is installed, you can set the following configurations for the 
 
 #### Organization setting
 
-This setting allows you to specify an organization slug name to run tests for that organization. The value must match the URL slug as displayed in the URL of your org in the Snyk UI: `https://app.snyk.io/org/[orgslugname]`.&#x20;
+This setting allows you to specify an organization slug name to run tests for that organization. The value must match the URL slug as displayed in the URL of your org in the Snyk UI: `https://app.snyk.io/org/[orgslugname]`.
 
 If not specified, preferred organization as defined in your [web account settings](https://app.snyk.io/account) is used to run tests.
 

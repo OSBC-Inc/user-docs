@@ -1,8 +1,8 @@
 ---
-description: Use this documentation to get started with the Eclipse plugin.
+description: 이 문서를 사용하여 Eclipse 플러그인을 시작하십시오.
 ---
 
-# Eclipse plugin
+# Eclipse 플러그인
 
 Eclipse 워크플로에 **Snyk Security - Code and Open Source Dependencies**를 설치하여 코드베이스에 병합되기 전에 IDE(통합 개발 환경) 내에서 직접 취약점 및 라이선스 문제를 노출합니다.
 
