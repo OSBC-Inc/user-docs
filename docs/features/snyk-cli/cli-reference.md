@@ -64,7 +64,7 @@ Snyk CLI 구성을 관리합니다.
 
 Snyk CLI를 사용하여 Snyk 앱을 만듭니다.
 
-### CLI 명령의 Sub-commands
+### CLI 명령의 하위 명령
 
 다음은 Snyk CLI 명령에 대한 sub-command 목록입니다. 각 sub-command 뒤에는 sub-command가 적용되는 명령이 뒤따릅니다. 명령은 도움말 문서에 연결됩니다. 각 sub-command에 대한 자세한 내용은 도움말 문서를 참조하십시오.
 

@@ -49,7 +49,7 @@ Apple M1(darwin/arm64)의 경우 다음을 참조하십시오: [How do I run Sny
 {% endhint %}
 
 {% hint style="warning" %}
-주의: 이 방법의 단점은 Snyk CLI를 수동으로 최신 상태로 유지해야 한다는 것입니다.
+**Note**: 이 방법의 단점은 Snyk CLI를 수동으로 최신 상태로 유지해야 한다는 것입니다.
 {% endhint %}
 
 ## Homebrew로 설치(macOS, Linux)

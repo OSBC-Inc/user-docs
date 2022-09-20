@@ -16,9 +16,9 @@ Snyk JetBrains 플러그인은 다음을 포함하여 애플리케이션 보안�
 Snyk JetBrains 플러그인은 JetBrains 마켓플레이스에 설치할 수 있습니다. [https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner](https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner).
 {% endhint %}
 
-## Supported JetBrains IDEs
+## 지원되는 JetBrains IDE
 
-Snyk supports JetBrains plugin versions from version 2020.2 on the following IDEs:
+Snyk은 다음 IDE에서 버전 2020.2의 JetBrains 플러그인 버전을 지원합니다:
 
 * Android Studio
 * AppCode
@@ -30,36 +30,36 @@ Snyk supports JetBrains plugin versions from version 2020.2 on the following IDE
 * RubyMine
 * WebStorm
 
-## **How the Snyk JetBrains plugin works**
+## Snyk JetBrains 플러그인 작동 방식
 
-* The plugin is based on Snyk CLI, but not on the CLI only. The plugin supports all product features in the CLI for Snyk Open Source, Snyk IaC and Snyk Container.
-* The plugin automatically downloads the CLI in the background; you will be asked to [authenticate](jetbrains-plugins.md#authentication).
-* Snyk supports all the [languages supported by Snyk Code](https://docs.snyk.io/products/snyk-code/snyk-code-language-and-framework-support#language-support-with-snyk-code-ai-engine). You can install the plugin on any of the IDEs (such as RubyMine). Once the plugin is installed, Snyk analyzes all the language files that it finds.
-* If the CLI is already installed on the machine, the plugin uses the token provided to it. Otherwise, you must provide the authentication token through the plugin [authentication mechanism](jetbrains-plugins.md#authentication).
+* 플러그인은 Snyk CLI를 기반으로 하지만 CLI만 기반으로 하는 것은 아닙니다. 플러그인은 Snyk 오픈 소스, Snyk IaC 및 Snyk Container용 CLI의 모든 제품 기능을 지원합니다.
+* 플러그인은 백그라운드에서 CLI를 자동으로 다운로드합니다. [인증](jetbrains-plugins.md#authentication)하라는 메시지가 표시됩니다.
+* Snyk은 [Snyk Code에서 지원하는 모든 언어를 지원](../../../snyk-products/snyk-code/snyk-code-language-and-framework-support.md)합니다. 모든 IDE(예: RubyMine)에 플러그인을 설치할 수 있습니다. 플러그인이 설치되면 Snyk는 찾은 모든 언어 파일을 분석합니다.
+* CLI가 이미 머신에 설치된 경우 플러그인은 제공된 토큰을 사용합니다. 그렇지 않으면 플러그인 인[증 메커니즘](jetbrains-plugins.md#authentication)을 통해 인증 토큰을 제공해야 합니다.
 
-## **Install the plugin**
+## 플러그인 설치
 
-Install using the IDE plugins library:
+IDE 플러그인 라이브러리를 사용하여 설치:
 
-1. Open the **Preferences** window from the IDE.
-2. Navigate to the **Plugins** tab.
-3. In the **Plugins** tab, search for **Snyk**.
-4. Select the **Snyk vulnerability scanning** plugin.
-5. Click on the **Install** button.
-6. When the installation is complete, restart the IDE.
+1. IDE에서 **Preferences** 창을 엽니다.
+2. **Plugins** 탭으로 이동합니다.
+3. **Plugins** 탭에서 **Snyk**을 검색합니다.
+4. **Snyk vulnerability scanning** 플러그인을 선택하십시오.
+5. **Install** 버튼을 클릭합니다.
+6. 설치가 완료되면 IDE를 다시 시작합니다.
 
-![Select the Snyk vulnerability scanning plugin](../../../.gitbook/assets/Screen%20Shot%202022-03-09%20at%205.06.13%20PM%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(2\).png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-eff2d97f427de9d7d33c73231e5a806056705c30_Screen Shot (1).png" alt=""><figcaption><p>Snyk 취약점 스캐닝 플러그인 선택</p></figcaption></figure>
 
-## Configuration
+## 구성
 
-### Environment
+### 환경
 
-To analyze projects, the plugin uses the Snyk CLI which needs the following environment variables depending on the type of project you analyze:
+프로젝트를 분석하기 위해 플러그인은 분석하는 프로젝트 유형에 따라 다음 환경 변수가 필요한 Snyk CLI를 사용합니다.
 
-* `PATH`: the path to needed binaries, for example, to maven
-* `JAVA_HOME`: the path to the JDK to use to analyze Java dependencies
+* `PATH`: 필요한 바이너리의 경로(예: maven)
+* `JAVA_HOME`: Java 의존성을 분석하는 데 사용할 JDK의 경로
 
-Setting these variables only in a shell environment (for example, using `~/.bashrc`) is not sufficient, if you do not start the JetBrains IDE from the command line or create a script file that starts it using a shell environment.
+명령줄에서 JetBrains IDE를 시작하지 않거나 셸 환경을 사용하여 시작하는 스크립트 파일을 생성하지 않는 경우 셸 환경에서만 이러한 변수를 설정하는 것(예: `~/.bashrc` 사용)으로는 충분하지 않습니다.
 
 * On **Windows**, you can set the variables, using the GUI or on the command line using the `setx` tool.
 * On **macOS**, the process `launchd` needs to know the environment variables if you want to launch the IDE from Finder directly. Set environment variables for applications launched using Finder by running the `launchctl setenv` command. You can do this start-up or by using a script you launch at user login.\
