@@ -48,7 +48,7 @@ IDE 플러그인 라이브러리를 사용하여 설치:
 5. **Install** 버튼을 클릭합니다.
 6. 설치가 완료되면 IDE를 다시 시작합니다.
 
-<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-eff2d97f427de9d7d33c73231e5a806056705c30_Screen Shot (1).png" alt=""><figcaption><p>Snyk 취약점 스캐닝 플러그인 선택</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-eff2d97f427de9d7d33c73231e5a806056705c30_Screen Shot.png" alt=""><figcaption><p>Snyk 취약점 스캐닝 플러그인 선택</p></figcaption></figure>
 
 ## 구성
 
@@ -61,14 +61,14 @@ IDE 플러그인 라이브러리를 사용하여 설치:
 
 명령줄에서 JetBrains IDE를 시작하지 않거나 셸 환경을 사용하여 시작하는 스크립트 파일을 생성하지 않는 경우 셸 환경에서만 이러한 변수를 설정하는 것(예: `~/.bashrc` 사용)으로는 충분하지 않습니다.
 
-* On **Windows**, you can set the variables, using the GUI or on the command line using the `setx` tool.
-* On **macOS**, the process `launchd` needs to know the environment variables if you want to launch the IDE from Finder directly. Set environment variables for applications launched using Finder by running the `launchctl setenv` command. You can do this start-up or by using a script you launch at user login.\
-  **Note:** The provision of environment variables to the macOS UI can change between operating system releases, so it can be easier to create a small shell script that launches the IDE to leverage the shell environment, that can be defined using`~/.bashrc`.
-* On **Linux**, updating the file `/etc/environment` can be used to propagate the environment variables to the windows manager and UI.
+* **Windows**에서는 GUI를 사용하거나 setx 도구를 사용하여 명령줄에서 변수를 설정할 수 있습니다.
+* macOS에서 Finder에서 직접 IDE를 시작하려면 launchd 프로세스가 환경 변수를 알아야 합니다. **launchctl setenv** 명령을 실행하여 Finder를 사용하여 시작한 응용 프로그램에 대한 환경 변수를 설정합니다. 이 시작을 수행하거나 사용자 로그인 시 실행하는 스크립트를 사용하여 수행할 수 있습니다.\
+  **Note:** macOS UI에 환경 변수를 제공하는 것은 운영 체제 릴리스 간에 변경될 수 있으므로 `~/.bashrc`를 사용하여 정의할 수 있는 셸 환경을 활용하기 위해 IDE를 시작하는 작은 셸 스크립트를 만드는 것이 더 쉬울 수 있습니다.
+* **Linux**에서는 `/etc/environment` 파일을 업데이트하여 환경 변수를 Windows 관리자 및 UI로 전파할 수 있습니다.
 
-### Proxy
+### 프록시
 
-If you need to use a proxy server to connect to the internet, configure it using the [Jetbrains IDE settings](https://www.jetbrains.com/help/idea/settings-http-proxy.html). The Snyk plugin will use them.
+프록시 서버를 사용하여 인터넷에 연결해야 하는 경우  [Jetbrains IDE settings](https://www.jetbrains.com/help/idea/settings-http-proxy.html)을 사용하여 구성하세요. Snyk 플러그인이 이를 사용합니다.
 
 ## Authentication
 
