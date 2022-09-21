@@ -78,46 +78,46 @@ CLI가 처음 필요할 때 플러그인이 백그라운드에서 자동으로 �
 
 <figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-ad35b261d6f7032547af0052146aed36a6bd25b7_Screenshot 2022-02-10 at 17.07.52.png" alt=""><figcaption><p>코드를 인증하고 테스트를 시작하라는 메시지를 표시합니다.</p></figcaption></figure>
 
-Click **Test code now**. The plugin relies on the Snyk CLI, which authenticates your machine against the Snyk Web UI.
+**Test code now**를 클릭합니다. 플러그인은 Snyk Web UI에 대해 시스템을 인증하는 Snyk CLI에 의존합니다.
 
-Click **Authenticate** when prompted by Snyk.
+Snyk에서 메시지가 표시되면 **Authenticate**를 클릭합니다.
 
-![Prompt to authenticate](../../../.gitbook/assets/screen-shot-2021-09-29-at-4.04.29-pm.png)
+![인증 요청](../../../.gitbook/assets/screen-shot-2021-09-29-at-4.04.29-pm.png)
 
-When authentication is complete, a confirmation message appears.
+인증이 완료되면 확인 메시지가 나타납니다.
 
-![Authenticated confirmation message](../../../.gitbook/assets/screen-shot-2021-09-29-at-4.05.55-pm.png)
+![인증된 확인 메시지](../../../.gitbook/assets/screen-shot-2021-09-29-at-4.05.55-pm.png)
 
-The IDE reads and saves the authentication on your local machine.
+IDE는 로컬 시스템에서 인증을 읽고 저장합니다.
 
-You can now close the browser window and return to the IDE.
+이제 브라우저 창을 닫고 IDE로 돌아갈 수 있습니다.
 
-The analysis starts automatically:
+분석이 자동으로 시작됩니다:
 
-![Analysis by JetBrains plugin](../../../.gitbook/assets/Screenshot%202022-02-10%20at%2017.26.44.png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-ad35b261d6f7032547af0052146aed36a6bd25b7_Screenshot 2022-02-10 at 17.07.52 (1).png" alt=""><figcaption><p>JetBrains 플러그인으로 분석</p></figcaption></figure>
 
-### Add token manually
+### 수동으로 토큰 추가
 
-1. Produce the token here: [https://app.snyk.io/account](https://app.snyk.io/account)
+1. 여기서 토큰 생성: [https://app.snyk.io/account](https://app.snyk.io/account)
 2. **\[JetBrains IDE] >> Preferences >> Tools >> Snyk**
-3. Paste or enter the token under **Connect IDE to Snyk**
-4. Click **Apply or OK**
+3. **Connect IDE to Snyk**아래에 토큰을 붙여넣거나 입력합니다.
+4. **Apply** 또는 **OK**를 클릭합니다.
 
-![Connect to Snyk IDE token](../../../.gitbook/assets/screen-shot-2021-09-30-at-8.10.21-am.png)
+![Snyk IDE 토큰에 연결](../../../.gitbook/assets/screen-shot-2021-09-30-at-8.10.21-am.png)
 
-### Manual authentication
+### 수동 인증
 
-If you are unable to authenticate automatically or by adding the token, run `snyk auth` from the command line and follow the preceding steps to respond to the prompts. If you need help, submit a request to [Snyk support](https://snyk.zendesk.com/agent/dashboard).
+토큰을 추가하거나 자동으로 인증할 수 없는 경우 명령줄에서 snyk auth를 실행하고 이전 단계에 따라 프롬프트에 응답합니다. 도움이 필요하면 [Snyk support](https://snyk.zendesk.com/agent/dashboard)에 요청을 제출하십시오.
 
-![Prompts from authentication using snyk auth](../../../.gitbook/assets/screen-shot-2021-09-29-at-3.57.26-pm.png)
+![snyk 인증을 사용한 인증 프롬프트](../../../.gitbook/assets/screen-shot-2021-09-29-at-3.57.26-pm.png)
 
-## Run an analysis
+## 분석 실행
 
 {% hint style="info" %}
-Make sure your project file, for example, requirements.txt, is saved before running an analysis.
+분석을 실행하기 전에 프로젝트 파일(예: requirements.txt)이 저장되어 있는지 확인하십시오.
 {% endhint %}
 
-To trigger an analysis during your daily coding workflow, click either the run (play) button, or **Run scan**.
+일일 코딩 워크플로 중에 분석을 트리거하려면 실행(재생) 버튼 또는 **Run scan**을 클릭합니다.
 
 ![Play button and Run scan link](../../../.gitbook/assets/play-run.png)
 
