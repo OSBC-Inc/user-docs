@@ -70,13 +70,13 @@ IDE 플러그인 라이브러리를 사용하여 설치:
 
 프록시 서버를 사용하여 인터넷에 연결해야 하는 경우  [Jetbrains IDE settings](https://www.jetbrains.com/help/idea/settings-http-proxy.html)을 사용하여 구성하세요. Snyk 플러그인이 이를 사용합니다.
 
-## Authentication
+## 인증
 
-The first time the CLI is needed, the plugin automatically downloads it in the background. There are a few ways to authenticate once the plugin is installed.
+CLI가 처음 필요할 때 플러그인이 백그라운드에서 자동으로 다운로드합니다. 플러그인이 설치된 후 인증하는 몇 가지 방법이 있습니다.
 
-After the plugin is installed, you are prompted to authenticate and connect the IDE plugin to Snyk.
+플러그인이 설치된 후 IDE 플러그인을 인증하고 Snyk에 연결하라는 메시지가 표시됩니다.
 
-![Prompt to authenticate and start testing your code.](../../../.gitbook/assets/Screenshot%202022-02-10%20at%2017.07.52.png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-ad35b261d6f7032547af0052146aed36a6bd25b7_Screenshot 2022-02-10 at 17.07.52.png" alt=""><figcaption><p>코드를 인증하고 테스트를 시작하라는 메시지를 표시합니다.</p></figcaption></figure>
 
 Click **Test code now**. The plugin relies on the Snyk CLI, which authenticates your machine against the Snyk Web UI.
 
