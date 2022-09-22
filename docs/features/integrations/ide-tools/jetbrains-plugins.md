@@ -224,4 +224,4 @@ Snyk는 다음 유형의 문제를 보고합니다:
 
 **경험을 공유하세요.**
 
-Snyk는 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk JetBrains 플러그인에 대한 피드백을 공유하시겠습니까? [Schedule a meeting](https://calendly.com/snyk-georgi/45min?month=2022-01).
+Snyk는 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk JetBrains 플러그인에 대한 피드백을 공유하시겠습니까? [미팅 잡기](https://calendly.com/snyk-georgi/45min?month=2022-01).

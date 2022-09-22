@@ -287,7 +287,7 @@
     * [Eclipse 플러그인](features/integrations/ide-tools/eclipse-plugin.md)
     * [JetBrains 플러그인](features/integrations/ide-tools/jetbrains-plugins.md)
     * [Visual Studio 확장](features/integrations/ide-tools/visual-studio-extension.md)
-    * [Visual Studio Code extension](features/integrations/ide-tools/visual-studio-code-extension-for-snyk-code.md)
+    * [Visual Studio Code 확장](features/integrations/ide-tools/visual-studio-code-extension-for-snyk-code.md)
     * [Building a Snyk IDE plugin](features/integrations/ide-tools/snyk-ide-plugins/README.md)
       * [Overview of IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/overview.md)
       * [Snyk CLI for IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/snyk-cli.md)

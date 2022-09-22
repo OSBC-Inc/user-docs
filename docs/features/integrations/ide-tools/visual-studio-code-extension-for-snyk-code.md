@@ -1,50 +1,51 @@
-# Visual Studio Code extension
+# Visual Studio Code 확장
 
 {% hint style="warning" %}
-The Snyk Visual Studio Code extension is available for installation on the marketplace: [https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)
+Snyk Visual Studio Code 확장은 마켓플레이스에 설치할 수 있습니다: [https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)
 
-The Visual Studio Code extension requires the Snyk CLI; see [Install the Snyk CLI](../../../snyk-cli/install-the-snyk-cli/).
+Visual Studio Code 확장에는 Snyk CLI가 필요합니다. [Install the Snyk CLI](../../../snyk-cli/install-the-snyk-cli/)를 참조하십시오. .
 {% endhint %}
 
-## Supported languages, package managers, and frameworks
+## 지원되는 언어, 패키지 관리자 및 프레임워크
 
-* For Snyk Open Source, the VS Code extension supports all the languages and package managers supported by Snyk Open Source and the CLI. See the full [list](https://docs.snyk.io/products/snyk-open-source/language-and-package-manager-support).
-* For Snyk Code, the VS Code extension supports all the [languages and frameworks supported by Snyk Code](https://docs.snyk.io/products/snyk-code/snyk-code-language-and-framework-support#language-support-with-snyk-code-ai-engine).
+* Snyk Open Source의 경우 VS Code 확장은 Snyk Open Source 및 CLI에서 지원하는 모든 언어 및 패키지 관리자를 지원합니다. 전체 [목록](../../../snyk-products/snyk-open-source/language-and-package-manager-support/)을 참조하십시오.
+* Snyk Code의 경우 VS Code 확장은 [Snyk Code에서 지원하는 모든 언어와 프레임워크](../../../snyk-products/snyk-code/snyk-code-language-and-framework-support.md)를 지원합니다.
 
-## Install the extension
+## 확장 프로그램 설치
 
-You can find the Snyk Extension in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner). To install, do one of the following:
+[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)에서 Snyk 확장을 찾을 수 있습니다. 설치하려면 다음 중 하나를 수행하십시오:
 
-* Navigate to the [Snyk Extension on the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner) and follow the instructions for the Snyk extension. The docs from VS Code help you trigger the installation process from Visual Studio Code and guide you through the installation steps.
+* [Visual Studio Code Marketplace에서 Snyk 확장](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)으로 이동하고 Snyk 확장에 대한 지침을 따릅니다. VS Code의 문서는 Visual Studio Code에서 설치 프로세스를 트리거하고 설치 단계를 안내하는 데 도움이 됩니다.
 * Browse for the extension as advised [Visual Studio code site](https://code.visualstudio.com/docs/editor/extension-gallery#\_browse-for-extensions) and search for Snyk, then install (as explained in the [installation instructions](https://code.visualstudio.com/docs/editor/extension-gallery#\_install-an-extension).
+* 권장되는 [Visual Studio 코드 사이트](https://code.visualstudio.com/docs/editor/extension-gallery#\_browse-for-extensions)에 따라 확장을 찾아 Snyk을 검색한 다음 설치합니다([설치 지침](https://code.visualstudio.com/docs/editor/extension-gallery#\_install-an-extension)에 설명된 대로).
 
-When the extension is installed you can find a Snyk icon in the sidebar ![](<../../../.gitbook/assets/Screen Shot 2021-12-03 at 8.02.07 AM.png>).
+확장 프로그램이 설치되면 사이드바에서 Snyk 아이콘을 찾을 수 있습니다![](<../../../.gitbook/assets/Screen Shot 2021-12-03 at 8.02.07 AM.png>).
 
-The Snyk extension provides all the suggestions in a concise and clean view containing the information you need to decide how to fix or act on.
+Snyk 확장은 수정 또는 조치 방법을 결정하는 데 필요한 정보가 포함된 간결하고 깔끔한 보기로 모든 제안을 제공합니다.
 
-![Visual Studio Code extension results](../../../.gitbook/assets/image%20\(76\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)
+![Visual Studio Code 확장 결과](../../../.gitbook/assets/image%20\(76\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)
 
-## Configuration
+## 구성
 
 ### Environment
 
-To analyze projects, the plugin uses the Snyk CLI which requires environment variables:
+프로젝트를 분석하기 위해 플러그인은 환경 변수가 필요한 Snyk CLI를 사용합니다:
 
-* `PATH`: the path to needed binaries, for example, to maven
-* `JAVA_HOME`: the path to the JDK you want to use to analyze Java dependencies
+* `PATH`: 필요한 바이너리의 경로(예: maven)
+* `JAVA_HOME`: Java 종속성을 분석하는 데 사용하려는 JDK의 경로
 
-Setting these variables only in a shell environment (for example,using `~/.bashrc`) is not sufficient, if you do not start the IDE from the command line or create a script file that starts the IDE using a shell environment.
+명령줄에서 IDE를 시작하지 않거나 셸 환경을 사용하여 IDE를 시작하는 스크립트 파일을 생성하지 않는 경우 셸 환경에서만 이러한 변수를 설정하는 것(예: `~/.bashrc` 사용)으로는 충분하지 않습니다.
 
-* On `Windows`, you can set the variables, using the GUI or on the command line using the `setx` tool.
-* On `macOS`, the process `launchd` must know the environment variables to launch the IDE from Finder directly. You can set environment variables for applications launched using Finder by using the `launchctl setenv` command, for example, on start-up or through a script you launch at user login.\
-  **Note:** The provision of environment variables to the macOS UI can change between operating system releases, so it may be easier to create a small shell script that launches the IDE to leverage the shell environment that can be defined via `~/.bashrc`.
-* On `Linux`, updating the file /etc/environment can propagate the environment variables to the windows manager and UI.
+* `Windows`에서는 GUI를 사용하거나 `setx` 도구를 사용하여 명령줄에서 변수를 설정할 수 있습니다.
+* `macOS`에서 `launchd` 프로세스는 Finder에서 직접 IDE를 시작하기 위해 환경 변수를 알아야 합니다. 예를 들어 시작 시 또는 사용자 로그인 시 실행하는 스크립트를 통해 `launchctl setenv` 명령을 사용하여 Finder를 사용하여 시작한 응용 프로그램에 대한 환경 변수를 설정할 수 있습니다.\
+  **Note:** macOS UI에 환경 변수를 제공하는 것은 운영 체제 릴리스 간에 변경될 수 있으므로 `~/.bashrc`를 통해 정의할 수 있는 셸 환경을 활용하기 위해 IDE를 시작하는 작은 셸 스크립트를 만드는 것이 더 쉬울 수 있습니다.
+* `Linux`에서 /etc/environment 파일을 업데이트하면 환경 변수가 Windows 관리자 및 UI로 전파될 수 있습니다.
 
-### Proxy
+### 프록시
 
-If you are behind a proxy, proxy settings are configured either using VS Code proxy settings or set using `http_proxy` and `https_proxy` environment variables.
+프록시 뒤에 있는 경우 프록시 설정은 VS Code 프록시 설정을 사용하여 구성되거나 `http_proxy` 및 `https_proxy` 환경 변수를 사용하여 설정됩니다.
 
-## Authentication
+## 인증
 
 The extension uses your Snyk API token for authentication. To store the token securely, we utilize [Secret Storage API](https://code.visualstudio.com/api/references/vscode-api#SecretStorage), which uses the system's keychain to manage the token.
 
