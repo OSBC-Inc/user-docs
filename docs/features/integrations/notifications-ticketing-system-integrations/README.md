@@ -1,4 +1,4 @@
-# Notification and ticketing system integrations
+# 알림 및 발권 시스템 통합
 
-* [Slack integration](slack-integration.md)
+* [slack 통합](slack-integration.md)
 * [Jira](jira.md)
