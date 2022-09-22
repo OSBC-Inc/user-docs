@@ -1,16 +1,16 @@
-# Scanning with IDE plugins
+# IDE 플러그인으로 스캔
 
-## Manifest files <a href="#6f65ebbb-6b2b-47aa-99b9-93cac28849a8" id="6f65ebbb-6b2b-47aa-99b9-93cac28849a8"></a>
+## 매니페스트 파일
 
-Snyk CLI supports a wide range of different programming languages and package managers for open source dependencies. For a complete list of supported manifest files see [Open source language and package manager support](../../../../products/snyk-open-source/language-and-package-manager-support/).
+Snyk CLI는 오픈 소스 종속성을 위해 다양한 프로그래밍 언어와 패키지 관리자를 지원합니다. 지원되는 매니페스트 파일의 전체 목록은 [Open source language and package manager support](../../../../products/snyk-open-source/language-and-package-manager-support/)을 참조하세요.
 
 {% hint style="info" %}
-The CLI defaults to scanning the first supported manifest file it detects. This means that when a project has multiple manifest files, you must provide the name of the manifest file to scan using the `--file` option.
+CLI는 기본적으로 지원되는 첫 번째 매니페스트 파일을 검색합니다. 즉, 프로젝트에 매니페스트 파일이 여러 개 있는 경우 `--file` 옵션을 사용하여 검사할 매니페스트 파일의 이름을 제공해야 합니다.
 {% endhint %}
 
-Note that the Snyk CLI has multiple commands, but for the purpose of scanning you use the `test` command with the `--json` option to have the output converted to a machine readable format you are able to parse: `snyk test --file=<manifest file> --json`
+Snyk CLI에는 여러 명령이 있지만 검사를 위해 `--json` 옵션과 함께 `test` 명령을 사용하여 출력을 기계가 읽을 수 있는 형식으로 변환하여 구문 분석할 수 있습니다: `snyk test --file=<manifest 파일> --json`
 
-The test command expects the dependencies to be installed already (that is, scan after `mvn install` or `npm install` have been executed) and for package lock files to be present if relevant. If you try to run the scan before the dependencies are installed you can expect to see an error like this:
+`test` 명령은 종속성이 이미 설치되어 있고(즉, `mvn install` 또는 `npm install`이 실행된 후 스캔) 관련되는 경우 패키지 잠금 파일이 존재할 것으로 예상합니다. 종속성이 설치되기 전에 스캔을 실행하려고 하면 다음과 같은 오류가 표시될 것으로 예상할 수 있습니다:
 
 ```
 ~/git/goof $ snyk test
@@ -18,7 +18,7 @@ Missing node_modules folder: we can't test without dependencies.
 Please run 'npm install' first.
 ```
 
-For successful runs, you will see a long JSON file similar to the one that follows. To make sense of the data that is returned see the [Data mapping](data-mapping.md) page.
+성공적인 실행의 경우 다음과 유사한 긴 JSON 파일이 표시됩니다. 반환되는 데이터를 이해하려면 [데이터 매핑](data-mapping.md) 페이지를 참조하세요.
 
 ```javascript
 {
@@ -64,13 +64,13 @@ For successful runs, you will see a long JSON file similar to the one that follo
 ```
 
 {% hint style="info" %}
-All paying Snyk customers have the license scanning feature included in their plan. The `snyk test` command returns both vulnerability and open source license violations in the test results. To distinguish a license violation look for: `"type": "license"` inside the record fields.
+모든 유료 Snyk 고객은 플랜에 라이선스 스캔 기능이 포함되어 있습니다. `snyk test` 명령은 테스트 결과에 취약점과 오픈 소스 라이선스 위반을 모두 반환합니다. 라이센스 위반을 구별하려면 레코드 필드 내에서 `"type": "license"`를 찾으십시오.
 {% endhint %}
 
-## When to rerun scans <a href="#607b2cd8-2fb5-49ee-8473-319a42b8c421" id="607b2cd8-2fb5-49ee-8473-319a42b8c421"></a>
+## 스캔을 다시 실행해야 하는 경우
 
-To make sure you are presenting up-to-date scan results to users, you must rerun the snyk scan any time one of the following happens:
+사용자에게 최신 스캔 결과를 제공하고 있는지 확인하려면 다음 중 하나가 발생할 때마다 snyk 스캔을 다시 실행해야 합니다.
 
-* Any of the manifest files have been edited.
-* A day has passed since the last scan. This is needed as the vulnerability database powering the Snyk CLI constantly collects new vulnerabilities which are relevant for the user to see even if they have not edited the manifest file.
-* Any time the user explicitly reinstalls the dependencies (for example, calls `mvn install`) as semvers have flexibility and a reinstall may fetch different dependency versions than were previously installed even without a manifest file change.
+* 매니페스트 파일이 편집되었습니다.
+* 마지막 스캔 이후 하루가 지났습니다. 이는 Snyk CLI를 구동하는 취약점 데이터베이스가 매니페스트 파일을 편집하지 않은 경우에도 사용자가 볼 수 있는 새로운 취약성을 지속적으로 수집하기 때문에 필요합니다.
+* semvers에는 유연성이 있고 재설치는 매니페스트 파일 변경 없이 이전에 설치된 것과 다른 종속성 버전을 가져올 수 있으므로 사용자가 종속성을 명시적으로 다시 설치(예: `mvn install` 호출)할 때마다.

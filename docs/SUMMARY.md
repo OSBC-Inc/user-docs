@@ -291,7 +291,7 @@
     * [Snyk IDE 플러그인 빌드](features/integrations/ide-tools/snyk-ide-plugins/README.md)
       * [IDE 플러그인 개요](features/integrations/ide-tools/snyk-ide-plugins/overview.md)
       * [IDE 플러그인용 Snyk CLI](features/integrations/ide-tools/snyk-ide-plugins/snyk-cli.md)
-      * [Scanning with IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/scanning.md)
+      * [IDE 플러그인으로 스캔](features/integrations/ide-tools/snyk-ide-plugins/scanning.md)
       * [Dependencies and IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/dependencies.md)
       * [Fix suggestions and IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/fix-suggestions.md)
       * [Data mapping for IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/data-mapping.md)
