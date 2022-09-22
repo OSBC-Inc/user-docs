@@ -47,40 +47,40 @@ Snyk 확장은 수정 또는 조치 방법을 결정하는 데 필요한 정보�
 
 ## 인증
 
-The extension uses your Snyk API token for authentication. To store the token securely, we utilize [Secret Storage API](https://code.visualstudio.com/api/references/vscode-api#SecretStorage), which uses the system's keychain to manage the token.
+확장 프로그램은 인증을 위해 Snyk API 토큰을 사용합니다. 토큰을 안전하게 저장하기 위해 시스템의 키체인을 사용하여 토큰을 관리하는 [Secret Storage API](https://code.visualstudio.com/api/references/vscode-api#SecretStorage)를 사용합니다.
 
-### Logging in
+### 로그인
 
-To authenticate follow these steps:
+인증하려면 다음 단계를 따르세요:
 
-1.  Once the extension is installed, click on the Snyk Icon in the left navigation bar:
+1.  확장 프로그램이 설치되면 왼쪽 탐색 모음에서 Snyk 아이콘을 클릭합니다:![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-06b9fc9c67a7183ce7527fb7858394a155af0833\_image (162) (1) (1) (1) (1) (1) (1) (1) (1) (1) (3).png>)
 
-    <img src="../../../.gitbook/assets/image%20(62)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png" alt="" data-size="original">
-2.  Click **Connect VS Code with Snyk**. The extension relies on the Snyk authentication API and asks you to authenticate your machine against the Snyk web application:
 
-    <img src="../../../.gitbook/assets/image%20(71)%20(1)%20(1)%20(1)%20(1)%20(1).png" alt="" data-size="original">
-3. Click **Authenticate**.
-4.  After successful authentication, view the confirmation message.
+2.  **Connect VS Code with Snyk**을 클릭합니다. 확장 프로그램은 Snyk 인증 API에 의존하며 Snyk 웹 애플리케이션에 대해 컴퓨터를 인증하도록 요청합니다.\
+    ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-a263d2760ed3cfb384238e42b314d70f42f89f4c\_image (147) (1) (1) (1) (1) (1) (1) (2).png>)
 
-    <img src="../../../.gitbook/assets/image%20(85)%20(1)%20(1)%20(1).png" alt="" data-size="original">
-5. Close the browser window and return to VS Code. VS Code is now reading and saving the authentication on your local machine.
 
-### Switching accounts
+3. **Authenticate**를 클릭합니다.
+4.  인증 성공 후 확인 메시지를 확인하세요.\
+    ![](../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-26db1b476fd153e8b37a231e15d5ea85e2533a4c\_image.png)
 
-To re-authenticate with a different account, follow the steps below:
 
-1. Run the provided `Snyk: Log Out` command.
-2. Once logged out, click **Connect VS Code with Snyk** to authenticate with the different account.
+5. 브라우저 창을 닫고 VS Code로 돌아갑니다. VS Code는 이제 로컬 컴퓨터에서 인증을 읽고 저장합니다.
 
-![Snyk: Log Out](../../../.gitbook/assets/logging-out-command%20\(1\).png)
+### 계정 전환
 
-Or you run `Snyk: Set Token` command and set your token in the text field manually.
+다른 계정으로 재인증하려면 다음 단계를 따르세요:
 
-![](<../../../.gitbook/assets/image (80).png>)
+1. 제공된 `Snyk: Log Out` 명령을 실행합니다.
+2. 로그아웃한 후 **Connect VS Code with Snyk**를 클릭하여 다른 계정으로 인증합니다.
 
-\\
+![Snyk: 로그아웃](../../../.gitbook/assets/logging-out-command.png)
 
-## Run analysis
+또는 `Snyk: Set Token` 명령을 실행하고 텍스트 필드에 수동으로 토큰을 설정합니다.
+
+![수동으로 토큰 설정](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-4636de75116782d5c5a5e643568cca8989c0e86e\_image (80) (1).png>)
+
+## 분석 실행
 
 In the IDE note that the extension is already picking up the files and uploading them for analysis.
 
