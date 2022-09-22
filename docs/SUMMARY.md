@@ -290,7 +290,7 @@
     * [Visual Studio Code 확장](features/integrations/ide-tools/visual-studio-code-extension-for-snyk-code.md)
     * [Snyk IDE 플러그인 빌드](features/integrations/ide-tools/snyk-ide-plugins/README.md)
       * [IDE 플러그인 개요](features/integrations/ide-tools/snyk-ide-plugins/overview.md)
-      * [Snyk CLI for IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/snyk-cli.md)
+      * [IDE 플러그인용 Snyk CLI](features/integrations/ide-tools/snyk-ide-plugins/snyk-cli.md)
       * [Scanning with IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/scanning.md)
       * [Dependencies and IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/dependencies.md)
       * [Fix suggestions and IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/fix-suggestions.md)
