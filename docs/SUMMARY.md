@@ -295,7 +295,7 @@
       * [종속성 및 IDE 플러그인](features/integrations/ide-tools/snyk-ide-plugins/dependencies.md)
       * [제안 및 IDE 플러그인 수정](features/integrations/ide-tools/snyk-ide-plugins/fix-suggestions.md)
       * [IDE 플러그인에 대한 데이터 매핑](features/integrations/ide-tools/snyk-ide-plugins/data-mapping.md)
-      * [IDE plugins FAQ](features/integrations/ide-tools/snyk-ide-plugins/faq.md)
+      * [IDE 플러그인 FAQ](features/integrations/ide-tools/snyk-ide-plugins/faq.md)
       * [Help with IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/help.md)
   * [Notification and ticketing system integrations](features/integrations/notifications-ticketing-system-integrations/README.md)
     * [Slack integration](features/integrations/notifications-ticketing-system-integrations/slack-integration.md)

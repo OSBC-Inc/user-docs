@@ -1,29 +1,29 @@
-# FAQ
+# IDE 플러그인 FAQ
 
-## **How do I scan multi-module Java projects?** <a href="#de2589f9-2a2d-47c5-acc4-e6e13b163b71" id="de2589f9-2a2d-47c5-acc4-e6e13b163b71"></a>
+## 다중 모듈 Java 프로젝트를 스캔하려면 어떻게 합니까?
 
-Some Java projects may be broken up into multiple `pom.xml` files. To scan all of these at once, use the `—-all-projects` option of the CLI.
+일부 Java 프로젝트는 여러 `pom.xml` 파일로 분할될 수 있습니다. 이 모든 것을 한 번에 스캔하려면 `CLI의 --all-projects` 옵션을 사용하십시오.
 
-## Does Snyk offer support for local modules? <a href="#25465972-e24e-4b43-ab73-c69b27535427" id="25465972-e24e-4b43-ab73-c69b27535427"></a>
+## Snyk는 로컬 모듈을 지원합니까?
 
-Many customers reference proprietary modules the company builds, which are typically hosted in a local repository, for example, JFrog Artifactory. As the SSL certificate for these repositories is often not valid, Snyk returns an error when trying to connect to the repository. In such cases you can use the `--insecure` option of the CLI to ignore invalid certificates. As this is not good practice, but sometimes a necessity, Snyk offers this feature only as an explicit opt-in by the user.
+많은 고객이 JFrog Artifactory와 같은 로컬 저장소에서 일반적으로 호스팅되는 회사 빌드 독점 모듈을 참조합니다. 이러한 저장소에 대한 SSL 인증서가 유효하지 않은 경우가 많기 때문에 Snyk은 저장소에 연결하려고 할 때 오류를 반환합니다. 이러한 경우 CLI의 `--insecure` 옵션을 사용하여 잘못된 인증서를 무시할 수 있습니다. 이것은 좋은 습관은 아니지만 때로는 필요하므로 Snyk은 이 기능을 사용자가 명시적으로 선택하는 경우에만 제공합니다.
 
-## **Does Snyk have a test quota?** <a href="#39572c2f-bb72-4b12-a6cd-8fd1a2fc1650" id="39572c2f-bb72-4b12-a6cd-8fd1a2fc1650"></a>
+## Snyk에 테스트 할당량이 있습니까?
 
-Free Snyk accounts have a 200 tests per month test quota. All paid Snyk plans have unlimited scanning.
+무료 Snyk 계정에는 매월 200개의 테스트 테스트 할당량이 있습니다. 모든 유료 Snyk 계획에는 무제한 스캔이 있습니다.
 
-## **Are the Snyk test quotas enforced?** <a href="#83b6c566-7413-4ff8-adc1-fb27d29f5954" id="83b6c566-7413-4ff8-adc1-fb27d29f5954"></a>
+## Snyk 테스트 할당량이 적용됩니까?
 
-No, currently the test quota is not enforced. The Snyk CLI only prints a warning similar to the following when the quota is reached:
+아닙니, 현재 테스트 할당량이 적용되지 않습니다. Snyk CLI는 할당량에 도달한 경우에만 다음과 유사한 경고를 인쇄합니다.
 
 {% hint style="danger" %}
-_"You have reached your monthly limit of 200 private tests for your \[ORG] org. To learn more about our plans and increase your tests limit visit_ [_https://snyk.io/plans_](https://snyk.io/plans)_."_
+"\[ORG] 조직에 대한 월별 한도인 200개의 비공개 테스트에 도달했습니다. 당사 계획에 대해 자세히 알아보고 테스트 한도를 늘리려면 [_https://snyk.io/plans_](https://snyk.io/plans)를 방문하세요."
 {% endhint %}
 
-However, the `--json` output does not currently include any indication of passing the quota.
+그러나 `--json` 출력에는 현재 할당량 통과에 대한 표시가 포함되어 있지 않습니다.
 
-## How do I include `dev dependencies` in the scan results? <a href="#f604610f-b039-43ee-8dfe-5609f0cabfd1" id="f604610f-b039-43ee-8dfe-5609f0cabfd1"></a>
+## 스캔 결과에 `dev dependencies` 을 어떻게 포함합니까? <a href="#f604610f-b039-43ee-8dfe-5609f0cabfd1" id="f604610f-b039-43ee-8dfe-5609f0cabfd1"></a>
 
-Some package managers have the notion of dependencies which are to be used only during development time. These are typically referred to as `dev dependencies` and Snyk does not scan these by default. To include the dev dependencies in the scan results use the `--dev` option when running the `test` command:
+일부 패키지 관리자에는 개발 시간에만 사용되는 종속성 개념이 있습니다. 이를 일반적으로 `dev dependencies`라고 하며 Snyk는 기본적으로 이를 스캔하지 않습니다. 검사 결과에 dev 종속성을 포함하려면 `test` 명령을 실행할 때 `--dev` 옵션을 사용하십시오:
 
 `snyk test --dev --file=<manifest file> --json`
