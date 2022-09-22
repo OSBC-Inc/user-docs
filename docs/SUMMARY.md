@@ -300,7 +300,7 @@
   * [알림 및 발권 시스템 통합](features/integrations/notifications-ticketing-system-integrations/README.md)
     * [Slack 통합](features/integrations/notifications-ticketing-system-integrations/slack-integration.md)
     * [Jira](features/integrations/notifications-ticketing-system-integrations/jira.md)
-  * [Vulnerability management tools](features/integrations/vulnerability-management-tools/README.md)
+  * [취약점 관리 도구](features/integrations/vulnerability-management-tools/README.md)
     * [Code Dx Enterprise](features/integrations/vulnerability-management-tools/code-dx-enterprise.md)
     * [Brinqa](features/integrations/vulnerability-management-tools/brinqa.md)
     * [SSC 통합 강화](features/integrations/vulnerability-management-tools/fortify-ssc-integration.md)
