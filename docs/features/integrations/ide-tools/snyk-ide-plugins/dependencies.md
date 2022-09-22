@@ -1,10 +1,10 @@
-# Dependencies and IDE plugins
+# 종속성 및 IDE 플러그인
 
-Developers specify a list of dependencies they want included in their application inside a manifest file. The dependencies explicitly specified are called `top level dependencies`. In turn, each one of those dependencies uses other dependencies and they are typically referred to as `nested dependencies` or `transitive dependencies`. All the package managers install the nested dependencies without the developer having to explicitly ask for that to happen.
+개발자는 매니페스트 파일 내에서 애플리케이션에 포함할 종속성 목록을 지정합니다. 명시적으로 지정된 종속성을 `top level dependencies`라고 합니다. 차례로 이러한 종속성 각각은 다른 종속성을 사용하며 일반적으로 `nested dependencies` 또는 `transitive dependencies`라고 합니다. 모든 패키지 관리자는 개발자가 명시적으로 요청할 필요 없이 중첩된 종속성을 설치합니다.
 
-Snyk CLI automatically scans the nested dependencies as well as the top level dependencies, and those scan results are included in the returned `json` file.
+Snyk CLI는 중첩된 종속성과 최상위 종속성을 자동으로 스캔하고 해당 스캔 결과는 반환된 `json` 파일에 포함됩니다.
 
-The output `json` file includes a `from` field which shows the chain of dependencies leading to the vulnerability displayed. The way to interpret the information that follows is: my application _goof_ has a top level dependency _tap_ (version 5.8.0) that has a nested dependency _nyc_ that further depends on _istanbul_ that ultimately depends on _handlebars_ (version 4.0.5), which is the nested dependency that is carrying the vulnerability in this case.
+출력 `json` 파일에는 표시된 취약점으로 이어지는 종속성 체인을 보여주는 `from` 필드가 포함되어 있습니다. 다음 정보를 해석하는 방법은 다음과 같습니다. 내 애플리케이션 goof에는 궁극적으로 핸들바(버전 4.0.5)에 의존하는 istanbul에 추가로 의존하는 중첩된 종속성 nyc가 있는 최상위 종속성 탭(버전 5.8.0)이 있습니다. 이 경우 취약점이 있는 중첩된 종속성.
 
 ```yaml
 "from": [
@@ -16,4 +16,4 @@ The output `json` file includes a `from` field which shows the chain of dependen
 ],
 ```
 
-If you want to associate this vulnerability back to a line in the manifest file, the vulnerability must be mapped to the line that includes the top level dependency _tap._
+이 취약점을 매니페스트 파일의 줄에 다시 연결하려면 취약점이 최상위 종속성 탭을 포함하는 줄에 매핑되어야 합니다.

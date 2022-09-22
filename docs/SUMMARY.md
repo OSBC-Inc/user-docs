@@ -292,7 +292,7 @@
       * [IDE 플러그인 개요](features/integrations/ide-tools/snyk-ide-plugins/overview.md)
       * [IDE 플러그인용 Snyk CLI](features/integrations/ide-tools/snyk-ide-plugins/snyk-cli.md)
       * [IDE 플러그인으로 스캔](features/integrations/ide-tools/snyk-ide-plugins/scanning.md)
-      * [Dependencies and IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/dependencies.md)
+      * [종속성 및 IDE 플러그인](features/integrations/ide-tools/snyk-ide-plugins/dependencies.md)
       * [Fix suggestions and IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/fix-suggestions.md)
       * [Data mapping for IDE plugins](features/integrations/ide-tools/snyk-ide-plugins/data-mapping.md)
       * [IDE plugins FAQ](features/integrations/ide-tools/snyk-ide-plugins/faq.md)
