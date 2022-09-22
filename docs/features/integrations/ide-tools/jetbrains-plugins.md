@@ -137,7 +137,7 @@ Snyk Code 분석은 애플리케이션 코드에서 발견된 보안 취약점 �
 
 Snyk 구성 분석은 스캔할 때마다 Terraform, Kubernetes, AWS CloudFormation 및 Azure Resource Manager(ARM) 코드의 문제를 보여줍니다. Snyk CLI를 기반으로 하는 스캔은 로컬 개발에 빠르고 친숙합니다. 더 자세한 정보를 보려면 문제를 선택하십시오.
 
-<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-56fd4d190b61a93692b95a5524035c796448e10d_intellij_iac_issues (1).png" alt=""><figcaption><p>Snyk 구성 분석에 대한 추가 정보 표시</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-56fd4d190b61a93692b95a5524035c796448e10d_intellij_iac_issues.png" alt=""><figcaption><p>Snyk 구성 분석에 대한 추가 정보 표시</p></figcaption></figure>
 
 Snyk 플러그인은 기본 문제를 빠르게 이해하고 수정할 수 있도록 정보를 제공합니다:
 
@@ -167,61 +167,61 @@ Snyk 컨테이너 분석은 이미지가 취약할 수 있는 각 보안 취약�
 
 오류가 발생하면 [contact support](https://snyk.zendesk.com/agent/dashboard)에 문의하세요.
 
-For each image found, perform a test with the Snyk CLI.
+발견된 각 이미지에 대해 Snyk CLI로 테스트를 수행하십시오.
 
-* Refer to the [doc](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security#testing-an-image) for more information about how Snyk Container performs a test on the image.
-* While testing the image the CLI downloads the image if it is not already available locally in your Docker daemon.
-* Snyk plans to expand the scope of Container scanning, so if there are more files (like Dockerfiles) or workflows that you want to be supported, submit a feature request [to Snyk support](https://support.snyk.io/hc/en-us/requests/new).
+* Snyk Container가 이미지에 대한 테스트를 수행하는 방법에 대한 자세한 내용은 [문서](../../../snyk-products/snyk-container/snyk-cli-for-container-security/)를 참조하십시오.
+* 이미지를 테스트하는 동안 CLI는 Docker 데몬에서 아직 로컬로 사용할 수 없는 경우 이미지를 다운로드합니다.
+* Snyk은 컨테이너 스캔의 범위를 확장할 계획이므로 지원하려는 파일(예: Dockerfiles) 또는 워크플로가 더 있는 경우 [Snyk support](https://support.snyk.io/hc/en-us/requests/new)에 기능 요청을 제출하십시오.
 
-## Filter results
+## 결과 필터링
 
-### Filter by severity
+### 심각도별로 필터링
 
-Snyk reports critical, high, medium and low severities. You can filter for the severity level you need by selecting the value from the dropdown as shown in the screenshot that follows. By default all levels are selected. You must select at least one.
+Snyk은 위험, 높음, 중간 및 낮음 심각도를 보고합니다. 다음 스크린샷과 같이 드롭다운에서 값을 선택하여 필요한 심각도 수준을 필터링할 수 있습니다. 기본적으로 모든 레벨이 선택됩니다. 하나 이상을 선택해야 합니다.
 
-![Select severity level to report](../../../.gitbook/assets/filter-severity.png)
+![보고할 심각도 수준 선택](../../../.gitbook/assets/filter-severity.png)
 
-### Filter by issue type
+### 문제 유형별 필터링
 
-Snyk reports the following types of issues:
+Snyk는 다음 유형의 문제를 보고합니다:
 
-* **Open Source Vulnerabilities**: found in open source dependencies
-* **Security Vulnerabilities**: found in your application’s source code
-* **Quality Issues**: found in your application source code
-* **Configuration Issues**: found in infrastructure as code files
-* **Container Vulnerabilities**: found in images sourced from Kubernetes workload files
+* **Open Source Vulnerabilities**: 오픈 소스 의존성에서 발견
+* **Security Vulnerabilities**: 애플리케이션의 소스 코드에서 발견
+* **Quality Issues**: 애플리케이션 소스 코드에서 발견
+* **Configuration Issues**: 코드 파일로 인프라에서 발견
+* **Container Vulnerabilities**: Kubernetes 워크로드 파일에서 가져온 이미지에서 발견
 
-You can filter for each one of them by selecting the value from the dropdown as shown in the screenshot that follows. By default all three issue types shown are selected.
+다음 스크린샷과 같이 드롭다운에서 값을 선택하여 각각에 대해 필터링할 수 있습니다. 기본적으로 표시된 세 가지 문제 유형이 모두 선택됩니다.
 
-![Select issue type to support](../../../.gitbook/assets/fillter-issuetype.png)
+![지원할 문제 유형 선택](../../../.gitbook/assets/fillter-issuetype.png)
 
-## Plugin configuration
+## 플러그인 구성
 
-After the plugin is installed, you can set the following configurations for the plugin, using **Preferences → Tools → Snyk**:
+플러그인이 설치된 후 **Preferences → Tools → Snyk**을 사용하여 플러그인에 대해 다음 구성을 설정할 수 있습니다:
 
-* **Token**: the token that should be used for authentication with Snyk (can be generated through the Account Settings in the Snyk Web UI)
-* **Custom endpoint**: custom endpoint for the Snyk Web UI, if needed
-* **Ignore unknown CA**: for ignoring the SSL cert, if needed
-* **Organization**: the org to run Snyk test against (similar to the `--org=` option in the CLI).
-* **Additional parameters**: additional CLI snyk test options you want to use for the test
-* **Snyk Open Source vulnerabilities**: analyze the project for open source vulnerabilities through the CLI using Snyk Open Source; enabled by default
-* **Snyk Infrastructure as Code issues**: analyze the project for insecure configurations in Terraform and Kubernetes code; enabled by default
-* **Snyk Container vulnerabilities**: analyze the project for container vulnerabilities in container images and Kubernetes applications; enabled by default
-* **Snyk Code Security issues**: analyze the project for security vulnerabilities in your application code using Snyk Code; enabled by default
-* **Snyk Code Quality issues**: analyze the project for quality issues in your application code using Snyk Code; disabled by default
+* **Token**: Snyk 인증에 사용해야 하는 토큰(Snyk 웹 UI의 계정 설정을 통해 생성할 수 있음)
+* **Custom endpoint**: 필요한 경우 Snyk 웹 UI에 대한 사용자 지정 끝점
+* **Ignore unknown CA**: 필요한 경우 SSL 인증서를 무시하기 위해
+* **Organization**: Snyk 테스트를 실행할 조직(CLI의 `--org=` 옵션과 유사).
+* **Additional parameters**: 테스트에 사용할 추가 CLI snyk 테스트 옵션
+* **Snyk Open Source vulnerabilities**: Snyk Open Source를 사용하여 CLI를 통해 프로젝트의 오픈 소스 취약성을 분석합니다. 기본적으로 활성화됨
+* **Snyk Infrastructure as Code issues**: Terraform 및 Kubernetes 코드에서 안전하지 않은 구성에 대해 프로젝트를 분석합니다. 기본적으로 활성화됨
+* **Snyk Container vulnerabilities**: 컨테이너 이미지 및 Kubernetes 애플리케이션의 컨테이너 취약성에 대해 프로젝트를 분석합니다. 기본적으로 활성화됨
+* **Snyk Code Security issues**: Snyk 코드를 사용하여 애플리케이션 코드의 보안 취약성에 대해 프로젝트를 분석합니다. 기본적으로 활성화됨
+* **Snyk Code Quality issues**: Snyk Code를 사용하여 애플리케이션 코드의 품질 문제에 대해 프로젝트를 분석합니다. 기본적으로 비활성화됨
 
-#### Organization setting
+#### 조직 설정
 
-This setting allows you to specify an organization slug name to run tests for that organization. The value must match the URL slug as displayed in the URL of your org in the Snyk UI: `https://app.snyk.io/org/[orgslugname]`.
+이 설정을 사용하면 해당 조직에 대한 테스트를 실행할 조직 슬러그 이름을 지정할 수 있습니다. 값은 Snyk UI에서 조직의 URL(`https://app.snyk.io/org/[orgslugname]`)에 표시된 URL 슬러그와 일치해야 합니다.
 
-If not specified, preferred organization as defined in your [web account settings](https://app.snyk.io/account) is used to run tests.
+지정하지 않으면 [web account settings](https://app.snyk.io/account)에 정의된 기본 조직이 테스트를 실행하는 데 사용됩니다.
 
-### Support and contact information
+### 지원 및 연락처 정보
 
 {% hint style="info" %}
-Need more help? [Contact Snyk support](https://support.snyk.io/hc/en-us/requests/new).
+도움이 더 필요하세요? [Snyk support](https://support.snyk.io/hc/en-us/requests/new)에 문의하십시.
 {% endhint %}
 
-**Share your experience.**
+**경험을 공유하세요.**
 
-Snyk continuously strives to improve the plugins experience. Would you like to share with us your feedback about the Snyk JetBrains Plugin? [Schedule a meeting](https://calendly.com/snyk-georgi/45min?month=2022-01).
+Snyk는 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk JetBrains 플러그인에 대한 피드백을 공유하시겠습니까? [Schedule a meeting](https://calendly.com/snyk-georgi/45min?month=2022-01).
