@@ -1,8 +1,8 @@
-# Fix suggestions and IDE plugins
+# 제안 및 IDE 플러그인 수정
 
-The Snyk CLI test capability also includes information about whether a vulnerability has been fixed, typically in a newer version of the dependency, and separately what upgrade is required to implement a fix in the context of the application. There may be instances in which a nested dependency has a vulnerability which is fixed is some newer version but there is no change to the top level dependency that a developer can do to employ the fix.
+Snyk CLI 테스트 기능에는 일반적으로 최신 버전의 종속성에서 취약점이 수정되었는지 여부와 별도로 애플리케이션 컨텍스트에서 수정 사항을 구현하는 데 필요한 업그레이드에 대한 정보도 포함됩니다. 중첩된 종속성에 일부 최신 버전으로 수정된 취약점이 있는 경우가 있을 수 있지만 개발자가 수정 사항을 적용하기 위해 수행할 수 있는 최상위 종속성은 변경되지 않습니다.
 
-To discern if a particular vulnerability has been fixed, inspect the `fixedIn` field. In the case that follows, the particular vulnerability in _handlebars_ seemed to exist in both the 4.x and 3.x streams of the library, and therefore Snyk lets you know the specific version in each stream in which the vulnerability has been fixed. Since the _handlebars_ version currently in use is 4.0.5 (that is, on the 4.x stream), the appropriate version to mention the vulnerability was fixed in is 4.5.3. Note that although _handlebars_ has this version fixed, the user does not directly control its version. Instead the user must find a version of the top level dependency _tap_ that indirectly uses a new version of _handlebars_. Refer to the code that follows:
+특정 취약점이 수정되었는지 식별하려면 `fixedIn` 필드를 검사하십시오. 다음의 경우 핸들바의 특정 취약점이 라이브러리의 4.x 및 3.x 스트림 모두에 존재하는 것으로 보이므로 Snyk는 취약점이 수정된 각 스트림의 특정 버전을 알려줍니다. 현재 사용 중인 핸들바 버전이 4.0.5(4.x 스트림)이므로 취약점이 수정된 버전은 4.5.3입니다. 핸들바의 이 버전은 수정되었지만 사용자가 해당 버전을 직접 제어하지는 않습니다. 대신 사용자는 새 버전의 핸들바를 간접적으로 사용하는 최상위 종속성 탭 버전을 찾아야 합니다. 다음 코드를 참조하십시오:
 
 ```yaml
 "fixedIn": [
@@ -11,7 +11,7 @@ To discern if a particular vulnerability has been fixed, inspect the `fixedIn` f
  ],
 ```
 
-To find the change the user must implement in the manifest file to get the fix, follow the `upgradePath` field, which shows that, if the user upgrades the top level dependency _tap_ to version 5.9.1, it will have a trickle effect on the rest of the nested dependencies ultimately including the fixed version of _handlebars_ 4.5.3 :
+사용자가 수정 사항을 얻기 위해 매니페스트 파일에서 구현해야 하는 변경 사항을 찾으려면 `upgradePath`필드를 따르십시오. 이는 사용자가 최상위 종속성 탭을 버전 5.9.1로 업그레이드하는 경우 나머지에 낙수 효과가 있음을 보여줍니다. 핸들바 4.5.3의 고정 버전을 궁극적으로 포함하는 중첩된 종속성 :
 
 ```yaml
 "upgradePath": [
@@ -23,7 +23,7 @@ To find the change the user must implement in the manifest file to get the fix, 
 ],
 ```
 
-In a case like the following, you see something different. The upgrade path looks identical to the `from` field, except for the version of _handlebars._ This means that in order to get a fixed version of _handlebars_ the developer does NOT need to edit the manifest file, but rather only needs to rebuild the dependencies (usually by forcing an install command). This is possible as many dependency managers support semvers which allow for flexibility in the resolved versions. Read more about [semvers.](https://nodesource.com/blog/semver-a-primer/)
+다음과 같은 경우에는 다른 것을 볼 수 있습니다. 업그레이드 경로는 핸들바 버전을 제외하고 `from` 필드와 동일하게 보입니다. 이것은 핸들바의 고정된 버전을 얻기 위해 개발자가 매니페스트 파일을 편집할 필요가 없고 오히려 종속성을 재구축하기만 하면 된다는 것을 의미합니다(일반적으로 강제 설치 명령을 통해). 이는 많은 종속성 관리자가 해결된 버전에서 유연성을 허용하는 semvers를 지원하기 때문에 가능합니다. [semvers](https://nodesource.com/blog/semver-a-primer/)에 대해 자세히 알아보세요.
 
 ```yaml
 "upgradePath": [
@@ -35,4 +35,4 @@ In a case like the following, you see something different. The upgrade path look
 ],
 ```
 
-**Note:** In order for Snyk to track the efficacy of your integration you must include UTM parameters in various calls. You must obtain your UTM tracking information from Snyk.
+**Note:** Snyk이 통합의 효율성을 추적하려면 다양한 호출에 UTM 매개변수를 포함해야 합니다. Snyk에서 UTM 추적 정보를 얻어야 합니다.
