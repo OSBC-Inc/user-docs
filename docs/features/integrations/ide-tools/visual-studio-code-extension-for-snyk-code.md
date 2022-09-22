@@ -82,22 +82,22 @@ Snyk 확장은 수정 또는 조치 방법을 결정하는 데 필요한 정보�
 
 ## 분석 실행
 
-In the IDE note that the extension is already picking up the files and uploading them for analysis.
+IDE에서 확장 프로그램은 이미 파일을 선택하고 분석을 위해 업로드하고 있습니다.
 
-Snyk Open Source requires the Snyk CLI, so it downloads in the background.
+Snyk Open Source에는 Snyk CLI가 필요하므로 백그라운드에서 다운로드됩니다.
 
-Snyk Code analysis runs quickly without the CLI, so results may already be available. Otherwise, you see the following screen while Snyk scans your workspace for vulnerabilities:
+Snyk Code 분석은 CLI 없이 빠르게 실행되므로 결과가 이미 제공될 수 있습니다. 그렇지 않으면 Snyk이 작업 공간에서 취약점을 검색하는 동안 다음 화면이 표시됩니다:
 
-![Snyk Code scan](<../../../.gitbook/assets/image (80) (1) (1) (1).png>)
+![Snyk Code 스캔](<../../../.gitbook/assets/image (80) (1) (1) (1).png>)
 
-Snyk analysis runs automatically when you open a folder or workspace.
+폴더나 작업 공간을 열면 Snyk 분석이 자동으로 실행됩니다.
 
-* Snyk Code performs scans automatically on file saves.
-* Snyk Open Source does not automatically run on save by default, but you can enable it in settings:
+* Snyk Code는 파일 저장 시 자동으로 스캔을 수행합니다.
+* Snyk Open Source는 기본적으로 저장 시 자동으로 실행되지 않지만 설정에서 활성화할 수 있습니다:
 
-![Snyk Open Source settings](../../../.gitbook/assets/image%20\(73\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)
+![Snyk Open Source 설정](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-88e5c1d6d446dd840015bd3a298f94ecfa2a7ec6\_image (143) (1) (1) (1) (1) (1) (1).png>)
 
-**Tip**: if you do not like to manually save while working, enable [AutoSave](https://code.visualstudio.com/docs/editor/codebasics#\_save-auto-save).
+**Tip**: 작업하는 동안 수동으로 저장하고 싶지 않다면 [AutoSave](https://code.visualstudio.com/docs/editor/codebasics#\_save-auto-save)를 활성화하십시오.
 
 ## Rescan
 
