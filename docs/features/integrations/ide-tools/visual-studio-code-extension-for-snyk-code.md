@@ -99,78 +99,78 @@ Snyk Code 분석은 CLI 없이 빠르게 실행되므로 결과가 이미 제공
 
 **Tip**: 작업하는 동안 수동으로 저장하고 싶지 않다면 [AutoSave](https://code.visualstudio.com/docs/editor/codebasics#\_save-auto-save)를 활성화하십시오.
 
-## Rescan
+## 다시 스캔
 
-To manually trigger a scan, either Save or manually rescan using the rescan icon:
+수동으로 스캔을 시작하려면 저장하거나 다시 스캔 아이콘을 사용하여 수동으로 다시 스캔하십시오:
 
-![Rescan icon](<../../../.gitbook/assets/image (61) (1) (1) (1).png>)
+![다시 스캔 아이콘](<../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
-If you only need the Code Quality, Code Security, or Open Source Security portion of the findings, you can easily disable the feature with the results you do not want to see or collapse the view:
+결과의 코드 품질, 코드 보안 또는 오픈 소스 보안 부분만 필요한 경우 보고 싶지 않은 결과가 포함된 기능을 쉽게 비활성화하거나 보기를 축소할 수 있습니다:
 
-![Configure Features](../../../.gitbook/assets/configure-features.png)
+![기능 구성](../../../.gitbook/assets/configure-features.png)
 
-## Snyk Code advanced mode
+## Snyk Code 고급 모드
 
-Snyk Code has "Advanced" mode that allows you to control how scan is performed.
+Snyk Code에는 스캔 수행 방법을 제어할 수 있는 "고급" 모드가 있습니다.
 
-To manually perform the analysis, in the configuration of the extension you can enable Advanced Mode which enables you to control the scanning process:
+수동으로 분석을 수행하려면 확장 구성에서 스캔 프로세스를 제어할 수 있는 고급 모드를 활성화할 수 있습니다.
 
-![Advanced Mode](../../../.gitbook/assets/run-analysis\_advanced-mode%20\(1\).png)
+![고급 모드](../../../.gitbook/assets/run-analysis\_advanced-mode.png)
 
-## View analysis results
+## 분석 결과 보기
 
-Snyk analysis shows a list of security vulnerabilities and code issues found in the application code. For more details and examples of how others fixed the issue, select a security vulnerability or a code security issue. Snyk suggestion information for the issue selected appears in a panel on the right side:
+Snyk 분석은 애플리케이션 코드에서 발견된 보안 취약점 및 코드 Issue 목록을 보여줍니다. 다른 사람들이 Issue를 해결한 방법에 대한 자세한 내용과 예를 보려면 보안 취약성 또는 코드 보안 Issue를 선택하세요. 선택한 Issue에 대한 Snyk 제안 정보가 오른쪽 패널에 나타납니다.
 
-![Snyk suggestion information](../../../.gitbook/assets/image%20\(76\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(9\).png)
+![Snyk 제안 정보](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-356a93f1f5562f9973f0818cec56938f2702e870\_image (103) (1) (16).png>)
 
-### Snyk analysis panel
+### Snyk 분석 패널
 
-The Snyk analysis panel on the left of the preceding code screen shows how much time the analysis took plus a list of issues with the suggestions found for them.
+앞의 코드 화면 왼쪽에 있는 Snyk 분석 패널은 분석에 소요된 시간과 그에 대한 제안이 있는 문제 목록을 보여줍니다.
 
-The icons have the following meaning:
+아이콘의 의미는 다음과 같습니다:
 
-| ![](../../../.gitbook/assets/image%20\(75\)%20\(1\)%20\(1\)%20\(1\).png) Critical severity                                                                                                                                     | May allow attackers to access sensitive data and run code on your application.                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../../../.gitbook/assets/image%20\(64\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(2\).png) High severity | May allow attackers to access sensitive data on your application.                                                                            |
-| ![](../../../.gitbook/assets/image%20\(63\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(2\).png) Medium severity       | May allow attackers under some conditions to access sensitive data on your application.                                                      |
-| ![](../../../.gitbook/assets/image%20\(81\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\).png) Low severity                                                                                                                  | The application may expose some data allowing vulnerability mapping, which can be used with other vulnerabilities to attack the application. |
+| ![](../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0964f55a564a59f90e3dafb653d5cd0bff7be603\_image.png) Critical severity                                | 공격자가 민감한 데이터에 액세스하고 애플리케이션에서 코드를 실행하도록 허용할 수 있습니다.                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-35db9c5b28b416932407dcc20cb40cf0d4b1a9ed\_image (10) (1) (1) (2) (1) (1) (1) (7).png>) High severity | 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.                                       |
+| ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-f313e50f5a233da9896f390a4db0483d5186b6a0\_image (116) (1) (2).png>) Medium severity                  | 일부 조건에서 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.                               |
+| ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-680033c036e72c136475928f88590f463bbaa52a\_image (81) (1) (1) (1) (1) (1).png>) Low severity          | 응용 프로그램은 응용 프로그램을 공격하기 위해 다른 취약성과 함께 사용할 수 있는 취약성 매핑을 허용하는 일부 데이터를 노출할 수 있습니다. |
 
-You can filter the issues by setting the severities you want to see using the `snyk.severity` setting. For example, set `"snyk.severity": { "critical": true, "high": true, "medium": true, "low": false }` to hide low severity issues. You can also apply the setting in the Settings UI.
+`snyk.severity` 설정을 사용하여 보고 싶은 심각도를 설정하여 문제를 필터링할 수 있습니다. 예를 들어 `"snyk.severity": { "critical": true, "high": true, "medium": true, "low": false }`로 설정하여 심각도가 낮은 문제를 숨깁니다. 설정 UI에서 설정을 적용할 수도 있습니다.
 
-![Severity settings](../../../.gitbook/assets/image%20\(65\)%20\(1\)%20\(1\)%20\(1\).png)
+![심각도 설정](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-5696d6a281d3a6b44c0f0a19a40b280b63c75f36\_image (234).png>)
 
-### Snyk Code editor window
+### Snyk Code 편집기 창
 
-The editor window in the middle of the results screen shows the code that is inspected. This ensures that when you are inspecting a Snyk issue, you always have the code context close to the issue.
+결과 화면 중간에 있는 편집기 창에는 검사한 코드가 표시됩니다. 이렇게 하면 Snyk 문제를 검사할 때 항상 문제와 가까운 코드 컨텍스트를 갖게 됩니다.
 
-### Snyk Code vulnerability window
+### Snyk Code 취약점 창
 
-![Snyk Suggestion panel](../../../.gitbook/assets/image%20\(76\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(3\).png)
+![Snyk 제안 패널](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-356a93f1f5562f9973f0818cec56938f2702e870\_image (103) (1) (14).png>)
 
-The Snyk Suggestion panel on the right of the results screen shows the argumentation of the Snyk engine using, for example, variable names of your code and the line numbers in red. You can also see the following:
+결과 화면 오른쪽에 있는 Snyk 제안 패널은 예를 들어 코드의 변수 이름과 빨간색 줄 번호를 사용하여 Snyk 엔진의 인수를 보여줍니다. 다음을 볼 수도 있습니다:
 
-* Links to external resources to explain the bug pattern in more detail (the **More info** link).
-* Tags that were assigned by Snyk, such as **Security** (the issue found is a security issue), **Database** (the issue is related to database interaction), or **In Test** (the issue is within the test code).
-* Code from open source repositories that might be of help to see how others fixed the issue.
-* Two buttons on the lower end of the panel which you can use to add ignore comments that would make Snyk ignore this particular suggestion, or all of these suggestions for the whole file. .
+* 버그 패턴을 더 자세히 설명하기 위한 외부 리소스 링크(**추가 정보** 링크).
+* **Security**(발견된 문제는 보안 문제임), **Database**(문제는 데이터베이스 상호 작용과 관련됨) 또는 **In Test**(문제는 테스트 코드 내에 있음)와 같이 Snyk에서 할당한 태그입니다.
+* 다른 사람들이 문제를 해결한 방법을 확인하는 데 도움이 될 수 있는 오픈 소스 리포지토리의 코드.
+* Snyk가 이 특정 제안 또는 전체 파일에 대한 이러한 제안 모두를 무시하도록 하는 무시 주석을 추가하는 데 사용할 수 있는 패널 하단의 두 개의 버튼. .
 
-Snyk also includes a feedback mechanism to report false positives so others do not see the same issue.
+Snyk에는 다른 사람들이 같은 문제를 보지 않도록 오탐지를 보고하는 피드백 메커니즘도 포함되어 있습니다.
 
-### Snyk Open Source editor window
+### Snyk Open Source 편집기 창
 
-The editor window shows security vulnerabilities in open source modules while you code in JavaScript, TypeScript, and HTML. Receive feedback in-line with your code, such as how manyvulnerabilities a module contains that you are importing. The editor exposes only top-level dependency vulnerabilities; for the full list of vulnerabilities refer to the side panel.
+편집기 창은 JavaScript, TypeScript 및 HTML로 코딩하는 동안 오픈 소스 모듈의 보안 취약성을 보여줍니다. 가져오는 모듈에 포함된 취약점의 수와 같은 피드백을 코드와 함께 인라인으로 받으십시오. 편집기는 최상위 종속성 취약점만 노출합니다. 전체 취약점 목록은 측면 패널을 참조하십시오.
 
-You can find security vulnerabilities in the npm packages you import and see the number of known vulnerabilities in your imported npm packages as soon as you require them:
+가져오는 npm 패키지에서 보안 취약점을 찾을 수 있으며 필요한 즉시 가져온 npm 패키지에서 알려진 취약점의 수를 확인할 수 있습니다:
 
-![Vulnerabilities in npm package](../../../.gitbook/assets/oss-editor-vulnerability-count.png)
+![npm 패키지의 취약점](../../../.gitbook/assets/oss-editor-vulnerability-count.png)
 
-Code inline vulnerability counts are also shown in your `package.json` file:
+코드 인라인 취약점 수는 `package.json` 파일에도 표시됩니다.
 
-![package.json file](<../../../.gitbook/assets/oss-editor-pjson (1).png>)
+![package.json 파일](<../../../.gitbook/assets/oss-editor-pjson (1).png>)
 
-Find security vulnerabilities in your JavaScript packages from well-known CDNs. The extension scans any HTML files in your projects and displays vulnerability information about the modules you include from your favorite CDN.
+잘 알려진 CDN에서 JavaScript 패키지의 보안 취약점을 찾으십시오. 확장 프로그램은 프로젝트의 HTML 파일을 스캔하고 즐겨찾는 CDN에서 포함된 모듈에 대한 취약성 정보를 표시합니다.
 
-* Currently supported CDNs are:
+* 현재 지원되는 CDN은:
   * unpkg.com
   * ajax.googleapis.com
   * cdn.jsdelivr.net
@@ -180,55 +180,55 @@ Find security vulnerabilities in your JavaScript packages from well-known CDNs. 
   * yastatic.net
   * ajax.aspnetcdn.com
 
-![Vulnerability from a CDN](<../../../.gitbook/assets/oss-editor-html (1).png>)
+![CDN의 취약점](<../../../.gitbook/assets/oss-editor-html (1).png>)
 
-You can navigate to the most severe vulnerability by triggering the provided code actions. This opens a vulnerability window to show more details:
+제공된 코드 작업을 트리거하여 가장 심각한 취약점으로 이동할 수 있습니다. 자세한 내용을 표시하는 취약점 창이 열립니다.
 
-![Code action](../../../.gitbook/assets/oss-editor-show-vulnerability%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(4\).png)
+![코드 작업](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-eb68ce91daa8bc62e02baad4c1376d37355d61b3\_oss-editor-show-vulnerability (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-### Snyk Open Source vulnerability window
+### Snyk Open Source 취약점 창
 
-The Open Source Security (OSS) vulnerability window shows information about the vulnerable module.
+OSS(Open Source Security) 취약점 창은 취약한 모듈에 대한 정보를 보여줍니다.
 
 * Links to external resources (CVE, CWE, Snyk Vulnerability DB) to explain the vulnerability in more detail.
 * Displays CVSS score and exploit maturity.
 * Provides detailed path on how vulnerability is introduced to the system.
 * Shows summary of the vulnerability together with the remediation advice to fix it.
 
-## Extension configuration
+## 확장 구성
 
-After the extension is installed, you can set the following configurations for the extension:
+확장이 설치된 후 확장에 대해 다음 구성을 설정할 수 있습니다:
 
-* **Features**
-  * **Code Security**: configure if code security analysis should run over your code.
-  * **Code Quality**: configure if code quality analysis should run over your code.
-  * **Open Source Security**: configure if security analysis should run over your open source dependencies.
-* **Severity**: set severity level to display in the analysis result tree.
-* **Advanced**
-  * **Advanced mode**: toggle a panel to allow the user to manually control when the analysis should be run.
-  * **Auto Scan Open Source Security**: set severity level to display in the analysis result tree.
-  * **Additional Parameters**: set parameters to be passed to Snyk CLI for Open Source Security tests. For the full list you can consult [this reference](https://docs.snyk.io/features/snyk-cli/guides-for-our-cli/cli-reference).
-  * **Organization**: specifies an organization slug name to run tests for that organization.
+* **특징**
+  * **Code Security**: 코드 보안 분석이 코드에 대해 실행되어야 하는지 구성합니다.
+  * **Code Quality**: 코드 품질 분석이 코드에 대해 실행되어야 하는지 구성합니다.
+  * **Open Source Security**: 오픈 소스 종속성에 대해 보안 분석을 실행해야 하는지 여부를 구성합니다.
+* **Severity**: 분석 결과 트리에 표시할 심각도 수준을 설정합니다.
+* **고급**
+  * **Advanced mode**: 분석을 실행해야 하는 시기를 사용자가 수동으로 제어할 수 있도록 패널을 토글합니다.
+  * **Auto Scan Open Source Security**: 분석 결과 트리에 표시할 심각도 수준을 설정합니다.
+  * **Additional Parameters**: 오픈 소스 보안 테스트를 위해 Snyk CLI에 전달할 매개변수를 설정합니다. 전체 목록을 보려면 이 [참조](../../snyk-cli/cli-reference.md)를 참조하십시오.
+  * **Organization**: 해당 조직에 대한 테스트를 실행할 조직 슬러그 이름을 지정합니다.
 
-#### **Organization setting**
+### 조직 설정
 
-The value of organization setting `snyk.advanced.organization` must match the URL slug as displayed in the URL of your org in the Snyk UI: `https://app.snyk.io/org/[orgslugname]`.
+조직 설정 `snyk.advanced.organization`의 값은 Snyk UI의 조직 URL(`https://app.snyk.io/org/[orgslugname]`)에 표시된 URL 슬러그와 일치해야 합니다.
 
-If not specified, the preferred organization as defined in your [web account settings](https://app.snyk.io/account) is used to run tests.
+지정하지 않으면 [web account settings](https://app.snyk.io/account)에 정의된 기본 조직이 테스트를 실행하는 데 사용됩니다.
 
-## Create a .dcignore file
+## .dcignore 파일 만들기
 
-To ignore certain files and directories (for example, **node\_modules**), create a **.dcignore** file. You can create it in any directory on any level starting from the directory where your project resides. The file syntax is identical to .`gitignore`.
+특정 파일 및 디렉터리(예: **node\_modules**)를 무시하려면 **.dcignore** 파일을 만듭니다. 프로젝트가 있는 디렉토리에서 시작하여 모든 레벨의 모든 디렉토리에 생성할 수 있습니다. 파일 구문은 `.gitignore`와 동일합니다.
 
-* Snyk recommends adding the file when there is no `.gitignore` file. Adding the file significantly reduces the files that need to be uploaded and speed up the analysis.
-* To quickly add the default **`.dcignore`** file, use the command provided by VS Code and the Snyk extension **Snyk create `.dcignore` file** and save the newly created `.dcignore` file.
+* Snyk는 `.gitignore` 파일이 없을 때 파일을 추가할 것을 권장합니다. 파일을 추가하면 업로드해야 하는 파일이 크게 줄어들고 분석 속도가 빨라집니다.
+* 기본 **`.dcignore`** 파일을 빠르게 추가하려면 VS Code 및 Snyk 확장 Snyk에서 제공하는 명령을 사용하여 **`.dcignore`** 파일을 생성하고 새로 생성된 **`.dcignore`** 파일을 저장합니다.
 
-## Support and contact information
+## 지원 및 연락처 정보
 
 {% hint style="info" %}
-Need more help? [Submit a request to Snyk support](https://support.snyk.io/hc/en-us/requests/new).
+도움이 더 필요하세요? [Snyk support](https://support.snyk.io/hc/en-us/requests/new)에 요청을 제출하십시오.
 {% endhint %}
 
 **Share your experience.**
 
-Snyk continuously strives to improve the Snyk plugins experience. Would you like to share your feedback about the Snyk Visual Studio Code extension? [Schedule a meeting](https://calendly.com/snyk-georgi/45min?month=2022-01).
+Snyk는 Snyk 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk Visual Studio Code 확장에 대한 피드백을 공유하시겠습니까? [미팅 잡기](https://calendly.com/snyk-georgi/45min?month=2022-01).
