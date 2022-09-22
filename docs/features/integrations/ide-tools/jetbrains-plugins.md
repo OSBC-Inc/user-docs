@@ -121,51 +121,51 @@ IDE는 로컬 시스템에서 인증을 읽고 저장합니다.
 
 ![Play button and Run scan link](../../../.gitbook/assets/play-run.png)
 
-## Analysis results: Snyk Open Source
+## 분석 결과: Snyk Open Source
 
-Snyk Open Source analysis shows a list of vulnerabilities and license issues found in the manifest file. For more detailed information select a vulnerability or license issue.
+Snyk 오픈 소스 분석은 매니페스트 파일에서 발견된 취약점 및 라이선스 문제 목록을 보여줍니다. 더 자세한 정보를 보려면 취약성 또는 라이선스 문제를 선택하십시오:
 
-![Display more information for a vulnerability or license issue](../../../.gitbook/assets/results-os.png)
+![취약점 또는 라이선스 문제에 대한 추가 정보 표시](../../../.gitbook/assets/results-os.png)
 
-## Analysis results: Snyk Code
+## 분석 결과: Snyk Code
 
-Snyk Code analysis shows a list of security vulnerabilities and code issues found in your application code. For more details and examples of fixes on how others fixed the issue, select the security vulnerability or the code security issue:
+Snyk Code 분석은 애플리케이션 코드에서 발견된 보안 취약점 및 코드 문제 목록을 보여줍니다. 다른 사람들이 문제를 해결한 방법에 대한 자세한 내용과 수정 사항의 예를 보려면 보안 취약성 또는 코드 보안 문제를 선택하십시오.
 
-![Display more information for a vulnerability or code issue](../../../.gitbook/assets/results-code.png)
+![취약점 또는 코드 문제에 대한 추가 정보 표시](../../../.gitbook/assets/results-code.png)
 
-## Analysis results: Snyk Configuration
+## 분석 결과: Snyk 구
 
-Snyk Configuration analysis shows issues in your Terraform, Kubernetes, AWS CloudFormation, and Azure Resource Manager (ARM) code with every scan. Based on the Snyk CLI, the scan is fast and friendly for local development. For more detailed information select an issue.
+Snyk 구성 분석은 스캔할 때마다 Terraform, Kubernetes, AWS CloudFormation 및 Azure Resource Manager(ARM) 코드의 문제를 보여줍니다. Snyk CLI를 기반으로 하는 스캔은 로컬 개발에 빠르고 친숙합니다. 더 자세한 정보를 보려면 문제를 선택하십시오.
 
-![Display more information for Snyk Configuration analysis](../../../.gitbook/assets/intellij\_iac\_issues.png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-56fd4d190b61a93692b95a5524035c796448e10d_intellij_iac_issues (1).png" alt=""><figcaption><p>Snyk 구성 분석에 대한 추가 정보 표시</p></figcaption></figure>
 
-The Snyk plugin provides information so you can quickly understand and fix the underlying issue:
+Snyk 플러그인은 기본 문제를 빠르게 이해하고 수정할 수 있도록 정보를 제공합니다:
 
-* **Description:** what the misconfiguration is
-* **Impact:** how the misconfiguration could potentially be exploited
-* **Path:** which path in the tree the issue occurs
-* **Remediation:** how to fix the issue
-* **References:** where you can investigate deeper from a variety of sources
-* **Ignore:** a button to ignore the issue if applicable
+* **Description:** 잘못된 구성이 무엇인지
+* **Impact:** 잘못된 구성이 잠재적으로 악용될 수 있는 방법
+* **Path:** 문제가 발생하는 트리의 경로
+* **Remediation:** 문제를 해결하는 방법
+* **References:** 다양한 출처에서 더 깊이 조사할 수 있는 곳
+* **Ignore:** 해당되는 경우 문제를 무시하는 버튼
 
-## Analysis results: Snyk Container
+## 분석 결과: Snyk Container
 
-The plugin scans Kubernetes configuration files and searches for container images. Vulnerabilities are found fast using the extracted container images and comparative analysis against the latest information from the [Snyk Intel Vulnerability Database](https://security.snyk.io).
+플러그인은 Kubernetes 구성 파일을 스캔하고 컨테이너 이미지를 검색합니다. 추출된 컨테이너 이미지와 [Snyk Intel Vulnerability Database](https://security.snyk.io)의 최신 정보와 비교 분석하여 취약점을 빠르게 찾아냅니다.
 
-Snyk Container analysis shows each of the security vulnerabilities to which your image might be vulnerable. For more detailed information select a vulnerability.
+Snyk 컨테이너 분석은 이미지가 취약할 수 있는 각 보안 취약성을 보여줍니다. 자세한 정보를 보려면 취약점을 선택하십시오.
 
-A comparison table is displayed with various severity levels such as critical or high. This shows the difference in vulnerabilities between the current image and the image recommended by Snyk, with the same characteristics sorted by severity. This helps you decide if you want to upgrade your image to the recommended one and increase the level of confidence in the image you are running in production.
+위험 또는 높음과 같은 다양한 심각도 수준과 함께 비교 테이블이 표시됩니다. 이것은 현재 이미지와 Snyk에서 권장하는 이미지 간의 취약점 차이를 보여주며, 동일한 특성을 심각도별로 정렬합니다. 이렇게 하면 이미지를 권장 이미지로 업그레이드할지 결정하고 프로덕션에서 실행 중인 이미지의 신뢰도를 높일 수 있습니다.
 
-![Display more information for Snyk Container analysis](../../../.gitbook/assets/intellij\_container\_vulnerabilites.png)
+<figure><img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-fca819172bea57a8da94867174bd11ba0ca1c4e6_intellij_container_vulnerabilites.png" alt=""><figcaption><p>Snyk 컨테이너 분석에 대한 추가 정보 표시</p></figcaption></figure>
 
-## How Snyk Container and Kubernetes integration works
+## Snyk 컨테이너 및 Kubernetes 통합 작동 방식
 
-The plugin scans your Kubernetes workload files and collects the images used. To troubleshoot whether a plugin is correctly scanning a container image, you can verify:
+플러그인은 Kubernetes 워크로드 파일을 스캔하고 사용된 이미지를 수집합니다. 플러그인이 컨테이너 이미지를 올바르게 스캔하는지 문제를 해결하려면 다음을 확인할 수 있습니다:
 
-* Whether the image definition is in the Kubernetes YAML file in the project. Make sure you have the image specified with a YAML value to the YAML image key.
-* Whether the container image has been successfully built locally and/or pushed to a container registry. It is also a good practice to verify this before referring to the container image in the Kubernetes YAML file.
+* 이미지 정의가 프로젝트의 Kubernetes YAML 파일에 있는지 여부입니다. YAML 이미지 키에 대해 YAML 값으로 지정된 이미지가 있는지 확인하십시오.
+* 컨테이너 이미지가 로컬로 성공적으로 빌드되었는지 및/또는 컨테이너 레지스트리에 푸시되었는지 여부입니다. Kubernetes YAML 파일의 컨테이너 이미지를 참조하기 전에 이를 확인하는 것도 좋은 방법입니다.
 
-If you encounter an error [contact support](https://snyk.zendesk.com/agent/dashboard).
+오류가 발생하면 [contact support](https://snyk.zendesk.com/agent/dashboard)에 문의하세요.
 
 For each image found, perform a test with the Snyk CLI.
 
