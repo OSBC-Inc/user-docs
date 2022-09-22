@@ -1,5 +1,5 @@
-# Snyk IDE plugin guide
+# Snyk IDE 플러그인 빌드
 
-This group of pages provides information on building an IDE plugin that incorporates Snyk scanning of open source components.
+이 페이지 그룹은 오픈 소스 구성 요소의 Snyk 스캔을 통합하는 IDE 플러그인 구축에 대한 정보를 제공합니다.
 
-This is a technical how-to document intended mainly for engineering and product teams. Snyk is providing this information especially for partners building IDE plugins who are looking to add a security component to their offering.&#x20;
+이것은 주로 엔지니어링 및 제품 팀을 위한 기술 방법 문서입니다. Snyk은 특히 자신의 제품에 보안 구성 요소를 추가하려는 IDE 플러그인을 구축하는 파트너를 위해 이 정보를 제공하고 있습니다.

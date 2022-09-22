@@ -1,26 +1,26 @@
 ---
-description: Understanding the integration strategy
+description: 통합 전략 이해
 ---
 
-# Overview of IDE plugins
+# IDE 플러그인 개요
 
-This document shows how to extract Snyk scan results and make them available in your IDE plugin by using the Snyk CLI. The IDE plugin downloads the CLI in the background and periodically checks for newer versions and downloads those when available.
+이 문서에서는 Snyk CLI를 사용하여 Snyk 스캔 결과를 추출하고 IDE 플러그인에서 사용할 수 있도록 하는 방법을 보여줍니다. IDE 플러그인은 백그라운드에서 CLI를 다운로드하고 주기적으로 최신 버전을 확인하고 사용 가능한 경우 다운로드합니다.
 
-Snyk SDK makes it easier to implement and download periodic updates. While this integration is under development, a [Java implementation](https://github.com/jenkinsci/snyk-security-scanner-plugin/blob/master/src/main/java/io/snyk/jenkins/tools/internal/DownloadService.java) is available.
+Snyk SDK를 사용하면 주기적인 업데이트를 더 쉽게 구현하고 다운로드할 수 있습니다. 이 통합이 개발 중이지만 [Java implementation](https://github.com/jenkinsci/snyk-security-scanner-plugin/blob/master/src/main/java/io/snyk/jenkins/tools/internal/DownloadService.java)을 사용할 수 있습니다.
 
 {% hint style="info" %}
-Download the Snyk CLI for IDE usage whether or not the developer's machine has the Snyk CLI installed.
+개발자의 컴퓨터에 Snyk CLI가 설치되어 있는지 여부에 관계없이 IDE 사용을 위해 Snyk CLI를 다운로드합니다.
 {% endhint %}
 
-To use the Snyk CLI you must authenticate. To check whether the user is previously authenticated on this machine, run `snyk config get api` and check for a return of a UUID. If needed run `snyk auth` and follow the prompts to sign up and log in. The process stores the Snyk token locally on the user's machine. For more information see [Authenticating the user to Snyk](overview.md#6689c939-0bff-4d30-9480-b62179889e37).
+Snyk CLI를 사용하려면 인증해야 합니다. 사용자가 이 시스템에서 이전에 인증되었는지 확인하려면 `snyk config get api`를 실행하고 UUID의 반환을 확인하십시오. 필요한 경우 `snyk auth`를 실행하고 프롬프트에 따라 가입 및 로그인합니다. 이 프로세스는 Snyk 토큰을 사용자 컴퓨터에 로컬로 저장합니다. 자세한 내용은 [Snyk에 대한 사용자 인증](../../../snyk-cli/cli-command/undefined.md)을 참조하십시오.
 
-Use the Snyk CLI `test` command with its `--json` option to convert the output into machine-readable format. For every supported dependency manifest file in a project you need to run `snyk test --file=<manifest file name> --json` , parse the results, and display them in the intended places inside the IDE user interface.
+`--json` 옵션과 함께 Snyk CLI `test` 명령을 사용하여 출력을 기계가 읽을 수 있는 형식으로 변환합니다. 프로젝트에서 지원되는 모든 종속성 매니페스트 파일에 대해 `snyk test --file=<manifest file name> --json` 을 실행하고 결과를 구문 분석하고 IDE 사용자 인터페이스 내부의 원하는 위치에 표시해야 합니다.
 
-Rerun `snyk test` periodically or when a triggering event happens: a manifest file has been edited, a day has passed since the last scan, and any time you explicitly reinstall the dependencies (`mvn install`).
+주기적으로 또는 트리거 이벤트가 발생할 때 `snyk test`를 다시 실행하십시오: 매니페스트 파일이 편집되었거나, 마지막 스캔 이후 하루가 지났으며, 종속성을 명시적으로 다시 설치할 때마다(`mvn install`).
 
-In summary the steps are as follows:
+요약하면 단계는 다음과 같습니다.
 
-1. Check for the presence of the Snyk CLI or prompt the user to install it (one time).
-2. Check if the user is authenticated to the CLI and run `snyk auth` if not (one time).
-3. Scan every manifest file using `snyk test --file=<manifest file name> --json` parsing the output and incorporating it into the IDE user interface.
-4. Rerun a scan periodically or when a triggering event happens; see [Scanning with IDE plugins](scanning.md#607b2cd8-2fb5-49ee-8473-319a42b8c421).
+1. Snyk CLI가 있는지 확인하거나 사용자에게 설치하라는 메시지를 표시합니다(한 번).
+2. 사용자가 CLI에 대해 인증되었는지 확인하고 인증되지 않은 경우(한 번) snyk auth를 실행합니다.
+3. `snyk test --file=<manifest file name> --json` 출력을 구문 분석하고 IDE 사용자 인터페이스에 통합하여 모든 매니페스트 파일을 스캔합니다.
+4. 주기적으로 또는 트리거 이벤트가 발생할 때 스캔을 다시 실행하십시오. [IDE 플러그인으로 스캔](scanning.md#607b2cd8-2fb5-49ee-8473-319a42b8c421)을 참조하십시오.
