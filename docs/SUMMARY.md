@@ -303,7 +303,7 @@
   * [Vulnerability management tools](features/integrations/vulnerability-management-tools/README.md)
     * [Code Dx Enterprise](features/integrations/vulnerability-management-tools/code-dx-enterprise.md)
     * [Brinqa](features/integrations/vulnerability-management-tools/brinqa.md)
-    * [Fortify SSC integration](features/integrations/vulnerability-management-tools/fortify-ssc-integration.md)
+    * [SSC 통합 강화](features/integrations/vulnerability-management-tools/fortify-ssc-integration.md)
     * [Kenna Security](features/integrations/vulnerability-management-tools/kenna-security.md)
     * [Nucleus Security](features/integrations/vulnerability-management-tools/nucleus-security.md)
     * [OpsLevel](features/integrations/vulnerability-management-tools/opslevel.md)
