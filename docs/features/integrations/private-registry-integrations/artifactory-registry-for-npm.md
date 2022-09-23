@@ -34,7 +34,6 @@ Snyk에게 개인 Artifactory Node.js 패키지가 호스팅되는 위치와 해
    4. **기본 레지스트리 URL**과 **범위가 지정된 패키지**를 혼합하여 추가하려면 기본 및 범위당 하나씩 여러 구성을 추가하십시오.
 4. 연결되면 JavaScript 언어 설정으로 돌아가 통합 유형 드롭다운에서 "Artifactory"를 선택하고 범위를 구성할 수 있습니다.
 5. 원하는 레지스트리와 범위를 모두 추가했으면 **Update settings**를 클릭합니다.
-6. Now test it out - open a Pull/Merge Request on a project that contains private dependencies that are hosted in Artifactory to see **a lockfile updated and included in the Snyk Fix Pull Request where previously none was generated**
-7. 이제 테스트해 보세요. Artifactory에서 호스팅되는 비공개 종속성을 포함하는 프로젝트에서 풀/병합 요청을 열어 **잠금 파일이 업데이트되고 이전에 생성되지 않은 Snyk 수정 풀 요청에 포함되었는지 확인**합니다.
+6. 이제 테스트해 보세요. Artifactory에서 호스팅되는 비공개 종속성을 포함하는 프로젝트에서 풀/병합 요청을 열어 **잠금 파일이 업데이트되고 이전에 생성되지 않은 Snyk 수정 풀 요청에 포함되었는지 확인**합니다.
 
 ![](../../../.gitbook/assets/image4-3-.png)
