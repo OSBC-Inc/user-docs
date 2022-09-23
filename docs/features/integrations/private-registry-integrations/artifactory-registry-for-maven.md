@@ -1,45 +1,44 @@
-# Maven용 Artifactory Registry
+# Artifactory Registry for Maven
 
 {% hint style="info" %}
-**기능 가용성**
-
-이 기능은 엔터프라이즈 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
+**Feature availability**\
+This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
 {% endhint %}
 
-Snyk은 Maven 프로젝트에서 커스텀 Artifactory Package Repositories를 사용할 수 있습니다.
+Snyk can use custom Artifactory Package Repositories with Maven projects.
 
-이를 통해 Snyk는 사용자 지정 레지스트리에서 호스팅되는 패키지의 모든 직접적 및 전이적 종속성을 해결하고 보다 완전하고 정확한 종속성 그래프 및 관련 취약성을 계산할 수 있습니다.
+This enables Snyk to resolve all direct and transitive dependencies of packages hosted on the custom registry and calculate a more complete, accurate dependency graph and related vulnerabilities.
 
-Maven 프로젝트는 사용자 정의 패키지 저장소를 통해 모든 요청을 미러링하도록 구성하거나 Maven Central과 함께 사용할 추가 저장소를 지정할 수 있습니다.
+Maven projects can be configured to mirror all requests through a custom package repository, or you can specify additional repositories to use alongside Maven Central.
 
-## 사용자 정의 Maven 패키지 레지스트리 설정
+## **Setup custom Maven package registries**
 
-사용자 지정 레지스트리에 액세스하는 데 인증이 필요한 경우 먼저 Artifactory 패키지 저장소 통합을 구성해야 합니다. [Artifactory Registry 설정](artifactory-registry-setup.md)을 참조하십시오.
+If authentication is required to access your custom registry you will need to first configure the Artifactory package repository integration, see [Artifactory Registry Setup.](https://docs.snyk.io/integrations/private-registry-integrations/artifactory-registry-setup)
 
-통합이 설정되면 settings ![](../../../.gitbook/assets/cog\_icon.png) **> Languages > Java**로 이동하여 Maven 설정을 구성할 수 있습니다.
+Once the integration is set up you can configure Maven settings by navigating to settings ![](../../../.gitbook/assets/cog\_icon.png) **> Languages > Java**.
 
-Artifactory를 미러로 사용할지 아니면 아티팩트가 상주할 추가 저장소로 사용할지 선택할 수 있습니다. 이 설정은 `~/.m2/settings.xml`에 있는 것과 매우 유사합니다.
+You can choose whether to use Artifactory as a mirror or as an additional repository where your artifacts will reside. These settings will be very similar to what you have in `~/.m2/settings.xml`.
 
 ### **Mirrors**
 
-**Direct** 또는 인증 **통합**을 사용하는 경우 유형 값을 선택합니다.
+Choose a value for the Type, either **Direct** or if using authentication **Integration**
 
-**Direct**를 사용하는 경우 **URL**, **저장소 이름** 및 **Mirror off**를 완료해야 합니다.
+If using **Direct** you will need to complete the **URL**, **Repository Name** and what it is a **Mirror Of**.
 
-**Mirror of** 값은 `*`가 되어 모든 것을 미러링하거나 `central`과 같은 값을 입력할 수 있습니다.
+The **Mirror Of** value can either be a `*` to mirror everything or you can type in a value for example `central`.
 
 ![](../../../.gitbook/assets/uuid-fd027725-33b3-7f12-a921-d7fba9cedad8-en.png)
 
-Type **Integration**을 사용하는 경우 통합 유형을 선택하고 **Repository Name** 및 **Mirror of**의 세부 정보를 제공해야 합니다.
+If using Type **Integration**, you will need to choose an integration type and provide the **Repository Name** and **Mirror Of** details.
 
-**Repository Name**은 내부 저장소 URL에서 `artifactory/` 뒤에 오는 대로 설정해야 합니다.
+The **Repository Name** should be set as whatever comes after `artifactory/` in the internal repository URL.
 
-예를 들어 URL이 `http://artifactory.company.io/artifactory/libs-release`인 경우 **Repository Name**은 `libs-release`로 설정해야 합니다.
+For example, if the URL is `http://artifactory.company.io/artifactory/libs-release` **Repository Name** should be set as `libs-release`.
 
 ![](../../../.gitbook/assets/uuid-293cfd2b-2cd5-b8a3-0671-bf6d2798a3bc-en.png)
 
-### **저장소**
+### **Repositories**
 
-또는 아티팩트를 확인하기 위한 추가 위치로 사용할 저장소를 구성할 수 있습니다.
+Alternatively, you can configure repositories which will be used as additional locations to check for artifacts.
 
-저장소는 [미러](artifactory-registry-for-maven.md#mirrors)와 동일한 방식으로 구성되지만 미러 대상은 필요하지 않습니다.
+Repositories are configured in the same way as [Mirrors](artifactory-registry-for-maven.md#mirrors), but do not require **Mirror Of**.

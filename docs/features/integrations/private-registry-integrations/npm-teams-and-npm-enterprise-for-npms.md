@@ -3,9 +3,8 @@
 ## **Overview**
 
 {% hint style="info" %}
-**기능 가용성**
-
-이 기능은 엔터프라이즈 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
+**Feature availability**\
+This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
 {% endhint %}
 
 Snyk can use custom npm Teams & npm Enterprise repositories with npm and Yarn projects.
