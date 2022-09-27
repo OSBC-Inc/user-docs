@@ -18,9 +18,9 @@ Snyk을 사용하면 다음 ID 제공자 중 하나를 인증에 사용할 수 �
 {% hint style="info" %}
 **기능 가용성**
 
-싱글 사인온은 엔터프라이즈 및 비즈니스 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
+Single sign-on은 엔터프라이즈 및 비즈니스 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
 {% endhint %}
 
 {% hint style="info" %}
-Logging in with a different provider than the one that you registered with when you first created your Snyk account will create a separate new Snyk account.
+Snyk 계정을 처음 생성할 때 등록한 공급자와 다른 공급자로 로그인하면 별도의 새 Snyk 계정이 생성됩니다.
 {% endhint %}
