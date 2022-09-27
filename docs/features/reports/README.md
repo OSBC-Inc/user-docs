@@ -19,7 +19,7 @@ Reports는 Business 및 Enterprise 요금제와 함께 사용할 수 있습니�
 2. [로그인 또는 계정을 생성합니다.](https://app.snyk.io/login)
 3. 단 바에서 **Reports** 메뉴 옵션을 선택합니다.
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (2).png>)
 
 {% hint style="warning" %}
 보고서는 Snyk Code 프로젝트를 지원하지 않습니다.

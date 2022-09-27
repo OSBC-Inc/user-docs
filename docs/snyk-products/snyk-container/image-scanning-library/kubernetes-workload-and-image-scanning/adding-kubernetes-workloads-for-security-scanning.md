@@ -96,4 +96,4 @@ Snyk과 클러스터 간의 통합을 구성한 후에는 워크로드에 주석
 
 Kubernetes 프로젝트에 대해서만 필터링할 수 있습니다.
 
-![](<../../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../../.gitbook/assets/image (5).png>)
