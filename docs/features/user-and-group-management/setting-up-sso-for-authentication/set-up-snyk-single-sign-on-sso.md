@@ -1,18 +1,18 @@
-# Set up Snyk Single Sign-On (SSO)
+# Snyk SSO(Single Sign-On) 설정
 
-Set up single sign-on to allow your developers and teams easy access to Snyk through your existing SSO provider, so they can see the status of their projects, view reports, resolve vulnerabilities, and more.
+개발자와 팀이 기존 SSO 공급자를 통해 Snyk에 쉽게 액세스할 수 있도록 싱글 사인온을 설정하여 프로젝트 상태를 확인하고 보고서를 보고 취약점을 해결하는 등의 작업을 수행할 수 있습니다.
 
-The information you need to establish trust between Snyk and the identity provider depends on which type of SSO you are using.
+Snyk과 ID 제공자 간에 신뢰를 구축하는 데 필요한 정보는 사용 중인 SSO 유형에 따라 다릅니다.
 
-Ensure you have at least one group and organization to indicate where new users will be assigned. See [Groups, Organizations and Users](https://docs.snyk.io/introducing-snyk/snyks-core-concepts/groups-organizations-and-users).
+새 사용자가 할당될 위치를 나타내는 그룹 및 조직이 하나 이상 있는지 확인하십시오. [그룹, 조직 및 사용자를](../../../introducing-snyk/snyks-core-concepts/groups-organizations-and-users.md) 참조하십시오.
 
 {% hint style="info" %}
-Once you have gathered the requested information (detailed below), create a support ticket to request SSO set up.
+요청한 정보(아래에 자세히 설명)를 수집했으면 SSO 설정을 요청하기 위한 지원 티켓을 만드십시오.
 
-For Business plan using SAML, Group Admins can configure Snyk Single Sign-On and [this guide](self-serve-single-sign-on-sso.md) details the steps.
+SAML을 사용하는 비즈니스 플랜의 경우 그룹 관리자는 Snyk Single Sign-On을 구성할 수 있으며 이 [가이드](self-serve-single-sign-on-sso.md)에서는 단계를 자세히 설명합니다.
 {% endhint %}
 
-## Overview
+## 개요
 
 The process of establishing trust between your identity provider (IdP) and Snyk requires a few separate steps, coordinated between your SSO administrator and Snyk Support.
 
@@ -57,15 +57,15 @@ If your user attributes do not match, note that the Snyk configuration for your 
 
 Obtain the following information from your identity provider and organization. Provide this information to Snyk to establish trust on the service-provider side.
 
-| Information                   | Description                                                                                                                      |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Sign-in URL                   | The URL for your identity provider sign-in page                                                                                  |
-| X509 Signing Certificate      | The identity provider public key, encoded in Base64 format                                                                       |
-| Sign-out URL                  | <p>Optional, but recommended -</p><p>The URL for redirect whenever a user logs out of Snyk</p>                                   |
-| User ID attribute             | Optional default is **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier**                                     |
-| Protocol binding              | HTTP-POST is recommended, HTTP-Redirect is also supported                                                                        |
-| IdP initiated flow supported? | Idp-initiated flows carry a security risk and  are therefore not recommended. Make sure you understand the risks before enabling |
-| Email domains and subdomains  | The email domains and subdomains that need access to the SSO                                                                     |
+| Information                   | Description                                                                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Sign-in URL                   | The URL for your identity provider sign-in page                                                                                 |
+| X509 Signing Certificate      | The identity provider public key, encoded in Base64 format                                                                      |
+| Sign-out URL                  | <p>Optional, but recommended -</p><p>The URL for redirect whenever a user logs out of Snyk</p>                                  |
+| User ID attribute             | Optional default is **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier**                                    |
+| Protocol binding              | HTTP-POST is recommended, HTTP-Redirect is also supported                                                                       |
+| IdP initiated flow supported? | Idp-initiated flows carry a security risk and are therefore not recommended. Make sure you understand the risks before enabling |
+| Email domains and subdomains  | The email domains and subdomains that need access to the SSO                                                                    |
 
 ## Use OpenID Connect (OIDC) for SSO
 
