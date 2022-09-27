@@ -29,7 +29,7 @@ Snyk과 신뢰를 설정하려면 **IdP(identity provider)**에 엔티티 ID, AC
 
 * **Entity ID**는 Snyk를 SAML 엔터티 또는 서비스 공급자로 고유하게 식별하는 URL입니다. **참고로 기본 엔터티 ID는 기본값이 설정되어 있지 않으므로 수동으로 확인해야 합니다.**
 * **ACS(Assertion Consumer Service)**는 네트워크의 사용자와 Snyk 간의 통신을 가능하게 하기 위해 ID 제공자의 요청을 수신하는 Snyk 네트워크의 끝점입니다. 이 URL을 회신 URL이라고도 합니다.
-* Signing certificate는 신뢰 관계를 유지하는 데 필요한 서버에 저장된 Snyk 인증서입니다. 여기에는 인증에 필요한 암호화 키가 포함되어 있습니다.
+* **Signing certificate**는 신뢰 관계를 유지하는 데 필요한 서버에 저장된 Snyk 인증서입니다. 여기에는 인증에 필요한 암호화 키가 포함되어 있습니다.
 
 **그룹 관리자**는 여기에서 ID 공급자(IdP)와의 연결을 설정하는 데 필요한 Snyk 세부 정보를 찾을 수 있습니다.
 
