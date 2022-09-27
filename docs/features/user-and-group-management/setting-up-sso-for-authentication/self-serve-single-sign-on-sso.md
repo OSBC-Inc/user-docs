@@ -10,105 +10,105 @@ SSO에 SAML을 사용하는 비즈니스 플랜의 그룹 관리자는 스스로
 
 ID 공급자(IdP)와 Snyk 간의 신뢰를 설정하는 프로세스에는 그룹 관리자의 몇 가지 단계가 필요합니다.
 
-1. **Configure your identity provider (IdP)** by using the details about the Snyk environment that is displayed on-screen and user attributes.
-2. **Enter SAML attributes** from your identity provider(IdP) in the Group SSO Settings page.
-3. **Configure Snyk SSO settings**, choosing how you want your members to log in.
-4. Verify SSO login to confirm the login process is working correctly.
+1. 화면에 표시되는 Snyk 환경 및 사용자 속성에 대한 세부 정보를 사용하여 **IdP(identity provider)**를 구성합니다.
+2. 그룹 SSO 설정 페이지에서 **IdP(identity provider)**의 **SAML 속성**을 입력합니다.
+3. Snyk SSO 설정을 구성하고 구성원이 로그인하는 방법을 선택합니다.
+4. SSO 로그인을 확인하여 로그인 프로세스가 올바르게 작동하는지 확인합니다.
 
 {% hint style="info" %}
-After SSO is configured both from Snyk and your company's network, a trust relationship is established between Snyk, Auth0 (on behalf of Snyk), and your network. Any sensitive data is encrypted and stored in Auth0 only for the purposes of enabling user logins.
+Snyk와 회사 네트워크 모두에서 SSO가 구성된 후 Snyk, Auth0(Snyk 대신) 및 네트워크 간에 신뢰 관계가 설정됩니다. 민감한 데이터는 암호화되어 사용자 로그인을 활성화할 목적으로만 Auth0에 저장됩니다.
 {% endhint %}
 
-**User log in**
+**사용자 로그인**
 
-Users are provisioned to Snyk when they log in (see [choose-a-provisioning-option.md](choose-a-provisioning-option.md "mention")). If the new user role is selected as Group Member, they only see a list of your organizations until the admin adds them to the appropriate organizations.
+사용자는 로그인할 때 Snyk에 프로비저닝됩니다(see [choose-a-provisioning-option.md](choose-a-provisioning-option.md "mention")). 새 사용자 역할이 그룹 구성원으로 선택되면 관리자가 적절한 조직에 추가할 때까지 조직 목록만 표시됩니다.
 
-### Step 1. Configure your identity provider
+### Step 1. **IdP(identity provider) 구성**
 
-To establish trust with Snyk, add an Entity ID, an ACS URL, and a Signing certificate in your identity provider(IdP).
+Snyk과 신뢰를 설정하려면 **IdP(identity provider)**에 엔티티 ID, ACS URL 및 서명 인증서를 추가하십시오.
 
-* The **Entity ID** is the URL that uniquely identifies Snyk as a SAML entity or service provider--note, **default Entity ID must be checked** manually as no default is set for this.
-* The **Assertion Consumer Service (ACS)** is the endpoint on the Snyk network that listens for requests from your identity provider to enable communication between users on your network and Snyk. This URL is sometimes called a Reply URL.
-* The **Signing certificate** is the Snyk certificate, stored on your server, that is needed to maintain the trust relationship. It contains the necessary encryption keys for authentication.
+* **Entity ID**는 Snyk를 SAML 엔터티 또는 서비스 공급자로 고유하게 식별하는 URL입니다. **참고로 기본 엔터티 ID는 기본값이 설정되어 있지 않으므로 수동으로 확인해야 합니다.**
+* **ACS(Assertion Consumer Service)**는 네트워크의 사용자와 Snyk 간의 통신을 가능하게 하기 위해 ID 제공자의 요청을 수신하는 Snyk 네트워크의 끝점입니다. 이 URL을 회신 URL이라고도 합니다.
+* Signing certificate는 신뢰 관계를 유지하는 데 필요한 서버에 저장된 Snyk 인증서입니다. 여기에는 인증에 필요한 암호화 키가 포함되어 있습니다.
 
-**Group Admins** can find the Snyk details required to set up the connection with your Identity provider (IdP) here:
+**그룹 관리자**는 여기에서 ID 공급자(IdP)와의 연결을 설정하는 데 필요한 Snyk 세부 정보를 찾을 수 있습니다.
 
-To access the Group Overview for your group, click on Settings [![](https://github.com/snyk/user-docs/raw/118bd8f19001bd64415f0ce63897f568c4b5327a/docs/.gitbook/assets/image%20\(70\).png)](https://github.com/snyk/user-docs/blob/118bd8f19001bd64415f0ce63897f568c4b5327a/docs/.gitbook/assets/image%20\(70\).png) > **SSO**:
+그룹의 그룹 개요에 액세스하려면, Settings [![](https://github.com/snyk/user-docs/raw/118bd8f19001bd64415f0ce63897f568c4b5327a/docs/.gitbook/assets/image%20\(70\).png)](https://github.com/snyk/user-docs/blob/118bd8f19001bd64415f0ce63897f568c4b5327a/docs/.gitbook/assets/image%20\(70\).png) > **SSO** 클릭 합니다.:
 
-![](../../../.gitbook/assets/Screenshot%202022-02-24%20at%2014.32.24.png)
+![Group settings](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-7c963a7698c8f188b6bdb5c4607f2ff6342f2fc2\_Screenshot 2022-02-24 at 14.32.24.png>)
 
-To map information from your Identity provider to Snyk, name your user attributes as follows (using the same capitalization and spelling).
+아이덴티티 공급자의 정보를 Snyk에 매핑하려면 사용자 속성의 이름을 다음과 같이 지정합니다(동일한 대문자 및 철자 사용).
 
-| Attribute | Description                                     |
-| --------- | ----------------------------------------------- |
-| email     | The user’s email address                        |
-| name      | The name of the person to be authenticated      |
-| username  | The person’s username for the identity provider |
+| 속성       | 설명                             |
+| -------- | ------------------------------ |
+| email    | 사용자의 이메일 주소                    |
+| name     | 인증할 사람의 이름                     |
+| username | IdP(identity provider)의 사용자 이름 |
 
-An example from Okta is given below:
+Okta의 예는 다음과 같습니다:
 
-![](../../../.gitbook/assets/Screenshot%202022-02-24%20at%2014.19.18.png)
+![SAML 속성 문](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-87aed5a7567d270144716af224ee3edca23f4ed0\_Screenshot 2022-02-24 at 14.19.18.png>)
 
 {% hint style="warning" %}
-If your user attributes do not match, the Snyk configuration for your SSO will not work.
+사용자 속성이 일치하지 않으면 SSO에 대한 Snyk 구성이 작동하지 않습니다.
 {% endhint %}
 
-For more details about these attributes, see [Step 3. Snyk SSO settings.](self-serve-single-sign-on-sso.md#step-3.-snyk-sso-setting)
+이러한 속성에 대한 자세한 내용은 3단계. [Snyk SSO 설정](self-serve-single-sign-on-sso.md#step-3.-snyk-sso-settings)을 참조하십시오.
 
-### Step 2. Enter SAML Attributes
+### Step 2. SAML 속성 입력
 
-After the identity provider is set up to acknowledge Snyk, now obtain the following information from your identity provider and organization.
+ID 제공자가 Snyk를 확인하도록 설정했으면 이제 ID 제공자 및 조직에서 다음 정보를 얻으십시오.
 
-Click **create a connection** to establish trust on the service-provider side:
+서비스 공급자 측에서 신뢰를 설정하려면 **create a connection**을 클릭합니다.
 
-![](../../../.gitbook/assets/image%20\(66\)%20\(1\)%20\(1\)%20\(2\).png)
+![Create a connection](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-7844d49ff6a872addf0ac691c6861241c257e71e\_image (115).png>)
 
-Provide SAML attributes in the below form.
+아래 양식에 SAML 속성을 제공하십시오.
 
-* **Sign in URL** (mandatory): Identity Provider sign-in URL
-* **Sign out URL**: Redirect URL when user signs out of Snyk, Recommended
-* **X509 signing certificate** (mandatory): The identity provider public key. Download the certificate from your identity provider and paste it here. The system will encode it in _**Base64 format.**_
-* **Email domains and sub-domains** that would need SSO access (mandatory)
-* **Protocol binding**: HTTP-POST is recommended; HTTP-Redirect is also supported
-* **IdP-Initiated workflow**: Enable this option to add Snyk tile to your Identity Provider.\
-  **Note:** IdP-Initiated SSO behavior carries a [security risk](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on#risks-and-considerations) and is therefore not recommended. The risk is explained on the IdP side, and should be understood before enabling this option.
+* **Sign in URL** (필수): Identity Provider 로그인 URL
+* **Sign out URL**: 사용자가 Snyk에서 로그아웃할 때 URL 리디렉션, 권장
+* **X509 signing certificate** (필수): ID 제공자 공개 키입니다. ID 공급자로부터 인증서를 다운로드하여 여기에 붙여넣습니다. 시스템은 이를 **Base64 형식**으로 인코딩합니다.
+* SSO 액세스가 필요한 **이메일 도메인 및 하위 도메인** (필수)
+* **Protocol binding**: HTTP-POST가 권장됩니다. HTTP 리디렉션도 지원됩니다.
+* **IdP-Initiated workflow**: 아이덴티티 공급자에 Snyk 타일을 추가하려면 이 옵션을 활성화합니다.\
+  **Note**: IdP 시작 SSO 동작은 [보안 위험](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on#risks-and-considerations)을 수반하므로 권장하지 않습니다. 위험은 IdP 측에서 설명되며 이 옵션을 활성화하기 전에 이해해야 합니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-02-24%20at%2014.40.24.png)
+![SAML 속성 입력](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-9a29beafbedae069ce872bc08404b22ff66b72c5\_Screenshot 2022-02-24 at 14.40.24.png>)
 
-After filling in the details click on **Save Changes**. Snyk will highlight if there are any errors. You can edit SAML attributes at any time, save your changes and it will reflect in the SSO connection immediately.
+세부 정보를 입력한 후 **Save Changes**을 클릭합니다. 오류가 있으면 Snyk가 강조 표시합니다. 언제든지 SAML 속성을 편집하고 변경 사항을 저장할 수 있으며 SSO 연결에 즉시 반영됩니다.
 
-### Step 3. Snyk SSO settings
+### Step 3. Snyk SSO 설정
 
-Now click **Configure Snyk SSO settings below** in the success banner to complete the setup.
+이제 성공 배너에서 아래 **Configure Snyk SSO settings**를 클릭하여 설정을 완료합니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-02-24%20at%2015.37.44.png)
+![아래에서 Snyk SSO 설정 구성](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-478495d5923fb488fd08c7cfd74a529a9fc44d75\_Screenshot 2022-02-24 at 15.37.44.png>)
 
-Choose the new user’s role (see [choose-a-provisioning-option.md](choose-a-provisioning-option.md "mention")):
+새 사용자의 역할 선택 ([choose-a-provisioning-option.md](choose-a-provisioning-option.md "mention") 참조):
 
-![](../../../.gitbook/assets/Screenshot%202022-02-24%20at%2015.28.30.png)
+![사용자 역할 선택](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-9299bcf27310f208fca09004da345c02a7d147f8\_Screenshot 2022-02-24 at 15.28.30.png>)
 
-The **Profile attributes** values are used to map the user's SAML payload data, to ensure that Snyk receives the proper email, name, and userName. It should be the exact keys from the raw json from SAML payload.
+**프로필 속성 값**은 사용자의 SAML 페이로드 데이터를 매핑하여 Snyk가 적절한 이메일, 이름 및 userName을 수신하도록 하는 데 사용됩니다. SAML 페이로드의 원시 json에 있는 정확한 키여야 합니다.
 
-The values will be auto-populated by the system as **nameIdAttributes.value**.
+값은 **nameIdAttributes.value**로 시스템에 의해 자동으로 채워집니다.
 
 {% hint style="info" %}
-We suggest that you consult your SSO administrator and determine how the email address, name (a display name, First name + Last Name), and username (a unique identifier) are represented when the Identity Provider was configured (as described in [#1.-configure-your-identity-provider](self-serve-single-sign-on-sso.md#1.-configure-your-identity-provider "mention"))
+SSO 관리자에게 문의하여 ID 공급자가 구성될 때 이메일 주소, 이름(표시 이름, 이름 + 성) 및 사용자 이름(고유 식별자)이 표시되는 방식을 결정하는 것이 좋습니다. ([#step-1.-configure-your-identity-provider](self-serve-single-sign-on-sso.md#step-1.-configure-your-identity-provider "mention")에 설명된 대로)
 {% endhint %}
 
-After the selections are made, click **Save Changes** to complete your SSO configuration.
+선택이 끝나면 **Save Changes**을 클릭하여 SSO 구성을 완료합니다.
 
-### 4. Verify SSO login
+### 4. SSO 로그인 확인
 
-Once the SSO settings are saved successfully, click on the direct login URL displayed on the screen for the SSO connection you set up. And you would be taken to your IDP through which you can login to your Snyk Group.
+SSO 설정이 성공적으로 저장되면 설정한 SSO 연결 화면에 표시된 직접 로그인 URL을 클릭합니다. 그리고 Snyk Group에 로그인할 수 있는 IDP로 이동합니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-02-24%20at%2016.00.49.png)
+![직접 로그인 URL](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-f4ade072ec1aee46903402ad1d286e5dd2393244\_Screenshot 2022-02-24 at 16.00.49.png>)
 
-Alternatively, you can login to [**snyk**](http://snyk.io) in incognito mode to prevent cookies from interfering and verify the SSO Login is working.
+또는 시크릿 모드에서 snyk에 로그인하여 쿠키가 간섭하는 것을 방지하고 SSO 로그인이 작동하는지 확인할 수 있습니다.
 
-(Direct SSO Link:[https://app.snyk.io/login/sso](https://app.snyk.io/login/sso)) or:
+(직접 SSO 링크:[https://app.snyk.io/login/sso](https://app.snyk.io/login/sso)) 또는:
 
 1. [https://snyk.io](https://snyk.io)
-2. Log in
+2. 로그인
 3. SSO
-4. Enter your email address
-5. Continue to your identity provider and log in.
+4. 이메일 주소를 입력하십시오.
+5. 계속해서 IDP로 이동하여 로그인합니다.
