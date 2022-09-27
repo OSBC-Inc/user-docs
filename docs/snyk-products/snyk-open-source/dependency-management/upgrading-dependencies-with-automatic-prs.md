@@ -60,6 +60,6 @@ Snyk이 디펜던시 상태를 정기적으로 검사하고 디펜던시 업그�
 6. **Update dependency upgrade settings**를 클릭합니다.
 7. 설정이 저장되었습니다.
 
-![](<../../../.gitbook/assets/image (7).png>)
+![](<../../../.gitbook/assets/image (7) (1).png>)
 
 이제 Snyk이 해당 프로젝트를 스캔할 때마다 결과에 따라 업그레이드 PR을 자동으로 생성합니다. 기존 Snyk 업그레이드 PR 또는 기존 수정 PR에 대해 최신 버전이 릴리즈된 경우 기존 PR을 닫거나 merge해야 새 PR을 생성할 수 있습니다.

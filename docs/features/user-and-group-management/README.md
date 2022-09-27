@@ -16,7 +16,7 @@ SSO를 사용하면 인증 및 프로비저닝이 간단해집니다;[setting-up
 
 그룹의 사용자 및 권한을 관리할 수 있습니다; [managing-users-and-permissions](managing-users-and-permissions/ "mention") 참조.
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (7).png>)
 
 ### 그룹 및 조직 관리
 

@@ -331,7 +331,7 @@
     * [타사 도구에 대한 인증](features/user-and-group-management/authentication/authentication-for-third-party-tools.md)
   * [인증을 위한 SSO(Single Sign-On) 설정](features/user-and-group-management/setting-up-sso-for-authentication/README.md)
     * [프로비저닝 옵션 선택](features/user-and-group-management/setting-up-sso-for-authentication/choose-a-provisioning-option.md)
-    * [Self Serve Single Sign-On (SSO)](features/user-and-group-management/setting-up-sso-for-authentication/self-serve-single-sign-on-sso.md)
+    * [셀프 서비스 SSO (Single Sign-On)](features/user-and-group-management/setting-up-sso-for-authentication/self-serve-single-sign-on-sso.md)
     * [Set up Snyk Single Sign-On (SSO)](features/user-and-group-management/setting-up-sso-for-authentication/set-up-snyk-single-sign-on-sso.md)
     * [Custom Mapping Option](features/user-and-group-management/setting-up-sso-for-authentication/custom-mapping-option.md)
     * [Example: Setting up custom mapping for Okta](features/user-and-group-management/setting-up-sso-for-authentication/example-setting-up-custom-mapping-for-okta.md)
