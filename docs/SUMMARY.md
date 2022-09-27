@@ -328,7 +328,7 @@
     * [Pivotal 통합 개요](features/integrations/platform-as-a-service-integrations/pivotal-integration-overview.md)
 * [사용자 및 그룹 관리](features/user-and-group-management/README.md)
   * [인증 관리](features/user-and-group-management/authentication/README.md)
-    * [Authentication for third-party tools](features/user-and-group-management/authentication/authentication-for-third-party-tools.md)
+    * [타사 도구에 대한 인증](features/user-and-group-management/authentication/authentication-for-third-party-tools.md)
   * [인증을 위한 SSO(Single Sign-On) 설정](features/user-and-group-management/setting-up-sso-for-authentication/README.md)
     * [Choose a provisioning option](features/user-and-group-management/setting-up-sso-for-authentication/choose-a-provisioning-option.md)
     * [Self Serve Single Sign-On (SSO)](features/user-and-group-management/setting-up-sso-for-authentication/self-serve-single-sign-on-sso.md)
