@@ -1,39 +1,35 @@
-# User and group management
+# 사용자 및 그룹 관리
 
-Snyk offers a wide range of tools to allow admins to manage their groups, orgs, and users.
+Snyk은 관리자가 그룹, 조직 및 사용자를 관리할 수 있는 다양한 도구를 제공합니다.
 
-### Enable authentication
+### 인증 활성화
 
-Snyk offers API tokens to enable authentication to service accounts or third party tools; see [authentication](authentication/ "mention").
+Snyk은 서비스 계정 또는 타사 도구에 대한 인증을 가능하게 하는 API 토큰을 제공합니다; [authentication](authentication/ "mention")  참조.
 
-![](<../../.gitbook/assets/image (84) (2).png>)
+### &#x20;SSO(Single Sign-On) 설정
 
-### Set up Single Sign-On (SSO)
+SSO를 사용하면 인증 및 프로비저닝이 간단해집니다;[setting-up-sso-for-authentication](setting-up-sso-for-authentication/ "mention") 참조.
 
-SSO makes authentication and provisioning simple; see  [setting-up-sso-for-authentication](setting-up-sso-for-authentication/ "mention").
+![](<../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-87241f88819a6607b87e839b859dbda2e32b972e\_image (65) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (65) (1).png>)
+### 사용자 및 권한 관리
 
-### Manage users and permissions&#x20;
+그룹의 사용자 및 권한을 관리할 수 있습니다; [managing-users-and-permissions](managing-users-and-permissions/ "mention") 참조.
 
-You can manage users and permissions in your groups; See [managing-users-and-permissions](managing-users-and-permissions/ "mention").
+![](../../.gitbook/assets/image.png)
 
-![](<../../.gitbook/assets/image (81) (2).png>)
+### 그룹 및 조직 관리
 
-### Manage Groups and Organizations
+Snyk 그룹 및 조직이 팀 간 협업을 원활하게 유지하는 방법 알아보기; [managing-groups-and-organizations](managing-groups-and-organizations/ "mention") 참조.
 
-Learn how Snyk groups and organizations help keep cross-team collaboration seamless; see [managing-groups-and-organizations](managing-groups-and-organizations/ "mention")
+### 알림 정의
 
-![](<../../.gitbook/assets/image (69) (1).png>)
+자신과 조직의 이메일 알림을 관리할 수 있습니다; [notifications](notifications/ "mention") 참조.
 
-### Define notifications
+![](<../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-89871e469335ab3ae97b8d49d3b911c5fafc0253\_image (350).png>)
 
-You can manage email notifications, for yourself and your organization. See [notifications](notifications/ "mention").
+### 설정 관리
 
-![](<../../.gitbook/assets/image (73).png>)
+필요에 따라 Snyk 계정을 사용자 정의하십시오; [managing-settings](managing-settings/ "mention") 참조.
 
-### Manage settings
-
-Customize your Snyk account for your needs. See [managing-settings](managing-settings/ "mention").
-
-![](<../../.gitbook/assets/image (76).png>)
+![](<../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-9b14f479d1e68f335be561b547b259397a2dae93\_image (49).png>)
