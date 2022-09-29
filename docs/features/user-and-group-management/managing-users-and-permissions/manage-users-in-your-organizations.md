@@ -4,7 +4,7 @@
 
 ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-2d37830a537650a9169a8c113bb943dc75fd7978\_Screen Shot 2022-02-24 at 1.05.40 PM.png>)
 
-당신은 할 수 있습니다:
+당신이 할 수 있는 항목은 다음과 같습니다:
 
 * [회원 추가](manage-users-in-your-organizations.md#add-members)
 * [보류 중인 초대 취소](manage-users-in-your-organizations.md#filter-and-search-views)
@@ -25,50 +25,51 @@
 
 여기에서:
 
-* Select **Invite new members** to send an email invitation to a new user. Enter the email addresses of users to invite (separated by commas), then click **Send invite**.
-* Select **Add existing members** to add existing members of your group to this organization. Select the members when prompted then click **Invite members.**
-* (For Free plan users only) Select **Invite by link** to send a link; click **Copy link** then send the link yourself.
+* **Invite new members**를 선택하여 새 사용자에게 이메일 초대장을 보냅니다. 초대할 사용자의 이메일 주소(쉼표로 구분)를 입력한 다음 **Send invite**를 클릭합니다.
+* **Add existing members**를 선택하여 그룹의 기존 구성원을 이 조직에 추가합니다. 메시지가 표시되면 구성원을 선택한 다음 **Invite members**를 클릭합니다.
+* (무료 플랜 사용자만 해당) **Invite by link**를 선택하여 링크를 보냅니다. **Copy link**를 클릭한 다음 링크를 직접 보냅니다.
 
-Use the **New members join as** drop-down to define the default joining role for the new member (such as **Org admin**). See [managing-permissions.md](managing-permissions.md "mention").
+**New members join as** 드롭다운을 사용하여 새 구성원(예: **Org admin**)의 기본 가입 역할을 정의합니다. \
+[managing-permissions.md](managing-permissions.md "mention")를 참조하십시오.
 
-#### Video tutorial
+**비디오 튜토리얼**
 
-To see a demonstration of adding members, play this 2-minute video:
+회원 추가에 대한 데모를 보려면 다음 2분 길이의 비디오를 재생하십시오:
 
 {% embed url="https://thoughtindustries-1.wistia.com/medias/qqmkcaequj" %}
 
 ### 보류 중인 초대 취소
 
-To remove pending invites:
+보류 중인 초대를 제거하려면:
 
-1. Click **revoke pending invites** (under the search field on the members page)
-2. Click the ![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.05.56.png) icon next to each user that has a pending invite.
+1. **revoke pending invites**를 클릭합니다(멤버 페이지의 검색 필드 아래).
+2. 대기 중인 초대가 있는 각 사용자 옆에 있는 아이콘 ![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.05.56.png) 을 클릭합니다.
 
 ### 구성원 역할 변경
 
-To change the role of a member, click on the member's **Role** entry, and use the drop-down to select the new role:
+구성원의 역할을 변경하려면 구성원의 역할 항목을 클릭하고 드롭다운을 사용하여 새 역할을 선택합니다:
 
-![](../../../.gitbook/assets/Member%20roles.png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-e224bfabf272ceb81f0027aae5ea963ab06439f1\_Member roles.png>)
 
 ### 구성원 삭제
 
-To delete a member from the organization:
+조직에서 구성원을 삭제하려면:
 
-1. Click the ![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.05.56.png) icon next to the user.
-2. Click **Delete member from** _**your organization’s name**_ when prompted.
+1. 사용자 옆에 있는 아이콘![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.05.56.png)을 클릭합니다.
+2. 메시지가 표시되면 **Delete member from** _**your organization’s name**_를 클릭합니다.
 
 ### 보기 필터링 및 정렬
 
-#### Filter views
+**보기 필터링**
 
-Click the filter icon (![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.47.59.png)) to expand the filter sidebar, to filter members displayed, by role or authentication method:
+필터 아이콘(![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.47.59.png))을 클릭하여 필터 사이드바를 확장하고 표시된 구성원을 역할 또는 인증 방법별로 필터링합니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.51.43.png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-3d111e36faf885e8e5e9f12032d7e1ac2caad0b0\_Screenshot 2022-03-11 at 08.51.43.png>)
 
-#### Sort views
+**보기 정렬**
 
-You can sort user views by clicking on the column heading:
+열 머리글을 클릭하여 사용자 보기를 정렬할 수 있습니다:
 
-![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2009.01.07.png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-06ff515c5fc71e1a8bcc045d0803b12ee54e23fb\_Screenshot 2022-03-11 at 09.01.07.png>)
 
-You can sort by Name, Authentication method, Role, and Date joined
+이름, 인증 방법, 역할, 가입 날짜별로 정렬할 수 있습니다.
