@@ -1,44 +1,44 @@
-# 예: Okta에 대한 사용자 지정 매핑 설정
+# Example: Setting up custom mapping for Okta
 
-다음 페이지에서는 [사용자 지정 매핑 옵션](custom-mapping-option.md)에 사용할 Okta의 역할이라는 사용자 지정 매핑을 구성하는 방법에 대한 2가지 다른 예를 보여줍니다.
+The following page will show 2 different examples on how to configure a custom mapping called roles for Okta to be used for the [Custom Mapping Option](custom-mapping-option.md).
 
 ### Summary Diagram
 
 ![](https://lh5.googleusercontent.com/cuQWU3uMkUSK-SZrKSdwt2V\_vuaJ61bBqpDuTktQWmZ4vNcPsS-jfWsqiMg2lSmGIcPu9MKUJcaYqx4UbImYyWvPbUeqKuU0q4DQRssKnomHovfBnVuPWlwvyaQOrrworlAn\_nMw)
 
-## 구성 1:
+## Configuration 1:
 
-이 구성에서:
+In this configuration:
 
-* Okta 그룹은 Snyk 조직에 매핑됩니다.
-* **사용자 프로필은 Okta 그룹이 아닌 각 사용자와 연결됩니다.**
+* Okta groups will be mapped to Snyk Organizations
+* **User profiles will be tied to each user, not the Okta group**
 
-그룹 및 사용자 설정이 완료되면:
+Once you’re set up with groups and users:
 
-1.  **Okta의 Snyk 앱에 속성 추가**
+1.  **Add attributes to your Snyk App in Okta**
 
-    1.  Directory -> Profile Editor -> Snyk App
+    1.  Directory -> Profile Editor -> Snyk App\\
 
         ***
 
     <img src="https://lh5.googleusercontent.com/h6ww6L16tTWMVhzoVN5Y72oBo51X-WYidqMAO-pTmUksl7akFrgH463S_MMAKDGYdQYzVIYlvN0HCF7tlHMyyIqaQgfdoP9PP6UX7RIJhg-9fFtmLdVwM3tgjVj-h97yKBAS4jGl" alt="" data-size="original">
 2. **Add Attribute**\
    ![](https://lh4.googleusercontent.com/R1sr6ZOerCRNxJhGS3ARf0Pebe0dC-tBLP\_80nARDd0LUGTjRY9jA1E-TiTtz4AQvk4aX-pAE\_\_h2S14kgEb6RTSRzZ4O\_1tOcBaCEwpTn2d4HaVuTynjN5D6qE4YSj3LZaiE5WN)
-3.  속성 설정
+3.  **Set Attributes**
 
-    1. Data Type: 문자열 배열
-    2. Display Name: Snyk 조직
+    1. Data Type: string array
+    2. Display Name: Snyk Orgs
     3. Variable Name: snyk\_orgs
-    4. Group Priority: 그룹 간에 값 결합
+    4. Group Priority: Combine values across groups
     5. Save and Add Another
 
     <img src="https://lh3.googleusercontent.com/sIXILVtJJeo9wbjzVSEVNmSVPwkMPeUu1j5yeBxi-mBEgwu4Ejn-4d0tZhtUZay2EV0PkN8wSE0uJgON3csAyXCEKVAAcpShqPKdbz_U1D3ghx5sTCEhBJliRYIIEOf72c3H1TS5" alt="" data-size="original">
 
     ***
-4.  속성 설정
+4.  **Set Attributes**
 
-    1. Data Type: 문자열
-    2. Display Name: Snyk 사용자 역할
+    1. Data Type: String
+    2. Display Name: Snyk User Role
     3. Variable Name: user\_role
     4. Enum: Yes
     5. Scope: User Personal
@@ -53,51 +53,52 @@
 
     ***
 5. **Directory -> Groups**
-   1. 그룹을 선택하고 애플리케이션 탭으로 이동하여 애플리케이션 할당을 클릭하고 Snyk 앱을 그룹에 할당합니다.
-   2. Snyk 앱이 있어야 하고 snyk 앱 옆에 있는 연필을 클릭합니다.\
+   1. Select a group and navigate to Applications Tab and click Assign applications and assign the Snyk app to the group
+   2. The Snyk app should be present and click on the pencil next to the snyk app\
       ![](https://lh3.googleusercontent.com/X3ARoW\_GPcKqIvrowKVPGnBWgziZ4E87hCIRVXzvLkLXOuLvP9fS5y9D-yaCjyWCmr6Co-\_3JSA2ZS-MdM5gEF9JYRi4Ivid-tnijtkpQstm7XgFbhAlnZnRM9D1DKYUsnHm987R)
-   3. OKTA 그룹과 연결하려는 Snyk 조직 슬러그를 추가합니다(공백이나 대문자가 없어야 합니다.\
+   3. Add the Snyk organization slugs that you want to associate with your OKTA group (there should NOT be any spaces or capital letter(s)\
       ![](https://lh5.googleusercontent.com/74SiCm6xOoCRnG9LEpMCeCCHyJA-8viDYL0yNbh0ZQeIpV8wuharGBXp6aIsJB0P1Zjbkn1g2vFr2EcxYawyfh\_axoGISUewc4fXara8oQ4BTsE8\_wlprwd1Df5CeVlYgGgoOjsj)
-   4. 해당하는 모든 OKTA 그룹에 대해 1-3단계를 반복하고 필요에 따라 Snyk 조직 슬러그를 수정합니다.
+   4. Repeat steps 1-3 for all your applicable OKTA groups, modifying the Snyk organization slug as needed
 6.  **Directory -> People**
 
-    1. 각 개인에 대해 사용자의 애플리케이션 탭으로 이동하여 앱 옆에 있는 연필을 클릭합니다.\
+    1. For each individual, go to the applications tab for the user and click on the pencil next to the app\
        ![](https://lh5.googleusercontent.com/7RnhYZ0E24ZoBXe00Zw9jQW\_WbPye2lciWm2qk3zG03mLY6JbsAY7saY-0b26zEGArnDw46MulIgg9XW7Dw9HCt-EODS5qSZquanpNlmfwDHUYL71BQILAfAYifxHf8UBE0BB3Ww)
-    2. 올바른 사용자 역할 선택\
+    2. Select the right user role\
        ![](https://lh4.googleusercontent.com/XPclvljK5ZsmLx1Cu3odPCFWz0oj4ZRk9ZkdG-gTto3vMWZWtMQ\_ONHVggh-xHL1UkRwId1eJFh8rZwCrbfUGvhKlL9BBzi3U46d3HXYE8YzFMtS8EIJxBljOim5LvSMarKyNXyZ)
 
-    **구현**
+    **Implementation**
 
-    1. Applications로 이동하여 설정한 Snyk 앱을 클릭합니다.
-    2. General Tab -> SAML Settings -> Edit을 클릭하고 다음을 클릭하여 Configure SAML 단계로 이동합니다.
-    3. Attribute Statements-> 이름 형식이 **지정되지 않은** 이름 필드로 **역할**을 설정하고 값은 아래 표현식이 됩니다.\
+    1. Navigate to Applications -> Applications and click on the Snyk app you set
+    2. General Tab -> SAML Settings -> Edit and click next to go to the Configure SAML step
+    3. Attribute Statements-> set **role** as the Name field with Name format **Unspecified** and the Value will be the below expression\
        `appuser.user_role == "groupadmin" ? "snyk-groupadmin" : Arrays.flatten(String.replace(String.replace(String.append("snyk-",String.append(Arrays.toCsvString(appuser.snyk_orgs),"-"+appuser.user_role)),",",",snyk-"),",","-"+appuser.group_user_role+","))`
-    4. Next -> Finish을 클릭합니다.
+    4. Click Next -> Finish\\
 
-    **역할 표현에 대한 설명:**
+    **Explanation of the role expression:**
 
-    역할이 groupadmin이면 표현식은 다른 모든 것을 무시하고 `snyk-groupadmin`만 전달합니다.
+    If the role is groupadmin, the expression will ignore everything else and just pass `snyk-groupadmin`\
+    \`\`
 
-    역할이 groupadmin이 아니면 모든 그룹에 나열된 각 snyk 조직에 대해 표현식이 자동으로 실행됩니다.
+    If role is **not** groupadmin, then for each snyk org listed across all groups the expression will automatically
 
-    1. 접두사 "`snyk-`"를 snyk 조직 슬러그와 연결
-    2. 각 조직 슬러그 끝에 `user_role` 추가
-
-    \
-    따라서 최종 결과의 예는 아래와 같습니다.
+    1. concatenate prefix “`snyk-`” with the snyk org slug
+    2. Append `user_role` at the end of each org slug
 
     \
-    예: `"role": [ "snyk-groupadmin", "snyk-customer-facing-tools-admin", "snyk-internal-tools-admin" ]`
+    So an example end result will look as below
 
-## 구성 2:
+    \
+    Example: `"role": [ "snyk-groupadmin", "snyk-customer-facing-tools-admin", "snyk-internal-tools-admin" ]`
 
-이 구성에서:
+## Configuration 2:
 
-* Okta 그룹은 Snyk 조직에 매핑됩니다.
-* Okta 그룹은 Snyk 조직 구성원 역할에 매핑됩니다.
-* **Snyk의 사용자 역할은 해당 그룹의 모든 구성원에 대해 각 Okta 그룹에 사전 설정되어 있습니다**.
+In this configuration:
 
-1. **Okta의 Snyk 앱에 속성 추가**
+* Okta groups will be mapped to Snyk organizations
+* Okta groups will be mapped to Snyk organization membership roles
+* **The user role in Snyk is pre-set in each Okta group for all members of that group**
+
+1. **Add attributes to your Snyk App in Okta**
    1. Directory -> Profile Editor -> Snyk App
 
 ![](https://lh5.googleusercontent.com/h6ww6L16tTWMVhzoVN5Y72oBo51X-WYidqMAO-pTmUksl7akFrgH463S\_MMAKDGYdQYzVIYlvN0HCF7tlHMyyIqaQgfdoP9PP6UX7RIJhg-9fFtmLdVwM3tgjVj-h97yKBAS4jGl)
@@ -105,38 +106,37 @@
 **2. Add Attribute**\
 ![](https://lh4.googleusercontent.com/R1sr6ZOerCRNxJhGS3ARf0Pebe0dC-tBLP\_80nARDd0LUGTjRY9jA1E-TiTtz4AQvk4aX-pAE\_\_h2S14kgEb6RTSRzZ4O\_1tOcBaCEwpTn2d4HaVuTynjN5D6qE4YSj3LZaiE5WN)
 
-**3. 속성 설정**
+**3. Set Attributes**
 
-1. Data Type: 문자열 배열
-2. Display Name: Snyk 조직
+1. Data Type: string array
+2. Display Name: Snyk Orgs
 3. Variable Name: snyk\_orgs
-4. Group Priority: 그룹 간에 값 결합
+4. Group Priority: Combine values across groups
 5. Save and Add Another
 
 ![](https://lh3.googleusercontent.com/sIXILVtJJeo9wbjzVSEVNmSVPwkMPeUu1j5yeBxi-mBEgwu4Ejn-4d0tZhtUZay2EV0PkN8wSE0uJgON3csAyXCEKVAAcpShqPKdbz\_U1D3ghx5sTCEhBJliRYIIEOf72c3H1TS5)\
 \
 **4. Directory -> Groups**
 
-1. 그룹을 선택하고 애플리케이션 탭으로 이동하여 애플리케이션 할당을 클릭하고 Snyk 앱을 그룹에 할당합니다.
-2. Snyk 앱이 있어야 하고 snyk 앱 옆에 있는 연필을 클릭합니다.\
+1. Select a group and navigate to Applications Tab and click Assign applications and assign the Snyk app to the group
+2. The Snyk app should be present and click on the pencil next to the snyk app\
    ![](https://lh3.googleusercontent.com/X3ARoW\_GPcKqIvrowKVPGnBWgziZ4E87hCIRVXzvLkLXOuLvP9fS5y9D-yaCjyWCmr6Co-\_3JSA2ZS-MdM5gEF9JYRi4Ivid-tnijtkpQstm7XgFbhAlnZnRM9D1DKYUsnHm987R)
-3. OKTA 그룹과 연결하려는 Snyk 조직 슬러그를 추가합니다(공백이나 대문자가 없어야 함 \
-   **NOTE**: 이 구성에서는 이 Snyk 조직 슬러그 할당 내에 역할을 추가합니다.\
+3. Add the Snyk organization slugs that you want to associate with your OKTA group (there should NOT be any spaces or capital letter(s) **NOTE**: In this configuration, you add the role within this Snyk Org Slugs assignment\
    \
    ![](https://lh4.googleusercontent.com/qUN0SI64WQqAGCs2YPrvIW0lyZAyZDnGgpYe\_mXyGIPa2XqgBJJa3DBpg\_qGdoHxXql7kNrzrBkzY7T660es0qGcSH5wSbBw1DANk9f1\_q6SHDQXjxNFKRaVVCuZICVkFbnGYUz6)
-4. 적용 가능한 모든 OKTA 그룹에 대해 1-3단계를 반복합니다. 이렇게 하면 구성된 그룹 내의 각 사용자에게 동일한 orgslug와 역할이 모두 할당됩니다.
+4. Repeat steps 1-3 for all your applicable OKTA groups, as this will assign both the same orgslug and role to each user within the configured group.
 
-### 구현
+### Implementation
 
-1. Applications로 이동하여 설정한 Snyk 앱을 클릭합니다.
-2. General Tab -> SAML Settings -> Edit을 클릭하고 다음을 클릭하여 Configure SAML 단계로 이동합니다.
-3. 지정되지 않은 유형의 "role"이라는 속성 문 설정
-4.  Attribute Statements-> 이름 형식이 **지정되지 않은** 이름 필드로 **역할**을 설정하고 값은 아래 표현식이 됩니다.
+1. Navigate to Applications -> Applications and click on the Snyk app you set
+2. General Tab -> Edit SAML Settings and click next to go to the Configure SAML step
+3. Set an Attribute Statement named “role” of an unspecified type
+4.  Attribute Statements-> set **role** as the Name field with Name format **Unspecified** and the Value will be the below expression.
 
     `Arrays.flatten(String.replace(String.append("snyk-",Arrays.toCsvString(appuser.snyk_orgs)),",",",snyk-"))`
 
-### 값 표현의 설명
+### **Explanation of the value expression**
 
-1.  최종 결과는 아래와 같아야 합니다. **role** 속성의 표현식은 snyk\_orgs 값(- **OR** 포함) 앞에 'snyk'을 자동으로 추가하여 최종 결과가 아래 예와 유사하게 보일 것입니다.\\
+1.  The end result should look like the below. The expression in the **role** attribute automatically adds the 'snyk' in front of the snyk\_orgs value (which contains \<orgslug>-\<role> **OR** \<groupadmin>) such that the end result should look similar to the below example.\\
 
-    예시 결과: `[“snyk-org1-admin”,”snyk-org2-admin”, “snyk-org3-collaborator”,”snyk-org4-collaborator”,”snyk-groupadmin”]`
+    Example result: `[“snyk-org1-admin”,”snyk-org2-admin”, “snyk-org3-collaborator”,”snyk-org4-collaborator”,”snyk-groupadmin”]`
