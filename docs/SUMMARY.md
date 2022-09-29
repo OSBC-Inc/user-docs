@@ -334,7 +334,7 @@
     * [셀프 서비스 SSO (Single Sign-On)](features/user-and-group-management/setting-up-sso-for-authentication/self-serve-single-sign-on-sso.md)
     * [Snyk SSO(Single Sign-On) 설정](features/user-and-group-management/setting-up-sso-for-authentication/set-up-snyk-single-sign-on-sso.md)
     * [사용자 지정 매핑 옵션](features/user-and-group-management/setting-up-sso-for-authentication/custom-mapping-option.md)
-    * [Example: Setting up custom mapping for Okta](features/user-and-group-management/setting-up-sso-for-authentication/example-setting-up-custom-mapping-for-okta.md)
+    * [예: Okta에 대한 사용자 지정 매핑 설정](features/user-and-group-management/setting-up-sso-for-authentication/example-setting-up-custom-mapping-for-okta.md)
     * [Identity Provider (IdP) migration](features/user-and-group-management/setting-up-sso-for-authentication/identity-provider-idp-migration.md)
   * [사용자 및 권한 관리](features/user-and-group-management/managing-users-and-permissions/README.md)
     * [조직의 사용자 관리](features/user-and-group-management/managing-users-and-permissions/manage-users-in-your-organizations.md)
