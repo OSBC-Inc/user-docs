@@ -6,11 +6,11 @@
 
 당신이 할 수 있는 항목은 다음과 같습니다:
 
-* [회원 추가](manage-users-in-your-organizations.md#add-members)
-* [보류 중인 초대 취소](manage-users-in-your-organizations.md#filter-and-search-views)
-* [구성원 역할 변경](manage-users-in-your-organizations.md#change-member-role)
-* [구성원 삭제](manage-users-in-your-organizations.md#delete-members)
-* [보기 필터링 및 정렬](manage-users-in-your-organizations.md#filter-and-search-views)
+* [회원 추가](manage-users-in-your-organizations.md#undefined)
+* [보류 중인 초대 취소](manage-users-in-your-organizations.md#undefined-1)
+* [구성원 역할 변경](manage-users-in-your-organizations.md#undefined-2)
+* [구성원 삭제](manage-users-in-your-organizations.md#undefined-3)
+* [보기 필터링 및 정렬](manage-users-in-your-organizations.md#undefined-4)
 
 {% hint style="info" %}
 이러한 모든 작업을 수행하려면 관련 권한이 필요합니다.\

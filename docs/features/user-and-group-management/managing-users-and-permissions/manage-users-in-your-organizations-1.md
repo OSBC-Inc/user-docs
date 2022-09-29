@@ -18,11 +18,11 @@ As a Group Admin (see [managing-permissions.md](managing-permissions.md "mention
 
 그룹 관리자([managing-permissions.md](managing-permissions.md "mention") 참조)는 다음을 수행할 수 있습니다.
 
-* [그룹 및 조직 구성원 보기](manage-users-in-your-organizations-1.md#view-group-and-org-members)
-* [개별 회원 보기](manage-users-in-your-organizations-1.md#explore-individual-members)
-* [보](manage-users-in-your-organizations-1.md#filter-and-sort-views)
-* [Delete members](manage-users-in-your-organizations-1.md#delete-members)
-* [Promote group member to a group admin](manage-users-in-your-organizations-1.md#undefined)
+* [그룹 및 조직 구성원 보기](manage-users-in-your-organizations-1.md#undefined)
+* [개별 회원 보기](manage-users-in-your-organizations-1.md#undefined-1)
+* [보기 필터링 및 정렬](manage-users-in-your-organizations-1.md#undefined-2)
+* [구성원 삭제](manage-users-in-your-organizations-1.md#undefined-3)
+* [그룹 구성원을 그룹 관리자로 승격](manage-users-in-your-organizations-1.md#undefined-4)
 
 {% hint style="warning" %}
 외부 사용자를 그룹스에 직접 추가할 수 없습니다. 먼저 조직에 추가한 다음 그룹에 추가해야 합니다. 자세한 내용은 [manage-users-in-your-organizations.md](manage-users-in-your-organizations.md "mention")를 참조하십시오.
@@ -30,11 +30,12 @@ As a Group Admin (see [managing-permissions.md](managing-permissions.md "mention
 
 ### 그룹 및 조직 구성원 보기
 
-In the group members page you can find all the members associated with your group, their respective roles and authentication type, and the number of orgs they are members of.
+그룹 구성원 페이지에서 그룹과 연결된 모든 구성원, 해당 역할 및 인증 유형, 구성원인 조직 수를 찾을 수 있습니다.
 
-There are two standard roles available under group level - **Group Member** and **Group Admin**. Group Admins have all permissions at Snyk; see [managing-permissions.md](managing-permissions.md "mention"). However, being a Group Member does not directly grant the user any rights. They need to be added as org members or promoted as Group Admins.
+그룹 수준에서 사용할 수 있는 두 가지 표준 역할(**그룹 구성원** 및 **그룹 관리자**)이 있습니다.\
+그룹 관리자는 Snyk에서 모든 권한을 가집니다. [managing-permissions.md](managing-permissions.md "mention") 참. 그러나 그룹 구성원이 된다고 해서 사용자에게 직접 권한이 부여되는 것은 아닙니다. 조직 구성원으로 추가하거나 그룹 관리자로 승격해야 합니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-04-26%20at%2005.52.57.png)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 ### 개별 회원 보기
 
