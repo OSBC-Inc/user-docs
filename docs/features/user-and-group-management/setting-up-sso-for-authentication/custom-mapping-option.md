@@ -1,44 +1,44 @@
-# Custom Mapping Option
+# 사용자 지정 매핑 옵션
 
-This option allows you to dynamically assign users to your Snyk group(s) and organizations based on data provided by your Identity Provider (IdP) to implement a scaled user provisioning and access model. To understand more about roles and permissions within Snyk, refer to [this](https://docs.snyk.io/features/user-and-group-management/managing-users-and-permissions/managing-permissions) article. Work with your Customer Success Manager to implement this option.
+이 옵션을 사용하면 IdP(Identity Provider)가 제공하는 데이터를 기반으로 Snyk 그룹 및 조직에 사용자를 동적으로 할당하여 확장된 사용자 프로비저닝 및 액세스 모델을 구현할 수 있습니다. Snyk 내 역할 및 권한에 대한 자세한 내용은 [이 문서](../managing-users-and-permissions/managing-permissions.md)를 참조하십시오. 이 옵션을 구현하려면 Customer Success Manager와 협력하십시오.
 
-### Requirements
+### 요구 사항
 
-* Completion of the SSO information worksheet for appropriate IdP located [here](set-up-snyk-single-sign-on-sso.md)
-* A proper configuration of the custom attributes within your IdP to populate the `roles` array mapping ([example](custom-mapping-option.md#example-roles-array-mapping) below)
+* [여기](set-up-snyk-single-sign-on-sso.md)에 있는 해당 IdP에 대한 SSO 정보 워크시트 작성
+* 역할 배열 매핑을 채우기 위한 IdP 내 사용자 정의 속성의 적절한 구성([아래](custom-mapping-option.md#example-roles-array-mapping) 예)
 
-### Understanding roles array mapping
+### 역할 배열 매핑 이해
 
-Within the IdP, you must first pass a custom mapping called `roles` as a string array. [Here is an example document on configuring custom mapping on Okta](https://docs.snyk.io/features/user-and-group-management/setting-up-sso-for-authentication/example-setting-up-custom-mapping-for-okta). Refer to your IdP documentation on how to configure custom mappings for additional IdP providers.  &#x20;
+IdP 내에서 먼저 역할이라는 사용자 지정 매핑을 문자열 배열로 전달해야 합니다. [다음은 Okta에서 사용자 지정 매핑을 구성하는 방법에 대한 예제 문서입니다](example-setting-up-custom-mapping-for-okta.md). 추가 IdP 공급자에 대한 사용자 지정 매핑을 구성하는 방법에 대한 IdP 설명서를 참조하십시오.
 
-### How Snyk handles roles array mapping
+### Snyk이 역할 배열 매핑을 처리하는 방법
 
-To configure this option, we expect you to send the `roles` array within the SAML attributes or OIDC claims to adhere to one of the following patterns:
+이 옵션을 구성하려면 다음 패턴 중 하나를 준수하도록 SAML 속성 또는 OIDC 클레임 내에서 `roles` 배열을 보내야 합니다.
 
 **1. {prefix}-groupadmin**
 
-* This role mapping will assign users with the Group Admin and Org Admin roles
-* **prefix** is present on every role mapping. It is an identifier that allows Snyk to identify which `roles` array values to process. By default, we expect this value to be **snyk**. If another value is required, work with your Customer Success Manager.
-  * Note: **prefix** must be fully lowercase
-* **groupadmin** will configure all users with this role as a Group Admin and Org Admin for all group(s) that the user is assigned to and all orgs that fall under the group(s)
+* 이 역할 매핑은 그룹 관리자 및 조직 관리자 역할을 가진 사용자를 할당합니다.
+* **접두사**는 모든 역할 매핑에 있습니다. Snyk이 처리할 `roles` 배열 값을 식별할 수 있도록 하는 식별자입니다. 기본적으로 이 값은 **snyk**입니다. 다른 값이 필요한 경우 Customer Success Manager와 협력하십시오.
+  * Note: **접두사**는 완전히 소문자여야 합니다.
+* **groupadmin**은 이 역할을 가진 모든 사용자를 사용자가 할당된 모든 그룹과 그룹에 속하는 모든 조직에 대한 그룹 관리자 및 조직 관리자로 구성합니다.
 
-**2.  {prefix}-{groupID}**
+**2. {prefix}-{groupID}**
 
-* This role mapping will assign users with the Org Collaborator roles for all organizations underneath the specified group(s)
-* **groupID** is the ID string for a group in Snyk (This can be found in the snyk URL at the group level)
-  * How to find Group ID: https://app.snyk.io/group/\<Group ID> or Group dropdown -> ![](../../../.gitbook/assets/cog\_icon.png) -> General -> Group ID
+* 이 역할 매핑은 지정된 그룹 아래의 모든 조직에 대해 조직 협력자 역할을 가진 사용자를 할당합니다.
+* **groupID**는 Snyk의 그룹에 대한 ID 문자열입니다(그룹 수준의 snyk URL에서 찾을 수 있음).
+  * Group ID를 찾는 방법: https://app.snyk.io/group/\<Group ID> 또는 Group dropdown -> ![](../../../.gitbook/assets/cog\_icon.png) -> General -> Group ID
 
 **3.** **{prefix}-{orgslug}-{role}**
 
-* This role mapping will assign users with the specified role of Collaborator or Admin for the Snyk organization specified in **orgslug**.&#x20;
-* **orgslug** is the unique identifier of the organization name in Snyk&#x20;
-  * How to find the **orgslug**: https://app.snyk.io/org/{orgslug} OR via our [API ](https://snyk.docs.apiary.io/#reference/groups/list-all-organizations-in-a-group/list-all-organizations-in-a-group)(Note: While the **orgslug** will be the name of the organization for most cases, this may not always be the case)
-  * Note: **orgslug** can be a value of up to 60 characters and must be fully lowercase&#x20;
-* **role** is either **collaborator or admin**
+* 이 역할 매핑은 **orgslug**에 지정된 Snyk 조직에 대해 지정된 협업자 또는 관리자 역할을 가진 사용자를 할당합니다.
+* **orgslug**는 Snyk에서 조직 이름의 고유 식별자입니다.
+  * **orgslug**를 찾는 방법: https://app.snyk.io/org/{orgslug} 또는 [API](https://snyk.docs.apiary.io/#reference/groups/list-all-organizations-in-a-group/list-all-organizations-in-a-group)를 통해 (Note: **orgslug**는 대부분의 경우 조직의 이름이지만 항상 그런 것은 아닙니다.)
+  * Note: **orgslug**는 최대 60자의 값이 될 수 있으며 완전히 소문자여야 합니다.
+* **역할**은 **공동 작업자** 또는 **관리자**입니다.
 
-### Roles array mapping format
+### 역할 배열 매핑 형식
 
-To assign users with Group Admin role use the following format
+그룹 관리자 역할이 있는 사용자를 할당하려면 다음 형식을 사용하십시오.
 
 ```
 {
@@ -48,7 +48,7 @@ To assign users with Group Admin role use the following format
 }
 ```
 
-To assign users with Org Collaborator roles use the following format
+조직 공동 작업자 역할이 있는 사용자를 지정하려면 다음 형식을 사용하십시오.
 
 ```
 {
@@ -58,9 +58,9 @@ To assign users with Org Collaborator roles use the following format
 }
 ```
 
-To assign users as Org Admin or Org Collaborator use the following format for the roles array\
+사용자를 조직 관리자 또는 조직 공동 작업자로 지정하려면 역할 배열에 다음 형식을 사용하십시오.\
 \
-Note: You can assign different roles at a per-org basis. Example below will assign a user as Org Admin in the **orgslug** org but a Collaborator in the **orgslug2** org
+Note: 조직별로 다른 역할을 할당할 수 있습니다. 아래 예에서는 사용자를 **orgslug** 조직의 조직 관리자로 할당하지만 **orgslug2** 조직의 공동 작업자를 할당합니다.
 
 ```
 {
@@ -71,19 +71,19 @@ Note: You can assign different roles at a per-org basis. Example below will assi
 }
 ```
 
-### Example roles array mapping
+### 역할 배열 매핑의 예
 
-The following example will show how to assign roles to Snyk users under the mapping convention.
+다음 예는 매핑 규칙에 따라 Snyk 사용자에게 역할을 할당하는 방법을 보여줍니다.
 
-* The customer is named ABC and has one group called ABC
-* The customer has 3 organizations within Snyk: Application-SecurityScanner1, Partner-Plugins, and Application-Payments
-* The customer has 4 teams: Business Development, Engineering, Security, and Product that have different needs:
-  * Business Development team will need access to the ABC group and only the Partner-Plugins organization as Org Admin
-  * Engineering will need access to the ABC group, the Application-SecurityScanner1 organization as Org Admin**,** Partner-Plugins organization as Org Admin, and Application-Payments as Org Collaborator
-  * Security will need access to the ABC group as Group Admin and all 3 organizations as Org Admin
-  * Product team will need access to the ABC group and all 3 organizations as Org Collaborator
+* 고객의 이름은 ABC이고 ABC라는 그룹이 하나 있습니다.
+* 고객은 Snyk 내에 Application-SecurityScanner1, Partner-Plugins 및 Application-Payments의 3개 조직이 있습니다.
+* 고객은 서로 다른 요구를 가진 비즈니스 개발, 엔지니어링, 보안 및 제품의 4개 팀이 있습니다.:
+  * 비즈니스 개발 팀은 ABC 그룹에 액세스할 수 있어야 하며 Partner-Plugins 조직만 Org Admin으로 액세스해야 합니다.
+  * 엔지니어링은 ABC 그룹, Application-SecurityScanner1 조직을 Org Admin으로, Partner-Plugins 조직을 Org Admin으로, Application-Payments를 Org Collaborator로 액세스해야 합니다.
+  * 보안은 그룹 관리자로 ABC 그룹에 액세스하고 조직 관리자로 3개 조직 모두에 액세스해야 합니다.
+  * 제품 팀은 조직 협력자로서 ABC 그룹 및 3개 조직 모두에 액세스할 수 있어야 합니다.
 
-For the Business Development Team, we will be using the {prefix}-{orgslug}-{role} mapping
+비즈니스 개발 팀의 경우 {prefix}-{orgslug}-{role} 매핑을 사용합니다.
 
 ```
 {
@@ -93,7 +93,7 @@ For the Business Development Team, we will be using the {prefix}-{orgslug}-{role
 }
 ```
 
-For Engineering Team, we will be using the {prefix}-{orgslug}-{role} mapping
+엔지니어링 팀의 경우 {prefix}-{orgslug}-{role} 매핑을 사용합니다.
 
 ```
 {
@@ -105,7 +105,7 @@ For Engineering Team, we will be using the {prefix}-{orgslug}-{role} mapping
 }
 ```
 
-For Security Team, we will be using the {prefix}-groupadmin mapping
+보안 팀의 경우 {prefix}-groupadmin 매핑을 사용합니다.
 
 ```
 {
@@ -115,7 +115,7 @@ For Security Team, we will be using the {prefix}-groupadmin mapping
 }
 ```
 
-For Product Team, we will be using the {prefix}-{groupID} mapping, where the value of groupID would need to be inserted
+제품 팀의 경우 groupID 값을 삽입해야 하는 {prefix}-{groupID} 매핑을 사용할 것입니다.
 
 ```
 {
@@ -125,7 +125,6 @@ For Product Team, we will be using the {prefix}-{groupID} mapping, where the val
 }
 ```
 
-### Summary Diagram of Roles under Custom Mapping
+### 사용자 지정 매핑의 역할 요약 다이어그램
 
 ![](../../../.gitbook/assets/custom-mapping-screenshot.png)
-
