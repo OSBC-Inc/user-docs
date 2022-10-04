@@ -14,31 +14,31 @@
 
 사용자의 역할을 변경하려면:
 
-1. Click on the **Members** tab in the Snyk Web UI (example link: **https://app.snyk.io/org/your-org-name/manage/members**)
-2. Find the member to update
-3. Update the role for that member, using the dropdown next to role
+1. Snyk 웹 UI에서 Members 탭을 클릭합니다(예제 링크: **https://app.snyk.io/org/your-org-name/manage/members**)
+2. 업데이트할 구성원 찾기
+3. 역할 옆에 있는 드롭다운을 사용하여 해당 구성원의 역할을 업데이트합니다.
 
-### Permissions per role
+### 역할별 권한
 
-| User permissions                               | Group Administrator | Organization Administrator | Organization Collaborator |
-| ---------------------------------------------- | ------------------- | -------------------------- | ------------------------- |
-| Add/delete projects                            | x                   | x                          | x                         |
-| Update project with new snapshot               | x                   | x                          | x                         |
-| Open fix PR's                                  | x                   | x                          | x                         |
-| Delete snapshot from project history           | x                   | x                          | x                         |
-| Invite/remove team members                     | x                   | x                          |                           |
-| Change team members’ roles                     | x                   | x                          |                           |
-| Create an org level service account\*          | x                   | x                          |                           |
-| Manage plans and billing for this organization | x                   | x                          |                           |
-| Leave organization                             | x                   | x                          | x                         |
-| Delete organization                            | x                   | x                          |                           |
-| View organization reporting                    | x                   | x                          | x                         |
-| Create an organization                         | x                   |                            |                           |
-| Create group level Service accounts\*          | x                   |                            |                           |
-| Set a License policy\*                         | x                   |                            |                           |
-| Set a Security policy\*\*                      | x                   |                            |                           |
-| Set global notifications preferences           | x                   |                            |                           |
-| Access to the account overall reporting        | x                   |                            |                           |
+| 사용자 권한             | 그룹 관리자 | 조직 관리자 | 조직 협력자 |
+| ------------------ | ------ | ------ | ------ |
+| 프로젝트 추가/삭제         | x      | x      | x      |
+| 새 스냅샷으로 프로젝트 업데이트  | x      | x      | x      |
+| 수정 PR 열기           | x      | x      | x      |
+| 프로젝트 기록에서 스냅샷 삭제   | x      | x      | x      |
+| 팀원 초대/제거           | x      | x      |        |
+| 팀원의 역할 변경          | x      | x      |        |
+| 조직 수준 서비스 계정 만들기\* | x      | x      |        |
+| 이 조직의 요금제 및 청구 관리  | x      | x      |        |
+| 조직 탈퇴              | x      | x      | x      |
+| 조직 삭제              | x      | x      |        |
+| 조직 보고 보기           | x      | x      | x      |
+| 조직 만들기             | x      |        |        |
+| 그룹 수준 서비스 계정 생성\*  | x      |        |        |
+| 라이선스 정책 설정\*       | x      |        |        |
+| 보안 정책 설정\*\*       | x      |        |        |
+| 전역 알림 기본 설정 지정     | x      |        |        |
+| 계정 전체 보고에 대한 액세스   | x      |        |        |
 
-(\*) Only in paid accounts\
-(\*\*) Only in Enterprise Plan
+(\*) 유료 계정에서만\
+(\*\*) 엔터프라이즈 플랜에서만
