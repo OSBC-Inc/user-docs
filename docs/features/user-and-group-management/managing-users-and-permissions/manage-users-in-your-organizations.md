@@ -17,7 +17,7 @@
 [managing-permissions.md](managing-permissions.md "mention")를 참조하십시오
 {% endhint %}
 
-### 회원 추가
+### 구성원 추가
 
 조직에 새 사용자를 추가하려면 **Add members**를 클릭합니다:
 

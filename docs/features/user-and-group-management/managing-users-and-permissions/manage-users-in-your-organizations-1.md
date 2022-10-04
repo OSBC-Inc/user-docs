@@ -39,45 +39,43 @@ As a Group Admin (see [managing-permissions.md](managing-permissions.md "mention
 
 ### 개별 회원 보기
 
-Click on each member to view more details about their memberships.
+각 회원을 클릭하면 회원에 대한 자세한 내용을 볼 수 있습니다.
 
-If the user is a **Group Member**, you can see their role for each of the orgs they are a member of. You can filter by role since a Group Member can have different roles for different orgs. You can also remove the user from the group or orgs by invoking the respective delete buttons.
+사용자가 **그룹 구성원**인 경우 구성원인 각 조직에 대한 역할을 볼 수 있습니다. 그룹 구성원은 조직마다 다른 역할을 가질 수 있으므로 역할별로 필터링할 수 있습니다. 해당 삭제 버튼을 호출하여 그룹 또는 조직에서 사용자를 제거할 수도 있습니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-04-26%20at%2006.28.53.png)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
-For a **Group Admin**, they are by default added as Org Admin across all Organizations in your Group. You cannot change a group admin's role for a specific org, or delete them from one or more orgs. However, you can remove a group admin from the group using the **Remove from group** option.
-
-![](../../../.gitbook/assets/Screenshot%202022-04-26%20at%2006.24.09.png)
+**그룹 관리자**의 경우 기본적으로 그룹의 모든 조직에서 조직 관리자로 추가됩니다. 특정 조직에 대한 그룹 관리자의 역할을 변경하거나 하나 이상의 조직에서 삭제할 수 없습니다. 그러나 그룹에서 제거 옵션을 사용하여 그룹에서 **그룹 관리자를 제거**할 수 있습니다.
 
 ### 보기 필터링 및 정렬
 
-#### Filter views
+**보기 필터링**
 
 Click the filter icon (<img src="../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.47.59.png" alt="" data-size="line">) to expand the filter sidebar, to filter members displayed, by role or authentication method:
 
-![](../../../.gitbook/assets/Screenshot%202022-04-26%20at%2006.33.04.png)
+![](<../../../.gitbook/assets/Screenshot 2022-04-26 at 06.33.04.png>)
 
-#### Sort views
+**보기 정렬**
 
-You can sort by Name, Authentication method, Role, and Date joined.
+이름, 인증 방법, 역할, 가입 날짜별로 정렬할 수 있습니다.
 
-You can sort user views by clicking on the column heading:
+열 머리글을 클릭하여 사용자 보기를 정렬할 수 있습니다:
 
-![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2009.01.07.png)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-06ff515c5fc71e1a8bcc045d0803b12ee54e23fb\_Screenshot 2022-03-11 at 09.01.07 (1).png>)
 
 ### 구성원 삭제
 
-To delete a member from the group:
+그룹에서 구성원을 삭제하려면:
 
-1. Click the ![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.05.56.png) icon next to the user.
-2. Click **Delete member from** _**your group's name**_ when prompted.
+1. 사용자 옆에 있는 ![](../../../.gitbook/assets/Screenshot%202022-03-11%20at%2008.05.56.png) 아이콘을 클릭합니다.
+2. 메시지가 표시되면 **Delete member from** _**your group's name**_를 클릭합니다.
 
 ### 그룹 구성원을 그룹 관리자로 승격
 
-You can promote a Group Member to a Group Admin by selecting the role dropdown next to them and choosing the Group Admin role.
+그룹 구성원 옆에 있는 역할 드롭다운을 선택하고 그룹 관리자 역할을 선택하여 그룹 구성원을 그룹 관리자로 승격할 수 있습니다.
 
-![](../../../.gitbook/assets/Screenshot%202022-04-26%20at%2006.40.05.png)
+![](<../../../.gitbook/assets/Screenshot 2022-08-09 at 12.40.00.png>)
 
 {% hint style="warning" %}
-If the user is not already a part of your group, you must first add that user as a member of at least one org; see [Add Members](manage-users-in-your-organizations.md#add-members). The user then appears here with the role as Group Member, so you can then promote the user to Group Admin.
+사용자가 아직 그룹의 일부가 아닌 경우 먼저 해당 사용자를 하나 이상의 조직 구성원으로 추가해야 합니다. [구성원 추가](manage-users-in-your-organizations.md#undefined)를 참조하십시오. 그러면 사용자가 그룹 구성원 역할로 여기에 나타나므로 사용자를 그룹 관리자로 승격할 수 있습니다.
 {% endhint %}
