@@ -1,34 +1,33 @@
-# Session length
+# 세션 길이
 
-To ensure your account is safe from being inadvertently exposed through inactive users, once a user logs into their account and is then inactive for 30 consecutive days, they are automatically logged out and need to re-enter their credentials in order to log back in.
+비활성 사용자를 통해 계정이 부주의하게 노출되는 것을 방지하기 위해 사용자가 계정에 로그인한 후 연속 30일 동안 비활성 상태이면 자동으로 로그아웃되며 다시 로그인하려면 자격 증명을 다시 입력해야 합니다.
 
-To configure the session expiration length, change this setting from the Group level settings. The length can be configured to a maximum of 30 days and a minimum of 5 minutes.
+세션 만료 길이를 구성하려면 그룹 수준 설정에서 이 설정을 변경합니다. 기간은 최대 30일, 최소 5분으로 구성할 수 있습니다.
 
-Once configured, recording and tracking of session length and expiration initiate either when the user logs into the site or within 60 seconds of making the change - whichever comes first. Additionally, a user who is a member of multiple groups, each of which has a different session length configured, always receives the most restrictive session length - they are always automatically logged out based on the group configured with the shortest configured session length.
+일단 구성되면 세션 길이 및 만료에 대한 기록 및 추적은 사용자가 사이트에 로그인할 때 또는 변경을 수행한 후 60초 이내에(둘 중 먼저 도래하는 시점) 시작됩니다. 또한 각각 다른 세션 길이가 구성된 여러 그룹의 구성원인 사용자는 항상 가장 제한적인 세션 길이를 수신합니다. 이들은 가장 짧은 구성된 세션 길이로 구성된 그룹을 기반으로 항상 자동으로 로그아웃됩니다.
 
-You can configure the session length expiration through the web-based user interface as well as from our API.
+웹 기반 사용자 인터페이스와 API를 통해 세션 길이 만료를 구성할 수 있습니다.
 
-## Configure session length for a Snyk group
+## Snyk 그룹의 세션 길이 구성
 
-The default session length that is applied for members of a group is 30 days. Group admins can change this value to any value between 30 days and a minimum of 5 minutes.
+그룹 구성원에게 적용되는 기본 세션 길이는 30일입니다. 그룹 관리자는 이 값을 30일에서 최소 5분 사이의 값으로 변경할 수 있습니다.
 
-**Prerequisites**
+**전제 조건**
 
-You must be an administrator of the group in order to update the session length.
+세션 길이를 업데이트하려면 그룹의 관리자여야 합니다.
 
 {% hint style="info" %}
-**Feature availability**  
-This feature is available to plans that support groups. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 가용성**\
+이 기능은 그룹을 지원하는 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
 {% endhint %}
 
-**Steps**
+**단계**
 
-1. Log in to your Snyk account and navigate to the group for which you’d like to configure session length.
-2. Navigate to **Settings** to update the Group settings.
-3. From the **Session expiration** area, enter values for the session length. valid value ranges are as follows:
+1. Snyk 계정에 로그인하고 세션 길이를 구성하려는 그룹으로 이동합니다.
+2. **Settings** 로 이동하여 그룹 설정을 업데이트합니다.
+3. **세션 만료** 영역에서 세션 길이 값을 입력합니다. 유효한 값 범위는 다음과 같습니다:
    1. Days - 0-30
    2. Hours - 0-23
-   3. Minutes - 0-59 
+   3. Minutes - 0-59
 
 ![](../../../.gitbook/assets/uuid-21093b2a-7003-b47a-cb62-2e6dd147323e-en.png)
-
