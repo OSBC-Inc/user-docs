@@ -1,20 +1,19 @@
-# Snyk groups overview
+# Snyk 그룹 개요
 
-The group overview area allows you to view reports across all of your group’s organizations, and configure your group settings.
+그룹 개요 영역에서는 그룹의 모든 조직에 대한 보고서를 보고 그룹 설정을 구성할 수 있습니다.
 
-## Settings
+## 설정
 
-Within the group overview, you can also view all of a group’s members. Note that these aren’t members of your organizations \(who are managed within the organization’s settings area\), but are members who can access all organizations within that group.
+그룹 개요 내에서 그룹의 모든 구성원을 볼 수도 있습니다. 이들은 조직의 구성원(조직의 설정 영역 내에서 관리됨)이 아니라 해당 그룹 내의 모든 조직에 액세스할 수 있는 구성원입니다.
 
-## Combined reports
+## 결합된 보고서
 
-From the group overview, the vulnerability status of all of a group’s organizations are visible in one place as a report. You can select which organizations you wish to compare via the filter dropdown. This will set the context for all the tabs within the reports, where you can continue to filter other values such as type, status and package manager.
+그룹 개요에서 그룹 내 모든 조직의 취약점 현황을 보고서로 한 곳에서 볼 수 있습니다. 필터 드롭다운을 통해 비교할 조직을 선택할 수 있습니다. 이렇게 하면 보고서 내의 모든 탭에 대한 컨텍스트가 설정되며, 여기서 유형, 상태 및 패키지 관리자와 같은 다른 값을 계속 필터링할 수 있습니다.
 
-![](../../../.gitbook/assets/screen_shot_2021-07-02_at_2.07.01_pm.png)
+![](../../../.gitbook/assets/screen\_shot\_2021-07-02\_at\_2.07.01\_pm.png)
 
-## Organization filters
+## 조직 필터
 
-Organization filters can be created, saved, and selected quickly via the **Organization Filters** dropdown.
+조직 필터 드롭다운을 통해 조직 필터를 빠르게 생성, 저장 및 선택할 수 있습니다.
 
-![](../../../.gitbook/assets/screen_shot_2021-07-02_at_2.05.50_pm.png)
-
+![](../../../.gitbook/assets/screen\_shot\_2021-07-02\_at\_2.05.50\_pm.png)

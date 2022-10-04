@@ -1,11 +1,11 @@
-# What’s a Snyk group?
+# Snyk 그룹이란 무엇입니까?
 
 {% hint style="info" %}
-**Feature availability**  
-This feature is available with Enterprise and Business plans. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 가용성**
+
+이 기능은 엔터프라이즈 및 비즈니스 플랜에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
 {% endhint %}
 
-Groups is a feature that makes it easier for you to work within teams. Groups can hold many organizations, and each organization can contain many collaborators.
+그룹은 팀 내에서 더 쉽게 작업할 수 있도록 하는 기능입니다. 그룹에는 많은 조직이 포함될 수 있으며 각 조직에는 많은 공동 작업자가 포함될 수 있습니다.
 
-As well as creating organizations within your enterprise groups, you can also create them within your own personal group. This is ideal if you want to monitor your own personal projects outside of your enterprise’s group, or if you want a sandbox to play with.
-
+기업 그룹 내에서 조직을 생성할 뿐만 아니라 자신의 개인 그룹 내에서 조직을 생성할 수도 있습니다. 이는 기업 그룹 외부에서 자신의 개인 프로젝트를 모니터링하거나 샌드박스를 사용하려는 경우에 이상적입니다.

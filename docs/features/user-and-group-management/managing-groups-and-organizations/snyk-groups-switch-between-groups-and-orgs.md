@@ -1,8 +1,7 @@
-# Snyk groups: switch between groups and orgs
+# Snyk 그룹: 그룹과 조직 간 전환
 
-To access your groups and organizations, click on the navigation switcher. The avatars displayed on the left are your groups, and the list on the right are the organizations that are within the group.
+그룹 및 조직에 액세스하려면 탐색 전환기를 클릭하십시오. 왼쪽에 표시되는 아바타는 그룹이고 오른쪽 목록은 그룹에 속한 조직입니다.
 
 ![](../../../.gitbook/assets/uuid-d545d830-f327-12cc-11ae-0c354b49b29d-en.png)
 
-Clicking the avatar on the bottom of the switcher will display the organizations within your personal group. \(This may not be visible to you depending on your enterprise’s setup.\)
-
+전환기 하단의 아바타를 클릭하면 개인 그룹 내의 조직이 표시됩니다. (기업 설정에 따라 보이지 않을 수 있습니다.)

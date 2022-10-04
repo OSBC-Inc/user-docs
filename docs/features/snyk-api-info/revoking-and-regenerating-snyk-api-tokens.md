@@ -8,6 +8,6 @@ API 토큰이 유출된 것으로 의심될 경우 이를 취소하고 대신 �
 
 Snyk 사용자 API 토큰을 취소하려면 [app.snyk.io/account](https://app.snyk.io/account)에서 Snyk 웹 UI의 User Account Settings로 이동하십시오.
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 API 토큰을 해지하려면 **Revoke & Regenerate** 버튼을 클릭하십시오. 대신 새로운 토큰이 생성됩니다. 이제 새로 생성된 API 토큰을 가져와 이전 키를 사용한 통합을 업데이트할 수 있습니다.

@@ -1,11 +1,11 @@
-# What’s a Snyk organization?
+# Snyk 조직이란 무엇입니까?
 
-An organization groups projects, and can have team members who can access these projects.
+조직은 프로젝트를 그룹화하고 이러한 프로젝트에 액세스할 수 있는 팀 구성원을 가질 수 있습니다.
 
-When you sign up to Snyk, you’ll see you have a default organization, named like your GitHub username. Any projects you add via the CLI or via GitHub integration will appear in this organization by default.
+Snyk에 가입하면 GitHub 사용자 이름과 같은 이름의 기본 조직이 있는 것을 볼 수 있습니다. CLI 또는 GitHub 통합을 통해 추가하는 모든 프로젝트는 기본적으로 이 조직에 표시됩니다.
 
-You can create an organization, or join one via invitation. If you have more than one organization, you can switch between organizations via the web UI or in the CLI.
+조직을 만들거나 초대를 통해 조직에 가입할 수 있습니다. 조직이 두 개 이상인 경우 웹 UI 또는 CLI를 통해 조직 간에 전환할 수 있습니다.
 
-Notifications about newly disclosed vulnerabilities are per organization; you can turn them on and off per organization.
+새로 공개된 취약점에 대한 알림은 조직별로 제공됩니다. 조직별로 켜고 끌 수 있습니다.
 
 ![](<../../../.gitbook/assets/Group Onboarding Session v2.0.png>)

@@ -69,4 +69,4 @@ CLI에서 각 목록(업그레이드 및 패치)에 대해 다음을 포함하�
 
 ![](../../../.gitbook/assets/uuid-1afca091-a9a5-d42c-40b6-f48aa0e72584-en.png)
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1).png>)

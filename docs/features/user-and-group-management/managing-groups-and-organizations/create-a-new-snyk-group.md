@@ -1,4 +1,3 @@
-# Create a new Snyk group
+# 새 Snyk 그룹 만들기
 
-As part of your Snyk on-boarding, we will set you up with a group for your enterprise. You can then add your enterprise’s organizations to the group. If you think you will need multiple groups email support@snyk.io
-
+Snyk 온보딩의 일환으로 귀사를 위한 그룹을 설정해 드립니다. 그런 다음 기업의 조직을 그룹에 추가할 수 있습니다. 여러 그룹이 필요하다고 생각되면 support@snyk.io로 이메일을 보내십시오.
