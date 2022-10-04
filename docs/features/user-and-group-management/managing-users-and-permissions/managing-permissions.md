@@ -1,18 +1,18 @@
-# Managing permissions
+# 권한 관리
 
 {% hint style="info" %}
-**Feature availability**\
-Our free subscription plan allows you to send up to 200 pending invitations every 7 days, and only has administrator roles. Enterprise plans have administrators and collaborators.\
-See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 가용성**
+
+무료 구독 플랜을 사용하면 7일마다 최대 200개의 보류 중인 초대를 보낼 수 있으며 관리자 역할만 있습니다. 엔터프라이즈 플랜에는 관리자와 공동 작업자가 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
 {% endhint %}
 
-To edit permissions, you will need the relevant permissions yourself--for example, only group admins can assign other users as group admins.
+권한을 편집하려면 관련 권한이 스스로 필요합니다. 예를 들어 그룹 관리자만 다른 사용자를 그룹 관리자로 지정할 수 있습니다.
 
-If your company currently does not have any group admins you will need to ask Snyk [support](https://support.snyk.io/hc/en-us/requests/new) to promote at least one user.
+회사에 현재 그룹 관리자가 없는 경우 [Snyk 지원](https://support.snyk.io/hc/en-us/requests/new)에 최소 한 명의 사용자를 승격하도록 요청해야 합니다.
 
-### Changing roles
+### 역할 변경
 
-To change roles for a user:
+사용자의 역할을 변경하려면:
 
 1. Click on the **Members** tab in the Snyk Web UI (example link: **https://app.snyk.io/org/your-org-name/manage/members**)
 2. Find the member to update

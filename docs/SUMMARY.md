@@ -339,7 +339,7 @@
   * [사용자 및 권한 관리](features/user-and-group-management/managing-users-and-permissions/README.md)
     * [조직의 사용자 관리](features/user-and-group-management/managing-users-and-permissions/manage-users-in-your-organizations.md)
     * [그룹의 사용자 관리](features/user-and-group-management/managing-users-and-permissions/manage-users-in-your-organizations-1.md)
-    * [Managing permissions](features/user-and-group-management/managing-users-and-permissions/managing-permissions.md)
+    * [권한 관리](features/user-and-group-management/managing-users-and-permissions/managing-permissions.md)
     * [Organization access requests](features/user-and-group-management/managing-users-and-permissions/organization-access-requests.md)
     * [Session length](features/user-and-group-management/managing-users-and-permissions/session-length.md)
     * [Switch between Snyk organizations](features/user-and-group-management/managing-users-and-permissions/switch-between-snyk-organization.md)
