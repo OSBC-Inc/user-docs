@@ -1,29 +1,29 @@
-# Organization access requests
+# 조직 액세스 요청
 
-Organization access requests allow users to request access to a Snyk org of which they are not a member thus to which they have no access.. Administrators are notified of the new request by email, and can choose to invite the user to join the organization.
+조직 액세스 요청을 통해 사용자는 자신이 구성원이 아니므로 액세스 권한이 없는 Snyk 조직에 대한 액세스를 요청할 수 있습니다. 관리자는 이메일로 새 요청을 통지받고 조직에 가입하도록 사용자를 초대하도록 선택할 수 있습니다.
 
-The most common routes for users to reach the address of an org of which they are not a member include:
+사용자가 구성원이 아닌 조직의 주소에 도달하는 가장 일반적인 경로는 다음과 같습니다:
 
-* Someone sharing a link
-* Clicking through to Snyk for a pull request Snyk has raised
+* 링크를 공유하는 사람
+* Snyk이 제기한 pull 요청을 위해 Snyk를 클릭합니다.
 * Clicking through from a status check from Snyk on any pull request in the repository
 
-**💡 If you find yourself having to request access to an org you have access to, it may be because you logged in with a different authentication method than you usually use.** [**Find out more**](https://support.snyk.io/hc/en-us/articles/360001649558-Unable-to-display-this-organization)
+**💡**액세스 권한이 있는 조직에 대한 액세스를 요청해야 하는 경우 일반적으로 사용하는 것과 다른 인증 방법으로 로그인했기 때문일 수 있습니다**.** [**추가 정보**](https://support.snyk.io/hc/en-us/articles/360001649558-Unable-to-display-this-organization)
 
-## How organization access requests work
+## 조직 액세스 요청 작동 방식
 
-A user browses to an address for a Snyk organization and sees a message that they "either do not have access or the organization does not exist".
+사용자가 Snyk 조직의 주소를 탐색하고 "액세스 권한이 없거나 조직이 존재하지 않습니다"라는 메시지를 봅니다.
 
-When request access is enabled for an organization and a non-member reaches a valid URL for a project or status check result, the user can request access.
+기관에 대한 접근 요청이 활성화되어 있고 비회원이 프로젝트 또는 상태 확인 결과에 대한 유효한 URL에 도달하면 사용자는 접근을 요청할 수 있습니다.
 
-**💡 Only a valid URL for a project or status check allows a user to request access. Any other URL continues to inform the user that they "either do not have access or the organization does not exist". This prevents users from requesting access or getting confirmation that Snyk is in use by a company by guessing a URL.**
+**💡 프로젝트 또는 상태 확인에 대한 유효한 URL만 사용자가 액세스를 요청할 수 있습니다. 다른 URL은 계속해서 사용자에게 "액세스 권한이 없거나 조직이 존재하지 않습니다"라고 알립니다. 이렇게 하면 사용자가 URL을 추측하여 회사에서 Snyk를 사용하고 있다는 확인을 받거나 액세스를 요청하는 것을 방지할 수 있습니다.**
 
-A user can only request access once per organization in 48 hours.
+사용자는 48시간 동안 조직당 한 번만 액세스를 요청할 수 있습니다.
 
-Once a user requests access, all administrators of the org are notified by email, and can opt to send an invitation to the user by email.
+사용자가 액세스를 요청하면 조직의 모든 관리자에게 이메일 알림이 전송되고 이메일로 사용자에게 초대장을 보내도록 선택할 수 있습니다.
 
-Once the requester accepts the invitation they have access to the org.
+요청자가 초대를 수락하면 조직에 액세스할 수 있습니다.
 
-## Settings
+## 설정
 
-Request access can be enabled or disabled at either the Snyk organization level or for an entire group on the **Members** page in either the org or group settings.
+요청 액세스는 Snyk 조직 수준에서 또는 조직 또는 그룹 설정의 **구성원** 페이지에서 전체 그룹에 대해 활성화 또는 비활성화할 수 있습니다.
