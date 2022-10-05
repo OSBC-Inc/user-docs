@@ -1,18 +1,18 @@
-# 설정 관리
+# Managing settings
 
-최상위 메뉴 표시줄에서 설정 아이콘(![](../../../.gitbook/assets/cog\_icon.png))을 클릭하여 조직에 대한 Snyk 설정을 보고 액세스합니다.
+Click the Settings icon (![](../../../.gitbook/assets/cog\_icon.png)) from the top-level menu bar to view and access Snyk settings for your org:
 
 ![](../../../.gitbook/assets/Settings.png)
 
-설정에는 다음이 포함됩니다:
+Settings include:
 
 * General
-* [Integrations](../../integrations/)
+* [Integrations](https://docs.snyk.io/integrations)
 * [Languages](../../../products/snyk-open-source/language-and-package-manager-support/)
-* [Snyk Code](../../../snyk-products/snyk-code/)
-* [Infrastructure as Code](../../../snyk-products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/)
-* [Usage](usage-page-details.md)
+* [Snyk Code](https://docs.snyk.io/snyk-code)
+* [Infrastructure as Code](https://docs.snyk.io/snyk-infrastructure-as-code)
+* [Usage](https://docs.snyk.io/user-and-group-management/managing-settings/usage-page-details)
 * Your plan and billing
 * Plans and pricing
-* [Notifications](../notifications/)
+* [Notifications](https://docs.snyk.io/user-and-group-management/notifications/notification-management)
 * [Snyk Preview](snyk-preview.md)

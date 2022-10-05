@@ -353,7 +353,7 @@
     * [Snyk 조직 관리](features/user-and-group-management/managing-groups-and-organizations/manage-snyk-organizations.md)
   * [알림 관리](features/user-and-group-management/notifications/README.md)
   * [설정 관리](features/user-and-group-management/managing-settings/README.md)
-    * [Usage page details](features/user-and-group-management/managing-settings/usage-page-details.md)
+    * [사용 페이지 세부정보](features/user-and-group-management/managing-settings/usage-page-details.md)
     * [Snyk Preview](features/user-and-group-management/managing-settings/snyk-preview.md)
 * [Issue 해결 및 우선순위 지정](features/fixing-and-prioritizing-issues/README.md)
   * [취약점 수정 시작](features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/README.md)
