@@ -1,29 +1,29 @@
-# Managing notifications
+# 알림 관리
 
-### Introduction
+### 소개
 
-By default, Snyk emails you when a new issue or fix in a project’s dependencies is found and provides you with a weekly update of your security status across your organization. You can customize the content of these emails in your account settings. If you’re an organization administrator, you can also set email notification defaults for all the members within it.
+기본적으로 Snyk은 프로젝트 종속성에서 새로운 문제나 수정 사항이 발견되면 이메일을 보내며 조직 전체의 보안 상태에 대한 주간 업데이트를 제공합니다. 계정 설정에서 이러한 이메일의 내용을 사용자 지정할 수 있습니다. 조직 관리자인 경우 조직 내의 모든 구성원에 대한 이메일 알림 기본값을 설정할 수도 있습니다.
 
 ![](<../../../.gitbook/assets/image (48).png>)
 
-### Setting email defaults for all members of an organization
+### 조직의 모든 구성원에 대한 이메일 기본값 설정
 
-To customize the emails all your organization’s members receive, head over to your organization settings area. customizing options here will trickle down to all of your organization’s members. However, a member of this organization can override these default settings in their own account settings if they wish.
+조직의 모든 구성원이 받는 이메일을 사용자 지정하려면 조직 설정 영역으로 이동하세요. 여기에서 옵션을 사용자 지정하면 조직의 모든 구성원에게 전달됩니다. 그러나 이 조직의 구성원은 원하는 경우 자신의 계정 설정에서 이러한 기본 설정을 재정의할 수 있습니다.
 
 ![](../../../.gitbook/assets/uuid-bf4252a7-0709-e717-2634-30bce2ff4765-en.png)
 
-### Project level customization
+### 프로젝트 수준 사용자 정의
 
-You can also refine the types of emails you receive for each project in your account settings. A new project will inherit the notification defaults for the organization it belongs to, so we recommend setting blanket rules for your orgs (which new projects in that org will inherit), which you can then override on a per-project basis.
+계정 설정에서 각 프로젝트에 대해 수신하는 이메일 유형을 세분화할 수도 있습니다. 새 프로젝트는 속한 조직의 알림 기본값을 상속하므로 조직에 대한 총괄 규칙(해당 조직의 새 프로젝트가 상속할 것)을 설정하는 것이 좋습니다. 그런 다음 프로젝트별로 재정의할 수 있습니다.
 
 ![](../../../.gitbook/assets/uuid-8d00c193-1f5d-c062-3d59-41ddc6499626-en.png)
 
-### Customizing emails by type and severity level
+### 유형 및 심각도 수준별로 이메일 사용자 정의
 
-If your plan includes licenses, you can choose which email type you receive in your account settings. If you only want to be emailed about high severity issues, this is also possible, both on the project level and org level.
+플랜에 라이선스가 포함된 경우 계정 설정에서 수신할 이메일 유형을 선택할 수 있습니다. 심각도가 높은 문제에 대해서만 이메일을 받고 싶다면 프로젝트 수준과 조직 수준 모두에서 가능합니다.
 
-**More granularity**
+**세분화 여부**
 
-As well as being able to tailor the emails you get about issues, you can also customize the other types of core emails, such as whether you want weekly reports, whether you want to be alerted when you are approaching your test limit (on the free plan), and whether you want to be notified when a test report for a serverless project has been generated and is ready to view.
+문제에 대해 받는 이메일을 맞춤설정할 수 있을 뿐만 아니라 주간 보고서를 원하는지 여부, 테스트 한도에 도달했을 때 알림을 받을지 여부(무료 계획) 및 서버리스 프로젝트에 대한 테스트 보고서가 생성되어 볼 준비가 되었을 때 알림을 받을지 여부.
 
 ![Introduct](../../../.gitbook/assets/uuid-0adf4f70-019d-008a-9bde-82317eba2e44-en.png)
