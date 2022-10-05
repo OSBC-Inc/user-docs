@@ -1,44 +1,46 @@
-# Ignore issues
+# Issue 무시
 
-If you do not want to fix a vulnerability or license issue, and don't want to see that issue in scan results, Snyk allows you to ignore it, either temporarily or permanently.
+취약점이나 라이선스 Issue를 수정하고 싶지 않고 스캔 결과에서 해당 Issue를 보고 싶지 않다면 Snyk를 사용하여 일시적으로 또는 영구적으로 무시할 수 있습니다.
 
-### When to ignore issues
+### Issue를 무시할 때
 
-Issues can be ignored and viewed via the snyk.io UI, the Snyk APIs, the Snyk CLI, and using the .snyk file.
+snyk.io UI, Snyk API, Snyk CLI 및 .snyk 파일을 사용하여 Issue를 무시하고 볼 수 있습니다.
 
-Ignoring security issues should not be the default action, but it is sometimes necessary. The best practice is to fix or patch vulnerabilities, or to remove the vulnerable dependency, but there may still be reasons why you would want to suppress an issue – for example, if an issue doesn’t currently have a fix, you might want to ignore it until it does.
+보안 Issue를 무시하는 것이 기본 조치가 되어서는 안 되지만 때로는 필요합니다. 가장 좋은 방법은 취약점을 수정 또는 패치하거나 취약한 종속성을 제거하는 것이지만 여전히 Issue를 억제하려는 이유가 있을 수 있습니다. 예를 들어 Issue에 현재 수정 사항이 없는 경우 다음을 수행할 수 있습니다. 될 때까지 무시하십시오.
 
-Some issues are irrelevant for certain projects (e.g. a DDOS attack for an internal service). Other times, an issue has a path that makes it non-exploitable. In these scenarios, you should still fix the issue, as although the vulnerability is not exploitable today, it may be exploitable in future.
+일부 Issue는 특정 프로젝트와 관련이 없습니다(예: 내부 서비스에 대한 DDOS 공격). 다른 경우 Issue에는 악용할 수 없도록 만드는 경로가 있습니다. 이러한 시나리오에서는 현재 취약점을 악용할 수 없지만 앞으로는 악용될 수 있으므로 여전히 Issue를 해결해야 합니다.
 
-### Ignoring issues in the UI
+### UI의 Issue 무시
 
-Each issue card has an **Ignore** button that opens up a dialog where you can select why you want to ignore the issue, and how long to ignore it.
+각 **Issue** 카드에는 Issue를 무시하려는 이유와 무시 기간을 선택할 수 있는 대화 상자가 열리는 무시 버튼이 있습니다.
 
 ![](<../../../.gitbook/assets/image (21).png>)
 
 If you select **Ignore temporarily,** then you can check the **Until fix is available** checkbox:
 
+**Ignore temporarily**를 선택하면 **Until fix is available** 확인란을 선택할 수 있습니다.
+
 ![](<../../../.gitbook/assets/image (19).png>)
 
-This will resurface the vulnerability as soon as we have a fix for it, and you can optionally give additional details on why you’re ignoring the issue. This is checked by default if there is currently no fix available for this issue.
+이렇게 하면 Issue가 수정되는 즉시 취약점이 다시 나타나며 선택적으로 Issue를 무시하는 이유에 대한 추가 세부정보를 제공할 수 있습니다. 현재 이 Issue에 사용할 수 있는 수정 사항이 없는 경우 기본적으로 선택되어 있습니다.
 
 {% hint style="info" %}
-An issue is ignored until ANY of the conditions happen - either the ignore period expires, OR the vuln becomes fixable.
+무시 기간이 만료되거나 취약점이 수정될 수 있는 조건 중 하나라도 발생할 때까지 문제가 무시됩니다.
 {% endhint %}
 
-When you ignore an issue in our UI, it will show who ignored it and allow you to edit or unignore it.
+UI에서 Issue를 무시하면 무시한 사람이 표시되고 수정하거나 무시할 수 있습니다.
 
 ![](<../../../.gitbook/assets/image (14).png>)
 
-### Ignoring issues in the CLI
+### CLI의 Issue 무시
 
-Suppressing issues is possible via the CLI using the `snyk ignore` command.
+`snyk ignore` 명령을 사용하여 CLI를 통해 Issue를 억제할 수 있습니다.
 
 `snyk ignore --id='npm:braces:20180219' --expiry='2018-04-01' --reason='testing'`
 
-See [Ignore vulnerabilities using Snyk CLI](../../../snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md) for more details.
+자세한 내용은 [Snyk CLI를 사용하여 취약성 무시](../../../snyk-cli/fix-vulnerabilities-from-the-cli/ignore-vulnerabilities-using-snyk-cli.md)를 참조하십시오.
 
-When you use `snyk ignore`**,** the `.snyk` policy file is updated with the path and reason given, if one was provided. For example:
+`snyk ignore`를 사용하면 `.snyk` 정책 파일이 제공된 경로와 이유(제공된 경우)로 업데이트됩니다. 예를 들어:
 
 ```
 'npm:moment:20170905':
@@ -47,37 +49,37 @@ reason: The reason given
 expires: '2017-12-29T16:10:16.946Z'
 ```
 
-### Scanning from the CLI or CI/CD, Ignoring in the UI
+### CLI 또는 CI/CD에서 스캔, UI에서 무시
 
-Ignores between a CLI (or CI/CD run) and the Snyk UI are synchronized. So the flow is:
+CLI(또는 CI/CD 실행)와 Snyk UI 간의 무시가 동기화됩니다. 따라서 순서 다음과 같습니다:
 
-1. A project is scanned and pushed to the UI using `snyk monitor`.
-2. You see the results of the scan and choose to ignore an issue.
-3. The issue is ignored when running `snyk test` or `snyk monitor` in the CI/CD or CLI
+1. `snyk monitor`를 사용하여 프로젝트를 스캔하고 UI로 푸시합니다.
+2. 스캔 결과를 보고 Issue를 무시하도록 선택합니다.
+3. CI/CD 또는 CLI에서 `snyk test` 또는 `snyk monitor`를 실행할 때 문제가 무시됩니다.
 
-For example:
+예를 들어:
 
 ![](<../../../.gitbook/assets/image (15).png>)
 
-`snyk test` before ignoring in the UI:
+UI에서 무시하기 전에 `snyk test`:
 
 ![](<../../../.gitbook/assets/image (18).png>)
 
-`snyk test` after ignoring in the UI:
+UI에서 무시 후 `snyk test`:
 
 ![](<../../../.gitbook/assets/image (20).png>)
 
-It is important that the above is true if you ignore the project imported by `snyk monitor` from the CLI or CI/CD.
+CLI 또는 CI/CD에서 `snyk monitor`로 가져온 프로젝트를 무시하는 경우 위의 내용이 사실인 것이 중요합니다.
 
-The same repo imported from the SCM is considered as a different project, and any ignore on an SCM project does not impact the results of a `snyk test` from a CLI or CI/CD. SCM and CI project behave as two stand alone projects.
+SCM에서 가져온 동일한 저장소는 다른 프로젝트로 간주되며 SCM 프로젝트에 대한 무시는 CLI 또는 CI/CD의 `snyk test` 결과에 영향을 미치지 않습니다. SCM 및 CI 프로젝트는 두 개의 독립 실행형 프로젝트로 작동합니다.
 
-### Ignoring issues with the .snyk file
+### .snyk 파일 Issue 무시
 
-For all projects, you can ignore the vulnerability by creating a `.snyk` YAML file.
+모든 프로젝트에 대해 `.snyk` YAML 파일을 생성하여 취약점을 무시할 수 있습니다.
 
 ![](../../../.gitbook/assets/screen+shot+2017-05-10+at+11.16.57+am.png)
 
-For example, if you wanted to ignore the vulnerability with SNYK ID [SNYK-RUBY-FASTREADER-20085](https://snyk.io/vuln/SNYK-RUBY-FASTREADER-20085) in `fastreader`, with the reason “No fix available” until 01 Jan 2023, you would write:
+예를 들어 `fastreader`에서 SNYK ID가 [SNYK-RUBY-FASTREADER-20085](https://snyk.io/vuln/SNYK-RUBY-FASTREADER-20085)인 취약점을 2023년 1월 1일까지 "수정 사항 없음"으로 무시하려면 다음과 같이 작성합니다.
 
 ```
 version v1.5.0
@@ -88,23 +90,23 @@ ignore:
       expires '2023-01-01T00:00:00.000Z'
 ```
 
-See [The .snyk file](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/the-.snyk-file) for more details.
+자세한 내용은 [.snyk 파일](../../snyk-cli/undefined/.snyk.md)을 참조하십시오.
 
-### Ignoring issues with policy actions
+### 정책 조치 문제 무시
 
-You can set [Security policies](https://docs.snyk.io/fixing-and-prioritizing-issues/security-policies) actions to ignore all vulnerabilities that match the conditions specified in a policy rule.
+정책 규칙에 지정된 조건과 일치하는 모든 취약성을 무시하도록 [보안 정책](../security-policies/) 작업을 설정할 수 있습니다.
 
-See [Security policies: Actions](https://docs.snyk.io/fixing-and-prioritizing-issues/security-policies/security-policies-actions) for more details.
+자세한 내용은 [보안 정책: 작업](../security-policies/security-policies-actions.md)을 참조하세요.
 
-### Ignoring issues in Snyk Code
+### Snyk 코드의 Issue 무시
 
-For [Snyk Code](https://docs.snyk.io/snyk-code), ignore functionality may capture a wider range of issues than other products.
+[Snyk Code](../../../snyk-products/snyk-code/)의 경우 기능 무시는 다른 제품보다 광범위한 문제를 포착할 수 있습니다.
 
-Snyk Code's static code analysis transforms the input code into an **intermediate representation**, which captures the flow of code, but abstracts away some details. Snyk Code uses this representation to recognize the same issue even when you refactor your code or rename a variable.
+Snyk Code의 정적 코드 분석은 입력 코드를 **중간 표현**으로 변환하여 코드의 흐름을 포착하지만 일부 세부 사항은 추상화합니다. Snyk Code는 이 표현을 사용하여 코드를 리팩터링하거나 변수의 이름을 바꿀 때도 동일한 문제를 인식합니다.
 
-So when you ignore an issue, Snyk Code can also ignore that issue if it occurs in multiple places in your code, even with minor code changes. This avoids seeing multiple duplicate reports for pieces of code with the same ignored issue.
+따라서 Issue를 무시할 때 Snyk Code는 사소한 코드 변경에도 불구하고 코드의 여러 위치에서 발생하는 경우 해당 Issue를 무시할 수도 있습니다. 이렇게 하면 무시된 동일한 Issue가 있는 코드 조각에 대해 여러 중복 보고서가 표시되는 것을 방지할 수 있습니다.
 
-As an example, the following two code snippets (despite textual differences) denounce the same issue, as we only renamed the variables:
+예를 들어 다음 두 코드 조각(텍스트 차이에도 불구하고)은 변수 이름만 변경했기 때문에 동일한 문제를 통보합니다.
 
 ```
 var fs = require('fs');
@@ -118,29 +120,29 @@ var generalLogFileName = req.query.file || 'standard_log.log';
 var handleLogFile = filesystem.readFile(generalLogFileName, "utf8", function(err, data) {...
 ```
 
-See [using-snyk-code-web.md](../../../products/snyk-code/using-snyk-code-web.md "mention") for more details of Snyk Code.
+Snyk Code에 대한 자세한 내용은[using-snyk-code-web.md](../../../products/snyk-code/using-snyk-code-web.md "mention") 를 참조하십시오.
 
-### Ignoring issues in Snyk IaC
+### Snyk IaC의 Issue 무시
 
-When scanning your IaC configuration files using the Snyk CLI with **snyk iac test** you can ignore issues that are not relevant to you.
+**snyk iac 테스트**와 함께 Snyk CLI를 사용하여 IaC 구성 파일을 스캔할 때 사용자와 관련이 없는 Issue는 무시할 수 있습니다.
 
-You can do this by using [the-.snyk-file.md](../../../snyk-cli/test-for-vulnerabilities/the-.snyk-file.md "mention"), which we recommend is stored and versioned in the root of your working directory for where you store your IaC configuration files.
+IaC 구성 파일을 저장하는 작업 디렉토리의 루트에 저장되고 버전 관리되는[the-.snyk-file.md](../../../snyk-cli/test-for-vulnerabilities/the-.snyk-file.md "mention")를 사용하여 이 작업을 수행할 수 있습니다.
 
-See [iac-ignores-using-the-.snyk-policy-file.md](../../../products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md "mention")for more details.
+자세한 내용은[iac-ignores-using-the-.snyk-policy-file.md](../../../products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/iac-ignores-using-the-.snyk-policy-file.md "mention")를 참조하십시오.
 
-### Set who can configure ignore settings
+### 무시 설정을 구성할 수 있는 인원 설정
 
-As suppressing vulnerabilities carries a level of risk, you can make this function available to admins only:
+취약성을 억제하는 것은 위험 수준을 수반하므로 이 기능을 관리자만 사용할 수 있도록 설정할 수 있습니다.:
 
-1. Go to your organization settings > **General**, then navigate in the **Ignores** section
-2. Under **Ability to ignore an issue, or edit the ignore settings on an issue**, select **Admin users only**. This also disables ignores from being added via the CLI).
-3. Under **Require reason for each ignore**, you can also choose to set the **more details** field to be a compulsory field when an issue is being ignored, ensuring the user enters a reason for each ignore.
-4. Click **Update** to make the changes.
+1. organization settings > **General**으로 이동한 다음 무시 **Ignores**로 이동합니다.
+2. **Issue를 무시하거나 Issue에 대한 무시 설정을 편집할 수 있는 기능**에서 **관리자 전용**을 선택합니다. 이것은 또한 CLI를 통해 추가되는 무시를 비활성화합니다.
+3. **Require reason for each ignore** 아래에서 문제가 무시될 때 **추가 세부 정보** 필드를 필수 필드로 설정하도록 선택할 수도 있어 사용자가 무시할 때마다 이유를 입력할 수 있습니다.
+4. **Update**를 클릭하여 변경합니다.
 
 ![](<../../../.gitbook/assets/Screenshot 2021-12-07 at 11.25.49.png>)
 
-### Using ignores in reports
+### 보고서에서 무시 사용
 
-If you have access to our Reports feature, you will also be able to see an overview of how many issues in your organization’s projects are ignored, along with an option to filter these so you can drill down into each one. If the issue was ignored in our UI, we include a credit for additional accountability, so you can see who initiated it.
+보고서 기능에 액세스할 수 있는 경우 조직의 프로젝트에서 얼마나 많은 Issue가 무시되었는지에 대한 개요와 이를 필터링하여 각 Issue를 드릴다운할 수 있는 옵션도 볼 수 있습니다. UI에서 Issue가 무시된 경우 추가 책임에 대한 크레딧을 포함하여 누가 Issue를 시작했는지 확인할 수 있습니다.
 
-See [Reports](https://docs.snyk.io/reports-1) for more details.
+자세한 내용은 [보고서](../../../introducing-snyk/snyks-core-concepts/reporting.md)를 참조하십시오.
