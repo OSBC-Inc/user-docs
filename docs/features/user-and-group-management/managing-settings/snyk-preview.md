@@ -17,9 +17,9 @@ Snyk Preview를 사용하여 기능을 활성화하려면:
 ![](../../../.gitbook/assets/snykpreview.png)
 
 {% hint style="info" %}
-After the feature is enabled at the group level, all orgs within the group have this feature, and it cannot be disabled individually for these orgs.
+기능이 그룹 수준에서 활성화된 후에는 그룹 내의 모든 조직에 이 기능이 있으며 이러한 조직에 대해 개별적으로 비활성화할 수 없습니다.
 {% endhint %}
 
-## Disabling a feature
+## 기능 비활성화
 
-To disable a Snyk Preview feature, navigate to the Snyk Preview page and click **Enabled** for that feature.
+Snyk 미리 보기 기능을 비활성화하려면 Snyk 미리 보기 페이지로 이동하여 해당 기능에 대해 **Enabled**를 클릭합니다.
