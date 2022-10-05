@@ -1,18 +1,18 @@
 # Snyk Preview
 
 {% hint style="info" %}
-Snyk IDE plugins have preview features--these preview features are separate from Snyk Preview and can be found in the documentation for the IDE-specific plugin.
+Snyk IDE 플러그인에는 미리보기 기능이 있습니다. 이러한 미리보기 기능은 Snyk Preview와 별개이며 IDE별 플러그인에 대한 설명서에서 찾을 수 있습니다.
 {% endhint %}
 
-Snyk Preview lets you enable new features, at an "opt-in" level. For example, these may be features that have not yet been rolled out by default for all customers.
+Snyk Preview를 사용하면 "선택" 수준에서 새로운 기능을 활성화할 수 있습니다. 예를 들어 모든 고객에게 기본적으로 아직 출시되지 않은 기능일 수 있습니다.
 
-Users with Admin permissions can use this option at the org and group level.
+관리자 권한이 있는 사용자는 조직 및 그룹 수준에서 이 옵션을 사용할 수 있습니다.
 
-To enable a feature using Snyk Preview:
+Snyk Preview를 사용하여 기능을 활성화하려면:
 
-1. Click on settings ![](../../../.gitbook/assets/cog\_icon.png) > **Snyk Preview**:
-2. Click **Disabled** to enable the relevant feature.
-3. Click **Save changes**.
+1. settings ![](../../../.gitbook/assets/cog\_icon.png) > **Snyk Preview**를 클릭합니다.
+2. **Disabled**를 클릭하여 관련 기능을 활성화합니다.
+3. **Save changes를** 클릭합니다.
 
 ![](../../../.gitbook/assets/snykpreview.png)
 
