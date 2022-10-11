@@ -377,7 +377,7 @@
     * [정책 생성 및 편집](features/fixing-and-prioritizing-issues/policies/creating-and-editing-policies.md)
     * [프로젝트 속성에 정책 할당](features/fixing-and-prioritizing-issues/policies/assign-a-policy-to-project-attributes.md)
     * [조직에 정책 할당](features/fixing-and-prioritizing-issues/policies/assign-a-policy-to-organizations.md)
-  * [Security policies](features/fixing-and-prioritizing-issues/security-policies/README.md)
+  * [보안 정책](features/fixing-and-prioritizing-issues/security-policies/README.md)
     * [보안 정책 시작하기](features/fixing-and-prioritizing-issues/security-policies/getting-started-with-security-policies.md)
     * [보안 정책 생성 및 규칙 설정 방법](features/fixing-and-prioritizing-issues/security-policies/how-to-create-a-security-policy-and-set-rules.md)
     * [보안 정책: 조건](features/fixing-and-prioritizing-issues/security-policies/security-policies-conditions.md)
