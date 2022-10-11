@@ -1,60 +1,53 @@
-# Triaging issues
+# Issues 분류
 
-### Introduction
+### 소개
 
-Every vulnerability has conditions that must be met, for that vulnerability to pose a threat (to be exploitable).
+모든 취약점에는 해당 취약점이 위협(악용 가능)을 제기하기 위해 충족되어야 하는 조건이 있습니다.
 
-Vulnerable condition examples include:
+취약한 상태의 예는 다음과 같습니다:
 
-* Requiring a user interaction
-* Having a specific port number open
-* Requiring a certain CPU architecture
-* Enabling a specific setting
+* 사용자 상호 작용 필요
+* 특정 포트 번호 열기
+* 특정 CPU 아키텍처 필요
+* 특정 설정 활성화
 
-#### It's all about the context
+#### 모든 것은 컨텍스트에 관한 것입니다
 
-Some vulnerabilities have multiple different conditions that must all be met, for that vulnerability to be exploitable. A vulnerable open source package can be exploited in some applications, but not in others.
+일부 취약점에는 해당 취약점이 악용될 수 있으려면 모두 충족되어야 하는 여러 가지 조건이 있습니다. 취약한 오픈 소스 패키지는 일부 응용 프로그램에서 악용될 수 있지만 다른 응용 프로그램에서는 악용될 수 없습니다.
 
-Exploitability depends on the context: for example, the environment, the settings, and the way the developer uses this package.
+악용 가능성은 컨텍스트(예: 환경, 설정 및 개발자가 이 패키지를 사용하는 방식)에 따라 다릅니다.
 
-Vulnerabilities that are not exploitable are unlikely to pose a security threat to your application and can therefore be de-prioritized accordingly.
+악용할 수 없는 취약점은 애플리케이션에 보안 위협이 될 가능성이 낮으므로 그에 따라 우선 순위를 낮출 수 있습니다.
 
-### Triage Assistant
-
-{% hint style="info" %}
-Currently, this feature is only available to **Java** (Gradle and Maven) ecosystem, when using **GitHub** as the source, and when **Snyk Code** is enabled.
-{% endhint %}
-
-In the context of your application, the Triage Assistant evaluates the vulnerable conditions, which helps you determine the exploitability of your application.
-
-‌Snyk Code ([SAST](https://snyk.io/learn/application-security/sast-vs-dast/)) engine is used to read your first-party code and to check the conditions for the vulnerabilities found by Snyk Open Source (SCA).
+### 분류 도우미
 
 {% hint style="info" %}
-To provide this feature, Snyk takes a temporary copy of your Git repository contents.
-
-For more information see [how-snyk-handles-your-data.md](../../more-info/how-snyk-handles-your-data.md "mention")
+현재 이 기능은 **GitHub**를 소스로 사용하고 **Snyk Code**가 활성화된 경우 **Java**(Gradle 및 Maven) 생태계에서만 사용할 수 있습니다.
 {% endhint %}
 
-#### Vulnerable Conditions
+응용 프로그램의 컨텍스트에서 Triage Assistant는 취약한 조건을 평가하여 응용 프로그램의 악용 가능성을 결정하는 데 도움이 됩니다.
 
-Jackson Vulnerable Conditions:
-
-* **Vulnerable version**: The [Jackson package](https://snyk.io/vuln/maven:com.fasterxml.jackson.core%3Ajackson-databind) (**com.fasterxml.jackson.core:jackson-databind vulnerabilities**) should be in a specific version, that we know is vulnerable.
-* **Specific setting**: A specific setting, or functionality need to be enabled, in our case it’s the [**Polymorphic Type Handling**](https://github.com/FasterXML/jackson-docs/wiki/JacksonPolymorphicDeserialization) feature.
-  * You can check if this setting is enabled in your code by looking for one of the following:
-    * `@JsonSubTypes` annotation was used.
-    * `@JsonTypeInfo` annotation was used on a Class.
-    * `enableDefaultTyping()` is used to enable Polymorphic Typing .
-    * `enableDefaultTypingAsProperty()` is used to enable Polymorphic Typing.
-* **User interactivity**: The application needs to accept JSON input from the user.
-* **Specific gadget**: A “gadget”, which is a class or function, needs to be available within the executing scope of the application.
-
-All the conditions must be met for the vulnerability to be exploitable.
+Snyk Code ([SAST](https://snyk.io/learn/application-security/sast-vs-dast/)) 엔진은 자사 코드를 읽고 SCA(Snyk Open Source)가 발견한 취약성에 대한 조건을 확인하는 데 사용됩니다.
 
 {% hint style="info" %}
-This feature is currently in **preview**, and might be changed.
+이 기능을 제공하기 위해 Snyk는 Git 저장소 콘텐츠의 임시 복사본을 가져옵니다. 자세한 내용은 [how-snyk-handles-your-data.md](../../more-info/how-snyk-handles-your-data.md "mention")을 참조하십시오.
 {% endhint %}
 
-#### Vulnerability with Exploit Maturity but not exploitable?
+#### 취약한 조건
 
-A vulnerability may have exploits available in the wild or detailed explanations of how to exploit it, but as long as not all the conditions are not met, the vulnerability will remain unexploitable.
+Jackson Vulnerable 조건:
+
+* **Vulnerable version**: [Jackson 패키지](https://snyk.io/vuln/maven:com.fasterxml.jackson.core%3Ajackson-databind)(**com.fasterxml.jackson.core:jackson-databind vulnerabilities**)는 취약한 것으로 알려진 특정 버전에 있어야 합니다.
+* **Specific setting**: 특정 설정 또는 기능을 활성화해야 합니다. 이 경우에는 [**Polymorphic Type Handling**](https://github.com/FasterXML/jackson-docs/wiki/JacksonPolymorphicDeserialization) 기능입니다.
+* **User interactivity**: 애플리케이션은 사용자의 JSON 입력을 수락해야 합니다.
+* **Specific gadget**: 클래스 또는 함수인 “gadget”은 애플리케이션의 실행 범위 내에서 사용할 수 있어야 합니다.
+
+취약점을 악용하려면 모든 조건이 충족되어야 합니다.
+
+{% hint style="info" %}
+이 기능은 현재 **미리보기** 상태이며 변경될 수 있습니다.
+{% endhint %}
+
+#### Exploit Maturity가 있지만 악용할 수 없는 취약점이 있습니까?
+
+취약성에는 악용이 가능하거나 악용 방법에 대한 자세한 설명이 있을 수 있지만 모든 조건이 충족되지 않는 한 취약성은 악용할 수 없습니다.

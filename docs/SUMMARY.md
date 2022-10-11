@@ -387,7 +387,7 @@
     * [소셜 트렌드로 우선 순위 지정](features/fixing-and-prioritizing-issues/prioritizing-issues/prioritize-by-social-trends.md)
     * [Reachable vulnerabilities](features/fixing-and-prioritizing-issues/prioritizing-issues/reachable-vulnerabilities.md)
     * [버전에서 수정됨 vs. 취약점의 수정 가능한 속성](features/fixing-and-prioritizing-issues/prioritizing-issues/fixed-in-version-vs.-fixable-attribute-in-vulnerabilities.md)
-  * [Triaging issues](features/fixing-and-prioritizing-issues/triaging-issues.md)
+  * [Issues 분류](features/fixing-and-prioritizing-issues/triaging-issues.md)
 * [Reports](features/reports/README.md)
   * [Reports 개요](features/reports/reports-overview.md)
   * [일반적인 작업](features/reports/general-actions.md)

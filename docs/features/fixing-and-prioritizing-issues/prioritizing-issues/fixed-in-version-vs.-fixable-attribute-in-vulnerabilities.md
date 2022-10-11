@@ -42,4 +42,4 @@ Snyk 앱에서 취약점이 수정 가능한지 확인하는 가장 쉬운 방�
 
 ### 용어 사전
 
-Snyk 관련 용어의 정의를 얻으려면 [Snyk의 용어집](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary)을 살펴보십시오.
+Snyk 관련 용어의 정의를 얻으려면 [Snyk의 용어사전](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary)을 살펴보십시오.
