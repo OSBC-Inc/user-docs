@@ -1,43 +1,43 @@
-# Assign a policy to project attributes
+# 프로젝트 속성에 정책 할당
 
-After applying [project attributes](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/assign-a-policy-to-project-attributes) to your projects, you can create policies that apply to those attributes. Projects and policies are linked based on the attributes assigned to the policy.
+프로젝트 속성을 프로젝트에 적용한 후 해당 속성에 적용되는 정책을 생성할 수 있습니다. 프로젝트와 정책은 정책에 할당된 속성을 기반으로 연결됩니다.
 
 {% hint style="info" %}
-Policies assigned to attributes always take precedence over policies assigned to organizations.
+속성에 할당된 정책은 항상 조직에 할당된 정책보다 우선합니다.
 {% endhint %}
 
-A policy can be applied to one or multiple project attributes; but a set of attributes can only be assigned to one policy. For example, if there is already a policy applied to `Critical`**,** `Production`,`Frontend`, you cannot create another policy that matches _only_ these exact attributes.
+정책은 하나 이상의 프로젝트 속성에 적용될 수 있습니다. 그러나 속성 집합은 하나의 정책에만 할당할 수 있습니다. 예를 들어 `Critical`, `Production`, `Frontend`에 적용된 정책이 이미 있는 경우 이러한 정확한 속성만 일치하는 다른 정책을 생성할 수 없습니다.
 
-Reminder: Policies assigned to project attributes apply when running **snyk monitor** in the CLI, assuming it runs on a CLI project with project attributes applied. Project attribute policies do not apply to **snyk test**.
+Reminder: 프로젝트 속성에 할당된 정책은 CLI에서 snyk 모니터를 실행할 때 적용되며 프로젝트 속성이 적용된 CLI 프로젝트에서 실행된다고 가정합니다. 프로젝트 속성 정책은 **snyk test**에 적용되지 않습니다.
 
-## Add / remove an attribute to a policy
+## 정책에 속성 추가/제거
 
-To add an attribute, click on the desired attribute checkbox\(es\) from the attribute selector panel.
+속성을 추가하려면 속성 선택기 패널에서 원하는 속성 확인란을 클릭합니다.
 
-To remove an attribute from a policy, uncheck the desired attribute checkbox\(es\) from the attribute selector panel.
+정책에서 속성을 제거하려면 속성 선택기 패널에서 원하는 속성 확인란의 선택을 취소합니다.
 
-![](../../../.gitbook/assets/screenshot_2021-03-11_at_1.20.42_pm.png)
+![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_1.20.42\_pm.png)
 
 {% hint style="info" %}
-You can create and save a policy where no attributes are selected, for example, if you have not yet decided which attributes should be associated with that policy. This policy does not apply to projects where all attributes are left blank.
+예를 들어 해당 정책과 연결할 속성을 아직 결정하지 않은 경우 속성이 선택되지 않은 정책을 만들고 저장할 수 있습니다. 이 정책은 모든 속성이 비어 있는 프로젝트에는 적용되지 않습니다.
 {% endhint %}
 
 ## Matching projects and policies
 
-To be associated with a policy, a project must have all the attributes listed on the policy \(the project could also have more attributes that are not listed on the policy\).
+To be associated with a policy, a project must have all the attributes listed on the policy (the project could also have more attributes that are not listed on the policy).
 
-For example, if you have a policy assigned to `Critical`, `External`, and `Frontend`, this policy applies to projects which includes those same attributes, but not to a project with the attributes `Critical` and `External`.  
+For example, if you have a policy assigned to `Critical`, `External`, and `Frontend`, this policy applies to projects which includes those same attributes, but not to a project with the attributes `Critical` and `External`.\
 Here is our sample policy:
 
-![](../../../.gitbook/assets/screenshot_2021-03-11_at_11.54.33_am.png)
+![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_11.54.33\_am.png)
 
 Here is a project that will inherit the policy:
 
-![](../../../.gitbook/assets/screenshot_2021-03-11_at_12.26.02_pm.png)
+![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_12.26.02\_pm.png)
 
 Here is a project that will not inherit the policy:
 
-![](../../../.gitbook/assets/screenshot_2021-03-11_at_12.29.03_pm.png)
+![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_12.29.03\_pm.png)
 
 ## Applying multiple policies to a project
 
@@ -45,5 +45,4 @@ It is possible that more than one policy can be apply for a project. For example
 
 If more than one policy can be associated with a project, the order of the policies on the policy manager page determines precedence. The policy closest to the top of the list takes precedence over other applicable policies below it. To change the order of policies, either drag and drop the policies into the right order, or use the **...** button on the right hand side to move the policy up or down in the list.
 
-![](../../../.gitbook/assets/screenshot_2021-03-11_at_12.51.25_pm.png)
-
+![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_12.51.25\_pm.png)
