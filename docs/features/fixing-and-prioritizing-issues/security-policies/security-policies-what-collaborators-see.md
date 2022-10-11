@@ -1,32 +1,33 @@
-# 보안 정책: 공동 작업자에게 표시되는 내용
+# Security policies: What collaborators see
 
-![](../../../.gitbook/assets/screenshot\_2020-10-21\_at\_9.30.03\_am.png)
+![](../../../.gitbook/assets/screenshot_2020-10-21_at_9.30.03_am.png)
 
-새로 할당된 정책 또는 정책 변경 사항은 프로젝트를 다시 테스트할 때 적용됩니다. 다음은 작업이 취약점에 적용될 때 프로젝트 공동 작업자가 보는 것입니다:
+A newly assigned policy, or changes to a policy, apply when the project is retested. This is what project collaborators see when an action is applied to a vulnerability:
 
-| **작업**          | **프로젝트 공동 작업자에게 표시되는 내용**                                            |
-| --------------- | -------------------------------------------------------------------- |
-| 심각도를 다음으로 변경... | 새 심각도 및 원래 할당된 심각도                                                   |
-| 현재 및 미래 인스턴스 무시 | 무시된 문제는 수동 무시와 동일하게 보이지만 "ignored by security policy"이라는 레이블이 지정됩니다. |
+| **Action** | **What project collaborators see** |
+| :--- | :--- |
+| Change severity to… | The new severity, as well as the originally assigned severity |
+| Ignore current and future instances | An ignored issue will look the same as a manual ignore, but it will be labelled “ignored by security policy” |
 
-## **예:**
+## **Examples:**
 
-![](../../../.gitbook/assets/screenshot\_2021-07-28\_at\_12.50.46.png)
+![](../../../.gitbook/assets/screenshot_2021-07-28_at_12.50.46.png)
 
-보안 정책에 의해 무시된 프로젝트 페이지의 문제입니다.
+An issue in a project page that’s been ignored by a security policy.
 
-**CLI의 사용자 정의 및 원래 심각도**
+**Custom and original severity in the CLI**
 
 ![](../../../.gitbook/assets/unnamed.png)
 
-**프로젝트 페이지 UI의 사용자 정의 및 원래 심각도**
+**Custom and original severity in Project Page UI**
 
 ![](../../../.gitbook/assets/unnamed-1.png)
 
-**Open Fix PR UI의 사용자 정의 및 원래 심각도**
+**Custom and original severity in Open Fix PR UI**
 
 ![](../../../.gitbook/assets/unnamed-2.png)
 
-**보고서의 사용자 정의 및 원래 심각도**
+**Custom and original severity in Reports**
 
-![](../../../.gitbook/assets/screenshot\_2020-10-21\_at\_9.30.03\_am.png)
+![](../../../.gitbook/assets/screenshot_2020-10-21_at_9.30.03_am.png)
+
