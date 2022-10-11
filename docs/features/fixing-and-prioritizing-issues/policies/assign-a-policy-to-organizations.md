@@ -1,40 +1,39 @@
-# Assign a policy to organizations
+# 조직에 정책 할당
 
-A policy can be applied to multiple organizations; however, an organization can only be assigned to one policy. Organizations cannot be added to or removed from the default policy directly from the default policy modal.
+정책은 여러 조직에 적용될 수 있습니다. 그러나 조직은 하나의 정책에만 할당될 수 있습니다. 기본 정책 모달에서 직접 기본 정책에 조직을 추가하거나 제거할 수 없습니다.
 
-Policies assigned to organizations will also apply when running snyk test or snyk monitor in the CLI.
+조직에 할당된 정책은 CLI에서 snyk test 또는 snyk monitor를 실행할 때도 적용됩니다.
 
-## To add an organization to a policy:
+## 정책에 조직을 추가하려면:
 
-Click on the associated check box from the organization selector panel.
+조직 선택기 패널에서 연결된 확인란을 클릭합니다.
 
-If this organization is already assigned to another policy, you will be able to see which policy it is applied to from this selector and the pill next to the organization name will be grey
+이 조직이 이미 다른 정책에 할당된 경우 이 선택기에서 적용되는 정책을 볼 수 있으며 조직 이름 옆의 알약이 회색으로 표시됩니다.
 
 ![](../../../.gitbook/assets/mceclip3-2-.png)
 
-If an organization is assigned to the policy you are currently viewing, that policy name will appear in a yellow pill next to the organization name
+현재 보고 있는 정책에 조직이 할당된 경우 해당 정책 이름은 조직 이름 옆에 있는 노란색 알약으로 표시됩니다.
 
 ![](../../../.gitbook/assets/mceclip2-6-.png)
 
-If you are moving an organization from one policy to another, 2 pills will appear to show which policy is currently applied \(yellow\) and which policy you will be applying \(grey\)
+조직을 한 정책에서 다른 정책으로 이동하는 경우 현재 적용되는 정책(노란색)과 적용할 정책(회색)을 나타내는 2개의 알약이 나타납니다.
 
 ![](../../../.gitbook/assets/mceclip1-16-.png)
 
-## To remove an organization from a policy:
+## 정책에서 조직을 제거하려면:
 
-Uncheck the desired organization check box from the organization selector panel.
+조직 선택기 패널에서 원하는 조직 확인란의 선택을 취소합니다.
 
 ![](../../../.gitbook/assets/untitled-2-.png)
 
-The unchecked organization\(s\) will now revert back to the default policy.
+선택하지 않은 조직은 이제 기본 정책으로 되돌아갑니다.
 
-## Add an organization to the default policy:
+## 기본 정책에 조직 추가:
 
-1. Remove the organization from the policy it is currently assigned to
-2. The organization will automatically move to the [default policy](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview)
+1. 현재 할당된 정책에서 조직을 제거합니다.
+2. 조직이 자동으로 [기본 정책](shared-policies-overview.md)으로 이동합니다.
 
-## Remove an organization from the default policy
+## 기본 정책에서 조직 제거:
 
-1. Assign the relevant organization to a new policy 
-2. The organization will automatically disassociate from the [default policy](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview) and move to the newly selected policy
-
+1. 관련 조직을 새 정책에 할당
+2. 조직은 [기본 정책](shared-policies-overview.md)에서 자동으로 연결을 해제하고 새로 선택한 정책으로 이동합니다.
