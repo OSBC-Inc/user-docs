@@ -1,8 +1,7 @@
 # Security policies
 
-* [Getting started with security policies](getting-started-with-security-policies.md)
-* [How to create a security policy and set rules](how-to-create-a-security-policy-and-set-rules.md)
-* [Security policies: Conditions](security-policies-conditions.md)
-* [Security policies: Actions](security-policies-actions.md)
-* [Security policies: What collaborators see](security-policies-what-collaborators-see.md)
-
+* 보안 정책 시작하기
+* 보안 정책 생성 및 규칙 설정 방법
+* 보안 정책: 조건
+* 보안 정책: 작업
+* 보안 정책: 공동 작업자에게 표시되는 내용
