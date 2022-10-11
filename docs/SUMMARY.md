@@ -385,7 +385,7 @@
     * [보안 정책: 공동 작업자에게 표시되는 내용](features/fixing-and-prioritizing-issues/security-policies/security-policies-what-collaborators-see.md)
   * [우선순위 문제](features/fixing-and-prioritizing-issues/prioritizing-issues/README.md)
     * [소셜 트렌드로 우선 순위 지정](features/fixing-and-prioritizing-issues/prioritizing-issues/prioritize-by-social-trends.md)
-    * [도달 가능한 취약점](features/fixing-and-prioritizing-issues/prioritizing-issues/reachable-vulnerabilities.md)
+    * [Reachable vulnerabilities](features/fixing-and-prioritizing-issues/prioritizing-issues/reachable-vulnerabilities.md)
     * [버전에서 수정됨 vs. 취약점의 수정 가능한 속성](features/fixing-and-prioritizing-issues/prioritizing-issues/fixed-in-version-vs.-fixable-attribute-in-vulnerabilities.md)
   * [Triaging issues](features/fixing-and-prioritizing-issues/triaging-issues.md)
 * [Reports](features/reports/README.md)
