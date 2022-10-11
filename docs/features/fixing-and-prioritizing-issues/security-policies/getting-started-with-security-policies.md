@@ -1,13 +1,13 @@
-# 보안 정책 시작하기
+# Getting started with security policies
 
 {% hint style="info" %}
-**기능 가용성**
-
-이 기능은 Enterprise 고객이 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
+**Feature availability**  
+This feature is available with Enterprise plans. See [pricing plans](https://snyk.io/plans/) for more details.
 {% endhint %}
 
-보안 정책을 사용하면 특정 취약점의 우선 순위를 자동으로 지정하거나 우선 순위를 낮추는 사용자 지정 규칙을 설정할 수 있습니다.
+Security policies allow you to set custom rules to automatically prioritize or de-prioritize specific vulnerabilities.
 
-그룹 관리자는 [정책](../policies/shared-policies-overview.md) 탭을 사용하여 보안 정책 규칙에 액세스하고 설정할 수 있습니다.
+Group administrators can access and set security policy rules using the [**Policies**](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/shared-policies-overview) tab.
 
-![](../../../.gitbook/assets/screenshot\_2020-10-20\_at\_10.01.49\_am.png)
+![](../../../.gitbook/assets/screenshot_2020-10-20_at_10.01.49_am.png)
+
