@@ -1,20 +1,20 @@
-# 보안 정책 생성 및 규칙 설정 방법
+# How to create a security policy and set rules
 
-새 보안 정책을 생성하려면 보안 정책 메뉴에서 **Add a new policy**를 클릭합니다.
+To create a new security policy, click **Add a new policy** in the security policy menu.
 
-보안 정책 규칙은 하나 이상의 조건 및 작업과 함께 "if, then" 프레임워크를 따릅니다.\
-예를 들어:
+Security policy rules follow an “if, then” framework, with one or more conditions, and an action. For example:
 
-![](../../../.gitbook/assets/screenshot\_2020-07-06\_at\_11.38.07.png)
+![](../../../.gitbook/assets/screenshot_2020-07-06_at_11.38.07.png)
 
-새 보안 정책을 생성하면 첫 번째 빈 규칙이 자동으로 생성됩니다.
+If you create a new security policy, the first blank rule is automatically created.
 
-조건 및 작업을 선택하여 규칙을 완료합니다. 자세한 내용은 [조건](security-policies-conditions.md) 및 [작업](security-policies-actions.md) 설명서를 참조하십시오.
+Select the condition\(s\) and action to complete a rule. See the [**Conditions**](https://docs.snyk.io/fixing-and-prioritizing-issues/security-policies/security-policies-conditions) and [**Actions**](https://docs.snyk.io/fixing-and-prioritizing-issues/security-policies/security-policies-actions) documentation for more details.
 
-새 빈 규칙을 추가하려면 위의 스크린샷과 같이 이전 규칙 아래에 있는 **+**를 클릭합니다.
+To add a new blank rule, click on **+** below the previous rule, as seen in the screenshot above.
 
-규칙을 삭제하거나 복제하려면 위의 스크린샷과 같이 각 규칙 상자의 오른쪽에 있는 ...를 클릭합니다.
+To delete or duplicate a rule, click the **…** on the right hand side of each rule box, as seen in the screenshot above.
 
 {% hint style="info" %}
-규칙의 순서에 따라 우선 순위가 결정됩니다. 충돌이 있는 경우 맨 위에 가장 가까운 규칙이 후속 규칙보다 우선합니다.
+The order of your rules sets the precedence; if there is a conflict, the rule closest to the top supersedes any subsequent rules.
 {% endhint %}
+
