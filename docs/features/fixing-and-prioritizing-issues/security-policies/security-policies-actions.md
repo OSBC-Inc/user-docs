@@ -1,16 +1,15 @@
-# 보안 정책: 작업
+# Security policies: Actions
 
-조치는 정책 규칙의 조건이 일치할 때 발생하려는 것입니다. 현재 적용할 수 있는 작업은 다음과 같습니다.
+An action is what you want to happen when the conditions in the policy rule are matched. These are the actions that can currently be applied:
 
-**심각도 사용자 정의**
+**Customize severity**
 
-| 작업              | 정의                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 심각도를 다음으로 변경... | 조건과 일치하는 모든 Issue의 심각도를 변경합니다. Low, Medium, High 또는 Critical로 설정할 수 있습니다. 심각도가 변경된 Issue의 우선 순위 점수는 새 심각도를 반영하도록 업데이트됩니다. Issue의 심각도가 정책에 의해 변경되었음을 나타내는 메모도 Issue 카드에 나타납니다. 심각도 아이콘도 "누적"되어 새 심각도 뒤에 있는 원래 심각도를 보여줍니다. Issue의 우선 순위 점수도 새 심각도에 따라 다시 계산됩니다.                                                                                                                                                                                                                                                                                                                                                            |
-| 현재 및 미래 인스턴스 무시 | 무시 작업은 규칙에 지정된 조건과 일치하는 모든 취약점을 무시합니다. 조건과 일치하는 기존의 모든 취약성과 발견되는 모든 향후 인스턴스를 무시합니다. 예제 규칙은 특정 CVE와 일치하는 모든 Issue를 무시하는 것일 수 있습니다. 또는 "low"의 "business criticality" 속성이 있는 프로젝트에서 알려진 악용이 없는 모든 Issue를 무시합니다. 무시 정책이 적용되면 다음에 프로젝트를 다시 테스트할 때 무시가 발생합니다(수동 재테스트 또는 프로젝트가 매일 다시 테스트하도록 설정된 경우 매일 발생하는 다음 테스트 실행 시 자동으로). 그런 일이 발생하면 무시된 Issue는 "ignored by Security Policy"으로 표시됩니다. 동작을 설정할 때 무시 유형으로 "won't fix" 및 "not vulnerable"을 선택하고 무시 옆에 표시하려는 이유를 추가할 수 있습니다. 이것은 프로젝트의 Issue 카드에 표시됩니다. 정책 기반 무시는 수동으로 무시되는 Issue와 동일한 동작을 합니다. 수동 무시와 마찬가지로 자동 풀 요청은 보안 정책에 의해 무시되거나 보고의 Issue 수에 포함되지 않는 Issue에 대해 발생하지 않습니다. |
-
-
+| Action | Definitions |
+| :--- | :--- |
+| Change severity to… | Changes the severity of whatever issues match the conditions. This can be set to Low, Medium, High or Critical. Issues that have a changed severity will have their priority score updated to reflect the new severity. A note will also appear on the issue card indicating that the issue's severity has been changed by a policy. The severity icon will also be "stacked", showing the original severity behind the new one. The issue’s priority score will also be recalculated, based on the new severity. |
+| Ignore current and future instances | The ignore action ignores all vulnerabilities that match the conditions specified in the rule. It will ignore all existing vulnerabilities that match the conditions, and all future instances of it that are found. An example rule could be to ignore all issues that match a specific CVE. Or ignore all issues that have no known exploits in projects that have a "business criticality" attribute of "low" Once an ignore policy is applied, ignores will happen the next time the project is re-tested \(either via a manual retest, or automatically on the next test run which happens daily if the project is set to retest daily\). Once that's happened, the ignored issues will be marked as "ignored by Security Policy". When setting the action, you can select "won't fix" and "not vulnerable" as ignore types, and add a reason you'd like to appear alongside the ignore. This will show on the issue card in your project. Policy-based ignores have the same behaviour as issues that are manually ignored. Like manual ignores, automatic pull requests will not be raised on issues ignored by a security policy, or included in the issue count in reporting. |
 
 {% hint style="info" %}
-동일한 규칙에 여러 작업을 스택할 수 없습니다. 하나의 규칙으로 여러 작업을 수행하려면 동일한 조건으로 새 규칙 블록을 만들고 다른 작업을 지정합니다.
+You cannot stack multiple actions in the same rule. To have multiple actions with a rule, create a new rule block with the same conditions, and specify a different action.
 {% endhint %}
+
