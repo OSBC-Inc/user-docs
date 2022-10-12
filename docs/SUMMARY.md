@@ -443,7 +443,7 @@
 * [Amazon Web Services](tutorials/amazon-web-services/README.md)
   * [AWS CodePipeline](tutorials/amazon-web-services/aws-codepipeline/README.md)
     * [시작하기](tutorials/amazon-web-services/aws-codepipeline/getting-started.md)
-    * [Editing the pipeline](tutorials/amazon-web-services/aws-codepipeline/editing-the-pipeline.md)
+    * [파이프라인 편집](tutorials/amazon-web-services/aws-codepipeline/editing-the-pipeline.md)
     * [Connect to Snyk](tutorials/amazon-web-services/aws-codepipeline/connect-to-snyk.md)
     * [Scan your code](tutorials/amazon-web-services/aws-codepipeline/scan-your-code.md)
   * [AWS Code Suite](tutorials/amazon-web-services/aws-code-suite/README.md)
