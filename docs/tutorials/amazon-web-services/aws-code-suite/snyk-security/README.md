@@ -2,11 +2,11 @@
 
 ## 소개
 
-This module is designed to introduce scanning **open source dependencies** of the application and the **Docker** container that is created during this workshop. The files required for this module have already been created and reside in the /modules/snyk folder. You will copy these over while following the steps below.
+이 모듈은 이 워크샵에서 생성되는 애플리케이션 및 **Docker** 컨테이너의 **오픈 소스 종속성**을 스캔하도록 설계되었습니다. 이 모듈에 필요한 파일은 이미 생성되어 /modules/snyk 폴더에 있습니다. 아래 단계를 수행하는 동안 복사합니다.
 
 ### 배경
 
-**Snyk** is a **SaaS** offering that organizations use to **find, fix, prevent and monitor** open source dependencies. Snyk is a developer first platform that can be easily integrated into the Software Development Lifecycle (SDLC).
+**Snyk**은 조직이 오픈 소스 종속성을 찾고 수정하고 방지하고 모니터링하는 데 사용하는 **SaaS** 제품입니다. Snyk는 SDLC(Software Development Lifecycle)에 쉽게 통합할 수 있는 개발자 우선 플랫폼입니다.
 
 At this point of the module, the `Petstore` application is created, so we will look to insert **Snyk** as part of an important security gate during the build process.
 
