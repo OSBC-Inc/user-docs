@@ -447,7 +447,7 @@
     * [Snyk에 연결](tutorials/amazon-web-services/aws-codepipeline/connect-to-snyk.md)
     * [코드 스캔](tutorials/amazon-web-services/aws-codepipeline/scan-your-code.md)
   * [AWS Code Suite](tutorials/amazon-web-services/aws-code-suite/README.md)
-    * [Create an AWS account](tutorials/amazon-web-services/aws-code-suite/create-an-aws-account.md)
+    * [AWS 계정 생성](tutorials/amazon-web-services/aws-code-suite/create-an-aws-account.md)
     * [Creating your environment](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/README.md)
       * [Setup basic services](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/setup-basic-services.md)
       * [Build & push to repo](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/build-and-push-to-repo.md)
