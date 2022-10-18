@@ -450,7 +450,7 @@
     * [AWS 계정 생성](tutorials/amazon-web-services/aws-code-suite/create-an-aws-account.md)
     * [환경 구축하기](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/README.md)
       * [기본 서비스 설정](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/setup-basic-services.md)
-      * [Build & push to repo](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/build-and-push-to-repo.md)
+      * [빌드 및 저장소로 푸시](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/build-and-push-to-repo.md)
       * [Deploy ECS Fargate service](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/deploy-ecs-fargate-service.md)
       * [Deploy CI/CD pipeline](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/deploy-ci-cd-pipeline.md)
     * [Snyk Security](tutorials/amazon-web-services/aws-code-suite/snyk-security/README.md)
