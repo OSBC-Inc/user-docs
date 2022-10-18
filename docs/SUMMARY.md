@@ -445,7 +445,7 @@
     * [시작하기](tutorials/amazon-web-services/aws-codepipeline/getting-started.md)
     * [파이프라인 편집](tutorials/amazon-web-services/aws-codepipeline/editing-the-pipeline.md)
     * [Snyk에 연결](tutorials/amazon-web-services/aws-codepipeline/connect-to-snyk.md)
-    * [Scan your code](tutorials/amazon-web-services/aws-codepipeline/scan-your-code.md)
+    * [코드 스캔](tutorials/amazon-web-services/aws-codepipeline/scan-your-code.md)
   * [AWS Code Suite](tutorials/amazon-web-services/aws-code-suite/README.md)
     * [Create an AWS account](tutorials/amazon-web-services/aws-code-suite/create-an-aws-account.md)
     * [Creating your environment](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/README.md)
