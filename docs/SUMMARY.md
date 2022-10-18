@@ -454,7 +454,7 @@
       * [ECS Fargate 서비스 배포](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/deploy-ecs-fargate-service.md)
       * [CI/CD 파이프라인 배포](tutorials/amazon-web-services/aws-code-suite/creating-your-environment/deploy-ci-cd-pipeline.md)
     * [Snyk Security](tutorials/amazon-web-services/aws-code-suite/snyk-security/README.md)
-      * [Create account and obtain a token](tutorials/amazon-web-services/aws-code-suite/snyk-security/create-account-and-obtain-a-token.md)
+      * [계정 생성 및 토큰 획득](tutorials/amazon-web-services/aws-code-suite/snyk-security/create-account-and-obtain-a-token.md)
       * [Setup](tutorials/amazon-web-services/aws-code-suite/snyk-security/setup.md)
       * [Exercise - Testing](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-testing.md)
       * [Exercise - Fixing the Vulnerability](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-fixing-the-vulnerability.md)
