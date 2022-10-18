@@ -8,19 +8,19 @@
 
 **Snyk**은 조직이 오픈 소스 종속성을 찾고 수정하고 방지하고 모니터링하는 데 사용하는 **SaaS** 제품입니다. Snyk는 SDLC(Software Development Lifecycle)에 쉽게 통합할 수 있는 개발자 우선 플랫폼입니다.
 
-At this point of the module, the `Petstore` application is created, so we will look to insert **Snyk** as part of an important security gate during the build process.
+모듈의 이 시점에서 `Petstore` 애플리케이션이 생성되므로 빌드 프로세스 동안 중요한 보안 게이트의 일부로 Snyk을 삽입할 것입니다.
 
-This module will demonstrate how to fail a build when high severity issues are found so that fixes can take place.
+이 모듈에서는 심각도가 높은 문제가 발견되면 빌드를 실패하여 수정 사항을 적용하는 방법을 보여줍니다.
 
 ### Snyk CLI
 
-The Snyk command line interface (CLI) has three key commands for this exercise:
+Snyk 명령줄 인터페이스(CLI)에는 이 연습을 위한 세 가지 주요 명령이 있습니다.
 
-* `snyk auth` which links the CLI to your account and authorizes it to perform tests.
-  * We will utilize Amazon's System Manager Parameters to store this token to avoid hard-coding tokens.
-  * Alternatively to using **snyk auth**, you can also set an **environment variable** `SNYK_TOKEN` which the CLI will automatically detect.
-* `snyk test` performs the actual test and can fail a build
-* `snyk monitor` posts a snapshot for continuous monitoring and reporting on the `snyk.io` interface where you created your account.
+* CLI를 계정에 연결하고 테스트를 수행할 수 있는 권한을 부여하는 `snyk auth`.
+  * 하드 코딩 토큰을 피하기 위해 Amazon's System Manager Parameters를 사용하여 이 토큰을 저장합니다.
+  * **snyk 인증**을 사용하는 대신 CLI가 자동으로 감지하는 **환경 변수** SNYK\_TOKEN을 설정할 수도 있습니다.
+* `snyk test`는 실제 테스트를 수행하고 빌드에 실패할 수 있습니다.
+* `snyk monitor`는 계정을 생성한 `snyk.io` 인터페이스에 대한 지속적인 모니터링 및 보고를 위한 스냅샷을 게시합니다.
 
 ### 이 Lab의 작업
 
