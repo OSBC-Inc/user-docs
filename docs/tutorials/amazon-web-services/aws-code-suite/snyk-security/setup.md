@@ -1,14 +1,14 @@
-# Setup
+# 설정
 
-## Save Password to Session Manager
+## 세션 관리자에 비밀번호 저장
 
-Run the following command, replacing `abc123`, with **your unique token**. This places the token in the session parameter manager.
+다음 명령을 실행하여 `abc123`을 **고유한 토큰**으로 바꿉니다. 그러면 세션 매개변수 관리자에 토큰이 배치됩니다.
 
-```text
+```
 aws ssm put-parameter --name "snykAuthToken" --value "abc123" --type SecureString
 ```
 
-## Setup the Application Scanning
+## 애플리케이션 스캔 설정
 
 We want to insert testing with **Snyk** after `maven` has built the application. The simplest method is to insert commands to download, authorize and run the **Snyk** commands after Mvn has built the application/dependency tree.
 
@@ -16,7 +16,7 @@ In `modules/snyk/Dockerfile`, we have inserted the following commands to perform
 
 Set an environment variable from a value passed to the `docker build` command, this will contain the token for **Snyk**. By using an environment variable, **Snyk** will automatically detect the token when used.
 
-```text
+```
 #~~~~~~~SNYK Variable~~~~~~~~~~~~
 # Declare Snyktoken as a build-arg
 ARG snyk_auth_token
@@ -27,7 +27,7 @@ ENV SNYK_TOKEN=${snyk_auth_token}
 
 Download **Snyk**, run a test, looking for medium to high severity issues, and if the build succeeds, post the results to **Snyk** for monitoring and reporting. If a new vulnerability is found, you will be notified.
 
-```text
+```
 # package the application
 RUN mvn package -Dmaven.test.skip=true
 
@@ -44,7 +44,7 @@ RUN ./snyk monitor
 
 Later in the build process, a docker image is created. We want to analyze it for vulnerabilities. We will do this in `buildspec.yml`. First, pull the **Snyk** token `snykAuthToken` from the `parameter store`:
 
-```text
+```
 env:
   parameter-store:
     SNYK_AUTH_TOKEN: "snykAuthToken"
@@ -52,7 +52,7 @@ env:
 
 In the `prebuild` phase, we will install Snyk
 
-```text
+```
 phases:
   pre_build:
     commands:
@@ -64,7 +64,7 @@ phases:
 
 In the `build` phase we will pass the token to the **docker compose** command where it will be retrieved in the Dockerfile code we previously setup to test the application:
 
-```text
+```
 build:
     commands:
       - docker build --build-arg snyk_auth_token=$SNYK_AUTH_TOKEN -t $REPOSITORY_URI:latest .
@@ -72,7 +72,7 @@ build:
 
 Next we will **authorize** the **Snyk** instance for testing the Docker image that’s produced. If it passes we will pass the results to **Snyk** for monitoring and reporting.
 
-```text
+```
 build:
     commands:
       - $PWDUTILS/snyk auth $SNYK_AUTH_TOKEN
@@ -83,14 +83,13 @@ build:
 
 In terminal, **navigate** to this folder:
 
-```text
+```
 cd ~/environment/aws-modernization-workshop/
 ```
 
 To try this module, let us copy the **Snyk** versions over to our build:
 
-```text
+```
 cp modules/snyk/Dockerfile modules/containerize-application/Dockerfile
 cp modules/snyk/buildspec.yml buildspec.yml
 ```
-
