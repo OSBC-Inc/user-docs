@@ -14,11 +14,11 @@ _Push_:
 git push -f codecommit master
 ```
 
-Now in `CodeBuild`, look at your **build history**. Note it may take a minute or two for the new scan to run.
+이제 CodeBuild에서 **build history**를 살펴봅니다. 새 스캔이 실행되는 데 1\~2분 정도 걸릴 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_4\_build.png)
 
-Let’s look at why this failed. We see security vulnerabilities were found and we’re told **how** to fix it!
+이것이 실패한 이유를 살펴보겠습니다. 보안 취약점이 발견되고 **해결 방법**을 알려드립니다!
 
 ```
 Testing /usr/src/app...
