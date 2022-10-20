@@ -456,7 +456,7 @@
     * [Snyk Security](tutorials/amazon-web-services/aws-code-suite/snyk-security/README.md)
       * [계정 생성 및 토큰 획득](tutorials/amazon-web-services/aws-code-suite/snyk-security/create-account-and-obtain-a-token.md)
       * [설정](tutorials/amazon-web-services/aws-code-suite/snyk-security/setup.md)
-      * [Exercise - Testing](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-testing.md)
+      * [연습 - 테스트](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-testing.md)
       * [Exercise - Fixing the Vulnerability](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-fixing-the-vulnerability.md)
       * [Viewing Reporting](tutorials/amazon-web-services/aws-code-suite/snyk-security/viewing-reporting.md)
     * [Conclusion](tutorials/amazon-web-services/aws-code-suite/conclusion.md)
