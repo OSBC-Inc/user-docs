@@ -458,7 +458,7 @@
       * [설정](tutorials/amazon-web-services/aws-code-suite/snyk-security/setup.md)
       * [연습 - 테스트](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-testing.md)
       * [연습 - 취약점 수정](tutorials/amazon-web-services/aws-code-suite/snyk-security/exercise-fixing-the-vulnerability.md)
-      * [Viewing Reporting](tutorials/amazon-web-services/aws-code-suite/snyk-security/viewing-reporting.md)
+      * [리포트 보기](tutorials/amazon-web-services/aws-code-suite/snyk-security/viewing-reporting.md)
     * [Conclusion](tutorials/amazon-web-services/aws-code-suite/conclusion.md)
     * [Cleanup](tutorials/amazon-web-services/aws-code-suite/cleanup.md)
 * [Atlassian](tutorials/atlassian/README.md)
