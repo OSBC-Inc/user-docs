@@ -1,29 +1,32 @@
 ---
-description: 축하합니다. 보안 테스트를 왼쪽으로 이동하는 방법에 대한 DevSecOps 워크숍을 완료했습니다.
+description: >-
+  Congratulations. You have completed this DevSecOps workshop on shifting
+  security testing left.
 ---
 
-# 마무리 하기
+# Conclusion
 
-## 배운 내용 복습
+## Recap on what you have learned
 
-* CloudFormation 스택을 배포하는 방법을 배웠습니다.
-* 최신 CI/CD 파이프라인에 대해 배웠습니다.
-* AWS CodeBuild에서 테스트하는 방법을 배웠습니다.
-* 보안 테스트를 위한 몇 가지 오픈 소스 도구에 대해 배웠습니다.
-* 파이프라인에서 가능한 한 빨리 테스트하는 것이 중요한 이유를 배웠습니다.
+* Learned how to deploy CloudFormation stacks
+* Learned about a modern CI/CD pipeline 
+* Learned how to test in AWS CodeBuild
+* Learned about a couple of open source tools for security testing
+* Learned why it is important to test as early as possible in the pipeline
 
-## 마지막 고려사항들
+## Final Thoughts
 
-워크숍의 시간과 범위로 인해 CI/CD 파이프라인 내에서 보안 테스트를 개선하기 위해 계측할 수 있고 계측해야 하는 몇 가지 사항이 있습니다. 다음은 이 워크숍에서 배운 내용을 뛰어넘는 몇 가지 제안 사항입니다.
+Due to the time and scope of the workshop there are several things that can and should be instrumented to improve security testing within the CI/CD pipeline. Here are a few suggestions to go above and beyond what you have learned in this workshop.
 
-* 개발자가 이미 익숙하고 사용하고 있는 기술을 사용하여 개발자에게 피드백을 제공하는 알림을 추가합니다. 빌드 실패의 경우 Amazon Simple Notification Service(SNS) 및 AWS Lambda를 사용하여 슬랙 채널, SMS 또는 이메일 알림으로 보냅니다.
-* pull 요청 검토를 기다리는 gitflow 및 테스트 분기와 같은 분기 방법을 사용합니다.
-* 블루/그린 배포를 활용하여 프로덕션 배포 전에 추가 보안 테스트를 수행합니다.
-* 개발자가 로컬 컴퓨터에서 코드를 커밋할 때 바로 테스트를 자동화하려면 git hooks를 활성화하세요.
-* 언어별 린터, SAST, DAST, 종속성 CVE 스캐닝, IAST 및 RASP와 같은 추가 테스트를 추가합니다. 구현은 이 워크샵에서 달성한 것과 유사해야 합니다.
+* Add notifications that provide feedback to developers using technology that developers are already familiar with and using.  For build failures send to a slack channel, SMS, or email notifications using Amazon Simple Notification Service \(SNS\) and AWS Lambda.
+* Use a branching method such as gitflow and test branches awaiting a pull request review.
+* Utilize blue/green deployments to instrument additional security testing prior to production deployment.
+* Enable git hooks to automate testing right when a developer commits code on her/his local machine. 
+* Add additional testing such as language specific linters, SAST, DAST, dependency CVE scanning, IAST, and RASP.  Implementation should be similiar to what we accomplished in this workshop.
 
-DevSecOps에 추가 기능을 추가하는 데는 한계가 있습니다. 요점은 파이프라인을 모니터링하고 지속적으로 개선하여 최종 고객에 대한 기능 릴리스를 가속화하는 것입니다.
+The sky's the limit on adding additional features and functionality to DevSecOps. The point is to monitor your pipeline and continually make improvements to accelerate the release of features and functionality to your end customers.
 
-## 다음 단계
+## Next Steps
 
-회사의 개발 프로세스에 대한 워크샵에서 배운 몇 가지를 시도하고 구현하십시오. 한 번에 너무 많은 일을 하려고 하지 말고 민첩하고 반복적인 접근 방식을 사용하세요. 또한 보안을 강화하여 문화를 바꾸려고 하고 있으므로 너무 빨리 시도하거나 시도하지 마십시오.
+Try and implement some of the learnings from the workshop on your company's development process. Don't try and do too much at one time and use an agile iterative approach. Remember that you are also trying to change culture by baking in security so don't try and do too much too fast.
+

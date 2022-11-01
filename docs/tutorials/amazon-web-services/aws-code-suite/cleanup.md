@@ -1,9 +1,9 @@
 # Cleanup
 
-In order to prevent charges to your account we recommend cleaning up the infrastructure that was created. If you plan to keep things running so you can examine the workshop a bit more please remember to do the cleanup when you are done. It is very easy to leave things running in an AWS account, forget about it, and then accrue charges.
+계정에 요금이 청구되지 않도록 생성된 인프라를 정리하는 것이 좋습니다. 워크샵을 좀 더 검토할 수 있도록 작업을 계속 진행하려는 경우 작업이 완료되면 정리를 수행하는 것을 잊지 마십시오. AWS 계정에서 실행 중인 작업을 그대로 두고 잊어버리고 요금이 발생하는 것은 매우 쉽습니다.
 
 {% hint style="info" %}
-You will need to manually delete some resources before you delete the CloudFormation stacks so please do the following steps in order. With the CloudFormation Stacks, delete one at a time and validate the stack is removed before deleting the next stack.
+CloudFormation 스택을 삭제하기 전에 일부 리소스를 수동으로 삭제해야 하므로 다음 단계를 순서대로 수행하십시오. CloudFormation 스택을 사용하여 한 번에 하나씩 삭제하고 다음 스택을 삭제하기 전에 스택이 제거되었는지 확인합니다..
 {% endhint %}
 
 ```bash
@@ -21,13 +21,12 @@ aws cloudformation delete-stack --stack-name WorkshopPipeline
 aws cloudformation delete-stack --stack-name WorkshopECS
 ```
 
-Now remove the WorkshopServices stack
+이제 WorkshopServices 스택을 제거하십시오.
 
 ```bash
 aws cloudformation delete-stack --stack-name WorkshopServices
 ```
 
-Finally, close the cloud9 window and manually verify deletion of previous stacks and delete the final stack. In the AWS console, go to CloudFormation. Ensure **WorkshopPipeline, WorkshopECS, and WorkshopServices** have all been removed. Once verified, click `ModernizationWorkshop` stack and then `Delete`
+마지막으로 cloud9 창을 닫고 수동으로 이전 스택의 삭제를 확인하고 최종 스택을 삭제합니다. AWS 콘솔에서 CloudFormation으로 이동합니다. **WorkshopPipeline, WorkshopECS** 및 **WorkshopServices**가 모두 제거되었는지 확인합니다. 확인되면 `ModernizationWorkshop` 스택을 클릭한 다음 `Delete`를 클릭합니다.
 
-Verify that none of the Workshop\* stacks are listed in CloudFormation and you are done.
-
+Workshop 스택이 CloudFormation에 나열되지 않았는지 확인하고 완료했습니다.
