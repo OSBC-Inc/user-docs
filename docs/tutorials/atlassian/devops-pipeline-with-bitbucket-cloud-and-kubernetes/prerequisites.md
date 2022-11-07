@@ -9,8 +9,8 @@
 * Git 저장소용 [Atlassian Bitbucket](../../getting-started/atlassian-integrations/atlassian-bitbucket-account.md).
 * Jira 통합을 위한 Atlassian Jira.
 * 로컬 명령을 실행하기 위한 [Snyk CLI](../../../features/snyk-cli/).
-* 모듈 단계에서 저장소, Bitbucket Pipeline 및 저장소 변수를 설정해야 합니다. [module-1-scanning-and-monitoring-source-code](module-1-scanning-and-monitoring-source-code/ "mention")에서 설명하겠습니다.
-* [Amazon ECR](../devsecops-bitbucket-cloud/module-2/amazon-ecr.md)은 이름을 **java-goof**로 지정할 컨테이너 이미지입니다.
-* 컨테이너 실행을 위한 [Amazon EKS](../../getting-started/aws-integrations/aws-eks.md).
+* In module steps, you will need to setup a Repository, [Bitbucket Pipelines](../../getting-started/atlassian-integrations/atlassian-bitbucket-pipeline-variables.md), and [Repository Variables](../../getting-started/atlassian-integrations/atlassian-bitbucket-pipeline-variables.md), and we'll describe those in [module-1-scanning-and-monitoring-source-code](module-1-scanning-and-monitoring-source-code/ "mention").
+* [Amazon ECR](../../getting-started/aws-integrations/aws-ecr.md) the Container image you will name **java-goof.**
+* [Amazon EKS](../../getting-started/aws-integrations/aws-eks.md) for running your Container.
 
-이러한 기술의 전문가일 필요는 없지만 대부분의 DevOps 활동과 마찬가지로 도구 및 Linux 환경에 대한 경험이 많을수록 예제에서 더 많은 것을 얻을 수 있습니다.
+You do not have to be an expert in these technologies, but as with most DevOps activities, the more experienced you are with tools and Linux environments, the more you can expect to get out of the examples.
