@@ -1,52 +1,43 @@
 ---
-description: Build and test code and infrastructure using multiple integrations
+description: 다중 통합을 사용하여 코드 및 인프라 구축 및 테스트
 ---
 
-# DevOps Pipeline with Bitbucket Cloud and Kubernetes
+# Bitbucket Cloud 및 Kubernetes를 사용한 DevOps Pipeline
 
-In this workshop, we'll work through a pipeline to checkout, build, test, and deploy your code as a container to running environments.  This use case is typical of what most users encounter, and the workshop is designed to show you how Snyk can plumb into your everyday activities.
+다중 통합을 사용하여 코드 및 인프라 빌드 및 테스트 이 워크샵에서는 실행 중인 환경에 대한 컨테이너로 코드를 체크아웃, 빌드, 테스트 및 배포하는 파이프라인을 통해 작업합니다. 이 사용 사례는 대부분의 사용자가 접하는 전형이며 워크숍은 Snyk이 일상 활동에 어떻게 연결될 수 있는지 보여주기 위해 설계되었습니다.
 
-This workshop starts with a java version of our popular vulnerable application named Goof.  The source in Github is [https://github.com/snyk-labs/java-goof](https://github.com/snyk-labs/java-goof) and we'll work through a pipeline example highlighting multiple integrations along the way.
+이 워크샵은 Goof라는 인기 있는 취약한 애플리케이션의 Java 버전으로 시작합니다. Github의 소스는 [https://github.com/snyk-labs/java-goof](https://github.com/snyk-labs/java-goof)이고 우리는 그 과정에서 여러 통합을 강조하는 파이프라인 예제를 통해 작업할 것입니다.
 
-## Learning Objectives
+## 학습 목표
 
-We'll work through examples to highlight the following concepts with hands-on examples:
+실습 예제와 함께 다음 개념을 강조하기 위해 예제를 통해 작업할 것입니다:
 
-* We'll start with your code base in a Bitbucket repository, and enable Snyk to provide timely information about Open-Source Vulnerabilities.
-* We'll integrate Snyk into a working Atlasssian Bitbucket Pipeline to reveal vulnerabilities in your container images as part of your CI/CD pipeline
-* We'll deploy your container to a running environment and reveal additional runtime vulnerabilities in your Kubernetes manifests.
-* We'll show the correlation between the vulnerabilities and exploits.  Then we'll apply fixes to  your code to show remediation.
+* Bitbucket 리포지토리의 코드 기반부터 시작하여 Snyk이 오픈 소스 취약점에 대한 적시 정보를 제공할 수 있도록 합니다.
+* Snyk 작동 중인 Atlasssian Bitbucket Pipeline에 통합하여 CI/CD 파이프라인의 일부로 컨테이너 이미지의 취약점을 드러냅니다.
+* 실행 중인 환경에 컨테이너를 배포하고 Kubernetes 매니페스트에서 추가 런타임 취약점을 공개합니다.
+* 취약점과 익스플로잇 간의 상관관계를 보여드리겠습니다. 그런 다음 수정 사항을 코드에 적용하여 수정 사항을 표시합니다.
 
-## Target audience
+## 타겟 고객
 
-This workshop is designed for these members of your development team:
+이 워크샵은 다음  개발 팀 구성원을 위해 설계되었습니다:
 
-* Developers writing code and able to fix vulnerabilities with timely feedback.
-* Security Teams interested in using results from security scans to help development teams prioritize security fixes.
-* DevOps/DevSecOps engineers charged with the responsibility to ensure a well-running and compliant pipeline delivering code on time and with security.
-* Any other member with the shared interest of delivering code with better security.
+* 코드를 작성하고 시기 적절한 피드백으로 취약점을 수정할 수 있는 개발자.
+* 보안 스캔 결과를 사용하여 개발 팀이 보안 수정 사항의 우선 순위를 정하는 데 관심이 있는 보안 팀.
+* 잘 실행되고 규정을 준수하는 파이프라인을 적시에 보안과 함께 제공할 책임이 있는 DevOps/DevSecOps 엔지니어.
+* 더 나은 보안으로 코드를 제공하는 데 공통된 관심을 가진 다른 모든 구성원.
 
-## Content Structure
+## 콘텐츠 구조
 
-This workshop is developed in several modules to address the interests of different stages of your team's workflow.  As a representative use case, you may find the use cases align very well with your team's structure.   If your pipeline operations are different, you should still see how the desired outcomes for each use case still map to your processes.
+이 워크샵은 팀 워크플로의 여러 단계에 대한 관심을 다루기 위해 여러 모듈로 개발되었습니다. 대표적인 사용 사례로 사용 사례가 팀 구조와 매우 잘 일치한다는 것을 알 수 있습니다. 파이프라인 작업이 다른 경우에도 각 사용 사례에 대해 원하는 결과가 여전히 프로세스에 어떻게 매핑되는지 확인해야 합니다.
 
+### 모듈 1 - 개발자 워크스테이션에서 소스 코드 스캔 및 모니터링
 
+이 모듈에서는 Snyk이 자동으로 저장소를 스캔하고 전체 팀에 결과를 신속하게 제공할 수 있도록 합니다. 이 예는 귀하와 귀하의 팀이 Snyk을 활용하여 Bitbucket 저장소에서 풀 요청을 쉽게 생성할 수 있는 방법을 보여줍니다.
 
-### Module 1 - Scanning and monitoring source code at a developer workstation
+### 모듈 2 - 컨테이너 이미지 스캔 및 모니터링
 
-In this module, you enable Snyk to automatically scan your repository and quickly provide results to your entire team.  This example shows you how you and your team can leverage Snyk to easily create pull requests in your Bitbucket repository.&#x20;
+다음으로 AWS ECR로 전송하기 위해 준비할 때 컨테이너 이미지를 모니터링할 수 있도록 Snyk을 활성화합니다. 피드백을 사용하여 기본 이미지를 변경하여 취약점을 해결하여 컨테이너 이미지의 상태를 개선할 것입니다.
 
-### Module 2 - Scanning and monitoring container images
+### 모듈 3 - 컨테이너 및 Kubernetes 클러스터 활용
 
-Next, you'll enable Snyk to monitor your container images as you prepare them for deliver to AWS ECR.  We'll use the feedback to make a change to a base image to address a vulnerability to improve the posture of your container image.
-
-### Module 3 - Exploiting a container and Kubernetes cluster
-
-In this module, we'll demonstrate a container exploit and expand the example into a cluster exploit.   We'll remediate the vulnerability.  This module requires features available to Snyk users in a paid Tier.
-
-
-
-
-
-
-
+이 모듈에서는 컨테이너 익스플로잇을 보여주고 예제를 클러스터 익스플로잇으로 확장합니다. 취약점을 수정하겠습니다. 이 모듈에는 유료 계층의 Snyk 사용자가 사용할 수 있는 기능이 필요합니다.

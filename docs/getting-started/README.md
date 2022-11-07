@@ -1,7 +1,3 @@
----
-description: Snyk 시작하기
----
-
 # 시작하기
 
 ### Snyk 계정 생성
