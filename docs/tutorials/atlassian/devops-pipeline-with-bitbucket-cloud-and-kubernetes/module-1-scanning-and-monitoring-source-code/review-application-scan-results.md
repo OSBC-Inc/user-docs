@@ -1,52 +1,49 @@
 ---
-description: Time to Snyk!
+description: Snyk할 시간!
 ---
 
-# Review Application Scan Results
+# 애플리케이션 스캔 결과 검토
 
-In the previous step, adding your java-goof repository to Snyk automatically starts a repository scan operation. This process normally takes a minute or two and the results are available with Bitbucket and Snyk. We'll review those results in this section.
+이전 단계에서 Java-goof 저장소를 Snyk에 추가하면 저장소 스캔 작업이 자동으로 시작됩니다. 이 프로세스는 일반적으로 1\~2분 정도 소요되며 결과는 Bitbucket 및 Snyk에서 사용할 수 있습니다. 이 섹션에서 해당 결과를 검토합니다.
 
-## Background
+## 배경
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-opensource-01.png)
 
-In your Bitbucket repository, clicking on your **Snyk** link takes you to a page where you can review results from Snyk within Bitbucket as shown below:
+Bitbucket 저장소에서 **Snyk** 링크를 클릭하면 아래와 같이 Bitbucket 내에서 **Snyk**의 결과를 검토할 수 있는 페이지로 이동합니다.
 
 ![](<../../../../.gitbook/assets/image (73).png>)
 
-Snyk automatically scans your application for vulnerabilities and presents results within Bitbucket. This summary starts with a count of all vulnerabilities for the major elements, or projects, in your repository. For the java-goof application, you will see multiple maven and Dockerfile projects in a logical structure.
+Snyk은 애플리케이션의 취약점을 자동으로 스캔하고 Bitbucket 내에서 결과를 제공합니다. 이 요약은 저장소의 주요 요소 또는 프로젝트에 대한 모든 취약점의 수로 시작합니다. java-goof 애플리케이션의 경우 논리적 구조에서 여러 maven 및 Dockerfile 프로젝트를 볼 수 있습니다.
 
-If you click into the top-level Dockerfile link, you will a see a screen similar to what is shown below:
+최상위 Dockerfile 링크를 클릭하면 아래와 유사한 화면이 표시됩니다.
 
 ![](<../../../../.gitbook/assets/image (81) (1).png>)
 
-The summary line is replicated for the Dockerfile to maintain context.
+요약 행은 컨텍스트를 유지하기 위해 Dockerfile에 대해 복제됩니다.
 
 ![](<../../../../.gitbook/assets/image (83) (1) (1) (1).png>)
 
-This summary maintains context from the main page and you'll notice details such as the filename, total counts, and breakdown according to severity (Critical, High, Medium, Low). The reference project has hundreds of vulnerabilities, and Snyk presents the results in an order based on several factors that include the severity, if there are known exploits, and if there is a fix available. This ordered list helps your team focus on the vulnerabilities with the highest scores first.
+이 요약은 기본 페이지의 컨텍스트를 유지하며 파일 이름, 총 개수 및 심각도(Critical, High, Medium, Low)에 따른 분류와 같은 세부 정보를 확인할 수 있습니다. 참조 프로젝트에는 수백 개의 취약점이 있으며 Snyk은 심각도, 알려진 익스플로잇이 있는 경우, 사용 가능한 수정 사항이 있는 경우 등 여러 요인에 따라 결과를 순서대로 표시합니다. 이 정렬된 목록은 팀이 점수가 가장 높은 취약점에 먼저 집중하는 데 도움이 됩니다.
 
-Each vulnerability also contains links to public databases for users that wish to learn additional background and context.
+각 취약점에는 추가 배경 및 컨텍스트를 배우려는 사용자를 위한 공개 데이터베이스에 대한 링크도 포함되어 있습니다.
 
 ![](<../../../../.gitbook/assets/image (82).png>)
 
-Another section of the page focuses on the version of your software, available upgrades, and whether there is a known exploit. This level of detail helps teams more quickly assess a vulnerability as they can see the recommended fix when it is available.
+페이지의 다른 섹션에서는 소프트웨어 버전, 사용 가능한 업그레이드 및 알려진 익스플로잇이 있는지 여부에 중점을 둡니다. 이 수준의 세부 정보는 사용 가능한 권장 수정 사항을 볼 수 있으므로 팀에서 취약점을 보다 신속하게 평가하는 데 도움이 됩니다.
 
 ![](<../../../../.gitbook/assets/image (85).png>)
 
-You are encouraged to look at the results of other projects and take note of the remediation guidance provided. Some vulnerabilities have fixes, while others do not. Some vulnerabilities do not have known exploits, and that could influence how your team addresses them as issues. The varied nature of vulnerabilities affect how you and your team address them, and reviewing the results are an important part of the process.
+다른 프로젝트의 결과를 살펴보고 제공된 개선 지침을 기록해 두는 것이 좋습니다. 일부 취약점에는 수정 사항이 있지만 다른 취약점에는 수정 사항이 없습니다. 일부 취약점에는 알려진 익스플로잇이 없으며 팀에서 문제를 해결하는 방법에 영향을 줄 수 있습니다. 취약성의 다양한 특성은 귀하와 귀하의 팀이 문제를 해결하는 방법에 영향을 미치며 결과 검토는 프로세스의 중요한 부분입니다.
 
-Next, let's click into the top-level "visit Snyk" link visible on any project page to take you directly into Snyk. You visit Snyk to find even greater levels of details, filtering, and options beyond the results presented in Bitbucket. You use these pages to get fine-grain visibility and filtering of your vulnerabilities, plus several options to help you mitigate them.
+다음으로 모든 프로젝트 페이지에서 볼 수 있는 최상위 "visit Snyk" 링크를 클릭하여 Snyk으로 직접 이동하겠습니다. Snyk을 방문하여 Bitbucket에 표시된 결과보다 더 높은 수준의 세부 정보, 필터링 및 옵션을 찾습니다. 이러한 페이지를 사용하여 취약성에 대한 세부적인 가시성 및 필터링과 함께 취약성을 완화하는 데 도움이 되는 여러 옵션을 얻을 수 있습니다.
 
-Some of the details you see are shown in the next two images, and they include:
+다음 두 이미지에 표시되는 세부 정보 중 일부는 다음과 같습니다:
 
-* **Open a fix PR** to help you initiate a Pull Request with the fixes automatically applied by Snyk. This includes guidance so your team can more quickly work through your PR process.
-*   [Priority Score](https://snyk.io/blog/snyks-developer-first-prioritization-capabilities/) to help you effectively prioritize fixes.
-
-    The score, ranging from 1-1000, is powered by a proprietary algorithm that processes a wide array of factors, such as [CVSS](https://www.first.org/cvss/) score, the availability of a
-
-    fix known exploits, how new the vulnerability is, and whether it is reachable or not.
-* When enabled, the [Jira integration](https://snyk.io/blog/jira-integration/) lets you add a Jira ticket.
+* **fix PR**을 열어 Snyk에서 자동으로 적용된 수정 사항으로 풀 요청을 시작하는 데 도움이 됩니다. 여기에는 팀이 PR 프로세스를 통해 보다 신속하게 작업할 수 있도록 지침이 포함됩니다.
+* [Priority Score](https://snyk.io/blog/snyks-developer-first-prioritization-capabilities/)는 수정 사항의 우선 순위를 효과적으로 지정하는 데 도움이 됩니다.\
+  1-1000 범위의 점수는 [CVSS](https://www.first.org/cvss/) 점수, 알려진 익스플로잇, 취약점이 얼마나 새로운지, 도달 가능한지 여부를 수정합니다.
+* 활성화되면  [Jira integration](https://snyk.io/blog/jira-integration/)을 통해 Jira 티켓을 추가할 수 있습니다.
 
 ![](<../../../../.gitbook/assets/image (86) (1).png>)
 
