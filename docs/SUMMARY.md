@@ -465,7 +465,7 @@
   * [Bitbucket Cloud 및 Kubernetes를 사용한 DevOps Pipeline](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/README.md)
     * [전제 조건](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/prerequisites.md)
     * [모듈 1 - 소스 코드 스캔 및 모니터링](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/README.md)
-      * [Initial Setup](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/initial-setup.md)
+      * [초기 설정](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/initial-setup.md)
       * [Add a Bitbucket Repository](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/add-a-bitbucket-repository.md)
       * [Enable integrations](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/enable-integrations.md)
       * [Review Application Scan Results](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/review-application-scan-results.md)
