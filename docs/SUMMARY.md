@@ -472,7 +472,7 @@
       * [Jira 티켓 생성](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/create-a-jira-ticket.md)
       * [Pull 리퀘스트 생성](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/create-a-pull-request.md)
     * [모듈 2 - Bitbucket Pipelines](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/README.md)
-      * [Initial Setup](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/initial-setup.md)
+      * [초기 설정](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/initial-setup.md)
       * [Configure AWS ECR](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/configure-aws-ecr.md)
       * [Enable Pipeline Operations](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/enable-pipeline-operations.md)
       * [Add Bitbucket Repository Variables](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/add-bitbucket-repository-variables.md)
