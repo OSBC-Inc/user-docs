@@ -1,10 +1,10 @@
-# Prerequisites
+# 전제 조건
 
-This workshop utilizes several technologies. We provide guidance for tools relevant to each module as we encounter them. This stepwise approach is intended to emphasize the tech in the right context.
+이 워크샵은 여러 기술을 활용합니다. 우리는 각 모듈과 관련된 도구를 접하는 즉시 지침을 제공합니다. 이 단계적 접근 방식은 올바른 맥락에서 기술을 강조하기 위한 것입니다.
 
-This is a list of technologies we'll encounter across all module in the workshop:
+워크샵의 모든 모듈에서 접하게 될 기술 목록은 다음과 같습니다:
 
-* A [Snyk Account](../../getting-started/snyk-integrations/snyk-account.md) to see and review results.
+* 결과를 보고 검토할 수 있는 [Snyk 계정](../../getting-started/snyk-integrations/snyk-account.md).
 * An [Amazon AWS Account](../../getting-started/aws-integrations/aws-account.md) for your cloud services and resources.
 * [Atlassian Bitbucket](../../getting-started/atlassian-integrations/atlassian-bitbucket-account.md) for the Git repository.
 * Atlassian Jira for Jira integration.

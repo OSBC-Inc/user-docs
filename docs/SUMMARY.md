@@ -463,7 +463,7 @@
     * [Cleanup](tutorials/amazon-web-services/aws-code-suite/cleanup.md)
 * [Atlassian](tutorials/atlassian/README.md)
   * [Bitbucket Cloud 및 Kubernetes를 사용한 DevOps Pipeline](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/README.md)
-    * [Prerequisites](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/prerequisites.md)
+    * [전제 조건](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/prerequisites.md)
     * [Module 1 - Scanning and monitoring source code](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/README.md)
       * [Initial Setup](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/initial-setup.md)
       * [Add a Bitbucket Repository](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-1-scanning-and-monitoring-source-code/add-a-bitbucket-repository.md)
