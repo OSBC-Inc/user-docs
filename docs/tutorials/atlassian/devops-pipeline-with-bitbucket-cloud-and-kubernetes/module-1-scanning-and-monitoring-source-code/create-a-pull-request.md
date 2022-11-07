@@ -1,44 +1,44 @@
 ---
-description: More easily fix issues with PR feature
+description: PR 기능으로 더 쉽게 문제 해결
 ---
 
-# Create a Pull Request
+# Pull 리퀘스트 생성
 
-When you use Snyk to open a fix PR, you automating the task of setting up and configuring the details to more quickly address the issue. The simplifications aim to minimize typos and help teams focus on fixing issues more efficiently. General details are available in the [Snyk Docs](https://docs.snyk.io/products/snyk-open-source/open-source-basics/fixing-vulnerabilities), and we describe details specific to to this workshop here.
+Snyk을 사용하여 수정 PR을 열면 문제를 보다 신속하게 해결하기 위해 세부 사항을 설정하고 구성하는 작업을 자동화합니다. 단순화는 오타를 최소화하고 팀이 문제를 보다 효율적으로 수정하는 데 집중할 수 있도록 하는 것을 목표로 합니다. 일반적인 세부 사항은 [Snyk 사용자 가이드](../../../../)에서 볼 수 있으며 여기에서 이 워크샵에 대한 세부 사항을 설명합니다.
 
-First, you have to ensure you have setup and configured [atlassian-jira.md](../../../getting-started/atlassian-integrations/atlassian-jira.md "mention") with Snyk. We covered this requirement in a previous step within this module.
+먼저 Snyk으로[atlassian-jira.md](../../../getting-started/atlassian-integrations/atlassian-jira.md "mention") 를 설정하고 구성했는지 확인해야 합니다. 이 모듈의 이전 단계에서 이 요구 사항을 다뤘습니다.
 
-Let's work through the issues for a Dockerfile, because those are typically about updating the base image. In the Snyk projects view, expand you repository view to see the Docker and click on the details.
+Dockerfile의 문제는 일반적으로 기본 이미지 업데이트에 관한 것이므로 해결해 보겠습니다. Snyk 프로젝트 보기에서 저장소 보기를 확장하여 Docker를 보고 세부 정보를 클릭합니다.
 
 ![](<../../../../.gitbook/assets/image (63).png>)
 
-When you see the Dockerfile project, you will be presented with upgrade recommendations for the base image as shown below.
+Dockerfile 프로젝트가 표시되면 아래와 같이 기본 이미지에 대한 업그레이드 권장 사항이 표시됩니다.
 
 ![](<../../../../.gitbook/assets/image (87) (2).png>)
 
-Expand the list by clicking on the "Show more upgrade types" to see your available options.
+사용 가능한 옵션을 보려면 "Show more upgrade types"를 클릭하여 목록을 확장하십시오.
 
 ![](<../../../../.gitbook/assets/image (74).png>)
 
-Your options may vary from this screen because the Snyk database is frequently updated, and this includes the latest options for container images. You will see a few options presented.
+Snyk 데이터베이스가 자주 업데이트되고 여기에는 컨테이너 이미지에 대한 최신 옵션이 포함되기 때문에 이 화면에서 옵션이 다를 수 있습니다. 몇 가지 옵션이 표시됩니다.
 
-* Minor upgrades are typically seen as low-impact as they contain fewer chances of breaking changes. Your team may be motivated to make a minor change because they feel it is necessary to stay within a version range for their application stack to maintain compatibility. In the example above, this means the minor change from 8.5.21 to 8.5.71.
-* Major upgrades may be advantageous for your team if they address large numbers of vulnerabilities. In the example above, the difference between the current image and minor/major is approximately the same. In other examples, the gaps may be different and your team will use this information to make more informed choices.
+* 사소한 업그레이드는 변경 사항을 깨뜨릴 가능성이 적기 때문에 일반적으로 영향이 적은 것으로 간주됩니다. 팀은 호환성을 유지하기 위해 응용 프로그램 스택의 버전 범위를 유지해야 한다고 생각하기 때문에 약간의 변경을 가할 수 있습니다. 위의 예에서 이는 8.5.21에서 8.5.71로의 사소한 변경을 의미합니다.
+* 주요 업그레이드는 많은 수의 취약점을 해결하는 경우 팀에 유리할 수 있습니다. 위의 예에서 현재 이미지와 minor/major의 차이는 거의 같습니다. 다른 예에서는 격차가 다를 수 있으며 귀하의 팀은 이 정보를 사용하여 정보에 입각한 선택을 할 것입니다.
 
-For the purpose of this workshop, we'll pick the minor change for the **Open a fix PR** button. At this point, your development team will have an intuitive understanding of what they need to fix and how to fix it. They already know the change requires a few lines in a Dockerfile. What we'll show next is how the automation takes this routine operation of, "I know what to do" and automates the sequence. While simple in nature, this automation eliminates the common typo mistakes that too often come up in this process.
+이 워크샵의 목적을 위해 Open Fix PR 버튼에 대한 사소한 변경 사항을 선택합니다. 이 시점에서 개발 팀은 수정해야 할 사항과 수정 방법을 직관적으로 이해할 수 있습니다. 그들은 변경이 Dockerfile에 몇 줄을 요구한다는 것을 이미 알고 있습니다. 다음에 보여줄 것은 자동화가 "무엇을 해야 하는지 알고 있습니다"라는 일상적인 작업을 수행하고 시퀀스를 자동화하는 방법입니다. 이 자동화는 본질적으로 단순하지만 이 프로세스에서 너무 자주 발생하는 일반적인 오타를 제거합니다.
 
-Click on that button now to start the process. The automated process starts by showing you a screen to confirm your choice:
+프로세스를 시작하려면 지금 해당 버튼을 클릭하십시오. 자동화된 프로세스는 선택을 확인하는 화면을 표시하는 것으로 시작됩니다.
 
 ![](<../../../../.gitbook/assets/image (62).png>)
 
-Click on the Open a Fix PR button to confirm the change.
+Open a Fix PR 버튼을 클릭하여 변경 사항을 확인하십시오.
 
-Next what happens is you are taken to Bitbucket Cloud. This is helpful because it is the shared environment for you and your team to manage your open PRs. The screen snippet below shows some of the PR details as populated by Snyk for your team to review as part of your PR process.
+다음으로 Bitbucket Cloud로 이동합니다. 이는 귀하와 귀하의 팀이 공개 PR을 관리할 수 있는 공유 환경이기 때문에 유용합니다. 아래 화면 스니펫은 팀이 PR 프로세스의 일부로 검토할 수 있도록 Snyk에서 입력한 일부 PR 세부 정보를 보여줍니다.
 
 ![](<../../../../.gitbook/assets/image (80).png>)
 
-Below this information is the code diff your team should easily recognize. This is the fix your developers _knew_ they could make, and Snyk did it for them.
+이 정보 아래에는 팀이 쉽게 인식할 수 있는 코드 차이가 있습니다. 이것은 개발자가 만들 수 있다는 것을 알고 있는 수정 사항이며 Snyk이 대신 해주었습니다.
 
 ![](<../../../../.gitbook/assets/image (84).png>)
 
-This example is purposefully simple to focus on a single file. The next iteration of this example is to create a pull request on multiple files. While not covered in this workshop, the idea is the same. You select multiple issues you want Snyk to automatically fix across one or more files. Developers frequently "know" what to fix and quickly see the power of being able to let the automated PR process do the right search-and-replace for them. This way, your development team spends more time on the review of the content than the creation of the change.
+이 예제는 단일 파일에 초점을 맞추기 위해 의도적으로 간단합니다. 이 예제의 다음 반복은 여러 파일에 대한 pull 리퀘스트를 만드는 것입니다. 이 워크샵에서는 다루지 않지만 아이디어는 동일합니다. Snyk이 하나 이상의 파일에서 자동으로 수정하도록 하려는 여러 문제를 선택합니다. 개발자는 수정해야 할 사항을 자주 "알고" 있으며 자동화된 PR 프로세스가 적절한 검색 및 교체를 수행하도록 할 수 있는 능력을 빠르게 확인합니다. 이렇게 하면 개발 팀이 변경 사항을 만드는 것보다 콘텐츠를 검토하는 데 더 많은 시간을 할애할 수 있습니다.

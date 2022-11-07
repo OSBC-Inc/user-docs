@@ -49,4 +49,4 @@ Snyk은 애플리케이션의 취약점을 자동으로 스캔하고 Bitbucket �
 
 ![](<../../../../.gitbook/assets/image (66).png>)
 
-다음 두 섹션에서는 Jira 티켓과 pull 요청을 생성합니다.
+In the next two sections, we'll create a Jira ticket and a pull request.
