@@ -1,5 +1,5 @@
 ---
-description: Get the code into your Bitbucket
+description: Bitbucket에 코드 가져오기
 ---
 
 # Bitbucket 저장소 추가
