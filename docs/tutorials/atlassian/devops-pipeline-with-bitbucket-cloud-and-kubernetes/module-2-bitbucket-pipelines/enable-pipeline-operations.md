@@ -1,13 +1,13 @@
 ---
-description: Bitbucket Pipeline을 실행하여 자동화된 결과를 확인하고 애플리케이션 배포
+description: Run a Bitbucket Pipeline to see automated results and deploy your application
 ---
 
-# Pipeline 작업 활성화
+# Enable Pipeline Operations
 
-### Bitbucket Pipelines 활성화
+### Enable Bitbucket Pipelines
 
-기본값이 비활성화된 Pipeline으로 시작하는 경우 저장소에 대해 [Bitbucket Pipelines](../../../getting-started/atlassian-integrations/atlassian-bitbucket-pipeline-variables.md)을 활성화해야 할 수 있습니다.
+You may need to enable [Bitbucket Pipelines](../../../getting-started/atlassian-integrations/atlassian-bitbucket-pipeline-variables.md) for the repository when the default is to start with pipelines disabled.
 
-[Snyk Bitbucket Pipelines Docs](../../../../features/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview.md) 및 [Snyk Bitbucket Pipelines Video](../../../../features/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview.md)에는 추가 통합 정보가 포함되어 있으며 Pipeline 작업을 활성화하려면 저장소에 대한 권한이 필요합니다.
+The [Snyk Bitbucket Pipelines Docs](../../../../features/integrations/ci-cd-integrations/bitbucket-pipelines-integration-overview.md) and [Snyk Bitbucket Pipelines Video](broken-reference) contain additional integration information, and you will need permissions in your repository to enable pipeline operations.
 
-Pipeline을 활성화하면 main 또는 master라는 이름의 기본 분기에 중점을 둡니다. 참조 저장소의 루트 디렉터리에는 이미 bitbucket\_pipelines.yaml이 포함되어 있으며 작동하려면 일부 변수를 구성해야 합니다. Pipeline이 활성화되면 변수를 수정할 수 있으며 이에 대해서는 다음 섹션에서 다룹니다.
+When you enable pipelines, we'll focus on the main branch, named either main or master. The reference repository already contains a bitbucket\_pipelines.yaml at the root directory, and we'll need to configure some variables to make it work. You can modify variables once the pipeliene is enabled, and we cover that in the next section.

@@ -475,7 +475,7 @@
       * [초기 설정](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/initial-setup.md)
       * [AWS ECR 구성](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/configure-aws-ecr.md)
       * [Pipeline 작업 활성화](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/enable-pipeline-operations.md)
-      * [Add Bitbucket Repository Variables](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/add-bitbucket-repository-variables.md)
+      * [Bitbucket 저장소 변수 추가](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/add-bitbucket-repository-variables.md)
       * [Application Scanning in your pipeline](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/application-scanning-in-your-pipeline.md)
     * [모듈 3 - Kubernetes에서 Tomcat RCE 활용](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/README.md)
       * [Initial Setup](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/initial-setup.md)
