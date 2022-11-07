@@ -1,11 +1,10 @@
-# Configure AWS ECR
+# AWS ECR 구성
 
-It is convenient to deploy your container image to a container registry, and we use AWS ECR because we also deploy the container to AWS EKS in the next module.  Other pipelines may use other registries and Kubernetes environments, and the concepts here are still applicable because of the focus on the configuration parameters.
+컨테이너 이미지를 컨테이너 레지스트리에 배포하는 것이 편리하며 다음 모듈에서 AWS EKS에도 컨테이너를 배포하기 때문에 AWS ECR을 사용합니다. 다른 파이프라인은 다른 레지스트리 및 Kubernetes 환경을 사용할 수 있으며 여기의 개념은 구성 매개변수에 초점을 맞추기 때문에 여전히 적용할 수 있습니다.
 
-We start by setting up [AWS ECR](../../../getting-started/aws-integrations/aws-ecr.md).  From those instructions, you will need this information for future steps:
+먼저 [AWS ECR](../../../getting-started/aws-integrations/aws-ecr.md)을 설정합니다. 해당 지침에서 향후 단계를 위해 다음 정보가 필요합니다:
 
-* The name of the Container registry.
-* The URI.  _For now, AWS ECR integrations only support private registries utilizing a standard naming convention and we don't use this information.  However, as a newer feature, we anticipate public ECR registries will be supported in the near future._
-* Your AWS Keys.
-* Your AWS Region (e.g. us-east-1).
-
+* 컨테이너 레지스트리의 이름
+* URI. 현재 AWS ECR 통합은 표준 명명 규칙을 사용하는 프라이빗 레지스트리만 지원하며 이 정보는 사용하지 않습니다. 그러나 새로운 기능으로 공개 ECR 레지스트리가 가까운 시일 내에 지원될 것으로 예상합니다.
+* AWS 키
+* AWS Region(예: us-east-1)
