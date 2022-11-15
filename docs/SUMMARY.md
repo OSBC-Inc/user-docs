@@ -675,6 +675,6 @@
 ## MORE INFO
 
 * [취약점 공개](more-info/disclosing-vulnerabilities/README.md)
-  * [Disclose a vulnerability in Snyk services](more-info/disclosing-vulnerabilities/disclose-a-vulnerability-in-snyk-services.md)
-  * [Disclose a vulnerability in an open source package](more-info/disclosing-vulnerabilities/disclose-a-vulnerability-in-an-open-source-package.md)
+  * [Snyk 서비스의 취약점 공개](more-info/disclosing-vulnerabilities/disclose-a-vulnerability-in-snyk-services.md)
+  * [오픈소스 패키지의 취약점 공개](more-info/disclosing-vulnerabilities/disclose-a-vulnerability-in-an-open-source-package.md)
 * [Snyk이 데이터를 처리하는 방법](more-info/how-snyk-handles-your-data.md)
