@@ -26,7 +26,7 @@ Bitbucket에서 파이프라인을 활성화하면 매개변수화된 작업을 
 * 저장소의 Amazon ECR [URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html): `AWS_ECR_URI`
   * 이것은 보안 변수가 아닙니다.
   * 이것은 이 양식의 저장소에 대한 개인 ECR URI입니다.: [https://aws\_account\_id.dkr.ecr.region.amazonaws.com](https://aws\_account\_id.dkr.ecr.region.amazonaws.com)
-* Container 이미지 이름: `IMAGE`
+* 컨테이너이미지 이름: `IMAGE`
   * 이것은 보안 변수가 아닙니다.
   * 이것은 java-goof와 같은 이미지의 이름입니다.
 * 클러스터의 Amazon EKS 이름: `AWS_EKS_CLUSTER`

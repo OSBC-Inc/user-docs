@@ -1,18 +1,16 @@
-# Application Scanning in your pipeline
+# Pipeline의 애플리케이션 스캐닝
 
+bitbucket-pipelines.yml은 파이프라인 빌드 구성을 정의합니다. Pipelines를 처음 사용하는 경우 [여기](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)에서 시작하는 방법에 대해 자세히 알아볼 수 있습니다.
 
+이 워크숍에서는 워크플로에 매핑된 개별 단계가 포함된 샘플 bitbucket-pipelines.yml 파일을 제공했습니다.
 
-The bitbucket-pipelines.yml defines your Pipelines builds configuration. If you're new to Pipelines you can learn more about how to get started [here](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/).
+* 코드 빌드
+* 도커 이미지 빌드
+* 컨테이너 이미지 스캔
+* 컨테이너 이미지를 레지스트리에 배포
+* Kubernetes 클러스터에 컨테이너 이미지 배포
 
-In this workshop, we have provided you with a sample bitbucket-pipelines.yml file containing distinct steps mapped to our workflow:
-
-* Build the code
-* Build the docker image
-* Scan the container image
-* Deploy the container image to a registry
-* Deploy the container image to a Kubernetes cluster
-
-Let's start by examining the first steps to build the code and container:
+코드와 컨테이너를 빌드하는 첫 번째 단계부터 살펴보겠습니다:
 
 ```yaml
 image: atlassian/default-image:2
@@ -37,9 +35,9 @@ atlassian-security-scan: &atlassian-security-scan
         - pipe: atlassian/git-secrets-scan:0.4.3
 ```
 
-In this example, we perform a few activities to illustrate a representative pipeline.  The first stage is **build-app,** and it's primary purpose is to run a maven build with checkstyle to generate a jar file.  The next stage is entitled **atlassian-security-scan** and we utilize the Atlassian pipe to scan for git secrets.  These two steps are include for convenience and illustrative of a best practice to ensure things are working.  We will not cover their details in the workshop, and we encourage you to review if you are interested.
+이 예에서는 대표적인 파이프라인을 설명하기 위해 몇 가지 활동을 수행합니다. 첫 번째 단계는 **build-app**이며 주요 목적은 jar 파일을 생성하기 위해 checkstyle로 maven 빌드를 실행하는 것입니다. 다음 단계는 **atlassian-security-scan**으로 제목이 지정되며 Atlassian 파이프를 사용하여 git 보안을 검색합니다. 이 두 단계는 편의를 위해 포함되었으며 일이 제대로 작동하는지 확인하기 위한 모범 사례를 보여줍니다. 워크샵에서 자세한 내용을 다루지는 않을 것이며 관심이 있으시면 검토해 보시기 바랍니다.
 
-The next block includes Snyk scan where we use two pipes to scan and push an image.
+다음 블록에는 두 개의 파이프를 사용하여 이미지를 스캔하고 푸시하는 Snyk 스캔이 포함됩니다.
 
 ```
 snyk-scan-push-image: &snyk-scan-push-image
@@ -71,23 +69,21 @@ snyk-scan-push-image: &snyk-scan-push-image
             TAGS: latest
 ```
 
-The first part of the script builds the docker image with commands already familiar to docker users.
+스크립트의 첫 번째 부분은 도커 사용자에게 이미 익숙한 명령으로 도커 이미지를 빌드합니다.
 
-The next block is the [Snyk Scan](https://bitbucket.org/product/features/pipelines/integrations?p=snyk/snyk-scan) pipe for Atlassian Bitbuckets, with configuration parameters.  The details for configuring the pipe are available online, but you can see the human-readable names help us easily understand what is going on.  Let's take a closer look at a few of these:
+다음 블록은 구성 매개변수가 있는 Atlassian Bitbuckets용 [Snyk Scan](https://bitbucket.org/product/features/pipelines/integrations?p=snyk/snyk-scan) 파이프입니다. 파이프 구성에 대한 세부 정보는 온라인에서 볼 수 있지만 사람이 읽을 수 있는 이름을 보면 진행 상황을 쉽게 이해할 수 있습니다. 다음 중 몇 가지를 자세히 살펴보겠습니다.
 
-1. `SNYK_TOKEN` is being passed into our pipe as a repository variable previously defined in the \[**Bitbucket Configuration**]\() module.
-2.  `PROJECT_FOLDER` is the folder in which the project resides and normally defaults to `.`. However, in our example, we have set this to `app/goof` and
-
-    are passing this as an [artifact](https://support.atlassian.com/bitbucket-cloud/docs/use-artifacts-in-steps/) to other steps in our pipeline.
-3. `CODE_INSIGHTS_RESULTS` defaults to `false`. However, we will want to create [Code Insight report with Snyk](https://snyk.io/blog/enhanced-security-for-bitbucket-cloud-development/) test results so we have set this to `true`.
-4. `SEVERITY_THRESHOLD` reports on issues equal or higher of the provided level. The default is `low` but in our case, we are interested only in `high` so we have defined this variable accordingly.
-5. `DONT_BREAK_BUILD` the default is `false` and this is to be expected. Under normal circumstances we would want to break our build if issues our found. However, for the purpose of this workshop we set the value to `true`.
+1. `SNYK_TOKEN` 은 이전에 \[**Bitbucket Configuration]** 모듈에서 정의한 저장소변수로 파이프에 전달되고 있습니다.
+2. `PROJECT_FOLDER` 은 프로젝트가 있는 폴더이며 일반적으로 기본값은 `.`이지만 이 예에서는 app/goof로 설정하고 이를 파이프라인의 다른 단계에 아티팩트로 전달하고 있습니다.
+3. `CODE_INSIGHTS_RESULTS` 의 기본값은`false` 입니다. 그러나 Snyk 테스트 결과로 [Code Insight 보고서](https://snyk.io/blog/enhanced-security-for-bitbucket-cloud-development/)를 생성하려고 하므로 이를 `true`로 설정했습니다.
+4. `SEVERITY_THRESHOLD` 는 제공된 수준 이상의 문제에 대해 보고합니다. 기본값은 `low` 지만 우리의 경우에는 `high` 에만 관심이 있으므로 그에 따라 이 변수를 정의했습니다.
+5. `DONT_BREAK_BUILD` 기본값은 `false`이며 이는 예상된 것입니다. 정상적인 상황에서 찾은 문제가 발생하면 빌드를 중단하고 싶을 것입니다. 그러나 이 워크숍의 목적을 위해 값을 `true`로 설정했습니다.
 
 {% hint style="info" %}
-You can run **Snyk security scans** on your _pull requests_ and view results in **Code Insights** with the help of a brand new [Snyk Security Connect App on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/1222359/snyk-for-bitbucket-cloud?hosting=cloud\&tab=overview). It's easy to get started and you can install the app with just a few clicks.
+풀 리퀘스트에서 **Snyk 보안 스캔**을 실행하고 Atlassian Marketplace의 새로운 Snyk Security Connect 앱을 통해 **Code Insights**에서 결과를 볼 수 있습니다. 시작하기 쉽고 몇 번의 클릭만으로 앱을 설치할 수 있습니다.
 {% endhint %}
 
-The last block is for an EKS deployment.  We include the block in the workshop to complete the picture of a deployment to a destination environment.  The pipeline will automatically deploy the container to the named pipeline based on the declarations below.
+마지막 블록은 EKS 배포용입니다. 워크숍에 블록을 포함하여 대상 환경에 대한 배포 그림을 완성합니다. 파이프라인은 아래 선언에 따라 명명된 파이프라인에 컨테이너를 자동으로 배포합니다.
 
 ```
 deploy-image: &deploy-image
@@ -100,4 +96,3 @@ deploy-image: &deploy-image
           KUBECTL_COMMAND: 'apply'
           RESOURCE_PATH: 'k8s'
 ```
-

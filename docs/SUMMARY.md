@@ -476,7 +476,7 @@
       * [AWS ECR 구성](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/configure-aws-ecr.md)
       * [Pipeline 작업 활성화](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/enable-pipeline-operations.md)
       * [Bitbucket 저장소 변수 추가](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/add-bitbucket-repository-variables.md)
-      * [Application Scanning in your pipeline](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/application-scanning-in-your-pipeline.md)
+      * [Pipeline의 애플리케이션 스캐닝](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/application-scanning-in-your-pipeline.md)
     * [모듈 3 - Kubernetes에서 Tomcat RCE 활용](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/README.md)
       * [Initial Setup](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/initial-setup.md)
       * [RCE Vulnerability](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/rce-vulnerability.md)
