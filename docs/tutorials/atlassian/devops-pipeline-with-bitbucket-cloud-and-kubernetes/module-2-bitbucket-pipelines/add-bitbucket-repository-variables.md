@@ -17,21 +17,21 @@ Bitbucket에서 파이프라인을 활성화하면 매개변수화된 작업을 
 * Snyk 계정 인증을 위한 Snyk API 토큰: `SNYK_TOKEN`. 다음 단계에서 통합을 활성화한 후 이 변수로 다시 돌아올 것입니다.
 * 이 값은 보안 변수입니다.
 * 생성한 서비스 계정 API 토큰입니다.
-* AWS Identity & Access Management User [key and secret](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_credentials\_access-keys.html) for secure authenticated interactions with the AWS API: `AWS_ACCESS_KEY_ID` & `AWS_SECRET_ACCESS_KEY`
-  * These are secured variables.
-  * These are the API keys for your access into AWS.
-* AWS region you will be deploying to: `AWS_DEFAULT_REGION`
-  * This is not a secured variable.
-  * This is a region to where your ECR registry is accessible from. For example - us-east-1.
-* Amazon ECR [URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html) for your repository: `AWS_ECR_URI`
-  * This is not a secured variable.
-  * This is the private ECR URI for your repository of this form: [https://aws\_account\_id.dkr.ecr.region.amazonaws.com](https://aws\_account\_id.dkr.ecr.region.amazonaws.com)
-* Container image name: `IMAGE`
-  * This is not a secured variable.
-  * This is the name of your image, such as java-goof.
-* Amazon EKS name of your cluster: `AWS_EKS_CLUSTER`
-  * This value is not a secured variable.
-  * This is the name of your EKS cluster.
-  * This workshop does not cover the EKS cluster, but you may set this value if you continue with the example and add a deployment to a cluster.
+* AWS Identity & Access Management AWS API와의 안전한 인증 상호 작용을 위한 사용자 키 및 암호: `AWS_ACCESS_KEY_ID` & `AWS_SECRET_ACCESS_KEY`
+  * 이것은 보안 변수입니다.
+  * 이는 AWS에 액세스하기 위한 API 키입니다.
+* 배포할 AWS 리전: `AWS_DEFAULT_REGION`
+  * 이것은 보안 변수가 아닙니다.
+  * ECR 레지스트리에 액세스할 수 있는 지역입니다. 예: us-east-1.
+* 저장소의 Amazon ECR [URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html): `AWS_ECR_URI`
+  * 이것은 보안 변수가 아닙니다.
+  * 이것은 이 양식의 저장소에 대한 개인 ECR URI입니다.: [https://aws\_account\_id.dkr.ecr.region.amazonaws.com](https://aws\_account\_id.dkr.ecr.region.amazonaws.com)
+* Container 이미지 이름: `IMAGE`
+  * 이것은 보안 변수가 아닙니다.
+  * 이것은 java-goof와 같은 이미지의 이름입니다.
+* 클러스터의 Amazon EKS 이름: `AWS_EKS_CLUSTER`
+  * 이것은 보안 변수가 아닙니다.
+  * 이것은 EKS 클러스터의 이름입니다.
+  * 이 워크숍에서는 EKS 클러스터를 다루지 않지만 예제를 계속 진행하면서 클러스터에 배포를 추가하는 경우 이 값을 설정할 수 있습니다.
 
 변수를 구성했으면 이제 파이프라인을 검토하고 다음 섹션에서 실행을 트리거할 수 있습니다.
