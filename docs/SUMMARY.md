@@ -481,7 +481,7 @@
       * [초기 설정](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/initial-setup.md)
       * [RCE Vulnerability](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/rce-vulnerability.md)
     * [결론](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/conclusion.md)
-  * [DevSecOps with Bitbucket Cloud](tutorials/atlassian/devsecops-bitbucket-cloud/README.md)
+  * [Bitbucket Cloud를 사용한 DevSecOps](tutorials/atlassian/devsecops-bitbucket-cloud/README.md)
     * [Prerequisites](tutorials/atlassian/devsecops-bitbucket-cloud/prerequisites.md)
     * [Getting Started](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/README.md)
       * [Snyk Account](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/snyk-account.md)
