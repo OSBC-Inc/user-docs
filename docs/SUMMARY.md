@@ -639,7 +639,7 @@
     * [Register The App and Configure User Authorization](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/module-2.md)
     * [Render Content For Users](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/module-3.md)
 * [SpringOne](tutorials/springone-workshop/README.md)
-  * [Workshop Overview](tutorials/springone-workshop/workshop-environment.md)
+  * [Workshop 개요.](tutorials/springone-workshop/workshop-environment.md)
   * [Create Github Repository](tutorials/springone-workshop/create-github-repository/README.md)
     * [Create Spring-Petclinic Repo](tutorials/springone-workshop/create-github-repository/create-spring-petclinic-repo.md)
   * [Configure Snyk for DevSecOps](tutorials/springone-workshop/configure-snyk-for-devops/README.md)

@@ -1,64 +1,60 @@
-# Workshop Overview
+# Workshop 개요.
 
-## What is DevSecOps?
+## DevSecOps란 무엇입니까?
 
-DevSecOps is the Venn diagram of IT. It represents where the developer, security, and operations organizations join forces to deliver applications to customers, using automated processes, while proactively addressing security, and maintaining observability and high availability.
+DevSecOps는 IT의 다음 벤 다이어그램에 표시되어 있습니다. 이는 개발자, 보안 및 운영 조직이 협력하여 자동화된 프로세스를 사용하여 고객에게 애플리케이션을 제공하는 동시에 보안을 사전에 해결하고 관찰 가능성과 고가용성을 유지하는 교차점입니다.
 
-While this is the panacea and an incredible feat to accomplish, the reality is most enterprise organizations have a considerable amount of internal change to consider such a goal. In addition, DevSecOps is in its early stages of being formed, much like containers in 2015, and many of the best practices and thought leadership, if you will, are still developing.
+이는 만병통치약이자 달성해야 할 놀라운 업적이지만, 대부분의 엔터프라이즈 조직은 이러한 목표를 고려하기 위해 상당한 양의 내부 변화를 겪고 있습니다. 또한 DevSecOps는 2015년 컨테이너와 마찬가지로 형성 초기 단계에 있으며, 많은 모범 사례와 사고 리더십이 여전히 개발 중입니다.
 
-![DevSecOps](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/venn_devsecops.png)
+![DevSecOps](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/venn\_devsecops.png)
 
-## What is the DevSecOps Workshop?
+## DevSecOps Workshop이란 무엇입니까?
 
-This workshop's focus is to give developers and security teams hands-on experience using the Snyk solutions to solve security-related concerns in the development and CI/CD phases of the SDLC. Addressing application security concerns in these phases of the SDLC is often called "shift-left."
+이 워크숍의 초점은 개발자와 보안 팀이 SDLC의 개발 및 CI/CD 단계에서 보안 관련 문제를 해결하기 위해 Snyk 솔루션을 사용하는 실제 경험을 제공하는 것입니다. SDLC의 이러한 단계에서 애플리케이션 보안 문제를 해결하는 것은 종종 "shift-left"라고 합니다.
 
-In this workshop, we take the popular Spring Java application called Spring Petclinic \(SPC\) and deploy it as a container-based solution using Kubernetes. We apply the Snyk solutions during the SDLC to demonstrate the first principles of DevSecOps.
+이 워크숍에서는 SPC(Spring Petclinic)라는 인기 있는 Spring Java 애플리케이션을 가져와서 Kubernetes를 사용하여 컨테이너 기반 솔루션으로 배포한다. SDLC 중에 Snyk 솔루션을 적용하며 DevSecOps의 첫 번째 원칙을 시연한다.
 
-Using Snyk solutions, we will cover the following:
+Snyk 솔루션을 사용하여 다음을 다룹니다.
 
-**Vulnerability management of open source components \(SCA\)**
+**오픈소스 컴포넌트의 취약점 관리 (SCA)**
 
-* The developer experience using a Snyk before committing code. 
-* Using Snyk to automate vulnerabilities in source code
-* Using Snyk to provide security gates in CI/CD 
-* License compliance of open source components
+* 개발자는 코드를 commit 하기 전에 Snyk을 사용합니다.
+* Snyk을 사용하여 소스코드의 취약점 해결 자동화
+* Snyk을 사용하여 CI/CD에 보안 게이트 제공
+* 오픈소스 컴포넌트의 라이선스 컴플라이언스
 
-**Container security**
+**컨테이너 보안**
 
-* Synk's container solution to scan container images.
-* Using Snyk to remediate vulnerability issues
+* 컨테이너 이미지를 스캔하는 Snyk의 컨테이너 솔루션입니다.
+* Snyk을 사용하여 **IaC (Infrastructure as Code)** 취약점 문제를 해결합니다.
+* Kubernetes 솔루션용 Snyk의 IaC는 K8s 파일이 정책 표준을 준수하는지 확인합니다.
 
-  **Infrastructure as Code \(IaC\)**
+## 워크숍을 완료하려면 무엇이 필요합니까?
 
-* Snyk's IaC for Kubernetes solution to verify our K8s files adhere to policy standards.
+워크숍에서 연습을 완료하려면 다음에 대한 계정이 필요합니다.
 
-## What do I need to complete the workshop?
+* Snyk 계정 및 개인 API 토큰
+* write 권한이 있는 Github 계정 및 개인 토큰
+* Docker Hub 계정 및 개인 API 토큰
+* API key, 명령어 등을 잘라내어 붙여넣기 위한 스크래치 패드 애플리케이션
 
-To complete the exercises in the workshop, you need an account for the following:
-
-* Snyk account and personal API token
-* Github account and personal token with write permissions.
-* Docker Hub account and personal API token
-* Scratch pad application to cut-n-paste API keys, commands, etc.
-
-Besides Snyk solutions, we used the following technologies to minimize requirements and demonstrate an application deployment.
+Snyk 솔루션 외에도 다음과 같은 기술을 사용하여 요구사항을 최소화하고 애플리케이션 배포를 시연했습니다.
 
 * Github Repos
 * Github Actions
 * Kubernetes
 * Helm
 
-## What is included in this workshop?
+## 이 워크숍에는 무엇이 포함되어 있습니까?
 
-### Overview of Snyk solutions
+### Snyk 솔루션 개요
 
-We will provide a quick overview of the Snyk solutions.
+Snyk 솔루션에 대한 간략한 개요를 제공합니다.
 
-### Getting started with the lab VM
+### lab VM 시작하기
 
-We've created a lab VM with all the necessary tools to complete the exercises in this workshop. In addition to the command-line tools, there are a few external interfaces to web-based solutions to execute forking the repo, accessing GitHub, accessing Docker Hub, accessing the Snyk UI, and viewing the workshop instructions.
+이 워크숍의 연습을 완료하는 데 필요한 모든 도구가 포함된 lab VM을 만들었습니다. 명령줄 도구 외에도 저장소 분기, GitHub 액세스, Docker Hub 액세스, Snyk UI 액세스 및 워크숍 지침 보기를 실행하는 웹 기반 솔루션에 대한 몇 가지 외부 인터페이스가 있습니다.
 
-### Workshop Outline
+### 워크숍 개요
 
-Each section contains a brief description followed by a set of workshop exercises.
-
+각 섹션에는 간단한 설명과 함께 일련의 워크숍 연습이 포함되어 있습니다.
