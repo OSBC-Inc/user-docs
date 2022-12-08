@@ -478,7 +478,7 @@
       * [Bitbucket 저장소 변수 추가](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/add-bitbucket-repository-variables.md)
       * [Pipeline의 애플리케이션 스캐닝](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-2-bitbucket-pipelines/application-scanning-in-your-pipeline.md)
     * [모듈 3 - Kubernetes에서 Tomcat RCE 활용](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/README.md)
-      * [Initial Setup](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/initial-setup.md)
+      * [초기 설정](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/initial-setup.md)
       * [RCE Vulnerability](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/rce-vulnerability.md)
     * [Conclusion](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/conclusion.md)
   * [DevSecOps with Bitbucket Cloud](tutorials/atlassian/devsecops-bitbucket-cloud/README.md)
