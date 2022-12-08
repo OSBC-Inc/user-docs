@@ -480,7 +480,7 @@
     * [모듈 3 - Kubernetes에서 Tomcat RCE 활용](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/README.md)
       * [초기 설정](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/initial-setup.md)
       * [RCE Vulnerability](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/module-3-exploiting-tomcat-rce-on-kubernetes/rce-vulnerability.md)
-    * [Conclusion](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/conclusion.md)
+    * [결론](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/conclusion.md)
   * [DevSecOps with Bitbucket Cloud](tutorials/atlassian/devsecops-bitbucket-cloud/README.md)
     * [Prerequisites](tutorials/atlassian/devsecops-bitbucket-cloud/prerequisites.md)
     * [Getting Started](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/README.md)
