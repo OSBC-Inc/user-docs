@@ -36,22 +36,22 @@
 
 이 워크샵에서 다루는 다양한 주제를 특정 모듈로 구성했습니다. 각 모듈은 실습 예제뿐만 아니라 제시된 기술의 이면에 있는 이론에 대한 컨텍스트를 제공합니다.
 
-### Module 1 - Scanning & monitoring application source code
+### 모듈 1 - 애플리케이션 소스 코드 스캔 및 모니터링
 
-Enable the Snyk Open Source [integration](https://solutions.snyk.io/snyk-academy/open-source/create-source-control-integration) to Bitbucket and [import your SCM project](https://solutions.snyk.io/snyk-academy/open-source/import-scm-project). Understand transitive dependencies and how Snyk can generate automatic pull requests to streamline your process.
+Bitbucket에 대한 Snyk 오픈 소스 [통합](https://solutions.snyk.io/snyk-academy/open-source/create-source-control-integration)을 활성화하고 [SCM 프로젝트를 가져옵니다](https://solutions.snyk.io/snyk-academy/open-source/import-scm-project). 전이적 종속성과 Snyk가 자동 풀 요청을 생성하여 프로세스를 간소화하는 방법을 이해합니다.
 
-### Module 2 - Scanning & monitoring container images
+### 모듈 2 - 컨테이너 이미지 스캔 및 모니터링
 
-Enable Snyk Container [integration](https://support.snyk.io/hc/en-us/articles/360003916078-Configure-integration-for-Amazon-Elastic-Container-Registry-ECR-) to Amazon Elastic Container Registry (ECR) and [import](https://solutions.snyk.io/snyk-academy/container/container-registry-and-image-import) your container images. Learn how Snyk provides base image ugprade recommendations.
+ECR(Amazon Elastic Container Registry)에 대한 Snyk 컨테이너 [통합](https://support.snyk.io/hc/en-us/articles/360003916078-Configure-integration-for-Amazon-Elastic-Container-Registry-ECR-)을 활성화하고 컨테이너 [이미지를 가져옵니다](https://solutions.snyk.io/snyk-academy/container/container-registry-and-image-import). Snyk가 기본 이미지 ugprade 권장 사항을 제공하는 방법을 알아보세요.
 
-### Module 3 - Scanning & monitoring for insecure Kubernetes configurations
+### 모듈 3 - 안전하지 않은 Kubernetes 구성 스캔 및 모니터링
 
-[Install the Snyk controller](https://support.snyk.io/hc/en-us/articles/360011128137-Install-the-Snyk-controller-on-Amazon-Elastic-Kubernetes-Service-Amazon-EKS-) on Amazon Elastic Kubernetes Service (Amazon EKS) and [add workloads for scanning](https://support.snyk.io/hc/en-us/articles/360003947117-Adding-Kubernetes-workloads-for-security-scanning). Understand test results, how to interpret Snyk's [Priority Score](https://support.snyk.io/hc/en-us/articles/360010906897-Snyk-Priority-Score-and-Kubernetes), and how to fix configuration issues.
+Amazon EKS(Amazon Elastic Kubernetes Service)에 [Snyk 컨트롤러를 설치하고](https://support.snyk.io/hc/en-us/articles/360011128137-Install-the-Snyk-controller-on-Amazon-Elastic-Kubernetes-Service-Amazon-EKS-) 스캔을 위한 [워크로드를 추가](https://support.snyk.io/hc/en-us/articles/360003947117-Adding-Kubernetes-workloads-for-security-scanning)합니다. 테스트 결과, Snyk의 [우선 순위 점수](https://support.snyk.io/hc/en-us/articles/360010906897-Snyk-Priority-Score-and-Kubernetes) 해석 방법 및 구성 문제 해결 방법을 이해합니다.
 
-### Module 4 - Fixing known issues & monitoring
+### 모듈 4 - 알려진 문제 수정 및 모니터링
 
-In this module, you will go through guided exercises that demonstrate how to fix for vulnerabilities and insecure configurations. You will apply what you learned in the previous modules and apply fixes to your application, container image, and Kubernetes configuration to secure your application.
+이 모듈에서는 취약성 및 안전하지 않은 구성을 수정하는 방법을 보여주는 연습 안내를 진행합니다. 이전 모듈에서 배운 내용을 적용하고 애플리케이션, 컨테이너 이미지 및 Kubernetes 구성에 수정 사항을 적용하여 애플리케이션을 보호합니다.
 
 {% hint style="info" %}
-To make the most effective use of this content, you should be able to run basic Unix commands. You should also possess familiarity with AWS services, basic cloud concepts and general understanding of software development methodologies.
+이 콘텐츠를 가장 효과적으로 사용하려면 기본 Unix 명령을 실행할 수 있어야 합니다. 또한 AWS 서비스, 기본 클라우드 개념 및 소프트웨어 개발 방법론에 대한 일반적인 이해에 익숙해야 합니다.
 {% endhint %}
