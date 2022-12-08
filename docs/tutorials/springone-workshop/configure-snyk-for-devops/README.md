@@ -1,17 +1,17 @@
-# Configure Snyk for DevSecOps
+# DevSecOps를 위한 Snyk 구성
 
-## How does Snyk help developers?
+## Snyk은 개발자를 어떻게 지원합니까?
 
-Snyk works where developers work. Snyk integrates into the development toolchain solutions, like git, to provide automated developer workflows to fix vulnerabilities and provide seamless integrations. Snyk assists developers in making the right decisions about their open-source vulnerabilities, building secure container images, and writing and validating their infrastructure as code (IaC) files to be compliant with company policy.
+Snyk은 개발자가 일하는 곳에서 작동합니다. Snyk은 git과 같은 개발 툴체인 솔루션에 통합되어 취약점을 수정하고 원활한 통합을 제공하는 자동화된 개발자 워크플로우를 제공합니다. Snyk은 개발자가 오픈소스 취약점에 대한 올바른 결정을 내리고, 보안 컨테이너 이미지를 구축하며, 회사 정책을 준수하도록 IaC(Infrastructure as Code) 파일을 작성 및 검증하도록 지원합니다.
 
-## What other integrations does Snyk support?
+## Snyk은 다른 어떤 통합을 지원합니까?
 
-Learn more about [Snyk integrations](https://support.snyk.io/hc/en-us/categories/360000598398-Integrations).
+[Snyk integrations](https://support.snyk.io/hc/en-us/categories/360000598398-Integrations)에 대해 자세히 알아보십시오.
 
-### Workshop exercises
+### Workshop 실행
 
-We will complete the following steps:
+다음 단계를 완료합니다.
 
-1. Create a Snyk organization for our projects.
-2. Configure GitHub integration
-3. Configure Docker Hub integration
+1. 프로젝트를 위한 Snyk 조직을 만듭니다.
+2. GitHub 통합을 구성합니다.
+3. Docker Hub 통합을 구성합니다.

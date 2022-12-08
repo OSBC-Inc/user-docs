@@ -1,16 +1,15 @@
-# Developer Environment and Snyk
+# 개발자 환경 및 Snyk
 
-## The developer experience
+## 개발자 경험
 
-This section of the workshop demonstrates a common developer practice of scanning your application for vulnerabilities and license compliance using the Snyk CLI. Snyk offers many ways to execute a vulnerability and license scan. Developers can choose to make scanning a part of every build using a Snyk plugin, like Maven or Gradle for Java, or using the Snyk CLI to perform ad-hoc scans. In this section, we will perform an ad-hoc scan, review the results, and configure Maven to use the Snyk plugin.
+워크숍의 이 섹션에서는 Snyk CLI를 사용하여 애플리케이션의 취약점 및 라이선스 컴플라이언스를 검사하는 일반적인 개발자 사례를 보여줍니다. Snyk은 취약점 및 라이선스 스캔을 실행하는 다양한 방법을 제공합니다. 개발자는 Java용 Maven이나 Gradle과 같은 Snyk 플러그인을 사용하거나 Snyk CLI를 사용하여 임시 스캔을 수행하여 모든 빌드의 일부를 스캔하도록 선택할 수 있습니다. 이 섹션에서는 임시 스캔을 수행하고 결과를 검토한 후 Snyk 플러그인을 사용하도록 Maven을 구성합니다.
 
-### Workshop exercises
+### Workshop 실행
 
-We will complete the following steps.
+다음 단계를 완료합니다.
 
-1. Clone our forked version of the repo to our lab VM
-2. Authenticate with the Snyk UI using a personal token.  
-3. Perform Synk test using the CLI to review vulnerabilities and license issues. We will also use the Snyk CLI to scan container images for vulnerabilities. 
-4. Configure Maven to use the Snyk plugin for every build.
-5. Validate our IaC Kubernetes files and deploy SPC to Kubernetes.
-
+1. 저장소의 fork한 버전을 lab VM에 복제합니다.
+2. 개인 토큰을 사용하여 Snyk UI로 인증합니다.
+3. CLI를 사용하여 Snyk test를 수행하여 취약점 및 라이선스 문제를 검토합니다. 또한 Snyk CLI를 사용하여 컨테이너 이미지의 취약점을 스캔합니다.
+4. 모든 빌드에 Snyk 플러그인을 사용하도록 Maven을 구성합니다.
+5. IaC Kubernetes 파일을 검증하고 SPC를 Kubernetes에 배포합니다.

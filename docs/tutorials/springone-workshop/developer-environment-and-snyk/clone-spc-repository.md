@@ -1,20 +1,19 @@
-# Clone SPC Repository
+# SPC 저장소 Clone
 
-## Clone GitHub repository
+## GitHub 저장소 Clone
 
-From the command line of the lab VM, use the git CLI to clone the SPC application to the VM.
+lab VM의 명령줄에서 git CLI를 사용하여 SPC 애플리케이션을 VM에 clone합니다.
 
-```text
+```
 git clone https://github.com/omearaj/spring-petclinic.git
 ```
 
 {% hint style="info" %}
-Use your forked version in the command above.
+위의 명령에서 fork한 버전을 사용하십시오.
 {% endhint %}
 
-Change your directory to the spring-petclinic directory.
+디렉터리를 spring-petclinic 디렉터리로 변경합니다.
 
-```text
+```
 cd spring-petclinic
 ```
-
