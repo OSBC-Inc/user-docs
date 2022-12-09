@@ -484,7 +484,7 @@
   * [Bitbucket Cloud를 사용한 DevSecOps](tutorials/atlassian/devsecops-bitbucket-cloud/README.md)
     * [전제 조건](tutorials/atlassian/devsecops-bitbucket-cloud/prerequisites.md)
     * [시작하기](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/README.md)
-      * [Snyk Account](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/snyk-account.md)
+      * [Snyk 계정](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/snyk-account.md)
       * [Atlassian Account](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/atlassian-account.md)
       * [Configure Environment](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/configure-environment.md)
     * [Module 1](tutorials/atlassian/devsecops-bitbucket-cloud/module-1/README.md)
