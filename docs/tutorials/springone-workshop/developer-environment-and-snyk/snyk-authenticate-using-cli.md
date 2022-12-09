@@ -2,32 +2,32 @@
 
 ## CLI 인증
 
-For this lab, please use the instructions to **authenticate with your token** detailed below. **Authenticate with your account** via a browser is provided as an alternative.
+이 실습에서는 아래에 자세히 설명된 지침에 따라 **토큰으로 인증**하십시오. 브라우저를 통한 **계정 인증**이 대안으로 제공됩니다.
 
 ### 계정으로 CLI 인증
 
-When working with our Snyk CLI tool, Snyk first requires authentication (except for the `snyk protect` command).
+Snyk CLI 도구로 작업할 때 Snyk은 먼저 인증이 필요합니다.
 
-To authenticate:
+인증하려면 아래와 같이 진행하십시오.
 
-1.  Run `snyk auth` from the CLI.
+1.  CLI에서 `snyk auth`를 실행합니다.
 
-    A browser tab opens, redirecting you to authenticate the CLI for use with your account.
-2.  Click Authenticate.
+    브라우저 탭이 열리고 계정에서 사용할 CLI를 인증하도록 리디렉션됩니다.
+2.  Authenticate을 클릭합니다.
 
-    The authentication ends and you can go back to your terminal to continue working.
+    인증이 종료되고 터미널로 돌아가 작업을 계속할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/auth\_image\_1.gif)
 
-### Authenticate with your token
+### 토큰으로 인증
 
-1. Visit [your Snyk account](https://app.snyk.io/account).
-2. Navigate to **General Account Settings** and copy your token.
-3. From the token field, click **click to show** and then select and copy your API token.
-4. In the CLI, run `snyk config set api=XXXXXXXX`
+1. [your Snyk account](https://app.snyk.io/account)를 방문하십시오.
+2. **General Account Settings**로 이동하여 token을 복사합니다.
+3. token 필드에서 **click to show**를 클릭한 다음 API token을 복사합니다.
+4. CLI에서 `snyk config set api=XXXXXXXX`를 실행합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/auth\_image\_2.png)
 
 {% hint style="info" %}
-We will use your personal API token during the maven plugin.
+maven 플러그인 중에 개인 API token을 사용합니다.
 {% endhint %}

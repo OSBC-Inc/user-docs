@@ -1,56 +1,55 @@
-# Validate Kubernetes files with Snyk
+# Snyk으로 Kubernetes 파일 검사
 
-## Validate Kubernetes files and deploy SPC to Kubernetes
+## Kubernetes 파일 검증 및 Kubernetes에 SPC 배포
 
-Let's use the Snyk CLI to validate our Kubernetes files meet our security policies from the developer's environment. Assuming we are in the root folder of the SPC application, execute this command. The output will show any security issues Snyk has discovered and suggestions on how to fix the Kubernetes files.
+Snyk CLI를 사용하여 Kubernetes 파일이 개발자 환경의 보안 정책을 충족하고 있는지 확인해 보겠습니다. 현재 SPC 애플리케이션의 루트 폴더에 있다고 가정하고 이 명령을 실행합니다. 출력에는 Snyk이 발견한 모든 보안 Issue와 Kubernetes 파일을 수정하는 방법에 대한 제안이 표시됩니다.
 
-### Test SPC Kubernetes YAML files
+### SPC Kubernetes YAML 파일 테스트
 
-```text
+```
 snyk iac test kubernetes/petclinic-deployment.yaml
 ```
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-26-at-2.54.26-pm.png)
 
 {% hint style="info" %}
-This scan will be immediate.
+이 스캔은 즉시 수행됩니다.
 {% endhint %}
 
-## Deploy SPC to Kubernetes
+## Kubernetes에 SPC 배포
 
-After a quick validation check of our Kubernetes files, let's complete our developer experience. We will deploy a Helm based MySQL instance and the SPC application. After the deployment is complete, we will send a simple request to validate our deployment.
+Kubernetes 파일의 빠른 검증 후 개발자 경험을 완료해 보겠습니다. Helm 기반 MySQL 인스턴스와 SPC 애플리케이션을 배포할 것입니다. 배포가 완료되면 배포를 검증하기 위한 간단한 요청을 보냅니다.
 
-The lab VM is configured with a Kubernetes cluster to deploy the SPC application. We have created alias commands for Kubectl \(k\) and Helm \(h\) to save your fingers from typing. We are also using a namespace called demo.
+lab VM은 SPC 애플리케이션을 배포하기 위해 Kubernetes 클러스터로 구성됩니다. Kubectl (k) 및 Helm (h)에 대한 alias 명령을 만들어 일일이 타이핑하지 않아도 됩니다. 우리는 또한 demo라는 네임스페이스를 사용하고 있습니다.
 
-### Create a Kubernetes namespace
+### Kubernetes 네임스페이스 생성
 
-```text
+```
 k create namespace demo
 ```
 
-### Deploy MySQL Database
+### MySQL 데이터베이스 배포
 
-```text
+```
 h install petclinic-db --set mysqlDatabase=petclinic stable/mysql --namespace demo
 ```
 
-### Deploy SPC Kubernetes deployment
+### SPC Kubernetes 배포
 
-```text
+```
 k -n demo apply -f kubernetes/petclinic-deployment.yaml
 ```
 
-```text
+```
 k -n demo apply -f kubernetes/petclinic-svc-nodeport.yaml
 ```
 
-### Test SPC application
+### SPC 애플리케이션 테스트
 
-Validate the deployment using the SPC button at the top of your lab view.
+lab view 상단에 있는 SPC 버튼을 사용하여 배포를 검증합니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/spc_button_purpcle_cicle.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/spc\_button\_purpcle\_cicle.png)
 
-Assuming all configuration is correct, the SPC button will show the SPC home page.
+모든 구성이 올바르다고 가정하면 SPC 버튼이 SPC 홈페이지를 표시합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-28-at-3.57.03-pm.png)
-
