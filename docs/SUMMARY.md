@@ -483,7 +483,7 @@
     * [결론](tutorials/atlassian/devops-pipeline-with-bitbucket-cloud-and-kubernetes/conclusion.md)
   * [Bitbucket Cloud를 사용한 DevSecOps](tutorials/atlassian/devsecops-bitbucket-cloud/README.md)
     * [전제 조건](tutorials/atlassian/devsecops-bitbucket-cloud/prerequisites.md)
-    * [Getting Started](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/README.md)
+    * [시작하기](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/README.md)
       * [Snyk Account](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/snyk-account.md)
       * [Atlassian Account](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/atlassian-account.md)
       * [Configure Environment](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/configure-environment.md)
