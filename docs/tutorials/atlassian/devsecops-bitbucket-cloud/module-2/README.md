@@ -26,14 +26,14 @@ weight: 40
 * 영향을 받는 패키지가 도입된 Dockerfile 계층
 * 운영 체제 및 주요 바이너리 패키지의 고정 버전
 
-Lastly, you will enable Snyk's integration for [Amazon Elastic Container Registry (ECR)](https://support.snyk.io/hc/en-us/articles/360003916078-Configure-integration-for-Amazon-Elastic-Container-Registry-ECR-) to continuously scan and monitor your container images.
+마지막으로 [ECR(Amazon Elastic Container Registry)](https://support.snyk.io/hc/en-us/articles/360003916078-Configure-integration-for-Amazon-Elastic-Container-Registry-ECR-)에 대한 Snyk의 통합을 활성화하여 컨테이너 이미지를 지속적으로 스캔하고 모니터링합니다.
 
-## Homework: Learn more about Snyk & Container security
+## 숙제: Snyk 및 컨테이너 보안에 대해 자세히 알아보기
 
-* [Container security throughout the SDLC](https://snyk.io/blog/container-security-throughout-the-sdlc/)
-* [Everything you wanted to know about addressing security vulnerabilities in Linux-based containers](https://snyk.io/blog/everything-you-wanted-to-know-about-addressing-security-vulnerabilities-in-linux-based-containers/)
-* [Protect container images directly from your registries](https://snyk.io/blog/protect-docker-images-directly-from-your-container-registries/)
+* [SDLC 전체의 컨테이너 보안](https://snyk.io/blog/container-security-throughout-the-sdlc/)
+* [Linux 기반 컨테이너의 보안 취약성을 해결하는 방법에 대해 알고 싶었던 모든 것](https://snyk.io/blog/everything-you-wanted-to-know-about-addressing-security-vulnerabilities-in-linux-based-containers/)
+* [레지스트리에서 직접 컨테이너 이미지 보호](https://snyk.io/blog/protect-docker-images-directly-from-your-container-registries/)
 
-**Footnotes:**
+**각주:**
 
-1. **\*Snyk Blog -** [Putting container security in the hands of developers](https://snyk.io/blog/putting-container-security-in-the-hands-of-developers)
+1. **\*Snyk Blog -** [개발자에게 컨테이너 보안 제공](https://snyk.io/blog/putting-container-security-in-the-hands-of-developers)
