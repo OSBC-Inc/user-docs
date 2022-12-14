@@ -489,7 +489,7 @@
       * [환경 구성](tutorials/atlassian/devsecops-bitbucket-cloud/getting-started/configure-environment.md)
     * [Module 1](tutorials/atlassian/devsecops-bitbucket-cloud/module-1/README.md)
       * [Bitbucket 구성](tutorials/atlassian/devsecops-bitbucket-cloud/module-1/bitbucket-configuration.md)
-      * [Snyk Configuration](tutorials/atlassian/devsecops-bitbucket-cloud/module-1/snyk-configuration.md)
+      * [Snyk 구성](tutorials/atlassian/devsecops-bitbucket-cloud/module-1/snyk-configuration.md)
       * [Application Scanning](tutorials/atlassian/devsecops-bitbucket-cloud/module-1/application-scanning.md)
     * [Module 2](tutorials/atlassian/devsecops-bitbucket-cloud/module-2/README.md)
       * [Amazon ECR](tutorials/atlassian/devsecops-bitbucket-cloud/module-2/amazon-ecr.md)
