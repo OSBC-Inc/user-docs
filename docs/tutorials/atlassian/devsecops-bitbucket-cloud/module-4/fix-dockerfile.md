@@ -1,45 +1,44 @@
-# Fix Dockerfile
+# Dockerfile 수정
 
-From the Snyk app, we will go to the **Projects** menu where we can expand each integration and have a holistic view of our project. Here we will select the _**container image**_ under our Amazon ECR repository.
+Snyk 앱에서 각 통합을 확장하고 프로젝트를 전체적으로 볼 수 있는 **Projects** 메뉴로 이동합니다. 여기서는 Amazon ECR 저장소에서 _**container image**_를 선택합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-projects-02.png)
 
-You will notice a message instructing you to complete one minor configuration item. Let's address that by clicking the **Settings** tab.
+사소한 구성 항목 하나를 완료하라는 메시지가 표시됩니다. **Settings** 탭을 클릭하여 이 문제를 해결해 보겠습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-01.png)
 
-Proceed to click on the **Configure Dockerfile** button.
+**Configure Dockerfile** 버튼을 클릭하여 진행합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-02.png)
 
-Select **Bitbucket Cloud** as your source.
+**Bitbucket Cloud**를 소스로 선택합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-03.png)
 
-Select your repository and click **Update Dockerfile**.
+저장소를 선택하고 **Update Dockerfile**을 클릭합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-04.png)
 
-Update the default path with the path to our Dockerfile. In this case, the path is `/app/goof/Dockerfile` or as shown below:
+Dockerfile의 경로로 기본 경로를 업데이트합니다. 이 경우 경로는 `/app/goof/Dockerfile`이거나 아래와 같습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-05.png)
 
-You will receive a confirmation message stating that the settings have been successfully applied.
+설정이 성공적으로 적용되었다는 확인 메시지를 받게 됩니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-06.png)
 
-Recommendations for base image upgrade will be provided to you. Here, you will notice the **Current image** defined in your _Dockerfile_ and a **Major upgrade** suggestion to reduce the total number of vulnerabilities on your container image.
+기본 이미지 업그레이드에 대한 권장 사항이 제공됩니다. 여기에서 Dockerfile에 정의된 **현재 이미지**와 컨테이너 이미지의 총 취약성 수를 줄이기 위한 **주요 업그레이드** 제안을 확인할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-docker-fix-07.png)
 
-For the purpose of this exercise, we will keep things simple and use Bitbucket's built-in editor to make the change. Let's navigate to our _Dockerfile_ in our Bitbucket repo. The path will be `./app/goof/Dockerfile`. Here we can _Edit_ the file and save our changes.
+이 연습의 목적을 위해 작업을 단순하게 유지하고 Bitbucket의 내장 편집기를 사용하여 변경합니다. Bitbucket 저장소에서 Dockerfile로 이동해 보겠습니다. 경로는 `./app/goof/Dockerfile`입니다. 여기에서 파일을 편집하고 변경 사항을 저장할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/bitbucket-edit-dockerfile.png)
 
-Let's update **Line 1** as follows:
+다음과 같이 **1행**을 업데이트하겠습니다.
 
 * **OLD VALUE:** `node:6-stretch`
 * **NEW VALUE:** `node:12.18-stretch`
 
-Click **Commit**.
-
+**Commit**을 클릭합니다.
