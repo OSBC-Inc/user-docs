@@ -501,7 +501,7 @@
     * [Module 4](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/README.md)
       * [Pull 요청 수정](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-pull-requests.md)
       * [Dockerfile 수정](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-dockerfile.md)
-      * [Fix Configuration](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-configuration.md)
+      * [구성 수정](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-configuration.md)
     * [Cleanup](tutorials/atlassian/devsecops-bitbucket-cloud/cleanup.md)
     * [Conclusion](tutorials/atlassian/devsecops-bitbucket-cloud/conclusion.md)
   * [Opsgenie](tutorials/atlassian/opsgenie/README.md)
