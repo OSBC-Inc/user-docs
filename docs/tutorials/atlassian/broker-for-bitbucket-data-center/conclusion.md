@@ -1,9 +1,9 @@
 ---
-description: Wrapping things up for Bitbucket Data Center
+description: Bitbucket Data Center를 위한 마무리
 ---
 
-# Conclusion
+# 결론
 
-In this brief tutorial, we walked through the steps need to configure your Bitbucket Data Center instance connected to Snyk.io via Snyk Broker.&#x20;
+이 간단한 자습서에서는 Snyk Broker를 통해 Snyk.io에 연결된 Bitbucket Data Center 인스턴스를 구성하는 데 필요한 단계를 살펴보았습니다.
 
-The experience is largely identical for users of Bitbucket Cloud and Data Center, with minor up-front configuration needed to connect your Data Center instance to Snyk.
+Data Center 인스턴스를 Snyk에 연결하는 데 약간의 사전 구성이 필요하다는 점을 제외하면 Bitbucket Cloud 및 Data Center 사용자의 경험은 대체로 동일합니다.

@@ -1,8 +1,8 @@
 ---
-description: What you need for Snyk Broker for Bitbucket Data Center
+description: Bitbucket Data Center용 Snyk Broker에 필요한 것
 ---
 
-# Prerequisites
+# 전제 조건
 
 This tutorial assumes you have the following:
 
