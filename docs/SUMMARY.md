@@ -497,7 +497,7 @@
     * [Module 3](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/README.md)
       * [Snyk Controller](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/snyk-controller.md)
       * [앱 배포](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/deploying-your-app.md)
-      * [Adding Kubernetes workloads](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/adding-kubernetes-workloads.md)
+      * [Kubernetes 워크로드 추가](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/adding-kubernetes-workloads.md)
     * [Module 4](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/README.md)
       * [Fix Pull Requests](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-pull-requests.md)
       * [Fix Dockerfile](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-dockerfile.md)

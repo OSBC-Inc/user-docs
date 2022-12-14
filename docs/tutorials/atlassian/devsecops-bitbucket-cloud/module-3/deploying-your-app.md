@@ -1,6 +1,6 @@
-# 앱 배포
+# Deploying your app
 
-샘플 [bitbucket-pipelines.yml](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/08298e9b6d3108d33bd54a4839e92884c79c8597/bitbucket-pipelines.yml#lines-57:79) 파일의 마지막 단계는 Snyk으로 스캔하고 Amazon ECR에 안전하게 저장한 컨테이너 이미지를 가져와 이를 Amazon EKS 클러스터에 배포하는 것입니다.
+The final step in your sample [bitbucket-pipelines.yml](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/08298e9b6d3108d33bd54a4839e92884c79c8597/bitbucket-pipelines.yml#lines-57:79) file will be to take the container image that you have scanned with Snyk and securely stored in Amazon ECR and deploy this to your Amazon EKS cluster.
 
 ```yaml
 deploy-app: &deploy-app
@@ -28,9 +28,9 @@ deploy-app: &deploy-app
             RESOURCE_PATH: './deployment/goof-deployment.yaml'
 ```
 
-이 예에서는 [aws-eks-kubectl-run](https://bitbucket.org/atlassian/aws-eks-kubectl-run) 파이프를 활용하여 실행 중인 클러스터에 [서비스](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/master/deployment/goof-service.yaml) 및 [배포](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/master/deployment/goof-deployment-template.yaml) 매니페스트를 적용합니다. 여기서는 이전에 정의한 리포지토리 변수 중 일부를 참조하지만 [`envsubst`](https://www.gnu.org/software/gettext/manual/html\_node/envsubst-Invocation.html#index-envsubst) linux 명령을 호출하여 변수 중 하나의 값을 대체합니다.
+In this example, we are leveraging the [aws-eks-kubectl-run](https://bitbucket.org/atlassian/aws-eks-kubectl-run) pipe to apply our [service](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/master/deployment/goof-service.yaml) and [deployment](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/master/deployment/goof-deployment-template.yaml) manifests against our running cluster. Here, we are referencing some of our previously defined _repository variables_ but we are also invoking the [`envsubst`](https://www.gnu.org/software/gettext/manual/html_node/envsubst-Invocation.html#index-envsubst) linux command to substitute the value of one of our variables.
 
-리포지토리의 `./deployments` 디렉터리에 있는 [goof-deployment-template.yaml](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/08298e9b6d3108d33bd54a4839e92884c79c8597/deployment/goof-deployment-template.yaml#lines-19) 파일에는 두 개의 변수 `${AWS_ECR_URI}` 및 `${BITBUCKET_COMMIT}`이 포함되어 있으며 이를 docker 태그의 값으로 대체하여 Amazon ECR로 부터 이미지를 가져올 수 있습니다.
+The [goof-deployment-template.yaml](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/08298e9b6d3108d33bd54a4839e92884c79c8597/deployment/goof-deployment-template.yaml#lines-19) file in the `./deployments` directory of our repository contains two variables `${AWS_ECR_URI}` and ${BITBUCKET\_COMMIT} which we are substituting with the value of our docker tag, allowing us to pull the correct image from Amazon ECR.
 
 ```yaml
     spec:
@@ -39,7 +39,7 @@ deploy-app: &deploy-app
           image: ${AWS_ECR_URI}:${BITBUCKET_COMMIT}
 ```
 
-[goof-service.yaml ](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/master/deployment/goof-service.yaml)파일은 `service`를 생성하고 프런트엔드 앱을 `type: LoadBalancer`로 배포하여 표준 `http` 포트 `80`에 노출합니다.
+The [goof-service.yaml](https://bitbucket.org/snyk/patterns-library-atlassian-aws/src/master/deployment/goof-service.yaml) file is creating our `service` and deploying our _frontend_ app as `type: LoadBalancer`, exposing this on the standard `http` port `80`.
 
 ```yaml
 apiVersion: v1
@@ -76,4 +76,5 @@ spec:
     tier: backend
 ```
 
-다음 섹션으로 넘어가겠습니다.
+Let's proceed to the next section.
+
