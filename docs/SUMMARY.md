@@ -499,7 +499,7 @@
       * [앱 배포](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/deploying-your-app.md)
       * [Kubernetes 워크로드 추가](tutorials/atlassian/devsecops-bitbucket-cloud/module-3/adding-kubernetes-workloads.md)
     * [Module 4](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/README.md)
-      * [Fix Pull Requests](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-pull-requests.md)
+      * [Pull 요청 수정](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-pull-requests.md)
       * [Fix Dockerfile](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-dockerfile.md)
       * [Fix Configuration](tutorials/atlassian/devsecops-bitbucket-cloud/module-4/fix-configuration.md)
     * [Cleanup](tutorials/atlassian/devsecops-bitbucket-cloud/cleanup.md)
