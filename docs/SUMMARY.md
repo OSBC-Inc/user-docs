@@ -529,7 +529,7 @@
     * [EKS Cluster 생성](tutorials/circleci/securing-kubernetes-workloads-on-aws/create-eks-cluster.md)
     * [CircleCI 구성](tutorials/circleci/securing-kubernetes-workloads-on-aws/circleci-configuration.md)
     * [config.yml](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/README.md)
-      * [Testing the application](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/testing-the-application.md)
+      * [애플리케이션 테스트](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/testing-the-application.md)
       * [Application scanning](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/application-scanning.md)
       * [Container image scanning](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/container-image-scanning.md)
       * [Push image to registry](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/push-image-to-registry.md)
