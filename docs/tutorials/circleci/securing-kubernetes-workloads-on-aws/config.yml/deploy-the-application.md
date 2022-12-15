@@ -1,6 +1,6 @@
-# Deploy the application
+# 애플리케이션 배포
 
-Now, we are ready to push our application. Here we are calling the `aws-eks/python3` [executor](https://circleci.com/docs/2.0/configuration-reference/#executors-requires-version-21) which will define the environment in which the steps of our job will be run.
+이제 애플리케이션을 푸시할 준비가 되었습니다. 여기에서 작업 단계가 실행될 환경을 정의할 `aws-eks/python3` [실행기](https://circleci.com/docs/2.0/configuration-reference/#executors-requires-version-21)를 호출합니다.
 
 ```yaml
   deploy_app:
@@ -36,5 +36,4 @@ Now, we are ready to push our application. Here we are calling the `aws-eks/pyth
           resource-file-path: "deployment/goof-service.yaml"
 ```
 
-In this job, we are passing a few [parameters](https://circleci.com/docs/2.0/configuration-reference/#parameters-requires-version-21) such as the Kubernetes `cluster-name` and the `docker-image-name` which references the image we recently created. We are using these values to authenticate to our Kubernetes cluster and also to replace the value of our image in our Kubernetes manifest with the [Amazon ECR repository URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) and tag. Then, will invoke the `kubernetes/create-or-update-resources` command to apply our Kubernetes manifests for the deployment and service.
-
+이 작업에서는 최근에 만든 이미지를 참조하는 Kubernetes `cluster-name` 및 `docker-image-name`과 같은 몇 가지 [매개 변수](https://circleci.com/docs/2.0/configuration-reference/#parameters-requires-version-21)를 전달합니다. 이 값을 사용하여 Kubernetes 클러스터에 인증하고 Kubernetes 매니페스트의 이미지 값을 [Amazon ECR 저장소 URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) 및 태그로 바꿉니다. 그런 다음 `kubernetes/create-or-update-resources` 명령을 호출하여 배포 및 서비스에 대한 Kubernetes 매니페스트를 적용합니다.
