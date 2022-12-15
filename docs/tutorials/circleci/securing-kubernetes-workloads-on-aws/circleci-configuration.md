@@ -10,18 +10,17 @@
 
 필요한 특정 변수는 다음과 같습니다:
 
-1. AWS Identity & Access Management User [key and secret](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_credentials\_access-keys.html) for secure authenticated interactions with the AWS API: `ACCESS_KEY_ID_ENV_VAR_NAME` & `SECRET_ACCESS_KEY_ENV_VAR_NAME`
-2. AWS API와의 안전한 인증 상호 작용을 위한 AWS Identity & Access Management 사용자 키 및 암호: ACCESS\_KEY\_ID\_ENV\_VAR\_NAME 및 SECRET\_ACCESS\_KEY\_ENV\_VAR\_NAME
-3. [AWS Elastic Container Registry (ECR) URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html) for accessing your default registry: (SEE WARNING BELOW) `AWS_ECR_ACCOUNT_URL_ENV_VAR_NAME`
-4. AWS region you will be deploying to: AWS\_REGION\_ENV\_VAR\_NAME
-5. API token for authenticating with your Snyk account: `SNYK_TOKEN`
+1. AWS API와의 안전한 인증 상호 작용을 위한 AWS Identity & Access Management 사용자 [키 및 암호](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_credentials\_access-keys.html): `ACCESS_KEY_ID_ENV_VAR_NAME` 및 `SECRET_ACCESS_KEY_ENV_VAR_NAME`
+2. 기본 레지스트리에 액세스하기 위한 [AWS ECR (Elastic Container Registry) URL](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html): (아래 경고 참조) `AWS_ECR_ACCOUNT_URL_ENV_VAR_NAME`
+3. 배포할 AWS 리전: `AWS_REGION_ENV_VAR_NAME`
+4. Snyk 계정으로 인증하기 위한 API 토큰: `SNYK_TOKEN`
 
 {% hint style="warning" %}
-Ensure that you use the general ECR URL in the following format:
+다음 형식의 일반 ECR URL을 사용해야 합니다.
 
 `https://aws_account_id.dkr.ecr.region.amazonaws.com`
 {% endhint %}
 
 {% hint style="warning" %}
-It is recommended that you use [Snyk Service accounts](https://support.snyk.io/hc/en-us/articles/360004037597-Service-accounts) and [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) when creating accounts.
+계정을 생성할 때 [Snyk 서비스 계정](https://support.snyk.io/hc/en-us/articles/360004037597-Service-accounts) 및 [AWS IAM 모범 사례](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)를 사용하는 것이 좋습니다.
 {% endhint %}
