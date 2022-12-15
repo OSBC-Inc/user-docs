@@ -10,28 +10,28 @@ Snyk은 루트 폴더 및 사용자 지정 파일 위치를 평가하여 지원�
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/project\_import.png)
 
-2\) A popup screen opens with all the available repositories under the selected integration
+2\) 선택한 통합에서 사용 가능한 모든 저장소가 있는 팝업 화면이 열립니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/select\_repo.png)
 
 {% hint style="info" %}
-Select the Spring-Petclinic \_\*\*\_repository.
+Spring-Petclinic\_\*\*\_repository를 선택합니다.
 {% endhint %}
 
-3\) Select the repository to import into Snyk. This will monitor the repositories for security and license issues. To import all repositories for a specific organization, checkmark the organization.
+3\) Snyk으로 가져올 저장소를 선택하십시오. 이렇게 하면 보안 및 라이선스 문제에 대해 저장소를 모니터링합니다. 특정 조직의 모든 저장소를 가져오려면 조직을 선택 표시합니다.
 
-4\) Click add selected repositories. Snyk evaluates root folders and custom file locations. If no manifest files are found on the root level or in the paths you configure, Snyk notifies you that no files can be imported.
+4\) 선택한 저장소 추가를 클릭합니다. Snyk는 루트 폴더와 사용자 지정 파일 위치를 평가합니다. 루트 수준 또는 구성한 경로에서 매니페스트 파일을 찾을 수 없는 경우 Snyk는 가져올 수 있는 파일이 없다고 알려줍니다.
 
-## Imported projects
+## 가져온 프로젝트
 
-As Snyk is importing your project you will see the import status bar followed by a **green box** asking you to refresh the screen.
+Snyk은 프로젝트를 가져올 때 가져오기 상태 표시줄과 화면 새로고침을 묻는 녹색 상자가 표시됩니다.
 
 {% hint style="info" %}
-Refresh green box not shown
+새로 고침 녹색 상자가 표시되지 않음
 {% endhint %}
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/import\_bar.png)
 
-After refreshing, you will see the imported projects in the Snyk UI. Expand the project to see the package manager file, in our case _**pom.xml**_
+새로고침하면 Snyk UI에 가져온 프로젝트가 표시됩니다. 프로젝트를 확장하여 패키지 관리자 파일(여기서는 **pom.xml**)을 확인합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-21-at-4.43.05-pm%20\(1\).png)
