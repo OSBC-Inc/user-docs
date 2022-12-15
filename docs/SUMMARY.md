@@ -521,7 +521,7 @@
     * [결론](tutorials/atlassian/broker-for-bitbucket-data-center/conclusion.md)
 * [CircleCI](tutorials/circleci/README.md)
   * [Snyk Orb로 Terraform 스캔](tutorials/circleci/scan-terraform-with-the-snyk-orb/README.md)
-    * [Add the Snyk Orb to your CircleCI Config](tutorials/circleci/scan-terraform-with-the-snyk-orb/add-the-snyk-orb-to-your-circleci-config.md)
+    * [CircleCI 구성에 Snyk Orb 추가](tutorials/circleci/scan-terraform-with-the-snyk-orb/add-the-snyk-orb-to-your-circleci-config.md)
     * [Adjusting Snyk IAC Scan parameters](tutorials/circleci/scan-terraform-with-the-snyk-orb/adjusting-snyk-iac-scan-parameters.md)
   * [Securing Kubernetes Workloads on AWS](tutorials/circleci/securing-kubernetes-workloads-on-aws/README.md)
     * [Getting started](tutorials/circleci/securing-kubernetes-workloads-on-aws/getting-started.md)
