@@ -526,7 +526,7 @@
   * [AWS에서 Kubernetes 워크로드 보호](tutorials/circleci/securing-kubernetes-workloads-on-aws/README.md)
     * [시작 하기](tutorials/circleci/securing-kubernetes-workloads-on-aws/getting-started.md)
     * [Kubernetes manifests](tutorials/circleci/securing-kubernetes-workloads-on-aws/kubernetes-manifests.md)
-    * [Create EKS cluster](tutorials/circleci/securing-kubernetes-workloads-on-aws/create-eks-cluster.md)
+    * [EKS Cluster 생성](tutorials/circleci/securing-kubernetes-workloads-on-aws/create-eks-cluster.md)
     * [CircleCI Configuration](tutorials/circleci/securing-kubernetes-workloads-on-aws/circleci-configuration.md)
     * [config.yml](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/README.md)
       * [Testing the application](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/testing-the-application.md)
