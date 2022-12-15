@@ -1,6 +1,6 @@
 # Kubernetes manifests
 
-To simply the deployment of our application, we have provided two [configuration files](https://kubernetes.io/docs/concepts/configuration/overview/) which will create the necessary resources to run our application. These two files will consist of a Deployment and a Service and are available in the `./deployment` directory of the accompanying GitHub repository. Let's take a look at what's in each of these configuration files.
+애플리케이션을 간단하게 배포하기 위해 애플리케이션을 실행하는 데 필요한 리소스를 생성하는 두 개의 [구성 파일](https://kubernetes.io/docs/concepts/configuration/overview/)을 제공했습니다. 이 두 파일은 배포 및 서비스로 구성되며 함께 제공되는 GitHub 저장소의 `./deployment` 디렉터리에서 사용할 수 있습니다. 각 구성 파일에 무엇이 있는지 살펴보겠습니다.
 
 ## Deployment
 
@@ -98,4 +98,3 @@ spec:
     app: goof
     tier: backend
 ```
-
