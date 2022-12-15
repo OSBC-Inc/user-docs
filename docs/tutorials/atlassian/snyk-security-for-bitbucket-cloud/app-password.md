@@ -1,27 +1,28 @@
 # App Password
 
-다음 단계는 스캔 결과를 저장할 Snyk 조직을 선택하는 것입니다. 풀다운 메뉴를 사용하여 원하는 조직을 선택하고 **Done**을 클릭하기만 하면 됩니다.
+The next step is to select which Snyk Organization we want to store our scan results against. Simply use the pulldown menu to select the desired organization and click **Done**.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-sec-09.png)
 
-Snyk가 저장소에 액세스할 수 있도록 [Atlassian 앱 암호](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)를 생성해야 합니다. 아래와 같이 **Create an App Password** 링크를 클릭합니다.
+We will need to generate an [Atlassian App passwor](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)d to allow Snyk access to your repository. Click on the **Create an App Password** link as shown below.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-sec-10.png)
 
-선택한 이름을 제공할 수 있지만 이 예에서는 앱 암호의 이름을 **Snyk**으로 지정합니다.
+You can provide any name of your choosing, but for this example, we are naming our App Password as **Snyk**.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-sec-11.png)
 
 {% hint style="info" %}
-위에서 필요한 권한에 유의하십시오.
+Note the permissions needed above.
 {% endhint %}
 
-완료되면 **Create**를 클릭하고 토큰이 표시되는지 확인합니다.
+When complete, click **Create** and watch for the token to be displayed.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-sec-12.png)
 
-토큰을 복사하고 다른 탭으로 돌아가서 붙여넣겠습니다.
+Let's copy the token and go back to our other tab to paste it.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-sec-13.png)
 
-토큰을 붙여넣으면 **Done**을 클릭합니다.
+Once you paste the token click **Done**.
+
