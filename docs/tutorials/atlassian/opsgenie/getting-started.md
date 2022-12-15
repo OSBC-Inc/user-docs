@@ -1,18 +1,17 @@
-# Getting Started
+# 시작하기
 
-## Setting up your Snyk account
+## Snyk 계정 설정
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-signup.png)
 
-### I do not have a Snyk account
+### Snyk 계정이 없습니다.
 
-You can register for a **FREE** account [here](https://app.snyk.io/signup/?utm_medium=Partner&utm_source=Atlassian&utm_campaign=Bitbucket-cloud-promo-Q1-2020).
+[여기](https://app.snyk.io/signup/?utm\_medium=Partner\&utm\_source=Atlassian\&utm\_campaign=Bitbucket-cloud-promo-Q1-2020)에서 **무료** 계정을 등록할 수 있습니다.
 
-### I already have a Snyk account
+### 이미 Snyk 계정이 있습니다.
 
-Log in to your account [here](https://app.snyk.io/login).
+[여기](https://app.snyk.io/login)에서 귀하의 계정에 로그인하십시오.
 
-## Setting up your Opsgenie account
+## Opsgenie 계정 설정
 
-You can register for a **FREE** account [here](https://www.atlassian.com/software/opsgenie/try).
-
+[여기](https://www.atlassian.com/software/opsgenie/try)에서 **무료** 계정을 등록할 수 있습니다.
