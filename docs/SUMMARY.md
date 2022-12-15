@@ -654,7 +654,7 @@
     * [Snyk으로 Kubernetes 파일 검사](tutorials/springone-workshop/developer-environment-and-snyk/deploy-spc-to-kubernetes.md)
   * [CI/CD 파이프라인](tutorials/springone-workshop/ci-cd-pipeline/README.md)
     * [GitHub 작업 활성화](tutorials/springone-workshop/ci-cd-pipeline/enable-github-actions.md)
-    * [Add secrets](tutorials/springone-workshop/ci-cd-pipeline/configure-the-ci-cd-pipeline.md)
+    * [Secret 추가](tutorials/springone-workshop/ci-cd-pipeline/configure-the-ci-cd-pipeline.md)
     * [Configure env vars and commit changes](tutorials/springone-workshop/ci-cd-pipeline/configure-env-vars-and-commit-changes.md)
     * [Review CI/CD results](tutorials/springone-workshop/ci-cd-pipeline/review-snyk-scan-results.md)
   * [Snyk Open-Source (SCA)](tutorials/springone-workshop/snyk-oss-for-developers/README.md)
