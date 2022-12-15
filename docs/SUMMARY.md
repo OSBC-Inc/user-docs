@@ -531,7 +531,7 @@
     * [config.yml](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/README.md)
       * [애플리케이션 테스트](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/testing-the-application.md)
       * [애플리케이션 스캔](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/application-scanning.md)
-      * [Container image scanning](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/container-image-scanning.md)
+      * [컨테이너 이미지 스캐닝](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/container-image-scanning.md)
       * [Push image to registry](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/push-image-to-registry.md)
       * [Deploy the application](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/deploy-the-application.md)
     * [CircleCI Project](tutorials/circleci/securing-kubernetes-workloads-on-aws/circleci-project.md)

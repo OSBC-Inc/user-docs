@@ -1,6 +1,6 @@
-# 애플리케이션 스캔
+# Application scanning
 
-다음 작업은 작업 공간을 연결하고 몇 가지 매개 변수로 `snyk/scan`을 호출하는 것으로 시작됩니다. `fail-on-issues`를 `false`로 설정하고 `severity-threshold`를 `high`로 설정하는 것과 같은 몇 가지 선택을 했습니다.
+Our next job begins by attaching the workspace and calling `snyk/scan` with a few parameters. We've made a few choices here such as setting `fail-on-issues` to `false` and setting our `severity-threshold` to `high`.
 
 ```yaml
   scan_app:
@@ -20,3 +20,4 @@
 {% hint style="info" %}
 A detailed list of all supported parameters is available in the [Snyk orb documentation](https://circleci.com/orbs/registry/orb/snyk/snyk#commands-scan) page.
 {% endhint %}
+
