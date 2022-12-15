@@ -12,5 +12,5 @@ GitHub 워크플로우 다이어그램:
 
 다음 단계를 완료합니다.
 
-1. GitHub secrets으로 파이프라인을 채웁니다. Synk API 토큰과 Docker Hub API 토큰을 추가합니다.
-2. 빌드 또는 컨테이너 이미지에 대한 파이프라인 환경 변수를 편집하고, 파이프라인에 대한 변경 사항을 Commit하고, 파이프라인을 실행합니다.
+1. Populate the pipeline with GitHub secrets. We will add a Synk API token and Docker Hub API token.
+2. Edit pipeline environment variables to build or container image, commit changes to the pipeline, and execute the pipeline.
