@@ -1,18 +1,18 @@
-# Import SPC into Snyk UI
+# SPC를 Snyk UI로 가져오기
 
-## **Add projects to Snyk for GitHub repositories**
+## GitHub 저장소용 Snyk에 프로젝트 추가
 
-Snyk tests and monitors GitHub repositories that are in any of our supported languages by evaluating root folders and custom file locations.
+Snyk은 루트 폴더 및 사용자 지정 파일 위치를 평가하여 지원되는 언어로 된 GitHub 저장소를 테스트하고 모니터링합니다.
 
-**Adding Projects to Snyk**
+**Snyk에 프로젝트 추가**
 
-1\) Go to Projects and click Add projects. Choose the tool from which to import your projects
+1\) Projects로 이동하여 Add projects를 클릭합니다. 그 다음 프로젝트를 가져올 도구 선택
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/project_import.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/project\_import.png)
 
 2\) A popup screen opens with all the available repositories under the selected integration
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/select_repo.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/select\_repo.png)
 
 {% hint style="info" %}
 Select the Spring-Petclinic \_\*\*\_repository.
@@ -30,9 +30,8 @@ As Snyk is importing your project you will see the import status bar followed by
 Refresh green box not shown
 {% endhint %}
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/import_bar.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/import\_bar.png)
 
 After refreshing, you will see the imported projects in the Snyk UI. Expand the project to see the package manager file, in our case _**pom.xml**_
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-21-at-4.43.05-pm%20%281%29.png)
-
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-21-at-4.43.05-pm%20\(1\).png)
