@@ -511,7 +511,7 @@
     * [경고](tutorials/atlassian/opsgenie/alerts.md)
   * [Bitbucket Cloud용 Snyk Security](tutorials/atlassian/snyk-security-for-bitbucket-cloud/README.md)
     * [시작하기](tutorials/atlassian/snyk-security-for-bitbucket-cloud/getting-started.md)
-    * [Connecting](tutorials/atlassian/snyk-security-for-bitbucket-cloud/connecting.md)
+    * [연결](tutorials/atlassian/snyk-security-for-bitbucket-cloud/connecting.md)
     * [App Password](tutorials/atlassian/snyk-security-for-bitbucket-cloud/app-password.md)
     * [Scanning](tutorials/atlassian/snyk-security-for-bitbucket-cloud/scanning.md)
     * [Findings](tutorials/atlassian/snyk-security-for-bitbucket-cloud/findings.md)
