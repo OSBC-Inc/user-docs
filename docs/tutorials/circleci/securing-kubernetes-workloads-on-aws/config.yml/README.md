@@ -1,19 +1,19 @@
 # config.yml
 
-## CircleCI Configuration Walk-through
+## CircleCI 구성 워크스루
 
 {% hint style="info" %}
-CircleCI orbs are reusable package of YAML configuration that condenses repeated pieces of config into a single line of code. Learn more about why to use an orb or explore use cases [here](https://circleci.com/orbs/).
+CircleCI orbs는 반복되는 구성 부분을 한 줄의 코드로 압축하는 재사용 가능한 YAML 구성 패키지입니다. orb를 사용하는 이유에 대해 자세히 알아보거나 [여기](https://circleci.com/orbs/)에서 사용 사례를 살펴보세요.
 {% endhint %}
 
-### The basics
+### 기본 사항
 
-We have defined our [`version`](https://circleci.com/docs/2.0/configuration-reference/#version) as [Config Reference 2.1](https://circleci.com/docs/reference-2-1/#section=configuration) as well as the [`orbs`](https://circleci.com/docs/2.0/configuration-reference/#orbs-requires-version-21) we intend to leverage for our job. We will be using the following orbs:
+우리는 [`version`](https://circleci.com/docs/2.0/configuration-reference/#version)을 [Config Reference 2.1](https://circleci.com/docs/reference-2-1/#section=configuration)로 정의했으며 작업에 활용하려는 [`orbs`](https://circleci.com/docs/2.0/configuration-reference/#orbs-requires-version-21)를 정의했습니다. 우리는 다음 orb를 사용할 것입니다:
 
-* [`aws-eks`](https://circleci.com/orbs/registry/orb/circleci/aws-eks) for working with Amazon Elastic Container Service for Kubernetes \(Amazon EKS\).
-* [`aws-ecr`](https://circleci.com/orbs/registry/orb/circleci/aws-ecr) to build images and push them to the Amazon Elastic Container Registry.
-* [`kubernetes`](https://circleci.com/orbs/registry/orb/circleci/kubernetes) which is a collection of tools for working with Kubernetes on CircleCI.
-* [`snyk`](https://circleci.com/orbs/registry/orb/snyk/snyk) to find, fix and monitor known vulnerabilities in your app dependencies and docker image.
+* Kubernetes용 Amazon EKS(Amazon Elastic Container Service) 작업을 위한 [`aws-eks`](https://circleci.com/orbs/registry/orb/circleci/aws-eks).
+* 이미지를 빌드하고 Amazon Elastic Container Registry로 푸시하는 [`aws-ecr`](https://circleci.com/orbs/registry/orb/circleci/aws-ecr).
+* CircleCI에서 Kubernetes로 작업하기 위한 도구 모음인 [`kubernetes`](https://circleci.com/orbs/registry/orb/circleci/kubernetes).
+* [`snyk`](https://circleci.com/orbs/registry/orb/snyk/snyk)을 사용하여 앱 종속성 및 도커 이미지에서 알려진 취약점을 찾고 수정하고 모니터링합니다.
 
 ```yaml
 version: 2.1
@@ -30,15 +30,15 @@ defaults: &defaults
   working_directory: ~/repo
 ```
 
-In the interest of efficiency, we have also defined a few defaults for our project which we will later call from our jobs.
+효율성을 위해 나중에 작업에서 호출할 프로젝트에 대한 몇 가지 기본값도 정의했습니다.
 
 {% hint style="info" %}
-Did you know that you can search the [CircleCI registry](https://circleci.com/orbs/registry/) for several _**certified**_ and _**partner**_ orbs to solve most use cases?
+대부분의 사용 사례를 해결하기 위해 여러 인증 및 파트너 오브에 대해 [CircleCI 레지스트리](https://circleci.com/orbs/registry/)를 검색할 수 있다는 사실을 알고 계셨습니까?
 {% endhint %}
 
 ### Workflows
 
-Our example `config.yml` file also organizes and orchestrates our defined jobs using [`workflows`](https://circleci.com/docs/2.0/configuration-reference/#workflows) .
+예제 `config.yml` 파일도 [`workflows`](https://circleci.com/docs/2.0/configuration-reference/#workflows)를 사용하여 정의된 작업을 구성하고 오케스트레이션합니다.
 
 ```yaml
 workflows:
@@ -62,4 +62,3 @@ workflows:
           requires:
             - build_and_push_image
 ```
-
