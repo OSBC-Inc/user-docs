@@ -657,7 +657,7 @@
     * [Secret 추가](tutorials/springone-workshop/ci-cd-pipeline/configure-the-ci-cd-pipeline.md)
     * [환경 변수 구성 및 변경 사항 Commit](tutorials/springone-workshop/ci-cd-pipeline/configure-env-vars-and-commit-changes.md)
     * [CI/CD 결과 검토](tutorials/springone-workshop/ci-cd-pipeline/review-snyk-scan-results.md)
-  * [Snyk Open-Source (SCA)](tutorials/springone-workshop/snyk-oss-for-developers/README.md)
+  * [SCA (Snyk Open-Source)](tutorials/springone-workshop/snyk-oss-for-developers/README.md)
     * [Import SPC into Snyk UI](tutorials/springone-workshop/snyk-oss-for-developers/import-spc-into-snyk-ui.md)
     * [Review Project Issues](tutorials/springone-workshop/snyk-oss-for-developers/review-project-issues.md)
     * [Review Project Dependency Tree](tutorials/springone-workshop/snyk-oss-for-developers/review-dependency-tree.md)
