@@ -514,7 +514,7 @@
     * [연결](tutorials/atlassian/snyk-security-for-bitbucket-cloud/connecting.md)
     * [App Password](tutorials/atlassian/snyk-security-for-bitbucket-cloud/app-password.md)
     * [Scanning](tutorials/atlassian/snyk-security-for-bitbucket-cloud/scanning.md)
-    * [Findings](tutorials/atlassian/snyk-security-for-bitbucket-cloud/findings.md)
+    * [결과](tutorials/atlassian/snyk-security-for-bitbucket-cloud/findings.md)
   * [Bitbucket 데이터 센터용 브로커](tutorials/atlassian/broker-for-bitbucket-data-center/README.md)
     * [전제 조건](tutorials/atlassian/broker-for-bitbucket-data-center/prerequisites.md)
     * [프로젝트를 Snyk으로 가져오기](tutorials/atlassian/broker-for-bitbucket-data-center/importing-projects-into-snyk.md)
