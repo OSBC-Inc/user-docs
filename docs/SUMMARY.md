@@ -523,7 +523,7 @@
   * [Snyk Orb로 Terraform 스캔](tutorials/circleci/scan-terraform-with-the-snyk-orb/README.md)
     * [CircleCI 구성에 Snyk Orb 추가](tutorials/circleci/scan-terraform-with-the-snyk-orb/add-the-snyk-orb-to-your-circleci-config.md)
     * [Snyk IAC 스캔 매개변수 조정](tutorials/circleci/scan-terraform-with-the-snyk-orb/adjusting-snyk-iac-scan-parameters.md)
-  * [Securing Kubernetes Workloads on AWS](tutorials/circleci/securing-kubernetes-workloads-on-aws/README.md)
+  * [AWS에서 Kubernetes 워크로드 보호](tutorials/circleci/securing-kubernetes-workloads-on-aws/README.md)
     * [Getting started](tutorials/circleci/securing-kubernetes-workloads-on-aws/getting-started.md)
     * [Create EKS cluster](tutorials/circleci/securing-kubernetes-workloads-on-aws/create-eks-cluster.md)
     * [CircleCI Configuration](tutorials/circleci/securing-kubernetes-workloads-on-aws/circleci-configuration.md)
