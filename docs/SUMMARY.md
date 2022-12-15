@@ -517,7 +517,7 @@
     * [Findings](tutorials/atlassian/snyk-security-for-bitbucket-cloud/findings.md)
   * [Bitbucket 데이터 센터용 브로커](tutorials/atlassian/broker-for-bitbucket-data-center/README.md)
     * [전제 조건](tutorials/atlassian/broker-for-bitbucket-data-center/prerequisites.md)
-    * [Importing Projects into Snyk](tutorials/atlassian/broker-for-bitbucket-data-center/importing-projects-into-snyk.md)
+    * [프로젝트를 Snyk으로 가져오기](tutorials/atlassian/broker-for-bitbucket-data-center/importing-projects-into-snyk.md)
     * [결론](tutorials/atlassian/broker-for-bitbucket-data-center/conclusion.md)
 * [CircleCI](tutorials/circleci/README.md)
   * [Scan Terraform with the Snyk Orb](tutorials/circleci/scan-terraform-with-the-snyk-orb/README.md)
