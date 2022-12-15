@@ -508,7 +508,7 @@
     * [시작하기](tutorials/atlassian/opsgenie/getting-started.md)
     * [통합 설치](tutorials/atlassian/opsgenie/install-integration.md)
     * [Postman](tutorials/atlassian/opsgenie/postman.md)
-    * [Alerts](tutorials/atlassian/opsgenie/alerts.md)
+    * [경고](tutorials/atlassian/opsgenie/alerts.md)
   * [Bitbucket Cloud용 Snyk Security](tutorials/atlassian/snyk-security-for-bitbucket-cloud/README.md)
     * [시작하기](tutorials/atlassian/snyk-security-for-bitbucket-cloud/getting-started.md)
     * [Connecting](tutorials/atlassian/snyk-security-for-bitbucket-cloud/connecting.md)
