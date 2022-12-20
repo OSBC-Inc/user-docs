@@ -1,77 +1,77 @@
-# 샘플 애플리케이션 복제 및 실행
+# Clone and run the sample application
 
-## Step 1: 샘플 앱 가져오기 및 저장소 복제
+## Step 1: Get the sample app and clone the Repo
 
-템플릿 GitHub Repo는 [Snyk의 Goof 애플리케이션](https://github.com/snyk/goof#goof---snyks-vulnerable-demo-app)을 사용하여 이 워크샵을 위해 제공됩니다.
+A template GitHub Repo is provided for this workshop using [Snyk's Goof application](https://github.com/snyk/goof#goof---snyks-vulnerable-demo-app).
 
-{% embed url="https://github.com/snyk-partners/docker-academy" %}
+{% embed url="https://github.com/snyk-partners/docker-academy" caption="" %}
 
-"Use this Template"을 클릭하여 저장소를 GitHub 계정에 복사합니다.
+Click "Use this Template" to copy the Repo into your GitHub account.
 
 {% hint style="danger" %}
-이 지침의 명령을 올바르게 복사하여 붙여넣으려면 저장소 이름을 `docker-academy`로 지정하십시오. 그렇지 않으면 명령이 올바른 저장소 이름을 사용하는지 확인하십시오.
+To properly copy-paste the commands in these instructions name your repo `docker-academy`. Otherwise, ensure the command uses the correct repo name.
 {% endhint %}
 
-명령을 복사하여 붙여넣으려면 GitHub ID에 대한 환경 변수를 설정하십시오.
+If you want to copy-paste commands, set an environment variable for your GitHub ID.
 
 ```bash
 # Set an environment variable for your GitHub ID
 GithubId=<<your_github_id>>
 ```
 
-이제 저장소를 로컬 환경에 복제한 다음 `cd`합니다.
+Now, clone the Repo to your local environment, then `cd` into it.
 
 ```bash
 # Clone the Repo and cd 
 git clone https://www.github.com/$GithubId/docker-academy && cd docker-academy
 ```
 
-## Step 2: 애플리케이션을 로컬에서 테스트
+## Step 2: Test the Application locally
 
-### 종속성 설치
+### Install Dependencies
 
-애플리케이션을 로컬에서 실행하려면 먼저 종속성을 설치해야 합니다.
+To run our application locally, we need to install its dependencies first.
 
 ```bash
 # Install npm dependencies and generate lockfile
 npm install --package-lock
 ```
 
-### Mongo database 시작
+### Start the Mongo database
 
-앱이 작동하려면 MongoDB가 필요합니다. Mongo를 설치하는 대신 Docker 컨테이너에서 실행할 것입니다.
+The app requires MongoDB to work. Instead of installing Mongo, we'll run it in a Docker container.
 
 ```bash
 # Start detached mongo with container port 27017 mapped to host port 27017
 docker run -d -p 27017:27017 mongo
 ```
 
-`docker ps`를 실행하여 mongo가 실행 중인지 확인할 수 있습니다.
+You can verify that mongo is running by running `docker ps`.
 
-### 애플리케이션 시작
+### Start the Application
 
-이제 응용 프로그램을 실행할 수 있습니다.
+Now you can run the application.
 
 ```bash
 node app.js
 ```
 
-시작되면 [http://localhost:3001](http://localhost:3001/)에서 사용할 수 있습니다. 할 일 목록에 몇 가지 항목을 추가하여 작동하는지 확인합니다.
+Once it starts, it will be available at [http://localhost:3001](http://localhost:3001). Verify it works by adding a few items into the todo list.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/todo.png)
 
-성공! 이제 작동하는 것을 확인했으므로 배포용 컨테이너에 패키징해 보겠습니다.
+Success! Now that we know it works, let's package it in a container for distribution.
 
-## 도커 이미지 빌드
+## Build the Docker Image
 
-명령을 복사하여 붙여넣으려면 Docker ID에 대한 환경 변수를 설정하십시오.
+If you want to copy-paste commands, set an environment variable for your Docker ID.
 
 ```bash
 # Set an environment variable for your GitHub ID
 DockerId=<<your_docker_id>>
 ```
 
-리포지토리의 `Dockerfile`은 `docker build`에 컨테이너 빌드 방법을 알려줍니다. Dockerfile 명령에 대한 자세한 내용은 [Docker 설명서](https://docs.docker.com/engine/reference/builder/)를 참조하십시오. 요약은 다음과 같습니다.
+The `Dockerfile` in the repo tells `docker build` how to build the container. To learn more about Dockerfile commands, visit [Docker's documentation](https://docs.docker.com/engine/reference/builder/). A summary is provided below:
 
 {% code title="Dockerfile" %}
 ```bash
@@ -90,25 +90,25 @@ ENTRYPOINT ["npm", "start"] ## The command
 ```
 {% endcode %}
 
-준비가 되면 컨테이너 이미지를 빌드하고 태그를 지정하여 Docker Hub에 푸시할 준비를 합니다.
+When ready, build and tag the container image to get it ready to push into Docker Hub.
 
 ```bash
 # Build the container and tag it dev
 docker build -t $DockerId/goof:dev .
 ```
 
-빌드가 완료되면 컨테이너를 Docker Hub로 푸시합니다.
+When the build finishes, push the container to Docker Hub.
 
 ```bash
 # Push to Docker Hub
 docker push $DockerId/goof:dev
 ```
 
-## Kubernetes에 애플리케이션 배포
+## Deploy the application to Kubernetes
 
-클라우드 비용을 발생시키지 않고 컨테이너가 Kubernetes에 올바르게 배포되도록 하기 위해 Docker Desktop과 함께 제공되는 Kubernetes 클러스터를 사용합니다. 앱을 배포하기 전에 앱의 배포 매니페스트를 변경해야 합니다. 텍스트 편집기에서 `goof-deployment.yaml` 파일을 엽니다.
+To ensure the container deploys correctly into Kubernetes without incurring cloud costs, we use the Kubernetes cluster shipped with Docker Desktop. Before deploying the app, you'll need to make a change to the app's deployment manifest. Open the file `goof-deployment.yaml` in a text editor.
 
-이 행을 찾아 표시된 곳에 Docker ID를 삽입하십시오.
+Find these lines, and insert your Docker ID where indicated.
 
 ```yaml
 spec:
@@ -118,7 +118,7 @@ spec:
     imagePullPolicy: Always
 ```
 
-변경 사항을 저장합니다. 이제 애플리케이션을 배포할 준비가 되었습니다. 다음 명령을 실행합니다:
+Save your changes. Now you're ready to deploy the application. Run the following commands:
 
 ```bash
 # Create a namespace
@@ -131,12 +131,13 @@ kubectl config set-context --current --namespace snyk-docker
 kubectl create -f goof-deployment.yaml,goof-mongo-deployment.yaml
 ```
 
-애플리케이션이 시작될 때 포드의 상태를 확인하려면 다음 명령을 사용하십시오:
+To check the status of the pods as the application comes up, use the following command:
 
 ```bash
 kubectl get pods
 ```
 
-둘 다 실행되면 응용 프로그램은 이제 [http://localhost:3001](http://localhost:3001/)에서 액세스할 수 있습니다. 성공!
+Once both are running, the application should now be accessible in [http://localhost:3001](http://localhost:3001). Success!
 
-이제 애플리케이션이 Kubernetes에 배포될 때 작동한다는 것을 알았으므로 코드가 변경될 때 컨테이너를 다시 빌드하기 위해 지속적 통합 및 지속적 전달 파이프라인을 설정할 것입니다.
+Now that we know our application works when deployed into Kubernetes, we'll set up a continuous integration and continuous delivery pipeline to re-build our container as code changes are made.
+

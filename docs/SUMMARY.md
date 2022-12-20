@@ -548,7 +548,7 @@
   * [Docker CLI로 스캔](tutorials/docker/scanning-with-the-docker-cli.md)
   * [Docker 및 Snyk으로 보안 컨테이너 구축](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/README.md)
     * [샘플 애플리케이션 복제 및 실행](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/clone-and-run-the-sample-application.md)
-    * [Set up a container delivery pipeline with vulnerability scanning](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/set-up-a-container-delivery-pipeline-with-vulnerability-scanning.md)
+    * [취약점 스캔으로 컨테이너 전달 파이프라인 설정](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/set-up-a-container-delivery-pipeline-with-vulnerability-scanning.md)
     * [Select the most secure base image available](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/select-the-most-secure-base-image-available.md)
     * [Upgrade or patch vulnerable application dependencies](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/upgrade-or-patch-vulnerable-application-dependencies.md)
     * [Ensure deployment manifests are free from misconfiguration](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/ensure-deployment-manifests-are-free-from-misconfiguration.md)
