@@ -113,8 +113,6 @@ kubectl scale deployment goof --replicas=1
 
 ## 선택 사항: 학습한 내용을 사용하여 모든 취약성을 수정합니다.
 
-Either with Fix Pull Requests, or using the information in Snyk to modify your package manager manifest, continue fixing vulnerabilities until you've knocked out the High Severity Vulnerabilities that have a fix available. Some additional resources that can help:
-
 Fix Pull Requests를 사용하거나 Snyk의 정보를 사용하여 패키지 관리자 매니페스트를 수정하고 수정 사항이 있는 High Severity Vulnerabilities를 제거할 때까지 취약성을 계속 수정하십시오.
 
 도움이 될 수 있는 몇 가지 추가 리소스:

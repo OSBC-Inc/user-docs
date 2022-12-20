@@ -551,7 +551,7 @@
     * [취약점 스캔으로 컨테이너 전달 파이프라인 설정](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/set-up-a-container-delivery-pipeline-with-vulnerability-scanning.md)
     * [사용 가능한 가장 안전한 기본 이미지 선택](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/select-the-most-secure-base-image-available.md)
     * [취약한 애플리케이션 종속성 업그레이드 또는 패치](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/upgrade-or-patch-vulnerable-application-dependencies.md)
-    * [Ensure deployment manifests are free from misconfiguration](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/ensure-deployment-manifests-are-free-from-misconfiguration.md)
+    * [배포 매니페스트에 구성 오류가 없는지 확인](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/ensure-deployment-manifests-are-free-from-misconfiguration.md)
     * [Recap & Next Steps](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/recap-and-next-steps.md)
 * [Dynatrace](tutorials/dynatrace/README.md)
   * [Secure Kubernetes](tutorials/dynatrace/secure-kubernetes/README.md)

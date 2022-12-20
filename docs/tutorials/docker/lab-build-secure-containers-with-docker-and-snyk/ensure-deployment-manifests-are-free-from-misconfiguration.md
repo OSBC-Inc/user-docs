@@ -1,42 +1,42 @@
-# Ensure deployment manifests are free from misconfiguration
+# 배포 매니페스트에 구성 오류가 없는지 확인
 
-In the previous sections we fixed vulnerabilities introduced by the container base image and the application dependencies, and tested our changes by deploying to Kubernetes.
+이전 섹션에서는 컨테이너 기본 이미지와 애플리케이션 종속성에 의해 도입된 취약성을 수정하고 Kubernetes에 배포하여 변경 사항을 테스트했습니다.
 
-Even with 0 vulnerabilities, we can expose ourselves to risk by how our application's deployment manifests are written. In this section we'll use Snyk to find and fix issues in those files.
+취약점이 0개라도 애플리케이션의 배포 매니페스트가 작성되는 방식에 따라 위험에 노출될 수 있습니다. 이 섹션에서는 Snyk을 사용하여 해당 파일에서 문제를 찾아 수정합니다.
 
-## Investigate issues in deployment manifests
+## 배포 매니페스트의 문제 조사
 
-In the Snyk project imported earlier, we can see the two Kubernetes manifests for the goof application. One deploys the application, and the other deploys the mongo database it needs.
+이전에 가져온 Snyk 프로젝트에서 goof 애플리케이션에 대한 두 개의 Kubernetes 매니페스트를 볼 수 있습니다. 하나는 애플리케이션을 배포하고 다른 하나는 필요한 mongo 데이터베이스를 배포합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-iac-dockerlab.png)
 
-Clicking into either one of these brings you to the configuration risks Snyk identified in the file. Starting with the `goof-mongo-deployment.yaml` file, we see the following issues:
+이 중 하나를 클릭하면 Snyk이 파일에서 식별한 구성 위험이 발생합니다. `goof-mongo-deployment.yaml` 파일부터 다음과 같은 문제가 나타납니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/goof-mongo-issues.png)
 
-For each issue, Snyk calls out the issue identified, its impact, and how it can be resolved. It also highlights the line of code where the issue exists. In the example below, we see a Low Severity configuration risk that can be addressed by adding an `ImagePullPolicy` to the deployment.
+각 문제에 대해 Snyk은 식별된 문제, 그 영향 및 해결 방법을 호출합니다. 또한 Issue가 있는 코드 줄을 강조 표시합니다. 아래 예에서는 배포에 `ImagePullPolicy`를 추가하여 해결할 수 있는 낮은 심각도 구성 위험을 볼 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/iac-pullpolicyissue.png)
 
-With this information, developers can either ignore the issue or make the necessary changes to their deployment manifests to fix them.
+이 정보를 사용하여 개발자는 문제를 무시하거나 배포 매니페스트에 필요한 변경을 수행하여 Issue를 해결할 수 있습니다.
 
 {% hint style="danger" %}
-These are examples. It's possible your application requires administrative privileges or other explicitly stated privileges. Know your application and its dependencies before making changes to your files; you can break your deployment if you're not careful.
+다음은 예입니다. 응용 프로그램에 관리 권한 또는 기타 명시적으로 명시된 권한이 필요할 수 있습니다. 파일을 변경하기 전에 애플리케이션과 해당 종속성을 파악하십시오. 주의하지 않으면 배포를 중단할 수 있습니다.
 {% endhint %}
 
-## Fixing configuration issues in deployment manifests
+## 배포 매니페스트의 구성 Issue 수정
 
-As the warning states, configuration issues are very nuanced. While there are documented best practices we check against, your workloads might require those in order to function correctly. For this reason, we allow you to [change the severities for the configuration checks](https://support.snyk.io/hc/en-us/articles/360006402818#UUID-c1919782-6bfa-b84b-a638-3913cee39fc5) Snyk runs.
+경고 상태에서 구성 Issue는 매우 미묘합니다. 우리가 확인하는 문서화된 모범 사례가 있지만 워크로드가 올바르게 작동하려면 그러한 모범 사례가 필요할 수 있습니다. 이러한 이유로 Snyk이 실행하는 [구성 검사의 심각도를 변경](https://support.snyk.io/hc/en-us/articles/360006402818#UUID-c1919782-6bfa-b84b-a638-3913cee39fc5)할 수 있습니다.
 
-In this example, we'll fix a few issues we deem important enough to warrant a fix.
+이 예에서는 수정이 필요하다고 판단되는 몇 가지 문제를 수정합니다.
 
-### Issue: Container could be running with outdated image
+### Issue: 컨테이너가 오래된 이미지로 실행될 수 있음
 
-Let's look once again at the issue from above.
+위의 Issue를 다시 한 번 살펴 보겠습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/iac-pullpolicyissue.png)
 
-Reading the issue description, this issue can be fixed by adding an `ImagePullPolicy` attribute to the `containers` spec. In your IDE, or text editor, add the attribute to `goof-mongo-deployment.yaml`.
+Issue 설명을 읽으면 컨테이너 사양에 `ImagePullPolicy` 특성을 추가하여 이 Issue를 해결할 수 있습니다. IDE 또는 텍스트 편집기에서 속성을 `goof-mongo-deployment.yaml`에 추가합니다.
 
 ```yaml
 spec:
@@ -47,13 +47,13 @@ spec:
       ports:
 ```
 
-### Issue: Container is running without root user control
+### Issue: 컨테이너가 루트 사용자 제어 없이 실행 중입니다.
 
-Let's look at another issue. This time, it has to do with the permissions given to the container.
+다른 문제를 봅시다. 이번에는 컨테이너에 부여된 권한과 관련이 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/iac-runasnoonroot.png)
 
-This one can be fixed by setting a `securityContext` on the `container`. To set this, add the following to the `goof-deployment-mongo.yaml` file.
+이것은 `container`에 `securityContext`를 설정하여 수정할 수 있습니다. 이를 설정하려면 `goof-deployment-mongo.yaml` 파일에 다음을 추가하십시오.
 
 ```yaml
 spec:
@@ -65,15 +65,15 @@ spec:
         runAsNonRoot: true
 ```
 
-## Test your config files to ensure they work
+## 구성 파일을 테스트하여 작동하는지 확인하십시오.
 
-Any time you make a local change to a configuration file, it's a good idea to test it locally before committing the changes to GitHub. Tear down the current deployment by deleting the namespace:
+구성 파일을 로컬에서 변경할 때마다 변경 사항을 GitHub에 Commit하기 전에 로컬에서 테스트하는 것이 좋습니다. 네임스페이스를 삭제하여 현재 배포를 해제합니다:
 
 ```yaml
 kubectl delete ns snyk-docker
 ```
 
-Once it's gone, re-deploy the application using the following commands.
+제거되면 다음 명령을 사용하여 애플리케이션을 다시 배포합니다.
 
 ```yaml
 # Create a namespace
@@ -86,7 +86,8 @@ kubectl config set-context --current --namespace snyk-docker
 kubectl create -f goof-deployment.yaml,goof-mongo-deployment.yaml
 ```
 
-If it spins up correctly, test the app by navigating to [http://localhost:3001](http://localhost:3001). Once you've confirmed it works, commit the changes to GitHub! Snyk will re-test the files and show updated issue counts.
+제대로 회전하면 [http://localhost:3001](http://localhost:3001/)로 이동하여 앱을 테스트합니다. 작동하는지 확인한 후 변경 사항을 GitHub에 Commit하십시오! Snyk은 파일을 다시 테스트하고 업데이트된 Issue 수를 표시합니다.
 
 You reached the end! We hope you enjoyed it. Check out [Recap and Next Steps](recap-and-next-steps.md) for extra resources.
 
+학습이 끝났습니다! 이 학습이 즐거웠기를 바랍니다. 추가 리소스는 [요약 및 다음 단계](recap-and-next-steps.md)를 확인하십시오.
