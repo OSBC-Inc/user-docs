@@ -546,7 +546,7 @@
     * [결론](tutorials/circleci/securing-kubernetes-workloads-on-aws/conclusion.md)
 * [Docker](tutorials/docker/README.md)
   * [Docker CLI로 스캔](tutorials/docker/scanning-with-the-docker-cli.md)
-  * [Build Secure Containers with Docker and Snyk](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/README.md)
+  * [Docker 및 Snyk으로 보안 컨테이너 구축](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/README.md)
     * [Clone and run the sample application](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/clone-and-run-the-sample-application.md)
     * [Set up a container delivery pipeline with vulnerability scanning](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/set-up-a-container-delivery-pipeline-with-vulnerability-scanning.md)
     * [Select the most secure base image available](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/select-the-most-secure-base-image-available.md)
