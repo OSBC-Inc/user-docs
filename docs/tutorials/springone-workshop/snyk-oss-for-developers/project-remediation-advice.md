@@ -1,55 +1,55 @@
-# Project fix advice
+# 프로젝트 수정 조언
 
-## Fix vulnerabilities
+## 취약점 수정
 
-Snyk knowledge of the transitive dependencies in your project makes it easy for Snyk to offer fix advice. Snyk can fix vulnerabilities in two ways. Snyk can upgrade the direct dependencies to a vulnerability free version, or it can patch the vulnerability.
+프로젝트의 간접 의존성에 대한 Snyk 지식을 통해 Snyk이 수정 조언을 쉽게 제공할 수 있습니다. Snyk은 두 가지 방법으로 취약점을 수정할 수 있습니다. Snyk은 직접 의존성을 취약점이 없는 버전으로 업그레이드하거나 취약점을 패치할 수 있습니다.
 
-Snyk supports the following workflows to help developers fix their vulnerabilities.
+Snyk은 다음과 같은 워크플로우를 지원하여 개발자가 취약점을 수정할 수 있도록 지원합니다.
 
-1. Synk generates automatic git pull requests (PRs) using GitHub, GitLab, or Bitbucket PR workflows. Snyk executes this as a nightly workflow. 
-2. Snyk users use the _**Open a fix PR**_ feature in the Snyk UI.
-3. Snyk users use the _**fix this vulnerability**_ feature on a specific issue card in the Snyk UI.
-
-{% hint style="info" %}
-In this workshop, we will perform the **fix this vulnerability** option.
-{% endhint %}
-
-## Generating automatic pull requests
-
-Snyk generates automatic pull requests for your projects using the source control integration associated with your organization. To check the setting, select the integrations tab at the top of the Snyk UI and select your source control repository. Click the gear icon for your source control and review the settings. This setting can be configured on our per-project basis or for an entire organization.
+1. Snyk은 GitHub, GitLab 또는 Bitbucket PR 워크플로우를 사용하여 자동 Git PR(pull request)을 생성합니다. Snyk은 이 워크플로우를 밤에 실행합니다.
+2. Snyk 사용자는 Snyk UI에서 _**Open a fix PR**_ 기능을 사용합니다.
+3. Snyk 사용자는 Snyk UI의 특정 Issue 카드에서  _**fix this vulnerability**_ 기능을 사용합니다.
 
 {% hint style="info" %}
-This setting should be set from our initial configuration of GitHub
+이 워크숍에서는 **fix this vulnerability** 옵션을 사용합니다.
 {% endhint %}
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/auto_pr_setting.png)
+## 자동 Pull Request 생성
 
-Snyk will issues PRs for your projects when they are ready. You can view the PR in GitHub (GitLab and Bitbucket have similar views) by select the Pull Request tab at the top of the git repository. Keep in mind, Synk generates PRs overnight, and multiple pull requests exist for different dependencies.
+Snyk은 조직과 연결된 소스 제어 통합을 사용하여 프로젝트에 대한 자동 Pull Request를 생성합니다. 설정을 확인하려면 Snyk UI 상단의 Integration 탭을 선택하고 소스 제어 리포지토리를 선택합니다. Source Control의 톱니바퀴 아이콘을 클릭하고 설정을 검토합니다. 이 설정은 프로젝트별로 또는 전체 조직에 대해 구성할 수 있습니다.
 
 {% hint style="info" %}
-SPC will generate a PR given enough time.
+이 설정은 GitHub의 초기 구성에서 설정해야 합니다.
 {% endhint %}
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/github_pull_req_auto.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/auto\_pr\_setting.png)
 
-## Open a fix PR
+Snyk은 준비가 되면 프로젝트에 대한 PR을 발행할 것입니다. Git 저장소 상단의 Pull Request 탭을 선택하여 GitHub에서 PR을 볼 수 있습니다. GitLab과 Bitbucket은 유사한 보기를 가집니다. Snyk은 하룻밤 사이에 PR을 생성하고 여러 개의 PR이 서로 다른 의존성에 대해 존재합니다.
 
-The Snyk UI offers the ability to create Pull Requests directly from the project. To generate a PR find your SPC project from the list of projects and select the pom.xml file.
+{% hint style="info" %}
+SPC는 충분한 시간이 주어지면 PR을 생성합니다.
+{% endhint %}
 
-Select the Open a fix PR and Snyk will start with the workflow to generate a PR for SPC. Prior to sending the PR to GitHub, the Snyk UI will show you what will be fixed by the PR, any partial fixes, and anything that will not be fixed. Submit the PR to GitHub and visit your GitHub repository Pull Request tab to view the Pull Request.
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/github\_pull\_req\_auto.png)
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/open_pr.png)
+## fix PR 열기
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/open_fix_pr_top_half.png)
+Snyk UI는 프로젝트에서 직접 Pull Request를 생성하는 기능을 제공합니다. PR을 생성하려면 프로젝트 목록에서 SPC 프로젝트를 찾고 pom.xml 파일을 선택합니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/open_fix_pr_bottom.png)
+Open a fix PR을 선택하면 Snyk이 워크플로우를 시작하여 SPC용 PR을 생성합니다. PR을 GitHub로 보내기 전에 Snyk UI에 의해 수정될 사항, 부분적인 수정 사항 및 수정되지 않을 모든 항목을 보여줍니다. GitHub에 PR을 보내고 GitHub 저장소 Pull Request 탭을 방문하여 Pull Request를 확인할 수 있습니다.
+
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/open\_pr.png)
+
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/open\_fix\_pr\_top\_half.png)
+
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/open\_fix\_pr\_bottom.png)
 
 ## Fix this vulnerability
 
-Snyk's _**fix this vulnerability**_ workflow is the same as the _**open a PR fix**_ workflow. When generating a PR, only the specified vulnerability issue is selected in the PR, as shown below. Find the Cross-site Scripting (XSS) vulnerability and start the PR workflow.
+Snyk의 _**fix this vulnerability**_ 워크플로우는 _**open a PR fix**_ 워크플로우와 동일합니다. PR 생성 시 아래와 같이 지정된 취약점 Issue만 PR에서 선택됩니다. XSS(Cross-site Scripting) 취약점을 찾아 PR 워크플로우를 시작합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-22-at-12.32.44-pm.png)
 
-Verify the issue is selected and complete the PR request.
+Issue가 선택되었는지 확인하고 PR을 완료합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/screen-shot-2020-08-22-at-12.40.36-pm.png)
