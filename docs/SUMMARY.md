@@ -555,7 +555,7 @@
     * [요약 및 다음 단계](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/recap-and-next-steps.md)
 * [Dynatrace](tutorials/dynatrace/README.md)
   * [Kubernetes 보안](tutorials/dynatrace/secure-kubernetes/README.md)
-    * [Deploy Goof Sample App](tutorials/dynatrace/secure-kubernetes/deploy-goof-sample-app.md)
+    * [Goof Sample App 배포](tutorials/dynatrace/secure-kubernetes/deploy-goof-sample-app.md)
     * [Deploy OneAgent](tutorials/dynatrace/secure-kubernetes/deploy-oneagent.md)
     * [Deploy Snyk Monitor](tutorials/dynatrace/secure-kubernetes/deploy-snyk-monitor.md)
     * [Findings Reports](tutorials/dynatrace/secure-kubernetes/findings-reports.md)

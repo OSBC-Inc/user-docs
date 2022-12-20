@@ -1,12 +1,12 @@
-# Deploy Goof Sample App
+# Goof Sample App 배포
 
 {% hint style="danger" %}
-**DO NOT** deploy this sample application to any production environment.
+이 샘플 애플리케이션을 프로덕션 환경에 **배포하지 마십시오**.
 {% endhint %}
 
-For these examples, we are providing a sample vulnerable Node.js application which you can deploy to your lab environment. The app is available in a [public GitHub repository](https://github.com/snyk-partners/k8s-goof) which can be **cloned** to your local development machine.
+이러한 예를 위해 랩 환경에 배포할 수 있는 샘플 취약한 Node.js 애플리케이션을 제공하고 있습니다. 이 앱은 로컬 개발 머신에 **복제**할 수 있는 [공용 GitHub 저장소](https://github.com/snyk-partners/k8s-goof)에서 사용할 수 있습니다.
 
-From a terminal, navigate to the location where you cloned the repository and execute the following commands:
+터미널에서 저장소를 복제한 위치로 이동하고 다음 명령을 실행합니다:
 
 ```bash
  kubectl apply -f goof-service.yaml
@@ -16,18 +16,17 @@ From a terminal, navigate to the location where you cloned the repository and ex
 kubectl apply -f goof-deployment.yaml
 ```
 
-Once successfully deployed you will see results as follows:
+성공적으로 배포되면 다음과 같은 결과가 표시됩니다:
 
 ```bash
 deployment.apps/goof created
 deployment.apps/goof-mongo created
 ```
 
-If you would like to access the public endpoint for this app you may do so by running the following command and copy and pasting the **EXTERNAL-IP** output into a web browser:
+이 앱의 퍼블릭 엔드포인트에 액세스하려면 다음 명령을 실행하고 **EXTERNAL-IP** 출력을 복사하여 웹 브라우저에 붙여넣으면 됩니다.
 
 ```bash
 kubectl get svc
 ```
 
 This step is not necessary for this exercise. You may proceed to the next section.
-
