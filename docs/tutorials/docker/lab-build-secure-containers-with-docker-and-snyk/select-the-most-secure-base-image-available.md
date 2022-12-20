@@ -1,30 +1,28 @@
 ---
-description: >-
-  One of the easiest ways we can secure containers is to ensure we're using a
-  secure base image.
+description: 컨테이너를 보호할 수 있는 가장 쉬운 방법 중 하나는 안전한 기본 이미지를 사용하고 있는지 확인하는 것입니다.
 ---
 
-# Select the most secure base image available
+# 사용 가능한 가장 안전한 기본 이미지 선택
 
-Snyk makes selecting a secure base image for your container easy. We'll show you how to get base image suggestions in both the Snyk UI, and using Docker Desktop.
+Snyk을 사용하면 컨테이너의 보안 기본 이미지를 쉽게 선택할 수 있습니다. Snyk UI와 Docker Desktop 사용 모두에서 기본 이미지 제안을 얻는 방법을 보여드리겠습니다.
 
-## Base image suggestions in Docker Desktop
+## Docker Desktop의 기본 이미지 제안
 
-Developers can `docker scan` containers to get vulnerability information and base image upgrade guidance. Scan the image by running the following command. Passing the `Dockerfile` used to build the image using `--file` is needed to receive base image suggestions.
+개발자는 컨테이너를 `docker scan`하여 취약성 정보 및 기본 이미지 업그레이드 지침을 얻을 수 있습니다. 다음 명령을 실행하여 이미지를 스캔합니다. 기본 이미지 제안을 받으려면 `--file`을 사용하여 이미지를 빌드하는 데 사용되는 `Dockerfile`을 전달해야 합니다.
 
 ```
 docker scan $DockerId/goof:dev --file=Dockerfile
 ```
 
 {% hint style="info" %}
-Learn what else is possible with Docker Scan with [our handy cheat sheet](https://snyk.io/blog/docker-security-scanning-cheatsheet-2021/).
+[간편한 치트 시트를 사용](https://snyk.io/blog/docker-security-scanning-cheatsheet-2021/)하여 Docker Scan으로 가능한 다른 작업에 대해 알아보십시오.
 {% endhint %}
 
-Snyk recommends less vulnerable base images grouped by how likely they are to be compatible:
+Snyk은 덜 취약한 기본 이미지를 호환 가능성에 따라 그룹화할 것을 권장합니다:
 
-* `Minor` upgrades are the most likely to be compatible with little work,&#x20;
-* `Major` upgrades can introduce breaking changes depending on image usage,
-* `Alternative` architecture images are shown for more technical users to investigate.
+* `Minor` 업그레이드는 작은 작업과 호환될 가능성이 가장 높으며,
+* `Major` 업그레이드는 이미지 사용에 따라 주요 변경 사항을 도입할 수 있습니다.
+* 더 많은 기술 사용자가 조사할 수 있도록 `Alternative` 아키텍처 이미지가 표시됩니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/docker-scanvulns.png)
 
@@ -32,61 +30,61 @@ Next we'll show you how you can get these same base image suggestions inside the
 
 ## Base image suggestions in Snyk
 
-### Step 1: Configure Snyk's GitHub Integration
+### Step 1: Snyk의 GitHub 통합 구성
 
 {% hint style="info" %}
-If you've already configured the Snyk GitHub integration, continue to Step 2.
+Snyk GitHub 통합을 이미 구성한 경우 2단계로 계속 진행합니다.
 {% endhint %}
 
-First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
+먼저 리포지토리를 가져올 수 있도록 Snyk을 GitHub에 연결해야 합니다. 다음과 같이 하십시오.
 
-1. Logging in to Snyk.io. [Sign up](https://snyk.co/SnykGH) if you haven't already.
-2. Navigating to Integrations -> Source Control -> GitHub
-3. Fill in your Account Credentials to Connect your GitHub Account.
+1. Snyk.io에 로그인합니다. 아직 [가입](https://snyk.co/SnykGH)하지 않았다면 가입하세요.
+2. Integrations -> Integrations -> GitHub로 이동
+3. 계정 자격 증명을 입력하여 GitHub 계정을 연결하세요.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-gh.png)
 
-### Step 2: Import the forked Repo into Snyk
+### Step 2: 포크된 저장소를 Snyk으로 가져오기
 
-Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as a Project.
+이제 Snyk이 GitHub 계정에 연결되었으므로 저장소를 Snyk 프로젝트로 가져옵니다.
 
-1. Navigate to Projects
-2. Click "Add Project" then select "GitHub"
-3. Click on the Repo you created.
+1. Projects로 이동
+2. "Add Project"를 클릭한 다음 "GitHub"를 선택합니다.
+3. 생성한 저장소를 클릭합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-ghimport.png)
 
-### Step 3: Explore Base Image suggestions for your app
+### Step 3: 앱에 대한 기본 이미지 제안 살펴보기
 
-When the Repo imports, Snyk shows the supported manifest files in the repo, including our container's `Dockerfile`.
+저장소를 가져올 때 Snyk은 컨테이너의 Dockerfile을 포함하여 저장소에서 지원되는 매니페스트 파일을 표시합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-proj-dockerfile.png)
 
-Clicking the Dockerfile brings you to the project view, where you can see the base image suggestions.
+Dockerfile을 클릭하면 기본 이미지 제안을 볼 수 있는 프로젝트 보기로 이동합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-baseimagerecs.png)
 
-Up next, we'll scan the containers running in our Kubernetes cluster for vulnerabilities and base image upgrade guidance. This use case is helpful when running images not developed in-house.
+다음으로 Kubernetes 클러스터에서 실행 중인 컨테이너에서 취약성 및 기본 이미지 업그레이드 지침을 스캔합니다. 이 사용 사례는 사내에서 개발되지 않은 이미지를 실행할 때 유용합니다.
 
-## Optional: Finding vulnerabilities in running workloads
+## 선택 사항: 실행 중인 워크로드의 취약점 찾기
 
-Snyk's Kubernetes Monitor allows you to find vulnerabilities in workloads running in your cluster. In this section we'll deploy the Snyk Kubernetes Monitor to scan the goof application.
+Snyk의 Kubernetes Monitor를 사용하면 클러스터에서 실행 중인 워크로드의 취약성을 찾을 수 있습니다. 이 섹션에서는 Snyk Kubernetes Monitor를 배포하여 goof 애플리케이션을 스캔합니다.
 
 {% hint style="info" %}
-The full [instructions for deploying the Kubernetes Monitor](https://support.snyk.io/hc/en-us/articles/360003916158#UUID-753328ea-3d73-0eeb-4301-c22522273797) can be found in our Docs.
+[Kubernetes Monitor 배포에 대한 전체 지침](https://support.snyk.io/hc/en-us/articles/360003916158#UUID-753328ea-3d73-0eeb-4301-c22522273797)은 문서에서 찾을 수 있습니다.
 {% endhint %}
 
-To get started, first create a namespace for the Snyk Monitor:
+시작하려면 먼저 Snyk 모니터에 대한 네임스페이스를 만듭니다:
 
 ```
 kubectl create ns snyk-monitor
 ```
 
-Next, retrieve your Kubernetes Integration ID from Snyk's Integrations menu.
+다음으로 Snyk의 통합 메뉴에서 Kubernetes 통합 ID를 검색합니다.
 
 ![](https://support.snyk.io/hc/article\_attachments/360007147458/uuid-26f9c2cd-2755-07d5-61a0-bdb0261d87ab-en.gif)
 
-Save the integration ID as an Environment Variable to copy-paste the next command.
+통합 ID를 환경 변수로 저장하여 다음 명령을 복사하여 붙여넣습니다.
 
 ```
 IntegrationId=<<your_integration_id>>
@@ -200,7 +198,7 @@ The workflows we configured earlier will run as part of this PR. You can see the
 * **license/snyk** checks the incoming changes against the snapshot in Snyk for new license issues
 * **security/snyk** checks the incoming changes against the snapshot in Snyk for new vulnerabilities
 * **Check for Open Source Vulnerabilities with Snyk** checks if there are **any** vulnerable open source components in the application with fixes available
-* **CI Task for PROD Branch** rebuilds and app and container to make sure it correctly builds.&#x20;
+* **CI Task for PROD Branch** rebuilds and app and container to make sure it correctly builds.
 * **Code scanning results** pushes the container scan results to GitHub Security for consumption.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-prchecks%20\(1\).png)
