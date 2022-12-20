@@ -1,21 +1,21 @@
-# Deploy OneAgent
+# OneAgent 배포
 
 {% embed url="https://youtu.be/K2PVsCivTMU" %}
 
 {% hint style="info" %}
-We will provide step-by-step instruction to help you get started quickly. For in depth product documentation, please visit the following Dynatrace Documentation pages:\
-1\. [Set up Dynatrace on Kubernetes](https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-container-platforms/kubernetes/)\
+빠르게 시작할 수 있도록 단계별 지침을 제공합니다. 자세한 제품 설명서는 다음 Dynatrace 설명서 페이지를 참조하십시오.\
+1\. [Kubernetes에서 Dynatrace 설정](https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-container-platforms/kubernetes/)\
 2\. [Dynatrace ActiveGate](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-activegate/)\
 3\. [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/)
 {% endhint %}
 
 ## Step 1:
 
-From your Dynatrace environment, navigate to **Infrastructure** and then **Kubernetes** in the left navigation menu as shown below:
+Dynatrace 환경에서 **Infrastructure**로 이동한 다음 아래와 같이 왼쪽 탐색 메뉴에서 **Kubernetes**로 이동합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/dynatrace-k8s-config-01.png)
 
-Select **Add Custer**.
+**Add Custer** 선택합니다.
 
 ## Step 2:
 
@@ -64,7 +64,7 @@ Once copied, switch back to your terminal and execute the example command:
  --cluster-name "$YOUR_CLUSTER_NAME"
 ```
 
-Where **$YOUR_API_URL** is that of your Dynatrace tenant, **$YOUR_API_TOKEN**, **$YOUR_PASS_TOKEN** and **$YOUR_CLUSTER_NAME** are those created above. If successful, you will see results similar to what is shown below:
+Where **$YOUR\_API\_URL** is that of your Dynatrace tenant, **$YOUR\_API\_TOKEN**, **$YOUR\_PASS\_TOKEN** and **$YOUR\_CLUSTER\_NAME** are those created above. If successful, you will see results similar to what is shown below:
 
 ```
 Check for token scopes...

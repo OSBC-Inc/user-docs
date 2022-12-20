@@ -29,4 +29,4 @@ deployment.apps/goof-mongo created
 kubectl get svc
 ```
 
-This step is not necessary for this exercise. You may proceed to the next section.
+이 연습에는 이 단계가 필요하지 않습니다. 다음 섹션으로 진행할 수 있습니다.

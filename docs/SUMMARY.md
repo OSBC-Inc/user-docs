@@ -556,7 +556,7 @@
 * [Dynatrace](tutorials/dynatrace/README.md)
   * [Kubernetes 보안](tutorials/dynatrace/secure-kubernetes/README.md)
     * [Goof Sample App 배포](tutorials/dynatrace/secure-kubernetes/deploy-goof-sample-app.md)
-    * [Deploy OneAgent](tutorials/dynatrace/secure-kubernetes/deploy-oneagent.md)
+    * [OneAgent 배포](tutorials/dynatrace/secure-kubernetes/deploy-oneagent.md)
     * [Deploy Snyk Monitor](tutorials/dynatrace/secure-kubernetes/deploy-snyk-monitor.md)
     * [Findings Reports](tutorials/dynatrace/secure-kubernetes/findings-reports.md)
 * [GCP](tutorials/gcp/README.md)
