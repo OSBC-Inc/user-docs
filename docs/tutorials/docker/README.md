@@ -1,14 +1,12 @@
 ---
-description: >-
-  Snyk and Docker help developers securely build and ship containers with
-  confidence.
+description: Snyk과 Docker는 개발자가 자신 있게 컨테이너를 안전하게 빌드하고 배송할 수 있도록 지원합니다.
 ---
 
 # Docker
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/dockerheader-2.png)
 
-## Welcome!
+## 환영합니다!
 
 [Docker and Snyk are partnering](https://snyk.io/blog/snyk-docker-secure-containerized-applications/) to make vulnerability scanning _seamless._ Developers using Docker can use Snyk at multiple points in the toolchain to address open source security and license risks early and continuously monitor their images for newly disclosed vulnerabilities, after deploying to production.
 
@@ -35,4 +33,3 @@ Inside the Snyk UI, connect your Docker Hub to import container images as Snyk p
 * [Docker Docs: Vulnerability Scanning for Docker local images](https://docs.docker.com/engine/scan/)
 * [Snyk Blog: Container image security scanning directly from Docker Desktop](https://snyk.io/blog/snyk-container-image-security-scanning-directly-from-docker-desktop/)
 * [Docker Blog: Shift Vulnerability Scanning Left in Docker Desktop](https://www.docker.com/blog/secure-from-the-start-shift-vulnerability-scanning-left-in-docker-desktop/)
-
