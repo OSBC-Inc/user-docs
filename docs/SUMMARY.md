@@ -554,7 +554,7 @@
     * [배포 매니페스트에 구성 오류가 없는지 확인](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/ensure-deployment-manifests-are-free-from-misconfiguration.md)
     * [요약 및 다음 단계](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/recap-and-next-steps.md)
 * [Dynatrace](tutorials/dynatrace/README.md)
-  * [Secure Kubernetes](tutorials/dynatrace/secure-kubernetes/README.md)
+  * [Kubernetes 보안](tutorials/dynatrace/secure-kubernetes/README.md)
     * [Deploy Goof Sample App](tutorials/dynatrace/secure-kubernetes/deploy-goof-sample-app.md)
     * [Deploy OneAgent](tutorials/dynatrace/secure-kubernetes/deploy-oneagent.md)
     * [Deploy Snyk Monitor](tutorials/dynatrace/secure-kubernetes/deploy-snyk-monitor.md)
