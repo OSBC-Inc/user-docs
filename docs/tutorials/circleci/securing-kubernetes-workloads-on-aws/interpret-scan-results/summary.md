@@ -1,8 +1,7 @@
-# Summary
+# 요약
 
-Our results may seem redundant but these are necessary. We begin with scanning and monitoring of our source in a Git repository by enabling Snyk's GitHub integration. This provides immediate insights into open source dependency vulnerabilities in our application. However, as developers can feature branch new vulnerabilities may be introduced as these may take place as _out-of-band_ pipeline builds. However, since we are including the Snyk CircleCI Orb in our configuration file, we perform an additional scan and report our findings back.
+우리의 결과가 중복된 것처럼 보일 수 있지만 이는 필요합니다. Snyk의 GitHub 통합을 활성화하여 Git 저장소에서 소스를 스캔하고 모니터링하는 것으로 시작합니다. 이는 애플리케이션의 오픈 소스 종속성 취약성에 대한 즉각적인 통찰력을 제공합니다. 그러나 개발자가 분기를 특징으로 할 수 있으므로 대역 외 파이프라인 빌드로 발생할 수 있으므로 새로운 취약점이 도입될 수 있습니다. 그러나 구성 파일에 Snyk CircleCI Orb를 포함하고 있으므로 추가 스캔을 수행하고 결과를 다시 보고합니다.
 
-We apply the same workflow with our private container registry on Amazon ECR and perform a second scan of the container image in our CircleCI job again, invoking the Snyk Orb and reporting our findings.
+Amazon ECR의 프라이빗 컨테이너 레지스트리에 동일한 워크플로를 적용하고 CircleCI 작업에서 컨테이너 이미지의 두 번째 스캔을 다시 수행하여 Snyk Orb를 호출하고 결과를 보고합니다.
 
-Lastly, we are monitoring our Kubernetes cluster and gaining additional insights not only into the application and container image vulnerabilities but potential misconfigurations of security configuration of those workloads. Therefore, establishing a comprehensive process of checks and balances to secure our workloads at each phase of the development process.
-
+마지막으로 우리는 Kubernetes 클러스터를 모니터링하고 애플리케이션 및 컨테이너 이미지 취약성뿐만 아니라 해당 워크로드의 보안 구성에 대한 잠재적인 잘못된 구성에 대한 추가 통찰력을 얻고 있습니다. 따라서 개발 프로세스의 각 단계에서 워크로드를 보호하기 위해 견제와 균형의 포괄적인 프로세스를 설정합니다.
