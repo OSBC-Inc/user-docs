@@ -1,71 +1,69 @@
 ---
-description: >-
-  Using Docker Desktop? The Docker CLI provides native vulnerability detection
-  and fixes, powered by Snyk.
+description: 도커 데스크탑을 사용하시나요? Docker CLI는 Snyk에서 제공하는 기본 취약성 감지 및 수정을 제공합니다.
 ---
 
-# Scan with the Docker CLI
+# Docker CLI로 스캔
 
 ## Lab Meta
 
-> **Difficulty**: Beginner
+> 난이도: 초보자
 >
-> **Time**: Approximately 15 minutes
+> 소요시간 약 15분
 
-As part of [Snyk's partnership with Docker](https://snyk.io/blog/snyk-docker-secure-containerized-applications/), scanning container images for vulnerabilities is built into Docker Desktop and as simple as `docker scan`. This lab shows how it works.
+[Snyk와 Docker의 파트너십](https://snyk.io/blog/snyk-docker-secure-containerized-applications/)의 일환으로 취약점에 대한 컨테이너 이미지 스캔은 Docker Desktop에 내장되어 있으며 docker 스캔만큼 간단합니다. 이 실습에서는 작동 방식을 보여줍니다.
 
-You will complete the following steps:
+다음 단계를 완료합니다:
 
-* Step 1 - Clone a the sample application's GitHub Repo
-* Step 2 - Build some Docker images
-* Step 3 - Scan the images for vulnerabilities
-* Step 4 - Review scan results
-* Step 5 - Dig into provided Base Image recommendations
-* Step 6 - Apply a more secure Base Image and re-build the Image
-* Step 7 - Re-scan for Vulnerabilities&#x20;
+* Step 1 - 샘플 애플리케이션의 GitHub 저장소 복제
+* Step 2 - 일부 Docker 이미지 빌드
+* Step 3 - 취약점에 대한 이미지 스캔
+* Step 4 - 스캔 결과 검토
+* Step 5 - 제공된 기본 이미지 권장 사항 자세히 알아보기
+* Step 6 - 보다 안전한 기본 이미지 적용 및 이미지 재구축
+* Step 7 - 취약점 재검색
 
-## Prerequisites
+## 전제 조건
 
-* Download and install Docker Desktop.
-  * [Download for Mac](https://desktop.docker.com/mac/stable/Docker.dmg)
-  * [Download for Windows](https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
-* **\[Optional]** Fork the [Docker Goof Repo](https://github.com/snyk/docker-goof) to your GitHub Account.
+* Docker Desktop을 다운로드하고 설치합니다.
+  * [Mac용 다운로드](https://desktop.docker.com/mac/stable/Docker.dmg)
+  * [Windows용 다운로드](https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
+* **\[선택 사항]** [Docker Goof Repo](https://github.com/snyk/docker-goof)를 GitHub 계정으로 포크합니다.
 
 {% hint style="info" %}
-A Snyk account is not necessary, however, you can only scan 10 times without logging in. [Sign up for Snyk using your Docker ID](https://snyk.co/SnykDockerAcademy), then run `docker scan --login`and sign in to unlock 200 free scans per month.
+Snyk 계정은 필요하지 않지만 로그인하지 않고 10회만 스캔할 수 있습니다. [Docker ID를 사용하여 Snyk에 가입](https://snyk.co/SnykDockerAcademy)한 다음 `docker scan --login`을 실행하고 로그인하여 매월 200개의 무료 스캔을 잠금 해제하십시오.
 {% endhint %}
 
-Check your installation by running `docker scan --version`, it should print the current version of docker scan and the Snyk engine version.
+`docker scan --version`을 실행하여 설치를 확인하십시오. docker scan의 현재 버전과 Snyk 엔진 버전이 인쇄되어야 합니다.
 
 ```bash
 docker scan --version
 ```
 
-## Step 1: Clone the Docker Goof Application, or BYO App
+## Step 1: Docker Goof 애플리케이션 또는 BYO 앱 복제
 
 {% hint style="info" %}
-This lab uses the Docker Goof application, but feel free to bring your own application! If you do, you're responsible for ensuring the application builds!
+이 실습에서는 Docker Goof 애플리케이션을 사용하지만 자체 애플리케이션을 가져와도 됩니다. 그렇게 하면 애플리케이션 빌드를 보장할 책임이 있습니다!
 {% endhint %}
 
-Clone the [Docker Goof application](https://github.com/snyk/docker-goof) to your workstation, then change to the top level directory of the app. Don't have Git? You can [download the Docker-Goof repo as a Zip file](https://github.com/snyk/docker-goof/archive/master.zip).
+[Docker Goof 애플리케이션](https://github.com/snyk/docker-goof)을 워크스테이션에 복제한 다음 앱의 최상위 디렉터리로 변경합니다. Git이 없으신가요? [Docker-Goof 저장소를 Zip 파일로 다운로드할 수 있습니다](https://github.com/snyk/docker-goof/archive/master.zip).
 
 ```
 git clone https://github.com/snyk/docker-goof && cd docker-goof
 # If you forked the repo, clone your fork.
 ```
 
-## Step 2: Build one (or many) docker-goof Images
+## Step 2: 하나(또는 여러 개)의 docker-goof 이미지 빌드
 
-The Docker Goof repo has many Dockerfiles. You can build some, or all, of them out.
+Docker Goof 저장소에는 많은 Dockerfile이 있습니다. 그들 중 일부 또는 전부를 만들 수 있습니다.
 
-Use the included easy button `./build.sh` to build them all at once.
+포함된 쉬운 버튼 `./build.sh`를 사용하여 한 번에 모두 빌드하십시오.
 
 ```bash
 # Easy button? Yes please. Build all images at once with:
 ./build.sh
 ```
 
-If you'd rather build the images one-by-one, remember to pass `-f` pointing at the Dockerfile.
+이미지를 하나씩 빌드하려면 Dockerfile을 가리키는 `-f`를 전달해야 합니다.
 
 ```bash
 # Build your images with docker build.
@@ -73,13 +71,13 @@ docker build -t docker-goof-slim -f slim.Dockerfile .
 docker build -t docker-goof -f Dockerfile .
 ```
 
-The images are now in our local Docker cache. Run `docker images` to list them out.
+이미지는 이제 로컬 Docker 캐시에 있습니다. `docker images`를 실행하여 나열합니다.
 
 ```bash
 docker images
 ```
 
-We'll use these images in the next step.
+다음 단계에서 이러한 이미지를 사용합니다.
 
 ## Step 3: Scan your Image for vulnerabilities with Snyk
 
@@ -183,7 +181,7 @@ Snyk's fix advice helps developers spend less time fixing, and more time develop
 
 These are grouped by how likely they are to be compatible with your application:
 
-* `Minor` upgrades are the most likely to be compatible with little work,&#x20;
+* `Minor` upgrades are the most likely to be compatible with little work,
 * `Major` upgrades can introduce breaking changes depending on image usage,
 * `Alternative` architecture images are shown for more technical users to investigate.
 
