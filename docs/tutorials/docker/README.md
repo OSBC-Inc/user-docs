@@ -8,25 +8,25 @@ description: Snyk과 Docker는 개발자가 자신 있게 컨테이너를 안전
 
 ## 환영합니다!
 
-[Docker and Snyk are partnering](https://snyk.io/blog/snyk-docker-secure-containerized-applications/) to make vulnerability scanning _seamless._ Developers using Docker can use Snyk at multiple points in the toolchain to address open source security and license risks early and continuously monitor their images for newly disclosed vulnerabilities, after deploying to production.
+[Docker와 Snyk은 취약점 검색을 원활하게 하기 위해 협력](https://snyk.io/blog/snyk-docker-secure-containerized-applications/)하고 있습니다. Docker를 사용하는 개발자는 도구 체인의 여러 지점에서 Snyk을 사용하여 오픈 소스 보안 및 라이선스 위험을 조기에 해결하고 프로덕션에 배포한 후 새로 공개된 취약성에 대해 이미지를 지속적으로 모니터링할 수 있습니다.
 
 {% hint style="info" %}
-New to Snyk? Through our partnership with Docker, [sign up with your Docker Hub credentials](https://snyk.co/SnykDockerAcademy) to unlock a special free tier limit of 200 scans!
+Snyk이 처음이신가요? Docker와의 파트너십을 통해 [Docker Hub 자격 증명으로 가입](https://snyk.co/SnykDockerAcademy)하여 200개까지의 스캔을 특별 무료 등급으로 해제하십시오!
 {% endhint %}
 
-### Snyk in the Docker CLI
+### Docker CLI의 Snyk
 
-As part of the partnership between Docker and Snyk, scanning container images for vulnerabilities is as easy as `docker scan`. Check out our bite-sized lab [Scan with the Docker CLI](scanning-with-the-docker-cli.md) to learn how with an exercise using a sample goof container.
+Docker와 Snyk 간의 파트너십의 일환으로 취약점에 대한 컨테이너 이미지 스캔은 `docker scan`만큼 쉽습니다. 샘플 goof 컨테이너를 사용하여 연습하는 방법을 알아보려면 한 입 크기의 랩 [Scan with the Docker CLI](scanning-with-the-docker-cli.md)를 확인하십시오.
 
-### Snyk in Docker Hub
+### Docker Hub의 Snyk
 
-Snyk is built into Docker Hub! Image scanning in Docker Hub provides developers and other SDLC stakeholders visibility into the security risks of container Images in Docker Hub. Work through a sample workflow in our Lab [Build Secure Containers with Docker and Snyk](lab-build-secure-containers-with-docker-and-snyk/) to see this in action.
+Snyk는 Docker Hub에 내장되어 있습니다! Docker Hub의 이미지 스캐닝은 개발자 및 기타 SDLC 이해 관계자에게 Docker Hub의 컨테이너 이미지 보안 위험에 대한 가시성을 제공합니다. [Docker 및 Snyk를 사용하여 Lab Build Secure Containers의 샘플 워크플로우를 통해 작업](lab-build-secure-containers-with-docker-and-snyk/)하여 이것이 실제로 작동하는지 확인하십시오.
 
-### Docker inside Snyk
+### Snyk 내부의 도커
 
-Inside the Snyk UI, connect your Docker Hub to import container images as Snyk projects. Doing so allows you to test and monitor your image repositories directly from the Snyk UI. Check out [Snyk Container Academy Workshop](./) to learn how to set up the integration.
+Snyk UI 내에서 Docker Hub를 연결하여 컨테이너 이미지를 Snyk 프로젝트로 가져옵니다. 이렇게 하면 Snyk UI에서 직접 이미지 저장소를 테스트하고 모니터링할 수 있습니다. 통합 설정 방법을 알아보려면 [Snyk Container Academy 워크숍](./)을 확인하세요.
 
-## Learn more about our Partnership with Docker
+## Docker와의 파트너십에 대해 자세히 알아보십시오.
 
 * [Snyk Blog: Integrated Security Scanning by Snyk in Docker Hub](https://snyk.io/blog/integrated-docker-security-scanning-by-snyk-in-docker-hub/)
 * [Snyk Blog: Docker Partnership Announcement](https://snyk.io/blog/snyk-docker-secure-containerized-applications/)
