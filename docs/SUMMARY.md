@@ -536,7 +536,7 @@
       * [애플리케이션 배포](tutorials/circleci/securing-kubernetes-workloads-on-aws/config.yml/deploy-the-application.md)
     * [CircleCI Project](tutorials/circleci/securing-kubernetes-workloads-on-aws/circleci-project.md)
     * [테스트 배포](tutorials/circleci/securing-kubernetes-workloads-on-aws/test-deployment.md)
-    * [Interpret scan results](tutorials/circleci/securing-kubernetes-workloads-on-aws/interpret-scan-results/README.md)
+    * [스캔 결과 해석](tutorials/circleci/securing-kubernetes-workloads-on-aws/interpret-scan-results/README.md)
       * [Correlating results](tutorials/circleci/securing-kubernetes-workloads-on-aws/interpret-scan-results/correlating-results.md)
       * [Summary](tutorials/circleci/securing-kubernetes-workloads-on-aws/interpret-scan-results/summary.md)
     * [Exploits](tutorials/circleci/securing-kubernetes-workloads-on-aws/exploits/README.md)
