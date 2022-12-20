@@ -552,7 +552,7 @@
     * [사용 가능한 가장 안전한 기본 이미지 선택](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/select-the-most-secure-base-image-available.md)
     * [취약한 애플리케이션 종속성 업그레이드 또는 패치](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/upgrade-or-patch-vulnerable-application-dependencies.md)
     * [배포 매니페스트에 구성 오류가 없는지 확인](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/ensure-deployment-manifests-are-free-from-misconfiguration.md)
-    * [Recap & Next Steps](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/recap-and-next-steps.md)
+    * [요약 및 다음 단계](tutorials/docker/lab-build-secure-containers-with-docker-and-snyk/recap-and-next-steps.md)
 * [Dynatrace](tutorials/dynatrace/README.md)
   * [Secure Kubernetes](tutorials/dynatrace/secure-kubernetes/README.md)
     * [Deploy Goof Sample App](tutorials/dynatrace/secure-kubernetes/deploy-goof-sample-app.md)

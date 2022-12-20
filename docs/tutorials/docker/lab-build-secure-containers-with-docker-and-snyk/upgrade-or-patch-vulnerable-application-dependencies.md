@@ -1,20 +1,22 @@
 ---
-description: 이제 애플리케이션을 구성하는 오픈 소스 구성 요소의 취약점을 찾아 수정하겠습니다.
+description: >-
+  Now we'll find and fix vulnerabilities in the Open Source components that make
+  up our application.
 ---
 
-# 취약한 애플리케이션 종속성 업그레이드 또는 패치
+# Upgrade or patch vulnerable application dependencies
 
-## 선택 사항: 취약한 종속성의 위험
+## Optional: The risks of vulnerable dependencies
 
-취약한 오픈 소스 구성 요소가 실행 중인 애플리케이션에 도입하는 위험의 예를 보기 위해 이러한 취약성 중 하나를 악용할 것입니다. `exploits`폴더에는 많은 취약한 종속성에 대한 Exploit이 포함되어 있습니다.
+To see an example of the risks a vulnerable open source component introduces to our running application, we're going to exploit one of those vulnerabilities. The `exploits` folder contains exploits for many of the vulnerable dependencies.
 
-실행 중인 애플리케이션에 대해 Exploit을 실행해 보겠습니다. 우리는 st 패키지의 Directory Traversal 취약점이 어떻게 민감한 정보 유출로 이어질 수 있는지 보여줄 것입니다. exploits 폴더로 이동하고 `st-exploits.sh` 파일을 소싱하여 시작합니다.
+Let's execute an exploit against our running application. We'll demonstrate how the Directory Traversal vulnerability in the `st` package can lead to sensitive information leakage. Start by navigating to the exploits folder and sourcing the `st-exploits.sh` file.
 
 ```
 cd exploits && source st-exploits.sh
 ```
 
-이렇게 하면 Exploit을 보여주기 위해 일련의 별칭이 설정됩니다. 아래에 나와 있습니다.
+This sets up a series of aliases to demonstrate the exploit. They are shown below:
 
 ```
 st1="curl $GOOF_HOST/public/about.html"
@@ -32,68 +34,68 @@ st4="curl $GOOF_HOST/public/%2e%2e/%2e%2e/%2e%2e/"
 st5="curl $GOOF_HOST/public/%2e%2e/%2e%2e/%2E%2E/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
 ```
 
-좋은 점은 `/etc/passwd` 파일의 유출된 내용을 볼 수 있는 `st4` 및 `st5`에 있습니다.
+The good stuff is in `st4` and `st5`, where we see the leaked contents of the `/etc/passwd` file.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/st-exploit.png)
 
-이런. 또한 이것은 단지 하나의 예일 뿐입니다. 이 폴더에 있는 다른 Exploit을 가지고 놀아도 좋습니다. 샘플 애플리케이션은 매우 취약합니다(당분간!).
+Yikes. And this is just one example. Feel free to play around with the other exploits in this folder, the sample application is **very** vulnerable (for now!).
 
-## 오픈 소스 취약점 수정을 시작하십시오!
+## Start fixing Open Source Vulnerabilities!
 
-Snyk에서 이 취약점과 종속성의 다른 취약점은 `package.json` 파일 아래에 표시됩니다. Snyk은 Pull Requests를 통해 수정을 가속화하여 종속성을 취약하지 않은 버전으로 업그레이드합니다.
+In Snyk, this, and other vulnerabilities in our dependencies, are shown under the `package.json` file. Snyk accelerates fixes via Pull Requests to upgrade dependencies to non-vulnerable versions.
 
 {% hint style="info" %}
-Dockerfile은 취약성이 적습니다! Snyk은 변경 후 자동으로 다시 테스트했습니다.
+Notice that the Dockerfile has less vulnerabilities! Snyk auto-retested it after our changes.
 {% endhint %}
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-ossproject.png)
 
-## Snyk UI의 취약점 수정
+## Fix Vulnerabilities from the Snyk UI
 
-### Step 1: 취약점을 더 자세히 탐색 <a href="#step-1-explore-a-vulnerability-in-more-detail" id="step-1-explore-a-vulnerability-in-more-detail"></a>
+### Step 1: Explore a vulnerability in more detail <a href="step-1-explore-a-vulnerability-in-more-detail" id="step-1-explore-a-vulnerability-in-more-detail"></a>
 
-`package.json` 프로젝트를 클릭하고 아래로 스크롤하여 [당사의 독점 우선 순위 점수](https://snyk.io/blog/snyk-priority-score/)에 따라 정렬된 취약점 목록을 확인합니다. 각 취약점에 대해 Snyk은 다음을 표시합니다.
+Click into the `package.json` project, and Scroll down to see the list of vulnerabilities present, ordered by [our proprietary Priority Score](https://snyk.io/blog/snyk-priority-score/). For each Vulnerability, Snyk displays:
 
-* 이를 도입한 모듈과 전이적 종속성의 경우 직접 종속성.
-* 경로 및 제안된 수정 사항, 특정 취약 기능에 대한 세부 정보.
+* The module that introduced it and, in the case of transitive dependencies, its direct dependency,
+* Details on the path and proposed fixes, as well as the specific vulnerable function.
 
-첫 번째 취약성인 지퍼 슬립부터 시작하겠습니다. 순서가 가장 높기 때문입니다. **zip-slip**에 대한 익스플로잇은 패치를 적용하기 전에 사용해 보고 싶은 경우 `exploits` 폴더에서도 사용할 수 있습니다.
+We'll start with the first vulnerability, **zip slip**, since it's ordered the highest. The exploit for zip-slip is also available in the `exploits` folder in case you want to try it out before patching it.
 
 ![](https://gblobscdn.gitbook.com/assets%2F-M3ww0VUnNWDc-FwnwVl%2F-MOHOD925AinvVslRYnk%2F-MOHQWZMgK6Br-LeO6xL%2FSnyk-Vuln.png?alt=media\&token=42d70198-322b-463e-b107-f54c12072ec7)
 
-### Step 2: Snyk에서 Fix Pull Request 생성 <a href="#step-2-create-a-fix-pull-request-in-snyk" id="step-2-create-a-fix-pull-request-in-snyk"></a>
+### Step 2: Create a Fix Pull Request in Snyk <a href="step-2-create-a-fix-pull-request-in-snyk" id="step-2-create-a-fix-pull-request-in-snyk"></a>
 
-수정 사항을 사용할 수 있으므로 Snyk는 Pull Request를 통해 취약한 종속성을 취약하지 않은 버전으로 자동 업그레이드할 수 있습니다. 그렇게 하려면 "Fix this vulnerability"을 클릭하십시오.
+Since a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request. Click on "Fix this vulnerability" to do so.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-fixvuln.png)
 
-다음 화면에서 이 PR로 해결할 문제를 확인할 수 있습니다.
+On the next screen, you'll be able to confirm the issue to fix with this PR.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-fixpropen.png)
 
-좋아 보입니다! 계속해서 PR을 엽니다. 준비가 되면 GitHub의 PR로 이동하여 파일 diff 보기에서 변경 사항을 검토할 수 있습니다:
+Looks good! Go ahead and open the PR. Once it's ready, you'll be taken to the PR in GitHub, where you can review the changes in the file diff view:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-prdiff.png)
 
-이제 PR을 병합하십시오! Snyk로 돌아가서 `package.json` 파일에 High Severity Vulnerability가 1개 적다는 것을 알 수 있습니다.
+Now, go ahead and merge the PR! Back in Snyk, we can appreciate that our `package.json` file has 1 less High Severity Vulnerability.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-postfixpr.png)
 
-zip-slip Exploit을 시도한 경우 코드를 `git pull`하여 GitHub로 로컬 복사본을 최신 상태로 만들고 Exploit을 다시 시도하세요. 더 이상 작동하지 않는다는 것을 알 수 있습니다.
+If you tried the zip-slip exploit, `git pull` the code to bring your local copy up to date with GitHub and try the exploit again. You'll notice it no longer works.
 
-## Snyk으로 로컬에서 취약점 수정
+## Fix Vulnerabilities locally with Snyk
 
-Fix Pull Requests는 개별 취약점을 수정하는 데 유용하며 Snyk는 취약점에 대한 새로운 수정 사항이 게시될 때 [Pull Requests를 자동으로 열 수 있습니다](https://support.snyk.io/hc/en-us/articles/360006581898-Upgrading-dependencies-with-automatic-PRs). 취약점을 수동으로 수정할 수도 있습니다.
+Fix Pull Requests are great for fixing individual vulnerabilities, and Snyk can [automatically open Pull Requests](https://support.snyk.io/hc/en-us/articles/360006581898-Upgrading-dependencies-with-automatic-PRs) when new fixes to vulnerabilities are published. You can also fix vulnerabilities manually.
 
-위에서 설명한 `st` 패키지 익스플로잇을 사용합니다. Snyk의 문제 목록을 살펴보고 `Directory Traversal` 취약점을 찾습니다. `st`를 버전 `0.2.5`로 업데이트하면 이 문제가 해결됩니다.
+Using the `st` package exploit demonstrated above. Find the `Directory Traversal` vulnerability by looking through the list of issues in Snyk. See that updating `st` to version `0.2.5` fixes this issue.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-fixstvuln.png)
 
-package.json 파일에서 이 변경을 수행하십시오.
+Make this change in your package.json file.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/st-fixvuln.png)
 
-이를 악용할 수 없도록 컨테이너를 다시 빌드하고 Kubernetes에 재배포합니다.
+To ensure this isn't exploitable, re-build and re-deploy the container to Kubernetes.
 
 ```
 # Build the new image
@@ -107,17 +109,15 @@ kubectl scale deployment goof --replicas=0
 kubectl scale deployment goof --replicas=1
 ```
 
-이제 Exploit을 다시 시도하십시오. 그것은 훌륭하게 실패해야합니다.
+Now try the exploit again. It should fail spectacularly.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/post-stfix.png)
 
-## 선택 사항: 학습한 내용을 사용하여 모든 취약성을 수정합니다.
+## Optional: Use what you learned to fix all vulnerabilities
 
-Fix Pull Requests를 사용하거나 Snyk의 정보를 사용하여 패키지 관리자 매니페스트를 수정하고 수정 사항이 있는 High Severity Vulnerabilities를 제거할 때까지 취약성을 계속 수정하십시오.
+Either with Fix Pull Requests, or using the information in Snyk to modify your package manager manifest, continue fixing vulnerabilities until you've knocked out the High Severity Vulnerabilities that have a fix available. Some additional resources that can help:
 
-도움이 될 수 있는 몇 가지 추가 리소스:
+* Snyk IDE Plugins: If you're using JetBrains IDEs, Eclipse, or VS Code, check out [our plugins](https://support.snyk.io/hc/en-us/sections/360001138118-IDE-tools) that show vulnerability and fix information right within the IDE.&#x20;
+* For Node applications, like this one, check out [Snyk Wizard](https://support.snyk.io/hc/en-us/articles/360003851357-Manage-vulnerability-results-with-the-Snyk-CLI-wizard)!&#x20;
 
-* Snyk IDE Plugins: JetBrains IDE, Eclipse 또는 VS Code를 사용하는 경우 IDE 내에서 바로 취약성을 표시하고 정보를 수정하는 [플러그인](https://support.snyk.io/hc/en-us/sections/360001138118-IDE-tools)을 확인하세요.
-* 이와 같은 노드 응용 프로그램의 경우 [Snyk Wizard](https://support.snyk.io/hc/en-us/articles/360003851357-Manage-vulnerability-results-with-the-Snyk-CLI-wizard)를 확인하십시오!
-
-준비가 되면 다음 섹션으로 계속 진행하여 애플리케이션을 배포하는 Kubernetes 매니페스트의 구성 문제를 수정하는 방법을 알아보세요!
+Once you're ready, continue on to the next section to learn how to fix configuration issues in the Kubernetes manifests that deploy the application!

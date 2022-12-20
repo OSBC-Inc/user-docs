@@ -88,6 +88,4 @@ kubectl create -f goof-deployment.yaml,goof-mongo-deployment.yaml
 
 제대로 회전하면 [http://localhost:3001](http://localhost:3001/)로 이동하여 앱을 테스트합니다. 작동하는지 확인한 후 변경 사항을 GitHub에 Commit하십시오! Snyk은 파일을 다시 테스트하고 업데이트된 Issue 수를 표시합니다.
 
-You reached the end! We hope you enjoyed it. Check out [Recap and Next Steps](recap-and-next-steps.md) for extra resources.
-
-학습이 끝났습니다! 이 학습이 즐거웠기를 바랍니다. 추가 리소스는 [요약 및 다음 단계](recap-and-next-steps.md)를 확인하십시오.
+실습이 끝났습니다! 이 실습이 즐거웠기를 바랍니다. 추가 리소스는 [요약 및 다음 단계](recap-and-next-steps.md)를 확인하십시오.
