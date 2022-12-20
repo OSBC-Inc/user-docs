@@ -659,7 +659,7 @@
     * [CI/CD 결과 검토](tutorials/springone-workshop/ci-cd-pipeline/review-snyk-scan-results.md)
   * [SCA (Snyk Open-Source)](tutorials/springone-workshop/snyk-oss-for-developers/README.md)
     * [SPC를 Snyk UI로 가져오기](tutorials/springone-workshop/snyk-oss-for-developers/import-spc-into-snyk-ui.md)
-    * [Review Project Issues](tutorials/springone-workshop/snyk-oss-for-developers/review-project-issues.md)
+    * [프로젝트 Issue 검토](tutorials/springone-workshop/snyk-oss-for-developers/review-project-issues.md)
     * [Review Project Dependency Tree](tutorials/springone-workshop/snyk-oss-for-developers/review-dependency-tree.md)
     * [Project fix advice](tutorials/springone-workshop/snyk-oss-for-developers/project-remediation-advice.md)
     * [Snyk checks in GitHub](tutorials/springone-workshop/snyk-oss-for-developers/snyk-testing.md)
