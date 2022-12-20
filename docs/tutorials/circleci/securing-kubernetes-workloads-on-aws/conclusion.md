@@ -1,8 +1,7 @@
-# Conclusion
+# 결론
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/logo-solid-background.png)
 
-In these exercises, you were able to take advantage of CircleCI to quickly take a sample application and deploy this to the AWS Cloud. You also leveraged various Snyk integrations to monitor various stages of your development workflow. Lastly, you were guided on examples of how vulnerabilities in your application could be exploited by potential bad actors and the negative impact these could have.
+이 연습에서는 CircleCI를 활용하여 샘플 애플리케이션을 신속하게 가져와 이를 AWS 클라우드에 배포할 수 있었습니다. 또한 다양한 Snyk 통합을 활용하여 개발 워크플로의 다양한 단계를 모니터링했습니다. 마지막으로 잠재적인 악의적 행위자가 애플리케이션의 취약점을 악용할 수 있는 방법과 이러한 취약점이 미칠 수 있는 부정적인 영향에 대한 예를 안내받았습니다.
 
-You are encouraged to learn more on how to fix these by reviewing the additional learning modules below:
-
+아래의 추가 학습 모듈을 검토하여 이러한 문제를 해결하는 방법에 대해 자세히 알아보는 것이 좋습니다:
