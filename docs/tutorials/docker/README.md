@@ -28,8 +28,8 @@ Snyk UI 내에서 Docker Hub를 연결하여 컨테이너 이미지를 Snyk 프�
 
 ## Docker와의 파트너십에 대해 자세히 알아보십시오.
 
-* [Snyk Blog: Integrated Security Scanning by Snyk in Docker Hub](https://snyk.io/blog/integrated-docker-security-scanning-by-snyk-in-docker-hub/)
-* [Snyk Blog: Docker Partnership Announcement](https://snyk.io/blog/snyk-docker-secure-containerized-applications/)
-* [Docker Docs: Vulnerability Scanning for Docker local images](https://docs.docker.com/engine/scan/)
-* [Snyk Blog: Container image security scanning directly from Docker Desktop](https://snyk.io/blog/snyk-container-image-security-scanning-directly-from-docker-desktop/)
-* [Docker Blog: Shift Vulnerability Scanning Left in Docker Desktop](https://www.docker.com/blog/secure-from-the-start-shift-vulnerability-scanning-left-in-docker-desktop/)
+* [Snyk Blog: Docker Hub에서 Snyk의 통합 보안 스캐닝](https://snyk.io/blog/integrated-docker-security-scanning-by-snyk-in-docker-hub/)
+* [Snyk Blog: Docker 파트너십 발표](https://snyk.io/blog/snyk-docker-secure-containerized-applications/)
+* [Docker Docs: Docker 로컬 이미지에 대한 취약성 검색](https://docs.docker.com/engine/scan/)
+* [Snyk Blog: Docker Desktop에서 직접 컨테이너 이미지 보안 스캐닝](https://snyk.io/blog/snyk-container-image-security-scanning-directly-from-docker-desktop/)
+* [Docker Blog: Docker Desktop에서 왼쪽으로 취약점 스캔 이동](https://www.docker.com/blog/secure-from-the-start-shift-vulnerability-scanning-left-in-docker-desktop/)
