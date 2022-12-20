@@ -22,27 +22,27 @@ Reminder: 프로젝트 속성에 할당된 정책은 CLI에서 snyk 모니터를
 예를 들어 해당 정책과 연결할 속성을 아직 결정하지 않은 경우 속성이 선택되지 않은 정책을 만들고 저장할 수 있습니다. 이 정책은 모든 속성이 비어 있는 프로젝트에는 적용되지 않습니다.
 {% endhint %}
 
-## Matching projects and policies
+## 프로젝트 및 정책 일치
 
-To be associated with a policy, a project must have all the attributes listed on the policy (the project could also have more attributes that are not listed on the policy).
+정책과 연결하려면 프로젝트에 정책에 나열된 모든 속성이 있어야 합니다(프로젝트에는 정책에 나열되지 않은 속성이 더 있을 수도 있음).
 
-For example, if you have a policy assigned to `Critical`, `External`, and `Frontend`, this policy applies to projects which includes those same attributes, but not to a project with the attributes `Critical` and `External`.\
-Here is our sample policy:
+예를 들어 `Critical`, `External` 및 `Frontend`에 할당된 정책이 있는 경우 이 정책은 동일한 속성을 포함하는 프로젝트에 적용되지만 `Critical` 및 `External` 속성이 있는 프로젝트에는 적용되지 않습니다.\
+샘플 정책은 다음과 같습니다:
 
 ![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_11.54.33\_am.png)
 
-Here is a project that will inherit the policy:
+정책을 상속할 프로젝트는 다음과 같습니다:
 
 ![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_12.26.02\_pm.png)
 
-Here is a project that will not inherit the policy:
+정책을 상속하지 않을 프로젝트는 다음과 같습니다:
 
 ![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_12.29.03\_pm.png)
 
-## Applying multiple policies to a project
+## 프로젝트에 여러 정책 적용
 
-It is possible that more than one policy can be apply for a project. For example, if you have a policy assigned to `Critical` and `External` and another policy assigned to `Critical` and `Production`. If you have a project that has the attributes `Critical`, `External` and `Production`, it could apply to either of these policies!
+프로젝트에 둘 이상의 정책을 적용할 수 있습니다. 예를 들어 `Critical`와 `External`에 할당된 정책이 있고 `Critical`와 `Production`에 할당된 다른 정책이 있는 경우 `Critical`, `External` 및 `Production` 속성이 있는 프로젝트가 있는 경우 이러한 정책 중 하나에 적용할 수 있습니다!
 
-If more than one policy can be associated with a project, the order of the policies on the policy manager page determines precedence. The policy closest to the top of the list takes precedence over other applicable policies below it. To change the order of policies, either drag and drop the policies into the right order, or use the **...** button on the right hand side to move the policy up or down in the list.
+둘 이상의 정책을 프로젝트와 연결할 수 있는 경우 정책 관리자 페이지의 정책 순서에 따라 우선 순위가 결정됩니다. 목록의 맨 위에 가장 가까운 정책이 그 아래에 있는 다른 적용 가능한 정책보다 우선합니다. 정책의 순서를 변경하려면 정책을 올바른 순서로 끌어다 놓거나 오른쪽에 있는 ... 버튼을 사용하여 목록에서 정책을 위 또는 아래로 이동하십시오.
 
 ![](../../../.gitbook/assets/screenshot\_2021-03-11\_at\_12.51.25\_pm.png)

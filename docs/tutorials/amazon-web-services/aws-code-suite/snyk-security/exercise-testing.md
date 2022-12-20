@@ -1,26 +1,26 @@
-# Exercise - Testing
+# 연습 - 테스트
 
-In the `Containerize Application` lab you saw how to build your application. In this exercise you will try to run your build, which will fail due to security vulnerabilities being found. While normally done during the code development phase, we will take you through the process of fixing the vulnerability, and then re-running the exercise to see the build succeed.
+`Containerize Application` 랩에서 애플리케이션을 빌드하는 방법을 보았습니다. 이 연습에서는 보안 취약점이 발견되어 실패할 빌드를 실행하려고 합니다. 일반적으로 코드 개발 단계에서 수행되지만 취약성을 수정한 다음 연습을 다시 실행하여 빌드가 성공하는지 확인하는 프로세스를 안내합니다.
 
-_Save changes_:
+변경 사항을 저장:
 
-```text
+```
 git commit -am "snyk"
 ```
 
 _Push_:
 
-```text
+```
 git push -f codecommit master
 ```
 
-Now in `CodeBuild`, look at your **build history**. Note it may take a minute or two for the new scan to run.
+이제 CodeBuild에서 **build history**를 살펴봅니다. 새 스캔이 실행되는 데 1\~2분 정도 걸릴 수 있습니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_4_build.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_4\_build.png)
 
-Let’s look at why this failed. We see security vulnerabilities were found and we’re told **how** to fix it!
+이것이 실패한 이유를 살펴보겠습니다. 보안 취약점이 발견되고 **해결 방법**을 알려드립니다!
 
-```text
+```
 Testing /usr/src/app...
 ✗ Medium severity vulnerability found in org.primefaces:primefaces
 Description: Cross-site Scripting (XSS)
@@ -47,4 +47,3 @@ The command '/bin/sh -c ./snyk test' returned a non-zero code: 1
 [Container] 2018/11/09 03:46:22 Phase complete: BUILD Success: false
 [Container] 2018/11/09 03:46:22 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: docker build --build-arg snyk_auth_token=$SNYK_AUTH_TOKEN -t $REPOSITORY_URI:latest .. Reason: exit status 1
 ```
-

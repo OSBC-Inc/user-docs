@@ -1,33 +1,32 @@
-# Shared Policies Overview
+# 공유 정책 개요
 
-**Prerequisites**
+**전제 조건**
 
-You must be a group administrator of the group in order to update **Policy** settings
+**정책** 설정을 업데이트하려면 그룹의 그룹 관리자여야 합니다.
 
 {% hint style="info" %}
-**Feature availability**  
-This feature is available to Enterprise customers. See [pricing plans](https://snyk.io/plans/) for more details.
+**기능 가용성**
+
+이 기능은 Enterprise 고객이 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
 {% endhint %}
 
-## Navigate to the Policy manager
+## 정책 관리자로 이동
 
-1. Log in to Snyk 
-2. Navigate to your group
-3. Click on the Policies tab in the navigation bar to see all the policies that exist within your group, broken out by category. This list will include the [default policy](shared-policies-overview.md#default-policies), which is automatically created for new groups for each policy category and cannot be removed.
+1. 그룹으로 이동
+2. 탐색 모음에서 정책 탭을 클릭하면 그룹 내에 있는 모든 정책이 범주별로 분류되어 표시됩니다. 이 목록에는 각 정책 범주의 새 그룹에 대해 자동으로 생성되고 제거할 수 없는 [기본 정책](shared-policies-overview.md#undefined-1)이 포함됩니다.
 
-![](../../../.gitbook/assets/screen_shot_2021-08-11_at_2.15.48_pm.png)
+![](../../../.gitbook/assets/screen\_shot\_2021-08-11\_at\_2.15.48\_pm.png)
 
-The Policy manager appears similar to the following:
+정책 관리자는 다음과 유사하게 나타납니다:
 
-![](../../../.gitbook/assets/screenshot_2021-03-26_at_11.04.50_am.png)
+![](../../../.gitbook/assets/screenshot\_2021-03-26\_at\_11.04.50\_am.png)
 
-## Default policies
+## 기본 정책
 
-Each policy category has its own default policy. Default policies can only be applied to organizations, not project attributes.
+각 정책 범주에는 고유한 기본 정책이 있습니다. 기본 정책은 프로젝트 속성이 아닌 조직에만 적용할 수 있습니다.
 
-When you create a **new** **organization**, it will automatically be added to the default policy, unless you have selected to copy an existing organization's settings. Organizations can be moved to a different policy if desired.
+**새 조직**을 만들면 기존 조직의 설정을 복사하도록 선택하지 않는 한 자동으로 기본 정책에 추가됩니다. 원하는 경우 조직을 다른 정책으로 이동할 수 있습니다.
 
-The default policy cannot be deleted; however, the default policy name, description, and the rules can be edited to match your preferences. A default policy can also contain no rules if you'd prefer.
+기본 정책은 삭제할 수 없습니다. 그러나 기본 정책 이름, 설명 및 규칙은 기본 설정에 맞게 편집할 수 있습니다. 원하는 경우 기본 정책에 규칙이 포함될 수도 있습니다.
 
-To learn more about how to add and remove organizations to the default policy, read more about it [here](https://docs.snyk.io/fixing-and-prioritizing-issues/policies/assign-a-policy-to-organizations).
-
+기본 정책에 조직을 추가 및 제거하는 방법에 대해 자세히 알아보려면 [여기](assign-a-policy-to-organizations.md)에서 자세히 읽어보세요.

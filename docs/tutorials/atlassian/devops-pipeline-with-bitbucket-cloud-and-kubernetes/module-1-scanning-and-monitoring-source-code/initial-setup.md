@@ -1,16 +1,16 @@
-# Initial Setup
+# 초기 설정
 
-You'll need accounts on Atlassian Bitbucket Cloud and Snyk to do this workshop.
+이 워크샵을 수행하려면 Atlassian Bitbucket Cloud 및 Snyk에 대한 계정이 필요합니다.
 
-We'll start with the Atlassian Bitbucket Account.  Please see our [documentation ](../../../getting-started/atlassian-integrations/atlassian-bitbucket-account.md)to get a trial account if you don't already have one.  Otherwise, you can use an existing account.  In addition to having a Bitbucket account, you need permissions to perform these tasks in Bitbucket:
+Atlassian Bitbucket 계정부터 시작하겠습니다. 평가판 계정이 아직 없는 경우 설명서를 참조하여 평가판 계정을 만드십시오. 그렇지 않으면 기존 계정을 사용할 수 있습니다. Bitbucket 계정이 있는 것 외에도 Bitbucket에서 다음 작업을 수행할 수 있는 권한이 필요합니다.
 
-* Enable App Passwords
-* Add/Import a repository
-* Enable Pipelines
-* Add Repository variables
+* 앱 비밀번호 활성화
+* 저장소 추가/가져오기
+* Pipelines 활성화
+* 저장소 변수 추가
 
-Next, you will need a Snyk account on snyk.io.  The [Snyk documentation](../../../getting-started/snyk-integrations/snyk-account.md) describes how you can get an account on the free tier.  Module 1 works with the free tier.
+다음으로 snyk.io에서 Snyk 계정이 필요합니다. Snyk 설명서는 프리 티어에서 계정을 얻는 방법을 설명합니다. 모듈 1은 프리 티어에서 작동합니다.
 
-The permissions you need in your Snyk account are to import a repository.
+Snyk 계정에 필요한 권한은 저장소를 가져오는 것입니다.
 
-Once you have these two accounts, we can move onto importing a sample repository.
+이 두 계정이 있으면 샘플 저장소 가져오기로 이동할 수 있습니다.

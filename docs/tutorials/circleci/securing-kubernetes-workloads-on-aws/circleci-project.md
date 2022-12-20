@@ -1,24 +1,24 @@
 # CircleCI Project
 
-Let's quickly review the preceding steps. If you skipped or missed any of these, you will want to go back and make sure you've completed them:
+이전 단계를 빠르게 검토해 보겠습니다. 이 중 하나라도 건너뛰거나 놓친 경우 돌아가서 완료했는지 확인하고 싶을 것입니다:
 
-1. A valid Snyk, CircleCI, and AWS account
-2. An Amazon EKS cluster provisioned
-3. A `fork` or `clone` of the GitHub repository
+1. 유효한 Snyk, CircleCI 및 AWS 계정
+2. 프로비저닝된 Amazon EKS 클러스터
+3. GitHub 리포지토리의 `fork` 또는 `clone`
 
-## Setting up CircleCI
+## CircleCI 설정하기
 
-If this is your first time using CircleCI, I recommend reviewing the [step-by-step instructions](https://circleci.com/docs/2.0/getting-started/#setting-up-circleci) on setting up your project. You will need to navigate to the CircleCI [Project Page](https://app.circleci.com/projects/) and configure things so that you will automatically trigger a pipeline run against your Git repo.
+CircleCI를 처음 사용하는 경우 프로젝트 설정에 대한 [단계별 지침](https://circleci.com/docs/2.0/getting-started/#setting-up-circleci)을 검토하는 것이 좋습니다. CircleCI [프로젝트 페이지](https://app.circleci.com/projects/)로 이동하여 Git 저장소에 대해 파이프라인 실행을 자동으로 트리거하도록 구성해야 합니다.
 
-Once configured, subsequent `commits` or `pull requests` will trigger runs as shown in the examples below:
+일단 구성되면 후속 `commits` 또는 `pull requests` 가아래 예와 같이 실행을 트리거합니다.
 
-### Using git push
+### git push 사용
 
 ```bash
 git push --force-with-lease origin develop
 ```
 
-```text
+```
 Enumerating objects: 9, done.
 Counting objects: 100% (9/9), done.
 Delta compression using up to 16 threads
@@ -30,11 +30,10 @@ To github.com:snyk-partners/snyk-circleci-eks.git
    4a09bea..9025276  develop -> develop
 ```
 
-### Pipeline is triggered
+### 파이프라인이 트리거됨
 
-![](http://g.recordit.co/PgPkhEpdy1.gif)
+![](../../../.gitbook/assets/PgPkhEpdy1.gif)
 
-### Pipeline success
+### 파이프라인 성공
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/circleci_success.png)
-
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/circleci\_success.png)

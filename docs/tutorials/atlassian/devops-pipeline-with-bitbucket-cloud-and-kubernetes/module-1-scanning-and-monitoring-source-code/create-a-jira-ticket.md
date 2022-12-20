@@ -1,19 +1,19 @@
-# Create a Jira Ticket
+# Jira 티켓 생성
 
-When your team uses Jira tickets to plan and manage your workloads, the Snyk integration into Atlassian Jira is useful. The Snyk integration simplifies your workload by providing most of the information you need to create issues for your team. This is especially helpful when you need to work through processes to setup and configure issues before planning and scoping the work.
+팀에서 Jira 티켓을 사용하여 워크로드를 계획하고 관리하는 경우 Atlassian Jira에 Snyk 통합이 유용합니다. Snyk 통합은 팀에 문제를 생성하는 데 필요한 대부분의 정보를 제공하여 워크로드를 단순화합니다. 이는 작업을 계획하고 범위를 지정하기 전에 문제를 설정 및 구성하는 프로세스를 통해 작업해야 할 때 특히 유용합니다.
 
-Be sure to follow the instructions outlined in [atlassian-jira.md](../../../getting-started/atlassian-integrations/atlassian-jira.md "mention") to setup and configure Jira.
+[atlassian-jira.md](../../../getting-started/atlassian-integrations/atlassian-jira.md "mention") 에 요약된 지침에 따라 Jira를 설정하고 구성해야 합니다.
 
-Navigate to one of the vulnerabilities in your project and examine its contents. The Snyk database is frequently updated, and your results may reflect a different count or severity from the time this workshop was created. We'll pick the first vulnerability for review and click on the Create a Jira Issue button.
+프로젝트의 취약점 중 하나로 이동하여 해당 콘텐츠를 검사합니다. Snyk 데이터베이스는 자주 업데이트되며 결과는 이 워크샵이 생성된 시점과 다른 개수 또는 심각도를 반영할 수 있습니다. 검토할 첫 번째 취약점을 선택하고 Jira 문제 생성 버튼을 클릭합니다.
 
 ![](<../../../../.gitbook/assets/image (68).png>)
 
-Clicking on the button takes you to a screen with most content already filled in. This makes it easier for you to quickly add an issue. The integration uses your permissions to look up Jira projects and users to assign tickets. This lookup depends on your permissions and Snyk will only present projects you are entitled to see. The next screenshot shows some of of the fields selected for the **Project**, **Issue Type**, **Reporter**, and **Assignee**.
+버튼을 클릭하면 대부분의 콘텐츠가 이미 채워진 화면으로 이동합니다. 이렇게 하면 문제를 빠르게 추가할 수 있습니다. 통합에서는 권한을 사용하여 Jira 프로젝트 및 사용자를 조회하여 티켓을 할당합니다. 이 조회는 사용자의 권한에 따라 다르며 Snyk는 사용자가 볼 수 있는 프로젝트만 표시합니다. 다음 스크린샷은 **프로젝트**, **문제 유형**, **보고자** 및 **양수인**에 대해 선택된 필드 중 일부를 보여줍니다.
 
 ![](<../../../../.gitbook/assets/image (90) (1).png>)
 
-Once you create your ticket, the Jira Integration adds a link to the issue in-line to help your team more easily see the status of the vulnerability as being tracked in Jira.
+티켓을 생성하면 Jira 통합이 문제에 대한 링크를 인라인으로 추가하여 팀이 Jira에서 추적 중인 취약점의 상태를 더 쉽게 볼 수 있도록 합니다.
 
 ![](<../../../../.gitbook/assets/image (79) (1).png>)
 
-Now that you've created your Jira issue, your team can plan and prioritize the work per your own processes. The ticket preserves details from the original ticket, including important links to external databases and details about the code.
+이제 Jira Issue를 만들었으므로 팀에서 자체 프로세스에 따라 작업을 계획하고 우선 순위를 지정할 수 있습니다. 티켓은 외부 데이터베이스에 대한 중요한 링크와 코드에 대한 세부 정보를 포함하여 원래 티켓의 세부 정보를 유지합니다.

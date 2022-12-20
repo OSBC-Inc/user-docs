@@ -1,45 +1,45 @@
-# Fixed in version vs. fixable attribute in vulnerabilities
+# 버전에서 수정됨 vs. 취약점의 수정 가능한 속성
 
-### A fixed vulnerability
+### 수정된 취약점
 
-Will not show up in a project vulnerability list as it is no longer considered a vulnerability.
+더 이상 취약점으로 간주되지 않으므로 프로젝트 취약점 목록에 표시되지 않습니다.
 
-### Fixed in version
+### 버전에서 수정됨
 
-This shows the version of the package that no longer has the vulnerability.
+이것은 더 이상 취약점이 없는 패키지의 버전을 보여줍니다.
 
 ![](../../../.gitbook/assets/fix-desc-1.png)
 
-Compare the fixed in vulnerability card above to one where no fix is available.
+위의 취약점 카드에서 수정된 사항을 수정 사항이 없는 카드와 비교하십시오.
 
 ![](../../../.gitbook/assets/fix-desc-2.png.png)
 
-### Fixable
+### 수정 가능
 
-A fixable vulnerability means there is a route within the project that would bring in the secure version rather than the vulnerable version.
+수정 가능한 취약점은 프로젝트 내에 취약한 버전이 아닌 보안 버전을 가져올 경로가 있음을 의미합니다.
 
-This means that a vulnerability can be both fixable and have a fixed in option. If it was fixed, it would not appear in the project list of vulnerabilities as it would then be considered secure.
+이는 취약점이 수정 가능하고 고정 옵션이 있을 수 있음을 의미합니다. 수정된 경우 보안으로 간주되므로 프로젝트 취약점 목록에 나타나지 않습니다.
 
-The easiest way to tell if a vulnerability is fixable in the Snyk app is to look for the "fix this vulnerability" call to action button on the vulnerability card.
+Snyk 앱에서 취약점이 수정 가능한지 확인하는 가장 쉬운 방법은 취약점 카드에서 "fix this vulnerability" 클릭 유도문안 버튼을 찾는 것입니다.
 
 ![](../../../.gitbook/assets/fix-desc-3.png.png)
 
-### Fixed in showing when issue is not fixable
+### 문제를 해결할 수 없는 경우 표시되는 문제 수정
 
-The difference here is whether it's looking at direct or transitive dependencies. For direct dependencies, this would mean that fixable is true if a fixed (or secure) version of the package exists anywhere in the system. However, this is not the case for transitive dependencies as they require a direct dependency that can be updated to the fixed (or secure) version of the transitive dependency.
+여기서 차이점은 직접 또는 전이 종속성을 보고 있는지 여부입니다. 직접적인 종속성의 경우 이는 수정된(또는 안전한) 패키지 버전이 시스템의 어느 곳에나 존재하는 경우 수정 가능이 true임을 의미합니다. 그러나 전이적 종속성의 수정된(또는 안전한) 버전으로 업데이트할 수 있는 직접 종속성이 필요하므로 전이적 종속성의 경우는 그렇지 않습니다.
 
 ![](../../../.gitbook/assets/fix-desc-4.png.png)
 
-The above is an example of a transitive dependency. The detailed paths section (blue outline in image above) shows that no fix path is available; however, it does show that the vulnerability is fixed in the more recent version unlike the no fix available status seen above. This means that Snyk doesn't have the ability to reach to the level that the vulnerability actually exists in this specific project.
+위는 전이 종속성의 예입니다. 자세한 경로 섹션(위 이미지의 파란색 윤곽선)은 사용 가능한 수정 경로가 없음을 보여줍니다. 그러나 위에서 볼 수 있는 수정 불가 상태와 달리 최신 버전에서 취약점이 수정되었음을 보여줍니다. 이것은 Snyk이 이 특정 프로젝트에 취약점이 실제로 존재하는 수준에 도달할 능력이 없음을 의미합니다.
 
-To fix a transitive dependency such as this, click on the Vulnerability DB link (screenshot below) and look at the section giving fix advice for more information.
+이와 같은 전이적 종속성을 수정하려면 Vulnerability DB 링크(아래 스크린샷)를 클릭하고 수정 조언을 제공하는 섹션에서 자세한 정보를 확인하십시오.
 
 ![](../../../.gitbook/assets/fix-desc-5.png)
 
-Vulnerability DB: [https://app.snyk.io/vuln/](https://app.snyk.io/vuln/)
+취약점 DB: [https://app.snyk.io/vuln/](https://app.snyk.io/vuln/)
 
 ![](../../../.gitbook/assets/fix-desc-6.png)
 
-### Glossary
+### 용어 사전
 
-Be sure to take a look at [Snyk's Glossary of terms](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary) to get definitions of Snyk-specific terminology.
+Snyk 관련 용어의 정의를 얻으려면 [Snyk의 용어사전](https://support.snyk.io/hc/en-us/articles/360017682058-Snyk-Glossary)을 살펴보십시오.

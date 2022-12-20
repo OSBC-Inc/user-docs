@@ -1,20 +1,18 @@
-# Security policies: Conditions
+# 보안 정책: 조건
 
-A condition is the variable to set a rule on. After you select a condition category, you are prompted to select Includes or Does not include and the desired condition \(for example: Mature, CWE-1234\).  
-These are the conditions that can currently be applied:
+조건은 규칙을 설정할 변수입니다. 조건 범주를 선택한 후 포함 또는 포함하지 않음을 선택하고 원하는 조건(예: Mature, CWE-1234)을 선택하라는 메시지가 표시됩니다. 현재 적용할 수 있는 조건은 다음과 같습니다.
 
-**Exploit maturity**
+**Exploit Maturity**
 
 **CWE**
 
-After you select a condition category, you are prompted to select **Includes** or **Does not include** and the desired condition \(for example: Mature, CWE-1234\).
+조건 범주를 선택한 후 **포함** 또는 **포함하지 않음**을 선택하고 원하는 조건(예: 성숙, CWE-1234)을 선택하라는 메시지가 표시됩니다.
 
-You can stack multiple conditions in the same rule using the **AND** function.
+**AND** 함수를 사용하여 동일한 규칙에 여러 조건을 쌓을 수 있습니다.
 
-| **Condition Category** | **Condition Variables/Definitions** |
-| :--- | :--- |
-| Exploit Maturity | Matches all issues that contain a specified Exploit maturity value. When multiple values are selected, it will apply to all issues containing any of these values. Values include Mature, Proof of Concept, No known exploit, and No data available. |
-| CWE | Matches all issues that contain a specified CWE. Supports multiple CWEs. |
-| CVE | Matches all issues that contain a specified CVE. Supports multiple CVEs. |
-| Snyk ID | Matches all issues that contain a specified Snyk ID. Supports multiple Snyk IDs. Not every issue has a CVE, so this is a good way of being able to specify those. |
-
+| **조건 범주**        | **조건 변수/정의**                                                                                                            |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Exploit Maturity | 지정된 익스플로잇 성숙도 값이 포함된 모든 문제와 일치합니다. 여러 값을 선택하면 이러한 값이 포함된 모든 문제에 적용됩니다. 값에는 성숙, 개념 증명, 알려진 악용 없음 및 사용 가능한 데이터 없음이 포함됩니다. |
+| CWE              | 지정된 CWE가 포함된 모든 문제와 일치합니다. 여러 CWE를 지원합니다.                                                                               |
+| CVE              | 지정된 CVE를 포함하는 모든 문제와 일치합니다. 여러 CVE를 지원합니다.                                                                              |
+| Snyk ID          | 지정된 Snyk ID가 포함된 모든 문제와 일치합니다. 여러 Snyk ID를 지원합니다. 모든 문제에 CVE가 있는 것은 아니므로 CVE를 지정하는 좋은 방법입니다.                            |

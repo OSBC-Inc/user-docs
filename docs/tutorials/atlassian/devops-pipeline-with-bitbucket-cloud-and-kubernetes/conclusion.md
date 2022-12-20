@@ -1,27 +1,27 @@
-# Conclusion
+# 결론
 
-**S** o **N** ow **Y** ou **K** now that finding potential vulnerabilities in your applications is not something to dread. You have the tools at your disposal. You have the _know how_! It's time to take _ownership_ and seamlessly integrate **security** into your workflows without compromising efficiency or disrupting your ability to deliver.
+**S** o **N** ow **Y** ou **K** now 이제 애플리케이션에서 잠재적인 취약점을 찾는 것이 두려운 일이 아니라는 것을 알았습니다. 당신은 당신의 처분에 도구가 있습니다. 당신은 방법을 알고 있습니다! 효율성을 떨어뜨리거나 제공 능력을 방해하지 않으면서 주인의식을 갖고 보안을 워크플로에 원활하게 통합해야 할 때입니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-conclusion.png)
 
-On behalf of team Snyk, Atlassian, and AWS... **THANK YOU** for taking the time to complete this _virtual_ workshop!
+Snyk, Atlassian 및 AWS 팀을 대신하여... 시간을 내어 이 가상 워크숍을 완료해 주셔서 **감사합니다!**
 
-## Let's quickly recap what you've learned
+## 배운 내용을 빠르게 요약해 보겠습니다.
 
-1. Integrating Snyk with&#x20;
+1. Snyk과 통합
    1. Bitbucket Cloud
    2. Jira
    3. Bitbucket Pipelines
    4. AWS ECR
    5. AWS EKS
-2. Finding and fixing vulnerabilities in open source dependencies in your code
-3. Creating a Jira Ticket
-4. Creating a Bitbucket Pull Request
-5. Building a secure CI/CD pipeline with Bitbucket Pipelines and Snyk Pipe
-6. Scanning container images and applying base image upgrade recommendations
-7. Integrating Snyk with Amazon ECR to continuously monitor images
-8. Deploy a container into an EKS cluster
-9. Exploit a vulnerable container image
-10. Patch the container image to fix the vulnerability
+2. 코드의 오픈 소스 종속성에서 취약점 찾기 및 수정
+3. Jira 티켓 생성
+4. Bitbucket Pull Request 생성
+5. Bitbucket Pipelines 및 Snyk Pipe로 보안 CI/CD 파이프라인 구축
+6. 컨테이너 이미지 스캔 및 기본 이미지 업그레이드 권장 사항 적용
+7. Snyk을 Amazon ECR과 통합하여 이미지를 지속적으로 모니터링
+8. EKS 클러스터에 컨테이너 배포
+9. 취약한 컨테이너 이미지 악용
+10. 취약점을 수정하기 위해 컨테이너 이미지 패치
 
 **Fantastic and Congratulations!**

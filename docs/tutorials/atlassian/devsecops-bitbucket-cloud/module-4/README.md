@@ -6,21 +6,20 @@ weight: 60
 
 # Module 4
 
-## Background
+## 배경
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-bitbucket-flow-module-04.png)
 
-Now it's time to put what we have learned in the previous modules to practice. We will go through three steps that will focus on fixing issues in your application source, container image, and Kubernetes configuration.
+이제 이전 모듈에서 배운 내용을 실습에 적용할 시간입니다. 애플리케이션 소스, 컨테이너 이미지 및 Kubernetes 구성의 문제를 해결하는 데 중점을 둔 세 단계를 거칩니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/kubernetes-02.png)
 
-## Learning objective
+## 학습 목표
 
-In this module, you will leverage Snyk to:
+이 모듈에서는 Snyk을 활용하여 다음을 수행합니다.
 
-1. Submit a **fix pull request** for the vulnerabilities in your application dependencies
-2. Apply **base image upgrade** recommendations to your container image
-3. Define **security context** in your Kubernetes manifest
+1. 애플리케이션 종속성의 취약성에 대한 **수정 풀 요청** 제출
+2. 컨테이너 이미지에 **기본 이미지 업그레이드** 권장 사항 적용
+3. Kubernetes 매니페스트에서 **보안 컨텍스트** 정의
 
-## Let's get started!
-
+## 시작하겠습니다!

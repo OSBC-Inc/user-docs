@@ -6,35 +6,34 @@ weight: 40
 
 # Module 2
 
-## Container security\*
+## Container 보안
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-bitbucket-flow-module-02.png)
 
-By 2022, more than [75% of global organizations](https://snyk.io/blog/putting-container-security-in-the-hands-of-developers/) will be running containerized applications in production \(Gartner\). Alongside the widespread adoption, there has been a surge in container vulnerabilities, with a 4X increase in reported operating system vulnerabilities in 2018. And yet [80% of developers say they don’t test their container images](https://snyk.io/blog/shifting-docker-security-left/) during development – it’s either not their responsibility, or they are accustomed to someone down the road catching the issues – which makes scaling [container security](https://snyk.io/container-security/) a challenge for fast-growing businesses.
+2022년까지 [전 세계 조직의 75%](https://snyk.io/blog/putting-container-security-in-the-hands-of-developers/) 이상이 프로덕션에서 컨테이너화된 애플리케이션을 실행할 것입니다(Gartner). 광범위한 채택과 함께 2018년에 보고된 운영 체제 취약성이 4배 증가하면서 컨테이너 취약성이 급증했습니다. 하지만 [개발자의 80%는 개발 중에 컨테이너 이미지를 테스트하지 않는다](https://snyk.io/blog/shifting-docker-security-left/)고 말합니다. 또는 그들은 문제를 파악하는 길을 가는 누군가에게 익숙합니다. 즉, 빠르게 성장하는 비즈니스에서 [컨테이너 보안](https://snyk.io/container-security/)을 확장하는 것은 어려운 일입니다.
 
-## Learning objective
+## 학습 목표
 
-In this module we will learn how to [secure your build workflow](https://snyk.io/blog/secure-your-build-workflow-on-bitbucket-pipes-with-snyk/) on Bitbucket Pipes with Snyk. Scanning and analyzing your Linux-based container project for known vulnerabilities is an important step in securing your environment by helping you identify and mitigate security vulnerabilities. The exercises in this module will help [secure your container](https://support.snyk.io/hc/en-us/articles/360003946897-Container-security-overview) by leveraging the Snyk Pipe for Bitbucket pipelines to scan the base image for its dependencies including:
+이 모듈에서는 Snyk를 사용하여 Bitbucket Pipes에서 [빌드 워크플로를 보호](https://snyk.io/blog/secure-your-build-workflow-on-bitbucket-pipes-with-snyk/)하는 방법을 배웁니다. 알려진 취약성에 대해 Linux 기반 컨테이너 프로젝트를 스캔하고 분석하는 것은 보안 취약성을 식별하고 완화하는 데 도움을 주어 환경을 보호하는 중요한 단계입니다. 이 모듈의 연습은 Bitbucket 파이프라인용 Snyk 파이프를 활용하여 기본 이미지에서 다음과 같은 종속성을 스캔하여 [컨테이너를 보호](https://support.snyk.io/hc/en-us/articles/360003946897-Container-security-overview)하는 데 도움이 됩니다.
 
-* The operating system \(OS\) packages installed and managed by the package manager
-* Key binaries—layers that were not installed through the package manager
+* 패키지 관리자가 설치하고 관리하는 OS(Operating System) 패키지
+* Key Binaries - 패키지 관리자를 통해 설치되지 않은 계층
 
-Based on these results, Snyk will provide fix advice and guidance including:
+이러한 결과를 바탕으로 Snyk은 다음을 포함한 수정 조언 및 지침을 제공합니다.
 
-* Origins of the vulnerabilities in your OS packages and key binaries
-* Base image upgrade details or a recommendation to rebuild the image
-* Dockerfile layer in which the affected package was introduced
-* Fixed-in version of the operating system and key binary packages
+* OS 패키지 및 주요 바이너리의 취약점 원인
+* 기본 이미지 업그레이드 세부 정보 또는 이미지 재구축 권장 사항
+* 영향을 받는 패키지가 도입된 Dockerfile 계층
+* 운영 체제 및 주요 바이너리 패키지의 고정 버전
 
-Lastly, you will enable Snyk's integration for [Amazon Elastic Container Registry \(ECR\)](https://support.snyk.io/hc/en-us/articles/360003916078-Configure-integration-for-Amazon-Elastic-Container-Registry-ECR-) to continuously scan and monitor your container images.
+마지막으로 [ECR(Amazon Elastic Container Registry)](https://support.snyk.io/hc/en-us/articles/360003916078-Configure-integration-for-Amazon-Elastic-Container-Registry-ECR-)에 대한 Snyk의 통합을 활성화하여 컨테이너 이미지를 지속적으로 스캔하고 모니터링합니다.
 
-## Homework: Learn more about Snyk  & Container security
+## 숙제: Snyk 및 컨테이너 보안에 대해 자세히 알아보기
 
-* [Container security throughout the SDLC](https://snyk.io/blog/container-security-throughout-the-sdlc/)
-* [Everything you wanted to know about addressing security vulnerabilities in Linux-based containers](https://snyk.io/blog/everything-you-wanted-to-know-about-addressing-security-vulnerabilities-in-linux-based-containers/)
-* [Protect container images directly from your registries](https://snyk.io/blog/protect-docker-images-directly-from-your-container-registries/)
+* [SDLC 전체의 컨테이너 보안](https://snyk.io/blog/container-security-throughout-the-sdlc/)
+* [Linux 기반 컨테이너의 보안 취약성을 해결하는 방법에 대해 알고 싶었던 모든 것](https://snyk.io/blog/everything-you-wanted-to-know-about-addressing-security-vulnerabilities-in-linux-based-containers/)
+* [레지스트리에서 직접 컨테이너 이미지 보호](https://snyk.io/blog/protect-docker-images-directly-from-your-container-registries/)
 
-**Footnotes:**
+**각주:**
 
-1. **\*Snyk Blog -** [Putting container security in the hands of developers](https://snyk.io/blog/putting-container-security-in-the-hands-of-developers)
-
+1. **\*Snyk Blog -** [개발자에게 컨테이너 보안 제공](https://snyk.io/blog/putting-container-security-in-the-hands-of-developers)

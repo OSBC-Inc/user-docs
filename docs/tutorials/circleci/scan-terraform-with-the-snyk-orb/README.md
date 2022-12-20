@@ -1,50 +1,49 @@
 ---
 description: >-
-  This is an add-on module to the Infrastructure as Code 101 course in CircleCI
-  Academy demonstrating how the Snyk Orb helps you easily scan for
-  misconfigurations in your Terraform files.
+  이것은 Snyk Orb가 Terraform 파일에서 잘못된 구성을 쉽게 스캔하는 데 어떻게 도움이 되는지 보여주는 CircleCI
+  Academy의 코드형 인프라 101 과정에 대한 추가 모듈입니다.
 ---
 
-# Scan Terraform with the Snyk Orb
+# Snyk Orb로 Terraform 스캔
 
 ## Lab Meta
 
-> **Difficulty**: Intermediate
+> **난이도**: 중급
 >
-> **Time to Complete:** 15 minutes
+> **소요 시간:** 15 분
 
-## Introduction
+## 소개
 
-Terraform makes creating and tearing down cloud infrastructure as easy as writing configuration files. In the Infrastructure as Code course in the CircleCI Academy, you created a workflow that uses Terraform to create a GKE cluster and deploy an application into it as part of a continuous delivery pipeline.
+Terraform을 사용하면 구성 파일을 작성하는 것처럼 쉽게 클라우드 인프라를 만들고 해체할 수 있습니다. CircleCI Academy의 코드형 인프라 과정에서 Terraform을 사용하여 GKE 클러스터를 만들고 지속적 배포 파이프라인의 일부로 여기에 애플리케이션을 배포하는 워크플로를 만들었습니다.
 
-According to the NSA, [misconfigurations are the top Cloud vulnerability](https://www.cloudhesive.com/blog-posts/misconfiguration-top-cloud-vulnerability/). In this add-on module, you'll add [Snyk Infrastructure as Code](https://snyk.io/product/infrastructure-as-code-security/) into the workflow to reinforce secure IaC development practices, ensuring your Terraform files aren't configured in ways that open up your cluster, and the applications running in them, to risks caused by cloud misconfiguration. Let's begin!
+NSA에 따르면 [잘못된 구성은 클라우드의 가장 큰 취약점입니다](https://www.cloudhesive.com/blog-posts/misconfiguration-top-cloud-vulnerability/). 이 애드온 모듈에서는 안전한 IaC 개발 사례를 강화하기 위해 [Snyk Infrastructure as Code](https://snyk.io/product/infrastructure-as-code-security/)를 워크플로에 추가하여 Terraform 파일이 클러스터 및 클러스터에서 실행 중인 애플리케이션을 위험에 노출시키는 방식으로 구성되지 않도록 합니다. 클라우드 구성 오류로 인해 발생합니다. 시작합니다!
 
-## Pre-Requisites:
+## 전제 조건:
 
-### Recommended Pre-Work
+### 권장 사전 작업
 
-This lab assumes the following courses were completed in CircleCI Academy:
+이 실습에서는 CircleCI Academy에서 다음 과정을 완료했다고 가정합니다:
 
 {% embed url="https://academy.circleci.com/infrastructure-as-code" %}
-Infrastructure as Code 101 in the CircleCI Academy
+CircleCI Academy의 코드형 인프라 101
 {% endembed %}
 
 {% embed url="https://academy.circleci.com/orbs-course" %}
-Orbs in the CircleCI Academy
+CircleCI 아카데미의 오브
 {% endembed %}
 
 {% hint style="warning" %}
-It's highly recommended you complete the courses before proceeding.
+진행하기 전에 과정을 완료하는 것이 좋습니다.
 {% endhint %}
 
-### Sample Code
+### 샘플 코드
 
-We'll use the same code used in the Infrastructure as Code course. It can be found on GitHub.
+Infrastructure as Code 과정에서 사용된 것과 동일한 코드를 사용합니다. GitHub에서 찾을 수 있습니다.
 
 {% embed url="https://github.com/datapunkz/learn_iac" %}
 
-### Snyk Account and Token
+### Snyk 계정 및 토큰
 
-You'll need a Snyk Account to use the Snyk Orb. [Create a Snyk API Token](https://support.snyk.io/hc/en-us/articles/360004008278-Revoking-and-regenerating-Snyk-API-tokens), then [set an Environment Variable in CircleCI](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) called SNYK_TOKEN with its value.
+Snyk Orb를 사용하려면 Snyk 계정이 필요합니다. [Snyk API 토큰을 만든](https://support.snyk.io/hc/en-us/articles/360004008278-Revoking-and-regenerating-Snyk-API-tokens) 다음 해당 값으로 SNYK\_TOKEN이라는 [CircleCI의 환경 변수를 설정](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)합니다.
 
-When ready, continue to the next page.
+준비가 되면 다음 페이지로 계속 진행합니다.
