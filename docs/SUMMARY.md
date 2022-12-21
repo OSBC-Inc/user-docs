@@ -558,7 +558,7 @@
     * [Goof Sample App 배포](tutorials/dynatrace/secure-kubernetes/deploy-goof-sample-app.md)
     * [OneAgent 배포](tutorials/dynatrace/secure-kubernetes/deploy-oneagent.md)
     * [Snyk Monitor 배포](tutorials/dynatrace/secure-kubernetes/deploy-snyk-monitor.md)
-    * [Findings Reports](tutorials/dynatrace/secure-kubernetes/findings-reports.md)
+    * [결과 보고서](tutorials/dynatrace/secure-kubernetes/findings-reports.md)
 * [GCP](tutorials/gcp/README.md)
   * [Secure Kubernetes workloads on GKE Autopilot](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/README.md)
     * [Provision your cluster](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/provision-your-cluster.md)
