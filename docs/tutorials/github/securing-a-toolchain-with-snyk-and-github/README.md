@@ -1,10 +1,10 @@
-# Securing a Toolchain with Snyk and GitHub
+# Snyk 및 GitHub로 Toolchain 보안
 
 ## Lab Meta
 
-> **Difficulty**: Intermediate
+> **난이도**: 중급
 >
-> **Time to Complete:** 60 minutes
+> **소요 시간:** 60 분
 
 The lab has three parts, to be completed in sequence. Each covers a different Snyk product.
 
@@ -19,7 +19,7 @@ The lab has three parts, to be completed in sequence. Each covers a different Sn
 
 You'll also need to fork the GitHub Repo with the sample application.
 
-{% embed url="https://github.com/snyk-partners/gh-actions-academy" caption="" %}
+{% embed url="https://github.com/snyk-partners/gh-actions-academy" %}
 
 ### Branch Structure
 
@@ -42,4 +42,3 @@ The `.github.workflows` folder contains CI workflows for the `develop` and `PROD
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-devworkflows.png)
 
 When ready, head on to Part 1 and get started!
-

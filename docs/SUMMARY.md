@@ -567,7 +567,7 @@
     * [보안 결과](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/security-findings.md)
     * [요약](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/summary.md)
 * [GitHub](tutorials/github/README.md)
-  * [Securing a Toolchain with Snyk and GitHub](tutorials/github/securing-a-toolchain-with-snyk-and-github/README.md)
+  * [Snyk 및 GitHub로 Toolchain 보안](tutorials/github/securing-a-toolchain-with-snyk-and-github/README.md)
     * [Part 1: Open Source](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-1-open-source/README.md)
       * [Section 1: Find Vulnerabilities](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-1-open-source/section-1-find-vulnerabilities.md)
       * [Section 2: Stop the Bleeding](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-1-open-source/section-2-stop-the-bleeding.md)
