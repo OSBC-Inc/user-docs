@@ -33,10 +33,10 @@ helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/ --force-upd
 #### Step 4
 
 {% hint style="info" %}
-
+"my-cluster"를 클러스터 이름으로 바꿉니다. 또한 GKE Autopilot과의 호환성을 위해 몇 가지 설정을 전달하고 있습니다.
 {% endhint %}
 
-Install the chart:
+차트를 설치합니다:
 
 ```bash
 helm upgrade --install snyk-monitor snyk-charts/snyk-monitor \
@@ -51,10 +51,10 @@ helm upgrade --install snyk-monitor snyk-charts/snyk-monitor \
   --set limits."ephemeral-storage"="50Gi"
 ```
 
-Now, we wait for the app to be ready and can check the status by running the following command:
+이제 앱이 준비될 때까지 기다렸다가 다음 명령을 실행하여 상태를 확인할 수 있습니다:
 
 ```bash
 kubectl get pods -n snyk-monitor
 ```
 
-Like the previous example, we want a ready status to be displayed.
+이전 예와 마찬가지로 준비 상태가 표시됩니다.
