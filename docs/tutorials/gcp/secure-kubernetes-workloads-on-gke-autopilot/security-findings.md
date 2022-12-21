@@ -1,41 +1,41 @@
-# Security findings
+# 보안 결과
 
-Now that we have some workloads running on our OKE cluster and deployed Snyk, we can analyze these for insights into:
+이제 OKE 클러스터에서 일부 워크로드를 실행하고 Snyk를 배포했으므로 다음과 같은 확인사항을 얻기 위해 이를 분석할 수 있습니다.
 
-* Issues in open source libraries.
-* Base image upgrade recommendations.
-* Application misconfigurations.
+* 오픈 소스 라이브러리의 Issue.
+* 기본 이미지 업그레이드 권장 사항.
+* 애플리케이션 구성 오류.
 
-As well as other features critical to running a secure environment available with [Snyk Container](https://snyk.io/product/container-vulnerability-management/).&#x20;
+[Snyk Container](https://snyk.io/product/container-vulnerability-management/)와 함께 사용할 수 있는 안전한 환경을 실행하는 데 중요한 기타 기능도 있습니다.
 
-### Scan Workloads
+### Workload 스캔
 
-Login to [Snyk](https://snyk.co/udrgA) and navigate to the **Integrations** menu where you will click on the **Kubernetes** section. Select our cluster and desired namespace (in this case these are both named **goof**) then click the **Add selected workloads** button as shown below:
+[Snyk](https://snyk.co/udrgA)에 로그인하고 **Kubernetes** 섹션을 클릭할 **Integrations** 메뉴로 이동합니다. 클러스터와 원하는 네임스페이스(이 경우 둘 다 **goof**로 이름 지정됨)를 선택한 다음 아래와 같이 **Add selected workloads** 버튼을 클릭합니다.
 
 ![](../../../.gitbook/assets/snyk-k8s-01.png)
 
-Detailed instructions on adding Kubernetes workloads are available in our [Documentation Pages](https://docs.snyk.io/products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/adding-kubernetes-workloads-for-security-scanning).
+Kubernetes Workload 추가에 대한 자세한 지침은 [설명서 페이지](https://docs.snyk.io/products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/adding-kubernetes-workloads-for-security-scanning)에서 확인할 수 있습니다.
 
-### Project status
+### 프로젝트 상태
 
-Once selected, you will be redirected to the main projects page where you will find a summary of the findings grouped by project as shown below:
+선택하면 아래와 같이 프로젝트별로 그룹화된 결과 요약을 찾을 수 있는 기본 프로젝트 페이지로 리디렉션됩니다:
 
 ![](../../../.gitbook/assets/snyk-dash-01.png)
 
-From this view, you can drill into each category and examine the findings. Let's start with misconfigurations of our cluster.&#x20;
+이 보기에서 각 범주를 드릴다운하고 조사 결과를 검토할 수 있습니다. Cluster의 잘못된 구성부터 시작하겠습니다.
 
 ![](../../../.gitbook/assets/snyk-dash-02.png)
 
-Here we see that our application was deployed with various settings that were either not defined or incorrectly defined. For example, whether any containers in the workload have `container.securityContext.runAsNonRoot` set to `false`, or unset. These can be resolved by updating the Kubernetes manifest files for the deployment and can be resolved proactively with one of the many Snyk [Source Code Management (SCM) integrations](https://docs.snyk.io/features/integrations/git-repository-scm-integrations).
+여기에서 애플리케이션이 정의되지 않았거나 잘못 정의된 다양한 설정으로 배포된 것을 볼 수 있습니다. 예를 들어 Workload의 컨테이너에 `container.securityContext.runAsNonRoot`가 `false`로 설정되어 있는지 또는 설정 해제되어 있는지 여부입니다. 이는 배포용 Kubernetes 매니페스트 파일을 업데이트하여 해결할 수 있으며 많은 [Snyk SCM(Source Code Management)](https://docs.snyk.io/features/integrations/git-repository-scm-integrations) Integration 중 하나로 사전에 해결할 수 있습니다.
 
-Next, let's examine our container image.
+다음으로 컨테이너 이미지를 살펴보겠습니다.
 
 ![](../../../.gitbook/assets/snyk-dash-03.png)
 
-Here we are provided with a base image upgrade recommendation that takes into account which image is compatible with our application and reduces the number of vulnerabilities to improve our security posture.
+여기에서 애플리케이션과 호환되는 이미지를 고려하고 보안 태세를 개선하기 위해 취약점 수를 줄이는 기본 이미지 업그레이드 권장 사항이 제공됩니다.
 
-Finally, let's examine our open source dependencies and found vulnerabilities.
+마지막으로 오픈 소스 종속성과 발견된 취약점을 살펴보겠습니다.
 
 ![](../../../.gitbook/assets/snyk-dash-04.png)
 
-In this view, we get detailed contextual data on found vulnerabilities along with [Snyk's Priority Score](https://snyk.io/blog/snyk-priority-score/) which helps to drastically simplify one of the biggest challenges in using open source securely—working out which vulnerabilities to tackle first.
+이 보기에서 우리는 [Snyk's Priority Score](https://snyk.io/blog/snyk-priority-score/)와 함께 발견된 취약점에 대한 자세한 컨텍스트 데이터를 얻습니다. 이는 오픈 소스를 안전하게 사용하는 데 있어 가장 큰 문제 중 하나인 먼저 해결해야 할 취약점을 획기적으로 단순화하는 데 도움이 됩니다.
