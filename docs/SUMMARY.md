@@ -561,7 +561,7 @@
     * [결과 보고서](tutorials/dynatrace/secure-kubernetes/findings-reports.md)
 * [GCP](tutorials/gcp/README.md)
   * [GKE Autopilot에서 Kubernetes Workload 보호](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/README.md)
-    * [Provision your cluster](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/provision-your-cluster.md)
+    * [클러스터 프로비저닝](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/provision-your-cluster.md)
     * [Deploy a sample application](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/deploy-a-sample-application.md)
     * [Deploy Snyk](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/deploy-snyk.md)
     * [Security findings](tutorials/gcp/secure-kubernetes-workloads-on-gke-autopilot/security-findings.md)
