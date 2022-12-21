@@ -1,10 +1,10 @@
-# Deploy Snyk
+# Snyk 배포
 
-You can scan Kubernetes workloads by deploying the `snyk-monitor` into your cluster. This is published as an official [helm chart](https://artifacthub.io/packages/helm/snyk/snyk-monitor) and we will be basing these steps on that deployment option. To learn more about Snyk's Kubernetes integration, please visit our [documentation pages](https://docs.snyk.io/products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/kubernetes-integration-overview). For convenience, we will cover the steps at a high level here.&#x20;
+`snyk-monitor`를 클러스터에 배포하여 Kubernetes 워크로드를 스캔할 수 있습니다. 이것은 공식 [helm chart](https://artifacthub.io/packages/helm/snyk/snyk-monitor)로 게시되며 해당 배포 옵션을 기반으로 이러한 단계를 수행할 것입니다. Snyk의 Kubernetes 통합에 대해 자세히 알아보려면 [설명서 페이지](https://docs.snyk.io/products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/kubernetes-integration-overview)를 방문하십시오. 편의를 위해 여기에서 높은 수준의 단계를 다룰 것입니다.
 
 #### Step 1
 
-Create the namespace:
+네임스페이스를 생성합니다:
 
 ```bash
 kubectl create namespace snyk-monitor
@@ -12,19 +12,19 @@ kubectl create namespace snyk-monitor
 
 #### Step 2
 
-Create the secret:
+암호 생성합니다:
 
 ```bash
 kubectl create secret generic snyk-monitor -n snyk-monitor --from-literal=dockercfg.json={} --from-literal=integrationId=abcd1234-abcd-1234-abcd-1234abcd1234
 ```
 
 {% hint style="info" %}
-Locate your **Integration** ID from the [Snyk Integrations page ](https://app.snyk.io/org/YOUR-ORGANIZATION-NAME/manage/integrations/kubernetes)and copy it.
+[Snyk Integrations 페이지](https://app.snyk.io/org/YOUR-ORGANIZATION-NAME/manage/integrations/kubernetes)에서 **Integration** ID를 찾아 복사합니다.
 {% endhint %}
 
 #### Step 3
 
-Add the Helm repo:
+Helm 저장소를 추가합니다:
 
 ```bash
 helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/ --force-update
@@ -33,7 +33,7 @@ helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/ --force-upd
 #### Step 4
 
 {% hint style="info" %}
-Replace **"my-cluster"** with the name of your cluster. Also note that we are passing a few settings for compatibility with GKE Autopilot.
+
 {% endhint %}
 
 Install the chart:
