@@ -19,30 +19,30 @@ Dynatrace 환경에서 **Infrastructure**로 이동한 다음 아래와 같이 �
 
 ## Step 2:
 
-Provide a name for your connection as shown below:
+아래와 같이 연결 이름을 제공합니다:
 
 {% hint style="info" %}
-This name simplifies deployment and is used by various Dynatrace settings including Kubernetes cluster name, Network Zone, ActiveGate Group, and Host Group. For individually unique settings follow activation instructions from [Kubernetes monitoring documentation](https://dt-url.net/a32h0p41).
+이 이름은 배포를 단순화하고 Kubernetes 클러스터 이름, Network Zone, ActiveGate Group 및 Host Group을 비롯한 다양한 Dynatrace 설정에서 사용됩니다. 개별적으로 고유한 설정의 경우 [Kubernetes 모니터링 문서](https://dt-url.net/a32h0p41)의 활성화 지침을 따르십시오.
 {% endhint %}
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/dynatrace-k8s-config-02.png)
 
-Then click on **Create tokens**.
+그런 다음 **Create tokens**를 클릭합니다.
 
 {% hint style="warning" %}
-**DO NOT** leave this menu. You will need to copy and paste a few things and switch to your terminal and back for the remaining steps. If you navigate away from this menu, you will need to create new tokens and break the process.
+이 메뉴를 **떠나지 마십시오**. 몇 가지 항목을 복사하여 붙여넣고 터미널로 전환했다가 나머지 단계를 수행해야 합니다. 이 메뉴에서 벗어나 탐색하는 경우 새 토큰을 생성하고 프로세스를 중단해야 합니다.
 {% endhint %}
 
 ## Step 3:
 
-From your terminal, create a namespace and deploy the [Dynatrace Operator](https://github.com/dynatrace/dynatrace-operator) into your K8s cluster.
+터미널에서 네임스페이스를 만들고 [Dynatrace Operator](https://github.com/dynatrace/dynatrace-operator)를 K8s 클러스터에 배포합니다.
 
 ```bash
 kubectl create namespace dynatrace
 kubectl apply -f https://github.com/Dynatrace/dynatrace-operator/releases/latest/download/kubernetes.yaml
 ```
 
-Next, copy and paste the **PaaS Token** & **API Token** from **Step 2** into the following command:
+그런 다음 **Step 2**의 **PaaS Token** **및** **API Token**을 복사하여 다음 명령에 붙여넣습니다.
 
 ```bash
 kubectl -n dynatrace create secret generic dynakube --from-literal="apiToken=DYNATRACE_API_TOKEN" --from-literal="paasToken=PLATFORM_AS_A_SERVICE_TOKEN"
@@ -50,11 +50,11 @@ kubectl -n dynatrace create secret generic dynakube --from-literal="apiToken=DYN
 
 ## Step 4:
 
-Go back to your Dynatrace environment Dashboard and copy the command shown below.
+Dynatrace 환경 Dashboard로 돌아가서 아래 표시된 명령을 복사합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/dynatrace-k8s-config-03.png)
 
-Once copied, switch back to your terminal and execute the example command:
+복사가 완료되면 터미널로 다시 전환하고 예제 명령을 실행합니다.
 
 ```bash
  wget https://github.com/dynatrace/dynatrace-operator/releases/latest/download/install.sh \
@@ -64,7 +64,7 @@ Once copied, switch back to your terminal and execute the example command:
  --cluster-name "$YOUR_CLUSTER_NAME"
 ```
 
-Where **$YOUR\_API\_URL** is that of your Dynatrace tenant, **$YOUR\_API\_TOKEN**, **$YOUR\_PASS\_TOKEN** and **$YOUR\_CLUSTER\_NAME** are those created above. If successful, you will see results similar to what is shown below:
+**$YOUR\_API\_URL**이 Dynatrace 테넌트의 URL인 경우 **$YOUR\_API\_TOKEN**, **$YOUR\_PASS\_TOKEN** 및 **$YOUR\_CLUSTER\_NAME**은 위에서 생성된 것입니다. 성공하면 아래와 유사한 결과가 표시됩니다:
 
 ```
 Check for token scopes...
@@ -97,4 +97,4 @@ Adding cluster to Dynatrace...
 Kubernetes monitoring successfully setup.
 ```
 
-That's it! You are ready to move to the next section.
+다 됐습니다! 다음 섹션으로 이동할 준비가 되었습니다.
