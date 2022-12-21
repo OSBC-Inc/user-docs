@@ -1,15 +1,15 @@
-# 클러스터 프로비저닝
+# Provision your cluster
 
-[GCP 콘솔](https://console.cloud.google.com/kubernetes)로 이동하고 메뉴 옵션에서 **Kubernetes Engine**을 선택한 다음 **Clusters**를 선택합니다.
+Navigate to your [GCP Console](https://console.cloud.google.com/kubernetes) and select **Kubernetes Engine** then **Clusters** from the menu options.
 
 ![](../../../.gitbook/assets/gcp-dash-01.png)
 
-상단 메뉴에서 **Create**를 선택하고 GKE Autopilot Cluster의 **Configure**을 선택합니다. 이 자습서의 목적을 위해 모든 기본값을 수락할 수 있습니다.
+Select **Create** from the top menu and **Configure** a GKE Autopilot cluster. For the purpose of this tutorial we can accept all default values.
 
 ![](../../../.gitbook/assets/gcp-dash-02.png)
 
-Cluster가 준비되면 상단 메뉴에서 **Connect**를 클릭하고 명령을 복사하여 터미널 창에 붙여넣습니다.
+Once our cluster is ready, click on **Connect** from the top menu and copy & paste the command into your terminal window.
 
 ![](../../../.gitbook/assets/gcp-dash-03.png)
 
-Cluster 생성 시 선택한 이름이 접두사로 붙은 노드 목록이 표시되는 간단한 `kubectl get nodes` 명령을 실행하여 연결을 확인할 수 있습니다.
+You can verify connectivity by running a simple `kubectl get nodes` command where you should see a list of nodes prefixed with the name you selected at time of cluster creation.
