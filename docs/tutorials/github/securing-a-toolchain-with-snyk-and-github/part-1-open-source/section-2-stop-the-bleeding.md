@@ -88,10 +88,10 @@ Pull Request 세부 정보에서 Snyk Security Gate는 예상대로 `develop`에
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-snykgateworks.png)
 
-두 개의 Snyk 검사인 `license/snyk` 및 `security/snyk`도 확인할 수 있습니다. 이들은 **새로운** 보안 또는 라이센스 문제가 도입되지 않도록 합니다. 아직 존재하지 않는 위험을 도입하지 않았기 때문에 이러한 **점진적** 검사를 통과합니다.
+You'll also notice two Snyk checks, `license/snyk` and `security/snyk`. These are making sure no **new** security or license issues are introduced. These **incremental** checks pass because we haven't introduced any risks that weren't already present.
 
 {% hint style="info" %}
-[Pull Request에 대한 Snyk 검사](https://support.snyk.io/hc/en-us/articles/360006581938-Snyk-checks-on-pull-requests)를 읽어 이 기능에 대해 자세히 알아보십시오.
+Learn more about this functionality by reading [Snyk checks on Pull Requests](https://support.snyk.io/hc/en-us/articles/360006581938-Snyk-checks-on-pull-requests).
 {% endhint %}
 
-이제 Snyk Security Gate가 생겼습니다! 재량에 따라 Merge할 수 있지만 Snyk은 이 확인에 실패하여 해결되지 않고 **수정 가능**하며 **심각도가 높은** 위험이 있음을 경고합니다. 지금은 Pull Request를 열어두세요. 다음 섹션에서는 `develop` branch를 보호하고 이 게이트를 지우고 코드의 PROD 지원 버전을 보호합니다!
+You now have a Snyk Security Gate! While you can merge at your discretion, Snyk fails this check to alert that there are unresolved, **Fixable,** **High** **Severity** risks. Leave the Pull Request open for now; in the next section, we'll secure our `develop` branch, clear this gate, and secure the PROD-ready version of our code!
