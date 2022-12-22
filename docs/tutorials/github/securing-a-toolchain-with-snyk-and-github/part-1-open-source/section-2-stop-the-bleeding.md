@@ -37,19 +37,19 @@ Secret을 확인할 수 없습니까? [저장소에 대한 암호화된 Secret �
 
 Snyk 토큰이 저장되면 Step 2를 계속합니다.
 
-## Step 2: Add the Snyk GitHub Action
+## Step 2: Snyk GitHub Action 추가
 
-Time to add a Snyk Security Gate to our workflow! The necessary files have already been created for you in the `oss-actions` branch.
+Workflow에 Snyk Security Gate를 추가할 시간입니다! 필요한 파일은 `oss-actions` Branch에 이미 생성되어 있습니다.
 
-### Inspect the Snyk Gate YML file
+### Snyk Gate YML 파일 검사
 
-Switch to the `oss-actions` branch, and navigate to the `.github/workflows` folder to see `snyk-gate.yml`. Note the following:
+`oss-actions` Branch로 전환하고 `.github/workflows` 폴더로 이동하여 `snyk-gate.yml`을 확인합니다. 다음 사항에 유의하십시오:
 
-* Since this is designed to "stop the bleeding" of new vulnerabilities being introduced into `PROD`, this workflow only runs if a PR is opened against `PROD`.
-* The `--severity.threshold` and `--fail-on` arguments on the Snyk Action tell Snyk to only fail if any `high` severity risks that are `upgradable` (a fix is available) are present.
+* 이는 `PROD`에 도입되는 새로운 취약성의 "stop the bleeding"하도록 설계되었기 때문에 이 Workflow는 `PROD`에 대해 PR이 열린 경우에만 실행됩니다.
+* Snyk Action의 `--severity.threshold` 및 `--fail-on` 인수는 Snyk에게 `upgradable`(수정이 가능한) 심각도가 `high`인 위험이 있는 경우에만 실패하도록 지시합니다.
 
 {% hint style="info" %}
-Learn more about these, and other CLI commands, in [Snyk CLI Reference](https://support.snyk.io/hc/en-us/articles/360003812578-CLI-reference).
+[Snyk CLI Reference](https://support.snyk.io/hc/en-us/articles/360003812578-CLI-reference)에서 이러한 명령 및 기타 CLI 명령에 대해 자세히 알아보십시오.
 {% endhint %}
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-snykgate.png)
