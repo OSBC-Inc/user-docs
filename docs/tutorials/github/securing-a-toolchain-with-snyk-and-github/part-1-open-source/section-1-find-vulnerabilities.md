@@ -1,37 +1,40 @@
 ---
-description: Fork된 Goof 저장소를 Snyk 계정으로 가져와 취약점을 스캔하는 것으로 시작하겠습니다.
+description: >-
+  Let's start by importing the forked Goof repo into your Snyk account to scan
+  it for vulnerabilities.
 ---
 
-# Section 1: 취약점 찾기
+# Section 1: Find Vulnerabilities
 
-## Step 1: Snyk의 GitHub Integration 구성
+## Step 1: Configure Snyk's GitHub Integration
 
 {% hint style="info" %}
-Snyk GitHub Integration을 이미 구성한 경우 Step 2 로 계속 진행합니다.
+If you've already configured the Snyk GitHub integration, continue to Step 2.
 {% endhint %}
 
-먼저 저장소를 가져올 수 있도록 Snyk을 GitHub에 연결해야 합니다. 다음과 같이 하십시오.
+First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
 
-1. Snyk.io에 로그인합니다. 아직 [가입](https://snyk.co/SnykGH)하지 않았다면 가입하세요.
-2. Integrations -> Source Control -> GitHub로 이동 합니다.
-3. Account Credentials을 입력하여 GitHub 계정을 연결하세요.
+1. Logging in to Snyk.io. [Sign up](https://snyk.co/SnykGH) if you haven't already.
+2. Navigating to Integrations -&gt; Source Control -&gt; GitHub
+3. Fill in your Account Credentials to Connect your GitHub Account.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-gh.png)
 
-## Step 2: Fork된 Goof 저장소를 Snyk으로 가져오기
+## Step 2: Import the forked Goof Repo into Snyk
 
-이제 Snyk이 GitHub 계정에 연결되었으므로 저장소를 Snyk에 프로젝트로 가져옵니다.
+Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as a Project.
 
-1. Projects로 이동합니다.
-2. "Add Project"를 클릭한  다음 "GitHub"를 선택합니다.
-3. Fork한 저장소를 클릭합니다.
+1. Navigate to Projects
+2. Click "Add Project" then select "GitHub"
+3. Click on the Repo you forked.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-ghimport.png)
 
-## Step 3: 저장소의 위험 탐색
+## Step 3: Explore your Repo's risks
 
-저장소를 가져올 때 Snyk은 Goof 애플리케이션의 오픈 소스 구성 요소가 선언된 package.json 파일을 찾았습니다. 31개의 높은 심각도를 포함하여 60개의 취약점이 포함되어 있음을 알 수 있습니다! 😳
+When the Repo imports, Snyk has found the `package.json` file where open source components for our Goof application are declared. We can see that they contain 60 vulnerabilities, including 31 High Severity ones! 😳
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-projvulns.png)
 
-취약성 수정을 시작하기 전에 `PROD` Branch에 프로덕션 준비 버전의 코드가 포함되어 있음을 기억하십시오. 다음 섹션에서는 "stop the bleeding"하도록 설계된 Snyk Gate를 구현하여 새로운 취약점이 해당 Branch에 침투하는 것을 방지합니다.
+Before we start fixing Vulnerabilities, remember that our `PROD` branch contains the Production-ready version of the code. In the next section, we'll implement a Snyk Gate designed to "stop the bleeding", preventing any new vulnerabilities from making it into that branch.
+

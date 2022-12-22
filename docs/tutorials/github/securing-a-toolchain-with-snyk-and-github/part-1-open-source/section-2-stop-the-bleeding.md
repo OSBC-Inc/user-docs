@@ -22,22 +22,20 @@ Snyk Action을 사용하려면 Snyk API 토큰을 생성하고 GitHub Secret으�
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-token.png)
 
 {% hint style="info" %}
-Stuck? Check out [Revoking and regenerating Snyk API Tokens](https://support.snyk.io/hc/en-us/articles/360004008278-Revoking-and-regenerating-Snyk-API-tokens)
-
 Snyk API 토큰을 확인할 수 없습니까? [Snyk API 토큰 취소 및 재생성을 확인하십시오](https://support.snyk.io/hc/en-us/articles/360004008278-Revoking-and-regenerating-Snyk-API-tokens).
 {% endhint %}
 
-### Store the Snyk Token in GitHub Secrets
+### GitHub Secrets에 Snyk 토큰 저장
 
-Store the Token in the Forked Repo's secrets by navigating to Settings -> Secrets -> New Repository Secret. Name the Secret `SNYK_TOKEN`
+Settings -> Secrets -> New Repository Secret으로 이동하여 Fork된 저장소의 Secret에 토큰을 저장합니다. Secret 이름 `SNYK_TOKEN`
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-secrets.png)
 
 {% hint style="info" %}
-Stuck? Check out [Creating Encrypted Secrets for a Repository](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+Secret을 확인할 수 없습니까? [저장소에 대한 암호화된 Secret 만들기](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)를 확인하십시오.
 {% endhint %}
 
-Continue to Step 2 once your Snyk Token is saved.
+Snyk 토큰이 저장되면 Step 2를 계속합니다.
 
 ## Step 2: Add the Snyk GitHub Action
 
