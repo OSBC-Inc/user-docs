@@ -1,44 +1,44 @@
 # Snyk 및 GitHub로 Toolchain 보안
 
-## 실습 정보
+## Lab Meta
 
 > **난이도**: 중급
 >
 > **소요 시간:** 60 분
 
-실습은 세 부분으로 구성되어 있으며 순서대로 완료해야 합니다. 각각은 다른 Snyk 제품을 다룹니다.
+The lab has three parts, to be completed in sequence. Each covers a different Snyk product.
 
-1. Part 1 에서는 샘플 앱의 오픈 소스 취약성을 수정하는 방법을 다룹니다.
-2. Part 2 에서는 파이프라인에 Dockerfile 및 Container Security Scanning을 추가합니다.
-3. Part 3 에서는 Deployment YAML 및 Infrastructure as Code Scans를 추가합니다.
+1. Part 1 covers fixing Open Source vulnerabilities in the Sample App.
+2. Part 2 adds Dockerfile and Container Security Scanning to the pipeline.
+3. Part 3 adds Deployment YAML and Infrastructure as Code Scans.
 
-### 전제 조건
+### Pre-Requisites
 
-* GitHub 계정. 필요한 경우 [GitHub에서 무료로 가입](https://github.com/join)하세요.
-* Snyk 계정. 필요한 경우 [snyk.io에서 무료로 가입](https://app.snyk.io/login)하세요.
+* GitHub Account. If you need one, [sign up free at GitHub](https://github.com/join).
+* Snyk Account. If you need one, [sign up free at snyk.io](https://app.snyk.io/login)
 
-또한 샘플 애플리케이션으로 GitHub Repo를 분기해야 합니다.
+You'll also need to fork the GitHub Repo with the sample application.
 
 {% embed url="https://github.com/snyk-partners/gh-actions-academy" %}
 
 ### Branch Structure
 
-저장소는 다음과 같이 구성됩니다.
+The Repo is structured as follows:
 
-* 코드의 배포 준비 상태를 나타내는 PROD Branch입니다.
-* 우리가 작업할 기본 Branch인 개발 Branch.
-* Part 1 에 사용될 oss-actions Branch..
-* Part 2 에 사용될 container-actions Branch.
-* Part 3 에 사용될 iac-actions Branch.
+* A _PROD_ branch that represents the deploy-ready state of the code.
+* A _develop_ branch that is the default branch we'll be working with.
+* A _oss-actions_ branch that will be used for Part 1.
+* A _container-actions_ branch that will be used for Part 2.
+* A _iac-actions_ branch that will be used for Part 3.
 
 ### GitHub Actions Workflows
 
-기존 Workflow로 저장소를 포크하면 GitHub는 기본적으로 GitHub Actions를 비활성화합니다. GitHub Actions를 활성화하려면 Actions 탭을 클릭한 다음 "Enable my Workflows"를 클릭합니다.
+When you fork a Repo with existing workflows, GitHub disables GitHub Actions by default. To enable GitHub Actions, click on the Actions Tab, and then "Enable my Workflows".
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-actionson.png)
 
-`.github.workflows` 폴더에는 `develop` 및 `PROD` 분기에 대한 CI 워크플로가 포함되어 있습니다. 브레이킹 체인지가 도입되지 않도록 코드가 Branch로 푸시될 때 앱을 다시 빌드하고 테스트합니다. 실습 전체에서 이러한 파일에 추가하여 GitHub Actions로 더 많은 작업을 수행할 것입니다.
+The `.github.workflows` folder contains CI workflows for the `develop` and `PROD` branches. These rebuild and test the app when code is pushed to the branch, to ensure no breaking changes are introduced. We'll add onto these files throughout the Lab to do more with GitHub Actions.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-devworkflows.png)
 
-준비가 되면 Part 1 로 이동하여 시작하십시오!
+When ready, head on to Part 1 and get started!
