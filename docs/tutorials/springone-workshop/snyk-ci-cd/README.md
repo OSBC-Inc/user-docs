@@ -2,11 +2,10 @@
 
 ## Snyk CI/CD
 
-CI/CD pipelines provide automation and repeatability in the SDLC process and are an ideal place to inject and automate security practices. Snyk users can monitor their CI/CD pipelines for vulnerabilities by using the Synk CI/CD plugins or using the Snyk CLI directly. In or example, we have used GitHub actions to perform vulnerability and license compliance scans. The pipeline uploads the scan results to Snyk, and we continue to monitor the application for vulnerabilities and send notifications when fixes are available.
+CI/CD 파이프라인은 SDLC 프로세스에서 자동화 및 반복 가능성을 제공하며 보안 관행을 주입하고 자동화하기에 이상적인 장소입니다. Snyk 사용자는 Snyk CI/CD 플러그인을 사용하거나 Snyk CLI를 직접 사용하여 CI/CD 파이프라인의 취약점을 모니터링할 수 있습니다. 이 예에서는 GitHub 작업을 사용하여 취약점 및 라이선스 컴플라이언스 검사를 수행했습니다. 파이프라인은 스캔 결과를 Snyk에 업로드하고, 애플리케이션의 취약점을 계속 모니터링하여 수정 사항이 있을 때 알림을 보냅니다.
 
-### Workshop exercises
+### Workshop 연습
 
-We will complete the following steps:
+다음 단계를 완료합니다.
 
-1. Review CI/CD results in Snyk UI
-
+1. Snyk UI에서 CI/CD 결과를 검토합니다.
