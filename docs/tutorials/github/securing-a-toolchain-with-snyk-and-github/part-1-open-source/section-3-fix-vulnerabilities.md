@@ -1,15 +1,14 @@
 ---
 description: >-
-  With our Security Gate in place and alerting us to risks, we want to get
-  started fixing issues in the develop branch so we can downstream the fixes to
-  the PROD branch.
+  보안 게이트가 설치되고 위험에 대해 경고하는 경우 개발 Branch에서 문제를 수정하여 수정 사항을 PROD Branch로 다운스트림할 수
+  있습니다.
 ---
 
-# Section 3: Fix Vulnerabilities
+# Section 3: 취약점 수정
 
-With the GitHub Integration we configured in Section 1, Snyk is able to open Pull Requests to upgrade dependencies to non-vulnerable versions, helping to accelerate fixes.
+Section 1에서 구성한 GitHub Integration을 통해 Snyk은 Pull Request를 열어 종속성을 취약하지 않은 버전으로 업그레이드하여 수정을 가속화할 수 있습니다.
 
-## Step 1: Explore a vulnerability in more detail
+## Step 1: 취약점을 더 자세히 탐색
 
 Log into Snyk, and go into the `gh-actions-academy` project imported earlier. Scroll down to see the list of vulnerabilities present, ordered by [our proprietary Priority Score](https://snyk.io/blog/snyk-priority-score/). For each Vulnerability, Snyk displays:
 
@@ -56,7 +55,7 @@ The `all-fixes` branch was created by using the [Snyk Wizard](https://support.sn
 
 Create a New Pull Request from `all-fixes` to `develop`. This introduces some changes:
 
-* The creation of a `.snyk` file, which is used to track changes made by `Snyk Wizard`.&#x20;
+* The creation of a `.snyk` file, which is used to track changes made by `Snyk Wizard`.
 * Updated `package.json` and `package-lock.json` files with updated dependencies.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-allfixpr.png)
