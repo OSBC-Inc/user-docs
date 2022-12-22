@@ -1,21 +1,21 @@
 # Snyk 및 GitHub로 Toolchain 보안
 
-## Lab Meta
+## 실습 정보
 
 > **난이도**: 중급
 >
 > **소요 시간:** 60 분
 
-The lab has three parts, to be completed in sequence. Each covers a different Snyk product.
+실습은 세 부분으로 구성되어 있으며 순서대로 완료해야 합니다. 각각은 다른 Snyk 제품을 다룹니다.
 
-1. Part 1 covers fixing Open Source vulnerabilities in the Sample App.
-2. Part 2 adds Dockerfile and Container Security Scanning to the pipeline.
-3. Part 3 adds Deployment YAML and Infrastructure as Code Scans.
+1. Part 1 에서는 샘플 앱의 오픈 소스 취약성을 수정하는 방법을 다룹니다.
+2. Part 2 에서는 파이프라인에 Dockerfile 및 Container Security Scanning을 추가합니다.
+3. Part 3 에서는 Deployment YAML 및 Infrastructure as Code Scans를 추가합니다.
 
-### Pre-Requisites
+### 전제 조건
 
-* GitHub Account. If you need one, [sign up free at GitHub](https://github.com/join).
-* Snyk Account. If you need one, [sign up free at snyk.io](https://app.snyk.io/login)
+* GitHub 계정. 필요한 경우 [GitHub에서 무료로 가입](https://github.com/join)하세요.
+* Snyk 계정. 필요한 경우 [snyk.io에서 무료로 가입](https://app.snyk.io/login)하세요.
 
 You'll also need to fork the GitHub Repo with the sample application.
 
