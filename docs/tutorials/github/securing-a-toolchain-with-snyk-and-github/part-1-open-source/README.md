@@ -1,9 +1,10 @@
 # Part 1: Open Source
 
-## 실습 정보 <a href="#lab-meta" id="lab-meta"></a>
+## Lab Meta <a id="lab-meta"></a>
 
-> **난이도**: 중급
+> **Difficulty**: Intermediate
 
-Part 1 에는 세 개의 섹션이 있으며 GitHub Workflow에서 Snyk Open Source를 보여줍니다.
+Part 1 has three Sections, and showcases Snyk Open Source in a GitHub Workflow.
 
-모든 전제 조건을 완료했는지 확인하고 Section 1로 진행하여 시작하십시오.
+Ensure you've completed all the Pre-Requisites, and proceed to Section 1 to get started. Have fun!
+

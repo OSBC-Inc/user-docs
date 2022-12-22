@@ -1,34 +1,35 @@
 ---
 description: >-
-  To ensure we don't introduce more High Severity risks into our
-  Production-ready branch, let's add a Snyk Security Gate to our Repo's GitHub
-  Actions workflows.
+  Production-ready Branch에 높은 심각도 위험이 더 이상 발생하지 않도록 저장소의 GitHub Actions
+  Workflow에 Snyk Security Gate를 추가해 보겠습니다.
 ---
 
 # Section 2: Stop the Bleeding
 
-In this section, we introduce a Security Gate using the [Snyk GitHub Actions](https://github.com/snyk/actions). The Snyk Action can fail GitHub checks, alerting you when Repo activity introduces risks, helping you catch issues early.
+이 섹션에서는 [Snyk GitHub Action](https://github.com/snyk/actions)을 사용하는 Security Gate를 소개합니다. Snyk 작업은 GitHub 검사에 실패할 수 있으며 Repo 활동으로 인해 위험이 발생할 때 경고하여 문제를 조기에 발견하는 데 도움이 됩니다.
 
-## Step 1: Create a Snyk Token
+## Step 1: Snyk Token 생성
 
-To use the Snyk Action, we need to create a Snyk API Token and store it as a GitHub Secret.
+Snyk Action을 사용하려면 Snyk API 토큰을 생성하고 GitHub Secret으로 저장해야 합니다.
 
-### Retrieve your Snyk Token
+### Snyk 토큰 검색
 
-You can find your API Token one of two ways:
+다음 두 가지 방법 중 하나로 API 토큰을 찾을 수 있습니다.
 
-* If you have the Snyk CLI, retrieve it by running `snyk config get api`
-* In the Snyk UI, head to your account [Settings Page](https://app.snyk.io/account) and retrieve it.
+* Snyk CLI가 있는 경우 `snyk config get api`를 실행하여 검색합니다.
+* [Snyk UI](https://app.snyk.io/account)에서 계정 설정 페이지로 이동하여 검색합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-token.png)
 
 {% hint style="info" %}
 Stuck? Check out [Revoking and regenerating Snyk API Tokens](https://support.snyk.io/hc/en-us/articles/360004008278-Revoking-and-regenerating-Snyk-API-tokens)
+
+Snyk API 토큰을 확인할 수 없습니까? [Snyk API 토큰 취소 및 재생성을 확인하십시오](https://support.snyk.io/hc/en-us/articles/360004008278-Revoking-and-regenerating-Snyk-API-tokens).
 {% endhint %}
 
 ### Store the Snyk Token in GitHub Secrets
 
-Store the Token in the Forked Repo's secrets by navigating to Settings -&gt; Secrets -&gt; New Repository Secret. Name the Secret `SNYK_TOKEN`
+Store the Token in the Forked Repo's secrets by navigating to Settings -> Secrets -> New Repository Secret. Name the Secret `SNYK_TOKEN`
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-secrets.png)
 
@@ -46,8 +47,8 @@ Time to add a Snyk Security Gate to our workflow! The necessary files have alrea
 
 Switch to the `oss-actions` branch, and navigate to the `.github/workflows` folder to see `snyk-gate.yml`. Note the following:
 
-* Since this is designed to "stop the bleeding" of new vulnerabilities being introduced into `PROD`, this workflow only runs if a PR is opened against `PROD`. 
-* The `--severity.threshold` and `--fail-on` arguments on the Snyk Action tell Snyk to only fail if any `high` severity risks that are `upgradable` \(a fix is available\) are present. 
+* Since this is designed to "stop the bleeding" of new vulnerabilities being introduced into `PROD`, this workflow only runs if a PR is opened against `PROD`.
+* The `--severity.threshold` and `--fail-on` arguments on the Snyk Action tell Snyk to only fail if any `high` severity risks that are `upgradable` (a fix is available) are present.
 
 {% hint style="info" %}
 Learn more about these, and other CLI commands, in [Snyk CLI Reference](https://support.snyk.io/hc/en-us/articles/360003812578-CLI-reference).
@@ -57,7 +58,7 @@ Learn more about these, and other CLI commands, in [Snyk CLI Reference](https://
 
 ### Add the Snyk Gate to the develop branch
 
-We'll create a Pull Request to add `snyk-gate.yml` to the `develop` branch. To open a Pull Request, first navigate to Pull Requests -&gt; New Pull Request.
+We'll create a Pull Request to add `snyk-gate.yml` to the `develop` branch. To open a Pull Request, first navigate to Pull Requests -> New Pull Request.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-newpr.png)
 
@@ -96,4 +97,3 @@ Learn more about this functionality by reading [Snyk checks on Pull Requests](ht
 {% endhint %}
 
 You now have a Snyk Security Gate! While you can merge at your discretion, Snyk fails this check to alert that there are unresolved, **Fixable,** **High** **Severity** risks. Leave the Pull Request open for now; in the next section, we'll secure our `develop` branch, clear this gate, and secure the PROD-ready version of our code!
-
