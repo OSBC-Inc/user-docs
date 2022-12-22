@@ -10,14 +10,14 @@ Section 1에서 구성한 GitHub Integration을 통해 Snyk은 Pull Request를 �
 
 ## Step 1: 취약점을 더 자세히 탐색
 
-Log into Snyk, and go into the `gh-actions-academy` project imported earlier. Scroll down to see the list of vulnerabilities present, ordered by [our proprietary Priority Score](https://snyk.io/blog/snyk-priority-score/). For each Vulnerability, Snyk displays:
+Snyk에 로그인하고 이전에 가져온 `gh-actions-academy` 프로젝트로 이동합니다. 아래로 스크롤하여 당사의 독점 우선 순위 점수에 따라 정렬된 존재하는 취약점 목록을 확인하십시오. 각 취약점에 대해 Snyk은 다음을 표시합니다:
 
-* The module that introduced it and, in the case of transitive dependencies, its direct dependency,
-* Details on the path and proposed fixes, as well as the specific vulnerable functions
+* 이를 도입한 모듈 및 전이적 종속성의 경우 직접 종속성.
+* 경로 및 제안된 수정 사항, 특정 취약 기능에 대한 세부 정보.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-vuln.png)
 
-## Step 2: Create a Fix Pull Request in Snyk
+## Step 2: Fix Pull Request in Snyk 생성
 
 When using the GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request. Click on "Fix this vulnerability" to do so.
 
