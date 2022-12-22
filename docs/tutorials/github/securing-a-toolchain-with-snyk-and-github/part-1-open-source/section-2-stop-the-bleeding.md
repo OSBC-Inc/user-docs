@@ -54,21 +54,21 @@ Workflow에 Snyk Security Gate를 추가할 시간입니다! 필요한 파일은
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-snykgate.png)
 
-### Add the Snyk Gate to the develop branch
+### 개발 Branch에 Snyk Gate 추가
 
-We'll create a Pull Request to add `snyk-gate.yml` to the `develop` branch. To open a Pull Request, first navigate to Pull Requests -> New Pull Request.
+`develop` Branch에 `snyk-gate.yml`을 추가하기 위해 Pull Request를 생성합니다. Pull Request를 열려면 먼저 Pull Requests -> New Pull Request으로 이동합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-newpr.png)
 
 {% hint style="danger" %}
-GitHub defaults to the upstream Snyk-Partners repo as the Base Repository as shown in the image below. Be sure to change that to your fork.
+GitHub는 아래 이미지와 같이 기본 저장소로 업스트림 Snyk-Partners 저장소를 기본으로 합니다. Fork로 변경하십시오.
 {% endhint %}
 
-![Your PR should not look like this!](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-prcompare.png)
+![당신의 PR은 이렇게 보여서는 안됩니다!](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-prcompare.png)
 
-In the **Comparing Changes** window, select the `develop` branch from your forked repo as the base repository, and the `oss-actions` as the head repository, then open the PR.
+**Comparing Changes** 창에서 기본 저장소로 분기된 저장소의 개발 Branch를 선택하고 헤드 저장소로 `oss-actions`를 선택한 다음 PR을 엽니다.
 
-![Ensure your fork is selected as the base repo before opening the PR.](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-oss-pr.png)
+![PR을 열기 전에  o기k본 저장소로 선택되었는지 확인하십시오.](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-oss-pr.png)
 
 You should see that this PR adds the `snyk-gate.yml` file to the `develop` branch.
 
