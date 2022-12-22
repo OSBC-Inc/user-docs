@@ -17,7 +17,7 @@
 * GitHub 계정. 필요한 경우 [GitHub에서 무료로 가입](https://github.com/join)하세요.
 * Snyk 계정. 필요한 경우 [snyk.io에서 무료로 가입](https://app.snyk.io/login)하세요.
 
-You'll also need to fork the GitHub Repo with the sample application.
+또한 샘플 애플리케이션으로 GitHub Repo를 분기해야 합니다.
 
 {% embed url="https://github.com/snyk-partners/gh-actions-academy" %}
 
