@@ -23,22 +23,22 @@
 
 ### Branch Structure
 
-The Repo is structured as follows:
+저장소는 다음과 같이 구성됩니다.
 
-* A _PROD_ branch that represents the deploy-ready state of the code.
-* A _develop_ branch that is the default branch we'll be working with.
-* A _oss-actions_ branch that will be used for Part 1.
-* A _container-actions_ branch that will be used for Part 2.
-* A _iac-actions_ branch that will be used for Part 3.
+* 코드의 배포 준비 상태를 나타내는 PROD Branch입니다.
+* 우리가 작업할 기본 Branch인 개발 Branch.
+* Part 1 에 사용될 oss-actions Branch..
+* Part 2 에 사용될 container-actions Branch.
+* Part 3 에 사용될 iac-actions Branch.
 
 ### GitHub Actions Workflows
 
-When you fork a Repo with existing workflows, GitHub disables GitHub Actions by default. To enable GitHub Actions, click on the Actions Tab, and then "Enable my Workflows".
+기존 Workflow로 저장소를 포크하면 GitHub는 기본적으로 GitHub Actions를 비활성화합니다. GitHub Actions를 활성화하려면 Actions 탭을 클릭한 다음 "Enable my Workflows"를 클릭합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-actionson.png)
 
-The `.github.workflows` folder contains CI workflows for the `develop` and `PROD` branches. These rebuild and test the app when code is pushed to the branch, to ensure no breaking changes are introduced. We'll add onto these files throughout the Lab to do more with GitHub Actions.
+`.github.workflows` 폴더에는 `develop` 및 `PROD` 분기에 대한 CI 워크플로가 포함되어 있습니다. 브레이킹 체인지가 도입되지 않도록 코드가 Branch로 푸시될 때 앱을 다시 빌드하고 테스트합니다. 실습 전체에서 이러한 파일에 추가하여 GitHub Actions로 더 많은 작업을 수행할 것입니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-devworkflows.png)
 
-When ready, head on to Part 1 and get started!
+준비가 되면 Part 1 로 이동하여 시작하십시오!
