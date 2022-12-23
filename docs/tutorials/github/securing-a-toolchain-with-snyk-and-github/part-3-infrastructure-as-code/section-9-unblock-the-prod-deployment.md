@@ -112,17 +112,17 @@ spec:
 ```
 
 {% hint style="warning" %}
-It's possible to set securityContext for both the Pod and the Containers it runs. In this case, we're setting securityContext for the containers. Learn more in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/).
+Pod와 Pod가 실행하는 컨테이너 모두에 대해 securityContext를 설정할 수 있습니다. 이 경우 컨테이너에 대해 securityContext를 설정합니다. [Kubernetes 설명서](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)에서 자세히 알아볼 수 있습니다.
 {% endhint %}
 
-Merge the changes into the `develop` branch and wait for the CI workflows to run. Like before, the issue counts will be updated in both GitHub Security Code Scanning and the Snyk UI.
+변경 사항을 `develop` Branch에 Merge하고 CI Workflow가 실행될 때까지 기다립니다. 이전과 마찬가지로 문제 수는 GitHub Security Code Scanning 및 Snyk UI 모두에서 업데이트됩니다.
 
-## Step 3: Merge our changes into PROD
+## Step 3: 변경 사항을 PROD에 Merge
 
-Back in Section 7, our Snyk Gate blocked the Pull Request we creates from `develop` into `PROD`. Now that we've fixed the issues in our files, back in the Pull Request, we can appreciate that our tests re-ran and this time the Snyk Security Gate is pleased with the changes we made.
+Section 1로 돌아가서 Snyk Gate는 `develop`에서 `PROD`로 생성하는 Pull Request를 차단했습니다. Pull Request에서 다시 파일의 문제를 해결했으므로 테스트가 다시 실행되었고 이번에는 Snyk Security Gate가 변경 사항에 만족했습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-iac-prodprcheckspass.png)
 
-With this assurance, we can merge our changes into PROD. Once merged, our CI workflows will re-run for `PROD`. If we had a workflow to re-deploy our application, it would also run.
+이러한 보장을 통해 변경 사항을 `PROD`에 Merge할 수 있습니다. Merge되면 CI Workflow가 `PROD`에 대해 다시 실행됩니다. 애플리케이션을 재배포하는 Workflow가 있는 경우 애플리케이션도 실행됩니다.
 
-That's it! You reached the end of this lab! Check out the next section to recap what you accomplished.
+끝났습니다! 이 실습을 마쳤습니다. 달성한 내용을 요약하려면 다음 Section을 확인하세요.
