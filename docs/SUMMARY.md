@@ -670,7 +670,7 @@
     * [Dockerfile 수정 조언](tutorials/springone-workshop/snyk-container-for-developers/dockerfile-remediation-advice.md)
   * [Snyk Infrastructure as Code (IaC)](tutorials/springone-workshop/snyk-iac-for-developers/README.md)
     * [Snyk UI에서 IaC 아티팩트 검토](tutorials/springone-workshop/snyk-iac-for-developers/review-iac-artifacts-in-snyk-ui.md)
-  * [Workshop Wrap Up](tutorials/springone-workshop/additional-resources-and-next-steps.md)
+  * [Workshop 마무리](tutorials/springone-workshop/additional-resources-and-next-steps.md)
 
 ## MORE INFO
 
