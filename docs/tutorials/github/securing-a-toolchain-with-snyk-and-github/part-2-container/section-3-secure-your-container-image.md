@@ -52,11 +52,11 @@ Pull Request 보기에서 `build-container` 확인이 성공적으로 완료되�
 
 ## Step 3: 새로운 Vulnerability Scan 결과 검토
 
-With our new Base Image in place, we can review the vulnerability scan results from Snyk Container once again to see what vulnerabilities we have left to triage in our container image.
+새로운 기본 이미지가 있으면 Snyk Container의 취약성 스캔 결과를 다시 한 번 검토하여 컨테이너 이미지에서 분류해야 할 취약성이 무엇인지 확인할 수 있습니다.
 
 ### GitHub Security Code Scanning
 
-You can review vulnerability counts in GitHub Security Code Scanning, as shown in the previous section.
+이전 section에 표시된 대로 GitHub Security Code Scanning에서 취약성 수를 검토할 수 있습니다.
 
 {% hint style="warning" %}
 Results in Security Code Scanning take time to update. You won't see updated vulnerability counts until the CI Workflow completes after code has been merged into `develop`.
@@ -64,32 +64,32 @@ Results in Security Code Scanning take time to update. You won't see updated vul
 
 ### Snyk UI
 
-In the Snyk UI, the results for the Dockerfile update automatically once the changes are merged into the default working branch. We can see that simply by changing the base image we used, we went from 836 issues to 307! Now we only have 35 high severity vulnerabilities to triage, as opposed to the 203 from before.
+Snyk UI에서 변경 사항이 기본 작업 Branch에 Merge되면 Dockerfile에 대한 결과가 자동으로 업데이트됩니다. 우리가 사용한 기본 이미지를 변경하기만 하면 836개 문제에서 307개 문제로 줄어든 것을 볼 수 있습니다! 이제 우리는 이전의 203개와 달리 35개의 심각도가 높은 취약점만 선별할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-container-newbasevulns%20\(1\).png)
 
-## Step 4: Merge the changes to PROD
+## Step 4: 변경 사항을 PROD에 Merge
 
-We have outstanding vulnerabilities to take care of, but we need to push our changes to PROD in order to sustain the pace of delivery. We feel good about what we push to PROD, since it's a best effort progressing delivery while keeping the workload secure.
+처리해야 할 뛰어난 취약점이 있지만 전달 속도를 유지하려면 변경 사항을 PROD로 푸시해야 합니다. workload를 안전하게 유지하면서 전달을 진행하는 최선의 노력이기 때문에 우리가 PROD에 Push하는 것에 대해 기분이 좋습니다.
 
-Let's open a PR from `develop` to `PROD` to check in our work for the day.
+오늘의 작업을 확인하기 위해 `develop`에서 `PROD`로 PR을 열어 봅시다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-prprod.png)
 
-Once all checks pass, go ahead and merge the PR. Hooray! Our container is now PROD-ready!
+모든 확인이 통과되면 계속 진행하여 PR을 Merge합니다. 만세! 우리의 컨테이너는 이제 PROD 준비가 되었습니다!
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-prodchecks.png)
 
-#### Wait a minute, what about our Snyk Gate?
+#### 잠깐, Snyk Gate는 어떻습니까?
 
-In Part 1, we added a Snyk gate that prevents high-severity vulnerabilities from entering our PROD branch, so why can we merge to PROD even though high severity vulnerabilities are present?
+Part 1에서 심각도가 높은 취약점이 PROD Branch에 진입하지 못하도록 하는 Snyk 게이트를 추가했는데 심각도가 높은 취약점이 있는데도 PROD에 Merge할 수 있는 이유는 무엇입니까?
 
-In short, we opted to not add container vulnerabilities to the Snyk gate. It still evaluates application vulnerabilities, but in order to not overburden our developers, we opted to not implement it for our container base image.
+즉, Snyk 게이트에 컨테이너 취약성을 추가하지 않기로 했습니다. 여전히 애플리케이션 취약성을 평가하지만 개발자에게 과도한 부담을 주지 않기 위해 컨테이너 기본 이미지에 대해 구현하지 않기로 결정했습니다.
 
-## Recap & Next Steps
+## 요약 및 다음 단계
 
-In this Lab we containerized our sample application and ensured we're using the most secure base image available that's compatible with our application. We ensured, with our CI workflows, that the base image recommended by Snyk is compatible with our application.
+이 실습에서는 샘플 애플리케이션을 컨테이너화하고 애플리케이션과 호환되는 가장 안전한 기본 이미지를 사용하고 있는지 확인했습니다. CI Workflow를 통해 Snyk에서 권장하는 기본 이미지가 애플리케이션과 호환되는지 확인했습니다.
 
-We also saw how results from Snyk Container can be consumed directly in the GitHub UI using their Security Code Scanning functionality. This allows developers to access Snyk vulnerability information without leaving GitHub's UI.
+또한 보안 코드 스캔 기능을 사용하여 Snyk Container의 결과를 GitHub UI에서 직접 사용할 수 있는 방법도 확인했습니다. 이를 통해 개발자는 GitHub의 UI를 벗어나지 않고도 Snyk 취약성 정보에 액세스할 수 있습니다.
 
-In the next section, we take our application, and our security testing, a step further by introducing the files that will allow us to deploy this container to an orchestrated environment. When ready to start playing with Snyk Infrastructure as Code, proceed to Part 3!
+다음 section에서는 이 컨테이너를 오케스트레이션된 환경에 배포할 수 있게 해주는 파일을 도입하여 응용 프로그램과 보안 테스트를 한 단계 더 진행합니다. Snyk Infrastructure as Code를 사용할 준비가 되면 Part 3로 진행하십시오!
