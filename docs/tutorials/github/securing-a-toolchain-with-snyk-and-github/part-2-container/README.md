@@ -1,13 +1,14 @@
 # Part 2: Container
 
-## 실습 정보 <a href="#lab-meta" id="lab-meta"></a>
+## Lab Meta <a id="lab-meta"></a>
 
-> 난이도: 중급
+> **Difficulty**: Intermediate
 
 {% hint style="warning" %}
-Part 2로 진행하기 전에 Part 1: Open Source를 완료해야 합니다..
+You need to complete Part 1: Open Source before proceeding to Part 2.
 {% endhint %}
 
-애플리케이션을 컨테이너에 패키징한다고 해서 애플리케이션이 안전하게 보호되는 것은 아닙니다. 애플리케이션을 컨테이너에 패키징하고 Snyk을 사용하여 이로 인해 발생하는 위험을 해결하면서 Part 2에서 이를 함께 살펴보겠습니다.
+Packaging an application into a container does not magically make it secure. We will explore this together in Part 2, as we package our application into a container and use Snyk to tackle the risks this introduces.
 
-Part 2 에는 세 개의 Section이 있으며 Snyk Container를 보여줍니다. 시작하려면 Section 1로 진행하십시오.
+Part 2 has three Sections, and showcases Snyk Container. Proceed to Section 1 to get get started.
+

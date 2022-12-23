@@ -573,7 +573,7 @@
       * [Section 2: Stop the Bleeding](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-1-open-source/section-2-stop-the-bleeding.md)
       * [Section 3: 취약점 수정](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-1-open-source/section-3-fix-vulnerabilities.md)
     * [Part 2: Container](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-2-container/README.md)
-      * [Section 4: Containerize your app](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-2-container/section-1-containerize-your-app.md)
+      * [Section 4: 앱 컨테이너화](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-2-container/section-1-containerize-your-app.md)
       * [Section 5: Explore the Container Scan results](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-2-container/section-2-explore-the-container-scan-results.md)
       * [Section 6: Secure your Container Image](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-2-container/section-3-secure-your-container-image.md)
     * [Part 3: Infrastructure as Code](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-3-infrastructure-as-code/README.md)
