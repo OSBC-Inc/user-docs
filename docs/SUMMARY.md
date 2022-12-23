@@ -582,7 +582,7 @@
       * [Section 3: PROD 배포 차단 해제](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-3-infrastructure-as-code/section-9-unblock-the-prod-deployment.md)
     * [요약 및 다음 단계](tutorials/github/securing-a-toolchain-with-snyk-and-github/recap-and-next-steps.md)
 * [Microsoft Azure](tutorials/microsoft-azure/README.md)
-  * [Getting started](tutorials/microsoft-azure/getting-started.md)
+  * [시작하기](tutorials/microsoft-azure/getting-started.md)
   * [Sign up for Snyk](tutorials/microsoft-azure/setup-the-snyk-account.md)
   * [Securing AKS](tutorials/microsoft-azure/securing-aks/README.md)
     * [Provision Azure services](tutorials/microsoft-azure/securing-aks/provision-azure-services.md)

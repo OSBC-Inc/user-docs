@@ -1,17 +1,18 @@
-# Workshop 마무리
+# Workshop Wrap Up
 
-## 감사합니다!
+## Thank You!
 
-경험한 바와 같이 DecSecOps는 조직이 생성한 소프트웨어를 사용, 유지 관리 및 보호하는 데 도움이 되는 새로운 사례, 프로세스 및 도구 집합입니다. 대부분의 조직은 오픈 소스 취약성을 찾아 수정하여 DevSecOps 여정을 시작했습니다.
+As you experienced, DecSecOps is an emerging set of practices, processes, and tools to help organizations use, maintain, and secure the software they create. Most organizations have started their DevSecOps journey by finding and fixing their open source vulnerabilities.
 
-조직이 컨테이너로 마이그레이션함에 따라 제공을 가속화하기 위해 안전한 소프트웨어 공급망을 생성하기 위해 보안 관행을 계속 발전시키고 있습니다. 인프라 구성이 소프트웨어 기준선의 일부가 됨에 따라 이러한 새로운 아티팩트를 검증하고 보호하기 위한 더 나은 도구가 필요합니다.
+As organizations migrate to containers, they continue to evolve their security practices to generate a secure software supply chain to accelerate delivery. As infrastructure configuration becomes part of the software baseline, we need better tools to validate and secure these new artifacts.
 
-시간을 내어 이 Workshop에서 연습을 완료해 주셔서 감사합니다.
+I want to thank you for your time and completing the exercises in this workshop.
 
-## 추가 리소스
+## Additional Resources
 
-추가 DevSecOps 리소스는 Snyk의 [DevSecOps Hub](https://snyk.io/devsecops/)에서 사용할 수 있습니다. Linux Foundation의 오픈 소스 보안 기반입니다. 자세한 내용은 [https://openssf.org/](https://openssf.org/)를 방문하십시오.
+Additional DevSecOps resources are available on Snyk's [DevSecOps Hub](https://snyk.io/devsecops/). The open-source security foundation under the Linux Foundation. For more details, please visit [https://openssf.org/](https://openssf.org/).
 
-## 다음 단계
+## Next Steps
 
-Workshop에는 관심 있는 사람을 위한 추가 연습이 있습니다. CI/CD 파이프라인은 또한 Cloud Native Buildpacks 및 pack 명령을 사용하여 클라우드 네이티브 컨테이너 이미지를 빌드합니다. 컨테이너 이미지를 모니터링하는 Github 작업은 비활성화되어 있지만 Snyk를 통해 이미지 결과를 모니터링하고 워크샵에서 사용되는 Docker 파일 접근 방식과 비교할 수 있습니다.
+The workshop has an additional exercise for anyone interested. The CI/CD pipeline also builds a cloud-native container image using the Cloud Native Buildpacks and the pack command. The Github action to monitor the container images is inactive, but the image results can be monitored via Snyk and compared to the Docker file approach used in the workshop.
+
