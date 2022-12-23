@@ -580,7 +580,7 @@
       * [Section 1: 배포 매니페스트 생성](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-3-infrastructure-as-code/section-7-create-deployment-manifests.md)
       * [Section 2: IaC Scan 결과 검토](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-3-infrastructure-as-code/section-8-review-the-iac-scan-results.md)
       * [Section 3: PROD 배포 차단 해제](tutorials/github/securing-a-toolchain-with-snyk-and-github/part-3-infrastructure-as-code/section-9-unblock-the-prod-deployment.md)
-    * [Recap & Next Steps](tutorials/github/securing-a-toolchain-with-snyk-and-github/recap-and-next-steps.md)
+    * [요약 및 다음 단계](tutorials/github/securing-a-toolchain-with-snyk-and-github/recap-and-next-steps.md)
 * [Microsoft Azure](tutorials/microsoft-azure/README.md)
   * [Getting started](tutorials/microsoft-azure/getting-started.md)
   * [Sign up for Snyk](tutorials/microsoft-azure/setup-the-snyk-account.md)
