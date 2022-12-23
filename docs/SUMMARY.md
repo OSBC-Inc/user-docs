@@ -667,7 +667,7 @@
     * [Snyk UI에서 가져온 CI/CD 스캔 검토](tutorials/springone-workshop/snyk-ci-cd/review-imported-ci-cd-scans-in-snyk-ui.md)
   * [Snyk Containers](tutorials/springone-workshop/snyk-container-for-developers/README.md)
     * [SPEC 컨테이너 이미지를 Snyk UI로 가져오기](tutorials/springone-workshop/snyk-container-for-developers/import-spc-container-image-into-synk-ui.md)
-    * [Dockerfile fix advice](tutorials/springone-workshop/snyk-container-for-developers/dockerfile-remediation-advice.md)
+    * [Dockerfile 수정 조언](tutorials/springone-workshop/snyk-container-for-developers/dockerfile-remediation-advice.md)
   * [Snyk Infrastructure as Code (IaC)](tutorials/springone-workshop/snyk-iac-for-developers/README.md)
     * [Review IaC artifacts in Snyk UI](tutorials/springone-workshop/snyk-iac-for-developers/review-iac-artifacts-in-snyk-ui.md)
   * [Workshop Wrap Up](tutorials/springone-workshop/additional-resources-and-next-steps.md)
