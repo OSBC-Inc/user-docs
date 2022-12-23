@@ -2,16 +2,15 @@
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/microsoft-blog.png)
 
-**Snyk: Developer-First Security** is available in the Microsoft Azure Marketplace. 👉 [Get it now!](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/snyk.snyk-developer-first-security?tab=Overview)
+**Snyk: Developer-First Security**는 Microsoft Azure Marketplace에서 사용할 수 있습니다. 👉[지금 받으세요!](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/snyk.snyk-developer-first-security?tab=Overview)
 
-The examples provided in these pages include sample source code and templates which can be found in our [GitHub repository](https://github.com/snyk-partners/snyk-azure-resources). It is recommended that you [`clone`](https://github.com/snyk-partners/snyk-azure-resources.git) or [`fork`](https://github.com/snyk-partners/snyk-azure-resources/fork) the contents of this repo before you get started.
+이 페이지에서 제공되는 예제에는 [GitHub 저장소](https://github.com/snyk-partners/snyk-azure-resources)에서 찾을 수 있는 샘플 소스 코드 및 템플릿이 포함되어 있습니다. 시작하기 전에 이 저장소의 콘텐츠를 [`clone`](https://github.com/snyk-partners/snyk-azure-resources.git)하거나 [`fork`](https://github.com/snyk-partners/snyk-azure-resources/fork)하는 것이 좋습니다.
 
-## Learn more
+## 더 알아보기
 
-* [Snyk secures open source development with Microsoft Azure services](https://snyk.io/snyk-secures-open-source-development-with-microsoft-azure-services/)
-* [.NET open source security insights](https://snyk.io/blog/net-open-source-security-insights/)
-* [Azure Repos security best practices](https://snyk.io/wp-content/uploads/Cheat-Sheet-8-Azure-Repos-Tips.pdf)
-* [Azure Repos integration](https://support.snyk.io/hc/en-us/articles/360004002198-Azure-Repos-how-it-works)
-* [Azure Container Registry \(ACR\) integration](https://support.snyk.io/hc/en-us/articles/360003946957-Container-security-with-ACR-integrate-and-test)
-* [Azure Kubernetes Service \(AKS\) integration](https://support.snyk.io/hc/en-us/articles/360003916138-Kubernetes-integration-overview)
-
+* [Snyk은 Microsoft Azure 서비스로 오픈 소스 개발을 보호합니다.](https://snyk.io/snyk-secures-open-source-development-with-microsoft-azure-services/)
+* [.NET 오픈 소스 보안 인사이트](https://snyk.io/blog/net-open-source-security-insights/)
+* [Azure Repos 보안 모범 사례](https://snyk.io/wp-content/uploads/Cheat-Sheet-8-Azure-Repos-Tips.pdf)
+* [Azure Repos Integration](https://support.snyk.io/hc/en-us/articles/360004002198-Azure-Repos-how-it-works)
+* [ACR(Azure Container Registry) Integration](https://support.snyk.io/hc/en-us/articles/360003946957-Container-security-with-ACR-integrate-and-test)
+* [AKS(Azure Kubernetes Service) Integration](https://support.snyk.io/hc/en-us/articles/360003916138-Kubernetes-integration-overview)
