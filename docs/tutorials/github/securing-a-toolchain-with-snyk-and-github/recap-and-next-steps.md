@@ -2,15 +2,15 @@
 
 ## 축하합니다! <a href="#congratulations" id="congratulations"></a>
 
-You reached the end of this Lab, what a journey! We hope that as you progressed through the lab you saw how Snyk and GitHub Actions together can help facilitate a secure Continuous Integration and Continuous Delivery paradigm for your software delivery practice.‌
+이 실습의 끝에 도달했습니다. 대단한 여정이었습니다! 실습을 진행하면서 Snyk과 GitHub Actions가 함께 소프트웨어 제공 관행을 위한 안전한 지속적 통합 및 지속적 제공 패러다임을 촉진하는 데 어떻게 도움이 되는지 확인하셨기를 바랍니다.‌
 
-We hope you enjoyed this lab. Below we recap what you've accomplished, and provide additional resources to help you get more value out of Snyk,.
+이 실습이 마음에 드셨기를 바랍니다. 아래에서 귀하가 달성한 내용을 요약하고 Snyk에서 더 많은 가치를 얻는 데 도움이 되는 추가 리소스를 제공합니다.
 
 ## Snyk Open Source <a href="#snyk-open-source" id="snyk-open-source"></a>
 
-In part 1, you used Snyk Open Source to find vulnerabilities in the Open Source components for the sample application. You configured the GitHub integration, created fix Pull Requests, and built a gate into the release process to ensure issues did not make their way into a Production branch.‌
+Part 1에서는 Snyk 오픈 소스를 사용하여 샘플 애플리케이션의 오픈 소스 구성 요소에서 취약점을 찾았습니다. GitHub Integration을 구성하고 수정 Pull Request를 생성하고 릴리스 프로세스에 게이트를 구축하여 문제가 프로덕션 Branch로 전달되지 않도록 했습니다.‌
 
-Some things we didn't cover:
+우리가 다루지 않은 몇 가지 사항:
 
 ### Automatic Dependency Upgrade Pull Requests <a href="#automatic-dependency-upgrade-pull-requests" id="automatic-dependency-upgrade-pull-requests"></a>
 
