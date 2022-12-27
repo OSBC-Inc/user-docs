@@ -1,25 +1,25 @@
-# Sign up for Snyk
+# Snyk에 가입
 
-## Create account
+## 계정 생성
 
 {% hint style="success" %}
-<mark style="color:purple;"></mark>[<mark style="color:purple;">Sign up to start using Snyk for free!</mark>](https://snyk.io/login?cta=sign-up\&loc=nav\&page=support\_docs\_page)<mark style="color:purple;"></mark>
+[Snyk를 무료로 사용하려면 가입하십시오!](https://snyk.io/login?cta=sign-up\&loc=nav\&page=support\_docs\_page)
 {% endhint %}
 
-Visit [https://snyk.io](https://snyk.io) and log in.
+[https://snyk.io](https://snyk.io/)를 방문하여 로그인합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_login\_01.png)
 
-## Yes, it's really free
+## 네, 정말 무료입니다
 
-If you do not have an account, you can [sign up](https://app.snyk.io/signup) for a free account. Snyk offers a [free plan](https://snyk.io/plans/) which includes:
+계정이 없는 경우 무료 계정에 [가입](https://app.snyk.io/signup)할 수 있습니다. Snyk은 다음을 포함하는 [무료 요금제](https://snyk.io/plans/)를 제공합니다:
 
-* Unlimited tests on open-source projects
-* 200 tests for open source vulnerabilities on private projects and 100 tests for container vulnerabilities
-* Fixes for open source and container vulnerabilities
-* CLI scans
-* Cloud source code integration to GitHub, Azure Repos, and others
-* CI/CD pipeline integration
-* Continuous monitoring
-* Public container registry integration to ACR and others
-* Helm plugin to test images from Helm charts
+* 오픈 소스 프로젝트에 대한 무제한 테스트
+* 비공개 프로젝트에 대한 오픈 소스 취약점에 대한 200개의 테스트 및 컨테이너 취약점에 대한 100개의 테스트
+* 오픈 소스 및 컨테이너 취약점에 대한 수정
+* CLI 스캔
+* GitHub, Azure Repos 등에 대한 클라우드 소스 코드 통합
+* CI/CD 파이프라인 통합
+* 지속적인 모니터링
+* ACR 및 기타에 대한 퍼블릭 컨테이너 레지스트리 통합
+* Helm 차트에서 이미지를 테스트하는 Helm 플러그인
