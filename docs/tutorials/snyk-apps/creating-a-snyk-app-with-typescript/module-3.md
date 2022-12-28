@@ -144,17 +144,17 @@ Snyk App용 콘텐츠 렌더링은 원하는 만큼 간단하거나 복잡할 �
 
 ## 사용자에게 프로젝트 목록 표시
 
-Now that we've got some basic templates, let's take a look at how we can add some functionality to our Snyk App using a User's Snyk data. For this tutorial, we'll be setting up our app to allow users to view all of their projects within Snyk from within our app.
+이제 몇 가지 기본 템플릿이 있으므로 사용자의 Snyk 데이터를 사용하여 Snyk 앱에 몇 가지 기능을 추가하는 방법을 살펴보겠습니다. 이 실습에서는 사용자가 앱 내에서 Snyk 내의 모든 프로젝트를 볼 수 있도록 앱을 설정합니다.
 
-This is a basic, but easily extendable feature.
+이것은 기본적이지만 쉽게 확장할 수 있는 기능입니다.
 
-We'll need to create:
+다음을 만들어야 합니다:
 
-* A new route controller
-* A function (or functions) to pull the project data
-* An EJS template for showing the projects
+* 새로운 경로 컨트롤러
+* 프로젝트 데이터를 가져오는 기능(들)
+* 프로젝트를 표시하기 위한 EJS 템플릿
 
-Let's start with the API work. We'll utilize the `callSnykApi()` function we created in the previous module. Since this directly relates to a particular route, we'll store this file with its controller. Following the patteren we've used throughout these tutorial modules, we'll create both files at `./src/routes/projects/`.
+API 작업부터 시작하겠습니다. 이전 모듈에서 만든 `callSnykApi()` 함수를 활용합니다. 이것은 특정 경로와 직접 관련이 있으므로 컨트롤러와 함께 이 파일을 저장합니다. 이 자습서 모듈 전체에서 사용한 패턴에 따라 `./src/routes/projects/`에 두 파일을 모두 만듭니다.
 
 ```typescript
 // ./src/routes/projects/projectsHandler.ts
@@ -207,7 +207,8 @@ export function mostRecent(installs: AuthData[]): AuthData | void {
 }
 ```
 
-Next we'll write the route controller. Follow the pattern: `./src/routes/projects/projectsController.ts`.
+다음으로 경로 컨트롤러를 작성합니다. 패턴을 따라:\
+`./src/routes/projects/projectsController.ts`.
 
 ```typescript
 // ./src/routes/projects/projectsController.ts
@@ -245,7 +246,7 @@ export class ProjectsController implements Controller {
 }
 ```
 
-Whenever we add a new route controller, we need to update `./index.ts` to include it.
+새 경로 컨트롤러를 추가할 때마다 이를 포함하도록 `./index.ts`를 업데이트해야 합니다.
 
 ```typescript
 // ./src/index.ts
@@ -265,8 +266,8 @@ new App([
 );
 ```
 
-## Wrap-up
+## 마무리
 
-Using the projects API handler and controller we created in this module, you should have all you need to create your own custom code and make your Snyk App do whatever you'd like it to do.
+이 모듈에서 생성한 프로젝트 API 핸들러 및 컨트롤러를 사용하면 사용자 지정 코드를 생성하고 Snyk 앱이 원하는 작업을 수행하는 데 필요한 모든 것이 있어야 합니다.
 
-We used the v1 API here, but make sure to keep an eye out on Snyk's V3 API over the next months as more and more features are added, you may find new or more efficient endpoints to use in your Snyk App!
+여기서는 v1 API를 사용했지만 앞으로 몇 달 동안 더 많은 기능이 추가됨에 따라 Snyk의 V3 API를 주시하십시오. Snyk 앱에서 사용할 새롭거나 더 효율적인 엔드포인트를 찾을 수 있습니다!
