@@ -1,29 +1,29 @@
-# Render Content For Users
+# 사용자를 위한 콘텐츠 렌더링
 
-In the previous module, we covered registering our Snyk App, setting up the authorization flow, and handling user authorization within our App. All of those topics are integral to the functionality of every Snyk App, but they're all what you might call "behind the scenes" topics.
+이전 모듈에서는 Snyk 앱 등록, 인증 흐름 설정 및 앱 내 사용자 인증 처리에 대해 다루었습니다. 이러한 모든 주제는 모든 Snyk 앱의 기능에 필수적이지만 모두 "비하인드 스토리" 주제라고 할 수 있습니다.
 
-In this module, we'll switch gears to focus on displaying content to the users who have authorized with our Snyk App. Specifically, we want to show unauthorized users a big button they can click to authorize and authorized users a list of their projects from Snyk.
+이 모듈에서는 Snyk 앱으로 승인한 사용자에게 콘텐츠를 표시하는 데 집중하도록 기어를 전환합니다. 구체적으로, 승인되지 않은 사용자에게 클릭할 수 있는 큰 버튼을 표시하고 사용자에게 Snyk의 프로젝트 목록을 승인하고 승인하려고 합니다.
 
-## Add a template engine to the Snyk App
+## Snyk 앱에 템플릿 엔진 추가
 
-While Express is perfectly capable of printing content to the screen and even rendering HTML server-side, life is much easier when using a template engine. For this tutorial, we'll be using [EJS](https://ejs.co).
+Express는 콘텐츠를 화면에 완벽하게 인쇄하고 HTML 서버 측 렌더링까지 할 수 있지만 템플릿 엔진을 사용하면 삶이 훨씬 쉬워집니다. 이 자습서에서는 [EJS](https://ejs.co/)를 사용합니다.
 
-First things first, install the node packages we'll be using for this portion of the tutorial:
+먼저 튜토리얼의 이 부분에서 사용할 노드 패키지를 설치합니다:
 
 ```bash
 npm install --save ejs
 ```
 
-Next, we'll modify the `initGlobalMiddlewares()` function we created in our last module to tell express that we want to use a _view engine_, EJS in this case, and let it know where we'll be storing our view templates. We'll be storing our EJS templates in `./src/views` and keeping any common files (e.g., images, CSS, etc...) in `/.src/public`.
+다음으로 우리는 마지막 모듈에서 생성한 `initGlobalMiddlewares()` 함수를 수정하여 보기 엔진(이 경우 EJS)을 사용하고 싶다고 표현하고 보기 템플릿을 저장할 위치를 알려줍니다. EJS 템플릿을 `./src/views`에 저장하고 공통 파일(예: 이미지, CSS 등)을 `/.src/public`에 보관합니다.
 
-Create the new directories first.
+먼저 새 디렉터리를 만듭니다.
 
 ```bash
 mkdir -p ./src/views/partials
 mkdir -p ./src/public
 ```
 
-Now we can update `./src/app.ts`:
+이제 `./src/app.ts`를 업데이트할 수 있습니다:
 
 ```typescript
 // ./src/app.ts
@@ -50,7 +50,7 @@ class App {
 }
 ```
 
-For each route that we'll provide a template for, we'll need to modify the corresponding controller and ensure that we're using `res.render("<template name>")` rather than something more simplistic like `res.send()`.
+템플릿을 제공할 각 경로에 대해 해당 컨트롤러를 수정하고 `res.send()`와 같이 더 단순한 것이 아니라 `res.render("<template name>")`을 사용하고 있는지 확인해야 합니다. .
 
 E.g.,
 
@@ -68,11 +68,11 @@ private indexPage(req: Request, res: Response, next: NextFunction) {
 ...
 ```
 
-That's really all there is to it.
+그게 전부입니다.
 
-EJS templates support the concept of partial inclusion. While not strictly necessary, it makes sense to add a subdirectory to our `./src/views` to differentiate partial templates like headers and footers from route templates. For the tutorial, we'll use `./src/views/partials` to store such templates.
+EJS 템플릿은 부분 포함 개념을 지원합니다. 반드시 필요한 것은 아니지만 `./src/views`에 하위 디렉토리를 추가하여 머리글 및 바닥글과 같은 부분 템플릿을 경로 템플릿과 구별하는 것이 좋습니다. 자습서에서는 `./src/views/partials`를 사용하여 이러한 템플릿을 저장합니다.
 
-## Basic EJS templates
+## 기본 EJS 템플릿
 
 The first template we'll create is a partial, which we'll include in the other templates. This `header.ejs` will be the place we link stylesheets and other information that belongs in the `<head>` of an HTML document.
 
