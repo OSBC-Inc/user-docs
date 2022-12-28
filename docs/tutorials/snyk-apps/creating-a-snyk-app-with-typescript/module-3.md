@@ -74,7 +74,7 @@ EJS 템플릿은 부분 포함 개념을 지원합니다. 반드시 필요한 �
 
 ## 기본 EJS 템플릿
 
-The first template we'll create is a partial, which we'll include in the other templates. This `header.ejs` will be the place we link stylesheets and other information that belongs in the `<head>` of an HTML document.
+우리가 만들 첫 번째 템플릿은 다른 템플릿에 포함할 부분 템플릿입니다. 이 `header.ejs`는 HTML 문서의 `<head>` 에 속하는 스타일시트 및 기타 정보를 연결하는 위치입니다.
 
 ```ejs
 // ./views/partials/header.ejs
@@ -96,7 +96,7 @@ The first template we'll create is a partial, which we'll include in the other t
 </html>
 ```
 
-This `index.ejs` template will cover our basic `/` route.
+이 `index.ejs` 템플릿은 기본 `/` 경로를 다룹니다.
 
 ```ejs
 // ./views/index.ejs
@@ -115,7 +115,7 @@ This `index.ejs` template will cover our basic `/` route.
 </body>
 ```
 
-`callback.ejs` will render for successful user authorizations.
+`callback.ejs`는 성공적인 사용자 인증을 위해 렌더링됩니다.
 
 ```ejs
 // ./views/callback.ejs
@@ -138,11 +138,11 @@ This `index.ejs` template will cover our basic `/` route.
 </body>
 ```
 
-The above templates should be enough to get you started adding your own templates to any new routes you create. If you intend to continue using EJS, make sure to reference the documentation for information about the features offered.
+위의 템플릿은 생성한 새 경로에 고유한 템플릿을 추가하기 시작하기에 충분해야 합니다. EJS를 계속 사용하려는 경우 제공되는 기능에 대한 정보는 설명서를 참조하십시오.
 
-Rendering content for your Snyk App can be as simple or complex as you'd like it to be. Because we're dealing with JavaScript, the options are very flexible!
+Snyk App용 콘텐츠 렌더링은 원하는 만큼 간단하거나 복잡할 수 있습니다. JavaScript를 다루기 때문에 옵션이 매우 유연합니다!
 
-## Showing users a list of projects
+## 사용자에게 프로젝트 목록 표시
 
 Now that we've got some basic templates, let's take a look at how we can add some functionality to our Snyk App using a User's Snyk data. For this tutorial, we'll be setting up our app to allow users to view all of their projects within Snyk from within our app.
 
