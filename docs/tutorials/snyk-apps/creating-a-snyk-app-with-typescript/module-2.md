@@ -364,10 +364,10 @@ export async function getAppOrgID(tokenType: string, accessToken: string): Promi
 
 ### 쉽게 암호화/복호화
 
-It's a good idea to encrypt the data we'll be pulling out of the API, let's define a small class for doing so. The class has two members:
+API에서 가져올 데이터를 암호화하는 것이 좋습니다. 그렇게 하기 위한 작은 클래스를 정의해 보겠습니다. 이 클래스에는 두 명의 구성원이 있습니다:
 
-1. `secret`: The key used to encrypt data
-2. `cryptr`: Instance of the Cryptr library
+1. `secret`: 데이터 암호화에 사용되는 키
+2. `cryptr`: Cryptor 라이브러리의 인스턴스
 
 ```typescript
 // ./src/util/encrypt-decrypt.ts
@@ -404,15 +404,15 @@ export class EncryptDecrypt {
 }
 ```
 
-### Configure Passport.js and the Snyk-OAuth2 strategy
+### Passport.js 및 Snyk-OAuth2 전략 구성
 
-We've laid the groundwork, now its time to start actually doing things.
+우리는 토대를 마련했으며 이제 실제로 해볼 때입니다.
 
-As discussed in a previous section, our app needs to send would-be authorizors to a specific token URL. We'll add an `/auth` route in our Snyk App and add someauthentication middleware to Express. For this, we'll use the excellent [passportjs](https://www.passportjs.org), the [passport-oauth2](https://https/www.passportjs.org/packages/passport-oauth2) authentication strategy, along with Snyk's very own [@snyk/passport-snyk-oauth2](https://www.npmjs.com/package/@snyk/passport-snyk-oauth2). `passport` and its friends handle a large portion of what would otherwise be a lengthy and complicated authentication process.
+이전 섹션에서 논의한 바와 같이 앱은 특정 토큰 URL에 잠재적 권한 부여자를 보내야 합니다. Snyk 앱에 `/auth` 경로를 추가하고 Express에 일부 인증 미들웨어를 추가합니다. 이를 위해 Snyk의 [@snyk/passport-snyk-oauth2](https://www.npmjs.com/package/@snyk/passport-snyk-oauth2)와 함께 우수한 [passportjs](https://www.passportjs.org/), [passport-oauth2](https://https/www.passportjs.org/packages/passport-oauth2) 인증 전략을 사용할 것입니다. `passport`와 그 친구들은 길고 복잡한 인증 프로세스의 많은 부분을 처리합니다.
 
-Because `passport` takes its encapsulation philosophy seriously, we'll need to handle everything else about the auth process. We need to setup an instance of the passport strategy we'll be using. We'll put our database helpers from earlier to use here as well, adding an entry into our database when we receive successful authorization.
+`Passport`는 캡슐화 철학을 진지하게 받아들이기 때문에 인증 프로세스에 대한 다른 모든 것을 처리해야 합니다. 사용할 패스포트 전략의 인스턴스를 설정해야 합니다. 성공적인 인증을 받으면 데이터베이스에 항목을 추가하여 이전의 데이터베이스 도우미를 여기에서도 사용할 수 있도록 배치합니다.
 
-It's worth taking the time to go over this file and make sure you've understood everything its doing.
+시간을 들여 이 파일을 검토하고 모든 작업을 이해했는지 확인하는 것이 좋습니다.
 
 ```typescript
 // ./util/OAuth2Strategy.ts
@@ -513,14 +513,14 @@ export function getOAuth2(): SnykOAuth2Strategy {
 }
 ```
 
-### Update Express Middleware
+### 익스프레스 미들웨어 업데이트
 
-With our passport strategy implemented, modify `app.ts` to setup the `passport` middleware as shown in the next code block. Rather than calling it directly, we'll create a function called `initGlobalMiddlewares()` allowing us to set up a few other middlewares at the same time:
+Passport 전략이 구현되면 `app.ts`를 수정하여 다음 코드 블록에 표시된 대로 `passport` 미들웨어를 설정합니다. 직접 호출하는 대신 동시에 몇 가지 다른 미들웨어를 설정할 수 있는 `initGlobalMiddlewares()`라는 함수를 만듭니다:
 
-* `express.json()`: Express middleware for handling JSON requests
-* `express.urlencoded()`: Express middleware to handle URL encoded calls
-* `expressSession`: We use the `express-session` middleware package which is extended by `passport`
-* `setupPassport`: Initializes `passport` setup
+* `express.json()`: JSON 요청을 처리하기 위한 익스프레스 미들웨어
+* `express.urlencoded()`: URL 인코딩 호출을 처리하는 익스프레스 미들웨어
+* `expressSession`: 우리는 `passport`로 확장되는 `express-session` 미들웨어 패키지를 사용합니다.
+* `setupPassport`: `passport` 설정 초기화
 
 ```typescript
 // ./src/app.ts
@@ -570,9 +570,9 @@ private initGlobalMiddlewares() {
 ...
 ```
 
-### Handle the authorization and callback routes
+### 승인 및 콜백 경로 처리
 
-The authorization and callback controllers are comparatively simple. Create two new controller files:
+인증 및 콜백 컨트롤러는 비교적 간단합니다. 두 개의 새 컨트롤러 파일을 만듭니다:
 
 ```bash
 mkdir -p ./src/routes/auth;
@@ -581,9 +581,9 @@ touch ./src/routes/auth/authController.ts
 touch ./src/routes/callback/callbackController.ts
 ```
 
-The `AuthController` handles authentication of the App via the previously described authorization flow. This is the third step of `passport` setup. Every controller class implements the controller interface which has two members: the path and the router.
+`AuthController`는 앞에서 설명한 인증 흐름을 통해 앱의 인증을 처리합니다. `passport` 설정의 세 번째 단계입니다. 모든 컨트롤러 클래스는 경로와 라우터라는 두 가지 구성원이 있는 컨트롤러 인터페이스를 구현합니다.
 
-This controller handles the `/auth` route, which is what we'll use to send users (via `passport`) to the Snyk website for authorization approval.
+이 컨트롤러는 인증 승인을 위해 사용자를 Snyk 웹사이트로 보내는 데 사용 (`passport`를 통해) 할 `/auth` 경로를 처리합니다.
 
 ```typescript
 // ./src/routes/auth/authController.ts
@@ -614,9 +614,9 @@ class AuthController implements Controller {
 export default AuthController;
 ```
 
-Once a user approves authorization to our Snyk App via the Snyk website, they're kicked back to our callback URI, `/callback`. We'll handle this route similarly, invoking passport again. This is the final step of user authorization.
+사용자가 Snyk 웹사이트를 통해 Snyk 앱에 대한 승인을 승인하면 콜백 URI인 `/callback`으로 되돌아갑니다. 우리는 여권을 다시 호출하여 이 경로를 유사하게 처리할 것입니다. 이것은 사용자 인증의 마지막 단계입니다.
 
-The `CallbackController` accepts requests on `/callback`, but also creates two sub-routes, `/callback/success` and `/callback/failure`, to handle the different possible outcomes it might receive from Snyk.
+`CallbackController`는 `/callback`에 대한 요청을 수락하지만 Snyk에서 수신할 수 있는 다른 가능한 결과를 처리하기 위해 두 개의 하위 경로인 `/callback/success` 및 `/callback/failure`도 생성합니다.
 
 ```typescript
 // ./src/routes/callback/callbackController.ts
@@ -653,7 +653,7 @@ export class CallbackController implements Controller {
 }
 ```
 
-Before we're done, we need to make sure we add a reference to our new controllers in our `index.ts`.
+완료하기 전에 `index.ts`에 새 컨트롤러에 대한 참조를 추가해야 합니다.
 
 ```typescript
 // ./src/index.ts
@@ -671,11 +671,11 @@ new App([
 );
 ```
 
-### Refresh token management
+### 새로 고침 토큰 관리
 
-If we build and run our Snyk App at this point, hitting the `/auth` route will successfully jump us out to the Snyk authorization portal and, provided we confirm the authorization, we'll get kicked back to our local app's callback route at `/callback`. If we had a very simplistic, one-off use-case, we could end things here. But there's one more piece of the puzzle we should figure out if we're going to keep our user's authorization fresh, that thing is token expiry.
+이 시점에서 Snyk 앱을 빌드하고 실행하는 경우 `/auth` 경로를 누르면 성공적으로 Snyk 인증 포털로 이동하고 인증을 확인하면 `/callback`에서 로컬 앱의 콜백 경로로 되돌아갑니다. . 매우 단순하고 일회성 사용 사례가 있는 경우 여기에서 작업을 종료할 수 있습니다. 그러나 사용자의 인증을 최신 상태로 유지하려면 토큰 만료라는 퍼즐 조각이 하나 더 있습니다.
 
-If you ran the app to test things, take a look at database entries. If you've been following along, you should see something like this:
+테스트를 위해 앱을 실행했다면 데이터베이스 항목을 살펴보세요. 따라오셨다면 다음과 같이 표시되어야 합니다:
 
 ```json
 {
@@ -695,13 +695,13 @@ If you ran the app to test things, take a look at database entries. If you've be
 }
 ```
 
-That `expires_in` value will continue to countdown until 0. If it does, the user will need to re-authorize.
+해당 `expires_in` 값은 0까지 카운트다운을 계속합니다. 그렇다면 사용자는 다시 인증해야 합니다.
 
-To keep our access token from going stale, we need to make a POST request using our `refresh_token` to get an updated `access_token` as described in the [Snyk Docs](https://docs.snyk.io/features/integrations/snyk-apps/getting-started-with-snyk-apps/set-up-the-refresh-token-exchange).
+액세스 토큰이 유효하지 않게 유지하려면 [Snyk Docs](https://docs.snyk.io/features/integrations/snyk-apps/getting-started-with-snyk-apps/set-up-the-refresh-token-exchange)에 설명된 대로 업데이트된 `access_token`을 얻기 위해 `refresh_token`을 사용하여 POST 요청을 만들어야 합니다.
 
-We can automate this process in our Snyk App by utilizing [Axios interceptors](https://axios-http.com/docs/interceptors) to _intercept_ the requests we make and ensure we have an up-to-date `access_token`.
+[Axios 인터셉터](https://axios-http.com/docs/interceptors)를 활용하여 요청을 가로채고 최신 `access_token`을 확보함으로써 Snyk 앱에서 이 프로세스를 자동화할 수 있습니다.
 
-Create the file `./src/util/interceptors.ts`, importing all the packages, classes, etc... that we'll need at the top:
+`./src/util/interceptors.ts` 파일을 만들고 맨 위에 필요한 모든 패키지, 클래스 등을 가져옵니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -717,9 +717,9 @@ import { ENCRYPTION_SECRET } from "../app";
 import axios from "axios";
 ```
 
-We'll add a total of three interceptors.
+총 3개의 인터셉터를 추가합니다.
 
-The first, `refreshTokenReqInterceptor`, will refresh the `auth_token` using the `refresh_token` when the `auth_token` expires. It takes an _AxiosRequestConfig_ request as an argument that can be used in the interceptor for additional checks.
+첫 번째 `refreshTokenReqInterceptor`는 `auth_token`이 만료될 때 `refresh_token`을 사용하여 `auth_token`을 새로 고칩니다. 추가 검사를 위해 인터셉터에서 사용할 수 있는 인수로 AxiosRequestConfig 요청을 사용합니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -746,7 +746,7 @@ export async function refreshTokenReqInterceptor(request: AxiosRequestConfig): P
 }
 ```
 
-`refreshTokenRespInterceptor` will be used during request responses and only refresh/retry the token when the response being received is a 401 Unauthorized (this is what Passport returns when things go awry).
+`refreshTokenRespInterceptor`는 요청 응답 중에 사용되며 수신되는 응답이 401 Unauthorized(상황이 잘못되었을 때 Passport가 반환하는 것임)인 경우에만 토큰을 새로고침/재시도합니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -776,7 +776,7 @@ export async function refreshTokenRespInterceptor(error: AxiosError): Promise<Ax
 }
 ```
 
-Lastly, `refreshAndUpdateDb` refreshes the access token for a given database record, and updates the database again before returning the newly refreshed token.
+마지막으로 `refreshAndUpdateDb`는 지정된 데이터베이스 레코드에 대한 액세스 토큰을 새로 고치고 새로 새로 고친 토큰을 반환하기 전에 데이터베이스를 다시 업데이트합니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -806,7 +806,7 @@ async function refreshAndUpdateDb(data: AuthData): Promise<string> {
 }
 ```
 
-With our interceptors defined, the only thing we need to do is update our `callSnykApi` function to utilize them. Interceptors are methods of the `axiosInstance` object, so we'll add them after the `axios.create()` call and before the function's `return`.
+인터셉터가 정의되면 `callSnykApi` 함수를 업데이트하여 이를 활용하기만 하면 됩니다. 인터셉터는 `axiosInstance` 객체의 메서드이므로 `axios.create()` 호출 후와 함수 `return` 전에 추가합니다.
 
 ```typescript
 // ./src/util/APIHelpers.ts
@@ -839,8 +839,8 @@ export function callSnykApi(tokenType: string, token: string, version: APIVersio
 ...
 ```
 
-## Wrap-up
+## 마무리
 
-If you've made it this far, congratulations! You've learned how to register a Snyk App with Snyk, configure the authorization flow, keep the `auth_token` from getting stale, and set up a great starting point using TypeScript!
+여기까지 왔다면 축하합니다! Snyk에 Snyk 앱을 등록하고, 권한 부여 흐름을 구성하고, `auth_token`이 오래되지 않도록 유지하고, TypeScript를 사용하여 훌륭한 시작점을 설정하는 방법을 배웠습니다!
 
-In the next module of this tutorial, we'll add a template system and configure our app to show users all of their projects from Snyk in our App.
+이 튜토리얼의 다음 모듈에서는 템플릿 시스템을 추가하고 앱에서 Snyk의 모든 프로젝트를 사용자에게 표시하도록 앱을 구성합니다.
