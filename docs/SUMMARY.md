@@ -634,7 +634,7 @@
   * [Module 3](tutorials/red-hat/module-3.md)
   * [Conclusion](tutorials/red-hat/conclusion.md)
 * [Snyk Apps](tutorials/snyk-apps/README.md)
-  * [Create a Snyk App with TypeScript](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/README.md)
+  * [TypeScript로 Snyk 앱 만들기](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/README.md)
     * [Configuring Express.js](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/module-1.md)
     * [Register The App and Configure User Authorization](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/module-2.md)
     * [Render Content For Users](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/module-3.md)
