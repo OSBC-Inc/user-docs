@@ -1,6 +1,6 @@
 # Module 1
 
-## Red Hat Dependency Analytics extension for Visual Studio Code
+## Visual Studio Code용 Red Hat 종속성 분석 확장
 
 Once you have [installed](https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics\&ssr=false#overview) the extension, opening or editing a manifest file (`pom.xml` / `package.json` / `requirements.txt`) within VSCode will scan your application with Snyk to identify security vulnerabilities in your dependencies. You can also right-click on a manifest file (`pom.xml`/`package.json` / `requirements.txt`) in the **VSCode File explorer** or **VSCode File editor** to display **Dependency Analytics Report** for your application.
 
