@@ -1,50 +1,50 @@
-# Register The App and Configure User Authorization
+# 앱 등록 및 사용자 인증 구성
 
-In the previous sections of this tutorial, we set up our TypeScript project, added an Express server, and configured some basic routing. We'll be building on top of the project we created in the previous sections, so if you haven't, it is highly recommended that you first complete the previous portions of this tutorial before continuing.
+이 자습서의 이전 섹션에서는 TypeScript 프로젝트를 설정하고 Express 서버를 추가하고 몇 가지 기본 라우팅을 구성했습니다. 우리는 이전 섹션에서 생성한 프로젝트 위에 빌드할 것이므로 아직 하지 않은 경우 계속하기 전에 이 자습서의 이전 부분을 먼저 완료하는 것이 좋습니다.
 
-## Creating and registering a Snyk App
+## Snyk 앱 생성 및 등록
 
-We've made some good progress with our TypeScript application so far, but at the moment, that's all it is - a TypeScript application. To turn it into a bonified Snyk App, we'll need to register our project as a new App using Snyk's API
+우리는 지금까지 TypeScript 애플리케이션으로 좋은 진전을 이루었지만 현재로서는 TypeScript 애플리케이션이 전부입니다. Bonified Snyk 앱으로 전환하려면 Snyk의 API를 사용하여 프로젝트를 새 앱으로 등록해야 합니다.
 
-### Prerequisites
+### 전제 조건
 
-* A Snyk account with API privileges
-* A [Snyk API Token](https://docs.snyk.io/features/snyk-api-info/authentication-for-api)
-* The `orgId` of the Snyk Organization that will be registered as the App owner
+* API 권한이 있는 Snyk 계정
+* [Snyk API 토큰](https://docs.snyk.io/features/snyk-api-info/authentication-for-api)
+* 앱 소유자로 등록될 Snyk 조직의 `orgId`
 
-#### Obtaining an `orgId`
+`orgId` 얻기
 
-There are two methods for retrieving an `orgId`. The first is to simply login to your Snyk account and visit the organization settings page for the organization you wish to retrieve the ID of. The path to the organization settings page is:
+`orgId`를 검색하는 방법에는 두 가지가 있습니다. 첫 번째는 Snyk 계정에 로그인하고 ID를 검색하려는 조직의 조직 설정 페이지를 방문하는 것입니다. 조직 설정 페이지의 경로는 다음과 같습니다:
 
 ```
 https://snyk.io/org/{your-org-name}/manage/settings
 ```
 
-Alternatively, you may also retrieve an organization's `orgId` via the `https://snyk.io/api/v1/orgs` API endpoint, using your API token in the authorization header. For details about this endpoint, view it's documentation [here](https://snyk.docs.apiary.io/#reference/organizations/the-snyk-organization-for-a-request/list-all-the-organizations-a-user-belongs-to).
+또는 인증 헤더의 API 토큰을 사용하여 `https://snyk.io/api/v1/orgs` API 끝점을 통해 조직의 `orgId`를 검색할 수도 있습니다. 이 끝점에 대한 자세한 내용은 [여기](https://snyk.docs.apiary.io/#reference/organizations/the-snyk-organization-for-a-request/list-all-the-organizations-a-user-belongs-to)에서 해당 설명서를 참조하십시오.
 
-### About Snyk Apps and the Snyk API
+### Snyk 앱 및 Snyk API 정보
 
-Snyk Apps have first class access to the API, regardless of whether users installing the App have paid for access or not. To take advantage of this feature, Apps must use API endpoints with the domainhttps://api.snyk.io/rather than the conventional https://snyk.io/api/, when accessing the API within the App.
+Snyk 앱은 앱을 설치하는 사용자가 액세스 비용을 지불했는지 여부에 관계없이 API에 대한 일급 액세스 권한을 갖습니다. 이 기능을 활용하려면 앱 내에서 API에 액세스할 때 앱이 기존의 https://snyk.io/api/가 아닌 https://api.snyk.io/ 도메인이 있는 API 엔드포인트를 사용해야 합니다.
 
-### Registering our app with Snyk
+### Snyk에 앱 등록
 
-Registration of a new Snyk App is a performed via a simple POST request to Snyk's API. While we could certainly configure the App we've been building throughout this tutorial to perform the request, we'll instead make the request directly using `curl` to avoid creating a function that can only be run a single time.
+새로운 Snyk 앱 등록은 Snyk의 API에 대한 간단한 POST 요청을 통해 수행됩니다. 요청을 수행하기 위해 이 자습서 전체에서 구축한 앱을 확실히 구성할 수 있지만 대신 한 번만 실행할 수 있는 함수를 만들지 않도록 `curl`을 사용하여 직접 요청을 수행합니다.
 
-The body of the request requires the following details:
+요청 본문에는 다음 세부 정보가 필요합니다:
 
-* `name`: The name of the Snyk App
-* `redirectUris`: The accepted callback location(s) during end-user authentication
-* `scopes`: The account permissions the Snyk App will ask a user to grant
+* `name`: Snyk 앱의 이름
+* `redirectUris`: 최종 사용자 인증 중 허용된 콜백 위치
+* `scopes`: Snyk 앱이 사용자에게 부여할 계정 권한
 
-> A note on `scopes`: Once registered, a Snyk Apps `scopes` cannot currently be changed. The only recourse is deleting the Snyk App using the [Delete App](https://snykv3.docs.apiary.io/#reference/apps/single-app-management/delete-app) API endpoint and registering it again as a new Snyk App.
+> `scopes`에 대한 참고 사항: 일단 등록되면 Snyk Apps `scopes`는 현재 변경할 수 없습니다. 유일한 방법은 앱 삭제 API 엔드포인트를 사용하여 Snyk [앱을 삭제](https://snykv3.docs.apiary.io/#reference/apps/single-app-management/delete-app)하고 새 Snyk 앱으로 다시 등록하는 것입니다.
 
-**At the time of this writing, Snyk Apps is still in beta. At the moment, there is only one available scope: `apps:beta`. This scope allows the App to test and monitor existing projects, as well as read information about Snyk organizations, existing projects, issues, and reports.**
+**이 글을 쓰는 시점에서 Snyk Apps는 아직 베타 버전입니다. 현재 사용 가능한 범위는 `apps:beta` 1개뿐입니다. 이 범위를 통해 앱은 기존 프로젝트를 테스트 및 모니터링하고 Snyk 조직, 기존 프로젝트, 문제 및 보고서에 대한 정보를 읽을 수 있습니다.**
 
-**One of the limitations of the Snyk Apps beta is that a Snyk App may only be authorized by users who have administrator access to the organization to which the Snyk App is registered.**
+**Snyk 앱 베타의 제한 사항 중 하나는 Snyk 앱이 등록된 조직에 대한 관리자 액세스 권한이 있는 사용자만 Snyk 앱을 인증할 수 있다는 것입니다.**
 
-With your API token and `orgId` in hand, perform the following command in your terminal, substituting the values as necessary. For this tutorial, use `http://localhost:3000/callback` for the `redirectUris` value.
+API 토큰과 `orgId`를 가지고 터미널에서 다음 명령을 수행하고 필요에 따라 값을 대체합니다. 이 자습서에서는 `redirectUris` 값에 대해 `http://localhost:3000/callback`을 사용합니다.
 
-> Tip: You can avoid inputting your API Token and other secrets directly into your shell by adding them as export statements in a file and sourcing the file to set them as environment variables.
+> Tip: API 토큰 및 기타 암호를 파일에 내보내기 문으로 추가하고 파일을 소싱하여 환경 변수로 설정하면 셸에 직접 입력하는 것을 방지할 수 있습니다.
 
 ```bash
 curl --include \
@@ -59,42 +59,42 @@ curl --include \
      'https://api.snyk.io/v3/orgs/<ORG_ID>/apps?version='
 ```
 
-The response from Snyk contains two important values necessary to complete our Snyk App's integration: `clientId` and `clientSecret`. Store these values somewhere safe. This is the only time you will ever see your `clientSecret` from Snyk. As a warning, **never share your `clientSecret` publicly**. This is used to authenticate your App with Snyk.
+Snyk의 응답에는 Snyk 앱의 통합을 완료하는 데 필요한 두 가지 중요한 값인 `clientId` 및 `clientSecret`이 포함되어 있습니다. 이 값을 안전한 곳에 저장하십시오. Snyk에서 `clientSecret`을 볼 수 있는 유일한 시간입니다. **주의**: **`clientSecret`을 공개적으로 공유하지 마십시오**. 이는 Snyk로 앱을 인증하는 데 사용됩니다.
 
-Now that we've registered as a Snyk App, we can start adjusting our TypeScript project to allow users to authorize it.
+이제 Snyk 앱으로 등록했으므로 사용자가 승인할 수 있도록 TypeScript 프로젝트 조정을 시작할 수 있습니다.
 
-## User Authorization with a Snyk App
+## Snyk 앱을 통한 사용자 인증
 
-User authentication for Snyk Apps is done by way of a webpage URL containing query parameters that match up with our Snyk App's data. We'll need to replace the query parameter values in this URL and send users to the final link in a web browser. From there they can grant account access to the Snyk App.
+Snyk 앱에 대한 사용자 인증은 Snyk 앱의 데이터와 일치하는 쿼리 매개변수가 포함된 웹페이지 URL을 통해 수행됩니다. 이 URL의 쿼리 매개변수 값을 교체하고 사용자를 웹 브라우저의 최종 링크로 보내야 합니다. 여기에서 Snyk 앱에 대한 계정 액세스 권한을 부여할 수 있습니다.
 
-Once access has been provisioned, the user will be kicked back to our app's registered `callbackURL`, which we defined as `http://localhost:3000/callback`.
+액세스가 프로비저닝되면 사용자는 앱의 등록된 `callbackURL`(`http://localhost:3000/callback`으로 정의됨)로 다시 이동됩니다.
 
-Essentially, our app needs to generate a link like the following then send the user to it when it's time to authorize:
+기본적으로 앱은 다음과 같은 링크를 생성한 다음 인증할 시간이 되면 사용자를 링크로 보내야 합니다.
 
 ```
 https://app.snyk.io/oauth2/authorize?response_type=code&client_id={clientId}&redirect_uri={redirectURI}&scope={scopes}&nonce={nonce}&state={state}&version={version}
 ```
 
-Though some of the query parameters may be somewhat obvious, let's go over them. We're going to modify our Snyk App to to generate this URL for our users.
+쿼리 매개변수 중 일부는 다소 명확할 수 있지만 살펴보겠습니다. 사용자를 위해 이 URL을 생성하도록 Snyk 앱을 수정하겠습니다.
 
-* `version`: The current version can be found in [Snyk's API documentation](https://snykoauth2.docs.apiary.io/#reference/apps/app-authorization/authorize-an-app).
-* `scopes` and `redirect_uri`: These values must match what was sent with our registration command from earlier.
-* `state`: This is used to carry any App specific state from this `/authorize` call to the callback on the `redirect_uri` (such as a user's ID). It must be verified in our callback to [prevent CSRF attacks](https://datatracker.ietf.org/doc/html/rfc6749#section-10.12).
-* `nonce`: A highly randomized string stored alongside a timestamp on the app side before calling `/authorize`, then verified on the returned access token.
+* `version`: 현재 버전은 [Snyk의 API 문서](https://snykoauth2.docs.apiary.io/#reference/apps/app-authorization/authorize-an-app)에서 찾을 수 있습니다.
+* `scopes` 와`redirect_uri`: 이 값은 이전에 등록 명령으로 전송된 값과 일치해야 합니다.
+* `state`: 이것은 이 `/authorize` 호출에서 `redirect_uri`의 콜백(예: 사용자 ID)에 대한 앱 특정 상태를 전달하는 데 사용됩니다. [CSRF 공격을 방지](https://datatracker.ietf.org/doc/html/rfc6749#section-10.12)하려면 콜백에서 확인해야 합니다.
+* `nonce`: `/authorize`를 호출하기 전에 앱 측의 타임스탬프와 함께 고도로 무작위화된 문자열이 저장된 다음 반환된 액세스 토큰에서 확인됩니다.
 
-Once a connection is complete, the user is redirected to the provided redirect URI (our `/callback` route in this case) with query string parameters `code` and `state` added on, which are necessary for the next steps of authorization.
+연결이 완료되면 사용자는 다음 권한 부여 단계에 필요한 쿼리 문자열 매개 변수 `code` 및 `state`가 추가된 제공된 리디렉션 URI(이 경우 `/callback` 경로)로 리디렉션됩니다.
 
-That next step involves taking the authorization code received as query parameter in the response of the previous step, and turning it into an _access token_. To do this, a Snyk App makes a POST request to the token endpoint: `https://api.snyk.io/oauth2/token`. That POST request needs some specific data in it's request body, including the _authorization code_, _client id_, _client secret_, etc...
+그 다음 단계는 이전 단계의 응답에서 쿼리 매개변수로 받은 인증 코드를 가져오고 이를 액세스 토큰으로 바꾸는 것입니다. 이를 위해 Snyk 앱은 `https://api.snyk.io/oauth2/token` 토큰 끝점에 대한 POST 요청을 만듭니다. 해당 POST 요청에는 인증 코드, 클라이언트 ID, 클라이언트 비밀 등을 포함하여 요청 본문에 특정 데이터가 필요합니다.
 
-When successful, that POST request's response contains everything a Snyk App needs to communicate with Snyk on behalf of the authorizing user, namely, a **refresh\_token** and an **access token**.
+성공하면 해당 POST 요청의 응답에는 Snyk 앱이 인증 사용자를 대신하여 Snyk와 통신하는 데 필요한 모든 것, 즉 **refresh\_token** 및 **액세스 토큰**이 포함됩니다.
 
-The access token gets used for future API calls and has a much shorter expiry than the refresh token. The refresh token can be used only one time to get a new access token when it expires. In other words, **the refresh\_token will no longer be usable if its own expiry time passes or if it is used to refresh the access\_token.** Ultimately, this means that our Snyk App will need to make frequent API calls to perform **refresh\_token** exchanges.
+액세스 토큰은 향후 API 호출에 사용되며 새로 고침 토큰보다 만료 기간이 훨씬 짧습니다. 갱신 토큰은 만료 시 새 액세스 토큰을 얻기 위해 한 번만 사용할 수 있습니다. 즉, **refresh\_token은 자체 만료 시간이 경과하거나 access\_token을 새로 고치는 데 사용되는 경우 더 이상 사용할 수 없습니다**. 궁극적으로 이는 Snyk 앱이 **refresh\_token** 교환을 수행하기 위해 API를 자주 호출해야 함을 의미합니다.
 
 {% hint style="info" %}
-Both of these tokens should be encrypted before storing them!
+이 두 토큰은 모두 저장하기 전에 암호화해야 합니다!
 {% endhint %}
 
-## Updating our Snyk App to handle user authorization
+## 사용자 인증을 처리하도록 Snyk 앱 업데이트
 
 Based on the above information, our Snyk App has some new requirements! Let's outline a few things we'll need to do within our TypeScript app to successfully authorize a Snyk user account with our Snyk app:
 
