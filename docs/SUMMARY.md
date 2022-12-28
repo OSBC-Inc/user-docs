@@ -628,7 +628,7 @@
     * [Security findings](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/security-findings.md)
     * [Summary](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/summary.md)
 * [Red Hat](tutorials/red-hat/README.md)
-  * [Getting Started](tutorials/red-hat/getting-started.md)
+  * [시작하기](tutorials/red-hat/getting-started.md)
   * [Module 1](tutorials/red-hat/module-1.md)
   * [Module 2](tutorials/red-hat/module-2.md)
   * [Module 3](tutorials/red-hat/module-3.md)
