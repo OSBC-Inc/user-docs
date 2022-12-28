@@ -632,7 +632,7 @@
   * [Module 1](tutorials/red-hat/module-1.md)
   * [Module 2](tutorials/red-hat/module-2.md)
   * [Module 3](tutorials/red-hat/module-3.md)
-  * [Conclusion](tutorials/red-hat/conclusion.md)
+  * [결론](tutorials/red-hat/conclusion.md)
 * [Snyk Apps](tutorials/snyk-apps/README.md)
   * [TypeScript로 Snyk 앱 만들기](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/README.md)
     * [Express.js 구성](tutorials/snyk-apps/creating-a-snyk-app-with-typescript/module-1.md)
