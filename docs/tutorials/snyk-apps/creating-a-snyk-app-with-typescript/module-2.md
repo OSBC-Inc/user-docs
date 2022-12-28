@@ -96,18 +96,18 @@ https://app.snyk.io/oauth2/authorize?response_type=code&client_id={clientId}&red
 
 ## 사용자 인증을 처리하도록 Snyk 앱 업데이트
 
-Based on the above information, our Snyk App has some new requirements! Let's outline a few things we'll need to do within our TypeScript app to successfully authorize a Snyk user account with our Snyk app:
+위의 정보를 기반으로 Snyk 앱에는 몇 가지 새로운 요구 사항이 있습니다! Snyk 앱으로 Snyk 사용자 계정을 성공적으로 인증하기 위해 TypeScript 앱 내에서 수행해야 할 몇 가지 사항을 간략하게 설명하겠습니다.
 
-1. Send API requests and process responses
-2. Keep track of data, like token expiry
-3. Encrypt & decrypt secret data
-4. Turn authorization _codes_ into authorization _tokens_.
-5. Refresh those authorization tokens.
-6. Handle errors and inform users of authorization success or failure
+1. API 요청 보내기 및 응답 처리
+2. 토큰 만료와 같은 데이터 추적
+3. 보안 데이터 암호화 및 해독
+4. 인증 코드를 인증 토큰으로 전환합니다.
+5. 해당 인증 토큰을 새로 고칩니다.
+6. 오류를 처리하고 사용자에게 인증 성공 또는 실패를 알립니다.
 
-From here on, we'll be doing quite a lot of refactoring in our Snyk App and we'll be jumping into quite a few different files. To help make the process easier to follow, this tutorial is going to adopt the convention of adding a commented filepath to the first line of code snippets, describing where they belong. In your own code, these comments aren't necessary.
+여기에서 우리는 Snyk App에서 상당히 많은 리팩토링을 수행하고 꽤 많은 다른 파일로 이동할 것입니다. 프로세스를 더 쉽게 따라갈 수 있도록 이 튜토리얼에서는 코드 스니펫의 첫 번째 줄에 주석이 달린 파일 경로를 추가하여 그들이 속한 위치를 설명하는 규칙을 채택할 것입니다. 자신의 코드에서는 이러한 주석이 필요하지 않습니다.
 
-We'll also add quite a few new packages to help address our new requirements. For convenience, go ahead and run the following in the root of your project:
+또한 새로운 요구 사항을 해결하는 데 도움이 되는 몇 가지 새 패키지를 추가할 것입니다. 편의를 위해 프로젝트의 루트에서 다음을 실행하십시오:
 
 ```bash
 npm install --save passport \
@@ -133,11 +133,11 @@ npm install --save-dev @types/cryptr \
     @types/uuid
 ```
 
-### Store data and config in the Snyk App
+### Snyk 앱에 데이터 및 구성 저장
 
-#### Application configuration
+#### 애플리케이션 구성
 
-Application config (e.g.: client secrets, api tokens, other config, etc...) should generally be stored securely and kept outside of the App itself. However, for brevity, this tutorial will simply add the configuration info as exportable constants in the `App.ts` file and leave the actual implementation details to you, the reader. These are values that the Snyk App will be references in many different places.
+애플리케이션 구성(예: 클라이언트 암호, API 토큰, 기타 구성 등)은 일반적으로 안전하게 저장하고 앱 자체 외부에 보관해야 합니다. 그러나 간결함을 위해 이 튜토리얼에서는 구성 정보를 `App.ts` 파일에 내보낼 수 있는 상수로 추가하고 실제 구현 세부 정보는 독자에게 맡깁니다. 이들은 Snyk 앱이 여러 곳에서 참조할 값입니다.
 
 ```typescript
 // ./src/app.ts
@@ -162,11 +162,11 @@ export const STATE = true;
 ...
 ```
 
-#### Storing data
+#### 데이터 저장
 
-One of the things we'll want to do is capture some information about the users that authorize our Snyk App. Again, a true implementation is left up to the reader. For the purposes of this tutorial, we'll use the excellent `lowdb`, a small local JSON database with low overhead.
+우리가 하고 싶은 것 중 하나는 Snyk 앱을 인증하는 사용자에 대한 일부 정보를 캡처하는 것입니다. 다시 말하지만 진정한 구현은 독자에게 달려 있습니다. 이 자습서의 목적을 위해 오버헤드가 적은 작은 로컬 JSON 데이터베이스인 우수한 `lowdb`를 사용합니다.
 
-We'll first create a new middleware function in `app.ts` to initialize a `lowdb` database file at `./db/` and tell the `App` constructor to call it.
+먼저 `app.ts`에서 새로운 미들웨어 함수를 생성하여 `./db/`에서 `lowdb` 데이터베이스 파일을 초기화하고 `App` 생성자에게 이를 호출하도록 지시합니다.
 
 ```typescript
 // ./src/app.ts
@@ -207,7 +207,7 @@ export let dbPath: string;
 export default App;
 ```
 
-With the database initialization handled, we'll create some new helper methods to make reading/writing/updating database entries simpler. Because this is a TypeScript project, we'll be creating interfaces or types around the data structures we'll be storing, so we'll create two files: `./src/interfaces/DB.ts` and `./src/util/DB.ts`:
+데이터베이스 초기화가 처리되면 데이터베이스 항목 읽기/쓰기/업데이트를 더 간단하게 만드는 몇 가지 새로운 도우미 메서드를 만들 것입니다. 이것은 TypeScript 프로젝트이기 때문에 저장할 데이터 구조 주위에 인터페이스 또는 유형을 생성할 것이므로 `./src/interfaces/DB.ts` 및 `./src/util/DB.ts`라는 두 개의 파일을 생성합니다:
 
 ```bash
 touch ./src/interfaces/DB.ts
@@ -215,7 +215,7 @@ mkdir -p ./src/util
 touch ./src/util/DB.ts
 ```
 
-Populate the interface file with an interface describing each piece of the authorization data we'll be storing, and a wrapping interface we can apply to the entire database:
+저장할 인증 데이터의 각 부분을 설명하는 인터페이스와 전체 데이터베이스에 적용할 수 있는 래핑 인터페이스로 인터페이스 파일을 채웁니다:
 
 ```typescript
 // ./src/interfaces/DB.ts
@@ -237,9 +237,9 @@ export interface AuthData {
 }
 ```
 
-In this tutorial, we'll only need to perform three basic interactions with our database: read, write, and update.
+이 실습에서는 데이터베이스와 읽기, 쓰기 및 업데이트의 세 가지 기본 상호 작용만 수행하면 됩니다.
 
-Within the file we created in `./src/util`, create a function for each. Our read function will return a Promise with the database contents, the write function will take an object that matches the `AuthData` interface we just described, and the update function will attempt to rewrite an entry, returning a boolean denoting success or failure.
+`./src/util`에서 만든 파일 내에서 각각에 대한 함수를 만듭니다. 읽기 기능은 데이터베이스 내용과 함께 Promise를 반환하고, 쓰기 기능은 방금 설명한 `AuthData` 인터페이스와 일치하는 객체를 가져오고, 업데이트 기능은 항목을 다시 쓰려고 시도하여 성공 또는 실패를 나타내는 boolean을 반환합니다.
 
 ```typescript
 // ./src/util/DB.ts
@@ -293,13 +293,13 @@ export async function updateDb(
 }
 ```
 
-### Prepare for API calls
+### API 호출 준비
 
-Earlier, we installed the popular `axios` package to handle API calls. We know that we'll need to make some repetetive calls to the same API, so let's abstract some helper functions to make our code easily re-usable across the project. Create an `APIHelpers.ts` file in the `util` directory.
+이전에는 API 호출을 처리하기 위해 널리 사용되는 `axios` 패키지를 설치했습니다. 동일한 API를 반복적으로 호출해야 한다는 것을 알고 있으므로 일부 도우미 함수를 추상화하여 코드를 프로젝트 전체에서 쉽게 재사용할 수 있도록 합시다. `util` 디렉터리에 `APIHelpers.ts` 파일을 만듭니다.
 
-Before we fill that out, take note that, while we are consistently hitting Snyk's API, we'll likely need to make requests against multiple versions of the API, depending on the endpoint's status in the migration from Snyk API v1 to Snyk API v3. One way we can handle this is by defining a TypeScript Enum and within our functions, swap any necessary query parameters by comparing an argument to the enum's possible values.
+작성하기 전에 Snyk의 API를 지속적으로 사용하는 동안 Snyk API v1에서 Snyk API v3으로 마이그레이션하는 엔드포인트의 상태에 따라 API의 여러 버전에 대해 요청해야 할 가능성이 높습니다. 이를 처리할 수 있는 한 가지 방법은 TypeScript 열거형을 정의하고 함수 내에서 인수를 열거형의 가능한 값과 비교하여 필요한 쿼리 매개 변수를 바꾸는 것입니다.
 
-Add the following content to a new file, or to `APIHelpers.ts` if you prefer, just make sure to export it for later use!
+다음 내용을 새 파일에 추가하거나 원하는 경우 `APIHelpers.ts`에 추가하고 나중에 사용할 수 있도록 내보내십시오!
 
 ```typescript
 // ./interfaces/API.ts
@@ -309,7 +309,7 @@ export const enum APIVersion {
 }
 ```
 
-Let's start by adding a single function to simplify our Apps' calls to the Snyk API. The function takes a `tokenType` (either _bearer_ or _token_), the `token` itself, and an `APIVersion` (conveniently corresponding to the enum we just defined).
+Snyk API에 대한 앱의 호출을 단순화하는 단일 기능을 추가하여 시작하겠습니다. 이 함수는 `tokenType`(bearer 또는 토큰), `token` 자체 및 `APIVersion`(방금 정의한 열거형에 해당)을 사용합니다.
 
 ```typescript
 // ./src/util/APIHelpers.ts
@@ -334,9 +334,9 @@ export function callSnykApi(tokenType: string, token: string, version: APIVersio
 }
 ```
 
-Because this function is an `AxiosInstance`, we can easily talk to the API's different endpoints by calling `.get()`, `.post()`, or any other methods usually available to such an object. Handy!
+이 함수는 `AxiosInstance` 이기때문에 `.get(),` `.post()` 또는 이러한 객체에 일반적으로 사용 가능한 다른 메서드를 호출하여 API와 다른 엔드포인트에 쉽게 통신할 수 있습니다. 편리하게!
 
-Let's see it in action by defining a second async function to retrieve our Snyk Apps' Organization ID:
+Snyk 앱의 조직 ID를 검색하는 두 번째 비동기 함수를 정의하여 실제로 작동하는 것을 살펴보겠습니다:
 
 ```typescript
 // ./src/util/APIHelpers.ts
@@ -362,7 +362,7 @@ export async function getAppOrgID(tokenType: string, accessToken: string): Promi
 }
 ```
 
-### Make encrypt / decrypt easy
+### 쉽게 암호화/복호화
 
 It's a good idea to encrypt the data we'll be pulling out of the API, let's define a small class for doing so. The class has two members:
 
