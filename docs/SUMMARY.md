@@ -606,7 +606,7 @@
     * [Add Azure Repos repositories](tutorials/microsoft-azure/securing-azure-repos/add-azure-repos-repositories.md)
     * [Next steps](tutorials/microsoft-azure/securing-azure-repos/next-steps.md)
   * [Azure Pipelines 보안](tutorials/microsoft-azure/securing-azure-pipelines/README.md)
-    * [Getting started](tutorials/microsoft-azure/securing-azure-pipelines/getting-started.md)
+    * [시작하기](tutorials/microsoft-azure/securing-azure-pipelines/getting-started.md)
     * [Configuration](tutorials/microsoft-azure/securing-azure-pipelines/configuration.md)
     * [YAML pipelines](tutorials/microsoft-azure/securing-azure-pipelines/yaml-pipelines.md)
     * [Scanning](tutorials/microsoft-azure/securing-azure-pipelines/scanning.md)

@@ -1,24 +1,23 @@
-# Getting started
+# 시작하기
 
 {% hint style="info" %}
-This module assumes that you already have Azure DevOps and are integrating Snyk to an existing pipeline.
+이 모듈에서는 이미 Azure DevOps가 있고 Snyk을기존 파이프라인에 통합한다고 가정합니다.
 {% endhint %}
 
-You can find **Snyk Security Scan** in the Microsoft [Visual Studio Marketplace for Azure DevOps](https://marketplace.visualstudio.com/azuredevops) as shown below:
+아래와 같이 Microsoft [Visual Studio Marketplace for Azure DevOps](https://marketplace.visualstudio.com/azuredevops)에서 **Snyk Security Scan**을 찾을 수 있습니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-01.png)
 
-You can also quickly get to the marketplace from Azure Pipelines by navigating to your Azure DevOps **Organization Settings** and selecting **Extensions** then **Browse Marketplace** as shown below:
+Azure DevOps **Organization Settings**로 이동하고 **Extensions**를 선택한 다음 아래와 같이 **Browse Marketplace** 찾아보기를 선택하여 Azure Pipelines에서 마켓플레이스로 빠르게 이동할 수도 있습니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-07.png)
 
-In either scenario, once you find **Snyk Security Scan,** simply click on the extension tile and then **Click** the **Get it free** button as shown below:
+두 시나리오 모두 **Snyk Security Scan**을 찾으면 확장 타일을 **클릭**한 다음 아래와 같이 **Get it free** 버튼을 클릭합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-02.png)
 
-Next, select the desired Azure DevOps organization you wish to install the extension into or if you are running Azure DevOps server you may download the extension as well.
+그런 다음 확장을 설치하려는 원하는 Azure DevOps 조직을 선택하거나 Azure DevOps 서버를 실행 중인 경우 확장도 다운로드할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-03.png)
 
-Now, let's proceed to the next section where we will configure the extension!
-
+이제 Extension을 구성할 다음  Section으로 진행하겠습니다!
