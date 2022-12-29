@@ -1,10 +1,10 @@
-# Snyk 배포
+# Deploy Snyk
 
-`snyk-monitor`를 클러스터에 배포하여 Kubernetes Workload를 스캔할 수 있습니다. 이것은 공식 [helm chart](https://artifacthub.io/packages/helm/snyk/snyk-monitor)로 게시되며 해당 배포 옵션을 기반으로 이러한 단계를 수행할 것입니다. Snyk의 Kubernetes 통합에 대해 자세히 알아보려면 [설명서 페이지](https://docs.snyk.io/products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/kubernetes-integration-overview)를 방문하십시오. 편의를 위해 여기에서 높은 수준의 단계를 다룰 것입니다.
+You can scan Kubernetes workloads by deploying the `snyk-monitor` into your cluster. This is published as an official [helm chart](https://artifacthub.io/packages/helm/snyk/snyk-monitor) and we will be basing these steps on that deployment option. To learn more about Snyk's Kubernetes integration, please visit our [documentation pages](https://docs.snyk.io/products/snyk-container/image-scanning-library/kubernetes-workload-and-image-scanning/kubernetes-integration-overview). For convenience, we will cover the steps at a high level here.&#x20;
 
 #### Step 1
 
-네임스페이스를 생성합니다:
+Create the namespace:
 
 ```bash
 kubectl create namespace snyk-monitor
@@ -12,19 +12,19 @@ kubectl create namespace snyk-monitor
 
 #### Step 2
 
-암호를 생성합니다:
+Create the secret:
 
 ```bash
 kubectl create secret generic snyk-monitor -n snyk-monitor --from-literal=dockercfg.json={} --from-literal=integrationId=abcd1234-abcd-1234-abcd-1234abcd1234
 ```
 
 {% hint style="info" %}
-[Snyk Integration 페이지](https://app.snyk.io/org/YOUR-ORGANIZATION-NAME/manage/integrations/kubernetes)에서 **Integration** ID를 찾아 복사합니다.
+Locate your **Integration** ID from the [Snyk Integrations page ](https://app.snyk.io/org/YOUR-ORGANIZATION-NAME/manage/integrations/kubernetes)and copy it.
 {% endhint %}
 
 #### Step 3
 
-Helm 저장소를 추가하십시오:
+Add the Helm repo:
 
 ```bash
 helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/ --force-update
@@ -32,20 +32,20 @@ helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/ --force-upd
 
 #### Step 4
 
-차트를 설치합니다:
+Install the chart:
 
 ```bash
 helm upgrade --install snyk-monitor snyk-charts/snyk-monitor --namespace snyk-monitor --set clusterName="Production cluster"
 ```
 
 {% hint style="info" %}
-"Production cluster"를 클러스터 이름으로 바꿉니다.
+Replace "Production cluster" with the name of your cluster.
 {% endhint %}
 
-이제 앱이 준비될 때까지 기다렸다가 다음 명령을 실행하여 상태를 확인할 수 있습니다:
+Now, we wait for the app to be ready and can check the status by running the following command:
 
 ```bash
 kubectl get pods -n snyk-monitor
 ```
 
-이전 예와 마찬가지로 준비 상태가 표시되어야 합니다.
+Like the previous example, we want a ready status to be displayed.
