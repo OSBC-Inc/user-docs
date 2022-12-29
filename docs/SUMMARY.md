@@ -604,7 +604,7 @@
     * [저장소 작업](tutorials/microsoft-azure/securing-azure-repos/working-with-repos.md)
     * [Azure Repos Integration 구성](tutorials/microsoft-azure/securing-azure-repos/configure-the-azure-repos-integration.md)
     * [Azure Repos 저장소 추가](tutorials/microsoft-azure/securing-azure-repos/add-azure-repos-repositories.md)
-    * [Next steps](tutorials/microsoft-azure/securing-azure-repos/next-steps.md)
+    * [다음 단계](tutorials/microsoft-azure/securing-azure-repos/next-steps.md)
   * [Azure Pipelines 보안](tutorials/microsoft-azure/securing-azure-pipelines/README.md)
     * [시작하기](tutorials/microsoft-azure/securing-azure-pipelines/getting-started.md)
     * [Configuration](tutorials/microsoft-azure/securing-azure-pipelines/configuration.md)
