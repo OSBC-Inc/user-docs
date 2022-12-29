@@ -599,7 +599,7 @@
     * [스캔 결과 해석](tutorials/microsoft-azure/securing-acr/interpret-scan-results.md)
     * [Issues 수정](tutorials/microsoft-azure/securing-acr/fix-issues.md)
   * [Azure 저장소 보안](tutorials/microsoft-azure/securing-azure-repos/README.md)
-    * [Getting started](tutorials/microsoft-azure/securing-azure-repos/getting-started.md)
+    * [시작하기](tutorials/microsoft-azure/securing-azure-repos/getting-started.md)
     * [Provision Azure services](tutorials/microsoft-azure/securing-azure-repos/provision-azure-services.md)
     * [Working with repos](tutorials/microsoft-azure/securing-azure-repos/working-with-repos.md)
     * [Configure the Azure Repos integration](tutorials/microsoft-azure/securing-azure-repos/configure-the-azure-repos-integration.md)
