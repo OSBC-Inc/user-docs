@@ -619,7 +619,7 @@
       * [Format Issues](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/format-issues.md)
       * [Filter](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/filter.md)
       * [Send Message](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/send-message.md)
-    * [Notifications](tutorials/microsoft-azure/notifications-in-microsoft-teams/notifications.md)
+    * [알림](tutorials/microsoft-azure/notifications-in-microsoft-teams/notifications.md)
 * [Oracle Cloud Infrastructure](tutorials/oracle-cloud-infrastructure/README.md)
   * [OKE의 보안 Kubernetes Workload](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/README.md)
     * [클러스터에 액세스](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/accessing-your-cluster.md)
