@@ -1,17 +1,17 @@
 # Catch Raw Hook
 
-트리거를 만들고 이름을 **Catch Raw Hook**로 지정합니다:
+Create a trigger and name it **Catch Raw Hook:**
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-catch-raw-hook.png)
 
-Webhook 만들기의 지침에 따라 Zapier용 Webhook URL을 복사하고 `POST` 작업을 수행해야 합니다:
+You will need to copy the Webhook URL for Zapier and perform a `POST` operation per the instructions in Create a webhook:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-catch-raw-hook-setup.png)
 
-Trigger Event를 **Catch Raw Hook**로 설정합니다:
+Set the Trigger Event to **Catch Raw Hook**:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-catch-raw-hook-trigger.png)
 
-트리거를 테스트합니다. 올바르게 구성된 경우 아래와 같이 **raw\_body** 예제가 표시되어야 합니다.
+Test your trigger. If configured correctly, you should see a **raw\_body** example as shown below:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-catch-raw-hook-test.png)
