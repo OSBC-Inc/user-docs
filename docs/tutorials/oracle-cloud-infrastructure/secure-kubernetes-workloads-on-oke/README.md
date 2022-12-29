@@ -1,19 +1,20 @@
-# OKE의 보안 Kubernetes Workload
+# Secure Kubernetes workloads on OKE
 
-## OKE는 무엇입니까?
+### What is OKE?
 
-OKE(Oracle Container Engine for Kubernetes)는 최신 클라우드 네이티브 애플리케이션을 구축하는 데 드는 시간과 비용을 줄일 수 있는 Oracle 관리 컨테이너 오케스트레이션 서비스입니다. 대부분의 다른 공급업체와 달리 Oracle Cloud Infrastructure는 Kubernetes용 Container Engine을 고성능, 저비용 컴퓨팅 형태에서 실행되는 무료 서비스로 제공합니다. DevOps 엔지니어는 애플리케이션 Workload 이식성을 위해 수정되지 않은 오픈 소스 Kubernetes를 사용하고 자동 업데이트 및 패칭으로 운영을 단순화할 수 있습니다. [여기](https://www.oracle.com/cloud-native/container-engine-kubernetes/)에서 OKE에 대해 자세히 알아보십시오.
+Oracle Container Engine for Kubernetes (OKE) is an Oracle-managed container orchestration service that can reduce the time and cost to build modern cloud native applications. Unlike most other vendors, Oracle Cloud Infrastructure provides Container Engine for Kubernetes as a free service that runs on higher-performance, lower-cost compute shapes. DevOps engineers can use unmodified, open source Kubernetes for application workload portability and to simplify operations with automatic updates and patching. Learn more about OKE [here](https://www.oracle.com/cloud-native/container-engine-kubernetes/).
 
-## 무엇을 배울 수 있습니까?
+### What will you learn?
 
-이 실습에서는 Snyk을 사용하여 OKE에서 실행되는 Kubernetes Workload를 빠르게 배포하고 스캔하여 오픈 소스 종속성, 컨테이너 이미지 및 애플리케이션 구성 오류의 취약성을 찾는 방법을 배웁니다.
+In this tutorial, you will learn how to quickly deploy and scan Kubernetes workloads running on OKE with Snyk to find vulnerabilities in your open source dependencies, container images, and application misconfigurations.
 
-### 전제 조건
+### Prerequisites
 
-* [Oracle Cloud Free Tier](https://www.oracle.com/cloud/free/?source=:ow:o:p:nav:092320ContnrKuberntsHero\&intcmp=:ow:o:p:nav:092320ContnrKuberntsHero) 계정.
-* [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) 설치.
-* [Snyk](https://snyk.co/udrgA) Business 또는 Enterprise 계획.
+* An [Oracle Cloud Free Tier](https://www.oracle.com/cloud/free/?source=:ow:o:p:nav:092320ContnrKuberntsHero\&intcmp=:ow:o:p:nav:092320ContnrKuberntsHero) account.
+* Installed [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm).
+* A [Snyk](https://snyk.co/udrgA) Business or Enterprise plan.
 
 {% hint style="danger" %}
-이 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [요금제](https://snyk.io/plans/)를 참조하세요.
+This feature is available with all paid plans. See [Pricing plans](https://snyk.io/plans/) for more details.
 {% endhint %}
+
