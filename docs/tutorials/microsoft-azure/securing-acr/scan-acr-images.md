@@ -1,13 +1,14 @@
-# ACR Image 스캔
+# Scan ACR images
 
-이제 스캔을 위해 `Add your ACR images to Snyk`를 클릭 하십시오.
+Now, `Add your ACR images to Snyk` for scanning:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_integrations\_08.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_integrations_08.png)
 
-스캔할 이미지를 추가하자마자 import log를 실시간으로 볼 수 있습니다.
+As soon as you've added your images to scan, you will be able to view the import log in real time.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_scan\_07.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_scan_07.png)
 
-이미지가 스캔되면 알림을 받고 페이지를 **`새로 고침`**하라는 메시지가 표시됩니다.
+Once the images have been scanned you will receive a notification and prompt to `Refresh` the page.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_scan\_09.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_scan_09.png)
+

@@ -1,20 +1,20 @@
-# ACR Integration 구성
+# Configure the ACR integration
 
-## 서비스 주체 만들기
+## Create a service principal
 
-레지스트리에 [서비스 주체](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)를 할당하는 것이 좋습니다. 이 항목에 대한 자세한 내용은 [Azure 컨테이너 레지스트리로 인증](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication) 설명서를 검토하세요.
+It is recommended that you assign a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) to your registry. Please review the [Authenticate with an Azure container registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication) documentation for further information on this topic.
 
-이 프로세스를 단순화하기 위해 복제된 저장소의 `scripts/` 디렉토리에서 샘플 `bash` 스크립트를 찾을 수 있습니다. 터미널에서 `pwd`를 입력하고 결과에 `$HOME/snyk-azure-resources/`가 표시되는지 확인하여 복제된 저장소의 루트에 있는지 확인합니다.
+To simplify this process, you will find a sample `bash` script in the `scripts/` directory of your cloned repo. From the terminal, let's make sure we are at the root of our cloned repository by typing `pwd` and verifying the result displays `$HOME/snyk-azure-resources/`.
 
-그런 다음 다음 명령을 입력하여 디렉토리를 변경해 보겠습니다:
+Then, let's change directory by typing the following command:
 
 ```bash
 cd scripts/
 ```
 
-여기에서 간단한 `ls -a` 명령이 내용을 표시하고 해당 디렉토리에서 `create-acr-service-principal.sh` 스크립트를 볼 수 있습니다. [Microsoft Visual Studio Code](https://code.visualstudio.com/)와 같은 선호하는 편집기에서 이 파일을 열고 내용을 검토할 수 있습니다.
+From here, a simple `ls -a` command will show the contents and you will see the `create-acr-service-principal.sh` script in that directory. You can open this in your favorite editor like [Microsoft Visual Studio Code](https://code.visualstudio.com/) and review the contents.
 
-다음과 같이 표시됩니다:
+These will look like this:
 
 ```bash
 #!/bin/bash
@@ -43,15 +43,15 @@ echo "Service principal ID: $SP_APP_ID"
 echo "Service principal password: $SP_PASSWD"
 ```
 
-스크립트를 실행하려면 현재 작업 디렉터리에서 스크립트를 호출하고 다음과 같이 ACR 이름 `mysnykcontainerregistry`를 매개 변수로 전달합니다:
+To run the script simply invoke it from the present working directory and pass the ACR name, `mysnykcontainerregistry` as a parameter as follows:
 
 ```bash
 ./create-acr-service-principal.sh mysnykcontainerregistry
 ```
 
-성공적으로 완료되면 다음과 유사한 결과가 표시됩니다:
+Upon successful completion, you will see results similar to the following:
 
-```
+```text
 Creating a role assignment under the scope of "/subscriptions/<guid>/resourceGroups/mySnykACRResourceGroup/providers/Microsoft.ContainerRegistry/registries/mySnykContainerRegistry"
   Retrying role assignment creation: 1/36
 Service principal ID: <guid>
@@ -60,16 +60,15 @@ Service principal password: <guid>
 
 Take note of the values for `Service principal ID` and `Service principal password`. You will need these to configure the integration in the following steps so **DO NOT** close or clear your terminal window.
 
-`Service principal` ID 및 `Service principal` 암호 값을 기록해 둡니다. 다음 단계에서 Integration을 구성하려면 이것이 필요하므로 터미널 창을 닫거나 **지우지 마십시오**.
+## Enable the integration
 
-## Integration 활성화
+From the Snyk web console, navigate to `Integrations`. Search and select `ACR`. Click the tile.
 
-Snyk 웹 콘솔에서 `Integrations`로 이동합니다. `ACR`을 검색하고 선택합니다. 타일을 클릭합니다.
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_integrations_07.png)
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_integrations\_07.png)
+Follow the steps outlined in the following diagram and provide the `Service principal ID` `Service principal password` and `loginServer` value for your ACR instance:
 
-다음 다이어그램에 설명된 단계를 따르고 ACR 인스턴스에 대한 `Service principal` ID `Service principal` 암호 및 `loginServer` 값을 제공합니다.
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_integrations_06.png)
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_integrations\_06.png)
+Remember to save your settings!
 
-설정을 저장하는 것을 잊지 마십시오!
