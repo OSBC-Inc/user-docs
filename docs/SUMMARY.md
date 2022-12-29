@@ -612,7 +612,7 @@
     * [Scanning](tutorials/microsoft-azure/securing-azure-pipelines/scanning.md)
     * [Results](tutorials/microsoft-azure/securing-azure-pipelines/results.md)
   * [Microsoft Teams 알림](tutorials/microsoft-azure/notifications-in-microsoft-teams/README.md)
-    * [Configure Zap](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/README.md)
+    * [Zap 구성](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/README.md)
       * [Catch Raw Hook](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/catch-raw-hook.md)
       * [Validate Payload](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/validate-payload.md)
       * [Parse Payload](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/parse-payload.md)
