@@ -43,13 +43,13 @@ RUN groupadd -r -g 999 redis && useradd -r -g redis -u 999 redis
 
 ### Docker 빌드
 
-Now, from the `app/redis/6.0/` directory, we will build and tag our own container image using the provided `Dockerfile`. To do so, we will run the [`docker build`](https://docs.docker.com/engine/reference/commandline/build/) command as follows:
+이제 `app/redis/6.0/` 디렉터리에서 제공된 Dockerfile을 사용하여 자체 컨테이너 이미지를 빌드하고 태그를 지정합니다. 이를 위해 다음과 같이 [`docker build`](https://docs.docker.com/engine/reference/commandline/build/) 명령을 실행합니다:
 
 ```bash
 docker build -t my-redis:v1 .
 ```
 
-Upon successful completion we should see results similar to the following:
+성공적으로 완료되면 다음과 유사한 결과가 표시됩니다.:
 
 ```
 Successfully built aa8130687a13
@@ -58,7 +58,7 @@ Successfully tagged my-redis:v1
 
 ### Docker tag
 
-We are almost ready to push our initial image to an Azure Container registry. However, before we proceed, we will need to run a few [`docker tag`](https://docs.docker.com/engine/reference/commandline/tag/) commands to tag our image with the fully qualified name of your ACR login server. We are going to make this interesting by querying the value of our ACR login server using the Azure CLI within our `docker tag` command. To do this, we will invoke `az acr show` and specify our registry name while formatting our output with the `-o tsv` parameter for plain text.
+초기 이미지를 Azure Container Registry에 Push할 준비가 거의 되었습니다. 그러나 진행하기 전에 몇 가지 [`docker tag`](https://docs.docker.com/engine/reference/commandline/tag/) 명령을 실행하여 ACR 로그인 서버의 정규화된 이름으로 이미지에 태그를 지정해야 합니다. `docker tag` 명령 내에서 Azure CLI를 사용하여 ACR 로그인 서버의 값을 쿼리하여 이를 흥미롭게 만들 것입니다. 이를 위해 `az acr show`를 호출하고 레지스트리 이름을 지정하면서 일반 텍스트에 대한 `-o tsv` 매개 변수로 출력 형식을 지정합니다.
 
 ```bash
 docker tag my-redis:v1 $(az acr show --name mySnykContainerRegistry --query loginServer --output tsv)/my-redis:v1
@@ -66,11 +66,13 @@ docker tag my-redis:v1 $(az acr show --name mySnykContainerRegistry --query logi
 
 We tagged the first with a `version` and we will tag it a second time with `latest`.
 
+첫 번째를 `version` 태그로 지정하고 `latest` 태그를 두 번째로 지정합니다.
+
 ```bash
 docker tag my-redis:v1 $(az acr show --name mySnykContainerRegistry --query loginServer --output tsv)/my-redis:latest
 ```
 
-Now, we will run a quick [`docker images`](https://docs.docker.com/engine/reference/commandline/images/) and make sure everything is correctly tagged.
+이제 빠른 [`docker images`](https://docs.docker.com/engine/reference/commandline/images/)를 실행하고 모든 항목이 올바르게 태그 지정되었는지 확인합니다.
 
 ```
 REPOSITORY                                                      TAG                 IMAGE ID            CREATED             SIZE
@@ -82,13 +84,13 @@ debian                                                          buster-slim     
 
 ### Docker push
 
-We made it. We are now ready to run [`docker push`](https://docs.docker.com/engine/reference/commandline/push/) on our tagged images and store these in ACR. Let's start with the first tagged image `v1`:
+해냈습니다. 이제 태그가 지정된 이미지에서 [`docker push`](https://docs.docker.com/engine/reference/commandline/push/)를 실행하고 ACR에 저장할 준비가 되었습니다. 첫 번째 태그가 지정된 이미지 `v1`부터 시작하겠습니다:
 
 ```bash
  docker push $(az acr show --name mySnykContainerRegistry --query loginServer --output tsv)/my-redis:v1
 ```
 
-You should see output similar to what's below:
+아래와 비슷한 출력이 표시되어야 합니다:
 
 ```
 The push refers to repository [mysnykcontainerregistry.azurecr.io/my-redis]
@@ -101,13 +103,13 @@ c2adabaecedb: Pushed
 v1: digest: sha256:f8e1a610528d3fbd6f1b26fc2a2610c05fd07938b68e8aef7cb87ef1c9a6ec65 size: 1573
 ```
 
-Next, our second tagged image, `latest`:
+다음으로 두 번째로 태그가 지정된 `latest` 이미지입니다:
 
 ```bash
 docker push $(az acr show --name mySnykContainerRegistry --query loginServer --output tsv)/my-redis:latest
 ```
 
-You should see output similar to what's below:
+아래와 비슷한 출력이 표시되어야 합니다:
 
 ```
 555634e64cd8: Layer already exists
@@ -119,13 +121,13 @@ c2adabaecedb: Layer already exists
 latest: digest: sha256:f8e1a610528d3fbd6f1b26fc2a2610c05fd07938b68e8aef7cb87ef1c9a6ec65 size: 1573
 ```
 
-We can also verify these were indeed pushed to our registry by querying through the Azure CLI.
+또한 Azure CLI를 통해 쿼리하여 레지스트리에 실제로 푸시되었는지 확인할 수도 있습니다:
 
 ```bash
 az acr repository list --name mySnykContainerRegistry --output json
 ```
 
-You should see output similar to what's below:
+아래와 비슷한 출력이 표시되어야 합니다:
 
 ```
 [
@@ -133,13 +135,13 @@ You should see output similar to what's below:
 ]
 ```
 
-To verify the list of tags in our `my-redis` repository matches what we pushed, we can run the following command:
+`my-redis` 저장소의 태그 목록이 푸시한 것과 일치하는지 확인하려면 다음 명령을 실행할 수 있습니다:
 
 ```bash
 az acr repository show-tags --name mySnykContainerRegistry --repository my-redis --output table
 ```
 
-We should see output similar to what's below:
+아래와 비슷한 출력이 표시됩니다:
 
 ```
 Result
@@ -148,6 +150,6 @@ latest
 v1
 ```
 
-Of course, we can also view the same results from the Azure portal:
+물론 Azure Portal에서도 동일한 결과를 볼 수 있습니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/acr\_repository\_01.png)
