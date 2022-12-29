@@ -610,7 +610,7 @@
     * [Configuration](tutorials/microsoft-azure/securing-azure-pipelines/configuration.md)
     * [YAML pipelines](tutorials/microsoft-azure/securing-azure-pipelines/yaml-pipelines.md)
     * [Scanning](tutorials/microsoft-azure/securing-azure-pipelines/scanning.md)
-    * [Results](tutorials/microsoft-azure/securing-azure-pipelines/results.md)
+    * [결과](tutorials/microsoft-azure/securing-azure-pipelines/results.md)
   * [Microsoft Teams 알림](tutorials/microsoft-azure/notifications-in-microsoft-teams/README.md)
     * [Zap 구성](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/README.md)
       * [Catch Raw Hook](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/catch-raw-hook.md)

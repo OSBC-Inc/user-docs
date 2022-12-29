@@ -1,17 +1,18 @@
 # Scanning
 
-Snyk 확장이 설치 및 구성되고 azure-pipelines.yml 설정이 작동하면 CI/CD Workflow의 일부로 코드를 스캔할 준비가 된 것입니다. 다음 파이프라인 실행에는 결과 보고서와 함께 Snyk 스캔이 포함됩니다.
+With the Snyk extension installed and configured and a working azure-pipelines.yml setup, you are ready to scan your code as part of your CI/CD workflow. The next pipeline run, will include a Snyk scan with a findings report.
 
-아래에 표시된 예를 살펴보겠습니다:
+Let's take a look at the example shown below:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-08.png)
 
-여기에서 최근 파이프라인 실행을 볼 수 있습니다. 최신 실행을 클릭하여 세부 정보를 봅니다. Azure Pipelines 내에서 사용할 수 있는 **Snyk Report** 탭이 있습니다. 그것을 클릭합니다!
+Here we see a recent pipeline run. We will click on the latest run to view details. Notice that there is a **Snyk Report** tab available within Azure Pipelines. Let's click it!
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-09.png)
 
-이제 결과가 포함된 요약 보고서를 볼 수 있습니다.
+Now, we are able to view a summary report containing findings.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure-devops-10.png)
 
-스캔 결과 해석에 대한 마지막 섹션으로 이동하겠습니다!
+Let's move onto the final section on interpreting our scan results!
+
