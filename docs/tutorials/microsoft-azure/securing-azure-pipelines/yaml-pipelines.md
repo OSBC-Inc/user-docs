@@ -1,10 +1,10 @@
 # YAML pipelines
 
 {% hint style="info" %}
-Azure Pipelines용 YAML 스키마에 대한 포괄적인 설명서는 [Microsoft의 Azure DevOps 설명서 페이지](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops\&tabs=schema%2Cparameter-schema)에서 사용할 수 있습니다.
+Comprehensive documentation on YAML schema for Azure Pipelines is available on Microsoft's [Azure DevOps documentation pages](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema).
 {% endhint %}
 
-azure-pipelines.yml 예제는 아래에서 사용할 수 있습니다:
+An example azure-pipelines.yml is available below:
 
 ```yaml
 trigger:
@@ -53,4 +53,5 @@ stages:
         containers: '$(tag)'
 ```
 
-위의 예는 참고용일 뿐입니다. 파이프라인이 다를 수 있습니다. 이 예제에서는 Azure Repo에서 소스 코드를 스캔하고 컨테이너 이미지를 ACR로 Push하고 AKS에 배포합니다. Snyk 스캔은 위의 24-29행에 정의되어 있습니다.
+The example above is only a reference. Your pipeline may differ. In this example, we are scanning our source code in Azure Repo, pushing a container image to ACR, and deploying to AKS. The Snyk Scan is defined in lines 24-29 above.
+
