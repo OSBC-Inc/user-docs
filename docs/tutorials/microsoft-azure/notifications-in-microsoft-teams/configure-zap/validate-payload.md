@@ -1,18 +1,18 @@
 # Validate Payload
 
-Next, we will add another **Action** and name it **Validate payload**:
+다음으로 다른 **Action**을 추가하고 이름을 **Validate payload**로 지정합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-validate-payload-main.png)
 
-Let's define our **Action Event** as **Run Javascript**:
+**Action Event**를 **Run Javascript**으로 정의해 보겠습니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-validate-payload-script.png)
 
-Configure your action to include **body** and **signature** as shown below:
+아래와 같이 **body**와 **signature**를 포함하도록 작업을 구성합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-validate-payload-setup.png)
 
-In the **Code** section, copy and paste the following snippet:
+**Code** section에서 다음 스니펫을 복사하여 붙여넣습니다:
 
 ```javascript
 const crypto = require('crypto');
@@ -35,7 +35,6 @@ try {
 }
 ```
 
-Test your action:
+Action을 테스트 합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-validate-payload-test.png)
-
