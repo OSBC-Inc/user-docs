@@ -592,7 +592,7 @@
     * [스캔 결과 해석](tutorials/microsoft-azure/securing-aks/interpret-scan-results.md)
     * [Issues 수정](tutorials/microsoft-azure/securing-aks/fix-issues.md)
   * [ACR 보안](tutorials/microsoft-azure/securing-acr/README.md)
-    * [Provision Azure services](tutorials/microsoft-azure/securing-acr/provision-azure-services.md)
+    * [Azure 서비스 프로비저닝](tutorials/microsoft-azure/securing-acr/provision-azure-services.md)
     * [Building container images](tutorials/microsoft-azure/securing-acr/building-container-images.md)
     * [Configure the ACR integration](tutorials/microsoft-azure/securing-acr/configure-the-acr-integration.md)
     * [Scan ACR images](tutorials/microsoft-azure/securing-acr/scan-acr-images.md)

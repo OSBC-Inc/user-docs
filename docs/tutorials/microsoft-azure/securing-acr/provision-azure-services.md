@@ -1,22 +1,22 @@
-# Provision Azure services
+# Azure 서비스 프로비저닝
 
-## Background
+## 배경
 
-In order to understand the various Snyk integration points to Azure, we are going to deploy and configure some supporting resources. The objective for these exercises is to demonstrate how Snyk secures your workloads. We will provide basic patterns intended for use in learning environments. For a deeper dive and learning more about Azure, we suggest referencing Microsoft's self-paced [training modules](https://docs.microsoft.com/en-us/learn/browse/?products=azure).
+Azure에 대한 다양한 Snyk Integration 지점을 이해하기 위해 몇 가지 지원 리소스를 배포하고 구성할 것입니다. 이 연습의 목표는 Snyk Workload를 보호하는 방법을 보여주는 것입니다. 학습 환경에서 사용하기 위한 기본 패턴을 제공합니다. Azure에 대해 자세히 알아보고 자세히 알아보려면 Microsoft의 [교육 모듈](https://docs.microsoft.com/en-us/learn/browse/?products=azure)을 참조하는 것이 좋습니다.
 
-## Deploy Azure Container Registry \(ACR\)
+## ACR(Azure Container Registry) 배포
 
-The following examples are based on an [Azure Quickstart ](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli)for deploying ACR using the CLI. We will deploy an Azure Container Registry instance using the Azure CLI, then tag and push container images into the registry.
+다음 예제는 CLI를 사용하여 ACR을 배포하기 위한 [Azure Quickstart](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli)를 기반으로 합니다. Azure CLI를 사용하여 Azure Container Registry 인스턴스를 배포한 다음 컨테이너 이미지에 태그를 지정하고 레지스트리에 푸시합니다.
 
-### Create a resource group
+### 리소스 그룹 만들기
 
-We begin by creating an [Azure resource group](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups) to logical organize the resources we will deploy and manage. Here, we will also define the location where our resources will run in Azure. In this case, we will deploy to the `eastus` location. From your terminal, run the following command:
+배포하고 관리할 리소스를 논리적으로 구성하기 위해 [Azure 리소스 그룹](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups)을 만드는 것으로 시작합니다. 여기서는 리소스가 Azure에서 실행될 위치도 정의합니다. 이 경우에는 eastus 위치에 배포합니다. 터미널에서 다음 명령을 실행합니다:
 
 ```bash
 az group create --name mySnykACRResourceGroup --location eastus
 ```
 
-When successfully completed, you will see output similar to the following:
+성공적으로 완료되면 다음과 유사한 출력이 표시됩니다:
 
 ```javascript
 {
@@ -32,13 +32,13 @@ When successfully completed, you will see output similar to the following:
 }
 ```
 
-You can also validate the creation of the resource group in the Azure portal as illustrate below:
+아래 그림과 같이 Azure Portal에서 리소스 그룹 생성의 유효성을 검사할 수도 있습니다:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_resource_groups_05.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_resource\_groups\_05.png)
 
-### Create the ACR instance
+### ACR 인스턴스 만들기
 
-Next, we are going to create a registry named `mySnykContainerRegistry` in our recently created `mySnykACSResourceGroup`.
+다음으로 최근에 만든 `mySnykACSResourceGroup`에 `mySnykContainerRegistry`라는 레지스트리를 만듭니다.
 
 ```bash
 az acr create \
@@ -47,7 +47,7 @@ az acr create \
 --sku Basic
 ```
 
-Once the deployment completes the CLI will return a lengthy JSON response containing details about your registry. You will want to make a note of the `loginServer` value as that will be needed later on for authentication.
+배포가 완료되면 CLI는 레지스트리에 대한 세부 정보가 포함된 긴 JSON 응답을 반환합니다. 나중에 인증에 필요하므로 `loginServer` 값을 기록해 두는 것이 좋습니다.
 
 ```javascript
 {- Finished ..
@@ -93,17 +93,16 @@ Once the deployment completes the CLI will return a lengthy JSON response contai
 }
 ```
 
-You can also view this within the Azure portal:
+Azure Portal 내에서 이를 볼 수도 있습니다:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_resource_groups_06.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_resource\_groups\_06.png)
 
-### Log in to registry
+### 레지스트리에 로그인
 
-We will need to log in to the registry before performing any operations such as `docker push` or `docker pull`. To do so, run the following command:
+`docker push` 또는 `docker pull`과 같은 작업을 수행하기 전에 레지스트리에 로그인해야 합니다. 이렇게 하려면 다음 명령을 실행합니다.
 
 ```bash
 az acr login --name mySnykContainerRegistry
 ```
 
-The command will return `Login Succeeded` if you provided the correct values.
-
+이 명령은 올바른 값을 제공한 경우 `Login Succeeded`를 반환합니다.
