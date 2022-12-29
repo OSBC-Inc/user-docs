@@ -1,47 +1,47 @@
-# Building container images
+# 컨테이너 이미지 빌드
 
-## Background
+## 배경
 
-In **Securing AKS with Snyk**, we deployed an application to our Kubernetes cluster running on Microsoft Azure Kubernetes Service \(AKS\). We deployed this using a [manifest](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/) template file. The manifest provides a means to organize resource configurations that simplify our deployments. If we examine the `azure-vote.yaml` we see that we are defining the container images for our back-end and front-end applications as pulling `redis` and `microsoft/azure-vote-front:v1` respectively.
+**Securing AKS with Snyk**에서는 Microsoft AKS(Azure Kubernetes Service)에서 실행되는 Kubernetes 클러스터에 애플리케이션을 배포했습니다. 매니페스트 템플릿 파일을 사용하여 배포했습니다. [매니페스트](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)는 배포를 단순화하는 리소스 구성을 구성하는 수단을 제공합니다. azure-vote.yaml을 검사하면 백 엔드 및 프런트 엔드 애플리케이션에 대한 컨테이너 이미지를 각각 pull `redis` 및 `microsoft/azure-vote-front:v1`로 정의하고 있음을 알 수 있습니다.
 
-Later, when we scanned our Kubernetes workload, we found vulnerabilities in our Kubernetes security configuration as well as our container images. We were able to fix the security configuration issues detected. However, when we examined our container images, we noticed the following alert:
+나중에 Kubernetes Workload를 스캔했을 때 Kubernetes 보안 구성과 컨테이너 이미지에서 취약점을 발견했습니다. 감지된 보안 구성 문제를 수정할 수 있었습니다. 그러나 컨테이너 이미지를 조사했을 때 다음 경고를 발견했습니다:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_scan_06.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_scan\_06.png)
 
-In this module, we will cover some best practices for building container images, storing these in a private registry like ACR, and monitoring those registries with Snyk.
+이 모듈에서는 컨테이너 이미지를 빌드하고 ACR과 같은 개인 레지스트리에 저장하고 Snyk로 해당 레지스트리를 모니터링하기 위한 몇 가지 모범 사례를 다룹니다.
 
-## Building a Docker image
+## Docker 이미지 빌드
 
-In Snyk’s [State of open source security report – 2019](https://snyk.io/blog/top-ten-most-popular-docker-images-each-contain-at-least-30-vulnerabilities/), we found that many of the popular Docker containers that are featured on the Docker Hub website are bundling images that contain many known vulnerabilities. We encourage you to read this report and as well as our recent blog, [10 Docker Image Security Best Practices](https://snyk.io/blog/10-docker-image-security-best-practices/) for a deeper dive on the subject. The following exercises are aligned with these best practices and we will cover them in stages starting with the concept of `minimal images`.
+Snyk의 [오픈 소스 보안 상태 보고서 – 2019](https://snyk.io/blog/top-ten-most-popular-docker-images-each-contain-at-least-30-vulnerabilities/)에서 우리는 Docker Hub 웹사이트에 소개된 많은 인기 있는 Docker 컨테이너가 많은 알려진 취약점이 포함된 번들 이미지를 발견했습니다. 주제에 대해 자세히 알아보려면 이 보고서와 최신 블로그인 [10가지 Docker 이미지 보안 모범 사례](https://snyk.io/blog/10-docker-image-security-best-practices/)를 읽어 보시기 바랍니다. 다음 연습은 이러한 모범 사례와 일치하며 최소한의 이미지 개념부터 시작하여 단계적으로 다룰 것입니다.
 
 ### Dockerfile
 
-Let's start with our back-end application. We see from our manifest that we are using the [Docker Official Image](https://docs.docker.com/docker-hub/official_repos/) for [redis](https://hub.docker.com/_/redis). We will take the first step in improving our security posture by building a fresh image from a `Dockerfile` and storing this in our private registry on ACR.
+백엔드 애플리케이션부터 시작하겠습니다. 매니페스트에서 [Redis](https://hub.docker.com/\_/redis)용 [Docker Official 이미지](https://docs.docker.com/docker-hub/official\_repos/)를 사용하고 있음을 알 수 있습니다. Dockerfile에서 새로운 이미지를 빌드하고 ACR의 개인 레지스트리에 저장하여 보안 태세를 개선하는 첫 번째 단계를 수행할 것입니다.
 
-From the terminal, let's make sure we are at the root of our cloned repository by typing `pwd` and verifying the result displays `$HOME/snyk-azure-resources/`. Our repo contains a [`submodule`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) that points to the source for the official redis image which happens to include a Dockerfile. To synchronize the submodule, type the following command:
+터미널에서 `pwd`를 입력하고 결과에 `$HOME/snyk-azure-resources/`가 표시되는지 확인하여 복제된 리포지토리의 루트에 있는지 확인합니다. 우리 리포지토리에는 Dockerfile을 포함하는 공식 redis 이미지의 소스를 가리키는 [`submodule`](https://git-scm.com/book/en/v2/Git-Tools-Submodules)이 포함되어 있습니다. 하위 모듈을 동기화하려면 다음 명령을 입력하십시오:
 
 ```bash
 git submodule update --recursive
 ```
 
-Then, let's change directory by typing the following command:
+그런 다음 다음 명령을 입력하여 디렉토리를 변경해 보겠습니다:
 
 ```bash
 cd app/redis/6.0/
 ```
 
-From here, a simple `ls -a` command will show the contents and you will see a `Dockerfile` in that directory. You can open this in your favorite editor like [Microsoft Visual Studio Code](https://code.visualstudio.com/) and review the contents. The top few lines should look similar to this:
+여기에서 간단한 `ls -a` 명령으로 내용이 표시되고 해당 디렉터리에 Dockerfile이 표시됩니다. [Microsoft Visual Studio Code](https://code.visualstudio.com/)와 같은 선호하는 편집기에서 이 파일을 열고 내용을 검토할 수 있습니다. 맨 위 몇 줄은 다음과 유사해야 합니다:
 
-```text
+```
 FROM debian:buster-slim
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r -g 999 redis && useradd -r -g redis -u 999 redis
 ```
 
-We will come back to this `Dockerfile` later, but for now, take note that the underlying base image is `debian:buster-slim`.
+이 `Dockerfile`은 나중에 다시 다루겠지만 지금은 기본 이미지가 `debian:buster-slim`이라는 점에 유의하세요.
 
-### Docker build
+### Docker 빌드
 
 Now, from the `app/redis/6.0/` directory, we will build and tag our own container image using the provided `Dockerfile`. To do so, we will run the [`docker build`](https://docs.docker.com/engine/reference/commandline/build/) command as follows:
 
@@ -51,7 +51,7 @@ docker build -t my-redis:v1 .
 
 Upon successful completion we should see results similar to the following:
 
-```text
+```
 Successfully built aa8130687a13
 Successfully tagged my-redis:v1
 ```
@@ -72,7 +72,7 @@ docker tag my-redis:v1 $(az acr show --name mySnykContainerRegistry --query logi
 
 Now, we will run a quick [`docker images`](https://docs.docker.com/engine/reference/commandline/images/) and make sure everything is correctly tagged.
 
-```text
+```
 REPOSITORY                                                      TAG                 IMAGE ID            CREATED             SIZE
 my-redis                                                        v1                  aa8130687a13        4 hours ago         104MB
 mysnykcontainerregistry.azurecr.io/my-redis                     latest              aa8130687a13        4 hours ago         104MB
@@ -90,7 +90,7 @@ We made it. We are now ready to run [`docker push`](https://docs.docker.com/engi
 
 You should see output similar to what's below:
 
-```text
+```
 The push refers to repository [mysnykcontainerregistry.azurecr.io/my-redis]
 555634e64cd8: Pushed
 12534748095c: Pushed
@@ -109,7 +109,7 @@ docker push $(az acr show --name mySnykContainerRegistry --query loginServer --o
 
 You should see output similar to what's below:
 
-```text
+```
 555634e64cd8: Layer already exists
 12534748095c: Layer already exists
 ea013d725bd6: Layer already exists
@@ -127,7 +127,7 @@ az acr repository list --name mySnykContainerRegistry --output json
 
 You should see output similar to what's below:
 
-```text
+```
 [
   "my-redis"
 ]
@@ -141,7 +141,7 @@ az acr repository show-tags --name mySnykContainerRegistry --repository my-redis
 
 We should see output similar to what's below:
 
-```text
+```
 Result
 --------
 latest
@@ -150,5 +150,4 @@ v1
 
 Of course, we can also view the same results from the Azure portal:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/acr_repository_01.png)
-
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/acr\_repository\_01.png)
