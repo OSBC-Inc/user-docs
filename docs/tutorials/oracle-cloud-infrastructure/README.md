@@ -1,3 +1,3 @@
 # Oracle Cloud Infrastructure
 
-Oracle Cloud Infrastructure (OCI) is the first public cloud built from the ground up to be a better cloud for every application. By rethinking core engineering and systems design for cloud computing, we created innovations that solve problems that customers have with existing public clouds. We accelerate migrations of existing enterprise workloads, deliver better reliability and performance for all applications, and offer the complete services customers need to build innovative cloud applications. Learn more about OCI [here](https://www.oracle.com/cloud/why-oci/).
+OCI(Oracle Cloud Infrastructure)는 처음부터 모든 애플리케이션을 위한 더 나은 클라우드가 되기 위해 구축된 최초의 퍼블릭 클라우드입니다. 클라우드 컴퓨팅을 위한 핵심 엔지니어링 및 시스템 설계를 재고함으로써 우리는 고객이 기존 퍼블릭 클라우드에 대해 가지고 있는 문제를 해결하는 혁신을 창출했습니다. 기존 엔터프라이즈 Workload의 마이그레이션을 가속화하고 모든 애플리케이션에 더 나은 안정성과 성능을 제공하며 고객이 혁신적인 클라우드 애플리케이션을 구축하는 데 필요한 완전한 서비스를 제공합니다. 여기에서 OCI에 대해 자세히 알아보세요.
