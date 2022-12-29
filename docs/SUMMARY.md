@@ -601,7 +601,7 @@
   * [Azure 저장소 보안](tutorials/microsoft-azure/securing-azure-repos/README.md)
     * [시작하기](tutorials/microsoft-azure/securing-azure-repos/getting-started.md)
     * [Azure 서비스 프로비저닝](tutorials/microsoft-azure/securing-azure-repos/provision-azure-services.md)
-    * [Working with repos](tutorials/microsoft-azure/securing-azure-repos/working-with-repos.md)
+    * [저장소 작업](tutorials/microsoft-azure/securing-azure-repos/working-with-repos.md)
     * [Configure the Azure Repos integration](tutorials/microsoft-azure/securing-azure-repos/configure-the-azure-repos-integration.md)
     * [Add Azure Repos repositories](tutorials/microsoft-azure/securing-azure-repos/add-azure-repos-repositories.md)
     * [Next steps](tutorials/microsoft-azure/securing-azure-repos/next-steps.md)

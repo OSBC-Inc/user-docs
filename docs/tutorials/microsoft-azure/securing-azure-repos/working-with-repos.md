@@ -1,22 +1,22 @@
-# Working with repos
+# 저장소 작업
 
-## Background
+### 배경
 
 {% hint style="info" %}
-If you haven't already done so, you are encouraged to [`clone`](https://github.com/snyk-partners/snyk-azure-resources.git) or [`fork`](https://github.com/snyk-partners/snyk-azure-resources/fork) the repository for these workshops as these will be necessary to complete some of the following steps.
+아직 수행하지 않은 경우 다음 단계 중 일부를 완료하는 데 필요하므로 이러한 실습에 대한 저장소를 [`clone`](https://github.com/snyk-partners/snyk-azure-resources.git)하거나 [`fork`](https://github.com/snyk-partners/snyk-azure-resources/fork)하는 것이 좋습니다.
 {% endhint %}
 
-In this section, we will work with the [`az repos list`](https://docs.microsoft.com/en-us/cli/azure/ext/azure-devops/repos?view=azure-cli-latest) command to query our `git clone` url. We will then add our Azure Repo as an `upstream` repository and `git push` our code.
+이 Section에서는 [`az repos list`](https://docs.microsoft.com/en-us/cli/azure/ext/azure-devops/repos?view=azure-cli-latest) 명령을 사용하여 `git clone` URL을 쿼리합니다. 그런 다음 Azure Repo를 업스트림 리포지토리로 추가하고 코드를 `git push`합니다.
 
-### Create the project
+### 프로젝트 생성
 
-From the terminal, run the following command:
+터미널에서 다음 명령을 실행합니다:
 
 ```bash
 az repos list --project mySnykProject
 ```
 
-This should output JSON similar to the following:
+그러면 다음과 유사한 JSON이 출력됩니다:
 
 ```javascript
 [
@@ -47,48 +47,48 @@ This should output JSON similar to the following:
 ]
 ```
 
-### Connect to the repo
+### 저장소에 연결
 
-We recommend using SSH. The following steps will walk you through the necessary steps to set this up. You may opt to use HTTPS, but we will not provide steps for connecting with that method. You can read more about how to [authenticate access with personal access tokens](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) or using [Git Credential Managers to authenticate to Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops) for alternatives.
+SSH를 사용하는 것이 좋습니다. 다음 단계는 이를 설정하는 데 필요한 단계를 안내합니다. HTTPS를 사용하도록 선택할 수 있지만 해당 방법으로 연결하는 단계는 제공하지 않습니다. [개인 액세스 토큰으로 액세스를 인증](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops\&tabs=preview-page)하거나 [Git Credential Managers를 사용하여 대안을 위해 Azure Repos에 인증](https://docs.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops)하는 방법에 대해 자세히 알아볼 수 있습니다.
 
 {% tabs %}
-{% tab title="Generate SSH Keys" %}
-If you already have an SSH key you would like to use, you can skip this section. Otherwise, proceed with the following steps:
+{% tab title="SSH 키 생성" %}
+사용하려는 SSH 키가 이미 있는 경우 이 Section을 건너뛸 수 있습니다. 그렇지 않으면 다음 단계를 진행하십시오:
 
-From the terminal, [create your SSH key](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops&tabs=current-page#step-1-create-your-ssh-keys) with the following command:
+터미널에서 다음 명령을 사용하여 [SSH 키를 생성](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops\&tabs=current-page#step-1-create-your-ssh-keys)합니다:
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 {% hint style="info" %}
-Use the email address used to authenticate to your Azure portal.
+Azure Portal에 인증하는 데 사용되는 이메일 주소를 사용합니다.
 {% endhint %}
 
-When prompted to enter a file to save your key, **DO NOT** accept the default file location of `/Users/you/.ssh/id_rsa`. Instead, provide a unique file name for your key such as `/Users/you/.ssh/id_rsa_azure`. Next you will be prompted to provide a secure passphrase:
+키를 저장할 파일을 입력하라는 메시지가 표시되면 `/Users/you/.ssh/id_rsa`의 기본 파일 위치를 **수락하지 마십시오**. 대신 `/Users/you/.ssh/id_rsa_azure`와 같은 고유한 키 파일 이름을 제공하십시오. 다음으로 보안 암호를 입력하라는 메시지가 표시됩니다.
 
-```text
+```
 > Enter passphrase (empty for no passphrase): [Type a passphrase]
 > Enter same passphrase again: [Type passphrase again]
 ```
 {% endtab %}
 
-{% tab title="Add SSH key to ssh-agent" %}
-Start the ssh-agent:
+{% tab title="ssh-agent에 SSH 키 추가" %}
+ssh-agent를 시작합니다:
 
 ```bash
 eval "$(ssh-agent -s)"
 ```
 
-Add your SSH private key to the ssh-agent:
+ssh-agent에 SSH 비공개 키를 추가합니다:
 
 ```bash
 ssh-add -K ~/.ssh/id_rsa_azure
 ```
 
-For macOS, modify `~/.ssh/config` with the following entry:
+macOS의 경우 다음 항목을 사용하여 `~/.ssh/config`를 수정합니다:
 
-```text
+```
 Host ssh.dev.azure.com 
   Hostname ssh.dev.azure.com 
   AddKeysToAgent yes 
@@ -97,7 +97,7 @@ Host ssh.dev.azure.com
   IdentitiesOnly yes
 ```
 
-Lastly, copy your SSH public key to your clipboard. You will need this in the next step:
+마지막으로 SSH 공개 키를 클립보드에 복사합니다. 다음 단계에서 필요합니다:
 
 ```bash
 pbcopy < ~/.ssh/id_rsa_azure.pub
@@ -105,7 +105,7 @@ pbcopy < ~/.ssh/id_rsa_azure.pub
 {% endtab %}
 {% endtabs %}
 
-With the steps above completed, you are ready to [add the public key to Azure DevOps Services](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops&tabs=current-page#step-2--add-the-public-key-to-azure-devops-servicestfs).
+With the steps above completed, you are ready to [add the public key to Azure DevOps Services](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops\&tabs=current-page#step-2--add-the-public-key-to-azure-devops-servicestfs).
 
 ### Git submodules
 
@@ -119,7 +119,7 @@ git submodule init
 
 This should output the following:
 
-```text
+```
 Submodule 'app/redis' (git@github.com:docker-library/redis.git) registered for path 'app/redis'
 ```
 
@@ -131,7 +131,7 @@ git submodule update --recursive
 
 This should output the following:
 
-```text
+```
 Cloning into '/Users/you/git/snyk-azure-resources/app/redis'...
 Submodule path 'app/redis': checked out '9a598d433acf8fbf3d1f07223c164b3bd7ead3b3'
 ```
@@ -158,7 +158,7 @@ git remote -v
 
 You should see output similar to the following:
 
-```text
+```
 azure    git@ssh.dev.azure.com:v3/myOrganizationName/MySnykProject/MySnykProject (fetch)
 azure    git@ssh.dev.azure.com:v3/myOrganizationName/MySnykProject/MySnykProject (push)
 origin    git@github.com:myGitHub/snyk-azure-resources.git (fetch)
@@ -177,7 +177,7 @@ For our example, we will use `master` branch. There are different strategies her
 
 You should see output similar to the following:
 
-```text
+```
 Warning: Permanently added the RSA host key for IP address '192.168.1.100' to the list of known hosts.
 Enumerating objects: 65, done.
 Counting objects: 100% (65/65), done.
@@ -193,5 +193,4 @@ To ssh.dev.azure.com:v3/myOrganizationName/MySnykProject/MySnykProject
 
 Alternatively, you can view the files in your repo by visiting the Azure DevOps portal:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_devops_03.png)
-
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_devops\_03.png)
