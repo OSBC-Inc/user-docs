@@ -621,7 +621,7 @@
       * [Send Message](tutorials/microsoft-azure/notifications-in-microsoft-teams/configure-zap/send-message.md)
     * [Notifications](tutorials/microsoft-azure/notifications-in-microsoft-teams/notifications.md)
 * [Oracle Cloud Infrastructure](tutorials/oracle-cloud-infrastructure/README.md)
-  * [Secure Kubernetes workloads on OKE](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/README.md)
+  * [OKE의 보안 Kubernetes Workload](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/README.md)
     * [Accessing your cluster](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/accessing-your-cluster.md)
     * [Deploy a sample application](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/deploy-a-sample-application.md)
     * [Deploy Snyk](tutorials/oracle-cloud-infrastructure/secure-kubernetes-workloads-on-oke/deploy-snyk.md)
