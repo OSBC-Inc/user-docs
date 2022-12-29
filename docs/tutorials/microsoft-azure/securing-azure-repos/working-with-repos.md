@@ -105,58 +105,58 @@ pbcopy < ~/.ssh/id_rsa_azure.pub
 {% endtab %}
 {% endtabs %}
 
-With the steps above completed, you are ready to [add the public key to Azure DevOps Services](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops\&tabs=current-page#step-2--add-the-public-key-to-azure-devops-servicestfs).
+위의 단계를 완료하면 [Azure DevOps Services에 공개 키를 추가](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops\&tabs=current-page#step-2--add-the-public-key-to-azure-devops-servicestfs)할 준비가 된 것입니다.
 
-### Git submodules
+### Git 하위 모듈
 
-The source repository containing the sample code and templates we are providing contains a `submodule` that references a dependent project. When you cloned this repository it contained a `.gitmodules` file that points to the `app/redis` directory. This will appear empty until you run a couple of [`git submodule`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) commands.
+우리가 제공하는 샘플 코드와 템플릿이 포함된 소스 저장소에는 종속 프로젝트를 참조하는 `submodule`이 포함되어 있습니다. 이 저장소를 복제하면 `app/redis` 디렉터리를 가리키는 `.gitmodules` 파일이 포함됩니다. 몇 가지 [`git submodule`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) 명령을 실행할 때까지 비어 있는 것으로 나타납니다.
 
-From the terminal and the working directory for the cloned project, initialize with the following command:
+복제된 프로젝트의 터미널 및 작업 디렉터리에서 다음 명령을 사용하여 초기화합니다:
 
 ```bash
 git submodule init
 ```
 
-This should output the following:
+그러면 다음이 출력됩니다:
 
 ```
 Submodule 'app/redis' (git@github.com:docker-library/redis.git) registered for path 'app/redis'
 ```
 
-Next, let's update recursively so we clone into our directory all files:
+다음으로 재귀적으로 업데이트하여 모든 파일을 디렉터리에 복제합니다:
 
 ```bash
 git submodule update --recursive
 ```
 
-This should output the following:
+그러면 다음이 출력됩니다:
 
 ```
 Cloning into '/Users/you/git/snyk-azure-resources/app/redis'...
 Submodule path 'app/redis': checked out '9a598d433acf8fbf3d1f07223c164b3bd7ead3b3'
 ```
 
-### Cloning the repo
+### 저장소 복제
 
-After identifying which repository in our project we will use, we will invoke the [`az repos show`](https://docs.microsoft.com/en-us/cli/azure/ext/azure-devops/repos?view=azure-cli-latest#ext-azure-devops-az-repos-show) command to provide details of a specific Git repository. From the terminal, let's run the following command:
+프로젝트에서 사용할 저장소를 식별한 후 [`az repos show`](https://docs.microsoft.com/en-us/cli/azure/ext/azure-devops/repos?view=azure-cli-latest#ext-azure-devops-az-repos-show) 명령을 호출하여 특정 Git 저장소의 세부 정보를 제공합니다. 터미널에서 다음 명령을 실행해 보겠습니다:
 
 ```bash
 az repos show --project mySnykProject --repository mySnykProject --query sshUrl --output tsv
 ```
 
-In the above command, we will query for the `sshUrl` we will need to clone the repo and outputs this as text. We will then pass that value to the [`git remote`](https://git-scm.com/docs/git-remote) command where we are adding `mySnykProject` as a remote repository:
+위의 명령에서 `sshUrl`을 쿼리하여 저장소를 복제하고 이를 텍스트로 출력해야 합니다. 그런 다음 `mySnykProject`를 원격 저장소로 추가하는 [`git remote`](https://git-scm.com/docs/git-remote) 명령에 해당 값을 전달합니다:
 
 ```bash
 git remote add azure $(az repos show --project mySnykProject --repository mySnykProject --query sshUrl --output tsv)
 ```
 
-We can optionally validate this was successful with the by invoking `git remote` once more but this time passing the `-v` option:
+선택적으로 `git remote`를 한 번 더 호출하여 이번에는 `-v` 옵션을 전달하여 이것이 성공했는지 확인할 수 있습니다.
 
 ```bash
 git remote -v
 ```
 
-You should see output similar to the following:
+다음과 유사한 출력이 표시되어야 합니다:
 
 ```
 azure    git@ssh.dev.azure.com:v3/myOrganizationName/MySnykProject/MySnykProject (fetch)
@@ -165,17 +165,17 @@ origin    git@github.com:myGitHub/snyk-azure-resources.git (fetch)
 origin    git@github.com:myGitHub/snyk-azure-resources.git (push)
 ```
 
-Now, we are ready to run our first [`git push`](https://git-scm.com/docs/git-push) command to update our remote repository:
+이제 첫 번째 [`git push`](https://git-scm.com/docs/git-push) 명령을 실행하여 원격 저장소를 업데이트할 준비가 되었습니다:
 
 ```bash
 git push azure master
 ```
 
 {% hint style="info" %}
-For our example, we will use `master` branch. There are different strategies here such as trunk-based versus feature-driven. These are beyond the scope of this module so we will continue with a simplified approach.
+이 예에서는 `master` Branch를 사용합니다. 여기에는 트렁크 기반 대 기능 중심과 같은 다양한 전략이 있습니다. 이것들은 이 모듈의 범위를 벗어나므로 단순화된 접근 방식으로 계속 진행하겠습니다.
 {% endhint %}
 
-You should see output similar to the following:
+다음과 유사한 출력이 표시되어야 합니다:
 
 ```
 Warning: Permanently added the RSA host key for IP address '192.168.1.100' to the list of known hosts.
@@ -191,6 +191,6 @@ To ssh.dev.azure.com:v3/myOrganizationName/MySnykProject/MySnykProject
  * [new branch]      master -> master
 ```
 
-Alternatively, you can view the files in your repo by visiting the Azure DevOps portal:
+또는 Azure DevOps 포털을 방문하여 저장소의 파일을 볼 수 있습니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_devops\_03.png)
