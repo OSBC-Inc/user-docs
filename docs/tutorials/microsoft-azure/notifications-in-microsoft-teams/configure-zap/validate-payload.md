@@ -35,6 +35,6 @@ try {
 }
 ```
 
-Action을 테스트 합니다:
+작업을 테스트합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-validate-payload-test.png)
