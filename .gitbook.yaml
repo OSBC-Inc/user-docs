@@ -8,3 +8,24 @@ redirects:
   nexus: features/integrations/private-registry-gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md
   artifactory: features/integrations/private-registry-gatekeeper-plugins/artifactory-gatekeeper-plugin-overview.md
   fix-images: products/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md
+  languages: more-info/product-language-support-list.md
+  snyk-infrastructure-as-code/detecting-infrastructure-as-code-files-using-a-broker: features/snyk-broker/snyk-broker-infrastructure-as-code-detection/detecting-kubernetes-configuration-files-using-a-broker.md
+  features/integrations/ci-cd-integrations/snyk-cicd-integration-good-practices: features/integrations/ci-cd-integrations/README.md
+  products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code: products/snyk-open-source/language-and-package-manager-support/README.md
+  getting-started/snyk-cicd-integration-good-practices: features/integrations/ci-cd-integrations/README.md
+  features/integrations/snyk-broker: features/integrations/snyk-broker/README.md
+  products/snyk-infrastructure-as-code/jira-integration/understanding-configuration-scan-issues: products/snyk-infrastructure-as-code/snyk-cli-for-infrastructure-as-code/understanding-configuration-scan-issues.md
+  products/snyk-container/integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries: products/snyk-container/integrate-self-hosted-container-registries.md
+  snyk-infrastructure-as-code/scan-terraform-files/detecting-terraform-configuration-files-using-a-broker: features/integrations/snyk-broker/snyk-broker-infrastructure-as-code-detection/detecting-terraform-configuration-files-using-a-broker.md
+  snyk-cli/commands/iac: snyk-cli/commands/README.md
+  snyk-container/integrate-self-hosted-container-registries/snyk-integration-to-self-hosted-container-registries: products/snyk-container/integrate-self-hosted-container-registries.md
+  features/snyk-cli/grouping-projects-by-branch-or-version: snyk-cli/secure-your-projects-in-the-long-term/grouping-projects-by-branch-or-version.md
+  getting-started/getting-started-with-snyk-dashboard: snyk-web-ui/getting-started-with-the-snyk-web-ui.md
+  snyk-open-source/open-source-basics/fixing-vulnerabilities: products/snyk-open-source/open-source-basics/README.md
+  error-catalog: more-info/error-catalog.md
+  github-integration: integrations/git-repository-scm-integrations/github-integration.md
+  os-vuln: products/snyk-open-source/open-source-basics/README.md
+  container-fixes: products/snyk-container/getting-around-the-snyk-container-ui/analysis-and-remediation-for-your-images-from-the-snyk-app.md
+  integrations/github-application: integrations/git-repository-scm-integrations/github-application.md
+  integrations/bitbucket-cloud-app: integrations/git-repository-scm-integrations/bitbucket-cloud-app-integration.md
+  integrations/migrate-bitbucket-cloud-legacy-integration: integrations/git-repository-scm-integrations/migrate-a-bitbucket-cloud-legacy-integration.md
