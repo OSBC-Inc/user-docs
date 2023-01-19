@@ -10,7 +10,7 @@
 
 충분한 데이터가 수집되면 PR에 “Review recommended" 또는 "High chance of success"이라는 조언을 제공하는 배지를 표시합니다.
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (2).png>)
 
 ![](<../../../.gitbook/assets/image (17).png>)
 

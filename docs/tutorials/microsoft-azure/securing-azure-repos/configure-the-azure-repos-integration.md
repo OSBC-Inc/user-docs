@@ -1,33 +1,32 @@
-# Configure the Azure Repos integration
+# Azure Repos Integration 구성
 
-## Enable the integration
+## Integration 활성화
 
-Let's begin by familiarizing ourselves with the [integration documentation](https://support.snyk.io/hc/en-us/articles/360004002198-Azure-Repos-integration). Then, from the [Snyk](https://snyk.io) web console, navigate to `Integrations`. Search and select `Azure Repos`.
+[Integration 문서](https://support.snyk.io/hc/en-us/articles/360004002198-Azure-Repos-integration)에 익숙해지는 것부터 시작하겠습니다. 그런 다음 [Snyk](https://snyk.io/) 웹 콘솔에서 `Integrations`으로 이동합니다. `Azure Repos`를 검색하고 선택합니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_integrations_09.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_integrations\_09.png)
 
-From the configuration menu, you will need to perform three steps:
+구성 메뉴에서 다음 세 단계를 수행해야 합니다:
 
-1. Enter your `organization`
-2. Generate a personal access token
-3. Copy and paste that token and click `save`
+1. `organization` 입력
+2. 개인 액세스 토큰 생성
+3. 해당 토큰을 복사하여 붙여넣고 `save`를 클릭하십시오.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_integrations_10.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_integrations\_10.png)
 
-### Generate a Personal Access Token
+### 개인 액세스 토큰 생성
 
-When you click the `Create a personal access token` button illustrated in the above diagram, you will be redirected to your Azure DevOps organization. You will need to perform the following four steps:
+위 다이어그램에 표시된 `Create a personal access token` 단추를 클릭하면 Azure DevOps 조직으로 리디렉션됩니다. 다음 네 단계를 수행해야 합니다:
 
-1. Provide a name for your token \(i.e. `snyk`\)
-2. Select `Custom defined` for Scopes
-3. Select `Read & write` for Code
-4. Click `Create`
+1. 토큰 이름(예: `snyk`)을 입력하세요.
+2. 범위에 대해 `Custom defined`을 선택합니다.
+3. 코드 `Read & write` 선택
+4. `Create`를 클릭합니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_tokens_01.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_tokens\_01.png)
 
-Make sure that you copy the token and paste this into the Snyk integrations page for Azure Repos.
+토큰을 복사하여 Azure Repos용 Snyk integrations 페이지에 붙여넣어야 합니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_tokens_02.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_tokens\_02.png)
 
-You are now ready to add your Azure Repos repositories for scanning!
-
+이제 스캔을 위해 Azure Repos 저장소를 추가할 준비가 되었습니다!

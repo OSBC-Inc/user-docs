@@ -1,12 +1,11 @@
-# Snyk Infrastructure as Code \(IaC\)
+# Snyk Infrastructure as Code (IaC)
 
-## Snyk IaC - Find and fix issues in IaC files
+## Snyk IaC - IaC 파일에서 Issue 찾기 및 수정
 
-Snyk helps developers to find and fix issues with infrastructure as code \(IaC\) files like Terraform, Helm, and Kubernetes. Snyk highlights configuration issues directly in the code, to learn and reinforce secure IaC development practices. Snyk provides customizable built-in rules to embed security best practices in the development and test process.
+Snyk는 개발자가 Terraform, Helm 및 Kubernetes와 같은 Infrastructure as Code(IaC) 파일의 문제를 찾고 수정하는 데 도움이 됩니다. Snyk는 보안 IaC 개발 사례를 배우고 강화하기 위해 코드에서 직접 구성 문제를 강조 표시합니다. Snyk는 개발 및 테스트 프로세스에 보안 모범 사례를 포함하는 사용자 지정 가능한 기본 제공 규칙을 제공합니다.
 
-### Workshop exercises
+### Workshop 연습
 
-We will complete the following steps:
+다음 단계를 완료합니다:
 
-1. Review IaC artifacts from SPC application in Snyk UI.
-
+1. Snyk UI에서 SPC 애플리케이션의 IaC 아티팩트를 검토합니다.

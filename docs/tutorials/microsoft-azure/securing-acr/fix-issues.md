@@ -1,10 +1,9 @@
-# Fix issues
+# Issues 수정
 
-When we drill down and view our ACR image by clicking on it from the Snyk web console, we will see the following message:
+Snyk 웹 콘솔에서 클릭하여 ACR 이미지를 드릴다운하고 보면 다음 메시지가 표시됩니다:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_scan_06.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_scan\_06.png)
 
-We have made progress in building out a comprehensive security solution. We began with monitoring our Kubernetes cluster and identifying potential issues in our configuration as well as our image. Then, we learned how to create, manage and monitor a private registry so that we can iterate and pull images from this rather than the internet.
+우리는 포괄적인 보안 솔루션을 구축하는 데 진전을 이루었습니다. 우리는 Kubernetes 클러스터를 모니터링하고 구성 및 이미지에서 잠재적인 문제를 식별하는 것으로 시작했습니다. 그런 다음 인터넷이 아닌 여기에서 이미지를 반복하고 가져올 수 있도록 개인 레지스트리를 생성, 관리 및 모니터링하는 방법을 배웠습니다.
 
-In the next module, **Securing Azure Repos**, we will tie all of this together and discuss monitoring `source control` with Snyk's integration to [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/).
-
+다음 모듈인 **Securing Azure Repos**에서는 이 모든 것을 하나로 묶고 Snyk와 [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/)의 통합으로 모니터링 소스 제어에 대해 논의합니다.

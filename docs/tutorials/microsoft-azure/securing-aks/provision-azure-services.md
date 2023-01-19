@@ -1,22 +1,22 @@
-# Provision Azure services
+# Azure 서비스 프로비저닝
 
-## Background
+## 배경
 
-In order to understand the various Snyk integration points to Azure, we are going to deploy and configure some supporting resources. The objective for these exercises is to demonstrate how Snyk secures your workloads. We will provide basic patterns intended for use in learning environments. For a deeper dive and learning more about Azure, we suggest referencing Microsoft's self-paced [training modules](https://docs.microsoft.com/en-us/learn/browse/?products=azure).
+Azure에 대한 다양한 Snyk Integration 지점을 이해하기 위해 몇 가지 지원 리소스를 배포하고 구성할 것입니다. 이 연습의 목표는 Snyk이 Workload를 보호하는 방법을 보여주는 것입니다. 학습 환경에서 사용하기 위한 기본 패턴을 제공합니다. Azure에 대해 자세히 알아보고 자세히 알아보려면 Microsoft의 [자습 교육 모듈](https://docs.microsoft.com/en-us/learn/browse/?products=azure)을 참조하는 것이 좋습니다.
 
-## Deploy Azure Kubernetes Service \(AKS\)
+## AKS(Azure Kubernetes Service) 배포
 
-The following examples are based on an [Azure Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for deploying AKS using the CLI. We will deploy a cluster as well as a sample multi-container application. The application will include both a web front end as well as a Redis instance.
+다음 예제는 CLI를 사용하여 AKS를 배포하기 위한 [Azure Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)를 기반으로 합니다. 클러스터와 샘플 다중 컨테이너 애플리케이션을 배포합니다. 애플리케이션에는 웹 프런트 엔드와 Redis 인스턴스가 모두 포함됩니다.
 
-### Create a resource group
+### 리소스 그룹 만들기
 
-We begin by creating an [Azure resource group](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups) to logical organize the resources we will deploy and manage. Here, we will also define the location where our resources will run in Azure. In this case, we will deploy to the `eastus` location. From your terminal, run the following command:
+배포하고 관리할 리소스를 논리적으로 구성하기 위해 [Azure 리소스 그룹](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups)을 만드는 것으로 시작합니다. 여기서는 리소스가 Azure에서 실행될 위치도 정의합니다. 이 경우에는 eastus 위치에 배포합니다. 터미널에서 다음 명령을 실행합니다:
 
 ```bash
 az group create --name mySnykAKSResourceGroup --location eastus
 ```
 
-When successfully completed, you will see output similar to the following:
+성공적으로 완료되면 다음과 유사한 출력이 표시됩니다:
 
 ```javascript
 {
@@ -32,70 +32,69 @@ When successfully completed, you will see output similar to the following:
 }
 ```
 
-You can also validate the creation of the resource group in the Azure portal as illustrate below:
+아래 그림과 같이 Azure Portal에서 리소스 그룹 생성의 유효성을 검사할 수도 있습니다:
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_resource_groups_01.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_resource\_groups\_01.png)
 
-### Create the AKS cluster
+### AKS Cluster 만들기
 
-Next, we are going to create a cluster named `mySnykAKSCluster` in our recently created `mySnykAKSResourceGroup`. Our cluster will have one node and will have monitoring enabled.
+다음으로 최근에 만든 `mySnykAKSResourceGroup`에 `mySnykAKSCluster`라는 Cluster를 만들겠습니다. Cluster에는 하나의 노드가 있고 모니터링이 활성화됩니다.
 
 ```bash
 az aks create --resource-group mySnykAKSResourceGroup --name mySnykAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
 ```
 
-This may take several minutes to complete. You will see the following outputs in the terminal:
+완료하는 데 몇 분 정도 걸릴 수 있습니다. 터미널에 다음 출력이 표시됩니다:
 
-```text
+```
 Finished service principal creation[##########################]  100.0000%
 - Running...
 AAD role propagation done[[##########################]  100.0000%
 ```
 
-Once the deployment completes the CLI will return a lengthy JSON response containing details about your cluster. You can also view this within the Azure portal:
+배포가 완료되면 CLI는 클러스터에 대한 세부 정보가 포함된 긴 JSON 응답을 반환합니다. Azure Portal 내에서 이를 볼 수도 있습니다.
 
 _**Figure 1**_
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_resource_groups_02.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_resource\_groups\_02.png)
 
 _**Figure 2**_
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_resource_groups_03.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_resource\_groups\_03.png)
 
 _**Figure 3**_
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure_resource_groups_04.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/azure\_resource\_groups\_04.png)
 
-### Connect to the cluster
+### Cluster에 연결
 
-To manage our AKS cluster, we will use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/). Since we are using the Azure CLI, we will need to install `kubectl` with the following command:
+AKS 클러스터를 관리하기 위해 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/)을 사용합니다. Azure CLI를 사용하고 있으므로 다음 명령을 사용하여 kubectl을 설치해야 합니다:
 
 ```bash
 az aks install-cli
 ```
 
-Next, we will need to configure `kubectl` to connect to AKS by downloading our credentials and configuring the CLI to use these.
+다음으로 자격 증명을 다운로드하고 이를 사용하도록 CLI를 구성하여 AKS에 연결하도록 kubectl을 구성해야 합니다.
 
 ```bash
 az aks get-credentials --resource-group mySnykAKSResourceGroup --name mySnykAKSCluster
 ```
 
-If successful, you should see output similar to this:
+성공하면 다음과 유사한 출력이 표시됩니다:
 
-```text
+```
 Merged "mySnykAKSCluster" as current context in $HOME/.kube/config
 ```
 
-Now, we are ready to verify our connection to our cluster.
+이제 Cluster에 대한 연결을 확인할 준비가 되었습니다.
 
 ```bash
 kubectl get nodes
 ```
 
-When the node is ready, you should see an example output similar to the following:
+노드가 준비되면 다음과 유사한 예시 출력이 표시되어야 합니다:
 
-```text
+```
 NAME                                STATUS   ROLES   AGE   VERSION
 aks-nodepool1-27048785-vmss000000   Ready    agent   5m    v1.15.10
 ```
-

@@ -66,7 +66,7 @@ Snyk과 작업을 수행할 저장소에 대한 권한을 갖게 한 후 Snyk UI
 
 가져오기 전에 조직 내의 모든 사용자에 대한 알림을 비활성화하려면 해당 체크 박스들의 선택을 취소하십시오:
 
-![](<../.gitbook/assets/image (58).png>)
+![](<../.gitbook/assets/image (58) (1).png>)
 
 자세한 내용은 [알림 관리](broken-reference)를 참조하십시오.
 
@@ -162,9 +162,9 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새 취약점이 �
 
 개발자는 자동 수정 PR에 나타나는 merge advice를 고려해야 합니다.
 
-![](<../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (1) (1) (3).png>)
+![](<../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (1) (1) (2) (1).png>)
 
-![](<../.gitbook/assets/advice-green (1) (2) (2) (4) (3) (1) (1) (3).png>)
+![](<../.gitbook/assets/advice-green (1) (2) (2) (4) (3) (1) (1) (2) (2).png>)
 
 ![](<../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (1) (1) (2).png>)
 

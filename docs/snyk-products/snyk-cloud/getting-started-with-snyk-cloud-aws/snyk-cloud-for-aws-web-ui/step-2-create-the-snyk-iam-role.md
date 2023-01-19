@@ -80,7 +80,7 @@ If the output says `"CREATE_COMPLETE"`, AWS has finished creating your role.
 2. Navigate to [CloudFormation](https://console.aws.amazon.com/cloudformation).
 3. Select the **Create stack** button:
 
-<figure><img src="../../../../.gitbook/assets/snyk-cloud-cloudformation-create-stacks.png" alt="Select the Create stack button in the AWS Management Console"><figcaption><p>Select the Create stack button in the AWS Management Console</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Select the Create stack button in the AWS Management Console</p></figcaption></figure>
 
 4\. Select **With new resources (standard)** from the drop-down menu.
 
@@ -104,7 +104,7 @@ If the output says `"CREATE_COMPLETE"`, AWS has finished creating your role.
 
 14\. AWS launches the stack, and you'll see a page with stack details. You can select the **Refresh** button to refresh its status:
 
-<figure><img src="../../../../.gitbook/assets/snyk-cloud-stack-status.png" alt="Select the Refresh button to refresh the stack status in the AWS Management Console"><figcaption><p>Select the Refresh button to refresh the stack status in the AWS Management Console</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Select the Refresh button to refresh the stack status in the AWS Management Console</p></figcaption></figure>
 
 If the **Status** column says `CREATE_COMPLETE`, AWS has finished creating the IAM role.
 

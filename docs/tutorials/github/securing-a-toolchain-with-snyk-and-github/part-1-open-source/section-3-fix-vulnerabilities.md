@@ -19,63 +19,63 @@ Snyk에 로그인하고 이전에 가져온 `gh-actions-academy` 프로젝트로
 
 ## Step 2: Fix Pull Request in Snyk 생성
 
-When using the GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request. Click on "Fix this vulnerability" to do so.
+GitHub 통합을 사용할 때 수정 사항이 있는 경우 Snyk는 Pull Request를 통해 취약한 종속성을 취약하지 않은 버전으로 자동 업그레이드할 수 있습니다. 그렇게 하려면 "Fix this vulnerability"을 클릭하십시오.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-fixvuln.png)
 
-On the next screen, you'll be able to confirm the issue to fix with this PR.
+다음 화면에서 이 PR로 해결할 문제를 확인할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-prconfirm.png)
 
-Looks good! Go ahead and open the PR.
+좋아 보입니다! 계속해서 PR을 엽니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-propen.png)
 
-Once it's ready, you'll be taken to the PR in GitHub, where you can review the changes in the file diff view:
+준비가 되면 GitHub의 PR로 이동하여 파일 diff 보기에서 변경 사항을 검토할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-prdiff.png)
 
-We see that CI checks completed successfully, assuring us we didn't introduce a breaking change.
+CI 검사가 성공적으로 완료된 것을 확인하여 브레이킹 체인지를 도입하지 않았음을 확인합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-prchecks.png)
 
-Now, go ahead and merge the PR! You can also delete the branch. Back in Snyk, we can appreciate that our `package.json` file has 1 less High Severity Vulnerability.
+이제 PR을 Merge하십시오! Branch를 삭제할 수도 있습니다. Snyk으로 돌아가서 `package.json` 파일에 높은 심각도 취약점이 1개 적다는 것을 알 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk-postpr.png)
 
-## Step 3: Fix the rest of the Vulnerabilities
+## Step 3: 나머지 취약점 수정
 
-Let's fast track to a clean `develop` branch with another Pull Request. This time, from the `all-fixes` branch into `develop`.
+다른 Pull Request를 통해 깨끗한 `develop` Branch를 빠르게 추적해 봅시다. 이번에는 `all-fixes` Branch에서 `develop`으로 이동합니다.
 
-### How we arrived at a clean branch
+### 깨끗한 Branch에 도착한 방법
 
-The `all-fixes` branch was created by using the [Snyk Wizard](https://support.snyk.io/hc/en-us/articles/360003851357-Manage-vulnerability-results-with-the-Snyk-CLI-wizard) against our `develop` branch. If you'd rather do this yourself, `git clone` the repo to your workstation and run `snyk wizard` against it. We recommend pushing changes into a new branch so you can continue the workshop from there.
+`all-fixes` Branch는 `develop` Branch에 대해 [Snyk Wizard](https://support.snyk.io/hc/en-us/articles/360003851357-Manage-vulnerability-results-with-the-Snyk-CLI-wizard)를 사용하여 생성되었습니다. 이 작업을 직접 수행하려면 저장소를 워크스테이션에 `git clone`하고 이에 대해 snyk Wizard를 실행하십시오. 워크숍을 계속할 수 있도록 변경 사항을 새 Branch로 Push하는 것이 좋습니다.
 
-### Open a Pull Request!
+### Pull Request를 여세요!
 
-Create a New Pull Request from `all-fixes` to `develop`. This introduces some changes:
+`develop`할 `all-fixes`에서 새 Pull Request을 만듭니다. 이것은 몇 가지 변경 사항을 소개합니다.
 
-* The creation of a `.snyk` file, which is used to track changes made by `Snyk Wizard`.
-* Updated `package.json` and `package-lock.json` files with updated dependencies.
+* `Snyk Wizard`가 만든 변경 사항을 추적하는 데 사용되는 `.snyk` 파일 생성.
+* 업데이트된 종속성으로 `package.json` 및 `package-lock.json` 파일이 업데이트되었습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-allfixpr.png)
 
-You can explore these changes in the Comparing Changes view to learn more. When ready, finish creating and Merge the Pull Request.
+변경 사항 비교 보기에서 이러한 변경 사항을 탐색하여 자세히 알아볼 수 있습니다. 준비가 되면 Pull Request 생성 및 Merge를 완료합니다.
 
-## Step 4: Re-visit the PR created in Step 2
+## Step 4: Step 2에서 생성한 PR을 다시 방문
 
-If you left the Pull Request from Section 2 open, you can re-visit it in the Pull Requests tab.
+Section 2의 Pull Requests를 열어 둔 경우 Pull Requests 탭에서 다시 방문할 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-postfixes.png)
 
-When the workflows re-run, this time, the Snyk Security gate and CI jobs should complete successfully.
+Workflow가 다시 실행되면 이번에는 Snyk Security 게이트 및 CI 작업이 성공적으로 완료되어야 합니다.
 
 {% hint style="warning" %}
-Open Source vulnerabilities are disclosed every day. If the Snyk Gate fails, at least one new High Severity vulnerability has been disclosed since this was written. If this happens, Repeat steps 1 and 2 above to open a Pull Request that fixes the remaining issues.
+오픈 소스 취약점은 매일 공개됩니다. Snyk Gate가 실패하면 이 글이 작성된 이후로 하나 이상의 새로운 높은 심각도 취약점이 공개되었습니다. 이 경우 위의 1단계와 2단계를 반복하여 나머지 문제를 수정하는 Pull Request를 엽니다.
 {% endhint %}
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-postfixchecks.png)
 
-Merge in the changes, and feel good that your `PROD` branch is free from Open Source Vulnerabilities! 🏆
+변경 사항을 Merge하고 PROD Branch에 오픈 소스 취약점이 없음을 확인하십시오! 🏆
 
-You made it to the end of Part 1! Congratulations! Proceed to Part 2 to see how Snyk Container can help you keep this application secure as you package it in a container.
+Part 1의 끝까지 왔습니다! 축하합니다! Part 2로 이동하여 Snyk Container가 컨테이너에 패키징할 때 이 애플리케이션을 안전하게 유지하는 데 어떻게 도움이 되는지 알아보십시오.

@@ -1,53 +1,53 @@
 # Module 3
 
-## Red Hat OpenShift container platform
+## Red Hat OpenShift 컨테이너 플랫폼
 
-In order to complete these steps, you **must** have a running OpenShift 4 cluster. In **Getting Started**, we listed prerequisites for this workshop and the steps found in [Red Hat's Get started with OpenShift](https://www.openshift.com/try) guide should be followed if you don't already have a cluster to work on.
+이 단계를 완료하려면 실행 중인 OpenShift 4 클러스터가 있어야 합니다. **시작하기**에서 이 실습의 전제 조건을 나열했으며 작업할 클러스터가 아직 없는 경우 [Red Hat의 OpenShift 시작하기 가이드](https://www.openshift.com/try)에 있는 단계를 따라야 합니다.
 
 {% hint style="warning" %}
-You will need to install the [OpenShift Container Platform command-line interface \(CLI\)](https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_cli/getting-started-cli.html) before you continue.
+계속하기 전에 [OpenShift Container Platform CLI(command-line interface)](https://docs.openshift.com/container-platform/4.2/cli\_reference/openshift\_cli/getting-started-cli.html)를 설치해야 합니다.
 {% endhint %}
 
-### Securing Kubernetes workloads
+### Kubernetes Workload 보안
 
-#### Authenticating to your cluster
+#### 클러스터에 인증
 
-Once you have installed the CLI, let's start with authenticating to our cluster:
+CLI를 설치했으면 클러스터 인증부터 시작하겠습니다:
 
 ```bash
 oc login
 ```
 
-#### Deploying the application
+#### 애플리케이션 배포
 
-Next, we will [create a project ](https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_cli/getting-started-cli.html#creating-a-project)using the `oc new-project` command:
+다음으로 `oc new-project` 명령을 사용하여 [프로젝트를 생성](https://docs.openshift.com/container-platform/4.2/cli\_reference/openshift\_cli/getting-started-cli.html#creating-a-project)합니다.
 
 ```bash
 oc new-project demo
 ```
 
-Next, [create a new app](https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_cli/getting-started-cli.html#creating-a-new-app) with the `oc new-app` command. Here we will create our backend using the `mongo` container image and pass the `--name` parameter to name our app `goof-mongo`:
+다음으로 `oc new-app` 명령을 사용하여 [새 앱을 만듭니다](https://docs.openshift.com/container-platform/4.2/cli\_reference/openshift\_cli/getting-started-cli.html#creating-a-new-app). 여기서는 `mongo` 컨테이너 이미지를 사용하여 백엔드를 생성하고 `--name` 매개변수를 전달하여 앱 이름을 `goof-mongo`로 지정합니다:
 
 ```bash
 oc new-app mongo --name goof-mongo
 ```
 
-Next, we can _optionally_ watch the status bu running the `oc logs` command against our deployment configuration:
+다음으로, 배포 구성에 대해 `oc logs` 명령을 실행하는 상태 bu를 선택적으로 볼 수 있습니다.
 
 ```bash
 oc logs -f dc/goof-mongo
 ```
 
-We can also _optionally_ view the status of the service created by running the `oc get svc` command:
+`oc get svc` 명령을 실행하여 생성된 서비스의 상태를 _선택적_으로 볼 수도 있습니다:
 
 ```bash
 oc get svc goof-mongo
 ```
 
-Now, we are ready to deploy our frontend application. Here we will do a few things:
+이제 프런트엔드 애플리케이션을 배포할 준비가 되었습니다. 여기에서 몇 가지 작업을 수행합니다:
 
-1. Pull the container image we previously pushed to our quay repository.
-2. Set the `COMPONENT_BACKEND_HOST` & `COMPONENT_BACKEND_PORT` to allow our frontend to talk to our backend.
+1. 이전에 quay 저장소에 Push한 컨테이너 이미지를 가져옵니다.
+2. 프런트엔드가 백엔드와 통신할 수 있도록 `COMPONENT_BACKEND_HOST` 및 `COMPONENT_BACKEND_PORT`를 설정합니다.
 
 ```bash
 oc new-app quay.io/<QUAY_USER>/goof \
@@ -55,51 +55,50 @@ oc new-app quay.io/<QUAY_USER>/goof \
 -e COMPONENT_BACKEND_PORT=27017
 ```
 
-We will also need to set an environment variable for our frontend app by running the `oc set env` command against our frontend deployment configuration.
+또한 프런트엔드 배포 구성에 대해 `oc set env` 명령을 실행하여 프런트엔드 앱에 대한 환경 변수를 설정해야 합니다.
 
 ```bash
 oc set env dc/goof DOCKER=1
 ```
 
-Similar to what we did for our backend, we can _optionally_ run `oc get svc` to see the status of our frontend service.
+백엔드에서 수행한 것과 유사하게 선택적으로 `oc get svc`를 실행하여 프런트엔드 서비스의 상태를 확인할 수 있습니다.
 
 ```bash
 oc get svc goof
 ```
 
-Now that our frontend is deployed, we will need to expose this so that we can access our app from a web browser. For this, we will run the `oc expose` command against our frontend service.
+이제 프런트엔드가 배포되었으므로 웹 브라우저에서 앱에 액세스할 수 있도록 이를 노출해야 합니다. 이를 위해 프런트엔드 서비스에 대해 `oc expose` 명령을 실행합니다.
 
 ```bash
 oc expose svc/goof
 ```
 
-Lastly, we will run `oc get routes` to get the URL which we will copy and paste into our browser.
+마지막으로 `oc get route`를 실행하여 브라우저에 복사하여 붙여넣을 URL을 가져옵니다.
 
 ```bash
 oc get routes
 ```
 
-You can see the results of these commands by logging into the OpenShift console and reviewing the **Deployment Configs** for your project.
+OpenShift 콘솔에 로그인하고 프로젝트의 **Deployment Configs**을 검토하면 이러한 명령의 결과를 볼 수 있습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/openshift-deployment-config.png)
 
-#### Installing the Snyk controller with OpenShift 4 and OperatorHub
+#### OpenShift 4 및 OperatorHub와 함께 Snyk 컨트롤러 설치
 
-We mentioned in **Getting Started** that you will need to install the Snyk controller to your cluster. If you have not already done so, now is a good time to go through the steps documented in our [guide](https://support.snyk.io/hc/en-us/articles/360006548317-Install-the-Snyk-controller-with-OpenShift-4-and-OperatorHub).
+**시작하기**에서 클러스터에 Snyk 컨트롤러를 설치해야 한다고 언급했습니다. 아직 수행하지 않았다면 지금이 [가이드](https://support.snyk.io/hc/en-us/articles/360006548317-Install-the-Snyk-controller-with-OpenShift-4-and-OperatorHub)에 설명된 단계를 수행할 적기입니다.
 
-#### Monitoring Kubernetes workloads
+#### Kubernetes Workload 모니터링
 
-By logging into your Snyk account, you will be able to [add Kubernetes workloads for security scanning](https://support.snyk.io/hc/en-us/articles/360003947117-Adding-Kubernetes-workloads-for-security-scanning). In this example, we are going to monitor our recently deployed **goof** application.
+Snyk 계정에 로그인하면 [보안 검색을 위해 Kubernetes Workload를 추가](https://support.snyk.io/hc/en-us/articles/360003947117-Adding-Kubernetes-workloads-for-security-scanning)할 수 있습니다. 이 예에서는 최근에 배포된 **goof** 애플리케이션을 모니터링할 것입니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/kubernetes-integration-01.png)
 
-Once you **Add selected workloads** you will be taken back to the **Projects** page where you can see a high level overview of all imported projects including your Kubernetes application.
+**Add selected workloads**를 클릭하면 Kubernetes 애플리케이션을 포함하여 가져온 모든 프로젝트의 높은 수준의 개요를 볼 수 있는 **Projects** 페이지로 돌아갑니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/kubernetes-integration-02.png)
 
-By clicking on the the `demo/replicationcontroller/goof-1` project, you will see additional details specific to the application security configuration. In this example, we see a number of issues have been found.
+`demo/replicationcontroller/goof-1` 프로젝트를 클릭하면 애플리케이션 보안 구성과 관련된 추가 세부 정보가 표시됩니다. 이 예에서는 여러 가지 문제가 발견되었음을 알 수 있습니다.
 
-As we now know, Kubernetes is not secure by default. It is beyond the scope of these exercises to provide a deep-dive on this topic, but detailed documentation on [securing a cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/) is readily available. Additional reading is recommended on configuring a [security context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) for a pod, [pod security](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) policies, and setting [capabilities](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-capabilities-for-a-container) for a container.
+이제 알다시피 Kubernetes는 기본적으로 안전하지 않습니다. 이 주제에 대한 심층 분석을 제공하는 것은 이러한 연습의 범위를 벗어나지만 [클러스터 보안](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)에 대한 자세한 문서는 쉽게 사용할 수 있습니다. 포드에 대한 [보안 컨텍스트](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) 구성, [포드 보안](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) 정책 및 컨테이너에 대한 [기능](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-capabilities-for-a-container) 설정에 대한 추가 읽기가 권장됩니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/kubernetes-integration-03.png)
-

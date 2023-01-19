@@ -55,7 +55,7 @@ Snyk에서 테스트하고 모니터링할 저장소를 선택하여 Snyk으로 
 
 ![](<../../.gitbook/assets/view\_vulns\_\_overview (1).png>)
 
-![](<../../.gitbook/assets/detailed-vuln-information (3) (4) (4) (4) (6) (7) (5) (1) (1) (1).png>)
+![](<../../.gitbook/assets/detailed-vuln-information (3) (4) (4) (4) (6) (7) (5) (1) (1) (1) (2).png>)
 
 자세한 내용은 [프로젝트 정보 보기](../../getting-started/introduction-to-snyk-projects/view-project-information/)를 참조하십시오.
 

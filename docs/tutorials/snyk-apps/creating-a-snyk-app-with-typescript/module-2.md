@@ -1,50 +1,50 @@
-# Register The App and Configure User Authorization
+# 앱 등록 및 사용자 인증 구성
 
-In the previous sections of this tutorial, we set up our TypeScript project, added an Express server, and configured some basic routing. We'll be building on top of the project we created in the previous sections, so if you haven't, it is highly recommended that you first complete the previous portions of this tutorial before continuing.
+이 자습서의 이전 섹션에서는 TypeScript 프로젝트를 설정하고 Express 서버를 추가하고 몇 가지 기본 라우팅을 구성했습니다. 우리는 이전 섹션에서 생성한 프로젝트 위에 빌드할 것이므로 아직 하지 않은 경우 계속하기 전에 이 자습서의 이전 부분을 먼저 완료하는 것이 좋습니다.
 
-## Creating and registering a Snyk App
+## Snyk 앱 생성 및 등록
 
-We've made some good progress with our TypeScript application so far, but at the moment, that's all it is - a TypeScript application. To turn it into a bonified Snyk App, we'll need to register our project as a new App using Snyk's API
+우리는 지금까지 TypeScript 애플리케이션으로 좋은 진전을 이루었지만 현재로서는 TypeScript 애플리케이션이 전부입니다. Bonified Snyk 앱으로 전환하려면 Snyk의 API를 사용하여 프로젝트를 새 앱으로 등록해야 합니다.
 
-### Prerequisites
+### 전제 조건
 
-* A Snyk account with API privileges
-* A [Snyk API Token](https://docs.snyk.io/features/snyk-api-info/authentication-for-api)
-* The `orgId` of the Snyk Organization that will be registered as the App owner
+* API 권한이 있는 Snyk 계정
+* [Snyk API 토큰](https://docs.snyk.io/features/snyk-api-info/authentication-for-api)
+* 앱 소유자로 등록될 Snyk 조직의 `orgId`
 
-#### Obtaining an `orgId`
+`orgId` 얻기
 
-There are two methods for retrieving an `orgId`. The first is to simply login to your Snyk account and visit the organization settings page for the organization you wish to retrieve the ID of. The path to the organization settings page is:
+`orgId`를 검색하는 방법에는 두 가지가 있습니다. 첫 번째는 Snyk 계정에 로그인하고 ID를 검색하려는 조직의 조직 설정 페이지를 방문하는 것입니다. 조직 설정 페이지의 경로는 다음과 같습니다:
 
 ```
 https://snyk.io/org/{your-org-name}/manage/settings
 ```
 
-Alternatively, you may also retrieve an organization's `orgId` via the `https://snyk.io/api/v1/orgs` API endpoint, using your API token in the authorization header. For details about this endpoint, view it's documentation [here](https://snyk.docs.apiary.io/#reference/organizations/the-snyk-organization-for-a-request/list-all-the-organizations-a-user-belongs-to).
+또는 인증 헤더의 API 토큰을 사용하여 `https://snyk.io/api/v1/orgs` API 끝점을 통해 조직의 `orgId`를 검색할 수도 있습니다. 이 끝점에 대한 자세한 내용은 [여기](https://snyk.docs.apiary.io/#reference/organizations/the-snyk-organization-for-a-request/list-all-the-organizations-a-user-belongs-to)에서 해당 설명서를 참조하십시오.
 
-### About Snyk Apps and the Snyk API
+### Snyk 앱 및 Snyk API 정보
 
-Snyk Apps have first class access to the API, regardless of whether users installing the App have paid for access or not. To take advantage of this feature, Apps must use API endpoints with the domainhttps://api.snyk.io/rather than the conventional https://snyk.io/api/, when accessing the API within the App.
+Snyk 앱은 앱을 설치하는 사용자가 액세스 비용을 지불했는지 여부에 관계없이 API에 대한 일급 액세스 권한을 갖습니다. 이 기능을 활용하려면 앱 내에서 API에 액세스할 때 앱이 기존의 https://snyk.io/api/가 아닌 https://api.snyk.io/ 도메인이 있는 API 엔드포인트를 사용해야 합니다.
 
-### Registering our app with Snyk
+### Snyk에 앱 등록
 
-Registration of a new Snyk App is a performed via a simple POST request to Snyk's API. While we could certainly configure the App we've been building throughout this tutorial to perform the request, we'll instead make the request directly using `curl` to avoid creating a function that can only be run a single time.
+새로운 Snyk 앱 등록은 Snyk의 API에 대한 간단한 POST 요청을 통해 수행됩니다. 요청을 수행하기 위해 이 자습서 전체에서 구축한 앱을 확실히 구성할 수 있지만 대신 한 번만 실행할 수 있는 함수를 만들지 않도록 `curl`을 사용하여 직접 요청을 수행합니다.
 
-The body of the request requires the following details:
+요청 본문에는 다음 세부 정보가 필요합니다:
 
-* `name`: The name of the Snyk App
-* `redirectUris`: The accepted callback location(s) during end-user authentication
-* `scopes`: The account permissions the Snyk App will ask a user to grant
+* `name`: Snyk 앱의 이름
+* `redirectUris`: 최종 사용자 인증 중 허용된 콜백 위치
+* `scopes`: Snyk 앱이 사용자에게 부여할 계정 권한
 
-> A note on `scopes`: Once registered, a Snyk Apps `scopes` cannot currently be changed. The only recourse is deleting the Snyk App using the [Delete App](https://snykv3.docs.apiary.io/#reference/apps/single-app-management/delete-app) API endpoint and registering it again as a new Snyk App.
+> `scopes`에 대한 참고 사항: 일단 등록되면 Snyk Apps `scopes`는 현재 변경할 수 없습니다. 유일한 방법은 앱 삭제 API 엔드포인트를 사용하여 Snyk [앱을 삭제](https://snykv3.docs.apiary.io/#reference/apps/single-app-management/delete-app)하고 새 Snyk 앱으로 다시 등록하는 것입니다.
 
-**At the time of this writing, Snyk Apps is still in beta. At the moment, there is only one available scope: `apps:beta`. This scope allows the App to test and monitor existing projects, as well as read information about Snyk organizations, existing projects, issues, and reports.**
+**이 글을 쓰는 시점에서 Snyk Apps는 아직 베타 버전입니다. 현재 사용 가능한 범위는 `apps:beta` 1개뿐입니다. 이 범위를 통해 앱은 기존 프로젝트를 테스트 및 모니터링하고 Snyk 조직, 기존 프로젝트, 문제 및 보고서에 대한 정보를 읽을 수 있습니다.**
 
-**One of the limitations of the Snyk Apps beta is that a Snyk App may only be authorized by users who have administrator access to the organization to which the Snyk App is registered.**
+**Snyk 앱 베타의 제한 사항 중 하나는 Snyk 앱이 등록된 조직에 대한 관리자 액세스 권한이 있는 사용자만 Snyk 앱을 인증할 수 있다는 것입니다.**
 
-With your API token and `orgId` in hand, perform the following command in your terminal, substituting the values as necessary. For this tutorial, use `http://localhost:3000/callback` for the `redirectUris` value.
+API 토큰과 `orgId`를 가지고 터미널에서 다음 명령을 수행하고 필요에 따라 값을 대체합니다. 이 자습서에서는 `redirectUris` 값에 대해 `http://localhost:3000/callback`을 사용합니다.
 
-> Tip: You can avoid inputting your API Token and other secrets directly into your shell by adding them as export statements in a file and sourcing the file to set them as environment variables.
+> Tip: API 토큰 및 기타 암호를 파일에 내보내기 문으로 추가하고 파일을 소싱하여 환경 변수로 설정하면 셸에 직접 입력하는 것을 방지할 수 있습니다.
 
 ```bash
 curl --include \
@@ -59,55 +59,55 @@ curl --include \
      'https://api.snyk.io/v3/orgs/<ORG_ID>/apps?version='
 ```
 
-The response from Snyk contains two important values necessary to complete our Snyk App's integration: `clientId` and `clientSecret`. Store these values somewhere safe. This is the only time you will ever see your `clientSecret` from Snyk. As a warning, **never share your `clientSecret` publicly**. This is used to authenticate your App with Snyk.
+Snyk의 응답에는 Snyk 앱의 통합을 완료하는 데 필요한 두 가지 중요한 값인 `clientId` 및 `clientSecret`이 포함되어 있습니다. 이 값을 안전한 곳에 저장하십시오. Snyk에서 `clientSecret`을 볼 수 있는 유일한 시간입니다. **주의**: **`clientSecret`을 공개적으로 공유하지 마십시오**. 이는 Snyk로 앱을 인증하는 데 사용됩니다.
 
-Now that we've registered as a Snyk App, we can start adjusting our TypeScript project to allow users to authorize it.
+이제 Snyk 앱으로 등록했으므로 사용자가 승인할 수 있도록 TypeScript 프로젝트 조정을 시작할 수 있습니다.
 
-## User Authorization with a Snyk App
+## Snyk 앱을 통한 사용자 인증
 
-User authentication for Snyk Apps is done by way of a webpage URL containing query parameters that match up with our Snyk App's data. We'll need to replace the query parameter values in this URL and send users to the final link in a web browser. From there they can grant account access to the Snyk App.
+Snyk 앱에 대한 사용자 인증은 Snyk 앱의 데이터와 일치하는 쿼리 매개변수가 포함된 웹페이지 URL을 통해 수행됩니다. 이 URL의 쿼리 매개변수 값을 교체하고 사용자를 웹 브라우저의 최종 링크로 보내야 합니다. 여기에서 Snyk 앱에 대한 계정 액세스 권한을 부여할 수 있습니다.
 
-Once access has been provisioned, the user will be kicked back to our app's registered `callbackURL`, which we defined as `http://localhost:3000/callback`.
+액세스가 프로비저닝되면 사용자는 앱의 등록된 `callbackURL`(`http://localhost:3000/callback`으로 정의됨)로 다시 이동됩니다.
 
-Essentially, our app needs to generate a link like the following then send the user to it when it's time to authorize:
+기본적으로 앱은 다음과 같은 링크를 생성한 다음 인증할 시간이 되면 사용자를 링크로 보내야 합니다.
 
 ```
 https://app.snyk.io/oauth2/authorize?response_type=code&client_id={clientId}&redirect_uri={redirectURI}&scope={scopes}&nonce={nonce}&state={state}&version={version}
 ```
 
-Though some of the query parameters may be somewhat obvious, let's go over them. We're going to modify our Snyk App to to generate this URL for our users.
+쿼리 매개변수 중 일부는 다소 명확할 수 있지만 살펴보겠습니다. 사용자를 위해 이 URL을 생성하도록 Snyk 앱을 수정하겠습니다.
 
-* `version`: The current version can be found in [Snyk's API documentation](https://snykoauth2.docs.apiary.io/#reference/apps/app-authorization/authorize-an-app).
-* `scopes` and `redirect_uri`: These values must match what was sent with our registration command from earlier.
-* `state`: This is used to carry any App specific state from this `/authorize` call to the callback on the `redirect_uri` (such as a user's ID). It must be verified in our callback to [prevent CSRF attacks](https://datatracker.ietf.org/doc/html/rfc6749#section-10.12).
-* `nonce`: A highly randomized string stored alongside a timestamp on the app side before calling `/authorize`, then verified on the returned access token.
+* `version`: 현재 버전은 [Snyk의 API 문서](https://snykoauth2.docs.apiary.io/#reference/apps/app-authorization/authorize-an-app)에서 찾을 수 있습니다.
+* `scopes` 와`redirect_uri`: 이 값은 이전에 등록 명령으로 전송된 값과 일치해야 합니다.
+* `state`: 이것은 이 `/authorize` 호출에서 `redirect_uri`의 콜백(예: 사용자 ID)에 대한 앱 특정 상태를 전달하는 데 사용됩니다. [CSRF 공격을 방지](https://datatracker.ietf.org/doc/html/rfc6749#section-10.12)하려면 콜백에서 확인해야 합니다.
+* `nonce`: `/authorize`를 호출하기 전에 앱 측의 타임스탬프와 함께 고도로 무작위화된 문자열이 저장된 다음 반환된 액세스 토큰에서 확인됩니다.
 
-Once a connection is complete, the user is redirected to the provided redirect URI (our `/callback` route in this case) with query string parameters `code` and `state` added on, which are necessary for the next steps of authorization.
+연결이 완료되면 사용자는 다음 권한 부여 단계에 필요한 쿼리 문자열 매개 변수 `code` 및 `state`가 추가된 제공된 리디렉션 URI(이 경우 `/callback` 경로)로 리디렉션됩니다.
 
-That next step involves taking the authorization code received as query parameter in the response of the previous step, and turning it into an _access token_. To do this, a Snyk App makes a POST request to the token endpoint: `https://api.snyk.io/oauth2/token`. That POST request needs some specific data in it's request body, including the _authorization code_, _client id_, _client secret_, etc...
+그 다음 단계는 이전 단계의 응답에서 쿼리 매개변수로 받은 인증 코드를 가져오고 이를 액세스 토큰으로 바꾸는 것입니다. 이를 위해 Snyk 앱은 `https://api.snyk.io/oauth2/token` 토큰 끝점에 대한 POST 요청을 만듭니다. 해당 POST 요청에는 인증 코드, 클라이언트 ID, 클라이언트 비밀 등을 포함하여 요청 본문에 특정 데이터가 필요합니다.
 
-When successful, that POST request's response contains everything a Snyk App needs to communicate with Snyk on behalf of the authorizing user, namely, a **refresh\_token** and an **access token**.
+성공하면 해당 POST 요청의 응답에는 Snyk 앱이 인증 사용자를 대신하여 Snyk와 통신하는 데 필요한 모든 것, 즉 **refresh\_token** 및 **액세스 토큰**이 포함됩니다.
 
-The access token gets used for future API calls and has a much shorter expiry than the refresh token. The refresh token can be used only one time to get a new access token when it expires. In other words, **the refresh\_token will no longer be usable if its own expiry time passes or if it is used to refresh the access\_token.** Ultimately, this means that our Snyk App will need to make frequent API calls to perform **refresh\_token** exchanges.
+액세스 토큰은 향후 API 호출에 사용되며 새로 고침 토큰보다 만료 기간이 훨씬 짧습니다. 갱신 토큰은 만료 시 새 액세스 토큰을 얻기 위해 한 번만 사용할 수 있습니다. 즉, **refresh\_token은 자체 만료 시간이 경과하거나 access\_token을 새로 고치는 데 사용되는 경우 더 이상 사용할 수 없습니다**. 궁극적으로 이는 Snyk 앱이 **refresh\_token** 교환을 수행하기 위해 API를 자주 호출해야 함을 의미합니다.
 
 {% hint style="info" %}
-Both of these tokens should be encrypted before storing them!
+이 두 토큰은 모두 저장하기 전에 암호화해야 합니다!
 {% endhint %}
 
-## Updating our Snyk App to handle user authorization
+## 사용자 인증을 처리하도록 Snyk 앱 업데이트
 
-Based on the above information, our Snyk App has some new requirements! Let's outline a few things we'll need to do within our TypeScript app to successfully authorize a Snyk user account with our Snyk app:
+위의 정보를 기반으로 Snyk 앱에는 몇 가지 새로운 요구 사항이 있습니다! Snyk 앱으로 Snyk 사용자 계정을 성공적으로 인증하기 위해 TypeScript 앱 내에서 수행해야 할 몇 가지 사항을 간략하게 설명하겠습니다.
 
-1. Send API requests and process responses
-2. Keep track of data, like token expiry
-3. Encrypt & decrypt secret data
-4. Turn authorization _codes_ into authorization _tokens_.
-5. Refresh those authorization tokens.
-6. Handle errors and inform users of authorization success or failure
+1. API 요청 보내기 및 응답 처리
+2. 토큰 만료와 같은 데이터 추적
+3. 보안 데이터 암호화 및 해독
+4. 인증 코드를 인증 토큰으로 전환합니다.
+5. 해당 인증 토큰을 새로 고칩니다.
+6. 오류를 처리하고 사용자에게 인증 성공 또는 실패를 알립니다.
 
-From here on, we'll be doing quite a lot of refactoring in our Snyk App and we'll be jumping into quite a few different files. To help make the process easier to follow, this tutorial is going to adopt the convention of adding a commented filepath to the first line of code snippets, describing where they belong. In your own code, these comments aren't necessary.
+여기에서 우리는 Snyk App에서 상당히 많은 리팩토링을 수행하고 꽤 많은 다른 파일로 이동할 것입니다. 프로세스를 더 쉽게 따라갈 수 있도록 이 튜토리얼에서는 코드 스니펫의 첫 번째 줄에 주석이 달린 파일 경로를 추가하여 그들이 속한 위치를 설명하는 규칙을 채택할 것입니다. 자신의 코드에서는 이러한 주석이 필요하지 않습니다.
 
-We'll also add quite a few new packages to help address our new requirements. For convenience, go ahead and run the following in the root of your project:
+또한 새로운 요구 사항을 해결하는 데 도움이 되는 몇 가지 새 패키지를 추가할 것입니다. 편의를 위해 프로젝트의 루트에서 다음을 실행하십시오:
 
 ```bash
 npm install --save passport \
@@ -133,11 +133,11 @@ npm install --save-dev @types/cryptr \
     @types/uuid
 ```
 
-### Store data and config in the Snyk App
+### Snyk 앱에 데이터 및 구성 저장
 
-#### Application configuration
+#### 애플리케이션 구성
 
-Application config (e.g.: client secrets, api tokens, other config, etc...) should generally be stored securely and kept outside of the App itself. However, for brevity, this tutorial will simply add the configuration info as exportable constants in the `App.ts` file and leave the actual implementation details to you, the reader. These are values that the Snyk App will be references in many different places.
+애플리케이션 구성(예: 클라이언트 암호, API 토큰, 기타 구성 등)은 일반적으로 안전하게 저장하고 앱 자체 외부에 보관해야 합니다. 그러나 간결함을 위해 이 튜토리얼에서는 구성 정보를 `App.ts` 파일에 내보낼 수 있는 상수로 추가하고 실제 구현 세부 정보는 독자에게 맡깁니다. 이들은 Snyk 앱이 여러 곳에서 참조할 값입니다.
 
 ```typescript
 // ./src/app.ts
@@ -162,11 +162,11 @@ export const STATE = true;
 ...
 ```
 
-#### Storing data
+#### 데이터 저장
 
-One of the things we'll want to do is capture some information about the users that authorize our Snyk App. Again, a true implementation is left up to the reader. For the purposes of this tutorial, we'll use the excellent `lowdb`, a small local JSON database with low overhead.
+우리가 하고 싶은 것 중 하나는 Snyk 앱을 인증하는 사용자에 대한 일부 정보를 캡처하는 것입니다. 다시 말하지만 진정한 구현은 독자에게 달려 있습니다. 이 자습서의 목적을 위해 오버헤드가 적은 작은 로컬 JSON 데이터베이스인 우수한 `lowdb`를 사용합니다.
 
-We'll first create a new middleware function in `app.ts` to initialize a `lowdb` database file at `./db/` and tell the `App` constructor to call it.
+먼저 `app.ts`에서 새로운 미들웨어 함수를 생성하여 `./db/`에서 `lowdb` 데이터베이스 파일을 초기화하고 `App` 생성자에게 이를 호출하도록 지시합니다.
 
 ```typescript
 // ./src/app.ts
@@ -207,7 +207,7 @@ export let dbPath: string;
 export default App;
 ```
 
-With the database initialization handled, we'll create some new helper methods to make reading/writing/updating database entries simpler. Because this is a TypeScript project, we'll be creating interfaces or types around the data structures we'll be storing, so we'll create two files: `./src/interfaces/DB.ts` and `./src/util/DB.ts`:
+데이터베이스 초기화가 처리되면 데이터베이스 항목 읽기/쓰기/업데이트를 더 간단하게 만드는 몇 가지 새로운 도우미 메서드를 만들 것입니다. 이것은 TypeScript 프로젝트이기 때문에 저장할 데이터 구조 주위에 인터페이스 또는 유형을 생성할 것이므로 `./src/interfaces/DB.ts` 및 `./src/util/DB.ts`라는 두 개의 파일을 생성합니다:
 
 ```bash
 touch ./src/interfaces/DB.ts
@@ -215,7 +215,7 @@ mkdir -p ./src/util
 touch ./src/util/DB.ts
 ```
 
-Populate the interface file with an interface describing each piece of the authorization data we'll be storing, and a wrapping interface we can apply to the entire database:
+저장할 인증 데이터의 각 부분을 설명하는 인터페이스와 전체 데이터베이스에 적용할 수 있는 래핑 인터페이스로 인터페이스 파일을 채웁니다:
 
 ```typescript
 // ./src/interfaces/DB.ts
@@ -237,9 +237,9 @@ export interface AuthData {
 }
 ```
 
-In this tutorial, we'll only need to perform three basic interactions with our database: read, write, and update.
+이 실습에서는 데이터베이스와 읽기, 쓰기 및 업데이트의 세 가지 기본 상호 작용만 수행하면 됩니다.
 
-Within the file we created in `./src/util`, create a function for each. Our read function will return a Promise with the database contents, the write function will take an object that matches the `AuthData` interface we just described, and the update function will attempt to rewrite an entry, returning a boolean denoting success or failure.
+`./src/util`에서 만든 파일 내에서 각각에 대한 함수를 만듭니다. 읽기 기능은 데이터베이스 내용과 함께 Promise를 반환하고, 쓰기 기능은 방금 설명한 `AuthData` 인터페이스와 일치하는 객체를 가져오고, 업데이트 기능은 항목을 다시 쓰려고 시도하여 성공 또는 실패를 나타내는 boolean을 반환합니다.
 
 ```typescript
 // ./src/util/DB.ts
@@ -293,13 +293,13 @@ export async function updateDb(
 }
 ```
 
-### Prepare for API calls
+### API 호출 준비
 
-Earlier, we installed the popular `axios` package to handle API calls. We know that we'll need to make some repetetive calls to the same API, so let's abstract some helper functions to make our code easily re-usable across the project. Create an `APIHelpers.ts` file in the `util` directory.
+이전에는 API 호출을 처리하기 위해 널리 사용되는 `axios` 패키지를 설치했습니다. 동일한 API를 반복적으로 호출해야 한다는 것을 알고 있으므로 일부 도우미 함수를 추상화하여 코드를 프로젝트 전체에서 쉽게 재사용할 수 있도록 합시다. `util` 디렉터리에 `APIHelpers.ts` 파일을 만듭니다.
 
-Before we fill that out, take note that, while we are consistently hitting Snyk's API, we'll likely need to make requests against multiple versions of the API, depending on the endpoint's status in the migration from Snyk API v1 to Snyk API v3. One way we can handle this is by defining a TypeScript Enum and within our functions, swap any necessary query parameters by comparing an argument to the enum's possible values.
+작성하기 전에 Snyk의 API를 지속적으로 사용하는 동안 Snyk API v1에서 Snyk API v3으로 마이그레이션하는 엔드포인트의 상태에 따라 API의 여러 버전에 대해 요청해야 할 가능성이 높습니다. 이를 처리할 수 있는 한 가지 방법은 TypeScript 열거형을 정의하고 함수 내에서 인수를 열거형의 가능한 값과 비교하여 필요한 쿼리 매개 변수를 바꾸는 것입니다.
 
-Add the following content to a new file, or to `APIHelpers.ts` if you prefer, just make sure to export it for later use!
+다음 내용을 새 파일에 추가하거나 원하는 경우 `APIHelpers.ts`에 추가하고 나중에 사용할 수 있도록 내보내십시오!
 
 ```typescript
 // ./interfaces/API.ts
@@ -309,7 +309,7 @@ export const enum APIVersion {
 }
 ```
 
-Let's start by adding a single function to simplify our Apps' calls to the Snyk API. The function takes a `tokenType` (either _bearer_ or _token_), the `token` itself, and an `APIVersion` (conveniently corresponding to the enum we just defined).
+Snyk API에 대한 앱의 호출을 단순화하는 단일 기능을 추가하여 시작하겠습니다. 이 함수는 `tokenType`(bearer 또는 토큰), `token` 자체 및 `APIVersion`(방금 정의한 열거형에 해당)을 사용합니다.
 
 ```typescript
 // ./src/util/APIHelpers.ts
@@ -334,9 +334,9 @@ export function callSnykApi(tokenType: string, token: string, version: APIVersio
 }
 ```
 
-Because this function is an `AxiosInstance`, we can easily talk to the API's different endpoints by calling `.get()`, `.post()`, or any other methods usually available to such an object. Handy!
+이 함수는 `AxiosInstance` 이기때문에 `.get(),` `.post()` 또는 이러한 객체에 일반적으로 사용 가능한 다른 메서드를 호출하여 API와 다른 엔드포인트에 쉽게 통신할 수 있습니다. 편리하게!
 
-Let's see it in action by defining a second async function to retrieve our Snyk Apps' Organization ID:
+Snyk 앱의 조직 ID를 검색하는 두 번째 비동기 함수를 정의하여 실제로 작동하는 것을 살펴보겠습니다:
 
 ```typescript
 // ./src/util/APIHelpers.ts
@@ -362,12 +362,12 @@ export async function getAppOrgID(tokenType: string, accessToken: string): Promi
 }
 ```
 
-### Make encrypt / decrypt easy
+### 쉽게 암호화/복호화
 
-It's a good idea to encrypt the data we'll be pulling out of the API, let's define a small class for doing so. The class has two members:
+API에서 가져올 데이터를 암호화하는 것이 좋습니다. 그렇게 하기 위한 작은 클래스를 정의해 보겠습니다. 이 클래스에는 두 명의 구성원이 있습니다:
 
-1. `secret`: The key used to encrypt data
-2. `cryptr`: Instance of the Cryptr library
+1. `secret`: 데이터 암호화에 사용되는 키
+2. `cryptr`: Cryptor 라이브러리의 인스턴스
 
 ```typescript
 // ./src/util/encrypt-decrypt.ts
@@ -404,15 +404,15 @@ export class EncryptDecrypt {
 }
 ```
 
-### Configure Passport.js and the Snyk-OAuth2 strategy
+### Passport.js 및 Snyk-OAuth2 전략 구성
 
-We've laid the groundwork, now its time to start actually doing things.
+우리는 토대를 마련했으며 이제 실제로 해볼 때입니다.
 
-As discussed in a previous section, our app needs to send would-be authorizors to a specific token URL. We'll add an `/auth` route in our Snyk App and add someauthentication middleware to Express. For this, we'll use the excellent [passportjs](https://www.passportjs.org), the [passport-oauth2](https://https/www.passportjs.org/packages/passport-oauth2) authentication strategy, along with Snyk's very own [@snyk/passport-snyk-oauth2](https://www.npmjs.com/package/@snyk/passport-snyk-oauth2). `passport` and its friends handle a large portion of what would otherwise be a lengthy and complicated authentication process.
+이전 섹션에서 논의한 바와 같이 앱은 특정 토큰 URL에 잠재적 권한 부여자를 보내야 합니다. Snyk 앱에 `/auth` 경로를 추가하고 Express에 일부 인증 미들웨어를 추가합니다. 이를 위해 Snyk의 [@snyk/passport-snyk-oauth2](https://www.npmjs.com/package/@snyk/passport-snyk-oauth2)와 함께 우수한 [passportjs](https://www.passportjs.org/), [passport-oauth2](https://https/www.passportjs.org/packages/passport-oauth2) 인증 전략을 사용할 것입니다. `passport`와 그 친구들은 길고 복잡한 인증 프로세스의 많은 부분을 처리합니다.
 
-Because `passport` takes its encapsulation philosophy seriously, we'll need to handle everything else about the auth process. We need to setup an instance of the passport strategy we'll be using. We'll put our database helpers from earlier to use here as well, adding an entry into our database when we receive successful authorization.
+`Passport`는 캡슐화 철학을 진지하게 받아들이기 때문에 인증 프로세스에 대한 다른 모든 것을 처리해야 합니다. 사용할 패스포트 전략의 인스턴스를 설정해야 합니다. 성공적인 인증을 받으면 데이터베이스에 항목을 추가하여 이전의 데이터베이스 도우미를 여기에서도 사용할 수 있도록 배치합니다.
 
-It's worth taking the time to go over this file and make sure you've understood everything its doing.
+시간을 들여 이 파일을 검토하고 모든 작업을 이해했는지 확인하는 것이 좋습니다.
 
 ```typescript
 // ./util/OAuth2Strategy.ts
@@ -513,14 +513,14 @@ export function getOAuth2(): SnykOAuth2Strategy {
 }
 ```
 
-### Update Express Middleware
+### 익스프레스 미들웨어 업데이트
 
-With our passport strategy implemented, modify `app.ts` to setup the `passport` middleware as shown in the next code block. Rather than calling it directly, we'll create a function called `initGlobalMiddlewares()` allowing us to set up a few other middlewares at the same time:
+Passport 전략이 구현되면 `app.ts`를 수정하여 다음 코드 블록에 표시된 대로 `passport` 미들웨어를 설정합니다. 직접 호출하는 대신 동시에 몇 가지 다른 미들웨어를 설정할 수 있는 `initGlobalMiddlewares()`라는 함수를 만듭니다:
 
-* `express.json()`: Express middleware for handling JSON requests
-* `express.urlencoded()`: Express middleware to handle URL encoded calls
-* `expressSession`: We use the `express-session` middleware package which is extended by `passport`
-* `setupPassport`: Initializes `passport` setup
+* `express.json()`: JSON 요청을 처리하기 위한 익스프레스 미들웨어
+* `express.urlencoded()`: URL 인코딩 호출을 처리하는 익스프레스 미들웨어
+* `expressSession`: 우리는 `passport`로 확장되는 `express-session` 미들웨어 패키지를 사용합니다.
+* `setupPassport`: `passport` 설정 초기화
 
 ```typescript
 // ./src/app.ts
@@ -570,9 +570,9 @@ private initGlobalMiddlewares() {
 ...
 ```
 
-### Handle the authorization and callback routes
+### 승인 및 콜백 경로 처리
 
-The authorization and callback controllers are comparatively simple. Create two new controller files:
+인증 및 콜백 컨트롤러는 비교적 간단합니다. 두 개의 새 컨트롤러 파일을 만듭니다:
 
 ```bash
 mkdir -p ./src/routes/auth;
@@ -581,9 +581,9 @@ touch ./src/routes/auth/authController.ts
 touch ./src/routes/callback/callbackController.ts
 ```
 
-The `AuthController` handles authentication of the App via the previously described authorization flow. This is the third step of `passport` setup. Every controller class implements the controller interface which has two members: the path and the router.
+`AuthController`는 앞에서 설명한 인증 흐름을 통해 앱의 인증을 처리합니다. `passport` 설정의 세 번째 단계입니다. 모든 컨트롤러 클래스는 경로와 라우터라는 두 가지 구성원이 있는 컨트롤러 인터페이스를 구현합니다.
 
-This controller handles the `/auth` route, which is what we'll use to send users (via `passport`) to the Snyk website for authorization approval.
+이 컨트롤러는 인증 승인을 위해 사용자를 Snyk 웹사이트로 보내는 데 사용 (`passport`를 통해) 할 `/auth` 경로를 처리합니다.
 
 ```typescript
 // ./src/routes/auth/authController.ts
@@ -614,9 +614,9 @@ class AuthController implements Controller {
 export default AuthController;
 ```
 
-Once a user approves authorization to our Snyk App via the Snyk website, they're kicked back to our callback URI, `/callback`. We'll handle this route similarly, invoking passport again. This is the final step of user authorization.
+사용자가 Snyk 웹사이트를 통해 Snyk 앱에 대한 승인을 승인하면 콜백 URI인 `/callback`으로 되돌아갑니다. 우리는 여권을 다시 호출하여 이 경로를 유사하게 처리할 것입니다. 이것은 사용자 인증의 마지막 단계입니다.
 
-The `CallbackController` accepts requests on `/callback`, but also creates two sub-routes, `/callback/success` and `/callback/failure`, to handle the different possible outcomes it might receive from Snyk.
+`CallbackController`는 `/callback`에 대한 요청을 수락하지만 Snyk에서 수신할 수 있는 다른 가능한 결과를 처리하기 위해 두 개의 하위 경로인 `/callback/success` 및 `/callback/failure`도 생성합니다.
 
 ```typescript
 // ./src/routes/callback/callbackController.ts
@@ -653,7 +653,7 @@ export class CallbackController implements Controller {
 }
 ```
 
-Before we're done, we need to make sure we add a reference to our new controllers in our `index.ts`.
+완료하기 전에 `index.ts`에 새 컨트롤러에 대한 참조를 추가해야 합니다.
 
 ```typescript
 // ./src/index.ts
@@ -671,11 +671,11 @@ new App([
 );
 ```
 
-### Refresh token management
+### 새로 고침 토큰 관리
 
-If we build and run our Snyk App at this point, hitting the `/auth` route will successfully jump us out to the Snyk authorization portal and, provided we confirm the authorization, we'll get kicked back to our local app's callback route at `/callback`. If we had a very simplistic, one-off use-case, we could end things here. But there's one more piece of the puzzle we should figure out if we're going to keep our user's authorization fresh, that thing is token expiry.
+이 시점에서 Snyk 앱을 빌드하고 실행하는 경우 `/auth` 경로를 누르면 성공적으로 Snyk 인증 포털로 이동하고 인증을 확인하면 `/callback`에서 로컬 앱의 콜백 경로로 되돌아갑니다. . 매우 단순하고 일회성 사용 사례가 있는 경우 여기에서 작업을 종료할 수 있습니다. 그러나 사용자의 인증을 최신 상태로 유지하려면 토큰 만료라는 퍼즐 조각이 하나 더 있습니다.
 
-If you ran the app to test things, take a look at database entries. If you've been following along, you should see something like this:
+테스트를 위해 앱을 실행했다면 데이터베이스 항목을 살펴보세요. 따라오셨다면 다음과 같이 표시되어야 합니다:
 
 ```json
 {
@@ -695,13 +695,13 @@ If you ran the app to test things, take a look at database entries. If you've be
 }
 ```
 
-That `expires_in` value will continue to countdown until 0. If it does, the user will need to re-authorize.
+해당 `expires_in` 값은 0까지 카운트다운을 계속합니다. 그렇다면 사용자는 다시 인증해야 합니다.
 
-To keep our access token from going stale, we need to make a POST request using our `refresh_token` to get an updated `access_token` as described in the [Snyk Docs](https://docs.snyk.io/features/integrations/snyk-apps/getting-started-with-snyk-apps/set-up-the-refresh-token-exchange).
+액세스 토큰이 유효하지 않게 유지하려면 [Snyk Docs](https://docs.snyk.io/features/integrations/snyk-apps/getting-started-with-snyk-apps/set-up-the-refresh-token-exchange)에 설명된 대로 업데이트된 `access_token`을 얻기 위해 `refresh_token`을 사용하여 POST 요청을 만들어야 합니다.
 
-We can automate this process in our Snyk App by utilizing [Axios interceptors](https://axios-http.com/docs/interceptors) to _intercept_ the requests we make and ensure we have an up-to-date `access_token`.
+[Axios 인터셉터](https://axios-http.com/docs/interceptors)를 활용하여 요청을 가로채고 최신 `access_token`을 확보함으로써 Snyk 앱에서 이 프로세스를 자동화할 수 있습니다.
 
-Create the file `./src/util/interceptors.ts`, importing all the packages, classes, etc... that we'll need at the top:
+`./src/util/interceptors.ts` 파일을 만들고 맨 위에 필요한 모든 패키지, 클래스 등을 가져옵니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -717,9 +717,9 @@ import { ENCRYPTION_SECRET } from "../app";
 import axios from "axios";
 ```
 
-We'll add a total of three interceptors.
+총 3개의 인터셉터를 추가합니다.
 
-The first, `refreshTokenReqInterceptor`, will refresh the `auth_token` using the `refresh_token` when the `auth_token` expires. It takes an _AxiosRequestConfig_ request as an argument that can be used in the interceptor for additional checks.
+첫 번째 `refreshTokenReqInterceptor`는 `auth_token`이 만료될 때 `refresh_token`을 사용하여 `auth_token`을 새로 고칩니다. 추가 검사를 위해 인터셉터에서 사용할 수 있는 인수로 AxiosRequestConfig 요청을 사용합니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -746,7 +746,7 @@ export async function refreshTokenReqInterceptor(request: AxiosRequestConfig): P
 }
 ```
 
-`refreshTokenRespInterceptor` will be used during request responses and only refresh/retry the token when the response being received is a 401 Unauthorized (this is what Passport returns when things go awry).
+`refreshTokenRespInterceptor`는 요청 응답 중에 사용되며 수신되는 응답이 401 Unauthorized(상황이 잘못되었을 때 Passport가 반환하는 것임)인 경우에만 토큰을 새로고침/재시도합니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -776,7 +776,7 @@ export async function refreshTokenRespInterceptor(error: AxiosError): Promise<Ax
 }
 ```
 
-Lastly, `refreshAndUpdateDb` refreshes the access token for a given database record, and updates the database again before returning the newly refreshed token.
+마지막으로 `refreshAndUpdateDb`는 지정된 데이터베이스 레코드에 대한 액세스 토큰을 새로 고치고 새로 새로 고친 토큰을 반환하기 전에 데이터베이스를 다시 업데이트합니다.
 
 ```typescript
 // ./src/util/interceptors.ts
@@ -806,7 +806,7 @@ async function refreshAndUpdateDb(data: AuthData): Promise<string> {
 }
 ```
 
-With our interceptors defined, the only thing we need to do is update our `callSnykApi` function to utilize them. Interceptors are methods of the `axiosInstance` object, so we'll add them after the `axios.create()` call and before the function's `return`.
+인터셉터가 정의되면 `callSnykApi` 함수를 업데이트하여 이를 활용하기만 하면 됩니다. 인터셉터는 `axiosInstance` 객체의 메서드이므로 `axios.create()` 호출 후와 함수 `return` 전에 추가합니다.
 
 ```typescript
 // ./src/util/APIHelpers.ts
@@ -839,8 +839,8 @@ export function callSnykApi(tokenType: string, token: string, version: APIVersio
 ...
 ```
 
-## Wrap-up
+## 마무리
 
-If you've made it this far, congratulations! You've learned how to register a Snyk App with Snyk, configure the authorization flow, keep the `auth_token` from getting stale, and set up a great starting point using TypeScript!
+여기까지 왔다면 축하합니다! Snyk에 Snyk 앱을 등록하고, 권한 부여 흐름을 구성하고, `auth_token`이 오래되지 않도록 유지하고, TypeScript를 사용하여 훌륭한 시작점을 설정하는 방법을 배웠습니다!
 
-In the next module of this tutorial, we'll add a template system and configure our app to show users all of their projects from Snyk in our App.
+이 튜토리얼의 다음 모듈에서는 템플릿 시스템을 추가하고 앱에서 Snyk의 모든 프로젝트를 사용자에게 표시하도록 앱을 구성합니다.

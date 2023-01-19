@@ -53,11 +53,11 @@ Snyk 확장은 수정 또는 조치 방법을 결정하는 데 필요한 정보�
 
 인증하려면 다음 단계를 따르세요:
 
-1.  확장 프로그램이 설치되면 왼쪽 탐색 모음에서 Snyk 아이콘을 클릭합니다:![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-06b9fc9c67a7183ce7527fb7858394a155af0833\_image (162) (1) (1) (1) (1) (1) (1) (1) (1) (1) (3).png>)
+1.  확장 프로그램이 설치되면 왼쪽 탐색 모음에서 Snyk 아이콘을 클릭합니다:![](<../../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
 
 2.  **Connect VS Code with Snyk**을 클릭합니다. 확장 프로그램은 Snyk 인증 API에 의존하며 Snyk 웹 애플리케이션에 대해 컴퓨터를 인증하도록 요청합니다.\
-    ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-a263d2760ed3cfb384238e42b314d70f42f89f4c\_image (147) (1) (1) (1) (1) (1) (1) (2).png>)
+    ![](<../../../.gitbook/assets/image (71) (1) (1).png>)
 
 
 3. **Authenticate**를 클릭합니다.
@@ -95,7 +95,7 @@ Snyk Code 분석은 CLI 없이 빠르게 실행되므로 결과가 이미 제공
 * Snyk Code는 파일 저장 시 자동으로 스캔을 수행합니다.
 * Snyk Open Source는 기본적으로 저장 시 자동으로 실행되지 않지만 설정에서 활성화할 수 있습니다:
 
-![Snyk Open Source 설정](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-88e5c1d6d446dd840015bd3a298f94ecfa2a7ec6\_image (143) (1) (1) (1) (1) (1) (1).png>)
+![Snyk Open Source 설정](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
 **Tip**: 작업하는 동안 수동으로 저장하고 싶지 않다면 [AutoSave](https://code.visualstudio.com/docs/editor/codebasics#\_save-auto-save)를 활성화하십시오.
 
@@ -121,7 +121,7 @@ Snyk Code에는 스캔 수행 방법을 제어할 수 있는 "고급" 모드가 
 
 Snyk 분석은 애플리케이션 코드에서 발견된 보안 취약점 및 코드 Issue 목록을 보여줍니다. 다른 사람들이 Issue를 해결한 방법에 대한 자세한 내용과 예를 보려면 보안 취약성 또는 코드 보안 Issue를 선택하세요. 선택한 Issue에 대한 Snyk 제안 정보가 오른쪽 패널에 나타납니다.
 
-![Snyk 제안 정보](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-356a93f1f5562f9973f0818cec56938f2702e870\_image (103) (1) (16).png>)
+![Snyk 제안 정보](<../../../.gitbook/assets/image (76) (1) (1) (1) (1).png>)
 
 ### Snyk 분석 패널
 
@@ -129,15 +129,15 @@ Snyk 분석은 애플리케이션 코드에서 발견된 보안 취약점 및 �
 
 아이콘의 의미는 다음과 같습니다:
 
-| ![](../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0964f55a564a59f90e3dafb653d5cd0bff7be603\_image.png) Critical severity                                | 공격자가 민감한 데이터에 액세스하고 애플리케이션에서 코드를 실행하도록 허용할 수 있습니다.                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-35db9c5b28b416932407dcc20cb40cf0d4b1a9ed\_image (10) (1) (1) (2) (1) (1) (1) (7).png>) High severity | 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.                                       |
-| ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-f313e50f5a233da9896f390a4db0483d5186b6a0\_image (116) (1) (2).png>) Medium severity                  | 일부 조건에서 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.                               |
-| ![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-680033c036e72c136475928f88590f463bbaa52a\_image (81) (1) (1) (1) (1) (1).png>) Low severity          | 응용 프로그램은 응용 프로그램을 공격하기 위해 다른 취약성과 함께 사용할 수 있는 취약성 매핑을 허용하는 일부 데이터를 노출할 수 있습니다. |
+| ![](<../../../.gitbook/assets/image (75) (2).png>) Critical severity | 공격자가 민감한 데이터에 액세스하고 애플리케이션에서 코드를 실행하도록 허용할 수 있습니다.                             |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![](<../../../.gitbook/assets/image (64) (2) (1).png>) High severity | 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.                                       |
+| ![](<../../../.gitbook/assets/image (63) (2).png>) Medium severity   | 일부 조건에서 공격자가 애플리케이션의 민감한 데이터에 액세스하도록 허용할 수 있습니다.                               |
+| ![](<../../../.gitbook/assets/image (81) (2).png>) Low severity      | 응용 프로그램은 응용 프로그램을 공격하기 위해 다른 취약성과 함께 사용할 수 있는 취약성 매핑을 허용하는 일부 데이터를 노출할 수 있습니다. |
 
 `snyk.severity` 설정을 사용하여 보고 싶은 심각도를 설정하여 문제를 필터링할 수 있습니다. 예를 들어 `"snyk.severity": { "critical": true, "high": true, "medium": true, "low": false }`로 설정하여 심각도가 낮은 문제를 숨깁니다. 설정 UI에서 설정을 적용할 수도 있습니다.
 
-![심각도 설정](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-5696d6a281d3a6b44c0f0a19a40b280b63c75f36\_image (234).png>)
+![심각도 설정](<../../../.gitbook/assets/image (65) (2).png>)
 
 ### Snyk Code 편집기 창
 
@@ -145,7 +145,7 @@ Snyk 분석은 애플리케이션 코드에서 발견된 보안 취약점 및 �
 
 ### Snyk Code 취약점 창
 
-![Snyk 제안 패널](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-356a93f1f5562f9973f0818cec56938f2702e870\_image (103) (1) (14).png>)
+![Snyk 제안 패널](<../../../.gitbook/assets/image (76) (1) (1) (1) (1) (1).png>)
 
 결과 화면 오른쪽에 있는 Snyk 제안 패널은 예를 들어 코드의 변수 이름과 빨간색 줄 번호를 사용하여 Snyk 엔진의 인수를 보여줍니다. 다음을 볼 수도 있습니다:
 
@@ -184,7 +184,7 @@ Snyk에는 다른 사람들이 같은 문제를 보지 않도록 오탐지를 �
 
 제공된 코드 작업을 트리거하여 가장 심각한 취약점으로 이동할 수 있습니다. 자세한 내용을 표시하는 취약점 창이 열립니다.
 
-![코드 작업](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-eb68ce91daa8bc62e02baad4c1376d37355d61b3\_oss-editor-show-vulnerability (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![코드 작업](<../../../.gitbook/assets/oss-editor-show-vulnerability (2) (1).png>)
 
 ### Snyk Open Source 취약점 창
 

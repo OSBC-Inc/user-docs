@@ -1,10 +1,9 @@
-# Interpret scan results
+# 스캔 결과 해석
 
-The `Projects` page will contain an inventory of all projects added and a high level summary of findings. You can expand on a particular project to learn more about vulnerabilities that may have been found and guidance on how to fix these or optimizations. Let's walk through some examples.
+`Projects` 페이지에는 추가된 모든 프로젝트의 인벤토리와 결과에 대한 높은 수준의 요약이 포함됩니다. 특정 프로젝트를 확장하여 발견되었을 수 있는 취약성에 대해 자세히 알아보고 이를 수정하는 방법 또는 최적화에 대한 지침을 얻을 수 있습니다. 몇 가지 예를 살펴보겠습니다.
 
-We can see that the results of our ACR image scan is identical to the image scan for our Kubernetes deployment. This is expected. We are gradually taking steps to secure our workflow. The `redis` image we pulled from our `manifest` is the same image from our `Dockerfile`.
+ACR 이미지 스캔 결과가 Kubernetes 배포에 대한 이미지 스캔과 동일한 것을 볼 수 있습니다. 이것은 예상됩니다. 우리는 작업 흐름을 보호하기 위한 조치를 점차 취하고 있습니다. `manifest`에서 가져온 `redis` 이미지는 `Dockerfile`의 동일한 이미지입니다.
 
-![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk_scan_08.png)
+![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/snyk\_scan\_08.png)
 
-We will discuss fixing the image in the next section.
-
+다음 Section에서 이미지 수정에 대해 설명합니다.

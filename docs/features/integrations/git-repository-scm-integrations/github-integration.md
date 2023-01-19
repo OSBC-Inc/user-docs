@@ -28,7 +28,7 @@ Snyk은 고급 보안 보고서를 생성하여 저장소에서 발견된 취약
 
 다음은 project-level 보안 보고서의 예시입니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-fc8f10812029577f2ec93a2b199e8159105438a4\_mceclip0-22- (2) (5) (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (31).png>)
+![](<../../../.gitbook/assets/mceclip0-22- (2) (5) (6) (1) (1) (1) (2).png>)
 
 ### **2.** 프로젝트 모니터링 및 자동 수정 **pull requests**
 
@@ -38,7 +38,7 @@ Snyk은 매일 또는 매주 프로젝트를 자주 검색합니다. 새 취약�
 
 Snyk (Settings --> Integration --> GitHub)의 GitHub Integration Settings로 이동하여 자동 수정 pull request 설정을 검토하고 조정할 수 있습니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-416e8bc0d0657eb9fc7c38c2c869f0577e7b3334\_mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (25).png>)
+![](<../../../.gitbook/assets/mceclip4 (1) (2) (6) (7) (3) (1) (1) (2).png>)
 
 #### 서명 커밋
 
@@ -54,7 +54,7 @@ Snyk은 저장소에 새로 생성된 pull request에서 보안 취약점을 테
 
 다음은 GitHub의 Pull Request 페이지에 Snyk pull request가 나타나는 방법입니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-d169f3f27aefe4eb86d28051fcdeeb9f9d4d0f84\_uuid-87113833-be79-dbe2-8860-a3f224d654c4-en (2) (2) (6) (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (23).png>)
+![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-d169f3f27aefe4eb86d28051fcdeeb9f9d4d0f84\_uuid-87113833-be79-dbe2-8860-a3f224d654c4-en (2) (2) (6) (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (23) (1).png>)
 
 Snyk (Settings --> Integration --> GitHub)의 GitHub Integration **Settings**로 이동하여 pull request 테스트 설정을 검토하고 조정할 수 있습니다.
 

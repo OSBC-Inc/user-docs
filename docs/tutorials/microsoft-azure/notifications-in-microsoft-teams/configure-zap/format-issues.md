@@ -1,18 +1,18 @@
 # Format Issues
 
-Next, create another action and name it **Format issues**:
+다음으로 다른 작업을 만들고 이름을 **Format issues**로 지정합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-format-issues-main.png)
 
-Select **Run Javascript** as the **Action Event**:
+**Action Event**로 **Run Javascript**을 선택합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-format-issues-script.png)
 
-Be sure to add **body** in the **Input Data** section:
+**Input Data** section에 **body**를 추가해야 합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-format-issues-setup.png)
 
-Copy and paste the snippet into the **Code** field:
+스니펫을 복사하여 **Code**필드에 붙여넣기:
 
 ```javascript
 function formatIssue({ pkgName, pkgVersions, issueData }) {
@@ -30,7 +30,6 @@ try {
 }
 ```
 
-Test the action:
+작업을 테스트합니다:
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/zappier-format-issues-test.png)
-

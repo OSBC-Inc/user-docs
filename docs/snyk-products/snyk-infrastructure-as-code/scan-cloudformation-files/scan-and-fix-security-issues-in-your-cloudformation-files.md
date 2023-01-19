@@ -11,7 +11,7 @@ Snyk은 CloudFormation 코드를 스캔하여 잘못된 구성과 보안 문제�
 
 * 계정에 로그인하여 해당 그룹 및 조직으로 이동합니다.
 
-![](<../../../.gitbook/assets/screenshot-2020-07-09-at-12.43.02-2- (3) (4) (4) (4) (1) (1) (2).png>)
+![](<../../../.gitbook/assets/screenshot-2020-07-09-at-12.43.02-2- (3) (4) (4) (4) (1) (1) (2) (3).png>)
 
 * CloudFormation 코드를 감지하기 위해 infrastructure as code 기능이 활성화되기 전에 테스트가 수행된 경우 저장소를 다시 가져옵니다.
 

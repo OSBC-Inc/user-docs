@@ -43,7 +43,7 @@ SCM이 이미 구성된 경우 다음 단계로 이동합니다.
 2. Snyk에게 공용 및 개인 저장소 모두에 대한 액세스 권한을 부여할지 또는 공용 저장소에만 대한 액세스 권한을 부여할지 선택하십시오.
 3. **Authorize snyk**을 클릭하여 Snyk에게 저장소에 대한 액세스 권한을 제공합니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-efdd6cdac1096e497ea4265a39fc48655b3d3742\_authorize (1) (2) (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (21).png>)
+![](<../../../.gitbook/assets/authorize (1) (2) (6) (1) (1) (1) (2).png>)
 
 **저장소에 대한 SCM 사용 권한**
 
@@ -66,7 +66,7 @@ Snyk UI를 사용하여 트리거된 작업(Fix PR 열기 또는 프로젝트 �
 
 가져오기 전에 조직의 모든 사용자에 대한 notification을 실행 중지하려면 해당 notification box의 선택을 취소합니다.
 
-![](<../../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (58) (1).png>)
 
 자세한 내용은 [Notification management](https://support.snyk.io/hc/en-us/articles/360004037657-Notification-management)를 참조하십시오.
 
@@ -161,11 +161,11 @@ Snyk은 매일 또는 매주 프로젝트를 스캔합니다. 새로운 취약�
 
 개발자에게 자동 수정 PR에 표시되는 merge advice label을 고려하도록 요청해야 합니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0e0d25e7a674ee3035929bcf1be3a7073a1fc53c\_merge-advice-review-recommended (2) (2) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (24).png>)
+![](<../../../.gitbook/assets/merge-advice-review-recommended (2) (2) (2) (1) (1) (2).png>)
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-75bc3b2514154caac478a306c5c64e803d39b40d\_advice-green (1) (2) (2) (4) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (14).png>)
+![](<../../../.gitbook/assets/advice-green (1) (2) (2) (4) (3) (1) (1) (2).png>)
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-0f8580a273102ad122374c855d6db17b7c33a7a3\_merge-advice (2) (2) (4) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (20).png>)
+![](<../../../.gitbook/assets/merge-advice (2) (2) (4) (2) (1) (1) (1) (2) (4).png>)
 
 {% hint style="info" %}
 Snyk 자동 수정 PR은 새 Issue에 대해서만 생성됩니다.
@@ -204,7 +204,7 @@ Snyk은 현재 GitHub, GitHub Enterprise Server 및 BitBucket Cloud를 통해 np
 2. **Projects**를 클릭합니다.
 3.  관련 프로젝트로 이동하여 **Settings**를 클릭합니다.
 
-    <img src="../../../.gitbook/assets/spaces_-MdwVZ6HOZriajCf5nXH_uploads_git-blob-82e957b854af6179585ebbbf4b503c1a9863a054_image (56) (2) (3) (3) (3) (3) (4) (5) (5) (5) (5) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
+    <img src="../../../.gitbook/assets/image (56) (2) (3) (3) (3) (3) (4) (5) (5) (5) (5) (3) (1) (1) (1) (3).png" alt="" data-size="original">
 4. Settings 영역의 왼쪽 패널 메뉴에서 integration settings를 클릭하여 해당 프로젝트에 고유한 설정을 적용합니다.
 5. 나타나는 설정에서 **Automatic dependency upgrade pull requests**로 이동하고 Disabled를 클릭합니다.
 6. 표시되는 옵션에서 다음 작업을 수행합니다.

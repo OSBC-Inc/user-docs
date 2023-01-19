@@ -4,7 +4,7 @@ Git 저장소를 가져오면 Snyk은 이러한 저장소를 모니터링하여 
 
 Snyk은 현재 GitHub, GitHub Enterprise Server, BitBucket Cloud를 통해 npm, Yarn, Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 지원이 필요한 경우 문서를 참조하십시오.
 
-![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (1) (1) (4).png>)
+![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (1) (1) (2) (1).png>)
 
 ## 작동 방식
 
@@ -29,7 +29,7 @@ Git 저장소를 가져오면 Snyk은 이러한 저장소를 모니터링하여 
 
 Snyk은 현재 GitHub, GitHub Enterprise Server, BitBucket Cloud를 통해 npm, Yarn, Maven-Central projects에 이 기능을 지원합니다. Broker와 함께 사용하려면 관리자가 먼저 v4.55.0 이상으로 업그레이드해야 합니다. Broker 업그레이드 시 추가 지원이 필요한 경우 문서를 참조하십시오.
 
-![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (1) (1) (2).png>)
+![](<../../../.gitbook/assets/image (8) (2) (4) (4) (4) (6) (3) (1) (1) (1) (2) (4).png>)
 
 ## 특정 프로젝트에 대해 자동 디펜던시 업그레이드 PR 사용
 

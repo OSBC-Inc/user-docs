@@ -22,7 +22,7 @@ Bitbucket에서 작업 공간으로 이동하고 저장소를 가져오면 저�
 
 새 화면에서 이전 저장소의 URL을 묻습니다. 해당 필드에 [https://github.com/snyk-labs/java-goof](https://github.com/snyk-labs/java-goof)를 입력하고 Workspace 및 Project를 선택합니다. 외부 저장소에는 인증이 필요하지 않으며 개인 또는 공개 액세스 수준을 선택합니다. 원하는 경우 저장소의 이름을 바꿉니다.
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../../.gitbook/assets/image (67) (1).png>)
 
 **Import repository**를 클릭하여 프로세스를 완료합니다.
 

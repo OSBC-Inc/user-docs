@@ -20,7 +20,7 @@ If you select **Ignore temporarily,** then you can check the **Until fix is avai
 
 **Ignore temporarily**를 선택하면 **Until fix is available** 확인란을 선택할 수 있습니다.
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 이렇게 하면 Issue가 수정되는 즉시 취약점이 다시 나타나며 선택적으로 Issue를 무시하는 이유에 대한 추가 세부정보를 제공할 수 있습니다. 현재 이 Issue에 사용할 수 있는 수정 사항이 없는 경우 기본적으로 선택되어 있습니다.
 

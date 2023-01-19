@@ -1,30 +1,30 @@
-# Section 4: Containerize your app
+# Section 1: 앱 컨테이너화
 
-## Step 1: Create a new branch for the container files
+## Step 1: 컨테이너 파일에 대한 새 Branch 만들기
 
-Let's start by creating a new branch from our `develop` branch, where we'll create the files for this section before merging them to `develop`. Call it `add-container-files` .
+`develop`을 위해 Merge하기 전에 이 Section에 대한 파일을 생성할 `develop` Branch에서 새 Branch를 생성하는 것으로 시작하겠습니다. 그것을 `add-container-files` 라고 부릅니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-newbranch.png)
 
-## Step 2: Create the files for the Container workflow
+## Step 2: Container workflow용 파일 만들기
 
 {% hint style="info" %}
-In this step you'll create a Dockerfile and modify the GitHub Actions CI Workflows. The files are available in the `container-actions` branch if you want to copy-paste from there. These are there for reference; attempting to merge that branch to `develop` will cause Merge Conflicts.
+이 단계에서는 Dockerfile을 만들고 GitHub Actions CI Workflow를 수정합니다. 거기에서 복사-붙여넣기를 원하는 경우 파일은 `container-actions` Branch에서 사용할 수 있습니다. 이것들은 참조용입니다. 해당 Branch를 Merge하여 `develop`하려고 하면 Merge 충돌이 발생합니다.
 {% endhint %}
 
-### Create a Dockerfile
+### Dockerfile 만들기
 
-The first file we'll create is the `Dockerfile` , the instructions to package the application into a container. Ensure you're on the new branch, and click on "Add File", then "Create new file".
+우리가 만들 첫 번째 파일은 애플리케이션을 컨테이너로 패키징하는 지침인 `Dockerfile` 입니다. 새 분기에 있는지 확인하고 "Add File"를 클릭한 다음 "Create new file"를 클릭합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-createnewfile.png)
 
-Call the new file `Dockerfile` as shown below.
+아래와 같이 새 파일 `Dockerfile`을 호출합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-createdockerfile.png)
 
-Paste this in as the contents of the `Dockerfile`
+이것을 `Dockerfile`의 내용으로 붙여넣으십시오.
 
-```text
+```
 FROM node:6-stretch
 
 RUN mkdir /usr/src/goof
@@ -39,19 +39,19 @@ EXPOSE 9229
 ENTRYPOINT ["npm", "start"]
 ```
 
-When ready, commit the changes directly to the `add-container-files` branch.
+준비가 되면 변경 사항을 `add-container-files` Branch에 직접 Commit합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-createdockerfile2.png)
 
-### Modify the CI workflows
+### CI Workflow로 수정
 
-Now, we need to tell GitHub Actions how to build our container. Recall that the `.github/workflows` folder contains the CI workflows that re-build our application when Pull Requests are opened against our branches. Let's add the Container build steps to both CI workflows using the GitHub Editor.
+이제 GitHub Actions에 컨테이너 빌드 방법을 알려야 합니다. `.github/workflows` 폴더에는 Branch에 대한 Pull Request이 열릴 때 애플리케이션을 다시 빌드하는 CI Workflow가 포함되어 있습니다. GitHub Editor를 사용하여 두 CI Workflow에 컨테이너 빌드 단계를 추가해 보겠습니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-editdevelopci.png)
 
-Replace the contents of `.github/workflows/goof-ci-develop` with the following:
+`.github/workflows/goof-ci-develop`의 내용을 다음으로 바꿉니다.
 
-```text
+```
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
@@ -102,28 +102,27 @@ jobs:
           sarif_file: snyk.sarif
 ```
 
-Our CI workflow will now take the following actions:
+CI Workflow는 이제 다음 작업을 수행합니다:
 
-1. First, it will build the app. This is the `build-app` job. 
-2. If the app build succeeds, it will build the container.
-3. If the container builds successfully, it will then scan it with Snyk container. 
-4. When the scan is done, results are pushed to GitHub Security Code Scanning.
+1. 먼저 앱을 빌드합니다. 이것은 `build-app` 작업입니다.
+2. 앱 빌드가 성공하면 컨테이너를 빌드합니다.
+3. 컨테이너가 성공적으로 빌드되면 Snyk Container로 스캔합니다.
+4. 스캔이 완료되면 결과가 GitHub Security Code Scanning으로 푸시됩니다.
 
 Now commit the changes directly to our new `add-container-files` branch.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-commitcontainerci.png)
 
-Now, repeat the same process for the `PROD` workflow, replacing the image tag specified in lines 36 and 43 from `goof:develop` to `goof:PROD`. This will ensure the `PROD` and `develop` containers remain separate entities once uploaded to a container registry.
+이제 PROD Workflow에 대해 동일한 프로세스를 반복하여 36행과 43행에 지정된 이미지 태그를 `goof:develop`에서 `goof:PROD`로 바꿉니다. 이렇게 하면 PROD 및 `develop` 컨테이너가 컨테이너 레지스트리에 업로드된 후 별도의 엔터티로 유지됩니다.
 
-## Step 3: Create a Pull Request into develop
+## Step 3: Pull Request를 작성하여 개발
 
-With the Dockerfile created and workflows modified, we'll merge the `add-container-files` branch into the `develop` branch to make it official. In GitHub, initiative a Pull Request. Like in the previous section, remember to select your fork as the Base repo.
+Dockerfile이 생성되고 Workflow가 수정되면 `add-container-files` Branch를 `develop` Branch에 Merge하여 공식화합니다. GitHub에서 Pull Request를 시작합니다. 이전 Section에서와 마찬가지로 Fork를 기본 저장소로 선택해야 합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-addfilespr.png)
 
-Once the PR is created, the checks will run, including the new one we added to build the container image. Once all checks complete, merge the Pull Request and delete the branch.
+PR이 생성되면 컨테이너 이미지를 빌드하기 위해 추가한 새 항목을 포함하여 검사가 실행됩니다. 모든 확인이 완료되면 Pull Request를 Merge하고 Branch를 삭제합니다.
 
 ![](https://partner-workshop-assets.s3.us-east-2.amazonaws.com/gh-container-addfileprchecks.png)
 
-We have now packaged our application into a container! Even through we fixed all open and fixable issues with the Open Source components in our application, our decision to package it into a container introduced additional risks that must be addressed. Head on to Section 2 to see how Snyk Container helps you find and fix those issues.
-
+이제 애플리케이션을 컨테이너에 패키징했습니다! 애플리케이션의 오픈 소스 구성 요소와 관련된 공개적이고 수정 가능한 모든 문제를 수정했음에도 불구하고 이를 컨테이너에 패키징하기로 결정함에 따라 해결해야 할 추가 위험이 발생했습니다. Snyk Container가 이러한 문제를 찾고 해결하는 데 어떻게 도움이 되는지 알아보려면 Section 2로 이동하십시오.

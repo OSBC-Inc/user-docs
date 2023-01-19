@@ -49,7 +49,7 @@ Snyk은 고급 보안 보고서를 생성하여 저장소에서 발견된 취약
 
 다음은 project-level 보안 보고서의 예시입니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-fc8f10812029577f2ec93a2b199e8159105438a4\_mceclip0-22- (2) (5) (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (34).png>)
+![](<../../../.gitbook/assets/mceclip0-22- (2) (5) (6) (1) (1) (1) (2) (4).png>)
 
 **프로젝트 모니터링 및 자동 수정 pull requests**
 
@@ -65,7 +65,7 @@ Snyk은 매일 또는 매주 프로젝트를 자주 스캔합니다. 새 취약�
 2. GitHub Enterprise에서 **Edit Settings**를 선택합니다.&#x20;
 3. **Automatic fix pull requests**로 이동합니다.
 
-![](<../../../.gitbook/assets/spaces\_-MdwVZ6HOZriajCf5nXH\_uploads\_git-blob-416e8bc0d0657eb9fc7c38c2c869f0577e7b3334\_mceclip4 (1) (2) (6) (7) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (30).png>)
+![](<../../../.gitbook/assets/mceclip4 (1) (2) (6) (7) (3) (1) (1) (2) (3).png>)
 
 **Pull request 테스트**
 

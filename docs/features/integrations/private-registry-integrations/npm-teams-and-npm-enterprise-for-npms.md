@@ -35,7 +35,7 @@ Snyk은 npm 및 Yarn 프로젝트와 함께 사용자 지정 npm Teams 및 npm E
 4. 원하는 레지스트리와 범위를 모두 추가했으면 **Update settings**를 클릭합니다.
 5. 이제 테스트해 보세요. 비공개 종속성이 포함된 프로젝트에서 끌어오기/병합 요청을 열어 잠금 파일이 업데이트되고 이전에 생성되지 않은 Snyk 수정 끌어오기 요청에 포함되었는지 확인합니다.
 
-![](<../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34) (1).png>)
 
 ## npm Teams & npm Enterprise Registry 설정
 

@@ -4,7 +4,7 @@ You can view cloud issues for an Organization through the Snyk Web UI.
 
 To view your Organization's cloud issues in the Snyk Web UI, navigate to the Organization and select **Cloud** in the left menu:
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-access-issues-page-3.png" alt="How to access the Snyk Cloud issues page in the Web UI"><figcaption><p>How to access the Snyk Cloud issues page in the Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>How to access the Snyk Cloud issues page in the Web UI</p></figcaption></figure>
 
 By default, Snyk displays open issues across all Snyk Cloud Environments in an Organization. The issues are initially [grouped by the security rule they failed](view-cloud-issues-in-the-snyk-web-ui.md#group-cloud-issues-by-rule), but you can choose to [group them by resource](view-cloud-issues-in-the-snyk-web-ui.md#group-cloud-issues-by-resource).
 
@@ -14,7 +14,7 @@ Issues are grouped by rule by default.
 
 If you have grouped them by resource instead, you can group them by rule again by selecting the **Group by Resource** drop-down menu next to the search bar and selecting **Rule**:
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-how-to-group-by-rule-3.png" alt="How to group issues by rule in the Snyk Web UI"><figcaption><p>How to group issues by rule in the Snyk Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption><p>How to group issues by rule in the Snyk Web UI</p></figcaption></figure>
 
 The rules are sorted by severity and then by number of issues, both from highest to lowest.
 
@@ -31,11 +31,11 @@ Each rule shows the following information:
 * Rule ID
 * Number of open issues
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-grouped-by-rule-3.png" alt="Issues grouped by rule in the Snyk Web UI"><figcaption><p>Issues grouped by rule in the Snyk Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Issues grouped by rule in the Snyk Web UI</p></figcaption></figure>
 
 By default, when you expand a rule by selecting its **Expand row** (`>`) symbol, you see all the resources with an open issue associated with that rule. Each resource shows the following information:
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-grouped-by-rule-resource-4.png" alt="A rule expanded to show resources in the Snyk Web UI"><figcaption><p>A rule expanded to show resources in the Snyk Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption><p>A rule expanded to show resources in the Snyk Web UI</p></figcaption></figure>
 
 * Resource name
 * Environment kind (provider)
@@ -48,7 +48,7 @@ By default, when you expand a rule by selecting its **Expand row** (`>`) symbol,
 
 If issues are currently grouped by rule, you can group them by resource instead by selecting the **Group by Rule** drop-down menu next to the search bar and selecting **Resource**:
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-how-to-group-by-resource-3.png" alt="How to group issues by resource in the Snyk Web UI"><figcaption><p>How to group issues by resource in the Snyk Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption><p>How to group issues by resource in the Snyk Web UI</p></figcaption></figure>
 
 The resources are sorted by severity of issue and then by number of issues, both from highest to lowest.
 
@@ -65,11 +65,11 @@ Each resource shows the following information:
 * Severity of open issues
 * Number of issues for each severity
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-grouped-by-resource-3.png" alt="Issues grouped by resource in the Snyk Web UI"><figcaption><p>Issues grouped by resource in the Snyk Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Issues grouped by resource in the Snyk Web UI</p></figcaption></figure>
 
 By default, when you expand a resource by selecting its **Expand row** (`>`) symbol, you see all the rules with an open issue associated with that resource. Each rule shows the following information:
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-grouped-by-resource-rule-4.png" alt="A resource expanded to show rules in the Snyk Web UI"><figcaption><p>A resource expanded to show rules in the Snyk Web UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>A resource expanded to show rules in the Snyk Web UI</p></figcaption></figure>
 
 * Severity
 * Rule title
@@ -107,11 +107,11 @@ The cloud issue summary panel displays the **Overview** by default, which contai
   * ID, with a link to [fix advice](https://snyk.io/security-rules/cloud)
   * Rule description (**Why to fix it** section)
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-issue-panel-overview-2.png" alt="The Snyk Cloud issue summary panel, Overview tab"><figcaption><p>The Snyk Cloud issue summary panel, Overview tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption><p>The Snyk Cloud issue summary panel, Overview tab</p></figcaption></figure>
 
 Select the **Resource** tab to view the scanned resource's attributes:
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-issue-panel-resource-2.png" alt="The Snyk Cloud issue summary panel, Resource tab"><figcaption><p>The Snyk Cloud issue summary panel, Resource tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (65).png" alt=""><figcaption><p>The Snyk Cloud issue summary panel, Resource tab</p></figcaption></figure>
 
 ## Filter cloud issues
 
@@ -125,7 +125,7 @@ By default, the **Status** filter is set to only include **open** issues.
 
 You can also filter issues by compliance control, resource type, environment name, and more.
 
-<figure><img src="../../../.gitbook/assets/snyk-cloud-issue-filters-4.png" alt="Filters in the Snyk Cloud issues page"><figcaption><p>Filters in the Snyk Cloud issues page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Filters in the Snyk Cloud issues page</p></figcaption></figure>
 
 ## Search cloud issues
 
