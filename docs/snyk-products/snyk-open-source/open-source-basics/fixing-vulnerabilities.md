@@ -7,8 +7,8 @@ Snyk은 다음을 사용하여 취약점을 수정하는 워크플로우를 지�
 * [자동 pull / merge requests (PR/MR)](fixing-vulnerabilities.md#pull-merge-requests-pr-mr)
 * [수동 pull / merge requests (PR/MR)](fixing-vulnerabilities.md#pull-merge-requests)
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md" %}
+[what-languages-do-we-support-fix-pull-requests-or-merge-requests.md](../../../features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/what-languages-do-we-support-fix-pull-requests-or-merge-requests.md)
 {% endcontent-ref %}
 
 ### 자동 **pull / merge requests** (PR/MR)
