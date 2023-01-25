@@ -2,12 +2,12 @@
 
 {% hint style="info" %}
 **기능 지원 여부**\
-****이 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
+이 기능은 모든 유료 요금제에서 사용할 수 있습니다. 자세한 내용은 [pricing plans](https://snyk.io/plans/)를 참조하십시오.
 {% endhint %}
 
 **Business customers의 경우:**
 
-조직 관리자는 settings ![](../../../.gitbook/assets/cog\_icon.png) **>** Licenses [라이선스 정책 규칙을 액세스하고 설정](setting-a-license-policy.md)할 수 있습니다.
+조직 관리자는 settings ![](../../../.gitbook/assets/cog\_icon.png) **>** Licenses 에서 [라이선스 정책 규칙을 액세스하고 설정](setting-a-license-policy.md)할 수 있습니다.
 
 **Enterprise customers의 경우:**
 
