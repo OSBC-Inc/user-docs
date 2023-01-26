@@ -1,19 +1,19 @@
-# Step 3: Create and scan a Snyk Cloud Environment (API)
+# 3단계: Snyk Cloud 환경 생성 및 스캔 (API)
 
 {% hint style="info" %}
-**Recap**\
-You have created the Snyk Cloud IAM role. Now you can create and scan a Snyk Cloud Environment.
+**개요**\
+Snyk Cloud IAM 역할을 만들었습니다. 이제 Snyk Cloud 환경을 생성하고 스캔할 수 있습니다.
 {% endhint %}
 
-To send a request to the [Snyk API](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#post-/orgs/-org\_id-/cloud/environments) to create and scan a Snyk Cloud Environment, you must provide the role’s Amazon Resource Name (ARN) in the API request body.
+Snyk Cloud 환경을 생성 및 스캔하기 위해 [Snyk API](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#post-/orgs/-org\_id-/cloud/environments) 에 요청을 전송하려면 API 요청 본문에 역할의 ARN(Amazon Resource Name)을 제공해야 합니다.
 
-## Find the role ARN
+## 역할 ARN 찾기
 
-Follow the steps in [Find the role ARN](../snyk-cloud-for-aws-web-ui/step-3-create-and-scan-a-snyk-cloud-environment-web-ui.md#find-the-role-arn), then return here to learn how to send the Snyk API request.
+[역할 ARN 찾기](../snyk-cloud-for-aws-web-ui/step-3-create-and-scan-a-snyk-cloud-environment-web-ui.md#find-the-role-arn)의 단계를 따르고 여기로 돌아와 Snyk API 요청을 전송하는 방법을 알아보십시오.
 
-## Send the Snyk API request
+## Snyk API 요청 전송
 
-After you have the role ARN, send a request to the Snyk API in the format below to create the Snyk Cloud Environment:
+역할 ARN이 있다면 Snyk API에 아래와 같은 형식으로 요청을 전송해 Snyk Cloud 환경을 생성하십시오.
 
 ```
 curl -X POST \
@@ -34,12 +34,12 @@ curl -X POST \
 ```
 
 {% hint style="info" %}
-The example above uses [curl](https://curl.se/), but you can use any API client, such as [Postman](https://www.postman.com/) or [HTTPie](https://httpie.io/).
+위의 예시는  [curl](https://curl.se/) 사용하지만 [Postman](https://www.postman.com/) 이나 [HTTPie](https://httpie.io/) 같은  모든API 클라이언트를 사용할 수 있습니다.
 {% endhint %}
 
-## Understand the API response
+## API 응답 이해
 
-The response is a JSON document containing details about your newly created Snyk Cloud Environment; for example:
+응답은 새로 생성된 Snyk Cloud 환경에 관한 세부 정보가 포함된 JSON 문서입니다. 예를 들어:
 
 ```json
 {
@@ -80,13 +80,13 @@ The response is a JSON document containing details about your newly created Snyk
 }
 ```
 
-Snyk automatically triggers a scan when an environment is created.
+은 환경이 생성되었을 때 자동으로 스캔을 트리거합니다.
 
-Note: the `data.attributes.status` field in the JSON output is set to `in_progress`. This means that Snyk has created your environment and has started scanning it.
+참고:  JSON 출력의 `data.attributes.status` 필드는`in_progress`로 설정됩니다. 이는 Snyk이 환경을 생성하고 스캔을 시작했다는 것을 의미합니다.
 
-## Check if the scan is finished
+## 스캔 완료 여부 확인
 
-Optionally, see if the scan is finished by sending another API request in the format below to get environment details. You can find the environment ID in the `data.id` field of the JSON output when you created the environment.
+선택적으로, 환경 세부 정보를 얻기 위해 아래 형식으로 다른 API 요청을 전송하여 스캔이 완료되었는지 확인합니다. 환경 ID는 환경을 생성할 때 JSON 출력의 `data.id`필드에서 확인할 수 있습니다.
 
 ```
 curl -X GET \
@@ -94,10 +94,10 @@ curl -X GET \
   -H 'Authorization: token YOUR-API-TOKEN'
 ```
 
-If the `data.attributes.status` field in the JSON output is set to `success`, Snyk has finished scanning your environment.
+JSON 출력의`data.attributes.status` 필드가  `success`로 설정되었다면 Snyk이 환경 스캔을 완료한 것입니다.
 
-To re-scan an environment, see [Scan a Snyk Cloud Environment](../../scan-a-snyk-cloud-environment.md).
+환경을 다시 스캔하기 위해선[ Snyk Cloud 환경 스캔](../../scan-a-snyk-cloud-environment.md) 참조하십시오.
 
-## What's next?
+## 다음 단계
 
-You can now view misconfiguration issues in the Snyk Web UI. See [Snyk Cloud issues](../../snyk-cloud-issues/) for more information.
+이제 Snyk 웹 UI에서 구성 오류 문제를 볼 수 있습니다. 자세한 내용은 [Snyk Cloud 이슈](../../snyk-cloud-issues/)를 참조하십시오.

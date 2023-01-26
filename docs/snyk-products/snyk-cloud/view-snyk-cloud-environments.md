@@ -1,4 +1,4 @@
-# View Snyk Cloud Environments
+# Snyk Cloud 환경 보기
 
 To view all [Snyk Cloud](./) and [Snyk Integrated IaC](../snyk-infrastructure-as-code/integrated-infrastructure-as-code/) Environments in an Organization, navigate to your Organization's **Settings (cog icon) > Cloud environments**.
 
@@ -11,7 +11,7 @@ The cloud environments table displays the following information for each environ
 
 <figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>The Snyk Cloud Environments page in the Snyk Web UI</p></figcaption></figure>
 
-## Add an environment
+## 환경 추가
 
 To add an environment, select the **Add environment** drop-down and select the cloud provider. Follow the steps in [Snyk Cloud for AWS: Web UI](getting-started-with-snyk-cloud-aws/snyk-cloud-for-aws-web-ui/) or [Snyk Cloud for Google: Web UI](getting-started-with-snyk-cloud-google/snyk-cloud-for-google-web-ui/) to create the environment.
 

@@ -1,8 +1,8 @@
-# Step 1: Download service account IaC template (Web UI)
+# 1단계: 서비스 계정 IaC 템플릿 다운로드 (웹 UI)
 
-Before you can create a Snyk Cloud Environment, you must download an infrastructure as code (IaC) template declaring a tightly-scoped Google service account that gives Snyk permission to scan the configuration of resources in your Google project.
+Snyk Cloud 환경을 만들기 전에 Snyk에게 Google 프로젝트의 리소스 구성을 스캔할 수 있는 권한을 부여하는 엄격한 범위의 Google 서비스 계정을 선언하는 코드형 인프라(IaC) 템플릿을 다운로드해야 합니다.
 
-The template also enables a set of [Google service APIs](https://cloud.google.com/service-usage/docs/enabled-service) for your Google Cloud project. This ensures that Snyk Cloud can utilize the necessary APIs to scan your project's resources.
+또한 템플릿은 Google Cloud 프로젝트를 위한 [Google 서비스 APIs](https://cloud.google.com/service-usage/docs/enabled-service)를 가능하게 합니다. 이를 통해 Snyk Cloud는 프로젝트의 리소스를 스캔하는 데에 필요한 API를 활용할 수 있습니다.
 
 You will use this IaC template to provision the role in [Step 2: Create the Google service account](step-2-create-the-google-service-account-api.md).
 

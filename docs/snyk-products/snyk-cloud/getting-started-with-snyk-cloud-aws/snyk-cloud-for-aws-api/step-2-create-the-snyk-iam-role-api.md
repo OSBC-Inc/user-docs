@@ -1,12 +1,13 @@
-# Step 2: Create the Snyk IAM role (API)
+# 2단계: Snyk IAM 역할 생성 (API)
 
 {% hint style="info" %}
-**Recap**\
-You have downloaded the Terraform or Amazon Web Services (AWS) CloudFormation template declaring the Identity & Access Management (IAM) role for Snyk Cloud. Now you need to provision the infrastructure.
+**요약**
+
+Snyk Cloud에 대한 IAM(Identity & Access Management) 역할을 선언하는 Terraform 또는 AWS(Amazon Web Services) CloudFormation 템플릿을 다운로드했습니다. 이제 인프라를 프로비저닝해야 합니다.
 {% endhint %}
 
-The process to create the Snyk IAM role is the same whether you're using the Snyk Web UI or Snyk API to onboard your AWS account. Follow the instructions in [Step 2: Create the Snyk IAM role](../snyk-cloud-for-aws-web-ui/step-2-create-the-snyk-iam-role.md), then return here to continue onboarding your account.
+Snyk IAM 역할을 생성하는 프로세스는 AWS 계정 온보딩에 Snyk 웹 UI나 Snyk API 중 무엇을 사용하던 동일합니다. [2단계: Snyk IAM 역할생성](../snyk-cloud-for-aws-web-ui/step-2-create-the-snyk-iam-role.md)의 지침을 따른 다음 여기로 돌아와 계정 온보딩을 계속합니다.
 
-## What's next?
+## 다음 단계
 
-You can now proceed to [Step 3: Create and scan a Snyk Cloud Environment (API)](step-3-create-and-scan-a-snyk-cloud-environment.md).
+이제 [3단계: Snyk Cloud 환경 생성 및 스캔 (API)](step-3-create-and-scan-a-snyk-cloud-environment.md) 을진행할 수 있습니다.

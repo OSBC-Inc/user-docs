@@ -1,17 +1,17 @@
-# Step 1: Download IAM role IaC template (API)
+# 1단계: IAM 역할 IaC 템플릿 다운로드 (API)
 
-Before you can create a Snyk Cloud Environment, you must download an Infrastructure as Code (IaC) template declaring a read-only **Identity & Access Management** (IAM) role that Snyk can assume to scan the configuration of resources in your Amazon Web Services (AWS) account.
+Snyk Cloud 환경을 생성하기 전에 AWS(Amazon Web Services)의 리소스 구성을 스캔하기 위해 Snyk가 가정할 수 있는 읽기 전용 **IAM(Identity & Access Management)** 역할을 선언하는 IaC(Infrastructure as Code) 템플릿을 다운로드해야 합니다.
 
-You will use this IaC template to provision the role in [Step 2: Create the Snyk IAM role](../snyk-cloud-for-aws-web-ui/step-2-create-the-snyk-iam-role.md).
+이 IaC 템플릿을 사용하여 [2단계: Snyk IAM role 생성](../snyk-cloud-for-aws-web-ui/step-2-create-the-snyk-iam-role.md)에서 역할을 프로비저닝합니다.
 
-You can choose the template format: either [Terraform HCL](https://www.terraform.io/language/syntax/configuration) or [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html). The IAM permissions are identical in both, so pick the format you are most comfortable working with.
+[Terraform HCL](https://www.terraform.io/language/syntax/configuration) 또는 [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) 템플릿 형식을 선택할 수 있습니다. IAM 권한은 동일하므로 작업하기 편한 형식을 선택하십시오.
 
-## Retrieve the IaC template
+## IaC 템플릿 검색
 
-To retrieve the IaC template from the [Snyk API](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#post-/orgs/-org\_id-/cloud/permissions), you need the API token for an Organization-level [service account](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#set-up-a-service-account) with an Org Admin role.
+[Snyk API](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#post-/orgs/-org\_id-/cloud/permissions)에서 IaC 템플릿을 검색하려면 조직 관리자 역할이 있는 조직 수준 [서비스 계정](https://docs.snyk.io/features/user-and-group-management/structure-account-for-high-application-performance/service-accounts#set-up-a-service-account)에 대한 API 토큰이 필요합니다.
 
-1. In the [Snyk Web UI](https://app.snyk.io), navigate to **Settings (cog icon) > General > Organization ID** and copy your Organization ID.
-2. Send a request to the Snyk API in the below format, replacing `INPUT-TYPE` with `tf` for Terraform or `cf` for CloudFormation:
+1. [Snyk 웹 UI](https://app.snyk.io) **Settings (톱니바퀴 아이콘) > General > Organization ID** 로 이동하여 조직 ID를 복사하십시오.
+2. `INPUT-TYPE` 을 Terraform용 `tf` 또는 CloudFormation용 `cf`로 대체하여 아래 형식으로 Snyk API에 요청을 보냅니다:
 
 ```
 curl -X POST \
@@ -29,14 +29,14 @@ curl -X POST \
 ```
 
 {% hint style="info" %}
-The example above uses [curl](https://curl.se/), but you can use any API client, such as [Postman](https://www.postman.com/) or [HTTPie](https://httpie.io/).
+위의 예제는 [curl](https://curl.se/) 사용하지만 [Postman](https://www.postman.com/) [HTTPie](https://httpie.io/) 같은 API 클라이언트를 사용할 수 있습니다
 {% endhint %}
 
-## Understand the API response
+## API 응답 이해
 
-The response is a JSON document like the ones below (trimmed for length).
+응답은 아래와 같은 JSON 문서입니다. (길이에 맞게 잘림)
 
-Example response with Terraform configuration:
+Terraform 구성을 사용한 응답 예시:
 
 ```json
 {
@@ -54,7 +54,7 @@ Example response with Terraform configuration:
 }
 ```
 
-Example response with CloudFormation template:
+CloudFormation 템플릿을 사용한 응답 예시
 
 ```json
 {
@@ -72,49 +72,45 @@ Example response with CloudFormation template:
 }
 ```
 
-## Unescape the JSON
+## JSON 이스케이프 해제
 
-The `data.attributes.data` field in the output above is an escaped JSON string containing the Terraform or CloudFormation template with the IAM role and policy.
+위 출력의 `data.attributes.data` 필드는 IAM 역할 및 정책과 함께 Terraform 또는 CloudFormation 템플릿을 포함하는 이스케이프 처리된 JSON 문자열입니다.
 
-Before you can use the template to provision the resources, you need to **unescape** the JSON. This can be accomplished in the following ways:
+템플릿을 사용하여 리소스를 프로비저닝하기 전에 JSON의 이스케이프를 해제해야 합니다. 이것은 다음과 같은 방식으로 수행할 수 있습니다:
 
-* [Use jq](step-1-download-iam-role-iac-template.md#use-jq)
-* [Transform the content manually](step-1-download-iam-role-iac-template.md#transform-the-content-manually)
+* [jq 사용](step-1-download-iam-role-iac-template.md#use-jq)
+* [콘텐츠를 수동으로 변환](step-1-download-iam-role-iac-template.md#transform-the-content-manually)
 
-### Use `jq`
+**`jq` 사용**
 
-1. Download and install [jq](https://stedolan.github.io/jq/download/).
-2.  When submitting the API request during template retrieval, append the following to the end of the command:
+1. [jq](https://stedolan.github.io/jq/download/) 를다운로드 및 설치하십시오.
+2.  템플릿 검색 중 API 요청을 제출할 때 명령 끝에 다음을 추가하십시오:
 
     ```
     | jq -r .data.attributes.data > snyk_iac_template
     ```
 
-    This will place the properly-formatted template into the file `snyk_iac_template` in your current working directory.
-3. Rename the file with a `.tf` extension (Terraform) or `.yaml` (CloudFormation).
+    이렇게 하면 올바른 형식의 템플릿이 현재 작업 디렉토리의`snyk_iac_template` 파일에 저장됩니다.
+3. `.tf` 확장자(Terraform) 또는 `.yaml` (CloudFormation)을 사용하여 파일 이름을 변경하십시오.
 
-### Transform the content manually
+### 콘텐츠를 수동으로 변환
 
-1. Copy the contents of `data.attributes.data` from the API response, excluding the double quote at the very beginning and the very end of the value. You should end up with a long string starting with `data \"aws_iam_policy_document\"` (Terraform) or `AWSTemplateFormatVersion` (CloudFormation).
-2. Paste the string into a tool such as [FreeFormatter.com](https://www.freeformatter.com/json-escape.html) to unescape the JSON.
+1. API 응답의`data.attributes.data` 값에서 처음과 맨 끝에 있는 큰따옴표를 제외한 내용을 복사하십시오.  `data \"aws_iam_policy_document\"` (Terraform) 또는 `AWSTemplateFormatVersion` (CloudFormation)로 시작하는 긴 문자열로 끝나야 합니다.
+2. 문자열을 [FreeFormatter.com](https://www.freeformatter.com/json-escape.html) 과 같은 도구에 붙여넣어 JSON의 이스케이프를 해제하십시오.
 3. Save the unescaped CloudFormation output as a new `.tf` file (Terraform) or `.yaml` file (CloudFormation).
 
-## Optional: Change IAM role name
+## 선택 사항: IAM 역할 이름 변경
 
-By default, the name of the Snyk IAM role is `snyk-cloud-role`. You can optionally change this name in the Terraform or CloudFormation template, if your organization has specific role naming requirements.
+기본적으로 Snyk IAM 역할의 이름은 `snyk-cloud-role`입니다. 조직에 특정 역할 명명 요구사항이 있는 경우 선택적으로 Terraform 또는 CloudFormation 템플릿에서 이름을 변경할 수 있습니다.
 
-In **Terraform**, the role name is on line 19:
+**Terraform**의 경우 역할 이름은 19행에 있습니다.
 
-```
-  name                = "snyk-cloud-role"
-```
+`name     = "snyk-cloud-role"`
 
-In **CloudFormation**, the role name is on line 7:
+**CloudFormation**의 경우 역할 이름은 7행에 있습니다.
 
-```
-      RoleName: snyk-cloud-role
-```
+&#x20;  `RoleName: snyk-cloud-role`
 
-## What's next?
+## 다음 단계
 
-The next step is to create the IAM role and policy for Snyk Cloud using the template you downloaded.
+다음 단계는 다운로드한 템플릿을 사용하여 Snyk Cloud에 대한 IAM 역할 및 정책을 생성하는 것입니다.

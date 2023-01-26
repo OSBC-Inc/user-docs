@@ -1,8 +1,9 @@
-# Step 2: Create the Google service account (Web UI)
+# 2단계: Google 서비스 계정 생성 (웹 UI)
 
 {% hint style="info" %}
-**Recap**\
-You have downloaded the Terraform template declaring the [Google service account](https://cloud.google.com/iam/docs/service-accounts) for Snyk. Now you need to provision the infrastructure.
+**요약**
+
+Snyk용 [Google 서비스 계정](https://cloud.google.com/iam/docs/service-accounts) 을 선언하는 Terraform 템플릿을 다운로드했습니다. 이제 인프라를 프로비저닝해야 합니다.
 {% endhint %}
 
 The process to create the Google service account is the same whether you're using the [Snyk Web UI](./) or [Snyk API](../snyk-cloud-for-google-api/) to onboard your Google project.
@@ -28,13 +29,13 @@ Snyk Cloud scans the Google Cloud project specified by the `project_id` [variabl
 default = "your-project-id"
 ```
 
-* **Set the `project_id` variable when you apply the Terraform.** Below, in [Apply the Terraform](step-2-create-the-google-service-account-api.md#apply-the-terraform), you will apply the Terraform to create the Google service account. At that time, you can use Terraform's [-var](https://www.terraform.io/language/values/variables#variables-on-the-command-line) option to set the `project_id` variable to your project ID:
+* **Terraform을 적용할 때 `project_id` 변수 설정.** 아래 [Apply the Terraform](step-2-create-the-google-service-account-api.md#apply-the-terraform)  Terraform을 적용하여 Google 서비스 계정을 생성합니다. 이 때 Terraform의 [-var](https://www.terraform.io/language/values/variables#variables-on-the-command-line) 옵션을 사용하여`project_id` 변수를 프로젝트 ID로 설정할 수 있습니다:
 
 ```
 terraform apply -var="project_id=your-project-id"
 ```
 
-* **Use the `GOOGLE_PROJECT` environment variable.** See Terraform's [documentation.](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider\_reference#full-reference)
+* **`GOOGLE_PROJECT` 환경 변수 사용.** Terraform [문서](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider\_reference#full-reference) 참고하십시오.
 
 ## Apply the Terraform
 
