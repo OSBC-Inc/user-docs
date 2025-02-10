@@ -6,7 +6,7 @@
 이 모든 방법은 동일한 Snyk 엔진에 의존하기 때문에 동일한 결과를 제공합니다. 따라서 선택한 배포 방법에 관계없이 동일한 인수 또는 옵션이 적용됩니다.
 {% endhint %}
 
-파이프라인 내에서 Snyk를 구성하는 방법은 다양합니다. 환경 및 기본 설정에 따라 방법을 선택합니다. 모든 방법이 성공적인 실행으로 이어지기를 기대할 수 있습니다.
+파이프라인 내에서 Snyk을 구성하는 방법은 다양합니다. 환경 및 기본 설정에 따라 방법을 선택합니다. 모든 방법이 성공적인 실행으로 이어지기를 기대할 수 있습니다.
 
 ### Snyk 네이티브 플러그인 사용
 
@@ -26,7 +26,7 @@ Snyk은 Linux, Windows 및 다른 버전을 가지고 있습니다.
 
 ### Snyk 컨테이너 배포
 
-[Dockerhub](https://hub.docker.com/r/snyk/snyk)의 Snyk 이미지 중 하나를 사용하여 파이프라인에 Snyk를 배포할 수 있습니다.
+[Dockerhub](https://hub.docker.com/r/snyk/snyk)의 Snyk 이미지 중 하나를 사용하여 파이프라인에 Snyk을 배포할 수 있습니다.
 
 ### Snyk CI/CD 통합 예시
 
@@ -40,19 +40,19 @@ Snyk은 Linux, Windows 및 다른 버전을 가지고 있습니다.
 2. [Snyk을 게이트 키퍼로 사용](./#2-snyk-snyk-test) (`snyk test`)
 3. [지속적인 모니터링](./#3-snyk-test-and-snyk-monitor) (`snyk test` and `snyk monitor`)
 
-### **1** 단계**:** 취약점 노출 **(snyk monitor)**
+### **1** 단&#xACC4;**:** 취약점 노출 **(snyk monitor)**
 
 일반적인 접근 방식은 Snyk 결과를 사용하여 개발 프로세스 중에 취약점을 노출하는 것입니다. 이렇게 하면 팀 구성원 간의 취약점에 대한 가시성이 향상됩니다.
 
-파이프라인에서 Snyk를 처음 구현할 때는 snyk monitor 명령만 사용하는 것이 좋습니다. Snyk CI 플러그인 중 하나를 사용하는 경우 빌드에 실패하지 않도록 플러그인을 구성하는 것이 좋습니다.
+파이프라인에서 Snyk을 처음 구현할 때는 snyk monitor 명령만 사용하는 것이 좋습니다. Snyk CI 플러그인 중 하나를 사용하는 경우 빌드에 실패하지 않도록 플러그인을 구성하는 것이 좋습니다.
 
-이는 모든 프로젝트에 취약점이 있으며 Snyk를 빌드에 실패하도록 설정한 후에는 모든 빌드가 Snyk으로 인해 실패하기 때문입니다. 이로 인해 팀이 실패 메시지로 빠르게 처리되는 문제가 발생할 수 있습니다.
+이는 모든 프로젝트에 취약점이 있으며 Snyk을 빌드에 실패하도록 설정한 후에는 모든 빌드가 Snyk으로 인해 실패하기 때문입니다. 이로 인해 팀이 실패 메시지로 빠르게 처리되는 문제가 발생할 수 있습니다.
 
 `snyk monitor`를 사용하여 결과를 노출하면 프로세스를 중단하지 않고 정보를 제공합니다.
 
 `snyk monitor`에 대한 자세한 내용은 [`monitor` command help](../../../snyk-cli/commands/monitor.md)를 참조하십시오.
 
-### **2** 단계**:** Snyk을 게이트 키퍼로 사용 **(snyk test)**
+### **2** 단&#xACC4;**:** Snyk을 게이트 키퍼로 사용 **(snyk test)**
 
 Snyk을 게이트 키퍼로 사용하면 새로운 취약점(때로는"stopping the bleeding"라고도 함)이 발생하는 것을 방지할 수 있습니다.
 
@@ -62,7 +62,7 @@ Snyk을 게이트 키퍼로 사용하면 새로운 취약점(때로는"stopping 
 
 `snyk test`에 대한 자세한 내용은 [`test` command help](../../../snyk-cli/commands/test.md)를 참조하십시오.
 
-### **3** 단계**:** 지속적인 모니터링 **(snyk test** 및 **snyk monitor)**
+### **3** 단&#xACC4;**:** 지속적인 모니터링 **(snyk test** 및 **snyk monitor)**
 
 취약점이 감지될 때 빌드에 실패하도록 Snyk을 구성한 후 지속적인 모니터링을 위해 프로젝트의 성공적인 빌드의 스냅샷을 Snyk으로 보내도록 Snyk을 구성할 수 있습니다.
 
@@ -70,7 +70,7 @@ Snyk을 게이트 키퍼로 사용하면 새로운 취약점(때로는"stopping 
 
 ## 기술적 구현
 
-파이프라인에서 실행하도록 Snyk를 구성하려면 Snyk 계정에서 주요 구성 입력을 검색합니다.
+파이프라인에서 실행하도록 Snyk을 구성하려면 Snyk 계정에서 주요 구성 입력을 검색합니다.
 
 ### 대상 조직
 
@@ -152,7 +152,7 @@ Snyk 명령의 JSON 출력을 사용하여 [snyk-to-html](https://github.com/sny
 
 ### 새 취약성에 대한 작업 항목 생성
 
-Snyk를 사용하면 JIRA에서 새 작업 항목을 자동으로 만들 수 있습니다([Jira integration](../notifications-ticketing-system-integrations/jira.md) 참조). 특정 요구 사항에 맞게 이 코드를 사용자 정의하거나 다른 작업 관리 시스템과 함께 작동하도록 조정할 수 있습니다.
+Snyk을 사용하면 JIRA에서 새 작업 항목을 자동으로 만들 수 있습니다([Jira integration](../notifications-ticketing-system-integrations/jira.md) 참조). 특정 요구 사항에 맞게 이 코드를 사용자 정의하거나 다른 작업 관리 시스템과 함께 작동하도록 조정할 수 있습니다.
 
 시작하려면 [새로운 취약점에 대한 Jira 티켓](https://github.com/snyk-tech-services/jira-tickets-for-new-vulns)을 참조하거나, [API를 검토하여 Jira 티켓을 생성](https://snyk.docs.apiary.io/#reference/projects/project-jira-issues)하십시오.
 
@@ -334,7 +334,7 @@ CI/CD에 대한 자세한 내용은 [What is CI/CD? CI/CD Pipeline and Tools Exp
 
 ## 지속적인 통합 구성
 
-디펜던시의 알려진 취약점을 지속적으로 방지하려면 Snyk를 연속 통합(구축) 시스템에 통합하십시오. 해당 설명서와 더불어 Snyk GitHub 저장소의 [integration configuration examples](https://github.com/snyk/actions#snyk-github-actions)를 확인하십시오.
+디펜던시의 알려진 취약점을 지속적으로 방지하려면 Snyk을 연속 통합(구축) 시스템에 통합하십시오. 해당 설명서와 더불어 Snyk GitHub 저장소의 [integration configuration examples](https://github.com/snyk/actions#snyk-github-actions)를 확인하십시오.
 
 ## 자동 모니터링 설정
 
