@@ -25,7 +25,7 @@ Snyk은 Eclipse와 Snyk에서 모두 지원하는 모든 언어를 지원합니�
 ## Snyk Eclipse 플러그인 설치
 
 1. 실행 중인 Eclipse 인스턴스 내에서 Marketplace로 이동합니다.
-2. Snyk를 검색하고 Install을 클릭합니다.
+2. Snyk 검색하고 Install을 클릭합니다.
 3. 라이센스 계약에 동의하라는 메시지가 표시되면 Snyk Security 인증서를 추가하여 설치를 완료합니다.
 4. Eclipse 인스턴스를 다시 시작하고 **Eclipse Preferences**로 이동하여 이제 **Snyk Security - Code and Open Source Dependencies**가 목록에 나타나는지 확인합니다.
 
@@ -33,7 +33,7 @@ Snyk은 Eclipse와 Snyk에서 모두 지원하는 모든 언어를 지원합니�
 
 ## 구성
 
-Snyk를 사용하려면 환경 변수와 Snyk 토큰을 플러그인에 제공해야 합니다.
+Snyk 사용하려면 환경 변수와 Snyk 토큰을 플러그인에 제공해야 합니다.
 
 ### API 토큰
 
@@ -146,4 +146,4 @@ Expanded mode, indierct vulnerability
 
 ## 경험을 공유하십시
 
-Snyk는 Snyk 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk Eclipse 플러그인에 대한 피드백을 공유하려면 [회의를 예약](https://calendly.com/snyk-georgi/45min?month=2022-09)하십시오.
+Snyk Snyk 플러그인 경험을 개선하기 위해 지속적으로 노력하고 있습니다. Snyk Eclipse 플러그인에 대한 피드백을 공유하려면 [회의를 예약](https://calendly.com/snyk-georgi/45min?month=2022-09)하십시오.
